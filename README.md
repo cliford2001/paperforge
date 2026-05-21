@@ -64,34 +64,39 @@ Opciones:
 
 Requiere un servidor OpenAI-compatible con un modelo visión-lenguaje (probado con [InternVL3-14B](https://huggingface.co/OpenGVLab/InternVL3-14B) en llama.cpp).
 
-Análisis con contexto del paper (recomendado):
 ```bash
 python analyze_figures.py extracted/figures.json --pdf paper.pdf \
     --server http://127.0.0.1:8080/v1/chat/completions
 ```
 
-Solo análisis sin contexto:
-```bash
-python analyze_figures.py extracted/figures.json --no-context
-```
+Genera **dos análisis por figura** orientados a *training data*:
+- `inference` — interpretación basada **solo** en la imagen, con prompt estructurado que fuerza descripción visual + tipo + datos + interpretación + significancia
+- `anchored` — interpretación usando **el paper completo** como contexto autoritativo
 
-Output: `extracted/analyses.json` con dos análisis por figura:
-- `analysis_no_ctx` — interpretación basada solo en la imagen
-- `analysis_with_ctx` — interpretación con texto de las páginas adyacentes (±3 por defecto)
+**Contexto inteligente:** el script detecta si el paper cabe entero en el context window del modelo:
+- Si cabe → usa paper completo
+- Si no → genera un resumen vía LLM **una sola vez** y reutiliza para todas las figuras
 
-Resume automático: si se interrumpe, al reiniciar salta items ya procesados.
+Resume automático si se interrumpe.
 
 Opciones:
 ```
---server URL       endpoint OpenAI-compatible (def: localhost:8080)
---pdf FILE         PDF original (necesario para --with-context, default)
---no-context       solo análisis sin contexto del paper
---window N         páginas ±N alrededor de la figura para contexto (def: 3)
---max-tokens N     límite de tokens generados (def: 600)
---temperature F    (def: 0.1, determinístico)
---timeout N        seg por request (def: 300)
---out FILE         ruta de salida JSON
+--server URL          endpoint OpenAI-compatible (def: localhost:8080)
+--pdf FILE            PDF original (necesario para anchored)
+--inference-only      solo inferencia pura sin contexto del paper
+--anchored-only       solo análisis anclado al paper
+--budget-tokens N     tokens reservados para texto del paper (def: 6000)
+--max-tokens N        límite de tokens generados (def: 800)
+--temperature F       (def: 0.2)
+--timeout N           seg por request (def: 300)
+--out FILE            ruta de salida JSON
 ```
+
+Prompts diseñados para **training data**:
+- Estructura fija (## Visual Description, ## Data and Findings, etc.)
+- Fuerza análisis multi-aspecto
+- Evita respuestas evasivas ("I cannot interpret...")
+- Output consistente, parseable como labels supervisados
 
 ## Servir el modelo local
 

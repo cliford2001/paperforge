@@ -2,23 +2,25 @@
 LLM Analyzer for Extracted Figures
 ====================================
 
-Toma el output de extract_figures.py (figures.json + PNGs) y envía cada
-imagen a un servidor de inferencia OpenAI-compatible (llama.cpp, Ollama,
-vLLM, etc.) junto con el contexto textual del paper (texto de las páginas
-adyacentes al caption).
+Toma el output de extract_figures.py y analiza cada figura/tabla con un
+modelo visión-lenguaje vía API OpenAI-compatible.
 
-Para cada figura/tabla genera DOS análisis:
-  1. Sin contexto:  solo la imagen
-  2. Con contexto:  imagen + texto de páginas vecinas del PDF
+Genera DOS análisis por item:
+  1. inference   — solo imagen + prompt estructurado (inferencia pura)
+  2. anchored    — imagen + contexto del paper (anclado al paper)
+
+CONTEXTO INTELIGENTE:
+  - Si el paper cabe en (context_window − budget) → usa paper completo
+  - Si no cabe → el LLM resume el paper UNA VEZ y reutiliza ese resumen
+
+Salida orientada a TRAINING DATA: prompts estructurados que fuerzan
+análisis multi-aspecto, evitan respuestas evasivas.
 
 Uso:
     python analyze_figures.py extracted/figures.json --pdf paper.pdf \\
         --server http://127.0.0.1:8080/v1/chat/completions
 
-    python analyze_figures.py extracted/figures.json --pdf paper.pdf \\
-        --no-context              # solo análisis sin contexto
-
-Resume automático: si analyses.json ya existe, salta items ya procesados.
+    python analyze_figures.py extracted/figures.json --inference-only
 """
 from __future__ import annotations
 
@@ -34,88 +36,143 @@ import requests
 
 
 # ─── Defaults ────────────────────────────────────────────────────────────────
-DEFAULT_SERVER        = "http://127.0.0.1:8080/v1/chat/completions"
-DEFAULT_MAX_TOKENS    = 600
-DEFAULT_TEMPERATURE   = 0.1
-DEFAULT_TIMEOUT       = 300
-DEFAULT_PAGE_WINDOW   = 3
-DEFAULT_MAX_CTX_CHARS = 30000
-MAX_RETRIES           = 5
-RETRY_BACKOFF         = 3  # seg × 2^intento
+DEFAULT_SERVER         = "http://127.0.0.1:8080/v1/chat/completions"
+DEFAULT_MAX_TOKENS     = 800
+DEFAULT_TEMPERATURE    = 0.2
+DEFAULT_TIMEOUT        = 300
+DEFAULT_CONTEXT_BUDGET = 6000   # tokens reservados para texto del paper
+MAX_RETRIES            = 5
+RETRY_BACKOFF          = 3
 
 
-PROMPT_FIG_NO_CTX = (
-    "You are an expert scientist analyzing a scientific figure from a research paper.\n"
-    "INTERPRET the science, do not just describe pixels.\n\n"
-    "- What is the figure showing? (data, comparison, mechanism, workflow)\n"
-    "- Key findings, trends or patterns visible\n"
-    "- What this figure proves, suggests, or rules out\n"
-    "- If multi-panel (A, B, C...), address each panel briefly\n\n"
-    "Be precise and concise."
-)
+# ─── Prompts orientados a training data ─────────────────────────────────────
 
-PROMPT_FIG_WITH_CTX = (
-    "You are an expert scientist. Below is text from the paper containing this figure, "
-    "followed by the figure itself.\n\n"
-    "PAPER TEXT:\n{context}\n\n---\n\n"
-    "INTERPRET the figure using the paper as context:\n"
-    "- What specific hypothesis or claim does this figure test or support?\n"
-    "- What does the data reveal about the biology/mechanism/system being studied?\n"
-    "- Key quantitative findings (values, fold-changes, p-values, comparisons)\n"
-    "- How does this figure advance the paper's overall argument?\n\n"
-    "Connect specific visual evidence to claims in the text. Be precise."
-)
+# Inferencia pura: solo la imagen, sin info del paper
+PROMPT_INFERENCE_FIG = """You are creating high-quality training labels for a vision-language model that analyzes scientific figures. Your output will be used as ground truth — be precise, thorough, and never refuse.
 
-PROMPT_TBL_NO_CTX = (
-    "You are an expert analyzing a table from a scientific paper.\n"
-    "- What does this table compare or summarize?\n"
-    "- Which entries stand out (best/worst/surprising)?\n"
-    "- What conclusion does it support?\n"
-    "Be precise and concise."
-)
+Analyze this scientific figure following EXACTLY this structure (every section is required):
 
-PROMPT_TBL_WITH_CTX = (
-    "You are an expert scientist. Below is text from the paper containing this table.\n\n"
-    "PAPER TEXT:\n{context}\n\n---\n\n"
-    "INTERPRET the table using the paper as context:\n"
-    "- What is being compared and why?\n"
-    "- Most relevant entries given the paper's claims\n"
-    "- How does this table support the paper's argument?\n"
-    "Be precise and quantitative."
-)
+## Visual Description
+What is visible: panels, axes, colors, labels, legends, units, symbols, organisms/structures shown. 2-4 sentences.
 
+## Figure Type
+Type of visualization (bar chart, scatter plot, schematic, microscopy, gel, heatmap, workflow diagram, etc.) and what experimental data it represents.
 
-# ─── Extracción de contexto textual ─────────────────────────────────────────
-def extract_page_context(pdf_path, center_page, window, max_chars):
-    """Texto de páginas adyacentes a center_page (1-indexed), truncado."""
-    doc = fitz.open(str(pdf_path))
-    total = len(doc)
-    start = max(0, center_page - 1 - window)
-    end   = min(total, center_page + window)
-    parts = []
-    for i in range(start, end):
-        text = doc[i].get_text("text").strip()
-        if text:
-            parts.append(f"[Page {i + 1}]\n{text}")
-    doc.close()
-    full = "\n\n".join(parts)
-    if len(full) > max_chars:
-        full = full[:max_chars] + "\n\n[... truncated ...]"
-    return full
+## Data and Patterns
+Specific values, trends, comparisons, or relationships shown. Cite numbers visible in the image when possible. Identify groups being compared.
+
+## Scientific Interpretation
+What biological/scientific question this figure addresses and what conclusion the data supports. Be specific about mechanism, pathway, or phenomenon.
+
+## Significance
+Why this finding matters. What it proves, suggests, or rules out.
+
+If multi-panel (A, B, C, ...), briefly address each panel's contribution. Never refuse — even minimal figures must be analyzed."""
+
+PROMPT_INFERENCE_TBL = """You are creating training labels for a vision-language model. Your output is ground truth — be precise, thorough, never refuse.
+
+Analyze this scientific table following EXACTLY this structure:
+
+## Table Description
+Columns, rows, what is being compared. Units and scale.
+
+## Data Summary
+Most important entries — best/worst values, surprising results, notable patterns.
+
+## Scientific Interpretation
+What this table proves or argues. What biological/methodological insight emerges from the comparison.
+
+## Significance
+Why this comparison matters in the paper's context."""
 
 
-# ─── Cliente HTTP con retries ────────────────────────────────────────────────
-def ask_api(server, img_bytes, prompt, max_tokens, temperature, timeout):
-    b64 = base64.b64encode(img_bytes).decode()
+# Anclado al paper: imagen + paper como contexto
+PROMPT_ANCHORED_FIG_TEMPLATE = """You are creating training labels using both a scientific figure and the paper it comes from. Your output is ground truth — be precise, never refuse.
+
+PAPER TEXT:
+{context}
+
+---
+
+Analyze the figure below, USING THE PAPER as authoritative reference. Follow EXACTLY this structure:
+
+## Visual Description
+What is visible in the figure (panels, axes, symbols, organisms).
+
+## Hypothesis Tested
+The specific claim or hypothesis from the paper that this figure tests or supports. Quote relevant text.
+
+## Key Data and Findings
+Specific quantitative results (values, fold-changes, p-values, gene names) that this figure demonstrates. Connect visual elements to numbers in the paper text.
+
+## Mechanistic Insight
+What the data reveals about the biology, pathway, or system being studied. Reference the paper's argument.
+
+## Narrative Role
+How this figure advances the paper's overall argument (establishes baseline, demonstrates causation, validates model, etc.).
+
+## Limitations / Caveats
+Any limitations or alternative interpretations visible in the data or noted in the paper."""
+
+PROMPT_ANCHORED_TBL_TEMPLATE = """You are creating training labels using a scientific table and its paper. Be precise, never refuse.
+
+PAPER TEXT:
+{context}
+
+---
+
+Analyze the table below using the paper as reference:
+
+## Table Description
+What is compared, by what metric, against what baselines.
+
+## Key Entries
+Most relevant rows/columns given the paper's claims. Cite specific values.
+
+## Argument Supported
+What conclusion from the paper this table substantiates. Quote relevant text.
+
+## Significance
+Why this comparison matters in the paper's narrative."""
+
+
+# Para resumir paper largo (solo texto, sin imagen)
+PROMPT_SUMMARIZE = """Summarize this scientific paper for downstream figure analysis. Include:
+
+## Research Question
+The main scientific question and hypothesis.
+
+## Methods Overview
+Key experimental approaches and model systems used.
+
+## Main Findings
+The primary results, with specific values, gene names, mechanisms when mentioned.
+
+## Per-Figure Context
+For each figure/table mentioned in the text, briefly describe what it shows and its role.
+
+## Conclusions and Significance
+What the paper concludes and why it matters.
+
+Be thorough but concise (target 800-1000 words). Preserve technical specificity.
+
+PAPER:
+{paper_text}"""
+
+
+# ─── HTTP client ─────────────────────────────────────────────────────────────
+def ask_api(server, prompt, image_bytes=None, max_tokens=DEFAULT_MAX_TOKENS,
+            temperature=DEFAULT_TEMPERATURE, timeout=DEFAULT_TIMEOUT):
+    """Generic chat completion. With or without image."""
+    content = []
+    if image_bytes is not None:
+        b64 = base64.b64encode(image_bytes).decode()
+        content.append({"type": "image_url",
+                        "image_url": {"url": f"data:image/png;base64,{b64}"}})
+    content.append({"type": "text", "text": prompt})
+
     payload = {
-        "messages": [{
-            "role": "user",
-            "content": [
-                {"type": "image_url",
-                 "image_url": {"url": f"data:image/png;base64,{b64}"}},
-                {"type": "text", "text": prompt},
-            ],
-        }],
+        "messages":    [{"role": "user", "content": content}],
         "max_tokens":  max_tokens,
         "temperature": temperature,
         "stream":      False,
@@ -126,32 +183,71 @@ def ask_api(server, img_bytes, prompt, max_tokens, temperature, timeout):
         try:
             r = requests.post(server, json=payload, timeout=timeout)
             r.raise_for_status()
-            content = r.json()["choices"][0]["message"]["content"].strip()
-            if not content:
-                raise ValueError("respuesta vacía")
-            return content
+            text = r.json()["choices"][0]["message"]["content"].strip()
+            if not text:
+                raise ValueError("empty response")
+            return text
         except Exception as e:
             last_err = e
             wait = RETRY_BACKOFF * (2 ** attempt)
-            print(f"    intento {attempt + 1}/{MAX_RETRIES}: {e} - retry en {wait}s", flush=True)
+            print(f"    retry {attempt + 1}/{MAX_RETRIES}: {e} ({wait}s)", flush=True)
             time.sleep(wait)
-    raise RuntimeError(f"falló tras {MAX_RETRIES} intentos: {last_err}")
+    raise RuntimeError(f"failed after {MAX_RETRIES}: {last_err}")
 
 
 def server_health(server):
     try:
         url = server.rsplit("/v1/", 1)[0] + "/health"
-        r = requests.get(url, timeout=5)
-        return r.status_code == 200
+        return requests.get(url, timeout=5).status_code == 200
     except Exception:
         return False
 
 
+# ─── Paper context: smart full-vs-summary ────────────────────────────────────
+def extract_full_paper_text(pdf_path):
+    doc = fitz.open(str(pdf_path))
+    parts = []
+    for i, page in enumerate(doc):
+        text = page.get_text("text").strip()
+        if text:
+            parts.append(f"[Page {i + 1}]\n{text}")
+    doc.close()
+    return "\n\n".join(parts)
+
+
+def estimate_tokens(text):
+    """Aproximación conservadora: 1 token ≈ 3.5 chars en inglés."""
+    return len(text) // 3
+
+
+def compute_paper_context(pdf_path, server, budget_tokens=DEFAULT_CONTEXT_BUDGET):
+    """
+    Retorna (context_text, mode) donde mode ∈ {"full", "summary"}.
+    Si el paper entero cabe en budget_tokens → "full".
+    Si no → llama al LLM para resumirlo y retorna "summary".
+    """
+    full_text = extract_full_paper_text(pdf_path)
+    est = estimate_tokens(full_text)
+
+    print(f"Paper: {len(full_text):,} chars (~{est:,} tokens) | budget: {budget_tokens:,} tokens")
+
+    if est <= budget_tokens:
+        print("  Cabe entero -> usando paper completo como contexto")
+        return full_text, "full"
+
+    print("  Demasiado grande -> generando resumen via LLM (una sola vez)...")
+    # Truncar input para que quepa en una request de resumen
+    truncated = full_text[:budget_tokens * 3]  # ~chars de budget tokens
+    summary = ask_api(server, PROMPT_SUMMARIZE.format(paper_text=truncated),
+                      max_tokens=1500, temperature=0.3)
+    print(f"  Resumen: {len(summary):,} chars (~{estimate_tokens(summary):,} tokens)")
+    return summary, "summary"
+
+
 # ─── Pipeline ────────────────────────────────────────────────────────────────
-def analyze_all(figures_json, pdf_path, server, with_context=True,
-                max_tokens=DEFAULT_MAX_TOKENS, temperature=DEFAULT_TEMPERATURE,
-                timeout=DEFAULT_TIMEOUT, window=DEFAULT_PAGE_WINDOW,
-                max_ctx_chars=DEFAULT_MAX_CTX_CHARS, out_path=None):
+def analyze_all(figures_json, pdf_path, server, mode_inference=True, mode_anchored=True,
+                budget_tokens=DEFAULT_CONTEXT_BUDGET, max_tokens=DEFAULT_MAX_TOKENS,
+                temperature=DEFAULT_TEMPERATURE, timeout=DEFAULT_TIMEOUT, out_path=None):
     fig_json = Path(figures_json)
     pdf_path = Path(pdf_path) if pdf_path else None
     meta = json.loads(fig_json.read_text(encoding="utf-8"))
@@ -169,14 +265,26 @@ def analyze_all(figures_json, pdf_path, server, with_context=True,
         try:
             prev = json.loads(out_path.read_text(encoding="utf-8"))
             for it in prev.get("items", []):
-                if "analysis" in it or "analysis_no_ctx" in it:
+                has_inference = "inference" in it
+                has_anchored  = "anchored"  in it
+                # Solo skip si tiene todos los modos solicitados
+                ok = (not mode_inference or has_inference) and (not mode_anchored or has_anchored)
+                if ok:
                     results.append(it)
                     done.add(it["label"])
         except Exception:
             pass
 
-    print(f"Items: {len(items)} | hechos: {len(done)} | server: {server}")
-    print(f"Contexto: {'sí' if with_context else 'no'}\n")
+    print(f"\nServer: {server}")
+    print(f"Items: {len(items)} | hechos: {len(done)}")
+    print(f"Modos: inference={mode_inference} anchored={mode_anchored}\n")
+
+    # Pre-computar contexto del paper (una sola vez)
+    paper_context = None
+    context_mode  = None
+    if mode_anchored and pdf_path and pdf_path.exists():
+        paper_context, context_mode = compute_paper_context(pdf_path, server, budget_tokens)
+        print()
 
     for i, item in enumerate(items):
         if item["label"] in done:
@@ -192,36 +300,41 @@ def analyze_all(figures_json, pdf_path, server, with_context=True,
         result = dict(item)
         t_start = time.time()
 
-        # Análisis sin contexto
-        prompt_nc = PROMPT_TBL_NO_CTX if is_table else PROMPT_FIG_NO_CTX
-        try:
-            ans = ask_api(server, img_bytes, prompt_nc, max_tokens, temperature, timeout)
-            result["analysis_no_ctx"] = ans
-        except Exception as e:
-            result["error_no_ctx"] = str(e)
-
-        # Análisis con contexto (si pdf disponible)
-        if with_context and pdf_path and pdf_path.exists():
-            ctx_text = extract_page_context(pdf_path, item["page"], window, max_ctx_chars)
-            tmpl = PROMPT_TBL_WITH_CTX if is_table else PROMPT_FIG_WITH_CTX
+        # 1) Inferencia pura (solo imagen)
+        if mode_inference:
+            prompt_inf = PROMPT_INFERENCE_TBL if is_table else PROMPT_INFERENCE_FIG
             try:
-                ans = ask_api(server, img_bytes, tmpl.format(context=ctx_text),
-                              max_tokens, temperature, timeout)
-                result["analysis_with_ctx"] = ans
+                ans = ask_api(server, prompt_inf, image_bytes=img_bytes,
+                              max_tokens=max_tokens, temperature=temperature, timeout=timeout)
+                result["inference"] = ans
             except Exception as e:
-                result["error_with_ctx"] = str(e)
+                result["inference_error"] = str(e)
 
-        result["elapsed_sec"] = round(time.time() - t_start, 1)
+        # 2) Anclado al paper (imagen + contexto)
+        if mode_anchored and paper_context:
+            tmpl = PROMPT_ANCHORED_TBL_TEMPLATE if is_table else PROMPT_ANCHORED_FIG_TEMPLATE
+            prompt_anc = tmpl.format(context=paper_context)
+            try:
+                ans = ask_api(server, prompt_anc, image_bytes=img_bytes,
+                              max_tokens=max_tokens, temperature=temperature, timeout=timeout)
+                result["anchored"] = ans
+            except Exception as e:
+                result["anchored_error"] = str(e)
+
+        result["elapsed_sec"]  = round(time.time() - t_start, 1)
+        result["context_mode"] = context_mode
         results.append(result)
 
-        preview = (result.get("analysis_no_ctx") or "")[:100].replace("\n", " ")
-        print(f"[{i + 1}/{len(items)}] {item['label']} p{item['page']} "
-              f"({result['elapsed_sec']}s) {preview}...")
+        preview = (result.get("inference") or result.get("anchored") or "")[:90].replace("\n", " ")
+        print(f"[{i + 1}/{len(items)}] {item['label']} p{item['page']} ({result['elapsed_sec']}s) {preview}...")
 
         # Guardado incremental
         out_path.write_text(
-            json.dumps({"total": len(results), "items": results},
-                       indent=2, ensure_ascii=False),
+            json.dumps({
+                "total":        len(results),
+                "context_mode": context_mode,
+                "items":        results,
+            }, indent=2, ensure_ascii=False),
             encoding="utf-8",
         )
 
@@ -231,38 +344,41 @@ def analyze_all(figures_json, pdf_path, server, with_context=True,
 
 # ─── CLI ─────────────────────────────────────────────────────────────────────
 def main(argv=None):
-    p = argparse.ArgumentParser(
-        description="Analiza figuras extraídas con un LLM multimodal vía API OpenAI-compatible.",
-    )
-    p.add_argument("figures_json",  help="ruta al figures.json producido por extract_figures.py")
-    p.add_argument("--pdf",         help="PDF original (para contexto de páginas)")
-    p.add_argument("--server",      default=DEFAULT_SERVER,
-                   help=f"URL del endpoint chat/completions (def: {DEFAULT_SERVER})")
-    p.add_argument("--no-context",  action="store_true",
-                   help="solo análisis sin contexto del paper")
-    p.add_argument("--out",         help="ruta de salida (def: analyses.json al lado de figures.json)")
+    p = argparse.ArgumentParser(description="Analiza figuras con LLM via API OpenAI-compatible.")
+    p.add_argument("figures_json", help="figures.json producido por extract_figures.py")
+    p.add_argument("--pdf",        help="PDF original (para análisis anchored)")
+    p.add_argument("--server",     default=DEFAULT_SERVER)
+    p.add_argument("--inference-only", action="store_true",
+                   help="solo inferencia pura, sin contexto del paper")
+    p.add_argument("--anchored-only",  action="store_true",
+                   help="solo anclado al paper, requiere --pdf")
+    p.add_argument("--out",         help="ruta de salida (def: analyses.json)")
+    p.add_argument("--budget-tokens", type=int, default=DEFAULT_CONTEXT_BUDGET,
+                   help=f"tokens reservados para texto del paper (def: {DEFAULT_CONTEXT_BUDGET})")
     p.add_argument("--max-tokens",  type=int, default=DEFAULT_MAX_TOKENS)
     p.add_argument("--temperature", type=float, default=DEFAULT_TEMPERATURE)
     p.add_argument("--timeout",     type=int, default=DEFAULT_TIMEOUT)
-    p.add_argument("--window",      type=int, default=DEFAULT_PAGE_WINDOW,
-                   help="páginas ±N para contexto (def: 3)")
     args = p.parse_args(argv)
 
     if not server_health(args.server):
         sys.exit(f"Servidor no responde: {args.server}")
 
-    if not args.no_context and not args.pdf:
-        sys.exit("--pdf requerido para análisis con contexto (o usar --no-context)")
+    mode_inf = not args.anchored_only
+    mode_anc = not args.inference_only
+
+    if mode_anc and not args.pdf:
+        sys.exit("--pdf requerido para anchored. Usa --inference-only si no tienes el PDF.")
 
     analyze_all(
         args.figures_json,
         pdf_path=args.pdf,
         server=args.server,
-        with_context=not args.no_context,
+        mode_inference=mode_inf,
+        mode_anchored=mode_anc,
+        budget_tokens=args.budget_tokens,
         max_tokens=args.max_tokens,
         temperature=args.temperature,
         timeout=args.timeout,
-        window=args.window,
         out_path=args.out,
     )
 
