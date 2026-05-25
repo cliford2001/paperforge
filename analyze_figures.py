@@ -37,7 +37,7 @@ import requests
 
 # ─── Defaults ────────────────────────────────────────────────────────────────
 DEFAULT_SERVER         = "http://127.0.0.1:8080/v1/chat/completions"
-DEFAULT_MAX_TOKENS     = 1200
+DEFAULT_MAX_TOKENS     = 1500
 DEFAULT_TEMPERATURE    = 0.2
 DEFAULT_TIMEOUT        = 300
 DEFAULT_CONTEXT_BUDGET = 6000   # tokens reservados para texto del paper
@@ -48,7 +48,9 @@ RETRY_BACKOFF          = 3
 # ─── Prompts orientados a training data ─────────────────────────────────────
 
 # Inferencia pura: solo la imagen, sin info del paper
-PROMPT_INFERENCE_FIG = """You are creating high-quality training labels for a vision-language model that analyzes scientific figures. Your output will be used as ground truth — be precise, thorough, and never refuse.
+PROMPT_INFERENCE_FIG_TEMPLATE = """You are creating high-quality training labels for a vision-language model that analyzes scientific figures. Your output will be used as ground truth — be precise, thorough, and never refuse.
+
+Figure caption: {caption}
 
 Analyze this scientific figure following EXACTLY this structure (every section is required):
 
@@ -58,8 +60,14 @@ What is visible: panels, axes, colors, labels, legends, units, symbols, organism
 ## Figure Type
 Type of visualization (bar chart, scatter plot, schematic, microscopy, gel, heatmap, workflow diagram, etc.) and what experimental data it represents.
 
+## Statistical Markers
+Every statistical element visible in the figure: sample sizes (n=), error bars (SD, SEM, 95% CI), p-values, R² or correlation coefficients, confidence intervals, effect sizes. If none are visible, state "None visible." Do not infer or assume values not shown in the image.
+
 ## Data and Patterns
 Specific values, trends, comparisons, or relationships shown. Cite numbers visible in the image when possible. Identify groups being compared.
+
+## Caption Alignment
+Does the caption accurately describe what is shown? Note any discrepancies: elements present in the image but absent from the caption, or claims in the caption not directly supported by the visual.
 
 ## Scientific Interpretation
 What biological/scientific question this figure addresses and what conclusion the data supports. Be specific about mechanism, pathway, or phenomenon.
@@ -69,15 +77,23 @@ Why this finding matters. What it proves, suggests, or rules out.
 
 If multi-panel (A, B, C, ...), briefly address each panel's contribution. Never refuse — even minimal figures must be analyzed."""
 
-PROMPT_INFERENCE_TBL = """You are creating training labels for a vision-language model. Your output is ground truth — be precise, thorough, never refuse.
+PROMPT_INFERENCE_TBL_TEMPLATE = """You are creating training labels for a vision-language model. Your output is ground truth — be precise, thorough, never refuse.
+
+Table caption: {caption}
 
 Analyze this scientific table following EXACTLY this structure:
 
 ## Table Description
 Columns, rows, what is being compared. Units and scale.
 
+## Statistical Markers
+Statistical annotations visible in the table: significance markers (*, **, ***), p-values, confidence intervals, sample sizes, standard deviations. If none, state "None visible."
+
 ## Data Summary
 Most important entries — best/worst values, surprising results, notable patterns.
+
+## Caption Alignment
+Does the caption accurately describe what the table contains? Note any discrepancies between what is shown and what the caption claims.
 
 ## Scientific Interpretation
 What this table proves or argues. What biological/methodological insight emerges from the comparison.
@@ -94,16 +110,27 @@ PAPER TEXT:
 
 ---
 
+Figure caption: {caption}
+
 Analyze the figure below, USING THE PAPER as authoritative reference. Follow EXACTLY this structure:
 
 ## Visual Description
 What is visible in the figure (panels, axes, symbols, organisms).
+
+## Caption Alignment
+Does the caption accurately describe what is shown? Note any discrepancies between the visual content and what the caption states or implies.
 
 ## Hypothesis Tested
 The specific claim or hypothesis from the paper that this figure tests or supports. Quote relevant text.
 
 ## Key Data and Findings
 Specific quantitative results (values, fold-changes, p-values, gene names) that this figure demonstrates. Connect visual elements to numbers in the paper text.
+
+## Statistical Markers
+Every statistical element visible: sample sizes (n=), error bars (SD, SEM, 95% CI), p-values, R² values, significance markers. If none are visible, state "None visible." Do not infer values not shown.
+
+## Controls Assessment
+Identify experimental controls present in this figure (positive controls, negative controls, baseline comparisons, internal references). Note any controls conspicuously absent given the experimental design described in the paper. Be specific about what is and is not controlled for.
 
 ## Mechanistic Insight
 What the data reveals about the biology, pathway, or system being studied. Reference the paper's argument.
@@ -124,13 +151,24 @@ PAPER TEXT:
 
 ---
 
+Table caption: {caption}
+
 Analyze the table below using the paper as reference:
 
 ## Table Description
 What is compared, by what metric, against what baselines.
 
+## Caption Alignment
+Does the caption accurately describe what the table contains? Note any discrepancies between the actual table content and what the caption states.
+
 ## Key Entries
 Most relevant rows/columns given the paper's claims. Cite specific values.
+
+## Statistical Markers
+Significance markers, p-values, confidence intervals, or sample sizes visible in the table. If none, state "None visible."
+
+## Controls Assessment
+What baseline or reference conditions are used for comparison in the table. Note any missing controls given the experimental context described in the paper.
 
 ## Argument Supported
 What conclusion from the paper this table substantiates. Quote relevant text.
@@ -303,12 +341,14 @@ def analyze_all(figures_json, pdf_path, server, mode_inference=True, mode_anchor
         img_bytes = img_path.read_bytes()
 
         is_table = item["kind"] == "table"
+        caption  = item.get("caption", "Not provided.")
         result = dict(item)
         t_start = time.time()
 
-        # 1) Inferencia pura (solo imagen)
+        # 1) Inferencia pura (solo imagen + caption)
         if mode_inference:
-            prompt_inf = PROMPT_INFERENCE_TBL if is_table else PROMPT_INFERENCE_FIG
+            tmpl_inf  = PROMPT_INFERENCE_TBL_TEMPLATE if is_table else PROMPT_INFERENCE_FIG_TEMPLATE
+            prompt_inf = tmpl_inf.format(caption=caption)
             try:
                 ans = ask_api(server, prompt_inf, image_bytes=img_bytes,
                               max_tokens=max_tokens, temperature=temperature, timeout=timeout)
@@ -316,10 +356,10 @@ def analyze_all(figures_json, pdf_path, server, mode_inference=True, mode_anchor
             except Exception as e:
                 result["inference_error"] = str(e)
 
-        # 2) Anclado al paper (imagen + contexto)
+        # 2) Anclado al paper (imagen + caption + contexto)
         if mode_anchored and paper_context:
             tmpl = PROMPT_ANCHORED_TBL_TEMPLATE if is_table else PROMPT_ANCHORED_FIG_TEMPLATE
-            prompt_anc = tmpl.format(context=paper_context)
+            prompt_anc = tmpl.format(context=paper_context, caption=caption)
             try:
                 ans = ask_api(server, prompt_anc, image_bytes=img_bytes,
                               max_tokens=max_tokens, temperature=temperature, timeout=timeout)
