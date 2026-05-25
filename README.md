@@ -1,120 +1,60 @@
 # scientific-figure-extractor
 
-Extracción inteligente de figuras y tablas individuales desde PDFs científicos, con análisis opcional vía LLM multimodal (InternVL, Qwen-VL, LLaVA, etc.).
+Two-stage pipeline for scientific PDF analysis:
 
-## Por qué
+1. **`extract_figures.py`** — extracts individual figures and tables from PDFs as PNG images (no ML, pure geometry)
+2. **`analyze_figures.py`** — analyzes each extracted figure with a vision-language model via any OpenAI-compatible API, generating structured training data
 
-Renderizar páginas completas de un PDF como imagen es un **pésimo input** para modelos visión-lenguaje: el modelo ve texto del paper, varias figuras, headers, todo mezclado. La interpretación se diluye.
+---
 
-Este extractor produce **una imagen por figura/tabla**, con bbox preciso, respetando:
-- Layout multi-columna (izquierda / derecha / full-width)
-- Gráficos vectoriales (drawings) **además** de imágenes embebidas
-- Límites entre figuras consecutivas (Figure 9 no contamina Figure 10)
-- Tablas de texto puro (no son imágenes, son bloques formateados)
+## Why
 
-## Cómo funciona
+Feeding a full PDF page to a vision-language model is poor practice: the model sees body text, multiple figures, headers, and captions all mixed together. Interpretation quality drops significantly.
 
-1. **Detecta captions** vía regex sobre cada bloque de texto: `Figure N`, `Fig. N`, `Table N`, `Extended Data Fig. N`.
-2. **Clasifica columna** del caption (izq / der / full) según posición horizontal.
-3. **Encuentra contenido visual arriba del caption**, en la misma columna, dentro de una altura máxima razonable.
-4. **Limita con el caption anterior** en la misma columna para que figuras consecutivas no se mezclen.
-5. **Tablas**: recolecta bloques de texto contiguos en lugar de imágenes/drawings.
-6. **Renderiza** el bbox resultante a PNG en DPI configurable.
+This pipeline isolates each figure into its own image with precise bounding boxes, then prompts the model with a rigid structure designed to produce high-quality, consistent training labels.
 
-Sin ML, solo geometría. Funciona en CPU en milisegundos.
+---
 
-## Instalación
+## Pipeline 1: extract_figures.py
 
-```bash
-pip install -r requirements.txt
-```
+### How it works
 
-Requisitos:
-- Python 3.9+
-- PyMuPDF (`fitz`)
-- requests (solo para `analyze_figures.py`)
+1. Detects captions via regex over text blocks: `Figure N`, `Fig. N`, `Table N`, `Extended Data Fig. N`
+2. Classifies the caption's column (left / right / full-width) from its horizontal position
+3. Finds the visual content above the caption in the same column, within a configurable max height
+4. Expands the bounding box to include narrow text elements (axis labels, panel letters, colorbars) within 60pt
+5. Filters body text wider than 35% of page width to avoid capturing paragraphs
+6. Handles cross-page figures: if the caption is on page N but the visual is on page N+1, searches the next page
+7. Falls back to pixel rendering for Form XObjects (figures invisible to PyMuPDF's drawing API)
+8. Renders the final bbox to PNG at configurable DPI
 
-## Uso
+No ML. Runs on CPU in milliseconds per page.
 
-### Solo extracción
+### Usage
 
 ```bash
 python extract_figures.py paper.pdf --out extracted/
 ```
 
-Output:
+Output structure:
 ```
 extracted/
-├── p001_Figure_1.png
-├── p002_Figure_2.png
-├── p003_Table_1.png
+├── p002_Figure_1.png
+├── p003_Figure_2.png
+├── p005_Table_1.png
 ├── ...
-└── figures.json     ← metadata con bbox, caption, página
+└── figures.json
 ```
 
-Opciones:
+Options:
 ```
---out DIR          directorio de salida (def: extracted/)
---dpi N            resolución del render (def: 200)
---max-height N     altura máxima del bbox de una figura en pt (def: 600)
---quiet            sin output a stdout
-```
-
-### Análisis con LLM (opcional)
-
-Requiere un servidor OpenAI-compatible con un modelo visión-lenguaje (probado con [InternVL3-14B](https://huggingface.co/OpenGVLab/InternVL3-14B) en llama.cpp).
-
-```bash
-python analyze_figures.py extracted/figures.json --pdf paper.pdf \
-    --server http://127.0.0.1:8080/v1/chat/completions
+--out DIR        output directory (default: extracted/)
+--dpi N          render resolution in DPI (default: 200)
+--max-height N   max figure height in points (default: 9999)
+--quiet          suppress stdout
 ```
 
-Genera **dos análisis por figura** orientados a *training data*:
-- `inference` — interpretación basada **solo** en la imagen, con prompt estructurado que fuerza descripción visual + tipo + datos + interpretación + significancia
-- `anchored` — interpretación usando **el paper completo** como contexto autoritativo
-
-**Contexto inteligente:** el script detecta si el paper cabe entero en el context window del modelo:
-- Si cabe → usa paper completo
-- Si no → genera un resumen vía LLM **una sola vez** y reutiliza para todas las figuras
-
-Resume automático si se interrumpe.
-
-Opciones:
-```
---server URL          endpoint OpenAI-compatible (def: localhost:8080)
---pdf FILE            PDF original (necesario para anchored)
---inference-only      solo inferencia pura sin contexto del paper
---anchored-only       solo análisis anclado al paper
---budget-tokens N     tokens reservados para texto del paper (def: 6000)
---max-tokens N        límite de tokens generados (def: 800)
---temperature F       (def: 0.2)
---timeout N           seg por request (def: 300)
---out FILE            ruta de salida JSON
-```
-
-Prompts diseñados para **training data**:
-- Estructura fija (## Visual Description, ## Data and Findings, etc.)
-- Fuerza análisis multi-aspecto
-- Evita respuestas evasivas ("I cannot interpret...")
-- Output consistente, parseable como labels supervisados
-
-## Servir el modelo local
-
-Cualquier servidor OpenAI-compatible con soporte vision funciona. Ejemplo con [llama.cpp](https://github.com/ggml-org/llama.cpp):
-
-```bash
-llama-server \
-    -m InternVL3-14B-Instruct-Q4_K_M.gguf \
-    --mmproj mmproj-InternVL3-14B-Instruct-Q8_0.gguf \
-    --host 0.0.0.0 --port 8080 \
-    -ngl 99 -c 16384 \
-    -ctk q4_0 -ctv q4_0 \
-    --jinja
-```
-
-Modelo recomendado: GGUFs oficiales en [ggml-org/InternVL3-14B-Instruct-GGUF](https://huggingface.co/ggml-org/InternVL3-14B-Instruct-GGUF).
-
-## Formato de figures.json
+### figures.json format
 
 ```json
 {
@@ -126,20 +66,200 @@ Modelo recomendado: GGUFs oficiales en [ggml-org/InternVL3-14B-Instruct-GGUF](ht
       "kind":       "figure",
       "page":       3,
       "bbox":       [300.4, 64.0, 553.1, 219.0],
-      "caption":    "Figure 3. Overall Architecture. ...",
+      "caption":    "Fig. 3 | Overall architecture of ...",
       "image_path": "extracted/p003_Figure_3.png",
-      "image_size": [253, 155]
+      "image_size": [503, 310]
     }
   ]
 }
 ```
 
-## Limitaciones
+`kind` is either `"figure"` or `"table"`.
 
-- Asume captions debajo de la figura (estándar en papers de ciencias). Captions sobre la figura no detectadas.
-- Tablas reportadas como ASCII/Unicode (no imágenes) — la "imagen" extraída es el bloque de texto rasterizado. Para tablas como bitmap, usar `find_figure_region`.
-- Pocas falsas detecciones en PDFs con menciones inline tipo "see Fig. 5".
+---
 
-## Licencia
+## Pipeline 2: analyze_figures.py
 
-MIT — ver [LICENSE](LICENSE).
+Takes `figures.json` from the extractor and sends each figure to a vision-language model. Generates **two analyses per figure**:
+
+- `inference` — pure visual analysis: image + caption only, no paper context
+- `anchored` — grounded analysis: image + caption + full paper context (or LLM-generated summary if the paper is too large)
+
+Designed to produce **structured training data** with consistent, parseable sections.
+
+### Usage
+
+```bash
+python analyze_figures.py extracted/figures.json \
+    --pdf paper.pdf \
+    --server http://127.0.0.1:8080/v1/chat/completions \
+    --out results/model_name.json
+```
+
+Options:
+```
+--pdf FILE           original PDF (required for anchored analysis)
+--server URL         OpenAI-compatible endpoint (default: http://127.0.0.1:8080/v1/chat/completions)
+--out FILE           output path (default: analyses.json next to figures.json)
+--inference-only     skip anchored analysis
+--anchored-only      skip inference analysis (requires --pdf)
+--budget-tokens N    max tokens reserved for paper context (default: 6000)
+--max-tokens N       max tokens to generate per response (default: 1500)
+--temperature F      sampling temperature (default: 0.0 — deterministic)
+--timeout N          seconds per request before retry (default: 300)
+```
+
+Resumes automatically if interrupted: already-completed figures are skipped.
+
+### Smart paper context
+
+The script reads the full paper text and estimates its token count:
+
+- If it fits within `--budget-tokens` → sends the full paper as context
+- If not → calls the LLM once to generate a structured summary, then reuses it for all figures
+
+The summary prompt asks for: research question, methods, main findings, per-figure descriptions, and conclusions. This happens once, not once per figure.
+
+### Inference prompt structure (figures)
+
+Generated for every figure using the image and its caption:
+
+```
+## Visual Description
+## Figure Type
+## Statistical Markers
+## Data and Patterns
+## Caption Alignment
+## Scientific Interpretation
+## Significance
+```
+
+**Statistical Markers** forces the model to report exactly what is visible (n=, error bars, p-values, R²) or state "None visible" — it cannot infer or assume values not shown in the image.
+
+**Caption Alignment** checks whether the caption accurately describes what is shown, surfacing omissions or overstatements in the original paper.
+
+### Anchored prompt structure (figures)
+
+Generated for every figure using the image, caption, and paper context:
+
+```
+## Visual Description
+## Caption Alignment
+## Hypothesis Tested
+## Key Data and Findings
+## Statistical Markers
+## Controls Assessment
+## Mechanistic Insight
+## Narrative Role
+## Limitations / Caveats
+## Scientific Conclusion
+```
+
+**Controls Assessment** identifies experimental controls present in the figure and flags any conspicuously absent ones given the experimental design described in the paper.
+
+**Scientific Conclusion** synthesizes visual evidence with the paper's framework into a precise, self-contained conclusion: what this figure definitively demonstrates, what alternative explanations it rules out, and its conceptual significance in the paper's broader argument.
+
+The inference prompt is intentionally left without this section — drawing scientific conclusions requires paper context.
+
+### Output format
+
+```json
+{
+  "total": 15,
+  "context_mode": "summary",
+  "items": [
+    {
+      "label":        "Figure 1",
+      "kind":         "figure",
+      "page":         2,
+      "caption":      "Fig. 1 | Genome assemblies and size variation...",
+      "image_path":   "extracted/p002_Figure_1.png",
+      "image_size":   [571, 291],
+      "inference":    "## Visual Description\n...",
+      "anchored":     "## Visual Description\n...",
+      "elapsed_sec":  297.1,
+      "context_mode": "summary"
+    }
+  ]
+}
+```
+
+`context_mode` is `"full"` if the paper fit within the budget, `"summary"` if it was summarized.
+
+### Running a local vision-language model
+
+Any OpenAI-compatible server with vision support works. Tested setup using [llama.cpp](https://github.com/ggml-org/llama.cpp) with InternVL3-14B on a single GPU:
+
+```bash
+llama-server \
+    -m InternVL3-14B-Q4_K_M.gguf \
+    --mmproj mmproj-InternVL3-14B-Q8_0.gguf \
+    --host 0.0.0.0 --port 8080 \
+    -ngl 99 \
+    -c 8192 \
+    --jinja
+```
+
+For limited VRAM, reduce parallel slots (`-np 1`) to free KV cache memory for larger context:
+
+```bash
+llama-server \
+    -m InternVL3-14B-Q4_K_M.gguf \
+    --mmproj mmproj-InternVL3-14B-Q8_0.gguf \
+    --host 0.0.0.0 --port 8080 \
+    -ngl 99 -np 1 \
+    -c 16384 \
+    --jinja
+```
+
+Recommended models (GGUF):
+- [ggml-org/InternVL3-14B-Instruct-GGUF](https://huggingface.co/ggml-org/InternVL3-14B-Instruct-GGUF)
+- [Qwen/Qwen2.5-VL-7B-Instruct-GGUF](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct-GGUF)
+
+---
+
+## Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+Requirements:
+- Python 3.9+
+- PyMuPDF >= 1.24
+- requests >= 2.31
+
+---
+
+## Full example
+
+```bash
+# Step 1: extract figures from a paper
+python extract_figures.py paper.pdf --out extracted/ --dpi 200
+
+# Step 2: analyze with a local VLM (runs overnight for large papers)
+python analyze_figures.py extracted/figures.json \
+    --pdf paper.pdf \
+    --server http://localhost:8080/v1/chat/completions \
+    --out results/internvl3_14b.json
+
+# Resume if interrupted — already-done figures are skipped automatically
+python analyze_figures.py extracted/figures.json \
+    --pdf paper.pdf \
+    --out results/internvl3_14b.json
+```
+
+---
+
+## Limitations
+
+- Assumes captions appear below the figure (standard in most journals). Captions above figures are not detected.
+- Figures embedded as Form XObjects (rare) fall back to pixel rendering, which is slower.
+- Inline figure references ("see Fig. 5") occasionally produce false caption detections — the extractor skips them if no visual region is found above.
+- Table extraction renders the text block as an image rather than parsing cell structure.
+
+---
+
+## License
+
+MIT — see [LICENSE](LICENSE).
