@@ -49,137 +49,123 @@ MAX_RETRIES            = 5
 RETRY_BACKOFF          = 3
 
 
+# ─── Helpers de prompt ───────────────────────────────────────────────────────
+
+def _fmt_abstract(text: str, max_words: int = 350) -> str:
+    """Extrae las primeras max_words del texto del paper como bloque de contexto."""
+    if not text or not text.strip():
+        return ""
+    snippet = " ".join(text.split()[:max_words])
+    return f"PAPER CONTEXT (opening section):\n{snippet}\n\n"
+
+
+def _parse_json(text: str) -> dict | None:
+    """Intenta extraer un JSON válido de la respuesta del LLM."""
+    clean = re.sub(r'^```(?:json)?\s*|\s*```\s*$', '', text.strip(), flags=re.MULTILINE).strip()
+    try:
+        return json.loads(clean)
+    except Exception:
+        m = re.search(r'\{.*\}', clean, re.DOTALL)
+        if m:
+            try:
+                return json.loads(m.group())
+            except Exception:
+                pass
+    return None
+
+
 # ─── Prompts ─────────────────────────────────────────────────────────────────
 
-PROMPT_INFERENCE_FIG_TEMPLATE = """You are creating high-quality training labels for a vision-language model that analyzes scientific figures. Your output will be used as ground truth — be precise, thorough, and never refuse.
+PROMPT_INFERENCE_FIG_TEMPLATE = """{abstract_block}Figure caption: {caption}
 
-Figure caption: {caption}
+Analyze this scientific figure. Respond ONLY with valid JSON — no markdown fences, no text outside the JSON object:
 
-Analyze this scientific figure following EXACTLY this structure (every section is required):
+{{
+  "figure_type": "bar chart | scatter plot | line graph | Western blot | microscopy | heatmap | survival curve | flow cytometry | schematic | other",
+  "visual_description": "panels, axes, labels, colors, units, legends, organisms/structures shown. 2-3 sentences.",
+  "groups_compared": "conditions, treatments, timepoints, genotypes or cell lines contrasted in the figure.",
+  "statistical_markers": "every visible statistical element: n=, error bars type (SD/SEM/95%CI), p-values, R², fold-changes. Write 'None visible' if absent.",
+  "key_finding": "the main result shown, citing specific numbers from the image when visible.",
+  "caption_accurate": true,
+  "caption_discrepancy": "elements in image not described by caption, or caption claims not supported visually. Write 'None' if accurate.",
+  "scientific_interpretation": "what biological or scientific question this figure addresses and what the data demonstrates. Be specific about mechanism, pathway, or phenomenon.",
+  "confidence": "high | medium | low"
+}}
 
-## Visual Description
-What is visible: panels, axes, colors, labels, legends, units, symbols, organisms/structures shown. 2-4 sentences.
+confidence: high=evidence clearly readable in image; medium=partially visible; low=inferring beyond what is shown.
+If multi-panel (A, B, C...), address all panels in visual_description and key_finding.
+Never refuse — all figures must be analyzed."""
 
-## Figure Type
-Type of visualization (bar chart, scatter plot, schematic, microscopy, gel, heatmap, workflow diagram, etc.) and what experimental data it represents.
+PROMPT_INFERENCE_TBL_TEMPLATE = """{abstract_block}Table caption: {caption}
 
-## Statistical Markers
-Every statistical element visible in the figure: sample sizes (n=), error bars (SD, SEM, 95% CI), p-values, R² or correlation coefficients, confidence intervals, effect sizes. If none are visible, state "None visible." Do not infer or assume values not shown in the image.
+Analyze this scientific table. Respond ONLY with valid JSON — no markdown fences, no text outside the JSON object:
 
-## Data and Patterns
-Specific values, trends, comparisons, or relationships shown. Cite numbers visible in the image when possible. Identify groups being compared.
+{{
+  "table_type": "results comparison | parameter table | patient demographics | statistical summary | ablation study | other",
+  "structure": "columns and rows described: what is compared, against what baselines, using what metric and units.",
+  "statistical_markers": "significance markers (*, **, ***), p-values, CIs, n=, standard deviations visible. Write 'None visible' if absent.",
+  "best_result": "the row or cell showing the strongest or most notable result, with its exact value.",
+  "key_pattern": "the main trend, comparison or contrast that stands out across the table.",
+  "caption_accurate": true,
+  "caption_discrepancy": "discrepancy between caption and actual table content. Write 'None' if accurate.",
+  "scientific_interpretation": "what question this table addresses and what the numbers prove. Cite specific values.",
+  "confidence": "high | medium | low"
+}}
 
-## Caption Alignment
-Does the caption accurately describe what is shown? Note any discrepancies: elements present in the image but absent from the caption, or claims in the caption not directly supported by the visual.
-
-## Scientific Interpretation
-What biological/scientific question this figure addresses and what conclusion the data supports. Be specific about mechanism, pathway, or phenomenon.
-
-## Significance
-Why this finding matters. What it proves, suggests, or rules out.
-
-If multi-panel (A, B, C, ...), briefly address each panel's contribution. Never refuse — even minimal figures must be analyzed."""
-
-PROMPT_INFERENCE_TBL_TEMPLATE = """You are creating training labels for a vision-language model. Your output is ground truth — be precise, thorough, never refuse.
-
-Table caption: {caption}
-
-Analyze this scientific table following EXACTLY this structure:
-
-## Table Description
-Columns, rows, what is being compared. Units and scale.
-
-## Statistical Markers
-Statistical annotations visible in the table: significance markers (*, **, ***), p-values, confidence intervals, sample sizes, standard deviations. If none, state "None visible."
-
-## Data Summary
-Most important entries — best/worst values, surprising results, notable patterns.
-
-## Caption Alignment
-Does the caption accurately describe what the table contains? Note any discrepancies between what is shown and what the caption claims.
-
-## Scientific Interpretation
-What this table proves or argues. What biological/methodological insight emerges from the comparison.
-
-## Significance
-Why this comparison matters in the paper's context."""
+confidence: high=all values clearly readable; medium=some cells hard to read; low=inferring.
+Never refuse — all tables must be analyzed."""
 
 
-PROMPT_ANCHORED_FIG_TEMPLATE = """You are creating training labels using both a scientific figure and the paper it comes from. Your output is ground truth — be precise, never refuse.
-
-RELEVANT PAPER SECTIONS (retrieved for this specific figure):
+PROMPT_ANCHORED_FIG_TEMPLATE = """{abstract_block}RELEVANT PAPER SECTIONS (BM25-retrieved for this figure):
 {context}
 
 ---
 
 Figure caption: {caption}
 
-Analyze the figure below using the retrieved paper sections as authoritative reference. Follow EXACTLY this structure:
+Analyze this figure using the retrieved paper sections as authoritative reference. Respond ONLY with valid JSON — no markdown fences, no text outside the JSON object:
 
-## Visual Description
-What is visible in the figure (panels, axes, symbols, organisms).
+{{
+  "figure_type": "bar chart | scatter | Western blot | microscopy | heatmap | survival curve | other",
+  "visual_description": "panels, axes, labels, colors, units, organisms visible. 2-3 sentences.",
+  "hypothesis_tested": "the specific claim or hypothesis from the paper this figure tests. Quote the relevant sentence from the retrieved sections.",
+  "paper_quote": "exact sentence from the retrieved text that this figure is meant to support.",
+  "key_findings": "specific quantitative results visible in the figure, connected to numbers mentioned in the retrieved text.",
+  "statistical_markers": "every visible statistical element: n=, error bars (SD/SEM/CI), p-values, R², significance markers. Write 'None visible' if absent.",
+  "controls_assessment": "experimental controls present (positive, negative, baseline). Note absent controls given the experimental design in the retrieved sections.",
+  "caption_accurate": true,
+  "caption_discrepancy": "discrepancy between caption and visual. Write 'None' if accurate.",
+  "scientific_conclusion": "what this figure definitively demonstrates, what alternative explanations it rules out, and its role in the paper's argument. Let the conclusion be earned by the evidence.",
+  "confidence": "high | medium | low"
+}}
 
-## Caption Alignment
-Does the caption accurately describe what is shown? Note any discrepancies between the visual content and what the caption states or implies.
+confidence: high=clear visual evidence + strong paper alignment; medium=partial; low=inferring.
+Never refuse."""
 
-## Hypothesis Tested
-The specific claim or hypothesis from the paper that this figure tests or supports. Quote relevant text from the sections above.
-
-## Key Data and Findings
-Specific quantitative results (values, fold-changes, p-values, gene names) that this figure demonstrates. Connect visual elements to numbers in the retrieved text.
-
-## Statistical Markers
-Every statistical element visible: sample sizes (n=), error bars (SD, SEM, 95% CI), p-values, R² values, significance markers. If none are visible, state "None visible." Do not infer values not shown.
-
-## Controls Assessment
-Identify experimental controls present in this figure (positive controls, negative controls, baseline comparisons, internal references). Note any controls conspicuously absent given the experimental design described in the retrieved sections.
-
-## Mechanistic Insight
-What the data reveals about the biology, pathway, or system being studied. Reference the retrieved paper sections.
-
-## Narrative Role
-How this figure advances the paper's overall argument (establishes baseline, demonstrates causation, validates model, etc.).
-
-## Limitations / Caveats
-Any limitations or alternative interpretations visible in the data or noted in the retrieved sections.
-
-## Scientific Conclusion
-Synthesize the visual evidence with the paper's framework into a precise, self-contained scientific conclusion. State what this figure definitively demonstrates, what alternative explanations it rules out, and its conceptual significance in the paper's broader argument. Write as a scientist who has fully internalized both the data and the theory — be rigorous, specific, and let the conclusion feel earned by the evidence."""
-
-PROMPT_ANCHORED_TBL_TEMPLATE = """You are creating training labels using a scientific table and its paper. Be precise, never refuse.
-
-RELEVANT PAPER SECTIONS (retrieved for this specific table):
+PROMPT_ANCHORED_TBL_TEMPLATE = """{abstract_block}RELEVANT PAPER SECTIONS (BM25-retrieved for this table):
 {context}
 
 ---
 
 Table caption: {caption}
 
-Analyze the table below using the retrieved paper sections as reference:
+Analyze this table using the retrieved paper sections as authoritative reference. Respond ONLY with valid JSON — no markdown fences, no text outside the JSON object:
 
-## Table Description
-What is compared, by what metric, against what baselines.
+{{
+  "table_type": "results comparison | parameter table | patient demographics | statistical summary | ablation | other",
+  "structure": "what is compared, by what metric, against what baselines.",
+  "paper_quote": "exact sentence from the retrieved text that this table is meant to support.",
+  "key_entries": "most relevant rows and values given the paper's claims. Cite specific numbers.",
+  "statistical_markers": "significance markers (*, **, ***), p-values, CIs, n= visible. Write 'None visible' if absent.",
+  "controls_assessment": "baseline or reference conditions used. Note missing controls given the retrieved context.",
+  "caption_accurate": true,
+  "caption_discrepancy": "discrepancy between caption and actual table content. Write 'None' if accurate.",
+  "scientific_conclusion": "what this table definitively demonstrates, what it rules out, its role in the paper's argument.",
+  "confidence": "high | medium | low"
+}}
 
-## Caption Alignment
-Does the caption accurately describe what the table contains? Note any discrepancies between the actual table content and what the caption states.
-
-## Key Entries
-Most relevant rows/columns given the paper's claims. Cite specific values.
-
-## Statistical Markers
-Significance markers, p-values, confidence intervals, or sample sizes visible in the table. If none, state "None visible."
-
-## Controls Assessment
-What baseline or reference conditions are used for comparison in the table. Note any missing controls given the experimental context described in the retrieved sections.
-
-## Argument Supported
-What conclusion from the paper this table substantiates. Quote relevant text from the retrieved sections.
-
-## Significance
-Why this comparison matters in the paper's narrative.
-
-## Scientific Conclusion
-Synthesize the table's data with the paper's framework into a precise scientific conclusion. State what this table definitively demonstrates, what it rules out, and its role in the paper's argument. Be rigorous and specific — let the conclusion be earned by the numbers."""
+confidence: high=values clearly readable + strong paper alignment; medium=partial; low=inferring.
+Never refuse."""
 
 
 # ─── HTTP client ─────────────────────────────────────────────────────────────
@@ -407,6 +393,21 @@ def analyze_all(figures_json, pdf_path=None, context_file=None, server=DEFAULT_S
     print(f"Items: {len(items)} ({n_figs} figuras + {n_tbls} tablas) | hechos: {len(done)}")
     print(f"Modos: inference={mode_inference} anchored={mode_anchored} | top_k={top_k}\n")
 
+    # Extraer abstract (primeras ~350 palabras) para inyectar en todos los prompts
+    abstract_block = ""
+    try:
+        if context_file and Path(context_file).exists():
+            raw = Path(context_file).read_text(encoding="utf-8", errors="ignore")
+        elif pdf_path:
+            raw = extract_paper_text(pdf_path=pdf_path)
+        else:
+            raw = ""
+        abstract_block = _fmt_abstract(raw)
+        if abstract_block:
+            print(f"  Abstract block: {len(abstract_block.split())} palabras inyectadas en prompts")
+    except Exception as e:
+        print(f"  WARN abstract: {e}")
+
     # Construir índice RAG una sola vez
     chunks   = None
     score_fn = None
@@ -434,30 +435,37 @@ def analyze_all(figures_json, pdf_path=None, context_file=None, server=DEFAULT_S
 
         # 1) Inferencia pura
         if mode_inference:
-            tmpl_inf  = PROMPT_INFERENCE_TBL_TEMPLATE if is_table else PROMPT_INFERENCE_FIG_TEMPLATE
-            prompt_inf = tmpl_inf.format(caption=caption)
+            tmpl_inf   = PROMPT_INFERENCE_TBL_TEMPLATE if is_table else PROMPT_INFERENCE_FIG_TEMPLATE
+            prompt_inf = tmpl_inf.format(caption=caption, abstract_block=abstract_block)
             try:
                 ans = ask_api(server, prompt_inf, image_bytes=img_bytes,
                               max_tokens=max_tokens, temperature=temperature, timeout=timeout)
                 result["inference"] = ans
+                parsed = _parse_json(ans)
+                if parsed:
+                    result["inference_parsed"] = parsed
+                    result["confidence"]       = parsed.get("confidence", "unknown")
             except Exception as e:
                 result["inference_error"] = str(e)
 
         # 2) Anchored con RAG
         if mode_anchored and chunks:
-            # Retrieval: caption como query → top_k chunks más relevantes
-            retrieved = retrieve(caption, score_fn, chunks, top_k=top_k)
-            context   = "\n\n---\n\n".join(retrieved)
-
-            tmpl = PROMPT_ANCHORED_TBL_TEMPLATE if is_table else PROMPT_ANCHORED_FIG_TEMPLATE
-            prompt_anc = tmpl.format(context=context, caption=caption)
+            retrieved  = retrieve(caption, score_fn, chunks, top_k=top_k)
+            context    = "\n\n---\n\n".join(retrieved)
+            tmpl       = PROMPT_ANCHORED_TBL_TEMPLATE if is_table else PROMPT_ANCHORED_FIG_TEMPLATE
+            prompt_anc = tmpl.format(context=context, caption=caption, abstract_block=abstract_block)
 
             try:
                 ans = ask_api(server, prompt_anc, image_bytes=img_bytes,
                               max_tokens=max_tokens, temperature=temperature, timeout=timeout)
-                result["anchored"]          = ans
-                result["retrieved_chunks"]  = len(retrieved)
-                result["retrieved_words"]   = sum(len(c.split()) for c in retrieved)
+                result["anchored"]         = ans
+                result["retrieved_chunks"] = len(retrieved)
+                result["retrieved_words"]  = sum(len(c.split()) for c in retrieved)
+                parsed = _parse_json(ans)
+                if parsed:
+                    result["anchored_parsed"] = parsed
+                    # confidence from anchored overwrites (more context = more reliable)
+                    result["confidence"]      = parsed.get("confidence", result.get("confidence", "unknown"))
             except Exception as e:
                 result["anchored_error"] = str(e)
 
