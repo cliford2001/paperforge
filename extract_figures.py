@@ -32,9 +32,10 @@ import fitz  # PyMuPDF
 
 # ─── Configuración por defecto ───────────────────────────────────────────────
 DEFAULT_DPI            = 200
-DEFAULT_PADDING        = 8
-DEFAULT_MAX_HEIGHT     = 600   # límite vertical del bbox de una figura
+DEFAULT_PADDING        = 16
+DEFAULT_MAX_HEIGHT     = 9999  # sin límite práctico: captura figuras de página completa
 CROSS_COLUMN_TOL       = 50    # tolerancia para clasificar columna izq/der/full
+FULL_WIDTH_RATIO       = 0.45  # si visuals ocupan >45% del ancho → tratar como full-width
 
 CAPTION_RE = re.compile(
     r'^\s*(Figure|Fig\.?|Table|Extended\s+Data\s+Fig(?:ure|\.)?)\s*(\d+)',
@@ -103,6 +104,9 @@ def in_column(bbox, column, page_width):
 
 
 # ─── Bbox de figura ──────────────────────────────────────────────────────────
+TEXT_LABEL_MARGIN = 60  # pt — margen para capturar etiquetas de ejes y paneles
+
+
 def find_figure_region(page, caption, prev_boundary_y, max_height):
     pw = page.rect.width
     _, cy0, _, _ = caption.bbox
@@ -114,24 +118,59 @@ def find_figure_region(page, caption, prev_boundary_y, max_height):
             visuals.append(tuple(b["bbox"]))
     for d in page.get_drawings():
         r = d.get("rect")
-        if r:
-            visuals.append(tuple(r))
+        if r and r.width > 2 and r.height > 2:  # ignorar trazos/líneas muy finos
+            visuals.append((r.x0, r.y0, r.x1, r.y1))
 
-    candidates = []
+    # Candidatos sin filtro de columna (para detectar si es full-width)
+    all_candidates = []
     for bb in visuals:
-        _, by0, _, by1 = bb
-        if by1 > cy0 + 5:                  # arriba del caption
+        bx0, by0, bx1, by1 = bb
+        if by0 > cy0 + 5:              # excluir si empieza bajo el caption
             continue
-        if by0 < prev_boundary_y - 5:      # no antes del boundary previo
+        if by1 < prev_boundary_y - 5:  # excluir solo si está completamente sobre el boundary
             continue
-        if cy0 - by1 > max_height:         # distancia razonable
-            continue
-        if not in_column(bb, column, pw):
-            continue
-        candidates.append(bb)
+        all_candidates.append(bb)
 
-    if not candidates:
+    if not all_candidates:
         return None
+
+    # Detectar si el contenido es de ancho completo (multi-panel que abarca columnas)
+    combined_x0 = min(b[0] for b in all_candidates)
+    combined_x1 = max(b[2] for b in all_candidates)
+    if (combined_x1 - combined_x0) > pw * FULL_WIDTH_RATIO:
+        effective_column = "full"
+    else:
+        effective_column = column
+
+    candidates = [bb for bb in all_candidates if in_column(bb, effective_column, pw)]
+    if not candidates:
+        candidates = all_candidates
+
+    # Bbox visual inicial
+    vx0 = min(b[0] for b in candidates)
+    vy0 = min(b[1] for b in candidates)
+    vx1 = max(b[2] for b in candidates)
+    vy1 = max(b[3] for b in candidates)
+
+    # Expandir con bloques de texto adyacentes: etiquetas de ejes, paneles (a, b, c…), ticks
+    # Solo texto estrecho — etiquetas son cortas, párrafos de cuerpo no
+    for b in page.get_text("dict")["blocks"]:
+        if b.get("type") != 0:
+            continue
+        bb = tuple(b["bbox"])
+        if tuple(b["bbox"]) == tuple(caption.bbox):
+            continue
+        bx0, by0, bx1, by1 = bb
+        if by0 > cy0 + 5:
+            continue
+        if by1 < prev_boundary_y - 5:
+            continue
+        if (bx1 - bx0) > pw * 0.35:   # párrafo de cuerpo (ancho) → ignorar
+            continue
+        if (bx1 > vx0 - TEXT_LABEL_MARGIN and bx0 < vx1 + TEXT_LABEL_MARGIN and
+                by1 > vy0 - TEXT_LABEL_MARGIN and by0 < vy1 + TEXT_LABEL_MARGIN):
+            candidates.append(bb)
+
     return _combine_bboxes(candidates, page)
 
 
@@ -169,6 +208,42 @@ def find_table_region(page, caption, prev_boundary_y, max_height):
         else:
             break
     return _combine_bboxes(gathered, page)
+
+
+def _fallback_region(page, caption, prev_boundary_y, white_threshold=0.97):
+    """Renderiza el área sobre el caption y la retorna si tiene contenido no-blanco."""
+    pw, ph = page.rect.width, page.rect.height
+    cy0 = caption.bbox[1]
+    col = get_column(caption.bbox, pw)
+    if col == "left":
+        x0, x1 = 0.0, pw / 2
+    elif col == "right":
+        x0, x1 = pw / 2, pw
+    else:
+        x0, x1 = 0.0, pw
+
+    clip = fitz.Rect(x0, max(0, prev_boundary_y), x1, cy0)
+    if clip.height < 10:
+        return None
+
+    mat = fitz.Matrix(72 / 72, 72 / 72)  # baja resolución para la comprobación
+    pix = page.get_pixmap(matrix=mat, clip=clip, alpha=False)
+    samples = pix.samples
+    n = pix.width * pix.height
+    if n == 0:
+        return None
+    white = sum(
+        1 for i in range(0, len(samples), 3)
+        if samples[i] > 240 and samples[i + 1] > 240 and samples[i + 2] > 240
+    )
+    if white / n > white_threshold:
+        return None  # región esencialmente en blanco
+    return (
+        max(0, x0 - DEFAULT_PADDING),
+        max(0, clip.y0 - DEFAULT_PADDING),
+        min(pw, x1 + DEFAULT_PADDING),
+        min(ph, cy0 + DEFAULT_PADDING),
+    )
 
 
 def _combine_bboxes(boxes, page):
@@ -227,10 +302,32 @@ def extract_all(pdf_path, out_dir, dpi=DEFAULT_DPI, max_height=DEFAULT_MAX_HEIGH
             if other.bbox[3] < cap.bbox[1] and other.bbox[3] > prev_y:
                 prev_y = other.bbox[3]
 
+        render_page = page  # página desde la que se renderizará la figura
         if cap.kind == "figure":
             region = find_figure_region(page, cap, prev_y, max_height)
         else:
             region = find_table_region(page, cap, prev_y, max_height)
+
+        # Fallback 1: figura en la página SIGUIENTE (caption antes que la figura)
+        if region is None and cap.page < len(doc):
+            next_page = doc[cap.page]  # cap.page es 1-indexed → doc[cap.page] es la siguiente
+            next_caps = by_page.get(cap.page + 1, [])
+            boundary_y = min(c.bbox[1] for c in next_caps) if next_caps else next_page.rect.height
+            syn_cap = Caption(
+                page=cap.page + 1, label=cap.label,
+                bbox=(0, boundary_y, next_page.rect.width, boundary_y),
+                text=cap.text, kind=cap.kind,
+            )
+            region = find_figure_region(next_page, syn_cap, 0, max_height)
+            if region is not None:
+                render_page = next_page
+                log(f"  [{cap.label}] p{cap.page} -> figura en página siguiente")
+
+        # Fallback 2: Form XObject u otro contenido que PyMuPDF no enumera pero sí renderiza
+        if region is None:
+            region = _fallback_region(page, cap, prev_y)
+            if region is not None:
+                log(f"  [{cap.label}] p{cap.page} -> fallback render (Form XObject?)")
 
         if region is None:
             log(f"  [{cap.label}] p{cap.page} - sin región visual, skip")
@@ -239,7 +336,7 @@ def extract_all(pdf_path, out_dir, dpi=DEFAULT_DPI, max_height=DEFAULT_MAX_HEIGH
         safe = cap.label.replace(" ", "_").replace(".", "")
         fname = f"p{cap.page:03d}_{safe}.png"
         out_path = out_dir / fname
-        w, h = render_region(page, region, out_path, dpi)
+        w, h = render_region(render_page, region, out_path, dpi)
         size_kb = out_path.stat().st_size / 1024
         log(f"  [{cap.label:14}] p{cap.page} -> {fname} ({w:.0f}x{h:.0f}px, {size_kb:.1f}KB)")
 
