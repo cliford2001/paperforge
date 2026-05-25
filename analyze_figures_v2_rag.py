@@ -54,7 +54,7 @@ DEFAULT_SERVER            = "http://127.0.0.1:8080/v1/chat/completions"
 DEFAULT_MAX_TOKENS        = 1500       # tokens de respuesta del LLM
 DEFAULT_TEMPERATURE       = 0.0        # determinista; evita alucinaciones
 DEFAULT_TIMEOUT           = 300        # segundos por llamada
-DEFAULT_CONTEXT_STRATEGY  = "full"     # "full" | "bm25"
+DEFAULT_CONTEXT_STRATEGY  = "bm25"     # "bm25" (default, testeo) | "full" (GPU grande)
 DEFAULT_MAX_CONTEXT_WORDS = 0          # 0 = sin límite; >0 = truncar texto completo
 DEFAULT_ABSTRACT_WORDS    = 0          # 0 = abstract completo detectado por sección
 DEFAULT_CHUNK_WORDS       = 250        # tamaño de chunk en modo bm25
