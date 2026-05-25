@@ -139,7 +139,8 @@ def load_papers(metadata_path: str, texts_path: str,
 def process_paper(row, out_dir: Path, server: str,
                   top_k: int, chunk_words: int, overlap: int,
                   max_tokens: int, temperature: float, timeout: int,
-                  keep_figures: bool, extract_only: bool = False) -> dict:
+                  keep_figures: bool, extract_only: bool = False,
+                  keep_pdf: bool = False) -> dict:
 
     pmcid     = row.pmcid
     doi       = getattr(row, "doi", "")
@@ -197,7 +198,8 @@ def process_paper(row, out_dir: Path, server: str,
 
     # Modo solo extracción: terminar aquí
     if extract_only:
-        pdf_path.unlink(missing_ok=True)
+        if not keep_pdf:
+            pdf_path.unlink(missing_ok=True)
         status["elapsed_sec"] = round(time.time() - t0, 1)
         return status
 
@@ -282,6 +284,8 @@ def main(argv=None):
                    help=f"Segundos entre descargas (def: {DEFAULT_DELAY})")
     p.add_argument("--extract-only", action="store_true",
                    help="Solo descarga y extrae figuras, sin correr el análisis LLM")
+    p.add_argument("--keep-pdf", action="store_true",
+                   help="Conservar el PDF después de extraer figuras")
 
     args = p.parse_args(argv)
 
@@ -328,6 +332,7 @@ def main(argv=None):
             timeout      = args.timeout,
             keep_figures = True,
             extract_only = args.extract_only,
+            keep_pdf     = args.keep_pdf,
         )
 
         # Log incremental
