@@ -38,7 +38,7 @@ import requests
 # ─── Defaults ────────────────────────────────────────────────────────────────
 DEFAULT_SERVER         = "http://127.0.0.1:8080/v1/chat/completions"
 DEFAULT_MAX_TOKENS     = 1500
-DEFAULT_TEMPERATURE    = 0.2
+DEFAULT_TEMPERATURE    = 0.0
 DEFAULT_TIMEOUT        = 300
 DEFAULT_CONTEXT_BUDGET = 6000   # tokens reservados para texto del paper
 MAX_RETRIES            = 5
