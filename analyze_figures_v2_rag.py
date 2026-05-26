@@ -406,10 +406,11 @@ def ask_api(server, prompt, image_bytes=None, max_tokens=DEFAULT_MAX_TOKENS,
     content.append({"type": "text", "text": prompt})
 
     payload = {
-        "messages":    [{"role": "user", "content": content}],
-        "max_tokens":  max_tokens,
-        "temperature": temperature,
-        "stream":      False,
+        "messages":     [{"role": "user", "content": content}],
+        "max_tokens":   max_tokens,
+        "temperature":  temperature,
+        "repeat_penalty": 1.15,
+        "stream":       False,
     }
 
     last_err = None
