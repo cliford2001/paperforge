@@ -1,6 +1,6 @@
 # scientific-figure-extractor
 
-Multimodal pipeline for automated analysis of figures and tables in scientific PDFs. Extracts every figure and table as an isolated PNG, then analyzes each one with a vision-language model using two complementary modes — pure visual inference and RAG-grounded analysis — producing structured JSON output suitable for LLM training data.
+Multimodal pipeline for automated analysis of figures and tables in scientific PDFs. Extracts every figure and table as an isolated PNG, then analyzes each one with a vision-language model using a dynamic prompt built from the paper's abstract and RAG-retrieved text, producing structured JSON output suitable for VLM training data.
 
 ---
 
@@ -227,33 +227,52 @@ Passes the complete paper text to the LLM without retrieval. Always superior to 
 
 ### Abstract detection
 
-Instead of a fixed word count, the pipeline detects the real abstract section by searching for the `Abstract` heading and cutting at the next section heading (`Introduction`, `Methods`, `Results`, `Keywords`, `1.`, etc.). The detected abstract is injected into **all** prompts (both inference and anchored). Falls back to the first 400 words if no heading is found.
+Instead of a fixed word count, the pipeline detects the real abstract section by searching for the `Abstract` heading and cutting at the next section heading (`Introduction`, `Methods`, `Results`, `Keywords`, `1.`, etc.). The detected abstract is injected into every prompt as dynamic context. Falls back to the first 400 words if no heading is found.
 
-### Prompts
+### Unified prompt structure
 
-**Inference — figure output fields:**
+One LLM call per figure or table. The prompt always contains:
 
-| Field | Description |
-|---|---|
-| `figure_type` | Chart type: bar chart, scatter, Western blot, microscopy, heatmap, etc. |
-| `visual_description` | Panels, axes, colors, units, structures visible. 2-3 sentences. |
-| `groups_compared` | Conditions, treatments, timepoints or genotypes contrasted. |
-| `statistical_markers` | Every visible statistical element: n=, error bars (SD/SEM/CI), p-values, R², fold-changes. |
-| `key_finding` | Main result with specific numbers read from the image. |
-| `caption_accurate` | `true`/`false` — does the caption correctly describe what is shown? |
-| `scientific_interpretation` | What biological question this figure addresses and what the data demonstrates. |
-| `confidence` | `high` = clearly readable · `medium` = partially visible · `low` = inferring |
+1. **Abstract block** — the detected abstract section, giving the model domain context
+2. **RAG block** (only if `paper_context.txt` exists) — top-10 BM25 chunks or full text
+3. **Caption** — the figure or table caption
+4. **Reasoning sections** — structured `##` headings that guide analysis before JSON output
+5. **JSON schema** — the model responds exclusively in structured JSON
 
-**Anchored — additional fields over inference:**
+The reasoning sections differ by context availability:
 
-| Field | Description |
-|---|---|
-| `hypothesis_tested` | Specific claim from the paper this figure tests. Quotes the relevant sentence. |
-| `paper_quote` | Exact sentence from the paper text this figure is meant to support. |
-| `controls_assessment` | Experimental controls present. Notes absent controls given the design. |
-| `scientific_conclusion` | What this figure definitively demonstrates, what alternatives it rules out, its role in the paper's argument. |
+| Section | Abstract only | Abstract + RAG |
+|---|---|---|
+| Visual Description | ✓ | ✓ |
+| Figure Type | ✓ | ✓ |
+| Statistical Markers | ✓ | ✓ |
+| Data and Patterns | ✓ | ✓ |
+| Caption Alignment | ✓ | ✓ |
+| Scientific Interpretation | ✓ | ✓ |
+| Hypothesis Tested | — | ✓ |
+| Controls Assessment | — | ✓ |
+| Scientific Conclusion | ✓ | ✓ |
 
-**Tables use equivalent fields:** `table_type`, `structure`, `best_result`, `key_pattern`, `key_entries`.
+### Output fields — figures
+
+| Field | Present when | Description |
+|---|---|---|
+| `figure_type` | always | Chart type: bar chart, scatter, Western blot, microscopy, heatmap, etc. |
+| `visual_description` | always | Panels, axes, colors, units, structures visible. 2-4 sentences. |
+| `statistical_markers` | always | Every visible statistical element: n=, error bars (SD/SEM/CI), p-values, R², fold-changes. |
+| `data_and_patterns` | always | Specific values and trends visible. Cites numbers from the image. |
+| `groups_compared` | always | Conditions, treatments, timepoints or genotypes contrasted. |
+| `caption_accurate` | always | `true`/`false` — does the caption correctly describe what is shown? |
+| `caption_discrepancy` | always | Discrepancy between image and caption. `"None"` if accurate. |
+| `scientific_interpretation` | always | What biological question this figure addresses given the paper's topic. |
+| `hypothesis_tested` | RAG only | Specific claim from the paper this figure tests. Quotes the relevant sentence. |
+| `paper_quote` | RAG only | Exact sentence from the paper text this figure is meant to support. |
+| `controls_assessment` | RAG only | Experimental controls present. Notes absent controls given the design. |
+| `scientific_conclusion` | always | What this figure definitively demonstrates, what it rules out, its role in the argument. |
+| `context_used` | always | `"abstract only"` or `"bm25 context"` or `"full text"` |
+| `confidence` | always | `high` = clearly readable · `medium` = partially visible · `low` = inferring |
+
+**Tables use equivalent fields:** `table_type`, `structure`, `best_result`, `patterns_and_trends`, `key_entries`.
 
 > `confidence` is an LLM self-assessment — useful as metadata for human review, not as an automatic filter.
 
@@ -289,16 +308,24 @@ After all figures and tables are analyzed, one additional text-only LLM call rea
       "label": "fig_1",
       "kind":  "figure",
       "page":  3,
-      "inference_parsed": {
-        "key_finding": "34% glucose reduction (p<0.001)",
-        "confidence":  "high"
+      "analysis": "<raw LLM response>",
+      "analysis_parsed": {
+        "figure_type":              "bar chart",
+        "visual_description":       "Three-panel bar chart showing...",
+        "statistical_markers":      "n=12 per group, SEM error bars, ** p<0.01",
+        "data_and_patterns":        "34% reduction in treated vs control (p<0.001)",
+        "groups_compared":          "imatinib-treated vs DMSO control",
+        "caption_accurate":         true,
+        "caption_discrepancy":      "None",
+        "scientific_interpretation":"...",
+        "hypothesis_tested":        "We hypothesized that dual inhibition...",
+        "paper_quote":              "We observed a significant reduction...",
+        "controls_assessment":      "DMSO vehicle control present. No isotype control.",
+        "scientific_conclusion":    "...",
+        "context_used":             "bm25 context",
+        "confidence":               "high"
       },
-      "anchored_parsed": {
-        "paper_quote":           "We observed a significant reduction...",
-        "scientific_conclusion": "..."
-      },
-      "confidence":   "high",
-      "elapsed_sec":  42.3
+      "elapsed_sec": 42.3
     }
   ]
 }
@@ -316,8 +343,6 @@ After all figures and tables are analyzed, one additional text-only LLM call rea
 --max-tokens          LLM response tokens (default: 1500)
 --temperature         sampling temperature (default: 0.0)
 --timeout             seconds per request (default: 300)
---inference-only      skip anchored mode
---anchored-only       skip inference mode
 --out FILE            output path (default: analyses_rag.json)
 ```
 
@@ -372,8 +397,6 @@ sample15_output/
 --max-tokens          LLM response tokens
 --temperature         sampling temperature
 --timeout             seconds per request
---inference-only      skip anchored mode for all papers
---anchored-only       skip inference mode for all papers
 --rerun               ignore existing analyses_rag.json
 ```
 
@@ -409,7 +432,7 @@ llama-server \
 
 ## Token budget estimates
 
-| Component | Inference fig | Inference tbl | Anchored BM25 fig | Anchored BM25 tbl |
+| Component | Abstract only (fig) | Abstract only (tbl) | BM25 (fig) | BM25 (tbl) |
 |---|---|---|---|---|
 | Prompt template | ~365 | ~310 | ~420 | ~380 |
 | Abstract (full section) | ~500–1 000 | ~500–1 000 | ~500–1 000 | ~500–1 000 |
@@ -449,7 +472,20 @@ pip install -r requirements.txt
 
 ## References
 
+**Retrieval-Augmented Generation**
 - Lewis, P. et al. (2020). *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks*. NeurIPS 2020. DOI: [10.48550/arXiv.2005.11401](https://doi.org/10.48550/arXiv.2005.11401)
+- Robertson, S. & Zaragoza, H. (2009). *The Probabilistic Relevance Framework: BM25 and Beyond*. Foundations and Trends in Information Retrieval. DOI: [10.1561/1500000019](https://doi.org/10.1561/1500000019)
+
+**Vision-Language Models and Instruction Tuning**
+- Chen, Z. et al. (2024). *InternVL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks*. CVPR 2024. DOI: [10.48550/arXiv.2312.14238](https://doi.org/10.48550/arXiv.2312.14238)
+- Liu, H. et al. (2023). *Visual Instruction Tuning (LLaVA)*. NeurIPS 2023. DOI: [10.48550/arXiv.2304.08485](https://doi.org/10.48550/arXiv.2304.08485)
+
+**Scientific Figure Understanding**
+- Hsu, J. et al. (2021). *SciCap: Generating Captions for Scientific Figures*. EMNLP 2021 Findings. DOI: [10.48550/arXiv.2110.11624](https://doi.org/10.48550/arXiv.2110.11624)
+- Kahou, S. et al. (2018). *FigureQA: An Annotated Figure Dataset for Visual Reasoning*. ICLR Workshop 2018. DOI: [10.48550/arXiv.1710.07300](https://doi.org/10.48550/arXiv.1710.07300)
+
+**Scientific Text Corpus**
+- Lo, K. et al. (2020). *S2ORC: The Semantic Scholar Open Research Corpus*. ACL 2020. DOI: [10.48550/arXiv.1911.02782](https://doi.org/10.48550/arXiv.1911.02782)
 
 ---
 
