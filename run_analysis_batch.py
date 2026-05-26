@@ -70,11 +70,6 @@ def main(argv=None):
     p.add_argument("--temperature",  type=float, default=rag.DEFAULT_TEMPERATURE)
     p.add_argument("--timeout",      type=int,   default=rag.DEFAULT_TIMEOUT)
 
-    # Modos
-    p.add_argument("--inference-only", action="store_true",
-                   help="Solo modo inferencia (sin contexto RAG)")
-    p.add_argument("--anchored-only",  action="store_true",
-                   help="Solo modo anclado (requiere contexto)")
     p.add_argument("--rerun",          action="store_true",
                    help="Ignorar analyses_rag.json existente y re-analizar")
 
@@ -101,8 +96,6 @@ def main(argv=None):
     base   = Path(args.input_dir)
     papers = sorted(d for d in base.iterdir() if d.is_dir())
 
-    mode_inf = not args.anchored_only
-    mode_anc = not args.inference_only
 
     total_ok = total_skip = total_err = 0
 
@@ -143,11 +136,8 @@ def main(argv=None):
         else:
             log(f"[->] {paper_dir.name} ({n_figs} figs + {n_tbls} tablas) ...")
 
-        if mode_anc and not ctx_file.exists():
-            log(f"  WARN: sin paper_context.txt — solo modo inferencia")
-            mode_anc_efectivo = False
-        else:
-            mode_anc_efectivo = mode_anc
+        if not ctx_file.exists():
+            log(f"  WARN: sin paper_context.txt — solo abstract disponible como contexto")
 
         t0 = time.time()
         try:
@@ -157,8 +147,6 @@ def main(argv=None):
                 pdf_path          = None,
                 context_file      = str(ctx_file) if ctx_file.exists() else None,
                 server            = args.server,
-                mode_inference    = mode_inf,
-                mode_anchored     = mode_anc_efectivo,
                 context_strategy  = args.context_strategy,
                 max_context_words = args.max_context_words,
                 abstract_words    = args.abstract_words,

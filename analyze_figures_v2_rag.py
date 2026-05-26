@@ -153,148 +153,200 @@ def _parse_json(text: str) -> dict | None:
 
 
 # ─── Prompts ──────────────────────────────────────────────────────────────────
+# Un solo prompt por tipo (figura / tabla).
+# El abstract siempre se inyecta como contexto dinámico.
+# El bloque de contexto RAG (BM25 o full-text) se añade cuando está disponible.
+# La salida siempre es JSON estructurado.
 
-PROMPT_INFERENCE_FIG_TEMPLATE = """{abstract_block}Figure caption: {caption}
+PROMPT_FIG_TEMPLATE = """\
+PAPER ABSTRACT:
+{abstract}
+{context_block}\
+Figure caption: {caption}
 
-Analyze this scientific figure. Respond ONLY with valid JSON — no markdown fences, no text outside the JSON object:
+You are generating high-quality training data for a vision-language model. \
+Using the abstract as context for what this paper investigates{context_hint}, \
+analyze this figure systematically following each aspect below:
+
+## Visual Description
+What is visible: panels, axes, colors, labels, legends, units, symbols, \
+organisms or structures shown. 2-4 sentences. \
+If multi-panel (A, B, C...), describe each panel's content.
+
+## Figure Type
+Type of visualization (bar chart, scatter plot, line graph, Western blot, \
+heatmap, microscopy image, survival curve, flow cytometry, schematic, etc.) \
+and what experimental data it represents.
+
+## Statistical Markers
+Every statistical element visible in the image: sample sizes (n=), \
+error bars (SD, SEM, 95% CI), p-values, R², fold-changes, significance \
+markers (*, **, ***). \
+Write "None visible" if absent. Never infer or assume values not shown.
+
+## Data and Patterns
+Specific values, trends, comparisons and relationships visible in the image. \
+Cite numbers directly from the figure. \
+Identify the groups, conditions, timepoints or genotypes being compared.
+
+## Caption Alignment
+Does the caption accurately describe what is shown? \
+Note discrepancies: visual elements absent from the caption, \
+or caption claims not supported by what is visible.
+
+## Scientific Interpretation
+What biological or scientific question does this figure address, \
+given what the abstract says this paper investigates? \
+What does the data demonstrate? \
+Be specific about mechanism, pathway, or phenomenon — \
+let the abstract inform your interpretation without inventing unseen data.
+{anchored_sections}
+## Scientific Conclusion
+Synthesize the visual evidence with the paper's research context into a \
+precise, self-contained conclusion. \
+State what this figure definitively demonstrates, \
+what alternative explanations it rules out, \
+and its role in the paper's argument. \
+Be rigorous — let the conclusion be earned by the evidence.
+
+Respond ONLY with valid JSON — no markdown fences, no text outside the JSON object:
 
 {{
   "figure_type": "bar chart | scatter plot | line graph | Western blot | microscopy | heatmap | survival curve | flow cytometry | schematic | other",
-  "visual_description": "panels, axes, labels, colors, units, legends, organisms/structures shown. 2-3 sentences.",
-  "groups_compared": "conditions, treatments, timepoints, genotypes or cell lines contrasted in the figure.",
-  "statistical_markers": "every visible statistical element: n=, error bars type (SD/SEM/95%CI), p-values, R², fold-changes. Write 'None visible' if absent.",
-  "key_finding": "the main result shown, citing specific numbers from the image when visible.",
+  "visual_description": "panels, axes, colors, units and structures visible. 2-4 sentences, one per panel if multi-panel.",
+  "statistical_markers": "every visible statistical element: n=, error bars (SD/SEM/CI), p-values, R², fold-changes, markers. 'None visible' if absent.",
+  "data_and_patterns": "specific values and trends visible. cite numbers from the image. identify groups compared.",
+  "groups_compared": "conditions, treatments, timepoints, genotypes or cell lines contrasted.",
   "caption_accurate": true,
-  "caption_discrepancy": "elements in image not described by caption, or caption claims not supported visually. Write 'None' if accurate.",
-  "scientific_interpretation": "what biological or scientific question this figure addresses and what the data demonstrates. Be specific about mechanism, pathway, or phenomenon.",
+  "caption_discrepancy": "discrepancy between image and caption. 'None' if accurate.",
+  "scientific_interpretation": "what question this figure answers given the paper's topic. mechanism or phenomenon demonstrated.",{anchored_json}
+  "scientific_conclusion": "what this figure definitively demonstrates, what it rules out, its role in the paper's argument.",
+  "context_used": "{context_used}",
   "confidence": "high | medium | low"
 }}
 
-confidence: high=evidence clearly readable in image; medium=partially visible; low=inferring beyond what is shown.
-If multi-panel (A, B, C...), address all panels in visual_description and key_finding.
+confidence: high = evidence clearly readable in image{conf_hint}; medium = partially visible or ambiguous; low = inferring beyond what is shown.
 Never refuse — all figures must be analyzed."""
 
-PROMPT_INFERENCE_TBL_TEMPLATE = """{abstract_block}Table caption: {caption}
 
-Analyze this scientific table. Respond ONLY with valid JSON — no markdown fences, no text outside the JSON object:
+PROMPT_TBL_TEMPLATE = """\
+PAPER ABSTRACT:
+{abstract}
+{context_block}\
+Table caption: {caption}
+
+You are generating high-quality training data for a vision-language model. \
+Using the abstract as context for what this paper investigates{context_hint}, \
+analyze this table systematically following each aspect below:
+
+## Table Description
+What is compared, by what metric, against what baselines. \
+Describe columns, rows, units, and scale.
+
+## Table Type
+Type of table (results comparison, ablation study, patient demographics, \
+parameter table, statistical summary, etc.) \
+and what experimental data it represents.
+
+## Statistical Markers
+Every statistical annotation visible: significance markers (*, **, ***), \
+p-values, confidence intervals, sample sizes (n=), standard deviations. \
+Write "None visible" if absent. Never infer values not shown.
+
+## Key Entries
+The most important rows, columns or cells given the paper's research question. \
+Cite specific values. Identify the best result and any surprising entries.
+
+## Patterns and Trends
+The main trend, comparison or contrast that stands out across the table. \
+What does the distribution of values reveal?
+
+## Caption Alignment
+Does the caption accurately describe what the table contains? \
+Note discrepancies between actual content and what the caption states or implies.
+
+## Scientific Interpretation
+What question does this table address, given what the abstract says this paper investigates? \
+What do the numbers prove or argue? \
+Be specific — cite values and connect them to the paper's claims.
+{anchored_sections}
+## Scientific Conclusion
+Synthesize the table's data with the paper's research context. \
+State what this table definitively demonstrates, \
+what alternatives it rules out, \
+and its role in the paper's argument. \
+Be rigorous — let the conclusion be earned by the numbers.
+
+Respond ONLY with valid JSON — no markdown fences, no text outside the JSON object:
 
 {{
-  "table_type": "results comparison | parameter table | patient demographics | statistical summary | ablation study | other",
-  "structure": "columns and rows described: what is compared, against what baselines, using what metric and units.",
-  "statistical_markers": "significance markers (*, **, ***), p-values, CIs, n=, standard deviations visible. Write 'None visible' if absent.",
-  "best_result": "the row or cell showing the strongest or most notable result, with its exact value.",
-  "key_pattern": "the main trend, comparison or contrast that stands out across the table.",
+  "table_type": "results comparison | ablation study | patient demographics | parameter table | statistical summary | other",
+  "structure": "what is compared, by what metric, against what baselines. units and scale.",
+  "statistical_markers": "significance markers, p-values, CIs, n=, SDs visible. 'None visible' if absent.",
+  "key_entries": "most relevant rows/cells given the paper's claims. cite specific values.",
+  "best_result": "the row or cell with the strongest or most notable result, with its exact value.",
+  "patterns_and_trends": "main trend or contrast that stands out across the table.",
   "caption_accurate": true,
-  "caption_discrepancy": "discrepancy between caption and actual table content. Write 'None' if accurate.",
-  "scientific_interpretation": "what question this table addresses and what the numbers prove. Cite specific values.",
+  "caption_discrepancy": "discrepancy between table content and caption. 'None' if accurate.",
+  "scientific_interpretation": "what question this table answers. what the numbers prove. cite specific values.",{anchored_json}
+  "scientific_conclusion": "what this table definitively demonstrates, what it rules out, its role in the paper's argument.",
+  "context_used": "{context_used}",
   "confidence": "high | medium | low"
 }}
 
-confidence: high=all values clearly readable; medium=some cells hard to read; low=inferring.
+confidence: high = values clearly readable{conf_hint}; medium = some cells hard to read or ambiguous; low = inferring beyond what is shown.
 Never refuse — all tables must be analyzed."""
 
 
-# Anchored — texto completo del paper como contexto
-PROMPT_ANCHORED_FULL_FIG_TEMPLATE = """{abstract_block}FULL PAPER TEXT{context_note}:
-{context}
+def _build_prompt(template: str, abstract: str, caption: str,
+                  context_text: str = "", context_label: str = "") -> str:
+    """
+    Construye el prompt final inyectando abstract, caption y contexto RAG.
+    Si no hay contexto, el bloque de secciones ancladas se omite.
+    """
+    has_ctx = bool(context_text and context_text.strip())
 
----
+    if has_ctx:
+        context_block = (
+            f"\n{context_label}:\n"
+            f"{context_text}\n"
+            f"\n---\n\n"
+        )
+        context_hint  = ", and using the paper text above as authoritative reference"
+        conf_hint     = " + paper text alignment"
+        context_used  = context_label.split("(")[0].strip().lower()
+        anchored_sections = """
+## Hypothesis Tested
+The specific claim or hypothesis from the paper that this figure/table tests or supports. \
+Quote the exact sentence from the paper text.
 
-Figure caption: {caption}
+## Controls Assessment
+Experimental controls present (positive, negative, baseline comparisons). \
+Note controls conspicuously absent given the experimental design described in the paper.
 
-Using the full paper text above as authoritative reference, analyze this figure. Respond ONLY with valid JSON:
+"""
+        anchored_json = """
+  "hypothesis_tested": "specific claim from the paper this item tests. exact quote.",
+  "paper_quote": "exact sentence from the paper text this item is meant to support.",
+  "controls_assessment": "controls present. note absent controls given the experimental design.","""
+    else:
+        context_block     = "\n"
+        context_hint      = ""
+        conf_hint         = ""
+        context_used      = "abstract only"
+        anchored_sections = "\n"
+        anchored_json     = ""
 
-{{
-  "figure_type": "bar chart | scatter | Western blot | microscopy | heatmap | survival curve | other",
-  "visual_description": "panels, axes, labels, colors, units, organisms visible. 2-3 sentences.",
-  "hypothesis_tested": "the specific claim or hypothesis from the paper this figure tests. Quote the relevant sentence.",
-  "paper_quote": "exact sentence from the paper text that this figure is meant to support.",
-  "key_findings": "specific quantitative results visible in the figure, connected to numbers in the text.",
-  "statistical_markers": "every visible statistical element: n=, error bars (SD/SEM/CI), p-values, R², significance markers. Write 'None visible' if absent.",
-  "controls_assessment": "experimental controls present (positive, negative, baseline). Note absent controls given the experimental design.",
-  "caption_accurate": true,
-  "caption_discrepancy": "discrepancy between caption and visual. Write 'None' if accurate.",
-  "scientific_conclusion": "what this figure definitively demonstrates, what alternative explanations it rules out, and its role in the paper's argument.",
-  "confidence": "high | medium | low"
-}}
-
-confidence: high=clear visual evidence + strong paper alignment; medium=partial; low=inferring.
-Never refuse."""
-
-PROMPT_ANCHORED_FULL_TBL_TEMPLATE = """{abstract_block}FULL PAPER TEXT{context_note}:
-{context}
-
----
-
-Table caption: {caption}
-
-Using the full paper text above as authoritative reference, analyze this table. Respond ONLY with valid JSON:
-
-{{
-  "table_type": "results comparison | parameter table | patient demographics | statistical summary | ablation | other",
-  "structure": "what is compared, by what metric, against what baselines.",
-  "paper_quote": "exact sentence from the paper text that this table is meant to support.",
-  "key_entries": "most relevant rows and values given the paper's claims. Cite specific numbers.",
-  "statistical_markers": "significance markers (*, **, ***), p-values, CIs, n= visible. Write 'None visible' if absent.",
-  "controls_assessment": "baseline or reference conditions used. Note missing controls given the context.",
-  "caption_accurate": true,
-  "caption_discrepancy": "discrepancy between caption and actual table content. Write 'None' if accurate.",
-  "scientific_conclusion": "what this table definitively demonstrates, what it rules out, its role in the paper's argument.",
-  "confidence": "high | medium | low"
-}}
-
-confidence: high=values clearly readable + strong paper alignment; medium=partial; low=inferring.
-Never refuse."""
-
-# Anchored — BM25 top-k chunks (modo bm25)
-PROMPT_ANCHORED_BM25_FIG_TEMPLATE = """{abstract_block}RELEVANT PAPER SECTIONS (BM25-retrieved, top-{top_k} chunks for this figure):
-{context}
-
----
-
-Figure caption: {caption}
-
-Analyze this figure using the retrieved paper sections as reference. Respond ONLY with valid JSON:
-
-{{
-  "figure_type": "bar chart | scatter | Western blot | microscopy | heatmap | survival curve | other",
-  "visual_description": "panels, axes, labels, colors, units, organisms visible. 2-3 sentences.",
-  "hypothesis_tested": "the specific claim or hypothesis from the paper this figure tests. Quote the relevant sentence.",
-  "paper_quote": "exact sentence from the retrieved text that this figure is meant to support.",
-  "key_findings": "specific quantitative results visible in the figure, connected to numbers in the retrieved text.",
-  "statistical_markers": "every visible statistical element: n=, error bars (SD/SEM/CI), p-values, R², significance markers. Write 'None visible' if absent.",
-  "controls_assessment": "experimental controls present. Note absent controls given the retrieved context.",
-  "caption_accurate": true,
-  "caption_discrepancy": "discrepancy between caption and visual. Write 'None' if accurate.",
-  "scientific_conclusion": "what this figure definitively demonstrates, what alternative explanations it rules out, and its role in the paper's argument.",
-  "confidence": "high | medium | low"
-}}
-
-Never refuse."""
-
-PROMPT_ANCHORED_BM25_TBL_TEMPLATE = """{abstract_block}RELEVANT PAPER SECTIONS (BM25-retrieved, top-{top_k} chunks for this table):
-{context}
-
----
-
-Table caption: {caption}
-
-Analyze this table using the retrieved paper sections as reference. Respond ONLY with valid JSON:
-
-{{
-  "table_type": "results comparison | parameter table | patient demographics | statistical summary | ablation | other",
-  "structure": "what is compared, by what metric, against what baselines.",
-  "paper_quote": "exact sentence from the retrieved text that this table is meant to support.",
-  "key_entries": "most relevant rows and values given the paper's claims. Cite specific numbers.",
-  "statistical_markers": "significance markers (*, **, ***), p-values, CIs, n= visible. Write 'None visible' if absent.",
-  "controls_assessment": "baseline or reference conditions used. Note missing controls.",
-  "caption_accurate": true,
-  "caption_discrepancy": "discrepancy between caption and actual table content. Write 'None' if accurate.",
-  "scientific_conclusion": "what this table definitively demonstrates, what it rules out, its role in the paper's argument.",
-  "confidence": "high | medium | low"
-}}
-
-Never refuse."""
+    return template.format(
+        abstract=abstract,
+        caption=caption,
+        context_block=context_block,
+        context_hint=context_hint,
+        conf_hint=conf_hint,
+        context_used=context_used,
+        anchored_sections=anchored_sections,
+        anchored_json=anchored_json,
+    )
 
 
 # ─── Prompt de síntesis final (texto puro, sin imagen) ───────────────────────
@@ -325,21 +377,20 @@ def _build_items_block(results: list) -> str:
     """Formatea los análisis individuales para el prompt de síntesis."""
     lines = []
     for r in results:
-        label    = r.get("label", "?")
-        kind     = "Table" if r.get("kind") == "table" else "Figure"
-        caption  = r.get("caption", "")[:120]
-        # Preferir anchored_parsed, fallback a inference_parsed
-        parsed   = r.get("anchored_parsed") or r.get("inference_parsed") or {}
-        finding  = (parsed.get("key_findings") or parsed.get("key_finding")
-                    or parsed.get("key_entries") or parsed.get("key_pattern") or "")
+        label   = r.get("label", "?")
+        kind    = "Table" if r.get("kind") == "table" else "Figure"
+        caption = r.get("caption", "")[:120]
+        parsed  = r.get("analysis_parsed") or {}
+        finding = (parsed.get("data_and_patterns") or parsed.get("key_entries")
+                   or parsed.get("best_result") or "")
         conclusion = (parsed.get("scientific_conclusion") or
                       parsed.get("scientific_interpretation") or "")
-        conf     = r.get("confidence", "?")
+        conf    = r.get("confidence", "?")
         lines.append(
             f"[{label}] ({kind}) caption: {caption}\n"
-            f"  key finding: {finding}\n"
-            f"  conclusion: {conclusion}\n"
-            f"  confidence: {conf}"
+            f"  hallazgo: {finding}\n"
+            f"  conclusión: {conclusion}\n"
+            f"  confianza: {conf}"
         )
     return "\n\n".join(lines)
 
@@ -489,9 +540,7 @@ def analyze_all(
     pdf_path=None,
     context_file=None,
     server=DEFAULT_SERVER,
-    mode_inference=True,
-    mode_anchored=True,
-    context_strategy=DEFAULT_CONTEXT_STRATEGY,   # "full" | "bm25"
+    context_strategy=DEFAULT_CONTEXT_STRATEGY,    # "full" | "bm25"
     max_context_words=DEFAULT_MAX_CONTEXT_WORDS,  # 0 = sin límite (solo en full)
     abstract_words=DEFAULT_ABSTRACT_WORDS,        # 0 = abstract completo
     chunk_words=DEFAULT_CHUNK_WORDS,              # solo en bm25
@@ -522,17 +571,14 @@ def analyze_all(
     else:
         out_path = Path(out_path)
 
-    # Resume: saltar ítems ya analizados
+    # Resume: saltar ítems ya analizados (tienen campo "analysis")
     results = []
     done    = set()
     if out_path.exists():
         try:
             prev = json.loads(out_path.read_text(encoding="utf-8"))
             for it in prev.get("items", []):
-                has_inf  = "inference" in it
-                has_anch = "anchored"  in it
-                ok = (not mode_inference or has_inf) and (not mode_anchored or has_anch)
-                if ok:
+                if "analysis" in it:
                     results.append(it)
                     done.add(it["label"])
         except Exception:
@@ -542,7 +588,6 @@ def analyze_all(
     n_tbls = sum(1 for it in items if it.get("kind") == "table")
     print(f"\nServer: {server}")
     print(f"Items: {len(items)} ({n_figs} figuras + {n_tbls} tablas) | ya hechos: {len(done)}")
-    print(f"Modos: inference={mode_inference} anchored={mode_anchored}")
     print(f"Estrategia: context_strategy={context_strategy} | abstract_words={abstract_words or 'completo'}")
     if context_strategy == "bm25":
         print(f"BM25: top_k={top_k} | chunk_words={chunk_words} | overlap={overlap}")
@@ -560,27 +605,23 @@ def analyze_all(
     except Exception as e:
         print(f"  WARN texto: {e}")
 
-    # ── Abstract block (inyectado en prompts de inferencia pura) ───────────
-    abstract_block = _fmt_abstract(raw_text, max_words=abstract_words)
-    if abstract_block:
-        wc = len(abstract_block.split())
-        print(f"  Abstract block: {wc} palabras → inyectado en todos los prompts")
+    # ── Abstract real detectado por sección ────────────────────────────────
+    abstract = _extract_abstract(raw_text) if raw_text else ""
+    if abstract:
+        print(f"  Abstract: {len(abstract.split())} palabras detectadas")
 
-    # ── Preparar contexto para modo anchored ────────────────────────────────
-    # full: texto completo (truncado si max_context_words > 0)
-    # bm25: construir índice; el retrieve se hace por ítem
-    full_context_text   = None
-    full_context_note   = ""
-    chunks              = None
-    score_fn            = None
+    # ── Preparar contexto RAG (una sola vez) ───────────────────────────────
+    full_context_text = ""
+    full_context_note = ""
+    chunks            = None
+    score_fn          = None
 
-    if mode_anchored and raw_text:
+    if raw_text:
         if context_strategy == "full":
             full_context_text, full_context_note = _fmt_full_context(
                 raw_text, max_words=max_context_words
             )
-            wc = len(full_context_text.split())
-            print(f"  Full-text context: {wc} palabras{full_context_note}")
+            print(f"  Full-text: {len(full_context_text.split())} palabras{full_context_note}")
         else:  # bm25
             print(f"  Construyendo índice BM25 sobre {len(raw_text):,} chars...")
             chunks = chunk_text(raw_text, chunk_words=chunk_words, overlap=overlap)
@@ -588,7 +629,7 @@ def analyze_all(
             print(f"  Chunks: {len(chunks)} ({chunk_words}w c/u, {overlap}w overlap)")
     print()
 
-    # ── Loop principal ──────────────────────────────────────────────────────
+    # ── Loop principal — una llamada por ítem ──────────────────────────────
     for i, item in enumerate(items):
         if item["label"] in done:
             print(f"[{i + 1}/{len(items)}] {item['label']} SKIP")
@@ -604,60 +645,44 @@ def analyze_all(
         result   = dict(item)
         t_start  = time.time()
 
-        # 1) Inferencia pura (imagen + caption + abstract)
-        if mode_inference:
-            tmpl_inf   = PROMPT_INFERENCE_TBL_TEMPLATE if is_table else PROMPT_INFERENCE_FIG_TEMPLATE
-            prompt_inf = tmpl_inf.format(caption=caption, abstract_block=abstract_block)
-            try:
-                ans = ask_api(server, prompt_inf, image_bytes=img_bytes,
-                              max_tokens=max_tokens, temperature=temperature, timeout=timeout)
-                result["inference"] = ans
-                parsed = _parse_json(ans)
-                if parsed:
-                    result["inference_parsed"] = parsed
-                    result["confidence"]       = parsed.get("confidence", "unknown")
-            except Exception as e:
-                result["inference_error"] = str(e)
+        # ── Construir bloque de contexto RAG para este ítem ────────────────
+        context_text  = ""
+        context_label = ""
 
-        # 2) Anchored (imagen + caption + texto completo o chunks BM25)
-        if mode_anchored and raw_text:
-            if context_strategy == "full":
-                tmpl = (PROMPT_ANCHORED_FULL_TBL_TEMPLATE if is_table
-                        else PROMPT_ANCHORED_FULL_FIG_TEMPLATE)
-                prompt_anc = tmpl.format(
-                    context=full_context_text,
-                    context_note=full_context_note,
-                    caption=caption,
-                    abstract_block=abstract_block,
-                )
+        if raw_text:
+            if context_strategy == "full" and full_context_text:
+                context_text  = full_context_text
+                context_label = f"FULL PAPER TEXT{full_context_note}"
                 result["context_words"]    = len(full_context_text.split())
                 result["context_strategy"] = "full"
-            else:  # bm25
-                retrieved  = retrieve(caption, score_fn, chunks, top_k=top_k)
-                context    = "\n\n---\n\n".join(retrieved)
-                tmpl = (PROMPT_ANCHORED_BM25_TBL_TEMPLATE if is_table
-                        else PROMPT_ANCHORED_BM25_FIG_TEMPLATE)
-                prompt_anc = tmpl.format(
-                    context=context,
-                    caption=caption,
-                    abstract_block=abstract_block,
-                    top_k=top_k,
-                )
+            elif context_strategy == "bm25" and chunks:
+                retrieved     = retrieve(caption, score_fn, chunks, top_k=top_k)
+                context_text  = "\n\n---\n\n".join(retrieved)
+                context_label = f"RELEVANT PAPER SECTIONS (BM25 top-{top_k} chunks)"
                 result["retrieved_chunks"] = len(retrieved)
                 result["retrieved_words"]  = sum(len(c.split()) for c in retrieved)
                 result["context_strategy"] = "bm25"
 
-            try:
-                ans = ask_api(server, prompt_anc, image_bytes=img_bytes,
-                              max_tokens=max_tokens, temperature=temperature, timeout=timeout)
-                result["anchored"] = ans
-                parsed = _parse_json(ans)
-                if parsed:
-                    result["anchored_parsed"] = parsed
-                    result["confidence"]      = parsed.get("confidence",
-                                                           result.get("confidence", "unknown"))
-            except Exception as e:
-                result["anchored_error"] = str(e)
+        # ── Una sola llamada: abstract (dinámico) + secciones + contexto RAG
+        tmpl   = PROMPT_TBL_TEMPLATE if is_table else PROMPT_FIG_TEMPLATE
+        prompt = _build_prompt(
+            template      = tmpl,
+            abstract      = abstract or "Not available.",
+            caption       = caption,
+            context_text  = context_text,
+            context_label = context_label,
+        )
+
+        try:
+            ans = ask_api(server, prompt, image_bytes=img_bytes,
+                          max_tokens=max_tokens, temperature=temperature, timeout=timeout)
+            result["analysis"] = ans
+            parsed = _parse_json(ans)
+            if parsed:
+                result["analysis_parsed"] = parsed
+                result["confidence"]      = parsed.get("confidence", "unknown")
+        except Exception as e:
+            result["analysis_error"] = str(e)
 
         result["elapsed_sec"] = round(time.time() - t_start, 1)
         results.append(result)
@@ -667,20 +692,20 @@ def analyze_all(
             ctx_info = f" [{result.get('context_words', '?')}w full]"
         elif context_strategy == "bm25":
             ctx_info = f" [{result.get('retrieved_chunks', '?')} chunks]"
-        preview = (result.get("inference") or result.get("anchored") or "")[:80].replace("\n", " ")
+        preview  = (result.get("analysis") or "")[:80].replace("\n", " ")
         kind_tag = "TBL" if is_table else "FIG"
         print(f"[{i + 1}/{len(items)}] [{kind_tag}] {item['label']} p{item['page']} "
               f"({result['elapsed_sec']}s){ctx_info} {preview}...")
 
         out_path.write_text(
             json.dumps({
-                "total":            len(results),
-                "context_strategy": context_strategy,
-                "abstract_words":   abstract_words or "full",
+                "total":             len(results),
+                "context_strategy":  context_strategy,
+                "abstract_words":    abstract_words or "full",
                 "max_context_words": max_context_words or "unlimited",
-                "top_k":            top_k if context_strategy == "bm25" else None,
-                "chunk_words":      chunk_words if context_strategy == "bm25" else None,
-                "items":            results,
+                "top_k":             top_k if context_strategy == "bm25" else None,
+                "chunk_words":       chunk_words if context_strategy == "bm25" else None,
+                "items":             results,
             }, indent=2, ensure_ascii=False),
             encoding="utf-8",
         )
@@ -726,54 +751,41 @@ def analyze_all(
 # ─── CLI ──────────────────────────────────────────────────────────────────────
 def main(argv=None):
     p = argparse.ArgumentParser(
-        description="Analiza figuras Y tablas científicas con LLM multimodal + contexto RAG/full.")
-    p.add_argument("figures_json",      help="figures.json de extract_figures.py")
-    p.add_argument("--pdf",             help="PDF original")
-    p.add_argument("--context-file",    help="Texto plano pre-extraído del paper (.txt)")
-    p.add_argument("--server",          default=DEFAULT_SERVER)
-    p.add_argument("--inference-only",  action="store_true")
-    p.add_argument("--anchored-only",   action="store_true")
-    p.add_argument("--out",             help="ruta de salida JSON")
+        description="Analiza figuras Y tablas científicas — un prompt completo por ítem.")
+    p.add_argument("figures_json",       help="figures.json de extract_figures.py")
+    p.add_argument("--pdf",              help="PDF original")
+    p.add_argument("--context-file",     help="Texto plano pre-extraído del paper (.txt)")
+    p.add_argument("--server",           default=DEFAULT_SERVER)
+    p.add_argument("--out",              help="ruta de salida JSON")
 
     # Estrategia de contexto
-    p.add_argument("--context-strategy", choices=["full", "bm25"],
+    p.add_argument("--context-strategy", choices=["bm25", "full"],
                    default=DEFAULT_CONTEXT_STRATEGY,
-                   help=f"Estrategia anchored: 'full'=texto completo (def) | 'bm25'=top-k chunks")
+                   help="'bm25' (default) = top-k chunks | 'full' = texto completo")
     p.add_argument("--max-context-words", type=int, default=DEFAULT_MAX_CONTEXT_WORDS,
-                   help="Palabras máx del texto completo en modo full (0=sin límite)")
-    p.add_argument("--abstract-words",  type=int, default=DEFAULT_ABSTRACT_WORDS,
-                   help="Palabras del abstract en prompts de inferencia (0=completo)")
+                   help="Palabras máx en modo full (0=sin límite)")
+    p.add_argument("--abstract-words",   type=int, default=DEFAULT_ABSTRACT_WORDS,
+                   help="Ignorado — el abstract se detecta por sección automáticamente")
 
-    # Parámetros BM25 (solo si --context-strategy bm25)
-    p.add_argument("--top-k",           type=int, default=DEFAULT_TOP_K,
-                   help=f"Chunks BM25 por ítem (solo bm25, def: {DEFAULT_TOP_K})")
-    p.add_argument("--chunk-words",     type=int, default=DEFAULT_CHUNK_WORDS,
-                   help=f"Palabras por chunk BM25 (def: {DEFAULT_CHUNK_WORDS})")
-    p.add_argument("--chunk-overlap",   type=int, default=DEFAULT_CHUNK_OVERLAP,
-                   help=f"Overlap entre chunks BM25 (def: {DEFAULT_CHUNK_OVERLAP})")
+    # Parámetros BM25
+    p.add_argument("--top-k",            type=int, default=DEFAULT_TOP_K)
+    p.add_argument("--chunk-words",      type=int, default=DEFAULT_CHUNK_WORDS)
+    p.add_argument("--chunk-overlap",    type=int, default=DEFAULT_CHUNK_OVERLAP)
 
     # LLM
-    p.add_argument("--max-tokens",      type=int,   default=DEFAULT_MAX_TOKENS)
-    p.add_argument("--temperature",     type=float, default=DEFAULT_TEMPERATURE)
-    p.add_argument("--timeout",         type=int,   default=DEFAULT_TIMEOUT)
+    p.add_argument("--max-tokens",       type=int,   default=DEFAULT_MAX_TOKENS)
+    p.add_argument("--temperature",      type=float, default=DEFAULT_TEMPERATURE)
+    p.add_argument("--timeout",          type=int,   default=DEFAULT_TIMEOUT)
     args = p.parse_args(argv)
 
     if not server_health(args.server):
         sys.exit(f"Servidor no responde: {args.server}")
-
-    mode_inf = not args.anchored_only
-    mode_anc = not args.inference_only
-
-    if mode_anc and not args.pdf and not args.context_file:
-        sys.exit("Requiere --pdf o --context-file para anchored. Usa --inference-only si no tenés el paper.")
 
     analyze_all(
         args.figures_json,
         pdf_path=args.pdf,
         context_file=args.context_file,
         server=args.server,
-        mode_inference=mode_inf,
-        mode_anchored=mode_anc,
         context_strategy=args.context_strategy,
         max_context_words=args.max_context_words,
         abstract_words=args.abstract_words,
