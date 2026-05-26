@@ -1,0 +1,470 @@
+{
+  "pdf_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/raw_pdfs/paper_nitrate.pdf",
+  "paper_stem": "paper_nitrate",
+  "paper_title": "TYPE Review PUBLISHED 10 March 2025 DOI 10.3389/fpls.2025.1546011",
+  "text_length_chars": 68324,
+  "figure_count": 3,
+  "processing_time_s": 142.46,
+  "timestamp": "2026-05-25T22:19:18",
+  "metadata": {
+    "pipeline": "figures_nitrogen_v3",
+    "mode": "internvl_only"
+  },
+  "figures": [
+    {
+      "figure_id": "fig_1_p003_000",
+      "page": 3,
+      "caption": "FIGURE 1 Illustration of the crosstalk between nitrate signaling and phytohormone signaling. Pointed and blunt arrowheads indicate activating and inhibiting interactions, respectively. The thick arrow indicates the root-to-shoot translocation.",
+      "context_sentences": [
+        "Figure 1).",
+        "FIGURE 1 Illustration of the crosstalk between nitrate signaling and phytohormone signaling."
+      ],
+      "image_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_nitrate/paper_nitrate_p003_fig1_000.png",
+      "candidate": {
+        "figure_id": "fig_1_p003_000",
+        "page": 3,
+        "caption": "FIGURE 1 Illustration of the crosstalk between nitrate signaling and phytohormone signaling. Pointed and blunt arrowheads indicate activating and inhibiting interactions, respectively. The thick arrow indicates the root-to-shoot translocation.",
+        "figure_label": "Figure 1",
+        "figure_number": "1",
+        "bbox_pdf": [
+          105.56,
+          80.84,
+          490.0,
+          392.15
+        ],
+        "caption_bbox_pdf": [
+          60.83,
+          392.83,
+          524.11,
+          416.18
+        ],
+        "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_nitrate/paper_nitrate_p003_fig1_000.png",
+        "detection_method": "visual_region_drawings_images",
+        "crop_quality": "image_block_crop",
+        "crop_includes_caption": false,
+        "page_width_pdf": 595.39,
+        "page_height_pdf": 841.66,
+        "notes": []
+      },
+      "interpretation": {
+        "target_figure_only": true,
+        "figure_type": "diagram",
+        "visible_text": {
+          "title": null,
+          "x_axis_label": [],
+          "y_axis_label": [],
+          "units": [],
+          "legend_items": [],
+          "printed_terms": [
+            "LR growth",
+            "Auxin signaling",
+            "Auxin biosynthesis",
+            "TAR2",
+            "TAA1 YUCs",
+            "ARF17",
+            "miR393",
+            "miR167",
+            "miR160",
+            "ARF6/8",
+            "AFB3",
+            "IAA3",
+            "ARF7/14",
+            "Shoot tZ-type CKs",
+            "Root tZ-type CKs",
+            "CYP735A2",
+            "iP-type CKs",
+            "NRT1.3",
+            "NRT1.7",
+            "NRT1.5",
+            "NRT2.2",
+            "NAR2.1",
+            "NRT1.1",
+            "NRT2.6",
+            "NRT1.4",
+            "NRT2.7",
+            "Leaf expansion",
+            "Root growth",
+            "Auxin transport",
+            "De-phosphorylated PIN2",
+            "LAX3",
+            "GA biosynthesis",
+            "D1",
+            "Plant growth",
+            "DELLA degradation",
+            "G/ID",
+            "CML38-PEPR2 complex",
+            "DWARF1",
+            "BR biosynthesis",
+            "BAK1",
+            "BSK3",
+            "BES1 phosphorylated",
+            "BES1-target genes",
+            "Root elongation",
+            "Root growth",
+            "O₃⁻",
+            "BG1",
+            "ABF2/3",
+            "ABA",
+            "IPT3",
+            "NRT1.2",
+            "LR growth",
+            "Cd/Na stress",
+            "UV-B",
+            "EIN2/3",
+            "ET",
+            "JA",
+            "EIN2, COI1",
+            "ERF59/104",
+            "NRT1.8",
+            "NRT1.5",
+            "NRT2.1",
+            "Stress-initiated nitrate allocation to roots"
+          ]
+        },
+        "visual_structure": {
+          "num_panels": 1,
+          "plot_elements": [],
+          "groups_or_conditions": [],
+          "statistical_markers_visible": []
+        },
+        "factual_observations": [
+          {
+            "observation": "The diagram shows interactions between nitrate signaling and various signaling pathways.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Pointed arrows indicate activating interactions.",
+            "evidence_source": "caption",
+            "certainty": "high"
+          },
+          {
+            "observation": "Blunt arrows indicate inhibiting interactions.",
+            "evidence_source": "caption",
+            "certainty": "high"
+          },
+          {
+            "observation": "The thick arrow indicates root-to-shoot translocation.",
+            "evidence_source": "caption",
+            "certainty": "high"
+          }
+        ],
+        "nitrogen_relevance": {
+          "is_relevant": true,
+          "visible_terms": [
+            "NRT1.3",
+            "NRT1.7",
+            "NRT1.5",
+            "NRT2.2",
+            "NAR2.1",
+            "NRT1.1",
+            "NRT2.6",
+            "NRT1.4",
+            "NRT2.7",
+            "NRT1.2",
+            "NRT2.1",
+            "NRT1.8",
+            "NRT1.5"
+          ],
+          "evidence_source": [
+            "visual"
+          ],
+          "reason": "The terms NRT1 and NRT2 are related to nitrate transporters."
+        },
+        "not_determinable": [],
+        "hallucination_risk": "low",
+        "uncertainty_level": "low",
+        "uncertainty_reason": null,
+        "raw_response": "{\n  \"target_figure_only\": true,\n  \"figure_type\": \"diagram\",\n  \"visible_text\": {\n    \"title\": null,\n    \"x_axis_label\": [],\n    \"y_axis_label\": [],\n    \"units\": [],\n    \"legend_items\": [],\n    \"printed_terms\": [\n      \"LR growth\",\n      \"Auxin signaling\",\n      \"Auxin biosynthesis\",\n      \"TAR2\",\n      \"TAA1 YUCs\",\n      \"ARF17\",\n      \"miR393\",\n      \"miR167\",\n      \"miR160\",\n      \"ARF6/8\",\n      \"AFB3\",\n      \"IAA3\",\n      \"ARF7/14\",\n      \"Shoot tZ-type CKs\",\n      \"Root tZ-type CKs\",\n      \"CYP735A2\",\n      \"iP-type CKs\",\n      \"NRT1.3\",\n      \"NRT1.7\",\n      \"NRT1.5\",\n      \"NRT2.2\",\n      \"NAR2.1\",\n      \"NRT1.1\",\n      \"NRT2.6\",\n      \"NRT1.4\",\n      \"NRT2.7\",\n      \"Leaf expansion\",\n      \"Root growth\",\n      \"Auxin transport\",\n      \"De-phosphorylated PIN2\",\n      \"LAX3\",\n      \"GA biosynthesis\",\n      \"D1\",\n      \"Plant growth\",\n      \"DELLA degradation\",\n      \"G/ID\",\n      \"CML38-PEPR2 complex\",\n      \"DWARF1\",\n      \"BR biosynthesis\",\n      \"BAK1\",\n      \"BSK3\",\n      \"BES1 phosphorylated\",\n      \"BES1-target genes\",\n      \"Root elongation\",\n      \"Root growth\",\n      \"O₃⁻\",\n      \"BG1\",\n      \"ABF2/3\",\n      \"ABA\",\n      \"IPT3\",\n      \"NRT1.2\",\n      \"LR growth\",\n      \"Cd/Na stress\",\n      \"UV-B\",\n      \"EIN2/3\",\n      \"ET\",\n      \"JA\",\n      \"EIN2, COI1\",\n      \"ERF59/104\",\n      \"NRT1.8\",\n      \"NRT1.5\",\n      \"NRT2.1\",\n      \"Stress-initiated nitrate allocation to roots\"\n    ]\n  },\n  \"visual_structure\": {\n    \"num_panels\": 1,\n    \"plot_elements\": [],\n    \"groups_or_conditions\": [],\n    \"statistical_markers_visible\": []\n  },\n  \"factual_observations\": [\n    {\n      \"observation\": \"The diagram shows interactions between nitrate signaling and various signaling pathways.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Pointed arrows indicate activating interactions.\",\n      \"evidence_source\": \"caption\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Blunt arrows indicate inhibiting interactions.\",\n      \"evidence_source\": \"caption\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"The thick arrow indicates root-to-shoot translocation.\",\n      \"evidence_source\": \"caption\",\n      \"certainty\": \"high\"\n    }\n  ],\n  \"nitrogen_relevance\": {\n    \"is_relevant\": true,\n    \"visible_terms\": [\n      \"NRT1.3\",\n      \"NRT1.7\",\n      \"NRT1.5\",\n      \"NRT2.2\",\n      \"NAR2.1\",\n      \"NRT1.1\",\n      \"NRT2.6\",\n      \"NRT1.4\",\n      \"NRT2.7\",\n      \"NRT1.2\",\n      \"NRT2.1\",\n      \"NRT1.8\",\n      \"NRT1.5\"\n    ],\n    \"evidence_source\": [\"visual\"],\n    \"reason\": \"The terms NRT1 and NRT2 are related to nitrate transporters.\"\n  },\n  \"not_determinable\": [],\n  \"hallucination_risk\": \"low\",\n  \"uncertainty_level\": \"low\",\n  \"uncertainty_reason\": null\n}",
+        "model": "internvl3-78b"
+      },
+      "validation": {
+        "accepted_for_training": true,
+        "validation_level": "low_risk",
+        "reasons": [
+          "Passed heuristic validation"
+        ],
+        "validator": "heuristic_v2"
+      }
+    },
+    {
+      "figure_id": "fig_2_p005_001",
+      "page": 5,
+      "caption": "FIGURE 2 Illustration of the crosstalk between nitrate signaling and calcium as well as ROS signaling. Pointed and blunt arrowheads indicate activating and inhibiting interactions, respectively. The cross mark indicates inhibition of the channel activity of CNGC15.",
+      "context_sentences": [
+        "FIGURE 2 Illustration of the crosstalk between nitrate signaling and calcium as well as ROS signaling.",
+        "Figure 2) (Riveras et al.",
+        "Figure 2) (Shin and Schachtman, 2004;"
+      ],
+      "image_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_nitrate/paper_nitrate_p005_fig2_001.png",
+      "candidate": {
+        "figure_id": "fig_2_p005_001",
+        "page": 5,
+        "caption": "FIGURE 2 Illustration of the crosstalk between nitrate signaling and calcium as well as ROS signaling. Pointed and blunt arrowheads indicate activating and inhibiting interactions, respectively. The cross mark indicates inhibition of the channel activity of CNGC15.",
+        "figure_label": "Figure 2",
+        "figure_number": "2",
+        "bbox_pdf": [
+          105.56,
+          80.84,
+          490.0,
+          358.59
+        ],
+        "caption_bbox_pdf": [
+          60.83,
+          359.21,
+          518.41,
+          382.62
+        ],
+        "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_nitrate/paper_nitrate_p005_fig2_001.png",
+        "detection_method": "visual_region_drawings_images",
+        "crop_quality": "image_block_crop",
+        "crop_includes_caption": false,
+        "page_width_pdf": 595.39,
+        "page_height_pdf": 841.89,
+        "notes": []
+      },
+      "interpretation": {
+        "target_figure_only": true,
+        "figure_type": "diagram",
+        "visible_text": {
+          "title": null,
+          "x_axis_label": [],
+          "y_axis_label": [],
+          "units": [],
+          "legend_items": [],
+          "panel_labels": [],
+          "printed_terms": [
+            "High-nitrate",
+            "Low-nitrate",
+            "CNGC15",
+            "NRT1.1",
+            "NO3-",
+            "Ca2+",
+            "CBL1/9",
+            "CIPK23",
+            "CIPK8",
+            "CPK10/30/32",
+            "NLP7",
+            "ROS",
+            "Nucleus",
+            "Plasma membrane",
+            "Promoter",
+            "CK biosynthesis genes",
+            "Nitrate regulated genes",
+            "HBI1, EE2",
+            "NRT2.4/2.5",
+            "HRS1/HH01"
+          ]
+        },
+        "visual_structure": {
+          "num_panels": 1,
+          "plot_elements": [
+            "Pointed arrows",
+            "Blunt arrows",
+            "Cross mark",
+            "Dashed lines"
+          ],
+          "groups_or_conditions": [
+            "High-nitrate",
+            "Low-nitrate"
+          ],
+          "statistical_markers_visible": []
+        },
+        "factual_observations": [
+          {
+            "observation": "The diagram shows interactions between nitrate signaling, calcium, and ROS signaling.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Pointed arrows indicate activating interactions.",
+            "evidence_source": "caption",
+            "certainty": "high"
+          },
+          {
+            "observation": "Blunt arrows indicate inhibiting interactions.",
+            "evidence_source": "caption",
+            "certainty": "high"
+          },
+          {
+            "observation": "A cross mark indicates inhibition of the channel activity of CNGC15.",
+            "evidence_source": "caption",
+            "certainty": "high"
+          }
+        ],
+        "nitrogen_relevance": {
+          "is_relevant": true,
+          "visible_terms": [
+            "NO3-",
+            "NRT1.1",
+            "NRT2.4/2.5",
+            "Nitrate regulated genes"
+          ],
+          "evidence_source": [
+            "visual"
+          ],
+          "reason": "The diagram includes nitrate-related terms and signaling pathways."
+        },
+        "not_determinable": [],
+        "hallucination_risk": "low",
+        "uncertainty_level": "low",
+        "uncertainty_reason": null,
+        "raw_response": "{\n  \"target_figure_only\": true,\n  \"figure_type\": \"diagram\",\n  \"visible_text\": {\n    \"title\": null,\n    \"x_axis_label\": [],\n    \"y_axis_label\": [],\n    \"units\": [],\n    \"legend_items\": [],\n    \"panel_labels\": [],\n    \"printed_terms\": [\n      \"High-nitrate\",\n      \"Low-nitrate\",\n      \"CNGC15\",\n      \"NRT1.1\",\n      \"NO3-\",\n      \"Ca2+\",\n      \"CBL1/9\",\n      \"CIPK23\",\n      \"CIPK8\",\n      \"CPK10/30/32\",\n      \"NLP7\",\n      \"ROS\",\n      \"Nucleus\",\n      \"Plasma membrane\",\n      \"Promoter\",\n      \"CK biosynthesis genes\",\n      \"Nitrate regulated genes\",\n      \"HBI1, EE2\",\n      \"NRT2.4/2.5\",\n      \"HRS1/HH01\"\n    ]\n  },\n  \"visual_structure\": {\n    \"num_panels\": 1,\n    \"plot_elements\": [\n      \"Pointed arrows\",\n      \"Blunt arrows\",\n      \"Cross mark\",\n      \"Dashed lines\"\n    ],\n    \"groups_or_conditions\": [\n      \"High-nitrate\",\n      \"Low-nitrate\"\n    ],\n    \"statistical_markers_visible\": []\n  },\n  \"factual_observations\": [\n    {\n      \"observation\": \"The diagram shows interactions between nitrate signaling, calcium, and ROS signaling.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Pointed arrows indicate activating interactions.\",\n      \"evidence_source\": \"caption\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Blunt arrows indicate inhibiting interactions.\",\n      \"evidence_source\": \"caption\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"A cross mark indicates inhibition of the channel activity of CNGC15.\",\n      \"evidence_source\": \"caption\",\n      \"certainty\": \"high\"\n    }\n  ],\n  \"nitrogen_relevance\": {\n    \"is_relevant\": true,\n    \"visible_terms\": [\n      \"NO3-\",\n      \"NRT1.1\",\n      \"NRT2.4/2.5\",\n      \"Nitrate regulated genes\"\n    ],\n    \"evidence_source\": [\n      \"visual\"\n    ],\n    \"reason\": \"The diagram includes nitrate-related terms and signaling pathways.\"\n  },\n  \"not_determinable\": [],\n  \"hallucination_risk\": \"low\",\n  \"uncertainty_level\": \"low\",\n  \"uncertainty_reason\": null\n}",
+        "model": "internvl3-78b"
+      },
+      "validation": {
+        "accepted_for_training": true,
+        "validation_level": "low_risk",
+        "reasons": [
+          "Passed heuristic validation"
+        ],
+        "validator": "heuristic_v2"
+      }
+    },
+    {
+      "figure_id": "fig_3_p006_002",
+      "page": 6,
+      "caption": "FIGURE 3 Illustration of the crosstalk between nitrate signaling and peptide as well as sucrose signaling. Pointed and blunt arrowheads indicate activating and inhibiting interactions, respectively. The thick arrow indicates the shoo-to-root or root-to-shoot translocation.",
+      "context_sentences": [
+        "Figure 3) (Tabata et al.",
+        "FIGURE 3 Illustration of the crosstalk between nitrate signaling and peptide as well as sucrose signaling.",
+        "Figure 3) (Fichtner et al."
+      ],
+      "image_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_nitrate/paper_nitrate_p006_fig3_002.png",
+      "candidate": {
+        "figure_id": "fig_3_p006_002",
+        "page": 6,
+        "caption": "FIGURE 3 Illustration of the crosstalk between nitrate signaling and peptide as well as sucrose signaling. Pointed and blunt arrowheads indicate activating and inhibiting interactions, respectively. The thick arrow indicates the shoo-to-root or root-to-shoot translocation.",
+        "figure_label": "Figure 3",
+        "figure_number": "3",
+        "bbox_pdf": [
+          91.33,
+          510.29,
+          504.18,
+          735.71
+        ],
+        "caption_bbox_pdf": [
+          60.83,
+          736.33,
+          528.26,
+          759.74
+        ],
+        "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_nitrate/paper_nitrate_p006_fig3_002.png",
+        "detection_method": "visual_region_drawings_images",
+        "crop_quality": "image_block_crop",
+        "crop_includes_caption": false,
+        "page_width_pdf": 595.39,
+        "page_height_pdf": 841.66,
+        "notes": []
+      },
+      "interpretation": {
+        "target_figure_only": true,
+        "figure_type": "diagram",
+        "visible_text": {
+          "title": null,
+          "x_axis_label": [],
+          "y_axis_label": [],
+          "units": [],
+          "legend_items": [],
+          "printed_terms": [
+            "Shoot",
+            "Root",
+            "CEPR1",
+            "CEPD",
+            "NO3- deficiency",
+            "CEP",
+            "CEPDL2",
+            "CLV1",
+            "CLE3",
+            "TGA1/4",
+            "NRT2.1, NRT2.2",
+            "LR emergence",
+            "NO3- uptake",
+            "Surcose",
+            "HY5",
+            "HY5, HYH",
+            "NR activity",
+            "NRT2.1",
+            "NLP7",
+            "Carbon deficiency",
+            "KIN10 degradation",
+            "Plant growth",
+            "Photosynthesis",
+            "R light",
+            "FR light"
+          ]
+        },
+        "visual_structure": {
+          "num_panels": 1,
+          "plot_elements": [
+            "pointed arrows",
+            "blunt arrows",
+            "thick arrows"
+          ],
+          "groups_or_conditions": [],
+          "statistical_markers_visible": []
+        },
+        "factual_observations": [
+          {
+            "observation": "The diagram shows interactions between nitrate signaling, peptide signaling, and sucrose signaling.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "CEP is involved in NO3- deficiency signaling.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "CEPDL2 is connected to both CEPD and NO3- deficiency.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Surcose is linked to HY5 and photosynthesis.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "NRT2.1 and NRT2.2 are involved in NO3- uptake.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "KIN10 degradation is linked to NO3- and carbon deficiency.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          }
+        ],
+        "nitrogen_relevance": {
+          "is_relevant": true,
+          "visible_terms": [
+            "NO3-",
+            "NRT2.1",
+            "NRT2.2",
+            "NO3- deficiency",
+            "NO3- uptake"
+          ],
+          "evidence_source": [
+            "visual"
+          ],
+          "reason": "The diagram includes terms related to nitrate signaling and uptake."
+        },
+        "not_determinable": [],
+        "hallucination_risk": "low",
+        "uncertainty_level": "low",
+        "uncertainty_reason": null,
+        "raw_response": "{\n  \"target_figure_only\": true,\n  \"figure_type\": \"diagram\",\n  \"visible_text\": {\n    \"title\": null,\n    \"x_axis_label\": [],\n    \"y_axis_label\": [],\n    \"units\": [],\n    \"legend_items\": [],\n    \"printed_terms\": [\n      \"Shoot\",\n      \"Root\",\n      \"CEPR1\",\n      \"CEPD\",\n      \"NO3- deficiency\",\n      \"CEP\",\n      \"CEPDL2\",\n      \"CLV1\",\n      \"CLE3\",\n      \"TGA1/4\",\n      \"NRT2.1, NRT2.2\",\n      \"LR emergence\",\n      \"NO3- uptake\",\n      \"Surcose\",\n      \"HY5\",\n      \"HY5, HYH\",\n      \"NR activity\",\n      \"NRT2.1\",\n      \"NLP7\",\n      \"Carbon deficiency\",\n      \"KIN10 degradation\",\n      \"Plant growth\",\n      \"Photosynthesis\",\n      \"R light\",\n      \"FR light\"\n    ]\n  },\n  \"visual_structure\": {\n    \"num_panels\": 1,\n    \"plot_elements\": [\n      \"pointed arrows\",\n      \"blunt arrows\",\n      \"thick arrows\"\n    ],\n    \"groups_or_conditions\": [],\n    \"statistical_markers_visible\": []\n  },\n  \"factual_observations\": [\n    {\n      \"observation\": \"The diagram shows interactions between nitrate signaling, peptide signaling, and sucrose signaling.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"CEP is involved in NO3- deficiency signaling.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"CEPDL2 is connected to both CEPD and NO3- deficiency.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Surcose is linked to HY5 and photosynthesis.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"NRT2.1 and NRT2.2 are involved in NO3- uptake.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"KIN10 degradation is linked to NO3- and carbon deficiency.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    }\n  ],\n  \"nitrogen_relevance\": {\n    \"is_relevant\": true,\n    \"visible_terms\": [\n      \"NO3-\",\n      \"NRT2.1\",\n      \"NRT2.2\",\n      \"NO3- deficiency\",\n      \"NO3- uptake\"\n    ],\n    \"evidence_source\": [\n      \"visual\"\n    ],\n    \"reason\": \"The diagram includes terms related to nitrate signaling and uptake.\"\n  },\n  \"not_determinable\": [],\n  \"hallucination_risk\": \"low\",\n  \"uncertainty_level\": \"low\",\n  \"uncertainty_reason\": null\n}",
+        "model": "internvl3-78b"
+      },
+      "validation": {
+        "accepted_for_training": true,
+        "validation_level": "low_risk",
+        "reasons": [
+          "Passed heuristic validation"
+        ],
+        "validator": "heuristic_v2"
+      }
+    }
+  ]
+}

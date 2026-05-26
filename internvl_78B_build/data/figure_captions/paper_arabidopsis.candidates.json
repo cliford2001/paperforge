@@ -1,0 +1,394 @@
+[
+  {
+    "figure_id": "fig_1_p002_000",
+    "page": 2,
+    "caption": "130 140 150 160 170 Genome size (Mb) Fig. 1 | Genome assemblies and size variation across 27 A. thaliana accessions. a , Origin of the sequenced accessions with colors indicating ‘Admixture’ group 34 . The reference accession Col-0 (6909) lacks reliable collection data (but hails from Central Europe based on genotype as well as historical records). Please note that 22005 and 22006 appear as a single point as they are geographically close and belong to the same admixture group. Maps were generated using public domain data from the Natural Earth project via the R package rnaturalearth. b , Histogram of genome sizes estimated from k -mers in PCR-free short reads with total assembly sizes superimposed (values to the left of ‘zero’). Most of the",
+    "figure_label": "Figure 1",
+    "figure_number": "1",
+    "bbox_pdf": [
+      11.53,
+      29.33,
+      566.53,
+      293.7
+    ],
+    "caption_bbox_pdf": [
+      39.68,
+      278.19,
+      293.86,
+      390.35
+    ],
+    "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p002_fig1_000.png",
+    "detection_method": "visual_region_drawings_images",
+    "crop_quality": "image_block_crop",
+    "crop_includes_caption": false,
+    "page_width_pdf": 595.28,
+    "page_height_pdf": 790.87,
+    "notes": []
+  },
+  {
+    "figure_id": "fig_2_p003_001",
+    "page": 3,
+    "caption": "Fig. 2 | Distribution of variation on chromosome 1. a , WGA illustrates that the genomes are structurally conserved away from centromeric regions. Chromosomes are aligned from both ends to emphasize the contiguity of the arms, with the unassembled centromeric regions indicated in yellow and inversions in pink. Oscillating gray shades highlight homologous regions (the periodicity of the gradients reflects repeated use of the color scheme and has no biological meaning). b , The density of pangenome graph bubbles, reflecting higher diversity in pericentromeric regions and at ~20 Mb, where an ancestral",
+    "figure_label": "Figure 2",
+    "figure_number": "2",
+    "bbox_pdf": [
+      113.29,
+      42.91,
+      490.37,
+      543.85
+    ],
+    "caption_bbox_pdf": [
+      39.69,
+      550.05,
+      288.61,
+      628.82
+    ],
+    "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p003_fig2_001.png",
+    "detection_method": "visual_region_drawings_images",
+    "crop_quality": "image_block_crop",
+    "crop_includes_caption": false,
+    "page_width_pdf": 595.28,
+    "page_height_pdf": 790.87,
+    "notes": []
+  },
+  {
+    "figure_id": "fig_4c_p004_002",
+    "page": 4,
+    "caption": "in Fig. 4c,d , likely insertions also correspond more often to complete TEs, consistent with recent TE activity, whereas likely deletions more often correspond to incomplete TEs, suggesting that they are decay- ing elements. As expected, sSVs corresponding to complete TEs are enriched for particular lengths (specifically around 5 kb), reflecting activity of complete TEs (Fig. 4e ). Similar patterns of enrichment were also found for sSVs in all other categories except for those corresponding to TE fragments. This supports recent reports that active TEs are far from perfectly annotated 48 , 49 .",
+    "figure_label": "Figure 4c",
+    "figure_number": "4c",
+    "bbox_pdf": [
+      98.98,
+      54.18,
+      504.73,
+      229.0
+    ],
+    "caption_bbox_pdf": [
+      306.14,
+      284.1,
+      562.83,
+      391.03
+    ],
+    "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p004_fig4c_002.png",
+    "detection_method": "visual_region_drawings_images",
+    "crop_quality": "image_block_crop",
+    "crop_includes_caption": false,
+    "page_width_pdf": 595.28,
+    "page_height_pdf": 790.87,
+    "notes": []
+  },
+  {
+    "figure_id": "fig_4_p005_003",
+    "page": 5,
+    "caption": "Fig. 4 | The role of TEs in bi-allelic indels. a , Categories of overlap between the presence allele of sSVs and annotated TE sequences. b , Number of sSVs in each TE-content category described in a . Colors correspond to a —gray, no TE content. c , d , Histograms of presence frequency showing annotated TE content",
+    "figure_label": "Figure 4",
+    "figure_number": "4",
+    "bbox_pdf": [
+      32.5,
+      42.9,
+      562.61,
+      239.93
+    ],
+    "caption_bbox_pdf": [
+      39.68,
+      237.22,
+      287.76,
+      275.98
+    ],
+    "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p005_fig4_003.png",
+    "detection_method": "visual_region_drawings_images",
+    "crop_quality": "image_block_crop",
+    "crop_includes_caption": false,
+    "page_width_pdf": 595.28,
+    "page_height_pdf": 790.87,
+    "notes": []
+  },
+  {
+    "figure_id": "fig_5_p006_004",
+    "page": 6,
+    "caption": "Fig. 5 | The graph structure of sSVs. a , The number of sSVs included (or not) in the graph of nestedness as a function of TE content. b , Graph illustrating the nestedness of sSVs, including only presence alleles with nonzero TE content. Each node represents a set of mutually nested sequences, using a similarity threshold of 0.85, with node size reflecting the number of included sequences. Nodes are colored by TE content as shown in a . c , Same graph as in b , but colored by TE superfamilies, as shown in the center on top. Note that the algorithm used no",
+    "figure_label": "Figure 5",
+    "figure_number": "5",
+    "bbox_pdf": [
+      34.02,
+      42.9,
+      570.17,
+      629.39
+    ],
+    "caption_bbox_pdf": [
+      39.68,
+      625.34,
+      295.62,
+      694.11
+    ],
+    "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p006_fig5_004.png",
+    "detection_method": "visual_region_drawings_images",
+    "crop_quality": "image_block_crop",
+    "crop_includes_caption": false,
+    "page_width_pdf": 595.28,
+    "page_height_pdf": 790.87,
+    "notes": []
+  },
+  {
+    "figure_id": "fig_6_p007_005",
+    "page": 7,
+    "caption": "Fig. 6 | Analysis of the gene-ome. a , The 34,153 annotated genes categorized based on whether they correspond to the TAIR10 annotation and whether they are TEs or PC (based on sequence similarity and TE-like protein domains; Extended Data Fig. 5a). b , Genes categorized based on locus presence frequency across the 27 genomes. For TE presence frequency distribution and a comparison with published results 23 , please see Extended Data Fig. 5b,c. c , Synteny comparison with A. lyrata . For TEs, see Extended Data Fig. 5d. d , Ancestral status of genes of TAIR10 and newly annotated genes (‘position + sequence’ means that both gene sequence and syntenic position are conserved). e , Ancestral status of genes by presence frequency. f , Distribution of genes and TEs along chromosome 5, grouped by frequency (top) and ancestral status (bottom). For all chromosomes, see Extended Data Fig. 5h,i. g , Functional domains of annotated genes, based on comparisons with UniProtKB. h , Functional domains of PC genes",
+    "figure_label": "Figure 6",
+    "figure_number": "6",
+    "bbox_pdf": [
+      31.44,
+      42.9,
+      569.25,
+      590.51
+    ],
+    "caption_bbox_pdf": [
+      39.68,
+      587.8,
+      294.85,
+      716.57
+    ],
+    "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p007_fig6_005.png",
+    "detection_method": "visual_region_drawings_images",
+    "crop_quality": "image_block_crop",
+    "crop_includes_caption": false,
+    "page_width_pdf": 595.28,
+    "page_height_pdf": 790.87,
+    "notes": []
+  },
+  {
+    "figure_id": "fig_7_p008_006",
+    "page": 8,
+    "caption": "Length of SVs Fig. 7 | The growth of the pangenome. a , The dependence on sample size for the union (‘pan’) and intersection (‘core’) sequence length, separately for the full genome, the mobile-ome and the gene-ome (for saturation by sSV length and normalized views, see Extended Data Fig. 7). b , Pangenome versus reference genome coordinates. The pericentromeric region (light blue) shows a higher ‘dilution’ of the spatial coordinates due to the increased number of SVs in this region, but please note that the slope is never 1, reflecting their ubiquity. The centromeric region is dark blue (for other chromosomes, see Extended Data Fig. 7). c , The contribution of sSVs of different lengths to differences between pairs of genomes. Numbers are counts of sSVs. Shorter sSVs are more numerous, but longer and rarer sSVs contribute more to total length variation.",
+    "figure_label": "Figure 7",
+    "figure_number": "7",
+    "bbox_pdf": [
+      296.3,
+      37.24,
+      568.14,
+      612.38
+    ],
+    "caption_bbox_pdf": [
+      306.14,
+      593.8,
+      547.88,
+      744.52
+    ],
+    "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p008_fig7_006.png",
+    "detection_method": "visual_region_drawings_images",
+    "crop_quality": "image_block_crop",
+    "crop_includes_caption": false,
+    "page_width_pdf": 595.28,
+    "page_height_pdf": 790.87,
+    "notes": []
+  },
+  {
+    "figure_id": "fig_8_p009_007",
+    "page": 9,
+    "caption": "Fig. 8 | Read mapping and reference bias. a , To investigate SNP-calling errors, SNPs were identified from pairwise WGA as well as by designating one genome as a reference and calling SNPs using short reads from the other (next generation sequencing (NGS); see Supplementary Note 7 for details). Numbers are averages across all accession pairs (±s.d.). From the point of view of WGA, each site can either be aligned or not. Conversely, from the point of view of NGS, each site in the reference genome can be covered by sample reads or not. Arrows pointing right refer to WGA SNPs, which we assume to be correct; arrows pointing left refer to NGS SNPs. WGA SNPs are TPs if also called by NGS, FNs if missed by NGS and uncalled if in regions not covered by NGS reads. Conversely, NGS SNPs are TPs if also found in the WGA and FPs if not. FPs come in two flavors: those that correspond to bona fide non-SNPs in the WGA and those that correspond to regions that were not aligned. Heterozygous calls in completely inbred lines are obviously FPs and are treated separately. b , SNP-calling error rates depend on the relationship between the reference and the sampled genome. Each",
+    "figure_label": "Figure 8",
+    "figure_number": "8",
+    "bbox_pdf": [
+      32.99,
+      97.71,
+      570.82,
+      750.39
+    ],
+    "caption_bbox_pdf": [
+      39.68,
+      595.99,
+      292.83,
+      744.79
+    ],
+    "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p009_fig8_007.png",
+    "detection_method": "next_page_visual_region",
+    "crop_quality": "image_block_crop",
+    "crop_includes_caption": false,
+    "page_width_pdf": 595.28,
+    "page_height_pdf": 790.87,
+    "notes": [
+      "Figure found on next page (caption precedes figure)."
+    ]
+  },
+  {
+    "figure_id": "fig_1_p020_008",
+    "page": 20,
+    "caption": "Extended Data Fig. 1 | The pattern of polymorphism on chromosomes 2–5. a – d , Whole-genome alignments. e – h , Density of PGGB graph bubbles. i – l , Nucleotide diversity. For chromosome 1 and further explanation, see Fig. 2a–c .",
+    "figure_label": "Figure 1",
+    "figure_number": "1",
+    "bbox_pdf": [
+      40.39,
+      40.96,
+      560.56,
+      703.94
+    ],
+    "caption_bbox_pdf": [
+      39.67,
+      699.89,
+      548.58,
+      718.64
+    ],
+    "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p020_fig1_008.png",
+    "detection_method": "visual_region_drawings_images",
+    "crop_quality": "image_block_crop",
+    "crop_includes_caption": false,
+    "page_width_pdf": 595.28,
+    "page_height_pdf": 790.87,
+    "notes": []
+  },
+  {
+    "figure_id": "fig_2_p021_009",
+    "page": 21,
+    "caption": "Extended Data Fig. 2 | SV type and gene-relative location. a , Cartoons illustrating our classification of length variants into sSVs and cSVs in the whole- genome alignment and graph representations. b , The distribution of sSVs and cSVs across chromosomes—cSVs are more common in pericentromeric regions. c , Fraction of sSVs and cSVs by length. The prevalence of short sSVs is at least",
+    "figure_label": "Figure 2",
+    "figure_number": "2",
+    "bbox_pdf": [
+      34.28,
+      40.96,
+      566.67,
+      467.18
+    ],
+    "caption_bbox_pdf": [
+      39.68,
+      463.13,
+      290.55,
+      511.9
+    ],
+    "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p021_fig2_009.png",
+    "detection_method": "visual_region_drawings_images",
+    "crop_quality": "image_block_crop",
+    "crop_includes_caption": false,
+    "page_width_pdf": 595.28,
+    "page_height_pdf": 790.87,
+    "notes": []
+  },
+  {
+    "figure_id": "fig_3_p022_010",
+    "page": 22,
+    "caption": "Extended Data Fig. 3 | Size distribution of graph nodes by TE-content. Large nodes are found not only for presence alleles that correspond to complete annotated TE but also for other categories, demonstrating that these are also part of the mobile-ome.",
+    "figure_label": "Figure 3",
+    "figure_number": "3",
+    "bbox_pdf": [
+      100.5,
+      48.99,
+      500.44,
+      281.44
+    ],
+    "caption_bbox_pdf": [
+      39.69,
+      277.4,
+      560.86,
+      296.15
+    ],
+    "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p022_fig3_010.png",
+    "detection_method": "visual_region_drawings_images",
+    "crop_quality": "image_block_crop",
+    "crop_includes_caption": false,
+    "page_width_pdf": 595.28,
+    "page_height_pdf": 790.87,
+    "notes": []
+  },
+  {
+    "figure_id": "fig_4_p023_011",
+    "page": 23,
+    "caption": "Extended Data Fig. 4 | The graph of the nestedness of existing A. thaliana TE annotations. Each node is a cluster of similar sequences (with length and identity thresholds of 0.85), where the size of the node indicates its relative abundance. The graph can be decomposed into one dominant connected component and several smaller ones, as shown on the right.",
+    "figure_label": "Figure 4",
+    "figure_number": "4",
+    "bbox_pdf": [
+      32.39,
+      40.96,
+      568.55,
+      242.12
+    ],
+    "caption_bbox_pdf": [
+      39.69,
+      237.97,
+      554.14,
+      266.83
+    ],
+    "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p023_fig4_011.png",
+    "detection_method": "visual_region_drawings_images",
+    "crop_quality": "image_block_crop",
+    "crop_includes_caption": false,
+    "page_width_pdf": 595.28,
+    "page_height_pdf": 790.87,
+    "notes": []
+  },
+  {
+    "figure_id": "fig_5_p024_012",
+    "page": 24,
+    "caption": "Extended Data Fig. 5 | Details of gene-ome analysis. a , TE genes were defined as the union of two sets of genes: (1) those with >50% annotated TE sequence in at least one accession, and (2) those with ORFs similar to proteins known to be involved in TE function. b , Comparison of gene presence variation in this study to a recent analysis in 69 A. thaliana accessions 23. For both PC genes and TE genes, our presence–absence variability is higher for gene models compared to gene loci, probably because our gene annotation pipeline misses lowly expressed genes in the four tissues we used. The PC gene model variability in the study from the Mercier lab 23 is substantially higher than in our data. This likely reflects the fact that while we used pan-genome coordinates to match genes between accessions, they used an orthogroup search approach. Consider this case: a gene is both present and has a gene model in every accession, but in three accessions, a shorter gene model was annotated. The orthogroup approach would identify",
+    "figure_label": "Figure 5",
+    "figure_number": "5",
+    "bbox_pdf": [
+      32.36,
+      40.96,
+      568.59,
+      548.8
+    ],
+    "caption_bbox_pdf": [
+      39.68,
+      544.76,
+      294.75,
+      673.54
+    ],
+    "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p024_fig5_012.png",
+    "detection_method": "visual_region_drawings_images",
+    "crop_quality": "image_block_crop",
+    "crop_includes_caption": false,
+    "page_width_pdf": 595.28,
+    "page_height_pdf": 790.87,
+    "notes": []
+  },
+  {
+    "figure_id": "fig_6_p025_013",
+    "page": 25,
+    "caption": "Extended Data Fig. 6 | Gene silencing and expression by gene presence frequency and ancestral status. a , Median expression vs. frequency for all accessions. b , H3K9me2 and H3K27me3 54 genes vs. their frequency. Values plotted are medians of quantile- and input-normalized ChIP-seq signals. c , 24-nt sRNAs coverage of genes of different frequencies. Left: distribution in flowers of accession 6024. Right: median coverage. d , Locus-wide CHG, CG and CHH methylation levels in leaves 53 for genes of different frequency. Left: distribution in accession 6024. Right: median levels. e , Expression (median TPM) vs. ancestral status for all accessions. f , H3K9me2 and H3K27me3 54 vs. ancestral status. Values plotted are medians of quantile- and input-normalized ChIP-seq",
+    "figure_label": "Figure 6",
+    "figure_number": "6",
+    "bbox_pdf": [
+      32.39,
+      40.96,
+      568.55,
+      589.0
+    ],
+    "caption_bbox_pdf": [
+      39.68,
+      584.96,
+      293.14,
+      683.74
+    ],
+    "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p025_fig6_013.png",
+    "detection_method": "visual_region_drawings_images",
+    "crop_quality": "image_block_crop",
+    "crop_includes_caption": false,
+    "page_width_pdf": 595.28,
+    "page_height_pdf": 790.87,
+    "notes": []
+  },
+  {
+    "figure_id": "fig_7_p026_014",
+    "page": 26,
+    "caption": "Extended Data Fig. 7 | Extended pan-genome analysis. a , Saturation curves for sSVs for different lengths. Each curve is drawn through points that are the averaged values from 20 repetitions. The curves were normalized to start and end at the same points. Larger sSVs saturate more quickly. b , Normalized saturation curves for different genome components: the dependence on sample size for the union (‘pan’) and intersection (‘core’) sequence length, separately for the full genome, the mobile-ome and the gene-ome. Within the ‘pan’ curves, the mobile-",
+    "figure_label": "Figure 7",
+    "figure_number": "7",
+    "bbox_pdf": [
+      32.49,
+      40.96,
+      568.46,
+      617.59
+    ],
+    "caption_bbox_pdf": [
+      39.68,
+      613.54,
+      295.62,
+      682.31
+    ],
+    "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p026_fig7_014.png",
+    "detection_method": "visual_region_drawings_images",
+    "crop_quality": "image_block_crop",
+    "crop_includes_caption": false,
+    "page_width_pdf": 595.28,
+    "page_height_pdf": 790.87,
+    "notes": []
+  }
+]

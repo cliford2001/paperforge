@@ -1,0 +1,80 @@
+[
+  {
+    "figure_id": "fig_1_p003_000",
+    "page": 3,
+    "caption": "FIGURE 1 Illustration of the crosstalk between nitrate signaling and phytohormone signaling. Pointed and blunt arrowheads indicate activating and inhibiting interactions, respectively. The thick arrow indicates the root-to-shoot translocation.",
+    "figure_label": "Figure 1",
+    "figure_number": "1",
+    "bbox_pdf": [
+      105.56,
+      80.84,
+      490.0,
+      392.15
+    ],
+    "caption_bbox_pdf": [
+      60.83,
+      392.83,
+      524.11,
+      416.18
+    ],
+    "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_nitrate/paper_nitrate_p003_fig1_000.png",
+    "detection_method": "visual_region_drawings_images",
+    "crop_quality": "image_block_crop",
+    "crop_includes_caption": false,
+    "page_width_pdf": 595.39,
+    "page_height_pdf": 841.66,
+    "notes": []
+  },
+  {
+    "figure_id": "fig_2_p005_001",
+    "page": 5,
+    "caption": "FIGURE 2 Illustration of the crosstalk between nitrate signaling and calcium as well as ROS signaling. Pointed and blunt arrowheads indicate activating and inhibiting interactions, respectively. The cross mark indicates inhibition of the channel activity of CNGC15.",
+    "figure_label": "Figure 2",
+    "figure_number": "2",
+    "bbox_pdf": [
+      105.56,
+      80.84,
+      490.0,
+      358.59
+    ],
+    "caption_bbox_pdf": [
+      60.83,
+      359.21,
+      518.41,
+      382.62
+    ],
+    "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_nitrate/paper_nitrate_p005_fig2_001.png",
+    "detection_method": "visual_region_drawings_images",
+    "crop_quality": "image_block_crop",
+    "crop_includes_caption": false,
+    "page_width_pdf": 595.39,
+    "page_height_pdf": 841.89,
+    "notes": []
+  },
+  {
+    "figure_id": "fig_3_p006_002",
+    "page": 6,
+    "caption": "FIGURE 3 Illustration of the crosstalk between nitrate signaling and peptide as well as sucrose signaling. Pointed and blunt arrowheads indicate activating and inhibiting interactions, respectively. The thick arrow indicates the shoo-to-root or root-to-shoot translocation.",
+    "figure_label": "Figure 3",
+    "figure_number": "3",
+    "bbox_pdf": [
+      91.33,
+      510.29,
+      504.18,
+      735.71
+    ],
+    "caption_bbox_pdf": [
+      60.83,
+      736.33,
+      528.26,
+      759.74
+    ],
+    "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_nitrate/paper_nitrate_p006_fig3_002.png",
+    "detection_method": "visual_region_drawings_images",
+    "crop_quality": "image_block_crop",
+    "crop_includes_caption": false,
+    "page_width_pdf": 595.39,
+    "page_height_pdf": 841.66,
+    "notes": []
+  }
+]

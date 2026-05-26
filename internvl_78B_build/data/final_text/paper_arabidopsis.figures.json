@@ -1,0 +1,2603 @@
+{
+  "pdf_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/raw_pdfs/paper_arabidopsis.pdf",
+  "paper_stem": "paper_arabidopsis",
+  "paper_title": "**nature genetics**",
+  "text_length_chars": 123003,
+  "figure_count": 15,
+  "processing_time_s": 961.38,
+  "timestamp": "2026-05-25T19:24:16",
+  "metadata": {
+    "pipeline": "figures_nitrogen_v3",
+    "mode": "internvl_only"
+  },
+  "figures": [
+    {
+      "figure_id": "fig_1_p002_000",
+      "page": 2,
+      "caption": "130 140 150 160 170 Genome size (Mb) Fig. 1 | Genome assemblies and size variation across 27 A. thaliana accessions. a , Origin of the sequenced accessions with colors indicating ‘Admixture’ group 34 . The reference accession Col-0 (6909) lacks reliable collection data (but hails from Central Europe based on genotype as well as historical records). Please note that 22005 and 22006 appear as a single point as they are geographically close and belong to the same admixture group. Maps were generated using public domain data from the Natural Earth project via the R package rnaturalearth. b , Histogram of genome sizes estimated from k -mers in PCR-free short reads with total assembly sizes superimposed (values to the left of ‘zero’). Most of the",
+      "context_sentences": [
+        "Fig. 1 | Genome assemblies and size variation across 27** _**A.",
+        "Fig. 1 and Supplementary Table 2), and a very large reciprocal translocation in accession 22001 from the Yangtze River region (Supplementary Fig.",
+        "Fig. 1.",
+        "Fig. 1), the readily alignable chromosome arms (Fig.",
+        "Fig. 1 | The pattern of polymorphism on chromosomes 2–5."
+      ],
+      "image_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p002_fig1_000.png",
+      "candidate": {
+        "figure_id": "fig_1_p002_000",
+        "page": 2,
+        "caption": "130 140 150 160 170 Genome size (Mb) Fig. 1 | Genome assemblies and size variation across 27 A. thaliana accessions. a , Origin of the sequenced accessions with colors indicating ‘Admixture’ group 34 . The reference accession Col-0 (6909) lacks reliable collection data (but hails from Central Europe based on genotype as well as historical records). Please note that 22005 and 22006 appear as a single point as they are geographically close and belong to the same admixture group. Maps were generated using public domain data from the Natural Earth project via the R package rnaturalearth. b , Histogram of genome sizes estimated from k -mers in PCR-free short reads with total assembly sizes superimposed (values to the left of ‘zero’). Most of the",
+        "figure_label": "Figure 1",
+        "figure_number": "1",
+        "bbox_pdf": [
+          11.53,
+          29.33,
+          566.53,
+          293.7
+        ],
+        "caption_bbox_pdf": [
+          39.68,
+          278.19,
+          293.86,
+          390.35
+        ],
+        "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p002_fig1_000.png",
+        "detection_method": "visual_region_drawings_images",
+        "crop_quality": "image_block_crop",
+        "crop_includes_caption": false,
+        "page_width_pdf": 595.28,
+        "page_height_pdf": 790.87,
+        "notes": []
+      },
+      "interpretation": {
+        "target_figure_only": true,
+        "figure_type": "mixed_multi_panel",
+        "visible_text": {
+          "title": null,
+          "x_axis_label": [
+            "Cumulative length (Mb)",
+            "Genome size (Mb)"
+          ],
+          "y_axis_label": [
+            "Accession",
+            "Repeat length (Mb)"
+          ],
+          "units": [
+            "Mb"
+          ],
+          "legend_items": [
+            "Asia",
+            "Germany",
+            "North_Sweden",
+            "Spain",
+            "Italy",
+            "Balkan_Caucasus",
+            "Relict",
+            "Western_Europe",
+            "Africa",
+            "China",
+            "Mady",
+            "Nonrepetitive genome",
+            "Other repeat",
+            "Nuclear organellar insertion",
+            "Transposable element",
+            "Telomere",
+            "Estimated nonscaffolded genome",
+            "Centromere",
+            "45S rDNA",
+            "5S rDNA"
+          ],
+          "printed_terms": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "6244",
+            "22005",
+            "10024",
+            "22006",
+            "22002",
+            "22001",
+            "9638",
+            "9075",
+            "9543",
+            "22003",
+            "6124",
+            "22007",
+            "22004",
+            "8236",
+            "6069",
+            "10015",
+            "9981",
+            "9537",
+            "6024",
+            "9764",
+            "6966",
+            "6909",
+            "9888",
+            "9728",
+            "1741",
+            "154.9",
+            "151.0",
+            "149.3",
+            "148.7",
+            "147.9",
+            "147.8",
+            "147.3",
+            "145.2",
+            "145.6",
+            "143.9",
+            "142.6",
+            "142.5",
+            "142.4",
+            "141.6",
+            "140.9",
+            "140.3",
+            "138.6",
+            "136.8",
+            "136.1",
+            "136.8",
+            "136.3",
+            "134.9",
+            "130",
+            "140",
+            "150",
+            "160",
+            "170",
+            "6,981",
+            "R² = 0.53",
+            "R² = 0.52",
+            "R² = 0.088"
+          ]
+        },
+        "visual_structure": {
+          "num_panels": 4,
+          "plot_elements": [
+            "map",
+            "bar_chart",
+            "bar_chart",
+            "scatter_plot"
+          ],
+          "groups_or_conditions": [
+            "Accession",
+            "Admixture group",
+            "Genome size",
+            "Repeat length"
+          ],
+          "statistical_markers_visible": [
+            "R² = 0.53",
+            "R² = 0.52",
+            "R² = 0.088"
+          ]
+        },
+        "factual_observations": [
+          {
+            "observation": "Panel a shows a map with accession locations and admixture groups.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel b displays a bar chart of cumulative genome length for different accessions.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel c shows a bar chart of cumulative genome length with different genome components.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel d is a scatter plot showing the relationship between genome size and repeat length.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          }
+        ],
+        "nitrogen_relevance": {
+          "is_relevant": false,
+          "visible_terms": [],
+          "evidence_source": [],
+          "reason": "No terms related to nitrogen are visible in the figure."
+        },
+        "not_determinable": [],
+        "hallucination_risk": "low",
+        "uncertainty_level": "low",
+        "uncertainty_reason": null,
+        "raw_response": "{\n  \"target_figure_only\": true,\n  \"figure_type\": \"mixed_multi_panel\",\n  \"visible_text\": {\n    \"title\": null,\n    \"x_axis_label\": [\"Cumulative length (Mb)\", \"Genome size (Mb)\"],\n    \"y_axis_label\": [\"Accession\", \"Repeat length (Mb)\"],\n    \"units\": [\"Mb\"],\n    \"legend_items\": [\"Asia\", \"Germany\", \"North_Sweden\", \"Spain\", \"Italy\", \"Balkan_Caucasus\", \"Relict\", \"Western_Europe\", \"Africa\", \"China\", \"Mady\", \"Nonrepetitive genome\", \"Other repeat\", \"Nuclear organellar insertion\", \"Transposable element\", \"Telomere\", \"Estimated nonscaffolded genome\", \"Centromere\", \"45S rDNA\", \"5S rDNA\"],\n    \"printed_terms\": [\"a\", \"b\", \"c\", \"d\", \"6244\", \"22005\", \"10024\", \"22006\", \"22002\", \"22001\", \"9638\", \"9075\", \"9543\", \"22003\", \"6124\", \"22007\", \"22004\", \"8236\", \"6069\", \"10015\", \"9981\", \"9537\", \"6024\", \"9764\", \"6966\", \"6909\", \"9888\", \"9728\", \"1741\", \"154.9\", \"151.0\", \"149.3\", \"148.7\", \"147.9\", \"147.8\", \"147.3\", \"145.2\", \"145.6\", \"143.9\", \"142.6\", \"142.5\", \"142.4\", \"141.6\", \"140.9\", \"140.3\", \"138.6\", \"136.8\", \"136.1\", \"136.8\", \"136.3\", \"134.9\", \"130\", \"140\", \"150\", \"160\", \"170\", \"6,981\", \"R² = 0.53\", \"R² = 0.52\", \"R² = 0.088\"]\n  },\n  \"visual_structure\": {\n    \"num_panels\": 4,\n    \"plot_elements\": [\"map\", \"bar_chart\", \"bar_chart\", \"scatter_plot\"],\n    \"groups_or_conditions\": [\"Accession\", \"Admixture group\", \"Genome size\", \"Repeat length\"],\n    \"statistical_markers_visible\": [\"R² = 0.53\", \"R² = 0.52\", \"R² = 0.088\"]\n  },\n  \"factual_observations\": [\n    {\n      \"observation\": \"Panel a shows a map with accession locations and admixture groups.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel b displays a bar chart of cumulative genome length for different accessions.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel c shows a bar chart of cumulative genome length with different genome components.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel d is a scatter plot showing the relationship between genome size and repeat length.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    }\n  ],\n  \"nitrogen_relevance\": {\n    \"is_relevant\": false,\n    \"visible_terms\": [],\n    \"evidence_source\": [],\n    \"reason\": \"No terms related to nitrogen are visible in the figure.\"\n  },\n  \"not_determinable\": [],\n  \"hallucination_risk\": \"low\",\n  \"uncertainty_level\": \"low\",\n  \"uncertainty_reason\": null\n}",
+        "model": "internvl3-78b"
+      },
+      "validation": {
+        "accepted_for_training": true,
+        "validation_level": "low_risk",
+        "reasons": [
+          "Passed heuristic validation"
+        ],
+        "validator": "heuristic_v2"
+      }
+    },
+    {
+      "figure_id": "fig_2_p003_001",
+      "page": 3,
+      "caption": "Fig. 2 | Distribution of variation on chromosome 1. a , WGA illustrates that the genomes are structurally conserved away from centromeric regions. Chromosomes are aligned from both ends to emphasize the contiguity of the arms, with the unassembled centromeric regions indicated in yellow and inversions in pink. Oscillating gray shades highlight homologous regions (the periodicity of the gradients reflects repeated use of the color scheme and has no biological meaning). b , The density of pangenome graph bubbles, reflecting higher diversity in pericentromeric regions and at ~20 Mb, where an ancestral",
+      "context_sentences": [
+        "Fig. 2 | Distribution of variation on chromosome 1.",
+        "Fig. 2).",
+        "Fig. 2) are - highly polymorphic, with two accessions differing at ~191,000 SVs cov ering ~12.",
+        "Fig. 2 | SV type and gene-relative location.",
+        "(Fig. 2)"
+      ],
+      "image_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p003_fig2_001.png",
+      "candidate": {
+        "figure_id": "fig_2_p003_001",
+        "page": 3,
+        "caption": "Fig. 2 | Distribution of variation on chromosome 1. a , WGA illustrates that the genomes are structurally conserved away from centromeric regions. Chromosomes are aligned from both ends to emphasize the contiguity of the arms, with the unassembled centromeric regions indicated in yellow and inversions in pink. Oscillating gray shades highlight homologous regions (the periodicity of the gradients reflects repeated use of the color scheme and has no biological meaning). b , The density of pangenome graph bubbles, reflecting higher diversity in pericentromeric regions and at ~20 Mb, where an ancestral",
+        "figure_label": "Figure 2",
+        "figure_number": "2",
+        "bbox_pdf": [
+          113.29,
+          42.91,
+          490.37,
+          543.85
+        ],
+        "caption_bbox_pdf": [
+          39.69,
+          550.05,
+          288.61,
+          628.82
+        ],
+        "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p003_fig2_001.png",
+        "detection_method": "visual_region_drawings_images",
+        "crop_quality": "image_block_crop",
+        "crop_includes_caption": false,
+        "page_width_pdf": 595.28,
+        "page_height_pdf": 790.87,
+        "notes": []
+      },
+      "interpretation": {
+        "target_figure_only": true,
+        "figure_type": "mixed_multi_panel",
+        "visible_text": {
+          "title": null,
+          "x_axis_label": [
+            "Own genome position",
+            "Positions of chromosomal arms [-> <-]",
+            "Synteny level"
+          ],
+          "y_axis_label": [],
+          "units": [
+            "x 10^0",
+            "x 10^7"
+          ],
+          "legend_items": [],
+          "panel_labels": [
+            "a",
+            "b",
+            "c"
+          ],
+          "printed_terms": [
+            "22004",
+            "10024",
+            "22003",
+            "9543",
+            "9638",
+            "22006",
+            "22005",
+            "22007",
+            "9905",
+            "9764",
+            "10015",
+            "6069",
+            "6244",
+            "22001m",
+            "9888",
+            "9981",
+            "9728",
+            "22002",
+            "9075",
+            "6024",
+            "6966",
+            "6124",
+            "9537",
+            "10002",
+            "1741",
+            "8236",
+            "6909",
+            "0",
+            "x 10^0",
+            "1 x 10^7",
+            "2 x 10^7",
+            "3 x 10^7",
+            "Own genome position",
+            "Positions of chromosomal arms [-> <-]",
+            "Synteny level",
+            "≤15",
+            "20",
+            "25",
+            "0.020",
+            "0.015",
+            "0.010",
+            "0.005",
+            "π"
+          ]
+        },
+        "visual_structure": {
+          "num_panels": 3,
+          "plot_elements": [
+            "line",
+            "heatmap",
+            "scatter"
+          ],
+          "groups_or_conditions": [],
+          "statistical_markers_visible": []
+        },
+        "factual_observations": [
+          {
+            "observation": "Panel a shows structural conservation with centromeric regions in yellow and inversions in pink.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel b displays a heatmap with synteny levels indicated by color intensity.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel c is a scatter plot with a line indicating a trend.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          }
+        ],
+        "nitrogen_relevance": {
+          "is_relevant": false,
+          "visible_terms": [],
+          "evidence_source": [],
+          "reason": "No nitrogen-related terms are visible."
+        },
+        "not_determinable": [],
+        "hallucination_risk": "low",
+        "uncertainty_level": "low",
+        "uncertainty_reason": null,
+        "raw_response": "{\n  \"target_figure_only\": true,\n  \"figure_type\": \"mixed_multi_panel\",\n  \"visible_text\": {\n    \"title\": null,\n    \"x_axis_label\": [\"Own genome position\", \"Positions of chromosomal arms [-> <-]\", \"Synteny level\"],\n    \"y_axis_label\": [],\n    \"units\": [\"x 10^0\", \"x 10^7\"],\n    \"legend_items\": [],\n    \"panel_labels\": [\"a\", \"b\", \"c\"],\n    \"printed_terms\": [\n      \"22004\", \"10024\", \"22003\", \"9543\", \"9638\", \"22006\", \"22005\", \"22007\", \"9905\", \"9764\", \"10015\", \"6069\", \"6244\", \"22001m\", \"9888\", \"9981\", \"9728\", \"22002\", \"9075\", \"6024\", \"6966\", \"6124\", \"9537\", \"10002\", \"1741\", \"8236\", \"6909\", \"0\", \"x 10^0\", \"1 x 10^7\", \"2 x 10^7\", \"3 x 10^7\", \"Own genome position\", \"Positions of chromosomal arms [-> <-]\", \"Synteny level\", \"≤15\", \"20\", \"25\", \"0.020\", \"0.015\", \"0.010\", \"0.005\", \"π\"\n    ]\n  },\n  \"visual_structure\": {\n    \"num_panels\": 3,\n    \"plot_elements\": [\"line\", \"heatmap\", \"scatter\"],\n    \"groups_or_conditions\": [],\n    \"statistical_markers_visible\": []\n  },\n  \"factual_observations\": [\n    {\n      \"observation\": \"Panel a shows structural conservation with centromeric regions in yellow and inversions in pink.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel b displays a heatmap with synteny levels indicated by color intensity.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel c is a scatter plot with a line indicating a trend.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    }\n  ],\n  \"nitrogen_relevance\": {\n    \"is_relevant\": false,\n    \"visible_terms\": [],\n    \"evidence_source\": [],\n    \"reason\": \"No nitrogen-related terms are visible.\"\n  },\n  \"not_determinable\": [],\n  \"hallucination_risk\": \"low\",\n  \"uncertainty_level\": \"low\",\n  \"uncertainty_reason\": null\n}",
+        "model": "internvl3-78b"
+      },
+      "validation": {
+        "accepted_for_training": true,
+        "validation_level": "low_risk",
+        "reasons": [
+          "Passed heuristic validation"
+        ],
+        "validator": "heuristic_v2"
+      }
+    },
+    {
+      "figure_id": "fig_4c_p004_002",
+      "page": 4,
+      "caption": "in Fig. 4c,d , likely insertions also correspond more often to complete TEs, consistent with recent TE activity, whereas likely deletions more often correspond to incomplete TEs, suggesting that they are decay- ing elements. As expected, sSVs corresponding to complete TEs are enriched for particular lengths (specifically around 5 kb), reflecting activity of complete TEs (Fig. 4e ). Similar patterns of enrichment were also found for sSVs in all other categories except for those corresponding to TE fragments. This supports recent reports that active TEs are far from perfectly annotated 48 , 49 .",
+      "context_sentences": [
+        "Fig. 4c,d, likely insertions also correspond more often to complete TEs, consistent with recent TE activity, whereas likely deletions more often correspond to incomplete TEs, suggesting that they are decaying elements."
+      ],
+      "image_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p004_fig4c_002.png",
+      "candidate": {
+        "figure_id": "fig_4c_p004_002",
+        "page": 4,
+        "caption": "in Fig. 4c,d , likely insertions also correspond more often to complete TEs, consistent with recent TE activity, whereas likely deletions more often correspond to incomplete TEs, suggesting that they are decay- ing elements. As expected, sSVs corresponding to complete TEs are enriched for particular lengths (specifically around 5 kb), reflecting activity of complete TEs (Fig. 4e ). Similar patterns of enrichment were also found for sSVs in all other categories except for those corresponding to TE fragments. This supports recent reports that active TEs are far from perfectly annotated 48 , 49 .",
+        "figure_label": "Figure 4c",
+        "figure_number": "4c",
+        "bbox_pdf": [
+          98.98,
+          54.18,
+          504.73,
+          229.0
+        ],
+        "caption_bbox_pdf": [
+          306.14,
+          284.1,
+          562.83,
+          391.03
+        ],
+        "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p004_fig4c_002.png",
+        "detection_method": "visual_region_drawings_images",
+        "crop_quality": "image_block_crop",
+        "crop_includes_caption": false,
+        "page_width_pdf": 595.28,
+        "page_height_pdf": 790.87,
+        "notes": []
+      },
+      "interpretation": {
+        "target_figure_only": true,
+        "figure_type": "mixed_multi_panel",
+        "visible_text": {
+          "title": [
+            "a",
+            "b"
+          ],
+          "x_axis_label": [
+            "Frequency of presence"
+          ],
+          "y_axis_label": [
+            "Absolute number",
+            "Proportion"
+          ],
+          "units": [],
+          "legend_items": [],
+          "panel_labels": [
+            "a",
+            "b"
+          ],
+          "printed_terms": [
+            "a",
+            "b",
+            "Absolute number",
+            "Proportion",
+            "Frequency of presence",
+            "[1,15]",
+            "(15,50]",
+            "(50,100]",
+            "(100,200]",
+            "(200,500]",
+            "(500,1k]",
+            "(1k,2k]",
+            "(2k,5k]",
+            "(5k,Inf]"
+          ]
+        },
+        "visual_structure": {
+          "num_panels": 2,
+          "plot_elements": [
+            "bar_chart",
+            "stacked_bar_chart"
+          ],
+          "groups_or_conditions": [
+            "[1,15]",
+            "(15,50]",
+            "(50,100]",
+            "(100,200]",
+            "(200,500]",
+            "(500,1k]",
+            "(1k,2k]",
+            "(2k,5k]",
+            "(5k,Inf]"
+          ],
+          "statistical_markers_visible": []
+        },
+        "factual_observations": [
+          {
+            "observation": "Panel a shows a bar chart with absolute numbers for different frequency of presence ranges.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel b shows a stacked bar chart with proportions for different frequency of presence ranges.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          }
+        ],
+        "nitrogen_relevance": {
+          "is_relevant": false,
+          "visible_terms": [],
+          "evidence_source": [],
+          "reason": "No nitrogen-related terms are visible in the figure."
+        },
+        "not_determinable": [],
+        "hallucination_risk": "low",
+        "uncertainty_level": "low",
+        "uncertainty_reason": null,
+        "raw_response": "{\n  \"target_figure_only\": true,\n  \"figure_type\": \"mixed_multi_panel\",\n  \"visible_text\": {\n    \"title\": [\"a\", \"b\"],\n    \"x_axis_label\": [\"Frequency of presence\"],\n    \"y_axis_label\": [\"Absolute number\", \"Proportion\"],\n    \"units\": [],\n    \"legend_items\": [],\n    \"panel_labels\": [\"a\", \"b\"],\n    \"printed_terms\": [\"a\", \"b\", \"Absolute number\", \"Proportion\", \"Frequency of presence\", \"[1,15]\", \"(15,50]\", \"(50,100]\", \"(100,200]\", \"(200,500]\", \"(500,1k]\", \"(1k,2k]\", \"(2k,5k]\", \"(5k,Inf]\"]\n  },\n  \"visual_structure\": {\n    \"num_panels\": 2,\n    \"plot_elements\": [\"bar_chart\", \"stacked_bar_chart\"],\n    \"groups_or_conditions\": [\"[1,15]\", \"(15,50]\", \"(50,100]\", \"(100,200]\", \"(200,500]\", \"(500,1k]\", \"(1k,2k]\", \"(2k,5k]\", \"(5k,Inf]\"],\n    \"statistical_markers_visible\": []\n  },\n  \"factual_observations\": [\n    {\n      \"observation\": \"Panel a shows a bar chart with absolute numbers for different frequency of presence ranges.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel b shows a stacked bar chart with proportions for different frequency of presence ranges.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    }\n  ],\n  \"nitrogen_relevance\": {\n    \"is_relevant\": false,\n    \"visible_terms\": [],\n    \"evidence_source\": [],\n    \"reason\": \"No nitrogen-related terms are visible in the figure.\"\n  },\n  \"not_determinable\": [],\n  \"hallucination_risk\": \"low\",\n  \"uncertainty_level\": \"low\",\n  \"uncertainty_reason\": null\n}",
+        "model": "internvl3-78b"
+      },
+      "validation": {
+        "accepted_for_training": true,
+        "validation_level": "low_risk",
+        "reasons": [
+          "Passed heuristic validation"
+        ],
+        "validator": "heuristic_v2"
+      }
+    },
+    {
+      "figure_id": "fig_4_p005_003",
+      "page": 5,
+      "caption": "Fig. 4 | The role of TEs in bi-allelic indels. a , Categories of overlap between the presence allele of sSVs and annotated TE sequences. b , Number of sSVs in each TE-content category described in a . Colors correspond to a —gray, no TE content. c , d , Histograms of presence frequency showing annotated TE content",
+      "context_sentences": [
+        "Fig. 4).",
+        "Fig. 4 | The role of TEs in bi-allelic indels.",
+        "Fig. 4 | The graph of the nestedness of existing** _**A."
+      ],
+      "image_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p005_fig4_003.png",
+      "candidate": {
+        "figure_id": "fig_4_p005_003",
+        "page": 5,
+        "caption": "Fig. 4 | The role of TEs in bi-allelic indels. a , Categories of overlap between the presence allele of sSVs and annotated TE sequences. b , Number of sSVs in each TE-content category described in a . Colors correspond to a —gray, no TE content. c , d , Histograms of presence frequency showing annotated TE content",
+        "figure_label": "Figure 4",
+        "figure_number": "4",
+        "bbox_pdf": [
+          32.5,
+          42.9,
+          562.61,
+          239.93
+        ],
+        "caption_bbox_pdf": [
+          39.68,
+          237.22,
+          287.76,
+          275.98
+        ],
+        "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p005_fig4_003.png",
+        "detection_method": "visual_region_drawings_images",
+        "crop_quality": "image_block_crop",
+        "crop_includes_caption": false,
+        "page_width_pdf": 595.28,
+        "page_height_pdf": 790.87,
+        "notes": []
+      },
+      "interpretation": {
+        "target_figure_only": true,
+        "figure_type": "mixed_multi_panel",
+        "visible_text": {
+          "title": null,
+          "x_axis_label": [
+            "Frequency of presence",
+            "TE content"
+          ],
+          "y_axis_label": [
+            "sSVs",
+            "sSVs/TE-related sSVs",
+            "Length, log10"
+          ],
+          "units": [],
+          "legend_items": [
+            "Is complete",
+            "Is fragment",
+            "Contains fragment",
+            "Contains complete",
+            "None"
+          ],
+          "panel_labels": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "printed_terms": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "TE sequence",
+            "Is complete",
+            "Is fragment",
+            "Contains fragment",
+            "Contains complete",
+            "7,061",
+            "1,293",
+            "4,254",
+            "2,149",
+            "2,633",
+            "Singleton insertions",
+            "Singleton deletions",
+            "None",
+            "Is complete",
+            "Is fragment",
+            "Contains complete",
+            "Contains fragment",
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "100",
+            "1,000",
+            "10,000",
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "100",
+            "2,000",
+            "4,000",
+            "6,000",
+            "8,000",
+            "10,000"
+          ]
+        },
+        "visual_structure": {
+          "num_panels": 5,
+          "plot_elements": [
+            "pie_chart",
+            "bar_chart",
+            "bar_chart",
+            "bar_chart",
+            "violin_plot"
+          ],
+          "groups_or_conditions": [
+            "TE content categories",
+            "Frequency of presence",
+            "Length distribution"
+          ],
+          "statistical_markers_visible": []
+        },
+        "factual_observations": [
+          {
+            "observation": "Panel a shows categories of overlap between sSVs and TE sequences.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel b displays the number of sSVs in each TE-content category.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel c is a histogram of presence frequency with TE content.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel d shows singleton insertions and deletions with TE-related sSVs.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel e presents a violin plot of length distribution by TE content.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          }
+        ],
+        "nitrogen_relevance": {
+          "is_relevant": false,
+          "visible_terms": [],
+          "evidence_source": [],
+          "reason": "No terms related to nitrogen are visible."
+        },
+        "not_determinable": [],
+        "hallucination_risk": "low",
+        "uncertainty_level": "low",
+        "uncertainty_reason": null,
+        "raw_response": "{\n  \"target_figure_only\": true,\n  \"figure_type\": \"mixed_multi_panel\",\n  \"visible_text\": {\n    \"title\": null,\n    \"x_axis_label\": [\"Frequency of presence\", \"TE content\"],\n    \"y_axis_label\": [\"sSVs\", \"sSVs/TE-related sSVs\", \"Length, log10\"],\n    \"units\": [],\n    \"legend_items\": [\"Is complete\", \"Is fragment\", \"Contains fragment\", \"Contains complete\", \"None\"],\n    \"panel_labels\": [\"a\", \"b\", \"c\", \"d\", \"e\"],\n    \"printed_terms\": [\n      \"a\", \"b\", \"c\", \"d\", \"e\", \"TE sequence\", \"Is complete\", \"Is fragment\", \"Contains fragment\", \"Contains complete\",\n      \"7,061\", \"1,293\", \"4,254\", \"2,149\", \"2,633\", \"Singleton insertions\", \"Singleton deletions\", \"None\",\n      \"Is complete\", \"Is fragment\", \"Contains complete\", \"Contains fragment\", \"0\", \"10\", \"20\", \"30\", \"40\",\n      \"50\", \"60\", \"70\", \"80\", \"90\", \"100\", \"1,000\", \"10,000\", \"0\", \"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\",\n      \"20\", \"30\", \"40\", \"50\", \"60\", \"70\", \"80\", \"90\", \"100\", \"2,000\", \"4,000\", \"6,000\", \"8,000\", \"10,000\"\n    ]\n  },\n  \"visual_structure\": {\n    \"num_panels\": 5,\n    \"plot_elements\": [\"pie_chart\", \"bar_chart\", \"bar_chart\", \"bar_chart\", \"violin_plot\"],\n    \"groups_or_conditions\": [\"TE content categories\", \"Frequency of presence\", \"Length distribution\"],\n    \"statistical_markers_visible\": []\n  },\n  \"factual_observations\": [\n    {\n      \"observation\": \"Panel a shows categories of overlap between sSVs and TE sequences.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel b displays the number of sSVs in each TE-content category.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel c is a histogram of presence frequency with TE content.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel d shows singleton insertions and deletions with TE-related sSVs.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel e presents a violin plot of length distribution by TE content.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    }\n  ],\n  \"nitrogen_relevance\": {\n    \"is_relevant\": false,\n    \"visible_terms\": [],\n    \"evidence_source\": [],\n    \"reason\": \"No terms related to nitrogen are visible.\"\n  },\n  \"not_determinable\": [],\n  \"hallucination_risk\": \"low\",\n  \"uncertainty_level\": \"low\",\n  \"uncertainty_reason\": null\n}",
+        "model": "internvl3-78b"
+      },
+      "validation": {
+        "accepted_for_training": true,
+        "validation_level": "low_risk",
+        "reasons": [
+          "Passed heuristic validation"
+        ],
+        "validator": "heuristic_v2"
+      }
+    },
+    {
+      "figure_id": "fig_5_p006_004",
+      "page": 6,
+      "caption": "Fig. 5 | The graph structure of sSVs. a , The number of sSVs included (or not) in the graph of nestedness as a function of TE content. b , Graph illustrating the nestedness of sSVs, including only presence alleles with nonzero TE content. Each node represents a set of mutually nested sequences, using a similarity threshold of 0.85, with node size reflecting the number of included sequences. Nodes are colored by TE content as shown in a . c , Same graph as in b , but colored by TE superfamilies, as shown in the center on top. Note that the algorithm used no",
+      "context_sentences": [
+        "Fig. 5 | The graph structure of sSVs.",
+        "Fig. 5 | Details of gene-ome analysis."
+      ],
+      "image_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p006_fig5_004.png",
+      "candidate": {
+        "figure_id": "fig_5_p006_004",
+        "page": 6,
+        "caption": "Fig. 5 | The graph structure of sSVs. a , The number of sSVs included (or not) in the graph of nestedness as a function of TE content. b , Graph illustrating the nestedness of sSVs, including only presence alleles with nonzero TE content. Each node represents a set of mutually nested sequences, using a similarity threshold of 0.85, with node size reflecting the number of included sequences. Nodes are colored by TE content as shown in a . c , Same graph as in b , but colored by TE superfamilies, as shown in the center on top. Note that the algorithm used no",
+        "figure_label": "Figure 5",
+        "figure_number": "5",
+        "bbox_pdf": [
+          34.02,
+          42.9,
+          570.17,
+          629.39
+        ],
+        "caption_bbox_pdf": [
+          39.68,
+          625.34,
+          295.62,
+          694.11
+        ],
+        "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p006_fig5_004.png",
+        "detection_method": "visual_region_drawings_images",
+        "crop_quality": "image_block_crop",
+        "crop_includes_caption": false,
+        "page_width_pdf": 595.28,
+        "page_height_pdf": 790.87,
+        "notes": []
+      },
+      "interpretation": {
+        "target_figure_only": true,
+        "figure_type": "mixed_multi_panel",
+        "visible_text": {
+          "title": null,
+          "x_axis_label": [
+            "Number of sSVs"
+          ],
+          "y_axis_label": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "units": [],
+          "legend_items": [
+            "Connected to others",
+            "In graph",
+            "Not in graph",
+            "Defined prot",
+            "Undefined prot",
+            "No prot",
+            "TE like",
+            "DNA/HAT",
+            "LTR/Gypsy",
+            "DNA/MuDR",
+            "RathE1/2/3_cons",
+            "DNA+",
+            "SINE",
+            "Helitron",
+            "TEG",
+            "LINE",
+            "Unassigned",
+            "LTR/Copia",
+            "NA"
+          ],
+          "printed_terms": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "isTE",
+            "isTEpart",
+            "hasTE",
+            "hasTEpart",
+            "noTE",
+            "0",
+            "2,000",
+            "4,000",
+            "Number of sSVs",
+            "Connected to others",
+            "In graph",
+            "Not in graph",
+            "238 connected components; size ≥3",
+            "Defined prot: 34",
+            "Undefined prot: 17",
+            "No prot: 90",
+            "TE like: 97",
+            "Categories:",
+            "Defined prot",
+            "Undefined prot",
+            "No prot",
+            "TE like",
+            "TE family",
+            "DNA/HAT",
+            "LTR/Gypsy",
+            "DNA/MuDR",
+            "RathE1/2/3_cons",
+            "DNA+",
+            "SINE",
+            "Helitron",
+            "TEG",
+            "LINE",
+            "Unassigned",
+            "LTR/Copia",
+            "NA"
+          ]
+        },
+        "visual_structure": {
+          "num_panels": 4,
+          "plot_elements": [
+            "bar_chart",
+            "network_diagram",
+            "network_diagram",
+            "network_diagram",
+            "pie_chart"
+          ],
+          "groups_or_conditions": [
+            "isTE",
+            "isTEpart",
+            "hasTE",
+            "hasTEpart",
+            "noTE",
+            "Defined prot",
+            "Undefined prot",
+            "No prot",
+            "TE like",
+            "DNA/HAT",
+            "LTR/Gypsy",
+            "DNA/MuDR",
+            "RathE1/2/3_cons",
+            "DNA+",
+            "SINE",
+            "Helitron",
+            "TEG",
+            "LINE",
+            "Unassigned",
+            "LTR/Copia",
+            "NA"
+          ],
+          "statistical_markers_visible": []
+        },
+        "factual_observations": [
+          {
+            "observation": "Panel a shows a bar chart with categories isTE, isTEpart, hasTE, hasTEpart, and noTE, indicating the number of sSVs included or not in the graph.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel b and c display network diagrams of sSVs with nodes colored by TE content and TE superfamilies, respectively.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel d includes a pie chart showing the distribution of connected components categorized as Defined prot, Undefined prot, No prot, and TE like.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          }
+        ],
+        "nitrogen_relevance": {
+          "is_relevant": false,
+          "visible_terms": [],
+          "evidence_source": [],
+          "reason": "No terms related to nitrogen are visible in the figure."
+        },
+        "not_determinable": [],
+        "hallucination_risk": "low",
+        "uncertainty_level": "low",
+        "uncertainty_reason": null,
+        "raw_response": "{\n  \"target_figure_only\": true,\n  \"figure_type\": \"mixed_multi_panel\",\n  \"visible_text\": {\n    \"title\": null,\n    \"x_axis_label\": [\"Number of sSVs\"],\n    \"y_axis_label\": [\"a\", \"b\", \"c\", \"d\"],\n    \"units\": [],\n    \"legend_items\": [\n      \"Connected to others\",\n      \"In graph\",\n      \"Not in graph\",\n      \"Defined prot\",\n      \"Undefined prot\",\n      \"No prot\",\n      \"TE like\",\n      \"DNA/HAT\",\n      \"LTR/Gypsy\",\n      \"DNA/MuDR\",\n      \"RathE1/2/3_cons\",\n      \"DNA+\",\n      \"SINE\",\n      \"Helitron\",\n      \"TEG\",\n      \"LINE\",\n      \"Unassigned\",\n      \"LTR/Copia\",\n      \"NA\"\n    ],\n    \"printed_terms\": [\n      \"a\",\n      \"b\",\n      \"c\",\n      \"d\",\n      \"isTE\",\n      \"isTEpart\",\n      \"hasTE\",\n      \"hasTEpart\",\n      \"noTE\",\n      \"0\",\n      \"2,000\",\n      \"4,000\",\n      \"Number of sSVs\",\n      \"Connected to others\",\n      \"In graph\",\n      \"Not in graph\",\n      \"238 connected components; size ≥3\",\n      \"Defined prot: 34\",\n      \"Undefined prot: 17\",\n      \"No prot: 90\",\n      \"TE like: 97\",\n      \"Categories:\",\n      \"Defined prot\",\n      \"Undefined prot\",\n      \"No prot\",\n      \"TE like\",\n      \"TE family\",\n      \"DNA/HAT\",\n      \"LTR/Gypsy\",\n      \"DNA/MuDR\",\n      \"RathE1/2/3_cons\",\n      \"DNA+\",\n      \"SINE\",\n      \"Helitron\",\n      \"TEG\",\n      \"LINE\",\n      \"Unassigned\",\n      \"LTR/Copia\",\n      \"NA\"\n    ]\n  },\n  \"visual_structure\": {\n    \"num_panels\": 4,\n    \"plot_elements\": [\n      \"bar_chart\",\n      \"network_diagram\",\n      \"network_diagram\",\n      \"network_diagram\",\n      \"pie_chart\"\n    ],\n    \"groups_or_conditions\": [\n      \"isTE\",\n      \"isTEpart\",\n      \"hasTE\",\n      \"hasTEpart\",\n      \"noTE\",\n      \"Defined prot\",\n      \"Undefined prot\",\n      \"No prot\",\n      \"TE like\",\n      \"DNA/HAT\",\n      \"LTR/Gypsy\",\n      \"DNA/MuDR\",\n      \"RathE1/2/3_cons\",\n      \"DNA+\",\n      \"SINE\",\n      \"Helitron\",\n      \"TEG\",\n      \"LINE\",\n      \"Unassigned\",\n      \"LTR/Copia\",\n      \"NA\"\n    ],\n    \"statistical_markers_visible\": []\n  },\n  \"factual_observations\": [\n    {\n      \"observation\": \"Panel a shows a bar chart with categories isTE, isTEpart, hasTE, hasTEpart, and noTE, indicating the number of sSVs included or not in the graph.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel b and c display network diagrams of sSVs with nodes colored by TE content and TE superfamilies, respectively.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel d includes a pie chart showing the distribution of connected components categorized as Defined prot, Undefined prot, No prot, and TE like.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    }\n  ],\n  \"nitrogen_relevance\": {\n    \"is_relevant\": false,\n    \"visible_terms\": [],\n    \"evidence_source\": [],\n    \"reason\": \"No terms related to nitrogen are visible in the figure.\"\n  },\n  \"not_determinable\": [],\n  \"hallucination_risk\": \"low\",\n  \"uncertainty_level\": \"low\",\n  \"uncertainty_reason\": null\n}",
+        "model": "internvl3-78b"
+      },
+      "validation": {
+        "accepted_for_training": true,
+        "validation_level": "low_risk",
+        "reasons": [
+          "Passed heuristic validation"
+        ],
+        "validator": "heuristic_v2"
+      }
+    },
+    {
+      "figure_id": "fig_6_p007_005",
+      "page": 7,
+      "caption": "Fig. 6 | Analysis of the gene-ome. a , The 34,153 annotated genes categorized based on whether they correspond to the TAIR10 annotation and whether they are TEs or PC (based on sequence similarity and TE-like protein domains; Extended Data Fig. 5a). b , Genes categorized based on locus presence frequency across the 27 genomes. For TE presence frequency distribution and a comparison with published results 23 , please see Extended Data Fig. 5b,c. c , Synteny comparison with A. lyrata . For TEs, see Extended Data Fig. 5d. d , Ancestral status of genes of TAIR10 and newly annotated genes (‘position + sequence’ means that both gene sequence and syntenic position are conserved). e , Ancestral status of genes by presence frequency. f , Distribution of genes and TEs along chromosome 5, grouped by frequency (top) and ancestral status (bottom). For all chromosomes, see Extended Data Fig. 5h,i. g , Functional domains of annotated genes, based on comparisons with UniProtKB. h , Functional domains of PC genes",
+      "context_sentences": [
+        "Fig. 6 | Analysis of the gene-ome.",
+        "Fig. 6.",
+        "Fig. 6).",
+        "Fig. 6 | Gene silencing and expression by gene presence** **frequency and ancestral status.",
+        "(Fig. 6)"
+      ],
+      "image_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p007_fig6_005.png",
+      "candidate": {
+        "figure_id": "fig_6_p007_005",
+        "page": 7,
+        "caption": "Fig. 6 | Analysis of the gene-ome. a , The 34,153 annotated genes categorized based on whether they correspond to the TAIR10 annotation and whether they are TEs or PC (based on sequence similarity and TE-like protein domains; Extended Data Fig. 5a). b , Genes categorized based on locus presence frequency across the 27 genomes. For TE presence frequency distribution and a comparison with published results 23 , please see Extended Data Fig. 5b,c. c , Synteny comparison with A. lyrata . For TEs, see Extended Data Fig. 5d. d , Ancestral status of genes of TAIR10 and newly annotated genes (‘position + sequence’ means that both gene sequence and syntenic position are conserved). e , Ancestral status of genes by presence frequency. f , Distribution of genes and TEs along chromosome 5, grouped by frequency (top) and ancestral status (bottom). For all chromosomes, see Extended Data Fig. 5h,i. g , Functional domains of annotated genes, based on comparisons with UniProtKB. h , Functional domains of PC genes",
+        "figure_label": "Figure 6",
+        "figure_number": "6",
+        "bbox_pdf": [
+          31.44,
+          42.9,
+          569.25,
+          590.51
+        ],
+        "caption_bbox_pdf": [
+          39.68,
+          587.8,
+          294.85,
+          716.57
+        ],
+        "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p007_fig6_005.png",
+        "detection_method": "visual_region_drawings_images",
+        "crop_quality": "image_block_crop",
+        "crop_includes_caption": false,
+        "page_width_pdf": 595.28,
+        "page_height_pdf": 790.87,
+        "notes": []
+      },
+      "interpretation": {
+        "target_figure_only": true,
+        "figure_type": "mixed_multi_panel",
+        "visible_text": {
+          "title": null,
+          "x_axis_label": [
+            "Thaliana relative position",
+            "Pangene coordinate",
+            "Gene frequency",
+            "Ancestral status",
+            "Expression, TPM",
+            "H3K9me2 level",
+            "H3K27me3 level"
+          ],
+          "y_axis_label": [
+            "Lyrate relative position",
+            "Number of genes",
+            "% genes (NA excluded)",
+            "Expression, TPM",
+            "H3K9me2 level",
+            "H3K27me3 level"
+          ],
+          "units": [
+            "TPM",
+            "%"
+          ],
+          "legend_items": [
+            "PC_new",
+            "PC_TAIR10",
+            "TE_genes.TAIR10",
+            "TE_genes.new",
+            "PC_genes.new",
+            "Core",
+            "Highfreq: 25-26",
+            "Midfreq: 4-24",
+            "Lowfreq: 2-3",
+            "Private: 1",
+            "Full",
+            "Seq",
+            "No",
+            "Plant defense",
+            "F-box",
+            "Leucine-rich secreted",
+            "Membrane/transmembrane",
+            "Transport",
+            "Signal peptide/knuckle",
+            "Transferase",
+            "Proteases/peptidase",
+            "Zinc-finger/zinc transposase",
+            "Transcription regulation",
+            "DNA integration",
+            "Reverse transcriptase",
+            "TE/transposon/DNA transposon",
+            "Ancestral (position + sequence)",
+            "Ancestral (only sequence)",
+            "Nonancestral",
+            "27",
+            "25-26",
+            "4-24",
+            "2-3",
+            "1",
+            "Yes",
+            "Similar",
+            "No",
+            "beat",
+            "smembrane"
+          ],
+          "printed_terms": [
+            "Pseudogenes",
+            "341; 1%",
+            "TE_genes.TAIR10",
+            "565; 2%",
+            "TE_genes.new",
+            "5,109; 15%",
+            "PC_genes.new",
+            "2,661; 8%",
+            "PC_genes.TAIR10",
+            "25,477; 74%",
+            "Core",
+            "24,435; 87%",
+            "Highfreq: 25-26",
+            "601; 2%",
+            "Midfreq: 4-24",
+            "1,413; 5%",
+            "Lowfreq: 2-3",
+            "572; 2%",
+            "Private: 1",
+            "1,084; 4%",
+            "Chromosome 5",
+            "PC",
+            "TE",
+            "Frequency",
+            "27",
+            "25-26",
+            "4-24",
+            "2-3",
+            "1",
+            "NA",
+            "0",
+            "25",
+            "50",
+            "75",
+            "100",
+            "0%",
+            "25%",
+            "50%",
+            "75%",
+            "100%",
+            "0 x 10^6",
+            "1 x 10^7",
+            "2 x 10^7",
+            "3 x 10^7",
+            "4 x 10^7",
+            "5 x 10^7",
+            "n = 24,435",
+            "n = 585",
+            "n = 669",
+            "n = 50",
+            "n = 21,368",
+            "n = 2,381",
+            "n = 4,356",
+            "P = 10^-72",
+            "P = 10^-6",
+            "P = 0.18",
+            "P = 10^-180",
+            "P = 10^-9",
+            "P = 10^-12",
+            "P = 0.16",
+            "P = 10^-58",
+            "P = 10^-7",
+            "P = 10^-10",
+            "P = 10^-41",
+            "P = 0.32",
+            "P = 0.79",
+            "P = 10^-14",
+            "P = 10^-4",
+            "Full",
+            "Seq",
+            "No",
+            "beat",
+            "smembrane"
+          ]
+        },
+        "visual_structure": {
+          "num_panels": 10,
+          "plot_elements": [
+            "pie_chart",
+            "bar_chart",
+            "scatter_plot",
+            "bar_chart",
+            "bar_chart",
+            "histogram",
+            "bar_chart",
+            "bar_chart",
+            "box_plot",
+            "box_plot"
+          ],
+          "groups_or_conditions": [
+            "PC_genes.TAIR10",
+            "TE_genes.TAIR10",
+            "PC_genes.new",
+            "TE_genes.new",
+            "Pseudogenes",
+            "Core",
+            "Highfreq",
+            "Midfreq",
+            "Lowfreq",
+            "Private",
+            "Ancestral status",
+            "Gene frequency",
+            "Functional domains",
+            "Expression levels",
+            "Epigenetic marks"
+          ],
+          "statistical_markers_visible": [
+            "P-values"
+          ]
+        },
+        "factual_observations": [
+          {
+            "observation": "Panel a shows a pie chart with categories of genes: PC_genes.TAIR10, PC_genes.new, TE_genes.TAIR10, TE_genes.new, and Pseudogenes.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel b shows a pie chart with gene frequency categories: Core, Highfreq, Midfreq, Lowfreq, and Private.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel c is a scatter plot comparing Thaliana and Lyrate relative positions.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel d shows a bar chart of ancestral status for PC_genes.TAIR10 and TE_genes.new.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel e shows a bar chart of ancestral status by gene frequency.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel f shows histograms of gene and TE distribution along Chromosome 5.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel g shows a bar chart of functional domains in different gene categories.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel h shows a bar chart of functional domains in PC genes.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel i shows box plots of expression levels by gene frequency.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel j shows box plots of expression and epigenetic marks by ancestral status.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          }
+        ],
+        "nitrogen_relevance": {
+          "is_relevant": false,
+          "visible_terms": [],
+          "evidence_source": [],
+          "reason": "No terms related to nitrogen are visible in the figure."
+        },
+        "not_determinable": [],
+        "hallucination_risk": "low",
+        "uncertainty_level": "low",
+        "uncertainty_reason": null,
+        "raw_response": "{\n  \"target_figure_only\": true,\n  \"figure_type\": \"mixed_multi_panel\",\n  \"visible_text\": {\n    \"title\": null,\n    \"x_axis_label\": [\n      \"Thaliana relative position\",\n      \"Pangene coordinate\",\n      \"Gene frequency\",\n      \"Ancestral status\",\n      \"Expression, TPM\",\n      \"H3K9me2 level\",\n      \"H3K27me3 level\"\n    ],\n    \"y_axis_label\": [\n      \"Lyrate relative position\",\n      \"Number of genes\",\n      \"% genes (NA excluded)\",\n      \"Expression, TPM\",\n      \"H3K9me2 level\",\n      \"H3K27me3 level\"\n    ],\n    \"units\": [\n      \"TPM\",\n      \"%\"\n    ],\n    \"legend_items\": [\n      \"PC_new\",\n      \"PC_TAIR10\",\n      \"TE_genes.TAIR10\",\n      \"TE_genes.new\",\n      \"PC_genes.new\",\n      \"Core\",\n      \"Highfreq: 25-26\",\n      \"Midfreq: 4-24\",\n      \"Lowfreq: 2-3\",\n      \"Private: 1\",\n      \"Full\",\n      \"Seq\",\n      \"No\",\n      \"Plant defense\",\n      \"F-box\",\n      \"Leucine-rich secreted\",\n      \"Membrane/transmembrane\",\n      \"Transport\",\n      \"Signal peptide/knuckle\",\n      \"Transferase\",\n      \"Proteases/peptidase\",\n      \"Zinc-finger/zinc transposase\",\n      \"Transcription regulation\",\n      \"DNA integration\",\n      \"Reverse transcriptase\",\n      \"TE/transposon/DNA transposon\",\n      \"Ancestral (position + sequence)\",\n      \"Ancestral (only sequence)\",\n      \"Nonancestral\",\n      \"27\",\n      \"25-26\",\n      \"4-24\",\n      \"2-3\",\n      \"1\",\n      \"Yes\",\n      \"Similar\",\n      \"No\",\n      \"beat\",\n      \"smembrane\"\n    ],\n    \"printed_terms\": [\n      \"Pseudogenes\",\n      \"341; 1%\",\n      \"TE_genes.TAIR10\",\n      \"565; 2%\",\n      \"TE_genes.new\",\n      \"5,109; 15%\",\n      \"PC_genes.new\",\n      \"2,661; 8%\",\n      \"PC_genes.TAIR10\",\n      \"25,477; 74%\",\n      \"Core\",\n      \"24,435; 87%\",\n      \"Highfreq: 25-26\",\n      \"601; 2%\",\n      \"Midfreq: 4-24\",\n      \"1,413; 5%\",\n      \"Lowfreq: 2-3\",\n      \"572; 2%\",\n      \"Private: 1\",\n      \"1,084; 4%\",\n      \"Chromosome 5\",\n      \"PC\",\n      \"TE\",\n      \"Frequency\",\n      \"27\",\n      \"25-26\",\n      \"4-24\",\n      \"2-3\",\n      \"1\",\n      \"NA\",\n      \"0\",\n      \"25\",\n      \"50\",\n      \"75\",\n      \"100\",\n      \"0%\",\n      \"25%\",\n      \"50%\",\n      \"75%\",\n      \"100%\",\n      \"0 x 10^6\",\n      \"1 x 10^7\",\n      \"2 x 10^7\",\n      \"3 x 10^7\",\n      \"4 x 10^7\",\n      \"5 x 10^7\",\n      \"n = 24,435\",\n      \"n = 585\",\n      \"n = 669\",\n      \"n = 50\",\n      \"n = 21,368\",\n      \"n = 2,381\",\n      \"n = 4,356\",\n      \"P = 10^-72\",\n      \"P = 10^-6\",\n      \"P = 0.18\",\n      \"P = 10^-180\",\n      \"P = 10^-9\",\n      \"P = 10^-12\",\n      \"P = 0.16\",\n      \"P = 10^-58\",\n      \"P = 10^-7\",\n      \"P = 10^-10\",\n      \"P = 10^-41\",\n      \"P = 0.32\",\n      \"P = 0.79\",\n      \"P = 10^-14\",\n      \"P = 10^-4\",\n      \"Full\",\n      \"Seq\",\n      \"No\",\n      \"beat\",\n      \"smembrane\"\n    ]\n  },\n  \"visual_structure\": {\n    \"num_panels\": 10,\n    \"plot_elements\": [\n      \"pie_chart\",\n      \"bar_chart\",\n      \"scatter_plot\",\n      \"bar_chart\",\n      \"bar_chart\",\n      \"histogram\",\n      \"bar_chart\",\n      \"bar_chart\",\n      \"box_plot\",\n      \"box_plot\"\n    ],\n    \"groups_or_conditions\": [\n      \"PC_genes.TAIR10\",\n      \"TE_genes.TAIR10\",\n      \"PC_genes.new\",\n      \"TE_genes.new\",\n      \"Pseudogenes\",\n      \"Core\",\n      \"Highfreq\",\n      \"Midfreq\",\n      \"Lowfreq\",\n      \"Private\",\n      \"Ancestral status\",\n      \"Gene frequency\",\n      \"Functional domains\",\n      \"Expression levels\",\n      \"Epigenetic marks\"\n    ],\n    \"statistical_markers_visible\": [\n      \"P-values\"\n    ]\n  },\n  \"factual_observations\": [\n    {\n      \"observation\": \"Panel a shows a pie chart with categories of genes: PC_genes.TAIR10, PC_genes.new, TE_genes.TAIR10, TE_genes.new, and Pseudogenes.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel b shows a pie chart with gene frequency categories: Core, Highfreq, Midfreq, Lowfreq, and Private.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel c is a scatter plot comparing Thaliana and Lyrate relative positions.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel d shows a bar chart of ancestral status for PC_genes.TAIR10 and TE_genes.new.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel e shows a bar chart of ancestral status by gene frequency.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel f shows histograms of gene and TE distribution along Chromosome 5.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel g shows a bar chart of functional domains in different gene categories.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel h shows a bar chart of functional domains in PC genes.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel i shows box plots of expression levels by gene frequency.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel j shows box plots of expression and epigenetic marks by ancestral status.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    }\n  ],\n  \"nitrogen_relevance\": {\n    \"is_relevant\": false,\n    \"visible_terms\": [],\n    \"evidence_source\": [],\n    \"reason\": \"No terms related to nitrogen are visible in the figure.\"\n  },\n  \"not_determinable\": [],\n  \"hallucination_risk\": \"low\",\n  \"uncertainty_level\": \"low\",\n  \"uncertainty_reason\": null\n}",
+        "model": "internvl3-78b"
+      },
+      "validation": {
+        "accepted_for_training": true,
+        "validation_level": "low_risk",
+        "reasons": [
+          "Passed heuristic validation"
+        ],
+        "validator": "heuristic_v2"
+      }
+    },
+    {
+      "figure_id": "fig_7_p008_006",
+      "page": 8,
+      "caption": "Length of SVs Fig. 7 | The growth of the pangenome. a , The dependence on sample size for the union (‘pan’) and intersection (‘core’) sequence length, separately for the full genome, the mobile-ome and the gene-ome (for saturation by sSV length and normalized views, see Extended Data Fig. 7). b , Pangenome versus reference genome coordinates. The pericentromeric region (light blue) shows a higher ‘dilution’ of the spatial coordinates due to the increased number of SVs in this region, but please note that the slope is never 1, reflecting their ubiquity. The centromeric region is dark blue (for other chromosomes, see Extended Data Fig. 7). c , The contribution of sSVs of different lengths to differences between pairs of genomes. Numbers are counts of sSVs. Shorter sSVs are more numerous, but longer and rarer sSVs contribute more to total length variation.",
+      "context_sentences": [
+        "Fig. 7).",
+        "Fig. 7 | The growth of the pangenome.",
+        "Fig. 7 We distinguish between two types of segregating genes: a minority with homologs in the closely related _A.",
+        "Fig. 7 | Extended pan-genome analysis.",
+        "(Fig. 7 We distinguish between two types of segregating genes: a minority with homologs in the closely related _A. lyrata_ and a majority without (Fig. 6)"
+      ],
+      "image_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p008_fig7_006.png",
+      "candidate": {
+        "figure_id": "fig_7_p008_006",
+        "page": 8,
+        "caption": "Length of SVs Fig. 7 | The growth of the pangenome. a , The dependence on sample size for the union (‘pan’) and intersection (‘core’) sequence length, separately for the full genome, the mobile-ome and the gene-ome (for saturation by sSV length and normalized views, see Extended Data Fig. 7). b , Pangenome versus reference genome coordinates. The pericentromeric region (light blue) shows a higher ‘dilution’ of the spatial coordinates due to the increased number of SVs in this region, but please note that the slope is never 1, reflecting their ubiquity. The centromeric region is dark blue (for other chromosomes, see Extended Data Fig. 7). c , The contribution of sSVs of different lengths to differences between pairs of genomes. Numbers are counts of sSVs. Shorter sSVs are more numerous, but longer and rarer sSVs contribute more to total length variation.",
+        "figure_label": "Figure 7",
+        "figure_number": "7",
+        "bbox_pdf": [
+          296.3,
+          37.24,
+          568.14,
+          612.38
+        ],
+        "caption_bbox_pdf": [
+          306.14,
+          593.8,
+          547.88,
+          744.52
+        ],
+        "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p008_fig7_006.png",
+        "detection_method": "visual_region_drawings_images",
+        "crop_quality": "image_block_crop",
+        "crop_includes_caption": false,
+        "page_width_pdf": 595.28,
+        "page_height_pdf": 790.87,
+        "notes": []
+      },
+      "interpretation": {
+        "target_figure_only": true,
+        "figure_type": "mixed_multi_panel",
+        "visible_text": {
+          "title": null,
+          "x_axis_label": [
+            "Number of genomes",
+            "Pangenome coordinate",
+            "Length of SVs"
+          ],
+          "y_axis_label": [
+            "Change in length (bp)",
+            "Col-0 coordinate",
+            "Cumulative length"
+          ],
+          "units": [
+            "bp"
+          ],
+          "legend_items": [
+            "Genes",
+            "Genome",
+            "Mobilome"
+          ],
+          "panel_labels": [
+            "a",
+            "b",
+            "c"
+          ],
+          "printed_terms": [
+            "Approximation: ax + blog(x)",
+            "a/b = 0.15",
+            "a/b = 0.37",
+            "a/b = 0.14",
+            "a/b = 0.04",
+            "a/b = 0.01",
+            "4.1 M",
+            "125.8 M",
+            "56.4 M",
+            "53.2 M",
+            "104.3 M",
+            "190.5 M",
+            "26.7 M",
+            "66.4 M",
+            "50.1 M",
+            "86.7 M",
+            "Chromosome 1, slopes: 0.81, 0.78",
+            "381",
+            "1,100",
+            "615",
+            "1,504",
+            "1,236",
+            "2,018",
+            "167,366",
+            "13,062",
+            "2,557",
+            "1,547",
+            "Based on SVs of length < 1 x 10^4",
+            "Mean pairwise length is 12,488,525 bp",
+            "Mean pairwise count is 191,005",
+            "(0,15]",
+            "(15,50]",
+            "(50,100]",
+            "(100,200]",
+            "(200,500]",
+            "(500,1 x 10^3]",
+            "(1 x 10^3, 2 x 10^3]",
+            "(2 x 10^3, 5 x 10^3]",
+            "(5 x 10^3, 1 x 10^4]",
+            "(1 x 10^4, Inf]"
+          ]
+        },
+        "visual_structure": {
+          "num_panels": 3,
+          "plot_elements": [
+            "line_plot",
+            "scatter",
+            "scatter"
+          ],
+          "groups_or_conditions": [
+            "Genes",
+            "Genome",
+            "Mobilome"
+          ],
+          "statistical_markers_visible": []
+        },
+        "factual_observations": [
+          {
+            "observation": "Panel a shows the change in length (bp) for pan and core sequences as the number of genomes increases.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel b displays the relationship between pangenome and Col-0 coordinates with slopes indicated.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel c illustrates the contribution of sSVs of different lengths to differences between pairs of genomes.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          }
+        ],
+        "nitrogen_relevance": {
+          "is_relevant": false,
+          "visible_terms": [],
+          "evidence_source": [],
+          "reason": "No terms related to nitrogen are visible in the figure."
+        },
+        "not_determinable": [],
+        "hallucination_risk": "low",
+        "uncertainty_level": "low",
+        "uncertainty_reason": null,
+        "raw_response": "{\n  \"target_figure_only\": true,\n  \"figure_type\": \"mixed_multi_panel\",\n  \"visible_text\": {\n    \"title\": null,\n    \"x_axis_label\": [\"Number of genomes\", \"Pangenome coordinate\", \"Length of SVs\"],\n    \"y_axis_label\": [\"Change in length (bp)\", \"Col-0 coordinate\", \"Cumulative length\"],\n    \"units\": [\"bp\"],\n    \"legend_items\": [\"Genes\", \"Genome\", \"Mobilome\"],\n    \"panel_labels\": [\"a\", \"b\", \"c\"],\n    \"printed_terms\": [\n      \"Approximation: ax + blog(x)\",\n      \"a/b = 0.15\",\n      \"a/b = 0.37\",\n      \"a/b = 0.14\",\n      \"a/b = 0.04\",\n      \"a/b = 0.01\",\n      \"4.1 M\",\n      \"125.8 M\",\n      \"56.4 M\",\n      \"53.2 M\",\n      \"104.3 M\",\n      \"190.5 M\",\n      \"26.7 M\",\n      \"66.4 M\",\n      \"50.1 M\",\n      \"86.7 M\",\n      \"Chromosome 1, slopes: 0.81, 0.78\",\n      \"381\",\n      \"1,100\",\n      \"615\",\n      \"1,504\",\n      \"1,236\",\n      \"2,018\",\n      \"167,366\",\n      \"13,062\",\n      \"2,557\",\n      \"1,547\",\n      \"Based on SVs of length < 1 x 10^4\",\n      \"Mean pairwise length is 12,488,525 bp\",\n      \"Mean pairwise count is 191,005\",\n      \"(0,15]\",\n      \"(15,50]\",\n      \"(50,100]\",\n      \"(100,200]\",\n      \"(200,500]\",\n      \"(500,1 x 10^3]\",\n      \"(1 x 10^3, 2 x 10^3]\",\n      \"(2 x 10^3, 5 x 10^3]\",\n      \"(5 x 10^3, 1 x 10^4]\",\n      \"(1 x 10^4, Inf]\"\n    ]\n  },\n  \"visual_structure\": {\n    \"num_panels\": 3,\n    \"plot_elements\": [\"line_plot\", \"scatter\", \"scatter\"],\n    \"groups_or_conditions\": [\"Genes\", \"Genome\", \"Mobilome\"],\n    \"statistical_markers_visible\": []\n  },\n  \"factual_observations\": [\n    {\n      \"observation\": \"Panel a shows the change in length (bp) for pan and core sequences as the number of genomes increases.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel b displays the relationship between pangenome and Col-0 coordinates with slopes indicated.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel c illustrates the contribution of sSVs of different lengths to differences between pairs of genomes.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    }\n  ],\n  \"nitrogen_relevance\": {\n    \"is_relevant\": false,\n    \"visible_terms\": [],\n    \"evidence_source\": [],\n    \"reason\": \"No terms related to nitrogen are visible in the figure.\"\n  },\n  \"not_determinable\": [],\n  \"hallucination_risk\": \"low\",\n  \"uncertainty_level\": \"low\",\n  \"uncertainty_reason\": null\n}",
+        "model": "internvl3-78b"
+      },
+      "validation": {
+        "accepted_for_training": true,
+        "validation_level": "low_risk",
+        "reasons": [
+          "Passed heuristic validation"
+        ],
+        "validator": "heuristic_v2"
+      }
+    },
+    {
+      "figure_id": "fig_8_p009_007",
+      "page": 9,
+      "caption": "Fig. 8 | Read mapping and reference bias. a , To investigate SNP-calling errors, SNPs were identified from pairwise WGA as well as by designating one genome as a reference and calling SNPs using short reads from the other (next generation sequencing (NGS); see Supplementary Note 7 for details). Numbers are averages across all accession pairs (±s.d.). From the point of view of WGA, each site can either be aligned or not. Conversely, from the point of view of NGS, each site in the reference genome can be covered by sample reads or not. Arrows pointing right refer to WGA SNPs, which we assume to be correct; arrows pointing left refer to NGS SNPs. WGA SNPs are TPs if also called by NGS, FNs if missed by NGS and uncalled if in regions not covered by NGS reads. Conversely, NGS SNPs are TPs if also found in the WGA and FPs if not. FPs come in two flavors: those that correspond to bona fide non-SNPs in the WGA and those that correspond to regions that were not aligned. Heterozygous calls in completely inbred lines are obviously FPs and are treated separately. b , SNP-calling error rates depend on the relationship between the reference and the sampled genome. Each",
+      "context_sentences": [
+        "Fig. 8 | Read mapping and reference bias."
+      ],
+      "image_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p009_fig8_007.png",
+      "candidate": {
+        "figure_id": "fig_8_p009_007",
+        "page": 9,
+        "caption": "Fig. 8 | Read mapping and reference bias. a , To investigate SNP-calling errors, SNPs were identified from pairwise WGA as well as by designating one genome as a reference and calling SNPs using short reads from the other (next generation sequencing (NGS); see Supplementary Note 7 for details). Numbers are averages across all accession pairs (±s.d.). From the point of view of WGA, each site can either be aligned or not. Conversely, from the point of view of NGS, each site in the reference genome can be covered by sample reads or not. Arrows pointing right refer to WGA SNPs, which we assume to be correct; arrows pointing left refer to NGS SNPs. WGA SNPs are TPs if also called by NGS, FNs if missed by NGS and uncalled if in regions not covered by NGS reads. Conversely, NGS SNPs are TPs if also found in the WGA and FPs if not. FPs come in two flavors: those that correspond to bona fide non-SNPs in the WGA and those that correspond to regions that were not aligned. Heterozygous calls in completely inbred lines are obviously FPs and are treated separately. b , SNP-calling error rates depend on the relationship between the reference and the sampled genome. Each",
+        "figure_label": "Figure 8",
+        "figure_number": "8",
+        "bbox_pdf": [
+          32.99,
+          97.71,
+          570.82,
+          750.39
+        ],
+        "caption_bbox_pdf": [
+          39.68,
+          595.99,
+          292.83,
+          744.79
+        ],
+        "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p009_fig8_007.png",
+        "detection_method": "next_page_visual_region",
+        "crop_quality": "image_block_crop",
+        "crop_includes_caption": false,
+        "page_width_pdf": 595.28,
+        "page_height_pdf": 790.87,
+        "notes": [
+          "Figure found on next page (caption precedes figure)."
+        ]
+      },
+      "interpretation": {
+        "target_figure_only": true,
+        "figure_type": "mixed_multi_panel",
+        "visible_text": {
+          "title": null,
+          "x_axis_label": [
+            "Relatedness",
+            "% genes wrongly estimated on TAIR10",
+            "% CNV genes"
+          ],
+          "y_axis_label": [
+            "FDR",
+            "FNR",
+            "Pseudo-het",
+            "Expression",
+            "Methylation"
+          ],
+          "units": [],
+          "legend_items": [
+            "Sample",
+            "Expression",
+            "Methylation",
+            "Correctly",
+            "Wrongly"
+          ],
+          "panel_labels": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ]
+        },
+        "visual_structure": {
+          "num_panels": 5,
+          "plot_elements": [
+            "diagram",
+            "scatter",
+            "scatter",
+            "scatter",
+            "bar_chart"
+          ],
+          "groups_or_conditions": [
+            "WGA",
+            "NGS",
+            "Seedling",
+            "Rosette",
+            "Flowers",
+            "Pollen",
+            "CG",
+            "CHG",
+            "CHH"
+          ],
+          "statistical_markers_visible": [
+            "P = 10^-15",
+            "P = 10^-22",
+            "P = 10^-16",
+            "P = 10^-6",
+            "P = 10^-6"
+          ]
+        },
+        "factual_observations": [
+          {
+            "observation": "Panel a shows a diagram comparing SNP-calling errors between WGA and NGS methods.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel b contains scatter plots showing SNP-calling error rates (FDR, FNR, Pseudo-het) against relatedness.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel c shows a scatter plot of Pearson correlation for align to own vs. TAIR10 across different plant stages.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel d displays a scatter plot of the percentage of genes wrongly estimated on TAIR10 across different plant stages.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel e presents a bar chart of the percentage of CNV genes with expression and methylation data across different plant stages.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          }
+        ],
+        "nitrogen_relevance": {
+          "is_relevant": false,
+          "visible_terms": [],
+          "evidence_source": [],
+          "reason": "No terms related to nitrogen are visible in the figure."
+        },
+        "not_determinable": [],
+        "hallucination_risk": "low",
+        "uncertainty_level": "low",
+        "uncertainty_reason": null,
+        "raw_response": "{\n  \"target_figure_only\": true,\n  \"figure_type\": \"mixed_multi_panel\",\n  \"visible_text\": {\n    \"title\": null,\n    \"x_axis_label\": [\"Relatedness\", \"% genes wrongly estimated on TAIR10\", \"% CNV genes\"],\n    \"y_axis_label\": [\"FDR\", \"FNR\", \"Pseudo-het\", \"Expression\", \"Methylation\"],\n    \"units\": [],\n    \"legend_items\": [\"Sample\", \"Expression\", \"Methylation\", \"Correctly\", \"Wrongly\"],\n    \"panel_labels\": [\"a\", \"b\", \"c\", \"d\", \"e\"]\n  },\n  \"visual_structure\": {\n    \"num_panels\": 5,\n    \"plot_elements\": [\n      \"diagram\",\n      \"scatter\",\n      \"scatter\",\n      \"scatter\",\n      \"bar_chart\"\n    ],\n    \"groups_or_conditions\": [\n      \"WGA\",\n      \"NGS\",\n      \"Seedling\",\n      \"Rosette\",\n      \"Flowers\",\n      \"Pollen\",\n      \"CG\",\n      \"CHG\",\n      \"CHH\"\n    ],\n    \"statistical_markers_visible\": [\"P = 10^-15\", \"P = 10^-22\", \"P = 10^-16\", \"P = 10^-6\", \"P = 10^-6\"]\n  },\n  \"factual_observations\": [\n    {\n      \"observation\": \"Panel a shows a diagram comparing SNP-calling errors between WGA and NGS methods.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel b contains scatter plots showing SNP-calling error rates (FDR, FNR, Pseudo-het) against relatedness.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel c shows a scatter plot of Pearson correlation for align to own vs. TAIR10 across different plant stages.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel d displays a scatter plot of the percentage of genes wrongly estimated on TAIR10 across different plant stages.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel e presents a bar chart of the percentage of CNV genes with expression and methylation data across different plant stages.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    }\n  ],\n  \"nitrogen_relevance\": {\n    \"is_relevant\": false,\n    \"visible_terms\": [],\n    \"evidence_source\": [],\n    \"reason\": \"No terms related to nitrogen are visible in the figure.\"\n  },\n  \"not_determinable\": [],\n  \"hallucination_risk\": \"low\",\n  \"uncertainty_level\": \"low\",\n  \"uncertainty_reason\": null\n}",
+        "model": "internvl3-78b"
+      },
+      "validation": {
+        "accepted_for_training": true,
+        "validation_level": "low_risk",
+        "reasons": [
+          "Passed heuristic validation"
+        ],
+        "validator": "heuristic_v2"
+      }
+    },
+    {
+      "figure_id": "fig_1_p020_008",
+      "page": 20,
+      "caption": "Extended Data Fig. 1 | The pattern of polymorphism on chromosomes 2–5. a – d , Whole-genome alignments. e – h , Density of PGGB graph bubbles. i – l , Nucleotide diversity. For chromosome 1 and further explanation, see Fig. 2a–c .",
+      "context_sentences": [
+        "Fig. 1 | Genome assemblies and size variation across 27** _**A.",
+        "Fig. 1 and Supplementary Table 2), and a very large reciprocal translocation in accession 22001 from the Yangtze River region (Supplementary Fig.",
+        "Fig. 1.",
+        "Fig. 1), the readily alignable chromosome arms (Fig.",
+        "Fig. 1 | The pattern of polymorphism on chromosomes 2–5."
+      ],
+      "image_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p020_fig1_008.png",
+      "candidate": {
+        "figure_id": "fig_1_p020_008",
+        "page": 20,
+        "caption": "Extended Data Fig. 1 | The pattern of polymorphism on chromosomes 2–5. a – d , Whole-genome alignments. e – h , Density of PGGB graph bubbles. i – l , Nucleotide diversity. For chromosome 1 and further explanation, see Fig. 2a–c .",
+        "figure_label": "Figure 1",
+        "figure_number": "1",
+        "bbox_pdf": [
+          40.39,
+          40.96,
+          560.56,
+          703.94
+        ],
+        "caption_bbox_pdf": [
+          39.67,
+          699.89,
+          548.58,
+          718.64
+        ],
+        "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p020_fig1_008.png",
+        "detection_method": "visual_region_drawings_images",
+        "crop_quality": "image_block_crop",
+        "crop_includes_caption": false,
+        "page_width_pdf": 595.28,
+        "page_height_pdf": 790.87,
+        "notes": []
+      },
+      "interpretation": {
+        "target_figure_only": true,
+        "figure_type": "mixed_multi_panel",
+        "visible_text": {
+          "title": null,
+          "x_axis_label": [
+            "own genome position"
+          ],
+          "y_axis_label": [
+            "Chromosome 2",
+            "Chromosome 3",
+            "Chromosome 4",
+            "Chromosome 5",
+            "Positions of chromosomal arms [->]",
+            "Synteny level"
+          ],
+          "units": [],
+          "legend_items": [],
+          "panel_labels": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h",
+            "i",
+            "j",
+            "k",
+            "l"
+          ]
+        },
+        "visual_structure": {
+          "num_panels": 12,
+          "plot_elements": [
+            "whole-genome alignments",
+            "density of PGGB graph bubbles",
+            "nucleotide diversity"
+          ],
+          "groups_or_conditions": [
+            "Chromosome 2",
+            "Chromosome 3",
+            "Chromosome 4",
+            "Chromosome 5"
+          ],
+          "statistical_markers_visible": []
+        },
+        "factual_observations": [
+          {
+            "observation": "The figure shows whole-genome alignments for chromosomes 2, 3, 4, and 5.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Density of PGGB graph bubbles is displayed for chromosomes 2, 3, 4, and 5.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Nucleotide diversity is plotted for chromosomes 2, 3, 4, and 5.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          }
+        ],
+        "nitrogen_relevance": {
+          "is_relevant": false,
+          "visible_terms": [],
+          "evidence_source": [],
+          "reason": "No nitrogen-related terms are visible in the figure."
+        },
+        "not_determinable": [],
+        "hallucination_risk": "low",
+        "uncertainty_level": "low",
+        "uncertainty_reason": null,
+        "raw_response": "{\n  \"target_figure_only\": true,\n  \"figure_type\": \"mixed_multi_panel\",\n  \"visible_text\": {\n    \"title\": null,\n    \"x_axis_label\": [\"own genome position\"],\n    \"y_axis_label\": [\"Chromosome 2\", \"Chromosome 3\", \"Chromosome 4\", \"Chromosome 5\", \"Positions of chromosomal arms [->]\", \"Synteny level\"],\n    \"units\": [],\n    \"legend_items\": [],\n    \"panel_labels\": [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\", \"g\", \"h\", \"i\", \"j\", \"k\", \"l\"]\n  },\n  \"visual_structure\": {\n    \"num_panels\": 12,\n    \"plot_elements\": [\"whole-genome alignments\", \"density of PGGB graph bubbles\", \"nucleotide diversity\"],\n    \"groups_or_conditions\": [\"Chromosome 2\", \"Chromosome 3\", \"Chromosome 4\", \"Chromosome 5\"],\n    \"statistical_markers_visible\": []\n  },\n  \"factual_observations\": [\n    {\n      \"observation\": \"The figure shows whole-genome alignments for chromosomes 2, 3, 4, and 5.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Density of PGGB graph bubbles is displayed for chromosomes 2, 3, 4, and 5.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Nucleotide diversity is plotted for chromosomes 2, 3, 4, and 5.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    }\n  ],\n  \"nitrogen_relevance\": {\n    \"is_relevant\": false,\n    \"visible_terms\": [],\n    \"evidence_source\": [],\n    \"reason\": \"No nitrogen-related terms are visible in the figure.\"\n  },\n  \"not_determinable\": [],\n  \"hallucination_risk\": \"low\",\n  \"uncertainty_level\": \"low\",\n  \"uncertainty_reason\": null\n}",
+        "model": "internvl3-78b"
+      },
+      "validation": {
+        "accepted_for_training": true,
+        "validation_level": "low_risk",
+        "reasons": [
+          "Passed heuristic validation"
+        ],
+        "validator": "heuristic_v2"
+      }
+    },
+    {
+      "figure_id": "fig_2_p021_009",
+      "page": 21,
+      "caption": "Extended Data Fig. 2 | SV type and gene-relative location. a , Cartoons illustrating our classification of length variants into sSVs and cSVs in the whole- genome alignment and graph representations. b , The distribution of sSVs and cSVs across chromosomes—cSVs are more common in pericentromeric regions. c , Fraction of sSVs and cSVs by length. The prevalence of short sSVs is at least",
+      "context_sentences": [
+        "Fig. 2 | Distribution of variation on chromosome 1.",
+        "Fig. 2).",
+        "Fig. 2) are - highly polymorphic, with two accessions differing at ~191,000 SVs cov ering ~12.",
+        "Fig. 2 | SV type and gene-relative location.",
+        "(Fig. 2)"
+      ],
+      "image_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p021_fig2_009.png",
+      "candidate": {
+        "figure_id": "fig_2_p021_009",
+        "page": 21,
+        "caption": "Extended Data Fig. 2 | SV type and gene-relative location. a , Cartoons illustrating our classification of length variants into sSVs and cSVs in the whole- genome alignment and graph representations. b , The distribution of sSVs and cSVs across chromosomes—cSVs are more common in pericentromeric regions. c , Fraction of sSVs and cSVs by length. The prevalence of short sSVs is at least",
+        "figure_label": "Figure 2",
+        "figure_number": "2",
+        "bbox_pdf": [
+          34.28,
+          40.96,
+          566.67,
+          467.18
+        ],
+        "caption_bbox_pdf": [
+          39.68,
+          463.13,
+          290.55,
+          511.9
+        ],
+        "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p021_fig2_009.png",
+        "detection_method": "visual_region_drawings_images",
+        "crop_quality": "image_block_crop",
+        "crop_includes_caption": false,
+        "page_width_pdf": 595.28,
+        "page_height_pdf": 790.87,
+        "notes": []
+      },
+      "interpretation": {
+        "target_figure_only": true,
+        "figure_type": "mixed_multi_panel",
+        "visible_text": {
+          "title": null,
+          "x_axis_label": [
+            "Pangenome coordinate",
+            "SV length",
+            "SV length"
+          ],
+          "y_axis_label": [
+            "Count",
+            "Count"
+          ],
+          "units": [],
+          "legend_items": [
+            "Deletion, no gene",
+            "Deletion in gene",
+            "Insertion, no gene",
+            "Insertion in gene",
+            "Deletion in intron",
+            "Deletion in exon",
+            "Insertion in intron",
+            "Insertion in exon",
+            "cSV",
+            "sSV"
+          ],
+          "panel_labels": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e"
+          ],
+          "printed_terms": [
+            "simple SVs",
+            "complex SVs",
+            "x",
+            "a",
+            "y",
+            "b",
+            "c",
+            "d",
+            "z",
+            "0.16",
+            "0.31",
+            "0.35",
+            "0.43",
+            "0.57",
+            "0.65",
+            "0.69",
+            "0.84",
+            "len>15bp",
+            "len>50bp",
+            "len>100bp",
+            "len>1000bp",
+            "all SVs",
+            "Type of event",
+            "Deletion, no gene",
+            "Deletion in gene",
+            "Insertion, no gene",
+            "Insertion in gene",
+            "Deletion in intron",
+            "Deletion in exon",
+            "Insertion in intron",
+            "Insertion in exon",
+            "0",
+            "30",
+            "60",
+            "90",
+            "0e+00",
+            "1e+07",
+            "2e+07",
+            "3e+07",
+            "4e+07",
+            "5e+07",
+            "(15,50]",
+            "(50,100]",
+            "(100,200]",
+            "(200,500]",
+            "(500,1e+03]",
+            "(1e+03,2e+03]",
+            "(2e+03,5e+03]",
+            "(5e+03,Inf]"
+          ]
+        },
+        "visual_structure": {
+          "num_panels": 5,
+          "plot_elements": [
+            "bar_chart",
+            "diagram",
+            "donut_chart",
+            "bar_chart",
+            "bar_chart"
+          ],
+          "groups_or_conditions": [
+            "sSVs",
+            "cSVs"
+          ],
+          "statistical_markers_visible": []
+        },
+        "factual_observations": [
+          {
+            "observation": "Panel a shows cartoons illustrating classification of sSVs and cSVs.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel b shows the distribution of sSVs and cSVs across chromosomes.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel c shows the fraction of sSVs and cSVs by length.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel d and e show counts of SV types relative to gene locations.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          }
+        ],
+        "nitrogen_relevance": {
+          "is_relevant": false,
+          "visible_terms": [],
+          "evidence_source": [],
+          "reason": "No terms related to nitrogen are visible in the figure."
+        },
+        "not_determinable": [],
+        "hallucination_risk": "low",
+        "uncertainty_level": "low",
+        "uncertainty_reason": null,
+        "raw_response": "{\n  \"target_figure_only\": true,\n  \"figure_type\": \"mixed_multi_panel\",\n  \"visible_text\": {\n    \"title\": null,\n    \"x_axis_label\": [\"Pangenome coordinate\", \"SV length\", \"SV length\"],\n    \"y_axis_label\": [\"Count\", \"Count\"],\n    \"units\": [],\n    \"legend_items\": [\"Deletion, no gene\", \"Deletion in gene\", \"Insertion, no gene\", \"Insertion in gene\", \"Deletion in intron\", \"Deletion in exon\", \"Insertion in intron\", \"Insertion in exon\", \"cSV\", \"sSV\"],\n    \"panel_labels\": [\"a\", \"b\", \"c\", \"d\", \"e\"],\n    \"printed_terms\": [\"simple SVs\", \"complex SVs\", \"x\", \"a\", \"y\", \"b\", \"c\", \"d\", \"z\", \"0.16\", \"0.31\", \"0.35\", \"0.43\", \"0.57\", \"0.65\", \"0.69\", \"0.84\", \"len>15bp\", \"len>50bp\", \"len>100bp\", \"len>1000bp\", \"all SVs\", \"Type of event\", \"Deletion, no gene\", \"Deletion in gene\", \"Insertion, no gene\", \"Insertion in gene\", \"Deletion in intron\", \"Deletion in exon\", \"Insertion in intron\", \"Insertion in exon\", \"0\", \"30\", \"60\", \"90\", \"0e+00\", \"1e+07\", \"2e+07\", \"3e+07\", \"4e+07\", \"5e+07\", \"(15,50]\", \"(50,100]\", \"(100,200]\", \"(200,500]\", \"(500,1e+03]\", \"(1e+03,2e+03]\", \"(2e+03,5e+03]\", \"(5e+03,Inf]\"]\n  },\n  \"visual_structure\": {\n    \"num_panels\": 5,\n    \"plot_elements\": [\"bar_chart\", \"diagram\", \"donut_chart\", \"bar_chart\", \"bar_chart\"],\n    \"groups_or_conditions\": [\"sSVs\", \"cSVs\"],\n    \"statistical_markers_visible\": []\n  },\n  \"factual_observations\": [\n    {\n      \"observation\": \"Panel a shows cartoons illustrating classification of sSVs and cSVs.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel b shows the distribution of sSVs and cSVs across chromosomes.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel c shows the fraction of sSVs and cSVs by length.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel d and e show counts of SV types relative to gene locations.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    }\n  ],\n  \"nitrogen_relevance\": {\n    \"is_relevant\": false,\n    \"visible_terms\": [],\n    \"evidence_source\": [],\n    \"reason\": \"No terms related to nitrogen are visible in the figure.\"\n  },\n  \"not_determinable\": [],\n  \"hallucination_risk\": \"low\",\n  \"uncertainty_level\": \"low\",\n  \"uncertainty_reason\": null\n}",
+        "model": "internvl3-78b"
+      },
+      "validation": {
+        "accepted_for_training": true,
+        "validation_level": "low_risk",
+        "reasons": [
+          "Passed heuristic validation"
+        ],
+        "validator": "heuristic_v2"
+      }
+    },
+    {
+      "figure_id": "fig_3_p022_010",
+      "page": 22,
+      "caption": "Extended Data Fig. 3 | Size distribution of graph nodes by TE-content. Large nodes are found not only for presence alleles that correspond to complete annotated TE but also for other categories, demonstrating that these are also part of the mobile-ome.",
+      "context_sentences": [
+        "Fig. 3), we confirm that the cumulative effect of all TEs on genome size variation appears to be small in _A.",
+        "Fig. 3 | The allele frequency distribution of SVs.",
+        "Fig. 3).",
+        "Fig. 3 | Size distribution of graph nodes by TE-content.",
+        "(Fig. 3)"
+      ],
+      "image_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p022_fig3_010.png",
+      "candidate": {
+        "figure_id": "fig_3_p022_010",
+        "page": 22,
+        "caption": "Extended Data Fig. 3 | Size distribution of graph nodes by TE-content. Large nodes are found not only for presence alleles that correspond to complete annotated TE but also for other categories, demonstrating that these are also part of the mobile-ome.",
+        "figure_label": "Figure 3",
+        "figure_number": "3",
+        "bbox_pdf": [
+          100.5,
+          48.99,
+          500.44,
+          281.44
+        ],
+        "caption_bbox_pdf": [
+          39.69,
+          277.4,
+          560.86,
+          296.15
+        ],
+        "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p022_fig3_010.png",
+        "detection_method": "visual_region_drawings_images",
+        "crop_quality": "image_block_crop",
+        "crop_includes_caption": false,
+        "page_width_pdf": 595.28,
+        "page_height_pdf": 790.87,
+        "notes": []
+      },
+      "interpretation": {
+        "target_figure_only": true,
+        "figure_type": "scatter",
+        "visible_text": {
+          "title": null,
+          "x_axis_label": [
+            "hasTE",
+            "hasTEpart",
+            "isTE",
+            "isTEpart",
+            "NA"
+          ],
+          "y_axis_label": [
+            "Node size (Number of similar SVs)"
+          ],
+          "units": [],
+          "legend_items": [
+            "DNA/HAT",
+            "DNA/MuDR",
+            "DNA+",
+            "Helitron",
+            "LINE",
+            "LTR/Copia",
+            "LTR/Gypsy",
+            "RathE1/2/3_cons",
+            "SINE",
+            "TEG",
+            "Unassigned",
+            "NA"
+          ],
+          "panel_labels": []
+        },
+        "visual_structure": {
+          "num_panels": 1,
+          "plot_elements": [
+            "scatter points"
+          ],
+          "groups_or_conditions": [
+            "hasTE",
+            "hasTEpart",
+            "isTE",
+            "isTEpart",
+            "NA"
+          ],
+          "statistical_markers_visible": []
+        },
+        "factual_observations": [
+          {
+            "observation": "The scatter plot shows the size distribution of graph nodes by TE content.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Different colors represent different TE families as indicated in the legend.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Node sizes range from 4 to 256.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          }
+        ],
+        "nitrogen_relevance": {
+          "is_relevant": false,
+          "visible_terms": [],
+          "evidence_source": [],
+          "reason": "No terms related to nitrogen are visible in the figure."
+        },
+        "not_determinable": [],
+        "hallucination_risk": "low",
+        "uncertainty_level": "low",
+        "uncertainty_reason": null,
+        "raw_response": "{\n  \"target_figure_only\": true,\n  \"figure_type\": \"scatter\",\n  \"visible_text\": {\n    \"title\": null,\n    \"x_axis_label\": [\"hasTE\", \"hasTEpart\", \"isTE\", \"isTEpart\", \"NA\"],\n    \"y_axis_label\": [\"Node size (Number of similar SVs)\"],\n    \"units\": [],\n    \"legend_items\": [\"DNA/HAT\", \"DNA/MuDR\", \"DNA+\", \"Helitron\", \"LINE\", \"LTR/Copia\", \"LTR/Gypsy\", \"RathE1/2/3_cons\", \"SINE\", \"TEG\", \"Unassigned\", \"NA\"],\n    \"panel_labels\": []\n  },\n  \"visual_structure\": {\n    \"num_panels\": 1,\n    \"plot_elements\": [\"scatter points\"],\n    \"groups_or_conditions\": [\"hasTE\", \"hasTEpart\", \"isTE\", \"isTEpart\", \"NA\"],\n    \"statistical_markers_visible\": []\n  },\n  \"factual_observations\": [\n    {\n      \"observation\": \"The scatter plot shows the size distribution of graph nodes by TE content.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Different colors represent different TE families as indicated in the legend.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Node sizes range from 4 to 256.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    }\n  ],\n  \"nitrogen_relevance\": {\n    \"is_relevant\": false,\n    \"visible_terms\": [],\n    \"evidence_source\": [],\n    \"reason\": \"No terms related to nitrogen are visible in the figure.\"\n  },\n  \"not_determinable\": [],\n  \"hallucination_risk\": \"low\",\n  \"uncertainty_level\": \"low\",\n  \"uncertainty_reason\": null\n}",
+        "model": "internvl3-78b"
+      },
+      "validation": {
+        "accepted_for_training": true,
+        "validation_level": "low_risk",
+        "reasons": [
+          "Passed heuristic validation"
+        ],
+        "validator": "heuristic_v2"
+      }
+    },
+    {
+      "figure_id": "fig_4_p023_011",
+      "page": 23,
+      "caption": "Extended Data Fig. 4 | The graph of the nestedness of existing A. thaliana TE annotations. Each node is a cluster of similar sequences (with length and identity thresholds of 0.85), where the size of the node indicates its relative abundance. The graph can be decomposed into one dominant connected component and several smaller ones, as shown on the right.",
+      "context_sentences": [
+        "Fig. 4).",
+        "Fig. 4 | The role of TEs in bi-allelic indels.",
+        "Fig. 4 | The graph of the nestedness of existing** _**A."
+      ],
+      "image_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p023_fig4_011.png",
+      "candidate": {
+        "figure_id": "fig_4_p023_011",
+        "page": 23,
+        "caption": "Extended Data Fig. 4 | The graph of the nestedness of existing A. thaliana TE annotations. Each node is a cluster of similar sequences (with length and identity thresholds of 0.85), where the size of the node indicates its relative abundance. The graph can be decomposed into one dominant connected component and several smaller ones, as shown on the right.",
+        "figure_label": "Figure 4",
+        "figure_number": "4",
+        "bbox_pdf": [
+          32.39,
+          40.96,
+          568.55,
+          242.12
+        ],
+        "caption_bbox_pdf": [
+          39.69,
+          237.97,
+          554.14,
+          266.83
+        ],
+        "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p023_fig4_011.png",
+        "detection_method": "visual_region_drawings_images",
+        "crop_quality": "image_block_crop",
+        "crop_includes_caption": false,
+        "page_width_pdf": 595.28,
+        "page_height_pdf": 790.87,
+        "notes": []
+      },
+      "interpretation": {
+        "target_figure_only": true,
+        "figure_type": "diagram",
+        "visible_text": {
+          "title": null,
+          "x_axis_label": [],
+          "y_axis_label": [],
+          "units": [],
+          "legend_items": [
+            "Unassigned",
+            "Helitron",
+            "LTR/Copia",
+            "LTR/Gypsy",
+            "DNA/HAT",
+            "DNA+",
+            "DNA/MuDR",
+            "LINE",
+            "RathE1/2/3_cons",
+            "SINE",
+            "TEG"
+          ],
+          "panel_labels": [],
+          "printed_terms": [
+            "=",
+            "+",
+            "Extended Data Fig. 4 | The graph of the nestedness of existing A. thaliana TE annotations. Each node is a cluster of similar sequences (with length and identity"
+          ]
+        },
+        "visual_structure": {
+          "num_panels": 3,
+          "plot_elements": [
+            "nodes",
+            "edges",
+            "color-coded clusters"
+          ],
+          "groups_or_conditions": [
+            "Unassigned",
+            "Helitron",
+            "LTR/Copia",
+            "LTR/Gypsy",
+            "DNA/HAT",
+            "DNA+",
+            "DNA/MuDR",
+            "LINE",
+            "RathE1/2/3_cons",
+            "SINE",
+            "TEG"
+          ],
+          "statistical_markers_visible": []
+        },
+        "factual_observations": [
+          {
+            "observation": "The diagram shows clusters of similar sequences with different colors representing different categories.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "The graph is decomposed into one dominant connected component and several smaller ones.",
+            "evidence_source": "caption",
+            "certainty": "high"
+          }
+        ],
+        "nitrogen_relevance": {
+          "is_relevant": false,
+          "visible_terms": [],
+          "evidence_source": [],
+          "reason": "No nitrogen-related terms are visible in the figure or caption."
+        },
+        "not_determinable": [],
+        "hallucination_risk": "low",
+        "uncertainty_level": "low",
+        "uncertainty_reason": null,
+        "raw_response": "{\n  \"target_figure_only\": true,\n  \"figure_type\": \"diagram\",\n  \"visible_text\": {\n    \"title\": null,\n    \"x_axis_label\": [],\n    \"y_axis_label\": [],\n    \"units\": [],\n    \"legend_items\": [\n      \"Unassigned\",\n      \"Helitron\",\n      \"LTR/Copia\",\n      \"LTR/Gypsy\",\n      \"DNA/HAT\",\n      \"DNA+\",\n      \"DNA/MuDR\",\n      \"LINE\",\n      \"RathE1/2/3_cons\",\n      \"SINE\",\n      \"TEG\"\n    ],\n    \"panel_labels\": [],\n    \"printed_terms\": [\n      \"=\",\n      \"+\",\n      \"Extended Data Fig. 4 | The graph of the nestedness of existing A. thaliana TE annotations. Each node is a cluster of similar sequences (with length and identity\"\n    ]\n  },\n  \"visual_structure\": {\n    \"num_panels\": 3,\n    \"plot_elements\": [\n      \"nodes\",\n      \"edges\",\n      \"color-coded clusters\"\n    ],\n    \"groups_or_conditions\": [\n      \"Unassigned\",\n      \"Helitron\",\n      \"LTR/Copia\",\n      \"LTR/Gypsy\",\n      \"DNA/HAT\",\n      \"DNA+\",\n      \"DNA/MuDR\",\n      \"LINE\",\n      \"RathE1/2/3_cons\",\n      \"SINE\",\n      \"TEG\"\n    ],\n    \"statistical_markers_visible\": []\n  },\n  \"factual_observations\": [\n    {\n      \"observation\": \"The diagram shows clusters of similar sequences with different colors representing different categories.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"The graph is decomposed into one dominant connected component and several smaller ones.\",\n      \"evidence_source\": \"caption\",\n      \"certainty\": \"high\"\n    }\n  ],\n  \"nitrogen_relevance\": {\n    \"is_relevant\": false,\n    \"visible_terms\": [],\n    \"evidence_source\": [],\n    \"reason\": \"No nitrogen-related terms are visible in the figure or caption.\"\n  },\n  \"not_determinable\": [],\n  \"hallucination_risk\": \"low\",\n  \"uncertainty_level\": \"low\",\n  \"uncertainty_reason\": null\n}",
+        "model": "internvl3-78b"
+      },
+      "validation": {
+        "accepted_for_training": true,
+        "validation_level": "low_risk",
+        "reasons": [
+          "Passed heuristic validation"
+        ],
+        "validator": "heuristic_v2"
+      }
+    },
+    {
+      "figure_id": "fig_5_p024_012",
+      "page": 24,
+      "caption": "Extended Data Fig. 5 | Details of gene-ome analysis. a , TE genes were defined as the union of two sets of genes: (1) those with >50% annotated TE sequence in at least one accession, and (2) those with ORFs similar to proteins known to be involved in TE function. b , Comparison of gene presence variation in this study to a recent analysis in 69 A. thaliana accessions 23. For both PC genes and TE genes, our presence–absence variability is higher for gene models compared to gene loci, probably because our gene annotation pipeline misses lowly expressed genes in the four tissues we used. The PC gene model variability in the study from the Mercier lab 23 is substantially higher than in our data. This likely reflects the fact that while we used pan-genome coordinates to match genes between accessions, they used an orthogroup search approach. Consider this case: a gene is both present and has a gene model in every accession, but in three accessions, a shorter gene model was annotated. The orthogroup approach would identify",
+      "context_sentences": [
+        "Fig. 5 | The graph structure of sSVs.",
+        "Fig. 5 | Details of gene-ome analysis."
+      ],
+      "image_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p024_fig5_012.png",
+      "candidate": {
+        "figure_id": "fig_5_p024_012",
+        "page": 24,
+        "caption": "Extended Data Fig. 5 | Details of gene-ome analysis. a , TE genes were defined as the union of two sets of genes: (1) those with >50% annotated TE sequence in at least one accession, and (2) those with ORFs similar to proteins known to be involved in TE function. b , Comparison of gene presence variation in this study to a recent analysis in 69 A. thaliana accessions 23. For both PC genes and TE genes, our presence–absence variability is higher for gene models compared to gene loci, probably because our gene annotation pipeline misses lowly expressed genes in the four tissues we used. The PC gene model variability in the study from the Mercier lab 23 is substantially higher than in our data. This likely reflects the fact that while we used pan-genome coordinates to match genes between accessions, they used an orthogroup search approach. Consider this case: a gene is both present and has a gene model in every accession, but in three accessions, a shorter gene model was annotated. The orthogroup approach would identify",
+        "figure_label": "Figure 5",
+        "figure_number": "5",
+        "bbox_pdf": [
+          32.36,
+          40.96,
+          568.59,
+          548.8
+        ],
+        "caption_bbox_pdf": [
+          39.68,
+          544.76,
+          294.75,
+          673.54
+        ],
+        "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p024_fig5_012.png",
+        "detection_method": "visual_region_drawings_images",
+        "crop_quality": "image_block_crop",
+        "crop_includes_caption": false,
+        "page_width_pdf": 595.28,
+        "page_height_pdf": 790.87,
+        "notes": []
+      },
+      "interpretation": {
+        "target_figure_only": true,
+        "figure_type": "mixed_multi_panel",
+        "visible_text": {
+          "title": null,
+          "x_axis_label": [
+            "0%, 20%, 40%, 60%, 80%, 100%",
+            "0, 10000, 20000, 30000",
+            "0e+00, 1e+07, 2e+07, 3e+07, 4e+07, 5e+07, 6e+07, 7e+07"
+          ],
+          "y_axis_label": [
+            "Frequency of loci and gene models",
+            "Gene presence frequency",
+            "0, 20000, 10000",
+            "Absolute amount",
+            "Chr1, Chr2, Chr3, Chr4, Chr5"
+          ],
+          "units": [],
+          "legend_items": [
+            "core",
+            "softcore",
+            "dispensable",
+            "private",
+            "highfreq: 25-26",
+            "midfreq: 4-24",
+            "lowfreq: 2-3",
+            "private: 1",
+            "27-26",
+            "4-24",
+            "1-3",
+            "Plant defense",
+            "F-box",
+            "Leucine-rich repeat",
+            "Membrane / Transmembrane",
+            "Transport",
+            "Signal peptide / Secreted",
+            "Transferase",
+            "Proteases / Peptidase",
+            "Zinc-finger / Zinc knuckle",
+            "Transcription regulation",
+            "DNA integration",
+            "Reverse transcriptase",
+            "TE / Transposon / Transposase / DNA transposition",
+            "NA",
+            "Ancestral Yes",
+            "Ancestral Similar",
+            "Ancestral No"
+          ],
+          "printed_terms": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h",
+            "i",
+            "5,674 TE genes (TAIR10 and new)",
+            "2,525",
+            "789",
+            "1736",
+            "3149",
+            "4,885",
+            "PC loci",
+            "PC gene models",
+            "C gene models_Mercier",
+            "TE loci",
+            "TE gene models",
+            "core",
+            "softcore",
+            "dispensable",
+            "private",
+            "Gene presence frequency",
+            "TE genes (TAIR10 and new)",
+            "private: 1",
+            "1,527, 27%",
+            "core: 27, 887, 15%",
+            "highfreq: 25-26",
+            "434; 8%",
+            "lowfreq: 2-3",
+            "957; 17%",
+            "midfreq: 4-24",
+            "1,869; 33%",
+            "pc.tail10",
+            "pc.new",
+            "te.tail10",
+            "te.new",
+            "pc.core",
+            "pc.highfreq",
+            "pc.midfreq",
+            "pc.low_and_priv",
+            "pc.ancestral_synteny+seq",
+            "pc.ancestral_seqonly",
+            "pc.non_ancestral",
+            "te.ancestral_synteny+seq",
+            "te.ancestral_seqonly",
+            "te.non_ancestral",
+            "PC",
+            "TE",
+            "thaliana relative position",
+            "lyrata relative position",
+            "Chr1",
+            "Chr2",
+            "Chr3",
+            "Chr4",
+            "Chr5",
+            "0, 20000, 10000",
+            "0e+00, 1e+07, 2e+07, 3e+07, 4e+07, 5e+07, 6e+07, 7e+07",
+            "27-26",
+            "4-24",
+            "1-3",
+            "Ancestral Yes",
+            "Ancestral Similar",
+            "Ancestral No"
+          ]
+        },
+        "visual_structure": {
+          "num_panels": 9,
+          "plot_elements": [
+            "Venn diagram",
+            "bar chart",
+            "pie chart",
+            "scatter plot",
+            "bar chart",
+            "bar chart",
+            "bar chart",
+            "bar chart",
+            "bar chart"
+          ],
+          "groups_or_conditions": [
+            "PC loci",
+            "PC gene models",
+            "C gene models_Mercier",
+            "TE loci",
+            "TE gene models",
+            "pc.tail10",
+            "pc.new",
+            "te.tail10",
+            "te.new",
+            "pc.core",
+            "pc.highfreq",
+            "pc.midfreq",
+            "pc.low_and_priv",
+            "pc.ancestral_synteny+seq",
+            "pc.ancestral_seqonly",
+            "pc.non_ancestral",
+            "te.ancestral_synteny+seq",
+            "te.ancestral_seqonly",
+            "te.non_ancestral",
+            "PC",
+            "TE"
+          ],
+          "statistical_markers_visible": []
+        },
+        "factual_observations": [
+          {
+            "observation": "Panel a shows a Venn diagram with 5,674 TE genes, split into categories based on protein domain TE similarity and high TE sequence content.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel b displays a bar chart comparing the frequency of loci and gene models for PC and TE genes, with categories core, softcore, dispensable, and private.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel c is a pie chart showing gene presence frequency for TE genes, with categories core, highfreq, midfreq, lowfreq, and private.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel d is a scatter plot comparing lyrata relative position and thaliana relative position for TE genes.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel e shows a bar chart with UniProt categories for different gene models and loci.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel f displays a bar chart with UniProt categories for different gene presence frequencies.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel g shows a bar chart with UniProt categories for ancestral and non-ancestral genes.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel h contains histograms showing absolute amounts of PC genes across different chromosomes.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel i contains histograms showing absolute amounts of TE genes across different chromosomes, with ancestral categories.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          }
+        ],
+        "nitrogen_relevance": {
+          "is_relevant": false,
+          "visible_terms": [],
+          "evidence_source": [],
+          "reason": "No terms related to nitrogen are visible in the figure."
+        },
+        "not_determinable": [],
+        "hallucination_risk": "low",
+        "uncertainty_level": "low",
+        "uncertainty_reason": null,
+        "raw_response": "{\n  \"target_figure_only\": true,\n  \"figure_type\": \"mixed_multi_panel\",\n  \"visible_text\": {\n    \"title\": null,\n    \"x_axis_label\": [\"0%, 20%, 40%, 60%, 80%, 100%\", \"0, 10000, 20000, 30000\", \"0e+00, 1e+07, 2e+07, 3e+07, 4e+07, 5e+07, 6e+07, 7e+07\"],\n    \"y_axis_label\": [\"Frequency of loci and gene models\", \"Gene presence frequency\", \"0, 20000, 10000\", \"Absolute amount\", \"Chr1, Chr2, Chr3, Chr4, Chr5\"],\n    \"units\": [],\n    \"legend_items\": [\"core\", \"softcore\", \"dispensable\", \"private\", \"highfreq: 25-26\", \"midfreq: 4-24\", \"lowfreq: 2-3\", \"private: 1\", \"27-26\", \"4-24\", \"1-3\", \"Plant defense\", \"F-box\", \"Leucine-rich repeat\", \"Membrane / Transmembrane\", \"Transport\", \"Signal peptide / Secreted\", \"Transferase\", \"Proteases / Peptidase\", \"Zinc-finger / Zinc knuckle\", \"Transcription regulation\", \"DNA integration\", \"Reverse transcriptase\", \"TE / Transposon / Transposase / DNA transposition\", \"NA\", \"Ancestral Yes\", \"Ancestral Similar\", \"Ancestral No\"],\n    \"printed_terms\": [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\", \"g\", \"h\", \"i\", \"5,674 TE genes (TAIR10 and new)\", \"2,525\", \"789\", \"1736\", \"3149\", \"4,885\", \"PC loci\", \"PC gene models\", \"C gene models_Mercier\", \"TE loci\", \"TE gene models\", \"core\", \"softcore\", \"dispensable\", \"private\", \"Gene presence frequency\", \"TE genes (TAIR10 and new)\", \"private: 1\", \"1,527, 27%\", \"core: 27, 887, 15%\", \"highfreq: 25-26\", \"434; 8%\", \"lowfreq: 2-3\", \"957; 17%\", \"midfreq: 4-24\", \"1,869; 33%\", \"pc.tail10\", \"pc.new\", \"te.tail10\", \"te.new\", \"pc.core\", \"pc.highfreq\", \"pc.midfreq\", \"pc.low_and_priv\", \"pc.ancestral_synteny+seq\", \"pc.ancestral_seqonly\", \"pc.non_ancestral\", \"te.ancestral_synteny+seq\", \"te.ancestral_seqonly\", \"te.non_ancestral\", \"PC\", \"TE\", \"thaliana relative position\", \"lyrata relative position\", \"Chr1\", \"Chr2\", \"Chr3\", \"Chr4\", \"Chr5\", \"0, 20000, 10000\", \"0e+00, 1e+07, 2e+07, 3e+07, 4e+07, 5e+07, 6e+07, 7e+07\", \"27-26\", \"4-24\", \"1-3\", \"Ancestral Yes\", \"Ancestral Similar\", \"Ancestral No\"]\n  },\n  \"visual_structure\": {\n    \"num_panels\": 9,\n    \"plot_elements\": [\"Venn diagram\", \"bar chart\", \"pie chart\", \"scatter plot\", \"bar chart\", \"bar chart\", \"bar chart\", \"bar chart\", \"bar chart\"],\n    \"groups_or_conditions\": [\"PC loci\", \"PC gene models\", \"C gene models_Mercier\", \"TE loci\", \"TE gene models\", \"pc.tail10\", \"pc.new\", \"te.tail10\", \"te.new\", \"pc.core\", \"pc.highfreq\", \"pc.midfreq\", \"pc.low_and_priv\", \"pc.ancestral_synteny+seq\", \"pc.ancestral_seqonly\", \"pc.non_ancestral\", \"te.ancestral_synteny+seq\", \"te.ancestral_seqonly\", \"te.non_ancestral\", \"PC\", \"TE\"],\n    \"statistical_markers_visible\": []\n  },\n  \"factual_observations\": [\n    {\n      \"observation\": \"Panel a shows a Venn diagram with 5,674 TE genes, split into categories based on protein domain TE similarity and high TE sequence content.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel b displays a bar chart comparing the frequency of loci and gene models for PC and TE genes, with categories core, softcore, dispensable, and private.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel c is a pie chart showing gene presence frequency for TE genes, with categories core, highfreq, midfreq, lowfreq, and private.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel d is a scatter plot comparing lyrata relative position and thaliana relative position for TE genes.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel e shows a bar chart with UniProt categories for different gene models and loci.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel f displays a bar chart with UniProt categories for different gene presence frequencies.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel g shows a bar chart with UniProt categories for ancestral and non-ancestral genes.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel h contains histograms showing absolute amounts of PC genes across different chromosomes.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel i contains histograms showing absolute amounts of TE genes across different chromosomes, with ancestral categories.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    }\n  ],\n  \"nitrogen_relevance\": {\n    \"is_relevant\": false,\n    \"visible_terms\": [],\n    \"evidence_source\": [],\n    \"reason\": \"No terms related to nitrogen are visible in the figure.\"\n  },\n  \"not_determinable\": [],\n  \"hallucination_risk\": \"low\",\n  \"uncertainty_level\": \"low\",\n  \"uncertainty_reason\": null\n}",
+        "model": "internvl3-78b"
+      },
+      "validation": {
+        "accepted_for_training": true,
+        "validation_level": "low_risk",
+        "reasons": [
+          "Passed heuristic validation"
+        ],
+        "validator": "heuristic_v2"
+      }
+    },
+    {
+      "figure_id": "fig_6_p025_013",
+      "page": 25,
+      "caption": "Extended Data Fig. 6 | Gene silencing and expression by gene presence frequency and ancestral status. a , Median expression vs. frequency for all accessions. b , H3K9me2 and H3K27me3 54 genes vs. their frequency. Values plotted are medians of quantile- and input-normalized ChIP-seq signals. c , 24-nt sRNAs coverage of genes of different frequencies. Left: distribution in flowers of accession 6024. Right: median coverage. d , Locus-wide CHG, CG and CHH methylation levels in leaves 53 for genes of different frequency. Left: distribution in accession 6024. Right: median levels. e , Expression (median TPM) vs. ancestral status for all accessions. f , H3K9me2 and H3K27me3 54 vs. ancestral status. Values plotted are medians of quantile- and input-normalized ChIP-seq",
+      "context_sentences": [
+        "Fig. 6 | Analysis of the gene-ome.",
+        "Fig. 6.",
+        "Fig. 6).",
+        "Fig. 6 | Gene silencing and expression by gene presence** **frequency and ancestral status.",
+        "(Fig. 6)"
+      ],
+      "image_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p025_fig6_013.png",
+      "candidate": {
+        "figure_id": "fig_6_p025_013",
+        "page": 25,
+        "caption": "Extended Data Fig. 6 | Gene silencing and expression by gene presence frequency and ancestral status. a , Median expression vs. frequency for all accessions. b , H3K9me2 and H3K27me3 54 genes vs. their frequency. Values plotted are medians of quantile- and input-normalized ChIP-seq signals. c , 24-nt sRNAs coverage of genes of different frequencies. Left: distribution in flowers of accession 6024. Right: median coverage. d , Locus-wide CHG, CG and CHH methylation levels in leaves 53 for genes of different frequency. Left: distribution in accession 6024. Right: median levels. e , Expression (median TPM) vs. ancestral status for all accessions. f , H3K9me2 and H3K27me3 54 vs. ancestral status. Values plotted are medians of quantile- and input-normalized ChIP-seq",
+        "figure_label": "Figure 6",
+        "figure_number": "6",
+        "bbox_pdf": [
+          32.39,
+          40.96,
+          568.55,
+          589.0
+        ],
+        "caption_bbox_pdf": [
+          39.68,
+          584.96,
+          293.14,
+          683.74
+        ],
+        "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p025_fig6_013.png",
+        "detection_method": "visual_region_drawings_images",
+        "crop_quality": "image_block_crop",
+        "crop_includes_caption": false,
+        "page_width_pdf": 595.28,
+        "page_height_pdf": 790.87,
+        "notes": []
+      },
+      "interpretation": {
+        "target_figure_only": true,
+        "figure_type": "mixed_multi_panel",
+        "visible_text": {
+          "title": null,
+          "x_axis_label": [
+            "frequency",
+            "ancestral status"
+          ],
+          "y_axis_label": [
+            "expression level (TPM)",
+            "normalized ChIP-seq level, mature leaves",
+            "24nt sRNA coverage",
+            "CG methylation level",
+            "CHG methylation level",
+            "CHH methylation level",
+            "methylation level"
+          ],
+          "units": [
+            "TPM",
+            "RPM"
+          ],
+          "legend_items": [],
+          "panel_labels": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g",
+            "h"
+          ]
+        },
+        "visual_structure": {
+          "num_panels": 8,
+          "plot_elements": [
+            "heatmap",
+            "violin_plot",
+            "bar_chart"
+          ],
+          "groups_or_conditions": [
+            "27",
+            "25-26",
+            "24",
+            "4-3",
+            "1",
+            "in",
+            "bes",
+            "ou",
+            "full",
+            "sed",
+            "no"
+          ],
+          "statistical_markers_visible": [
+            "p=0.01",
+            "p=0.03",
+            "p=0.04",
+            "p=0.06",
+            "p=0.08",
+            "p=0.10",
+            "p=0.10^4",
+            "p=0.10^3",
+            "p=0.10^2"
+          ]
+        },
+        "factual_observations": [
+          {
+            "observation": "Panel a shows a heatmap of expression levels (TPM) for 27 accessions.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel b displays normalized ChIP-seq levels for H3K9me2 and H3K27me3 across different frequencies.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel c includes violin plots of 24nt sRNA coverage for different frequencies in accession 6024.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel d presents CG, CHG, and CHH methylation levels for different frequencies in accession 6024.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel e shows a heatmap of expression levels (TPM) for different ancestral statuses.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel f displays normalized ChIP-seq levels for H3K9me2 and H3K27me3 across ancestral statuses.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel g includes bar charts of 24nt sRNA coverage for different ancestral statuses in accession 6024.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel h presents CG, CHG, and CHH methylation levels for different ancestral statuses in accession 6024.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          }
+        ],
+        "nitrogen_relevance": {
+          "is_relevant": false,
+          "visible_terms": [],
+          "evidence_source": [],
+          "reason": "No terms related to nitrogen are visible in the figure."
+        },
+        "not_determinable": [],
+        "hallucination_risk": "low",
+        "uncertainty_level": "low",
+        "uncertainty_reason": null,
+        "raw_response": "{\n  \"target_figure_only\": true,\n  \"figure_type\": \"mixed_multi_panel\",\n  \"visible_text\": {\n    \"title\": null,\n    \"x_axis_label\": [\"frequency\", \"ancestral status\"],\n    \"y_axis_label\": [\"expression level (TPM)\", \"normalized ChIP-seq level, mature leaves\", \"24nt sRNA coverage\", \"CG methylation level\", \"CHG methylation level\", \"CHH methylation level\", \"methylation level\"],\n    \"units\": [\"TPM\", \"RPM\"],\n    \"legend_items\": [],\n    \"panel_labels\": [\"a\", \"b\", \"c\", \"d\", \"e\", \"f\", \"g\", \"h\"]\n  },\n  \"visual_structure\": {\n    \"num_panels\": 8,\n    \"plot_elements\": [\"heatmap\", \"violin_plot\", \"bar_chart\"],\n    \"groups_or_conditions\": [\"27\", \"25-26\", \"24\", \"4-3\", \"1\", \"in\", \"bes\", \"ou\", \"full\", \"sed\", \"no\"],\n    \"statistical_markers_visible\": [\"p=0.01\", \"p=0.03\", \"p=0.04\", \"p=0.06\", \"p=0.08\", \"p=0.10\", \"p=0.10^4\", \"p=0.10^3\", \"p=0.10^2\"]\n  },\n  \"factual_observations\": [\n    {\n      \"observation\": \"Panel a shows a heatmap of expression levels (TPM) for 27 accessions.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel b displays normalized ChIP-seq levels for H3K9me2 and H3K27me3 across different frequencies.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel c includes violin plots of 24nt sRNA coverage for different frequencies in accession 6024.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel d presents CG, CHG, and CHH methylation levels for different frequencies in accession 6024.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel e shows a heatmap of expression levels (TPM) for different ancestral statuses.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel f displays normalized ChIP-seq levels for H3K9me2 and H3K27me3 across ancestral statuses.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel g includes bar charts of 24nt sRNA coverage for different ancestral statuses in accession 6024.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel h presents CG, CHG, and CHH methylation levels for different ancestral statuses in accession 6024.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    }\n  ],\n  \"nitrogen_relevance\": {\n    \"is_relevant\": false,\n    \"visible_terms\": [],\n    \"evidence_source\": [],\n    \"reason\": \"No terms related to nitrogen are visible in the figure.\"\n  },\n  \"not_determinable\": [],\n  \"hallucination_risk\": \"low\",\n  \"uncertainty_level\": \"low\",\n  \"uncertainty_reason\": null\n}",
+        "model": "internvl3-78b"
+      },
+      "validation": {
+        "accepted_for_training": true,
+        "validation_level": "low_risk",
+        "reasons": [
+          "Passed heuristic validation"
+        ],
+        "validator": "heuristic_v2"
+      }
+    },
+    {
+      "figure_id": "fig_7_p026_014",
+      "page": 26,
+      "caption": "Extended Data Fig. 7 | Extended pan-genome analysis. a , Saturation curves for sSVs for different lengths. Each curve is drawn through points that are the averaged values from 20 repetitions. The curves were normalized to start and end at the same points. Larger sSVs saturate more quickly. b , Normalized saturation curves for different genome components: the dependence on sample size for the union (‘pan’) and intersection (‘core’) sequence length, separately for the full genome, the mobile-ome and the gene-ome. Within the ‘pan’ curves, the mobile-",
+      "context_sentences": [
+        "Fig. 7).",
+        "Fig. 7 | The growth of the pangenome.",
+        "Fig. 7 We distinguish between two types of segregating genes: a minority with homologs in the closely related _A.",
+        "Fig. 7 | Extended pan-genome analysis.",
+        "(Fig. 7 We distinguish between two types of segregating genes: a minority with homologs in the closely related _A. lyrata_ and a majority without (Fig. 6)"
+      ],
+      "image_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p026_fig7_014.png",
+      "candidate": {
+        "figure_id": "fig_7_p026_014",
+        "page": 26,
+        "caption": "Extended Data Fig. 7 | Extended pan-genome analysis. a , Saturation curves for sSVs for different lengths. Each curve is drawn through points that are the averaged values from 20 repetitions. The curves were normalized to start and end at the same points. Larger sSVs saturate more quickly. b , Normalized saturation curves for different genome components: the dependence on sample size for the union (‘pan’) and intersection (‘core’) sequence length, separately for the full genome, the mobile-ome and the gene-ome. Within the ‘pan’ curves, the mobile-",
+        "figure_label": "Figure 7",
+        "figure_number": "7",
+        "bbox_pdf": [
+          32.49,
+          40.96,
+          568.46,
+          617.59
+        ],
+        "caption_bbox_pdf": [
+          39.68,
+          613.54,
+          295.62,
+          682.31
+        ],
+        "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_arabidopsis/paper_arabidopsis_p026_fig7_014.png",
+        "detection_method": "visual_region_drawings_images",
+        "crop_quality": "image_block_crop",
+        "crop_includes_caption": false,
+        "page_width_pdf": 595.28,
+        "page_height_pdf": 790.87,
+        "notes": []
+      },
+      "interpretation": {
+        "target_figure_only": true,
+        "figure_type": "line_plot",
+        "visible_text": {
+          "title": null,
+          "x_axis_label": [
+            "# of accessions",
+            "Number of genomes",
+            "Pangenome coordinate",
+            "Pangenome coordinate",
+            "Pangenome coordinate",
+            "Pangenome coordinate"
+          ],
+          "y_axis_label": [
+            "Norm cnt",
+            "Normalised length",
+            "Col-0 coordinate",
+            "Col-0 coordinate",
+            "Col-0 coordinate",
+            "Col-0 coordinate"
+          ],
+          "units": [],
+          "legend_items": [
+            "[1, 15]",
+            "[15, 50]",
+            "[50, 100]",
+            "[100, 200]",
+            "[200, 500]",
+            "[500, 1k]",
+            "[1k, 2k]",
+            "[2k, 5k]",
+            "[5k, 10k]",
+            "[10k, Inf]",
+            "complex",
+            "Genes",
+            "Genome",
+            "Mobilome"
+          ],
+          "printed_terms": [
+            "a",
+            "SVs",
+            "Indel Length (bp)",
+            "b",
+            "Pan",
+            "Core",
+            "c",
+            "Chromosome 2, Slopes: 0.81",
+            "d",
+            "Chromosome 1, Slopes: 0.75, 0.77",
+            "e",
+            "Chromosome 4, Slopes: 0.78",
+            "f",
+            "Chromosome 5, Slopes: 0.78, 0.77"
+          ]
+        },
+        "visual_structure": {
+          "num_panels": 6,
+          "plot_elements": [
+            "line_plot",
+            "line_plot",
+            "line_plot",
+            "line_plot",
+            "line_plot",
+            "line_plot"
+          ],
+          "groups_or_conditions": [
+            "SVs",
+            "Indel Length (bp)",
+            "Genes",
+            "Genome",
+            "Mobilome"
+          ],
+          "statistical_markers_visible": []
+        },
+        "factual_observations": [
+          {
+            "observation": "Panel a shows saturation curves for sSVs for different lengths.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel b shows normalized saturation curves for different genome components.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panels c, d, e, and f show correlation between pangenome coordinate and Col-0 coordinate for different chromosomes with indicated slopes.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          }
+        ],
+        "nitrogen_relevance": {
+          "is_relevant": false,
+          "visible_terms": [],
+          "evidence_source": [],
+          "reason": "No terms related to nitrogen are visible in the figure."
+        },
+        "not_determinable": [],
+        "hallucination_risk": "low",
+        "uncertainty_level": "low",
+        "uncertainty_reason": null,
+        "raw_response": "{\n  \"target_figure_only\": true,\n  \"figure_type\": \"line_plot\",\n  \"visible_text\": {\n    \"title\": null,\n    \"x_axis_label\": [\"# of accessions\", \"Number of genomes\", \"Pangenome coordinate\", \"Pangenome coordinate\", \"Pangenome coordinate\", \"Pangenome coordinate\"],\n    \"y_axis_label\": [\"Norm cnt\", \"Normalised length\", \"Col-0 coordinate\", \"Col-0 coordinate\", \"Col-0 coordinate\", \"Col-0 coordinate\"],\n    \"units\": [],\n    \"legend_items\": [\"[1, 15]\", \"[15, 50]\", \"[50, 100]\", \"[100, 200]\", \"[200, 500]\", \"[500, 1k]\", \"[1k, 2k]\", \"[2k, 5k]\", \"[5k, 10k]\", \"[10k, Inf]\", \"complex\", \"Genes\", \"Genome\", \"Mobilome\"],\n    \"printed_terms\": [\"a\", \"SVs\", \"Indel Length (bp)\", \"b\", \"Pan\", \"Core\", \"c\", \"Chromosome 2, Slopes: 0.81\", \"d\", \"Chromosome 1, Slopes: 0.75, 0.77\", \"e\", \"Chromosome 4, Slopes: 0.78\", \"f\", \"Chromosome 5, Slopes: 0.78, 0.77\"]\n  },\n  \"visual_structure\": {\n    \"num_panels\": 6,\n    \"plot_elements\": [\"line_plot\", \"line_plot\", \"line_plot\", \"line_plot\", \"line_plot\", \"line_plot\"],\n    \"groups_or_conditions\": [\"SVs\", \"Indel Length (bp)\", \"Genes\", \"Genome\", \"Mobilome\"],\n    \"statistical_markers_visible\": []\n  },\n  \"factual_observations\": [\n    {\n      \"observation\": \"Panel a shows saturation curves for sSVs for different lengths.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel b shows normalized saturation curves for different genome components.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panels c, d, e, and f show correlation between pangenome coordinate and Col-0 coordinate for different chromosomes with indicated slopes.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    }\n  ],\n  \"nitrogen_relevance\": {\n    \"is_relevant\": false,\n    \"visible_terms\": [],\n    \"evidence_source\": [],\n    \"reason\": \"No terms related to nitrogen are visible in the figure.\"\n  },\n  \"not_determinable\": [],\n  \"hallucination_risk\": \"low\",\n  \"uncertainty_level\": \"low\",\n  \"uncertainty_reason\": null\n}",
+        "model": "internvl3-78b"
+      },
+      "validation": {
+        "accepted_for_training": true,
+        "validation_level": "low_risk",
+        "reasons": [
+          "Passed heuristic validation"
+        ],
+        "validator": "heuristic_v2"
+      }
+    }
+  ]
+}

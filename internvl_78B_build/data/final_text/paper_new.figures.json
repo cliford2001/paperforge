@@ -1,0 +1,193 @@
+{
+  "pdf_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/raw_pdfs/paper_new.pdf",
+  "paper_stem": "paper_new",
+  "paper_title": "REVIEW published: 10 December 2020 doi: 10.3389/fpls.2020.574246",
+  "text_length_chars": 73402,
+  "figure_count": 1,
+  "processing_time_s": 67.59,
+  "timestamp": "2026-05-25T22:32:35",
+  "metadata": {
+    "pipeline": "figures_nitrogen_v3",
+    "mode": "internvl_only"
+  },
+  "figures": [
+    {
+      "figure_id": "fig_1_p004_000",
+      "page": 4,
+      "caption": "FIGURE 1 | The working model of NO 3 − regulation on leaf senescence and circadian clock. Leaf senescence accompany with N reallocation to meet the demand of N in young and developing tissues. (A) The miR169 reduces the N uptake and total N content by decreasing the expression of NRT1.1 and NRT2.1 and promotes the early senescence induced by N starvation. NRT1.5 increases foliar K + levels to suppress NO 3 − starvation-induced leaf senescence. CPSF30-L interacts with FIP1 and both can regulate the expression of NRT1.5 , but if both genes participate in NO 3 − starvation-induced leaf senescence remains unknown. As a target of miR827, NLA directly interacts with NRT1.7 and promotes its degradation to repress leaf senescence. UBP12 and UBP13 interact with ORE1 and promote its deubiquitination to prevent ORE1 from degradation. The increased ORE1 levels activate the expression of downstream SAGs such as BFN1 , RNS3 , NYE1 , VNI2 , SAG29, and SINA1 to promote N deﬁciency-induced leaf senescence. (B) A feedback loop between N assimilation and circadian clock. Organic N inﬂuences the CCA1 phase and CCA1 in turn regulates the expression of organic N-regulated genes. N deﬁciency condition can increase the amplitudes of CCA1 , LHY , and TOC1 transcripts. (C) ELF3 inhibits the expression of PIF4/PIF5 to repress dark-induced leaf senescence. PIF4 and PIF5 promote dark-induced senescence by directly activating the expression of ORE1 and indirectly activating the expression of EIN3, ABI5, and EEL . PRR9 can activate the expression of ORE1 directly or suppress the expression of miR164 to promote dark-induced leaf senescence. (D) The circadian evening complex (ELF3-ELF4-LUX) directly binds to the promoter of MYC2 to repress jasmonate-induced leaf senescence. However, if circadian clock is involved in N deﬁciency-induced senescence remains unknown. The solid and dotted arrows represent known and unknown functions, respectively.",
+      "context_sentences": [
+        "FIGURE 1 | The working model of NO3[−] regulation on leaf senescence and circadian clock."
+      ],
+      "image_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_new/paper_new_p004_fig1_000.png",
+      "candidate": {
+        "figure_id": "fig_1_p004_000",
+        "page": 4,
+        "caption": "FIGURE 1 | The working model of NO 3 − regulation on leaf senescence and circadian clock. Leaf senescence accompany with N reallocation to meet the demand of N in young and developing tissues. (A) The miR169 reduces the N uptake and total N content by decreasing the expression of NRT1.1 and NRT2.1 and promotes the early senescence induced by N starvation. NRT1.5 increases foliar K + levels to suppress NO 3 − starvation-induced leaf senescence. CPSF30-L interacts with FIP1 and both can regulate the expression of NRT1.5 , but if both genes participate in NO 3 − starvation-induced leaf senescence remains unknown. As a target of miR827, NLA directly interacts with NRT1.7 and promotes its degradation to repress leaf senescence. UBP12 and UBP13 interact with ORE1 and promote its deubiquitination to prevent ORE1 from degradation. The increased ORE1 levels activate the expression of downstream SAGs such as BFN1 , RNS3 , NYE1 , VNI2 , SAG29, and SINA1 to promote N deﬁciency-induced leaf senescence. (B) A feedback loop between N assimilation and circadian clock. Organic N inﬂuences the CCA1 phase and CCA1 in turn regulates the expression of organic N-regulated genes. N deﬁciency condition can increase the amplitudes of CCA1 , LHY , and TOC1 transcripts. (C) ELF3 inhibits the expression of PIF4/PIF5 to repress dark-induced leaf senescence. PIF4 and PIF5 promote dark-induced senescence by directly activating the expression of ORE1 and indirectly activating the expression of EIN3, ABI5, and EEL . PRR9 can activate the expression of ORE1 directly or suppress the expression of miR164 to promote dark-induced leaf senescence. (D) The circadian evening complex (ELF3-ELF4-LUX) directly binds to the promoter of MYC2 to repress jasmonate-induced leaf senescence. However, if circadian clock is involved in N deﬁciency-induced senescence remains unknown. The solid and dotted arrows represent known and unknown functions, respectively.",
+        "figure_label": "Figure 1",
+        "figure_number": "1",
+        "bbox_pdf": [
+          52.02,
+          61.02,
+          541.21,
+          253.27
+        ],
+        "caption_bbox_pdf": [
+          51.21,
+          259.1,
+          544.17,
+          380.14
+        ],
+        "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_new/paper_new_p004_fig1_000.png",
+        "detection_method": "visual_region_drawings_images",
+        "crop_quality": "image_block_crop",
+        "crop_includes_caption": false,
+        "page_width_pdf": 595.28,
+        "page_height_pdf": 779.53,
+        "notes": []
+      },
+      "interpretation": {
+        "target_figure_only": true,
+        "figure_type": "diagram",
+        "visible_text": {
+          "title": null,
+          "x_axis_label": [],
+          "y_axis_label": [],
+          "units": [],
+          "legend_items": [],
+          "printed_terms": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "miR169",
+            "CPSF30-L",
+            "FIP1",
+            "miR827",
+            "UBP12/13",
+            "ORE1",
+            "NRT1.1",
+            "NRT2.1",
+            "NRT1.5",
+            "NLA",
+            "NRT1.7",
+            "BFN1",
+            "RNS3",
+            "NYE1",
+            "VNI2",
+            "SAG29",
+            "SINA1",
+            "Reduced N uptake and total N content",
+            "Leaf K+ accumulation",
+            "NRT1.7 degradation",
+            "N deficiency-induced leaf senescence",
+            "Young and developing tissues",
+            "Old yellow leaves",
+            "N",
+            "NH4+",
+            "GS",
+            "GOGAT",
+            "Gln/Glu",
+            "NO3-",
+            "NR",
+            "NiR",
+            "CCA1",
+            "LHY",
+            "TOC1",
+            "Circadian clock",
+            "N deficiency",
+            "N assimilation",
+            "ELF3",
+            "PIF4/5",
+            "PRR9",
+            "R164",
+            "EIN3",
+            "ABI5",
+            "EEL",
+            "ORE1",
+            "Dark-induced leaf senescence",
+            "ELF3-ELF4-LUX",
+            "MYC2",
+            "Jasmonate-induced leaf senescence"
+          ]
+        },
+        "visual_structure": {
+          "num_panels": 4,
+          "plot_elements": [
+            "Arrows",
+            "Boxes",
+            "Text labels"
+          ],
+          "groups_or_conditions": [
+            "N deficiency-induced leaf senescence",
+            "N assimilation",
+            "Dark-induced leaf senescence",
+            "Jasmonate-induced leaf senescence"
+          ],
+          "statistical_markers_visible": []
+        },
+        "factual_observations": [
+          {
+            "observation": "Panel A shows miR169, CPSF30-L, FIP1, miR827, UBP12/13, ORE1, NRT1.1, NRT2.1, NRT1.5, NLA, NRT1.7, BFN1, RNS3, NYE1, VNI2, SAG29, SINA1, Reduced N uptake and total N content, Leaf K+ accumulation, NRT1.7 degradation, N deficiency-induced leaf senescence.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel B shows NH4+, GS, GOGAT, Gln/Glu, NO3-, NR, NiR, CCA1, LHY, TOC1, Circadian clock, N deficiency, N assimilation.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel C shows ELF3, PIF4/5, PRR9, R164, EIN3, ABI5, EEL, ORE1, Dark-induced leaf senescence.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          },
+          {
+            "observation": "Panel D shows ELF3-ELF4-LUX, MYC2, Jasmonate-induced leaf senescence.",
+            "evidence_source": "visual",
+            "certainty": "high"
+          }
+        ],
+        "nitrogen_relevance": {
+          "is_relevant": true,
+          "visible_terms": [
+            "N",
+            "NH4+",
+            "GS",
+            "GOGAT",
+            "Gln/Glu",
+            "NO3-",
+            "NR",
+            "NiR",
+            "N deficiency",
+            "N assimilation",
+            "NRT1.1",
+            "NRT2.1",
+            "NRT1.5",
+            "NRT1.7",
+            "Reduced N uptake and total N content",
+            "Leaf K+ accumulation",
+            "N deficiency-induced leaf senescence"
+          ],
+          "evidence_source": [
+            "visual"
+          ],
+          "reason": "Visible terms related to nitrogen are present in the diagram."
+        },
+        "not_determinable": [],
+        "hallucination_risk": "low",
+        "uncertainty_level": "low",
+        "uncertainty_reason": null,
+        "raw_response": "{\n  \"target_figure_only\": true,\n  \"figure_type\": \"diagram\",\n  \"visible_text\": {\n    \"title\": null,\n    \"x_axis_label\": [],\n    \"y_axis_label\": [],\n    \"units\": [],\n    \"legend_items\": [],\n    \"printed_terms\": [\n      \"A\",\n      \"B\",\n      \"C\",\n      \"D\",\n      \"miR169\",\n      \"CPSF30-L\",\n      \"FIP1\",\n      \"miR827\",\n      \"UBP12/13\",\n      \"ORE1\",\n      \"NRT1.1\",\n      \"NRT2.1\",\n      \"NRT1.5\",\n      \"NLA\",\n      \"NRT1.7\",\n      \"BFN1\",\n      \"RNS3\",\n      \"NYE1\",\n      \"VNI2\",\n      \"SAG29\",\n      \"SINA1\",\n      \"Reduced N uptake and total N content\",\n      \"Leaf K+ accumulation\",\n      \"NRT1.7 degradation\",\n      \"N deficiency-induced leaf senescence\",\n      \"Young and developing tissues\",\n      \"Old yellow leaves\",\n      \"N\",\n      \"NH4+\",\n      \"GS\",\n      \"GOGAT\",\n      \"Gln/Glu\",\n      \"NO3-\",\n      \"NR\",\n      \"NiR\",\n      \"CCA1\",\n      \"LHY\",\n      \"TOC1\",\n      \"Circadian clock\",\n      \"N deficiency\",\n      \"N assimilation\",\n      \"ELF3\",\n      \"PIF4/5\",\n      \"PRR9\",\n      \"R164\",\n      \"EIN3\",\n      \"ABI5\",\n      \"EEL\",\n      \"ORE1\",\n      \"Dark-induced leaf senescence\",\n      \"ELF3-ELF4-LUX\",\n      \"MYC2\",\n      \"Jasmonate-induced leaf senescence\"\n    ]\n  },\n  \"visual_structure\": {\n    \"num_panels\": 4,\n    \"plot_elements\": [\n      \"Arrows\",\n      \"Boxes\",\n      \"Text labels\"\n    ],\n    \"groups_or_conditions\": [\n      \"N deficiency-induced leaf senescence\",\n      \"N assimilation\",\n      \"Dark-induced leaf senescence\",\n      \"Jasmonate-induced leaf senescence\"\n    ],\n    \"statistical_markers_visible\": []\n  },\n  \"factual_observations\": [\n    {\n      \"observation\": \"Panel A shows miR169, CPSF30-L, FIP1, miR827, UBP12/13, ORE1, NRT1.1, NRT2.1, NRT1.5, NLA, NRT1.7, BFN1, RNS3, NYE1, VNI2, SAG29, SINA1, Reduced N uptake and total N content, Leaf K+ accumulation, NRT1.7 degradation, N deficiency-induced leaf senescence.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel B shows NH4+, GS, GOGAT, Gln/Glu, NO3-, NR, NiR, CCA1, LHY, TOC1, Circadian clock, N deficiency, N assimilation.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel C shows ELF3, PIF4/5, PRR9, R164, EIN3, ABI5, EEL, ORE1, Dark-induced leaf senescence.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    },\n    {\n      \"observation\": \"Panel D shows ELF3-ELF4-LUX, MYC2, Jasmonate-induced leaf senescence.\",\n      \"evidence_source\": \"visual\",\n      \"certainty\": \"high\"\n    }\n  ],\n  \"nitrogen_relevance\": {\n    \"is_relevant\": true,\n    \"visible_terms\": [\n      \"N\",\n      \"NH4+\",\n      \"GS\",\n      \"GOGAT\",\n      \"Gln/Glu\",\n      \"NO3-\",\n      \"NR\",\n      \"NiR\",\n      \"N deficiency\",\n      \"N assimilation\",\n      \"NRT1.1\",\n      \"NRT2.1\",\n      \"NRT1.5\",\n      \"NRT1.7\",\n      \"Reduced N uptake and total N content\",\n      \"Leaf K+ accumulation\",\n      \"N deficiency-induced leaf senescence\"\n    ],\n    \"evidence_source\": [\n      \"visual\"\n    ],\n    \"reason\": \"Visible terms related to nitrogen are present in the diagram.\"\n  },\n  \"not_determinable\": [],\n  \"hallucination_risk\": \"low\",\n  \"uncertainty_level\": \"low\",\n  \"uncertainty_reason\": null\n}",
+        "model": "internvl3-78b"
+      },
+      "validation": {
+        "accepted_for_training": true,
+        "validation_level": "low_risk",
+        "reasons": [
+          "Passed heuristic validation"
+        ],
+        "validator": "heuristic_v2"
+      }
+    }
+  ]
+}

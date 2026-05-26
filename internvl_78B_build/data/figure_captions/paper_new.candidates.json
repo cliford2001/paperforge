@@ -1,0 +1,28 @@
+[
+  {
+    "figure_id": "fig_1_p004_000",
+    "page": 4,
+    "caption": "FIGURE 1 | The working model of NO 3 − regulation on leaf senescence and circadian clock. Leaf senescence accompany with N reallocation to meet the demand of N in young and developing tissues. (A) The miR169 reduces the N uptake and total N content by decreasing the expression of NRT1.1 and NRT2.1 and promotes the early senescence induced by N starvation. NRT1.5 increases foliar K + levels to suppress NO 3 − starvation-induced leaf senescence. CPSF30-L interacts with FIP1 and both can regulate the expression of NRT1.5 , but if both genes participate in NO 3 − starvation-induced leaf senescence remains unknown. As a target of miR827, NLA directly interacts with NRT1.7 and promotes its degradation to repress leaf senescence. UBP12 and UBP13 interact with ORE1 and promote its deubiquitination to prevent ORE1 from degradation. The increased ORE1 levels activate the expression of downstream SAGs such as BFN1 , RNS3 , NYE1 , VNI2 , SAG29, and SINA1 to promote N deﬁciency-induced leaf senescence. (B) A feedback loop between N assimilation and circadian clock. Organic N inﬂuences the CCA1 phase and CCA1 in turn regulates the expression of organic N-regulated genes. N deﬁciency condition can increase the amplitudes of CCA1 , LHY , and TOC1 transcripts. (C) ELF3 inhibits the expression of PIF4/PIF5 to repress dark-induced leaf senescence. PIF4 and PIF5 promote dark-induced senescence by directly activating the expression of ORE1 and indirectly activating the expression of EIN3, ABI5, and EEL . PRR9 can activate the expression of ORE1 directly or suppress the expression of miR164 to promote dark-induced leaf senescence. (D) The circadian evening complex (ELF3-ELF4-LUX) directly binds to the promoter of MYC2 to repress jasmonate-induced leaf senescence. However, if circadian clock is involved in N deﬁciency-induced senescence remains unknown. The solid and dotted arrows represent known and unknown functions, respectively.",
+    "figure_label": "Figure 1",
+    "figure_number": "1",
+    "bbox_pdf": [
+      52.02,
+      61.02,
+      541.21,
+      253.27
+    ],
+    "caption_bbox_pdf": [
+      51.21,
+      259.1,
+      544.17,
+      380.14
+    ],
+    "crop_path": "/workspace1/rubenqc/.ibio/chart-to-text/data/extracted_figures/paper_new/paper_new_p004_fig1_000.png",
+    "detection_method": "visual_region_drawings_images",
+    "crop_quality": "image_block_crop",
+    "crop_includes_caption": false,
+    "page_width_pdf": 595.28,
+    "page_height_pdf": 779.53,
+    "notes": []
+  }
+]
