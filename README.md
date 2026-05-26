@@ -7,20 +7,95 @@ Multimodal pipeline for automated analysis of figures and tables in scientific P
 ## Overview
 
 ```
-SQLite DB ──► Download PDF ──► Extract ──────────────────► Analyze LLM ──► analyses_rag.json
-(DOI, text)                    figures.json                 ↑
-                               tables.json    paper_context.txt
-                               paper_context.txt  (abstract detection + BM25 / full-text)
+┌─────────────────────────────────────────────────────────────────────────┐
+│                          SQLite / Paquete                               │
+│                    DOI  ·  texto completo  ·  metadata                  │
+└────────────────────┬────────────────────────────┬───────────────────────┘
+                     │                            │
+                     ▼                            ▼
+          ┌──────────────────┐        ┌───────────────────────┐
+          │  Descarga PDF    │        │  paper_context.txt    │
+          │  (via DOI)       │        │  (texto completo del  │
+          └────────┬─────────┘        │   paper, del paquete) │
+                   │                  └──────────┬────────────┘
+                   │                             │
+          ┌────────▼─────────┐                  │
+          │   Extracción     │        ┌──────────▼────────────────────────┐
+          │                  │        │         Preparación de contexto   │
+          │  figures.json    │        │                                   │
+          │  + PNGs          │        │  ① Abstract                       │
+          │                  │        │     detectado por heading         │
+          │  tables.json     │        │     "Abstract" → corte en         │
+          │  + PNGs          │        │     "Introduction / Methods..."   │
+          └────────┬─────────┘        │                                   │
+                   │                  │  ② RAG del fulltext               │
+                   │                  │     BM25: top-10 chunks           │
+                   │                  │     (query = caption)             │
+                   │                  │          ── o ──                  │
+                   │                  │     Full-text: texto completo     │
+                   │                  │     (GPU grande, ctx ≥ 32k)       │
+                   │                  └──────────┬────────────────────────┘
+                   │                             │
+                   │     ┌───────────────────────┘
+                   │     │
+    ┌──────────────▼─────▼──────────────────────────────────────────────┐
+    │                 Por cada figura / tabla                            │
+    │                                                                    │
+    │   PROMPT DINÁMICO                                                  │
+    │                                                                    │
+    │   ┌─────────────────────────────────────────────────────────────┐ │
+    │   │  PAPER ABSTRACT:          ← bloque ①                       │ │
+    │   │  "CML is driven by BCR-ABL1. Imatinib resistance..."       │ │
+    │   │                                                             │ │
+    │   │  BM25 context (top 10):   ← bloque ② (si hay fulltext)    │ │
+    │   │  [chunk1] ... [chunk2] ... [chunk10]                       │ │
+    │   │  ---                                                        │ │
+    │   │                                                             │ │
+    │   │  Figure caption: "Fig 2. Synergistic inhibition..."        │ │
+    │   │                                                             │ │
+    │   │  ## Visual Description    ← instrucciones base ③           │ │
+    │   │  ## Figure Type                                             │ │
+    │   │  ## Statistical Markers                                     │ │
+    │   │  ## Data and Patterns                                       │ │
+    │   │  ## Caption Alignment                                       │ │
+    │   │  ## Scientific Interpretation                               │ │
+    │   │  ## Hypothesis Tested     ← solo si hay RAG                │ │
+    │   │  ## Controls Assessment   ← solo si hay RAG                │ │
+    │   │  ## Scientific Conclusion                                   │ │
+    │   │                                                             │ │
+    │   │  Responde SOLO con JSON: { ... }                           │ │
+    │   └──────────────────────┬──────────────────────────────────── ┘ │
+    │                          │  + imagen PNG (base64)                 │
+    │                          ▼                                        │
+    │                  ┌───────────────┐                                │
+    │                  │  VLM (llama)  │  InternVL3-8B / 14B            │
+    │                  └───────┬───────┘  llama.cpp · GPU              │
+    │                          ▼                                        │
+    │             { analysis_parsed: {                                  │
+    │               figure_type, visual_description,                    │
+    │               statistical_markers, key_finding,                   │
+    │               hypothesis_tested*, paper_quote*,                   │
+    │               controls_assessment*, scientific_conclusion,        │
+    │               context_used, confidence } }                        │
+    │                          *solo si RAG disponible                  │
+    └──────────────────────────┬────────────────────────────────────────┘
+                               │  (repite para cada figura y tabla)
+                               ▼
+    ┌──────────────────────────────────────────────────────────────────┐
+    │               Síntesis final del paper                           │
+    │          (una llamada de solo texto, sin imagen)                 │
+    │                                                                  │
+    │   Input: todos los analysis_parsed del paper                    │
+    │                                                                  │
+    │   Output: paper_summary {                                        │
+    │     main_contribution,  narrative,  key_evidence,               │
+    │     contradictions_or_gaps,  limitations_noted,                 │
+    │     overall_confidence }                                         │
+    └──────────────────────────┬───────────────────────────────────────┘
+                               ▼
+                    analyses_rag.json
+            (un archivo por paper, en su carpeta)
 ```
-
-**Two analysis modes per figure/table:**
-
-| Mode | Input | What it produces |
-|---|---|---|
-| **Inference** | Image + Caption + Abstract | What the model reads purely from the image |
-| **Anchored** | Image + Caption + Abstract + Paper text (BM25 or full) | Analysis grounded in the author's own text |
-
-The divergence between both modes is where the analytical value lies: inference reveals what is visually evident; anchored reveals what the authors claim and whether the image supports it.
 
 ---
 
