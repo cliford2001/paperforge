@@ -202,12 +202,19 @@ Be specific about mechanism, pathway, or phenomenon — \
 let the abstract inform your interpretation without inventing unseen data.
 {anchored_sections}
 ## Scientific Conclusion
-Synthesize the visual evidence with the paper's research context into a \
-precise, self-contained conclusion. \
-State what this figure definitively demonstrates, \
-what alternative explanations it rules out, \
-and its role in the paper's argument. \
-Be rigorous — let the conclusion be earned by the evidence.
+Write a single cohesive paragraph of 4–6 sentences that unifies your findings \
+from the sections above. \
+The paragraph must explicitly integrate: the visual patterns and layout \
+(Visual Description), the specific values and group comparisons \
+(Data and Patterns), the statistical strength or absence thereof \
+(Statistical Markers), and the scientific meaning (Scientific Interpretation). \
+If RAG context was available, also incorporate the hypothesis this figure tests \
+and the adequacy of the experimental controls. \
+End by stating clearly what this figure definitively demonstrates, \
+what it rules out, and its role in the paper's overall argument. \
+Write as a unified inference paragraph — not a bullet list, not a summary of \
+the sections. The reader should be able to understand the figure's contribution \
+to the paper from this paragraph alone.
 
 Respond ONLY with valid JSON — no markdown fences, no text outside the JSON object:
 
@@ -220,7 +227,7 @@ Respond ONLY with valid JSON — no markdown fences, no text outside the JSON ob
   "caption_accurate": true,
   "caption_discrepancy": "discrepancy between image and caption. 'None' if accurate.",
   "scientific_interpretation": "what question this figure answers given the paper's topic. mechanism or phenomenon demonstrated.",{anchored_json}
-  "scientific_conclusion": "what this figure definitively demonstrates, what it rules out, its role in the paper's argument.",
+  "scientific_conclusion": "unified synthesis paragraph (4-6 sentences) integrating visual evidence, statistics, interpretation{anchored_hint}. What this figure definitively demonstrates, what it rules out, and its role in the paper's argument. Written as flowing prose, not a list.",
   "context_used": "{context_used}",
   "confidence": "high | medium | low"
 }}
@@ -271,11 +278,19 @@ What do the numbers prove or argue? \
 Be specific — cite values and connect them to the paper's claims.
 {anchored_sections}
 ## Scientific Conclusion
-Synthesize the table's data with the paper's research context. \
-State what this table definitively demonstrates, \
-what alternatives it rules out, \
-and its role in the paper's argument. \
-Be rigorous — let the conclusion be earned by the numbers.
+Write a single cohesive paragraph of 4–6 sentences that unifies your findings \
+from the sections above. \
+The paragraph must explicitly integrate: the table structure and what is being \
+compared (Table Description), the specific values and key entries \
+(Key Entries + Patterns and Trends), the statistical annotations or their absence \
+(Statistical Markers), and the scientific meaning (Scientific Interpretation). \
+If RAG context was available, also incorporate the claim this table supports \
+and the experimental design context. \
+End by stating clearly what this table definitively demonstrates, \
+what it rules out, and its role in the paper's overall argument. \
+Write as a unified inference paragraph — not a bullet list, not a section recap. \
+The reader should be able to understand the table's contribution to the paper \
+from this paragraph alone.
 
 Respond ONLY with valid JSON — no markdown fences, no text outside the JSON object:
 
@@ -289,7 +304,7 @@ Respond ONLY with valid JSON — no markdown fences, no text outside the JSON ob
   "caption_accurate": true,
   "caption_discrepancy": "discrepancy between table content and caption. 'None' if accurate.",
   "scientific_interpretation": "what question this table answers. what the numbers prove. cite specific values.",{anchored_json}
-  "scientific_conclusion": "what this table definitively demonstrates, what it rules out, its role in the paper's argument.",
+  "scientific_conclusion": "unified synthesis paragraph (4-6 sentences) integrating table data, statistics, interpretation{anchored_hint}. What this table definitively demonstrates, what it rules out, and its role in the paper's argument. Written as flowing prose, not a list.",
   "context_used": "{context_used}",
   "confidence": "high | medium | low"
 }}
@@ -312,9 +327,10 @@ def _build_prompt(template: str, abstract: str, caption: str,
             f"{context_text}\n"
             f"\n---\n\n"
         )
-        context_hint  = ", and using the paper text above as authoritative reference"
-        conf_hint     = " + paper text alignment"
-        context_used  = context_label.split("(")[0].strip().lower()
+        context_hint    = ", and using the paper text above as authoritative reference"
+        conf_hint       = " + paper text alignment"
+        context_used    = context_label.split("(")[0].strip().lower()
+        anchored_hint   = ", hypothesis tested, and controls assessment"
         anchored_sections = """
 ## Hypothesis Tested
 The specific claim or hypothesis from the paper that this figure/table tests or supports. \
@@ -334,6 +350,7 @@ Note controls conspicuously absent given the experimental design described in th
         context_hint      = ""
         conf_hint         = ""
         context_used      = "abstract only"
+        anchored_hint     = ""
         anchored_sections = "\n"
         anchored_json     = ""
 
@@ -344,6 +361,7 @@ Note controls conspicuously absent given the experimental design described in th
         context_hint=context_hint,
         conf_hint=conf_hint,
         context_used=context_used,
+        anchored_hint=anchored_hint,
         anchored_sections=anchored_sections,
         anchored_json=anchored_json,
     )
