@@ -1,0 +1,82 @@
+You are a scientific figure interpreter for a biology corpus. Your job is to produce a FACTUAL description of the figure shown, to be used as training data. Accuracy is more important than completeness. If the evidence is insufficient, say so and do not infer beyond the image and reliable context.
+
+[FIGURE] Fig. 6
+[PANEL HINT — non-binding, may be incomplete] The text/context mentions panels: a, b, c, d, e, f, g, h, i, j. Count panels yourself from the image.
+
+[CONTEXT QUALITY — use this to decide how cautious to be]
+quality=high
+caption_status=clean
+author_framing_status=sufficient
+visible_text_status=clean
+cross_references_detected=Extended Data Fig. 5b, Extended Data Fig. 5d, Extended Data Fig. 5h
+
+[CAPTION — high confidence]
+Fig. 6 | Analysis of the gene-ome. a, The 34,153 annotated genes categorized based on whether they correspond to the TAIR10 annotation and whether they are TEs or PC (based on sequence similarity and TE-like protein domains; Extended Data Fig. 5a). b, Genes categorized based on locus presence frequency across the 27 genomes. For TE presence frequency distribution and a comparison with published results23, please see Extended Data Fig. 5b,c. c, Synteny comparison with A. lyrata. For TEs, see Extended Data Fig. 5d. d, Ancestral status of genes of TAIR10 and newly annotated genes (‘position + sequence’ means that both gene sequence and syntenic position are conserved). e, Ancestral status of genes by presence frequency. f, Distribution of genes and TEs along chromosome 5, grouped by frequency (top) and ancestral status (bottom). For all chromosomes, see Extended Data Fig. 5h,i. g, Functional domains of annotated genes, based on comparisons with UniProtKB. h, Functional domains of PC genes grouped by ancestral status.
+
+[AUTHOR FRAMING — from article body; use only when directly relevant]
+- To investigate the variation in the portion of the genome containing PC genes-the 'gene-ome'-with minimal reference bias, we annotated each genome independently using sequence-based gene modeling and RNA-seq data from four tissues 54 (Methods). After including 1,789 TAIR10 genes that were not re-identified in our study and filtering out low-confidence genes (Methods; Supplementary Note 6-'Details about reconciling annotations and gene filtering'), the final annotation contained 34,153 genes, with 28,138 classified as bona fide PC and 5,674 as TE (Fig. 6a and Supplementary Note 6-'Genes and TEs'). Of these PC and 565 TE genes were not previously annotated (for a detailed analysis of new genes, see Supplementary Note 6-'New genes').
+- New PC genes were enriched in defense and zinc-finger genes, while TAIR10 genes were enriched in housekeeping functions such as transcriptional regulation and membrane proteins (Fig. 6g; for details of functional annotation, see Supplementary Note 6-'Genes and TEs'). A similar difference was found between ancestral and nonancestral genes (Fig. 6h), as well as between fixed and segregating genes (Extended Data Fig. 5e,f). New TE genes were strikingly more enriched for TE-function proteins than already annotated TEs (Fig. 6g), suggesting that the former are more likely to be active TEs-as expected given that they are actually segregating.
+- Turning to the gene-ome, we note that the term 'pangenome' was originally invented to describe the rather fluid genomes of prokaryotes 56,63. The overall picture in A. thaliana is clearly very different: the gene-ome is highly conserved, with 87% of genes detected in all 27 genomes, and the number of segregating genes growing considerably more slowly with sample size than other types of variation (Fig. 7). We distinguish between two types of segregating genes: a minority with homologs in the closely related A. lyrata and a majority without (Fig. 6). The former, which correspond either to gene duplications or segregating deletions of ancestral genes, tend to be expressed at substantially higher levels than the latter, which often were characterized by TE-like epigenetic silencing.
+
+[TEXT DETECTED IN FIGURE — structured, may be incomplete; trust what you see over this]
+panel_labels=a, b, c, d, e, f, g, h, i, j
+labels_or_axes_candidates=a b PC gene frequency (TAIR10 and new); f Chromosome 5; Pseudogenes 341; 1% TE_genes.TAIR10 565; PC; Highfreq: 25–26; TE_genes.new 5,109; Midfreq: 4–24; TE; Core: 27; Frequency 27 25–26; Lowfreq: 2–3; PC_genes.new 2,661; Number of genes; PC_genes.TAIR10 25,477; 1–3 NA; Private: 1; PC_new PC_TAIR10; d 100%; PC_genes.TAIR10; PC_genes.new; TE_genes:TAIR10; Ancestral Yes Similar No; Lyrata relative position; TE_genes.new; PC genes frequency; Pangenome coordinate; i Expression; Expression; Full; Ancestral (position + sequence); Seq; Ancestral (only sequence); Expression, TPM; No; Nonancestral; P ≈ 10–180; P ≈ 10–72; Thaliana relative position; P ≈ 10–59
+numeric_values_sample=0, 5, 341, 1%, 0, 565, 2%, 200, 25, 26, 601, 2%, 100, 5,109, 15%, 0, 4, 24, 1,413, 5%, 27, 24,435, 87%, 27, 25, 26, 75, 2, 3, 572, 2%, 2,661, 8%, 50, 4, 24, 0, 25,477, 74%, 1, 3, 25, 1, 1,084, 4%, 0, 0, 200, 100%, 0%, 25%, 50%, 75%, 100, 0, 0, 0, 75, 20,000, 50
+
+[RAW TEXT SAMPLE — low confidence, for disambiguation only]
+a b PC gene frequency (TAIR10 and new) f Chromosome 5 Pseudogenes 341; 1% TE_genes.TAIR10 565; 2% PC 200 Highfreq: 25–26; 601;2% 100 TE_genes.new 5,109; 15% 0 Midfreq: 4–24; 1,413;5% TE Core: 27; 24,435;87% Frequency 27 25–26 75 Lowfreq: 2–3; 572;2% PC_genes.new 2,661; 8% 50 4–24 Number of genes PC_genes.TAIR10 25,477; 74% 1–3 NA 25 Private: 1; 1,084;4% 0 PC PC_new PC_TAIR10 200 c d 100% 0% 25% 50% 75% 100 PC_genes.TAIR10 0 PC_genes.new TE TE_genes:TAIR10 Ancestral Yes Similar No 75 20,000 Lyrata relative position TE_genes.new 50 0% 25% 50% 75% 100% e 25 27 0 × 10 0 1 × 10 7 2 × 10 7 3 × 10 7 4 × 10 7 5 × 10 7 0 PC genes frequency 25–26 4–24 10,000 Pangenome coordinate 2–3 i Expression j 1 Expression Full Ancestral (position + sequence) n = 24,435 n = 585 n = 669 n = 50 n = 21,368 n = 2,381 n = 4,356 35 Seq Ancestral (only sequence) 0 5 10 15 20 25 30 35 Expression, TPM 0 5 10 15 20 25 3
+
+[BACKGROUND — paper abstract, context only]
+Making sense of whole-genome polymorphism data is challenging, but it is essential for overcoming the biases in SNP data. Here we analyze 27 genomes of Arabidopsis thaliana to illustrate these issues.
+
+RULES (read carefully):
+1. Base your interpretation on what you OBSERVE in the image. Use the CAPTION and AUTHOR FRAMING only as supporting evidence.
+2. Treat CONTEXT QUALITY as binding. If caption_status is truncated/contaminated/missing, do not treat the caption as authoritative.
+3. If TEXT-IN-FIGURE contradicts what you see, trust what you SEE. The detected text may be incomplete or contain extraction errors.
+4. Do NOT invent numeric values, axis ranges, p-values, sample counts, biological mechanisms, or conclusions. Write "not legible" or "not supported by provided context" instead of guessing.
+5. Do NOT add biological claims that are not supported by the image, the reliable caption, or author framing.
+6. Describe each panel separately when the figure has labeled panels.
+7. First count the panels you can SEE in the image. The panel hint may be incomplete or wrong.
+8. In the JSON, fill evidence_used with short evidence phrases from visual/caption/author_context/OCR.
+9. If context quality is low or author framing is missing, provide a conservative visual description and explicitly mark limitations.
+
+TASK: Produce BOTH of the following, in this order:
+
+=== PART 1: DESCRIPTION (free text) ===
+First, look at the image and count how many panels it has. Then write a factual, self-contained description for a reader who cannot see it. Describe every panel you see. Ground every claim in the visible image, reliable caption, author framing, or detected text. Mark uncertainty explicitly.
+
+=== PART 2: STRUCTURED (JSON) ===
+Output a JSON object with EXACTLY this schema (no extra keys, no markdown fences):
+{
+  "figure_label": "<label>",
+  "figure_type": "<e.g. heatmap, bar chart, scatter plot, micrograph, schematic, multipanel mixed figure>",
+  "one_line_summary": "<single factual sentence about the whole figure>",
+  "n_panels_seen": "<integer>",
+  "panels": [
+    {
+      "panel": "<panel letter seen in the image, or 'whole figure'>",
+      "what_it_shows": "<factual description of visual content>",
+      "axes_or_variables": "<x/y axes, color scale, units, groups, or 'not legible'>",
+      "key_observation": "<main visible pattern, only if supported>",
+      "in_provided_text": "<true|false>",
+      "uncertain": "<uncertainty or empty>"
+    }
+  ],
+  "factual_caption_paraphrase": "<2-4 sentence factual restatement, no new claims>",
+  "evidence_used": {
+    "visual": [
+      "<evidence from image>"
+    ],
+    "caption": [
+      "<evidence from reliable caption, or empty>"
+    ],
+    "author_context": [
+      "<evidence from author framing, or empty>"
+    ],
+    "ocr": [
+      "<evidence from detected text, or empty>"
+    ]
+  },
+  "context_limitations": "<state missing/truncated/contaminated context or empty>",
+  "confidence": "<high|medium|low>"
+}

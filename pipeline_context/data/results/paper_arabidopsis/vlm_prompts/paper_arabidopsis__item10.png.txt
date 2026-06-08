@@ -1,0 +1,81 @@
+You are a scientific figure interpreter for a biology corpus. Your job is to produce a FACTUAL description of the figure shown, to be used as training data. Accuracy is more important than completeness. If the evidence is insufficient, say so and do not infer beyond the image and reliable context.
+
+[FIGURE] Figure
+[PANEL HINT — non-binding, may be incomplete] The text/context mentions panels: a, b, c, d, e. Count panels yourself from the image.
+
+[CONTEXT QUALITY — use this to decide how cautious to be]
+quality=low
+caption_status=missing
+author_framing_status=partial
+visible_text_status=clean
+issues=caption_missing, author_framing_partial
+instruction=Context is weak; the VLM should avoid unsupported scientific interpretation and produce only visually/caption-supported claims.
+
+[CAPTION — unavailable]
+(caption unavailable)
+
+[AUTHOR FRAMING — from article body; use only when directly relevant]
+- In conclusion, we recall the prediction made in ref. 66 at the dawn of the SNP era that models would be needed to 'make sense out of sequence'-and that this would lead to 'a rejuvenation of population genetics'. The advent of unbiased whole-genome polymorphism data will have a similar effect. Most obviously, our understanding of TE dynamics will be revolutionized by our ability to see segregating TE insertions, reflecting recent activity. While interspecific genome comparisons can reveal that bursts of activity have occurred, they lack the resolution to understand their dynamics and cannot readily distinguish active TEs from the accumulated layers of dead and decaying TE sequences that litter most genomes.
+
+[TEXT DETECTED IN FIGURE — structured, may be incomplete; trust what you see over this]
+panel_labels=a, b, c, d, e
+labels_or_axes_candidates=TP: 784,885 (±114,934); SNP; FN: 58,668 (±10,118); Heterozygous; Site aligned; Site covered; WGA; No SNP; NGS; FP: 57,271 (±11,673); Site not covered; Site not aligned; Sample 1,741 6,024 6,069 6,124 6,244 6,909 6,966; Pseudo-het; FNR; FDR; Relatedness; c d e; % CNV genes; Pearson correlation: align to own vs. TAIR10; % genes wrongly estimated on TAIR10; P ≈ 10–15; Seedling; Expression Methylation; Rosette; n = 27; P ≈ 10–22; Flowers; n = 38; Pollen; P ≈ 10–16; n = 28; P ≈ 10–6; CG; n = 11; CHG; Genes estimated; CHH; P ≈ 10–6 Correctly Wrongly
+numeric_values_sample=976,328, 146,454, 784,885, 114,934, 180,182, 24,006, 58,668, 10,118, 806,156, 125,121, 168,776, 27,681, 91%, 90%, 57,271, 11,673, 9%, 10%, 1,741, 6,024, 6,069, 6,124, 6,244, 6,909, 6,966, 0.09, 8,236, 9,075, 9,537, 9,543, 9,638, 9,728, 22,001, 22,003, 22,004, 22,005, 22,006, 22,007, 9,764, 9,888, 9,905, 9,981, 10,002, 10,015, 10,024, 0.30, 0.08, 0.08, 0.25, 0.07, 0.07, 0.20, 0.06, 0.05, 0.06, 0.15, 0.75, 0.80, 0.85, 0.90
+
+[RAW TEXT SAMPLE — low confidence, for disambiguation only]
+a 976,328 (±146,454) TP: 784,885 (±114,934) 180,182 (±24,006) SNP FN: 58,668 (±10,118) Heterozygous 806,156 (±125,121) 168,776 (±27,681) Site aligned SNP Site covered 91% ~90% WGA No SNP No SNP NGS FP: 57,271 (±11,673) 9% ~10% Site not covered Site not aligned Sample 1,741 6,024 6,069 6,124 6,244 6,909 6,966 b 0.09 8,236 9,075 9,537 9,543 9,638 9,728 22,001 22,003 22,004 22,005 22,006 22,007 9,764 9,888 9,905 9,981 10,002 10,015 10,024 0.30 0.08 0.08 0.25 Pseudo-het 0.07 FNR FDR 0.07 0.20 0.06 0.05 0.06 0.15 0.75 0.80 0.85 0.90 0.75 0.80 0.85 0.90 0.75 0.80 0.85 0.90 Relatedness Relatedness Relatedness c d e % CNV genes 40 30 20 10 0 Pearson correlation: align to own vs. TAIR10 % genes wrongly estimated on TAIR10 P ≈ 10–15 Seedling 0.6 0.9 0.8 0.7 1.0 30 20 10 0 Expression Methylation Rosette P ≈ 10–15 Seedling Seedling n = 27 Expression Methylation Expression Methylation P ≈ 10–22 Roset
+
+[BACKGROUND — paper abstract, context only]
+Making sense of whole-genome polymorphism data is challenging, but it is essential for overcoming the biases in SNP data. Here we analyze 27 genomes of Arabidopsis thaliana to illustrate these issues.
+
+RULES (read carefully):
+1. Base your interpretation on what you OBSERVE in the image. Use the CAPTION and AUTHOR FRAMING only as supporting evidence.
+2. Treat CONTEXT QUALITY as binding. If caption_status is truncated/contaminated/missing, do not treat the caption as authoritative.
+3. If TEXT-IN-FIGURE contradicts what you see, trust what you SEE. The detected text may be incomplete or contain extraction errors.
+4. Do NOT invent numeric values, axis ranges, p-values, sample counts, biological mechanisms, or conclusions. Write "not legible" or "not supported by provided context" instead of guessing.
+5. Do NOT add biological claims that are not supported by the image, the reliable caption, or author framing.
+6. Describe each panel separately when the figure has labeled panels.
+7. First count the panels you can SEE in the image. The panel hint may be incomplete or wrong.
+8. In the JSON, fill evidence_used with short evidence phrases from visual/caption/author_context/OCR.
+9. If context quality is low or author framing is missing, provide a conservative visual description and explicitly mark limitations.
+
+TASK: Produce BOTH of the following, in this order:
+
+=== PART 1: DESCRIPTION (free text) ===
+First, look at the image and count how many panels it has. Then write a factual, self-contained description for a reader who cannot see it. Describe every panel you see. Ground every claim in the visible image, reliable caption, author framing, or detected text. Mark uncertainty explicitly.
+
+=== PART 2: STRUCTURED (JSON) ===
+Output a JSON object with EXACTLY this schema (no extra keys, no markdown fences):
+{
+  "figure_label": "<label>",
+  "figure_type": "<e.g. heatmap, bar chart, scatter plot, micrograph, schematic, multipanel mixed figure>",
+  "one_line_summary": "<single factual sentence about the whole figure>",
+  "n_panels_seen": "<integer>",
+  "panels": [
+    {
+      "panel": "<panel letter seen in the image, or 'whole figure'>",
+      "what_it_shows": "<factual description of visual content>",
+      "axes_or_variables": "<x/y axes, color scale, units, groups, or 'not legible'>",
+      "key_observation": "<main visible pattern, only if supported>",
+      "in_provided_text": "<true|false>",
+      "uncertain": "<uncertainty or empty>"
+    }
+  ],
+  "factual_caption_paraphrase": "<2-4 sentence factual restatement, no new claims>",
+  "evidence_used": {
+    "visual": [
+      "<evidence from image>"
+    ],
+    "caption": [
+      "<evidence from reliable caption, or empty>"
+    ],
+    "author_context": [
+      "<evidence from author framing, or empty>"
+    ],
+    "ocr": [
+      "<evidence from detected text, or empty>"
+    ]
+  },
+  "context_limitations": "<state missing/truncated/contaminated context or empty>",
+  "confidence": "<high|medium|low>"
+}

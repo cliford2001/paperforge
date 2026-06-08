@@ -1,0 +1,83 @@
+You are a scientific figure interpreter for a biology corpus. Your job is to produce a FACTUAL description of the figure shown, to be used as training data. Accuracy is more important than completeness. If the evidence is insufficient, say so and do not infer beyond the image and reliable context.
+
+[FIGURE] Fig. 7
+[PANEL HINT — non-binding, may be incomplete] The text/context mentions panels: a, b, c. Count panels yourself from the image.
+
+[CONTEXT QUALITY — use this to decide how cautious to be]
+quality=high
+caption_status=clean
+author_framing_status=sufficient
+visible_text_status=clean
+cross_references_detected=Extended Data Fig. 7
+
+[CAPTION — high confidence]
+Fig. 7 | The growth of the pangenome. a, The dependence on sample size for the union (‘pan’) and intersection (‘core’) sequence length, separately for the full genome, the mobile-ome and the gene-ome (for saturation by sSV length and normalized views, see Extended Data Fig. 7). b, Pangenome versus reference genome coordinates. The pericentromeric region (light blue) shows a higher ‘dilution’ of the spatial coordinates due to the increased number of SVs in this region, but please note that the slope is never 1, reflecting their ubiquity. The centromeric region is dark blue (for other chromosomes, see Extended Data Fig. 7). c, The contribution of sSVs of different lengths to differences between pairs of genomes. Numbers are counts of sSVs. Shorter sSVs are more numerous, but longer and rarer sSVs contribute more to total length variation.
+
+[AUTHOR FRAMING — from article body; use only when directly relevant]
+- Turning to the gene-ome, we note that the term 'pangenome' was originally invented to describe the rather fluid genomes of prokaryotes 56,63. The overall picture in A. thaliana is clearly very different: the gene-ome is highly conserved, with 87% of genes detected in all 27 genomes, and the number of segregating genes growing considerably more slowly with sample size than other types of variation (Fig. 7). We distinguish between two types of segregating genes: a minority with homologs in the closely related A. lyrata and a majority without (Fig. 6). The former, which correspond either to gene duplications or segregating deletions of ancestral genes, tend to be expressed at substantially higher levels than the latter, which often were characterized by TE-like epigenetic silencing.
+- All components of variation considered in this paper grow with sample size, but at different rates: the mobile-ome grows faster than the full genome and the gene-ome more slowly, consistent with the latter being under stronger purifying selection (Fig. 7a). All components increase faster than the logarithmic growth expected under neutrality in a constant population and more slowly than the linear growth expected in an exponentially growing population 57.
+- With our whole-genome polymorphism data, we are now in a position to assess how much variation was previously missed. In the 1001 Genomes data, a pair of accessions differed, on average, at ~440,000 SNPs. In our Pannagram alignment, the corresponding number ranges from 600,000 to 800,000 SNPs, depending on how SNPs are defined (Methods). In other words, we previously missed 25-45% of the SNP variation. In addition, WGAs of two genomes reveal, on average, ~190,000 SVs (of length <10 kb) covering a total of over ~12.5 Mb of sequence-approximately 10% of each assembled genome (Fig. 7c).
+- The term 'pangenome' is currently applied with a variety of meanings, from the original use in prokaryotes to describe the observation that genomes from different strains of the same species vary enormously in gene content 56, to the human genetics ambition of representing all polymorphism in a single 'pangenome graph' 15,28. We will discuss the utility of [...]
+
+[TEXT DETECTED IN FIGURE — structured, may be incomplete; trust what you see over this]
+panel_labels=a, b, c
+labels_or_axes_candidates=199.5 M; 70M; Approximation: ax + blog(x); 60M; 50M; a/b = 0.15; Change in length (bp); 40M; Pan Core; 30M; 26.7 M; 20M; 66.4 M; 4.1 M; a/b = 0.37; 10M; 125.8 M; a/b = 0.14; 56.4M; 0M; 53.2 M 50.1 M; a/b = 0.04; 104.3 M 86.7 M; a/b = 0.01; Number of genomes; Genes Genome Mobilome; Chromosome 1, slopes: 0.81, 0.78; Cumulative length Col-0 coordinate; Pangenome coordinate; (1 × 104,Inf]; Length of SVs
+numeric_values_sample=199.5, 70, 60, 50, 0.15, 40, 30, 26.7, 20, 66.4, 4.1, 0.37, 10, 125.8, 0.14, 56.4, 0, 0, 53.2, 50.1, 0.04, 10, 104.3, 86.7, 0.01, 0, 10, 20, 3 × 10 7, 1, 0.81, 0.78, 0, 2 × 10 7, 1 × 10 7, 0 × 10 0, 0 × 10 0, 1 × 10 7, 2 × 10 7, 3 × 10 7, 4 × 10 7, 5 × 10 7, 381, 1 × 10 7, 1,100, 615, 1,236, 1,504, 1 × 10 6, 2,018, 167,366, 13,062, 2,557, 1,547, 1 × 104, 12,488, 525, 191,005, 1 × 10 5, 0,15
+
+[RAW TEXT SAMPLE — low confidence, for disambiguation only]
+a 199.5 M 70M Approximation: ax + blog(x) 60M 50M a/b = 0.15 Change in length (bp) 40M Pan Core 30M 26.7 M 20M 66.4 M 4.1 M a/b = 0.37 10M 125.8 M a/b = 0.14 56.4M 0M 0M 53.2 M 50.1 M a/b = 0.04 10M 104.3 M 86.7 M a/b = 0.01 0 10 20 Number of genomes Genes Genome Mobilome b 3 × 10 7 Chromosome 1, slopes: 0.81, 0.78 Cumulative length Col-0 coordinate 2 × 10 7 1 × 10 7 0 × 10 0 0 × 10 0 1 × 10 7 2 × 10 7 3 × 10 7 4 × 10 7 5 × 10 7 Pangenome coordinate c 381 1 × 10 7 1,100 615 1,236 1,504 1 × 10 6 2,018 167,366 13,062 2,557 1,547 Based on SVs of length ≤ 1 × 104 Mean pairwise length is 12,488,525 bp Mean pairwise count is 191,005 1 × 10 5 (0,15] (15,50] (50,100] (100,200] (200,500] (1 × 104,Inf] (500,1 × 103] (1 × 103,2 × 103] (2 × 103,5 × 103] (5 × 103,1 × 104] Length of SVs
+
+[BACKGROUND — paper abstract, context only]
+Making sense of whole-genome polymorphism data is challenging, but it is essential for overcoming the biases in SNP data. Here we analyze 27 genomes of Arabidopsis thaliana to illustrate these issues.
+
+RULES (read carefully):
+1. Base your interpretation on what you OBSERVE in the image. Use the CAPTION and AUTHOR FRAMING only as supporting evidence.
+2. Treat CONTEXT QUALITY as binding. If caption_status is truncated/contaminated/missing, do not treat the caption as authoritative.
+3. If TEXT-IN-FIGURE contradicts what you see, trust what you SEE. The detected text may be incomplete or contain extraction errors.
+4. Do NOT invent numeric values, axis ranges, p-values, sample counts, biological mechanisms, or conclusions. Write "not legible" or "not supported by provided context" instead of guessing.
+5. Do NOT add biological claims that are not supported by the image, the reliable caption, or author framing.
+6. Describe each panel separately when the figure has labeled panels.
+7. First count the panels you can SEE in the image. The panel hint may be incomplete or wrong.
+8. In the JSON, fill evidence_used with short evidence phrases from visual/caption/author_context/OCR.
+9. If context quality is low or author framing is missing, provide a conservative visual description and explicitly mark limitations.
+
+TASK: Produce BOTH of the following, in this order:
+
+=== PART 1: DESCRIPTION (free text) ===
+First, look at the image and count how many panels it has. Then write a factual, self-contained description for a reader who cannot see it. Describe every panel you see. Ground every claim in the visible image, reliable caption, author framing, or detected text. Mark uncertainty explicitly.
+
+=== PART 2: STRUCTURED (JSON) ===
+Output a JSON object with EXACTLY this schema (no extra keys, no markdown fences):
+{
+  "figure_label": "<label>",
+  "figure_type": "<e.g. heatmap, bar chart, scatter plot, micrograph, schematic, multipanel mixed figure>",
+  "one_line_summary": "<single factual sentence about the whole figure>",
+  "n_panels_seen": "<integer>",
+  "panels": [
+    {
+      "panel": "<panel letter seen in the image, or 'whole figure'>",
+      "what_it_shows": "<factual description of visual content>",
+      "axes_or_variables": "<x/y axes, color scale, units, groups, or 'not legible'>",
+      "key_observation": "<main visible pattern, only if supported>",
+      "in_provided_text": "<true|false>",
+      "uncertain": "<uncertainty or empty>"
+    }
+  ],
+  "factual_caption_paraphrase": "<2-4 sentence factual restatement, no new claims>",
+  "evidence_used": {
+    "visual": [
+      "<evidence from image>"
+    ],
+    "caption": [
+      "<evidence from reliable caption, or empty>"
+    ],
+    "author_context": [
+      "<evidence from author framing, or empty>"
+    ],
+    "ocr": [
+      "<evidence from detected text, or empty>"
+    ]
+  },
+  "context_limitations": "<state missing/truncated/contaminated context or empty>",
+  "confidence": "<high|medium|low>"
+}

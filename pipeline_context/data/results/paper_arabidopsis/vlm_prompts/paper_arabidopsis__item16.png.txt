@@ -1,0 +1,79 @@
+You are a scientific figure interpreter for a biology corpus. Your job is to produce a FACTUAL description of the figure shown, to be used as training data. Accuracy is more important than completeness. If the evidence is insufficient, say so and do not infer beyond the image and reliable context.
+
+[FIGURE] Extended Data Fig. 6
+[PANEL HINT — non-binding, may be incomplete] The text/context mentions panels: a, b. Count panels yourself from the image.
+
+[CONTEXT QUALITY — use this to decide how cautious to be]
+quality=high
+caption_status=clean
+author_framing_status=sufficient
+visible_text_status=clean
+
+[CAPTION — high confidence]
+Extended Data Fig. 6 | Gene silencing and expression by gene presence frequency and ancestral status. a, Median expression vs. frequency for all accessions. b, H3K9me2 and H3K27me3 54 genes vs. their frequency. Values plotted are medians of quantile- and input-normalized ChIP-seq signals. c, 24-nt sRNAs coverage of genes of different frequencies. Left: distribution in flowers of accession 6024. Right: median coverage. d, Locus-wide CHG, CG and CHH methylation levels in leaves 53 for genes of different frequency. Left: distribution in accession 6024. Right: median levels. e, Expression (median TPM) vs. ancestral status for all accessions. f, H3K9me2 and H3K27me3 54 vs. ancestral status. Values plotted are medians of quantile- and input-normalized ChIP-seq signals. g, 24-nt sRNAs locus-wide coverage in accession 6024, flowers, for genes of different ancestral status. h, Methylation levels in leaves 53 for genes of different ancestral status. Left: accession 6024. Right: median methylation levels. All heatmaps were created using the pheatmap package in R, and all, except for expression, are scaled by row to facilitate within- and between-accession comparison. Box plots show the median and the 25th and 75th percentiles (box bounds), and the smallest and largest values within 1.5× the interquartile range (whiskers); outliers are not plotted. Significance of median differences was assessed using two-tailed Wilcoxon tests. Sample sizes are shown above the top boxplot in Fig. 6i–j.
+
+[AUTHOR FRAMING — from article body; use only when directly relevant]
+- signals. g, 24-nt sRNAs locus-wide coverage in accession 6024, flowers, for genes of different ancestral status. h, Methylation levels in leaves 53 for genes of different ancestral status. Left: accession 6024. Right: median methylation levels. All heatmaps were created using the pheatmap package in R, and all, except for expression, are scaled by row to facilitate within- and between-accession comparison. Box plots show the median and the 25th and 75th percentiles (box bounds), and the smallest and largest values within 1.5× the interquartile range (whiskers); outliers are not plotted. Significance of median differences was assessed using two-tailed Wilcoxon tests. Sample sizes are shown above the top boxplot in Fig. 6i-j.
+- grouped by ancestral status. In g and h, genes not matching a functional category have been excluded; for plots including these and breakdowns by presence frequency, see Extended Data Fig. 6e-g. i, j, Expression (in 9-leaf rosettes) and H3K9me2/H3K27me3 levels (in mature leaves) by gene frequency ( i ) and ancestral status ( j ). Data shown 54 are for accession 6024; for other accessions, as well as DNA methylation and 24-nt sRNA coverage, see Extended Data Fig. 6. Box plots show the median (center line), the 25th and 75th percentiles (box bounds) and the smallest and largest values within 1.5× the interquartile range (whiskers); outliers beyond this range are not plotted. Expression and H3K9me2/H3K27me3 were compared between frequency/ancestry gene categories using a two-sided Wilcoxon rank-sum test. The number of genes in each category is shown above the top box plot. No multiple-comparison corrections were performed.
+- Finally, fixed genes are far more highly expressed than segregating genes (Fig. 6i). Indeed, genes absent in only one or two accessions tend to be almost silent in the remaining accessions (Extended Data Fig. 6). Epigenetic silencing behaves similarly, with both gene-like Polycomb silencing (H3K27me3) and TE-like silencing (H3K9me2 and DNA methylation) being substantially higher for segregating genes (Fig. 6i). Likewise, nonancestral genes have reduced expression and increased silencing compared to ancestral genes (Fig. 6j and [...]
+
+[TEXT DETECTED IN FIGURE — structured, may be incomplete; trust what you see over this]
+numeric_values_sample=24, 6024, 53, 6024, 25, 75, 1.5, 6
+
+[RAW TEXT SAMPLE — low confidence, for disambiguation only]
+signals. g, 24-nt sRNAs locus-wide coverage in accession 6024, flowers, for genes of different ancestral status. h, Methylation levels in leaves 53 for genes of different ancestral status. Left: accession 6024. Right: median methylation levels. All heatmaps were created using the pheatmap package in R, and all, except for expression, are scaled by row to facilitate within- and between-accession comparison. Box plots show the median and the 25th and 75th percentiles (box bounds), and the smallest and largest values within 1.5× the interquartile range (whiskers); outliers are not plotted. Significance of median differences was assessed using two-tailed Wilcoxon tests. Sample sizes are shown above the top boxplot in Fig. 6i–j.
+
+[BACKGROUND — paper abstract, context only]
+Making sense of whole-genome polymorphism data is challenging, but it is essential for overcoming the biases in SNP data. Here we analyze 27 genomes of Arabidopsis thaliana to illustrate these issues.
+
+RULES (read carefully):
+1. Base your interpretation on what you OBSERVE in the image. Use the CAPTION and AUTHOR FRAMING only as supporting evidence.
+2. Treat CONTEXT QUALITY as binding. If caption_status is truncated/contaminated/missing, do not treat the caption as authoritative.
+3. If TEXT-IN-FIGURE contradicts what you see, trust what you SEE. The detected text may be incomplete or contain extraction errors.
+4. Do NOT invent numeric values, axis ranges, p-values, sample counts, biological mechanisms, or conclusions. Write "not legible" or "not supported by provided context" instead of guessing.
+5. Do NOT add biological claims that are not supported by the image, the reliable caption, or author framing.
+6. Describe each panel separately when the figure has labeled panels.
+7. First count the panels you can SEE in the image. The panel hint may be incomplete or wrong.
+8. In the JSON, fill evidence_used with short evidence phrases from visual/caption/author_context/OCR.
+9. If context quality is low or author framing is missing, provide a conservative visual description and explicitly mark limitations.
+
+TASK: Produce BOTH of the following, in this order:
+
+=== PART 1: DESCRIPTION (free text) ===
+First, look at the image and count how many panels it has. Then write a factual, self-contained description for a reader who cannot see it. Describe every panel you see. Ground every claim in the visible image, reliable caption, author framing, or detected text. Mark uncertainty explicitly.
+
+=== PART 2: STRUCTURED (JSON) ===
+Output a JSON object with EXACTLY this schema (no extra keys, no markdown fences):
+{
+  "figure_label": "<label>",
+  "figure_type": "<e.g. heatmap, bar chart, scatter plot, micrograph, schematic, multipanel mixed figure>",
+  "one_line_summary": "<single factual sentence about the whole figure>",
+  "n_panels_seen": "<integer>",
+  "panels": [
+    {
+      "panel": "<panel letter seen in the image, or 'whole figure'>",
+      "what_it_shows": "<factual description of visual content>",
+      "axes_or_variables": "<x/y axes, color scale, units, groups, or 'not legible'>",
+      "key_observation": "<main visible pattern, only if supported>",
+      "in_provided_text": "<true|false>",
+      "uncertain": "<uncertainty or empty>"
+    }
+  ],
+  "factual_caption_paraphrase": "<2-4 sentence factual restatement, no new claims>",
+  "evidence_used": {
+    "visual": [
+      "<evidence from image>"
+    ],
+    "caption": [
+      "<evidence from reliable caption, or empty>"
+    ],
+    "author_context": [
+      "<evidence from author framing, or empty>"
+    ],
+    "ocr": [
+      "<evidence from detected text, or empty>"
+    ]
+  },
+  "context_limitations": "<state missing/truncated/contaminated context or empty>",
+  "confidence": "<high|medium|low>"
+}

@@ -1,0 +1,81 @@
+You are a scientific figure interpreter for a biology corpus. Your job is to produce a FACTUAL description of the figure shown, to be used as training data. Accuracy is more important than completeness. If the evidence is insufficient, say so and do not infer beyond the image and reliable context.
+
+[FIGURE] Fig. 5
+[PANEL HINT — non-binding, may be incomplete] The text/context mentions panels: a, b, c, d. Count panels yourself from the image.
+
+[CONTEXT QUALITY — use this to decide how cautious to be]
+quality=high
+caption_status=clean
+author_framing_status=sufficient
+visible_text_status=clean
+
+[CAPTION — high confidence]
+Fig. 5 | The graph structure of sSVs. a, The number of sSVs included (or not) in the graph of nestedness as a function of TE content. b, Graph illustrating the nestedness of sSVs, including only presence alleles with nonzero TE content. Each node represents a set of mutually nested sequences, using a similarity threshold of 0.85, with node size reflecting the number of included sequences. Nodes are colored by TE content as shown in a. c, Same graph as in b, but colored by TE superfamilies, as shown in the center on top. Note that the algorithm used no prior knowledge of TE superfamilies. A large, dominant component connecting all TE superfamilies is also seen in a graph built using the entire A. thaliana TE annotation, suggesting that our sSVs and the reference annotation have comparable properties (Extended Data Fig. 4). d, A graph of nestedness for sSVs without TE content, colored by open reading frame content based on protein BLAST, as shown on the right.
+
+[AUTHOR FRAMING — from article body; use only when directly relevant]
+- Fig. 5 | The graph structure of sSVs. a, The number of sSVs included (or not) in the graph of nestedness as a function of TE content. b, Graph illustrating the nestedness of sSVs, including only presence alleles with nonzero TE content. Each node represents a set of mutually nested sequences, using a similarity threshold of 0.85, with node size reflecting the number of included sequences. Nodes are colored by TE content as shown in a. c, Same graph as in b, but colored by TE superfamilies, as shown in the center on top. Note that the algorithm used no
+- In the set of sSVs without TE content, the majority (74%) are unique and hence not connected in the graph. Among the remaining 26%, we observed 238 connected components with ≥3 nodes, similar in structure to those corresponding to single TE families, and thus presumably corresponding to previously unannotated TEs (Fig. 5d). Of these are obviously TE-like, encoding TE proteins from A. thaliana or other species. A few of them show evidence of horizontal gene transfer, as they exhibit greater protein similarity to species outside a panel of five Brassicaceae species (for example, Supplementary Fig. 16). However, we also found putative new mobile element families that lack clear protein-coding (PC) potential. They form relatively large components in the graph (Fig. 5d, purple islands), indicating that they are not rare. They are not low complexity, and some are exclusive to A. thaliana (see Supplementary Fig. 17 for an example).
+- To understand the relationship between annotated TEs, we filtered out sequences without TE content and merged sequences with high similarity into larger nodes. The resulting subgraph consists of one dominant component along with numerous smaller ones (Fig. 5b). As expected, there are multiple large nodes corresponding to complete TEs, but we also see large nodes corresponding to sequences ostensibly containing complete TEs or TE fragments, demonstrating that many of these sequences are in fact part of the mobile-ome (Extended Data Fig. 3). Coloring the nodes by TE superfamily reveals that, while the smaller components mostly can be attributed to single TE families, the dominant component [...]
+
+[TEXT DETECTED IN FIGURE — structured, may be incomplete; trust what you see over this]
+panel_labels=a, b, c, d
+labels_or_axes_candidates=Defined prot: 34; No prot: 90; isTE; 238 connected components; size ≥3; isTEpart; Undefined prot: 17; TE likeS: 97; hasTE; Connected to others; hasTEpart; In graph; Not in graph; noTE; Categories:; Defined prot; Undefined prot; No prot; Number of SVs; TE like; TE family; DNA/HAT; LTR/Gypsy; DNA/MuDR; RathE1/2/3_cons; DNA+; SINE; Helitron; TEG; LINE; Unassigned; LTR/Copia; NA
+numeric_values_sample=34, 90, 238, ≥3, 17, 97, 0, 2,000, 4,000, 2, 3
+
+[RAW TEXT SAMPLE — low confidence, for disambiguation only]
+a d Defined prot: 34 No prot: 90 isTE 238 connected components; size ≥3 isTEpart Undefined prot: 17 TE likeS: 97 hasTE Connected to others hasTEpart In graph Not in graph noTE Categories: Defined prot 0 2,000 4,000 Undefined prot No prot Number of SVs TE like b = + TE family DNA/HAT LTR/Gypsy DNA/MuDR RathE1/2/3_cons DNA+ SINE c Helitron TEG LINE Unassigned LTR/Copia NA = +
+
+[BACKGROUND — paper abstract, context only]
+Making sense of whole-genome polymorphism data is challenging, but it is essential for overcoming the biases in SNP data. Here we analyze 27 genomes of Arabidopsis thaliana to illustrate these issues.
+
+RULES (read carefully):
+1. Base your interpretation on what you OBSERVE in the image. Use the CAPTION and AUTHOR FRAMING only as supporting evidence.
+2. Treat CONTEXT QUALITY as binding. If caption_status is truncated/contaminated/missing, do not treat the caption as authoritative.
+3. If TEXT-IN-FIGURE contradicts what you see, trust what you SEE. The detected text may be incomplete or contain extraction errors.
+4. Do NOT invent numeric values, axis ranges, p-values, sample counts, biological mechanisms, or conclusions. Write "not legible" or "not supported by provided context" instead of guessing.
+5. Do NOT add biological claims that are not supported by the image, the reliable caption, or author framing.
+6. Describe each panel separately when the figure has labeled panels.
+7. First count the panels you can SEE in the image. The panel hint may be incomplete or wrong.
+8. In the JSON, fill evidence_used with short evidence phrases from visual/caption/author_context/OCR.
+9. If context quality is low or author framing is missing, provide a conservative visual description and explicitly mark limitations.
+
+TASK: Produce BOTH of the following, in this order:
+
+=== PART 1: DESCRIPTION (free text) ===
+First, look at the image and count how many panels it has. Then write a factual, self-contained description for a reader who cannot see it. Describe every panel you see. Ground every claim in the visible image, reliable caption, author framing, or detected text. Mark uncertainty explicitly.
+
+=== PART 2: STRUCTURED (JSON) ===
+Output a JSON object with EXACTLY this schema (no extra keys, no markdown fences):
+{
+  "figure_label": "<label>",
+  "figure_type": "<e.g. heatmap, bar chart, scatter plot, micrograph, schematic, multipanel mixed figure>",
+  "one_line_summary": "<single factual sentence about the whole figure>",
+  "n_panels_seen": "<integer>",
+  "panels": [
+    {
+      "panel": "<panel letter seen in the image, or 'whole figure'>",
+      "what_it_shows": "<factual description of visual content>",
+      "axes_or_variables": "<x/y axes, color scale, units, groups, or 'not legible'>",
+      "key_observation": "<main visible pattern, only if supported>",
+      "in_provided_text": "<true|false>",
+      "uncertain": "<uncertainty or empty>"
+    }
+  ],
+  "factual_caption_paraphrase": "<2-4 sentence factual restatement, no new claims>",
+  "evidence_used": {
+    "visual": [
+      "<evidence from image>"
+    ],
+    "caption": [
+      "<evidence from reliable caption, or empty>"
+    ],
+    "author_context": [
+      "<evidence from author framing, or empty>"
+    ],
+    "ocr": [
+      "<evidence from detected text, or empty>"
+    ]
+  },
+  "context_limitations": "<state missing/truncated/contaminated context or empty>",
+  "confidence": "<high|medium|low>"
+}

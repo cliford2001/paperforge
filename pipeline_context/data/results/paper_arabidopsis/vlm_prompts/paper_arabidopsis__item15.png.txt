@@ -1,0 +1,75 @@
+You are a scientific figure interpreter for a biology corpus. Your job is to produce a FACTUAL description of the figure shown, to be used as training data. Accuracy is more important than completeness. If the evidence is insufficient, say so and do not infer beyond the image and reliable context.
+
+[FIGURE] Extended Data Fig. 5
+[PANEL HINT — non-binding, may be incomplete] The text/context mentions panels: a, b, c, d, e, f, g, h, i. Count panels yourself from the image.
+
+[CONTEXT QUALITY — use this to decide how cautious to be]
+quality=low
+caption_status=contaminated
+author_framing_status=sufficient
+visible_text_status=clean
+issues=caption_contaminated
+instruction=Context is weak; the VLM should avoid unsupported scientific interpretation and produce only visually/caption-supported claims.
+
+[CAPTION — possibly corrupted; use cautiously]
+Extended Data Fig. 5 | Details of gene-ome analysis. a, TE genes were defined as the union of two sets of genes: (1) those with >50% annotated TE sequence in at least one accession, and (2) those with ORFs similar to proteins known to be involved in TE function. b, Comparison of gene presence variation in this study to a recent analysis in 69 A. thaliana accessions 23. this case as two gene families residing in the locus and call both gene models dispensable, while our approach would treat this locus as one and identify both gene and gene model as core. c, Gene presence frequency distribution for TE genes. d, A. lyrata synteny and sequence similarity analysis for TE genes (TAIR10 and new) with the same 80% sequence-similarity stringency as in Fig. 6. TE genes are plotted by their gene IDs along the chromosomes. The small number of data points compared to PC genes is because most TE genes were not found in the A. lyrata genome. e, Functional domains (‘NA’ indicates genes with no match) for genes grouped by new vs. old and PC vs. TE. f, The same for PC genes grouped by frequency of presence. g, The same PC and TE genes grouped by ancestral status. h, The distribution of PC and TE genes along all five chromosomes grouped by frequency of presence. i, The same grouped by ancestral status.
+
+[AUTHOR FRAMING — from article body; use only when directly relevant]
+- Extended Data Fig. 5 | Details of gene-ome analysis. a, TE genes were defined as the union of two sets of genes: (1) those with >50% annotated TE sequence in at least one accession, and (2) those with ORFs similar to proteins known to be involved in TE function. b, Comparison of gene presence variation in this study to a recent analysis in 69 A. thaliana accessions 23. For both PC genes and TE genes, our presence-absence variability is higher for gene models compared to gene loci, probably because our gene annotation pipeline misses lowly expressed genes in the four tissues we used. The PC gene model variability in the study from the Mercier lab 23 is substantially higher than in our data. This likely reflects the fact that while we used pan-genome coordinates to match genes between accessions, they used an orthogroup search approach. Consider this case: a gene is both present and has a gene model in every accession, but in three accessions, a shorter gene model was annotated. The orthogroup approach would identify
+- this case as two gene families residing in the locus and call both gene models dispensable, while our approach would treat this locus as one and identify both gene and gene model as core. c, Gene presence frequency distribution for TE genes. d, A. lyrata synteny and sequence similarity analysis for TE genes (TAIR10 and new) with the same 80% sequence-similarity stringency as in Fig. 6. TE genes are plotted by their gene IDs along the chromosomes. The small number of data points compared to PC genes is because most TE genes were not found in the A. lyrata genome. e, Functional domains ('NA' indicates genes with no match) for genes grouped by new vs. old and PC vs. TE. f, The same for PC genes grouped by frequency of presence. g, The same PC and TE genes grouped by ancestral status. h, The distribution of PC and TE genes along all five chromosomes grouped by frequency of presence. i, The same grouped by ancestral status.
+- New PC genes were enriched in defense and zinc-finger genes, while TAIR10 genes were enriched in housekeeping functions such as transcriptional regulation and membrane proteins (Fig. 6g; for details of functional annotation, see [...]
+
+[BACKGROUND — paper abstract, context only]
+Making sense of whole-genome polymorphism data is challenging, but it is essential for overcoming the biases in SNP data. Here we analyze 27 genomes of Arabidopsis thaliana to illustrate these issues.
+
+RULES (read carefully):
+1. Base your interpretation on what you OBSERVE in the image. Use the CAPTION and AUTHOR FRAMING only as supporting evidence.
+2. Treat CONTEXT QUALITY as binding. If caption_status is truncated/contaminated/missing, do not treat the caption as authoritative.
+3. If TEXT-IN-FIGURE contradicts what you see, trust what you SEE. The detected text may be incomplete or contain extraction errors.
+4. Do NOT invent numeric values, axis ranges, p-values, sample counts, biological mechanisms, or conclusions. Write "not legible" or "not supported by provided context" instead of guessing.
+5. Do NOT add biological claims that are not supported by the image, the reliable caption, or author framing.
+6. Describe each panel separately when the figure has labeled panels.
+7. First count the panels you can SEE in the image. The panel hint may be incomplete or wrong.
+8. In the JSON, fill evidence_used with short evidence phrases from visual/caption/author_context/OCR.
+9. If context quality is low or author framing is missing, provide a conservative visual description and explicitly mark limitations.
+
+TASK: Produce BOTH of the following, in this order:
+
+=== PART 1: DESCRIPTION (free text) ===
+First, look at the image and count how many panels it has. Then write a factual, self-contained description for a reader who cannot see it. Describe every panel you see. Ground every claim in the visible image, reliable caption, author framing, or detected text. Mark uncertainty explicitly.
+
+=== PART 2: STRUCTURED (JSON) ===
+Output a JSON object with EXACTLY this schema (no extra keys, no markdown fences):
+{
+  "figure_label": "<label>",
+  "figure_type": "<e.g. heatmap, bar chart, scatter plot, micrograph, schematic, multipanel mixed figure>",
+  "one_line_summary": "<single factual sentence about the whole figure>",
+  "n_panels_seen": "<integer>",
+  "panels": [
+    {
+      "panel": "<panel letter seen in the image, or 'whole figure'>",
+      "what_it_shows": "<factual description of visual content>",
+      "axes_or_variables": "<x/y axes, color scale, units, groups, or 'not legible'>",
+      "key_observation": "<main visible pattern, only if supported>",
+      "in_provided_text": "<true|false>",
+      "uncertain": "<uncertainty or empty>"
+    }
+  ],
+  "factual_caption_paraphrase": "<2-4 sentence factual restatement, no new claims>",
+  "evidence_used": {
+    "visual": [
+      "<evidence from image>"
+    ],
+    "caption": [
+      "<evidence from reliable caption, or empty>"
+    ],
+    "author_context": [
+      "<evidence from author framing, or empty>"
+    ],
+    "ocr": [
+      "<evidence from detected text, or empty>"
+    ]
+  },
+  "context_limitations": "<state missing/truncated/contaminated context or empty>",
+  "confidence": "<high|medium|low>"
+}

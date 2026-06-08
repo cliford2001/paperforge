@@ -1,0 +1,81 @@
+You are a scientific figure interpreter for a biology corpus. Your job is to produce a FACTUAL description of the figure shown, to be used as training data. Accuracy is more important than completeness. If the evidence is insufficient, say so and do not infer beyond the image and reliable context.
+
+[FIGURE] Fig. 1
+[PANEL HINT — non-binding, may be incomplete] The text/context mentions panels: a, b, c, d. Count panels yourself from the image.
+
+[CONTEXT QUALITY — use this to decide how cautious to be]
+quality=high
+caption_status=clean
+author_framing_status=sufficient
+visible_text_status=clean
+
+[CAPTION — high confidence]
+Fig. 1 | Genome assemblies and size variation across 27 A. thaliana accessions. a, Origin of the sequenced accessions with colors indicating ‘Admixture’ group34. The reference accession Col-0 (6909) lacks reliable collection data (but hails from Central Europe based on genotype as well as historical records). Please note that 22005 and 22006 appear as a single point as they are geographically close and belong to the same admixture group. Maps were generated using public domain data from the Natural Earth project via the R package rnaturalearth. b, Histogram of genome sizes estimated from k-mers in PCR-free short reads with total assembly sizes superimposed (values to the left of ‘zero’). Most of the variation in genome size can be attributed to unassembled regions (values to the right of ‘zero’). c, The amount of centromeric, 5S rDNA and 45S rDNA repeats, estimated from PCR-free short reads with a BLAST-based approach. d, Correlation between genome size and each of the three major satellite repeats. Their estimated amounts jointly explain up to 92% (P < 2.2 × 10−16) of total genome size variation (for details, see Supplementary Note 3—‘Estimation of satellite repeats’). The linear regression lines with shaded 95% confidence intervals exclude accession 6981 (Ws-2; indicated with a triangle) because of its very high centromeric repeat content. studies are, they have also highlighted the difficulty in making sense of whole-genome polymorphism data, primarily because sequence alignment is not unambiguous. Pangenome graphs28,29 may provide elegant and computationally efficient ways of representing such data, but they do not solve this fundamental problem. To compare genomes and interpret their differences properly, we require a modeling frame- work that reflects the mutational mechanisms and recombination history that gave rise to these differences, but such a framework is still largely missing. Here we illustrate this problem by analyzing the genomes of 27 nat- ural inbred accessions of A. thaliana, chosen to cover the global genetic diversity of the species. Our focus is on obtaining an unbiased picture of polymorphism in the more easily alignable chromosome arms and comparing it to existing data built over almost two decades30–34. To provide an unbiased picture of the ‘gene-ome’, that is, the collection of genes across multiple genomes, we complement our genome assem- blies with transcriptomes from multiple tissues for the entire sample.
+
+[AUTHOR FRAMING — from article body; use only when directly relevant]
+- Fig. 1 | Genome assemblies and size variation across 27 A. thaliana accessions. a, Origin of the sequenced accessions with colors indicating 'Admixture' group 34. The reference accession Col-0 (6909) lacks reliable collection data (but hails from Central Europe based on genotype as well as historical records). Please note that 22005 and 22006 appear as a single point as they are geographically close and belong to the same admixture group. Maps were generated using public domain data from the Natural Earth project via the R package rnaturalearth. b, Histogram of genome sizes estimated from k -mers in PCR-free short reads with total assembly sizes superimposed (values to the left of 'zero'). Most of the
+- We selected 27 accessions to cover global genetic variation of the species based on the original 1001 Genomes Project 34, and additional samples from eastern Asia 35, Africa 36 and Madeira 37 (Fig. 1a). The genomes were sequenced using PacBio continuous long reads (CLRs) and variation in genome size can be attributed to unassembled regions (values to the right of 'zero'). c, The amount of centromeric, 5S rDNA and 45S rDNA repeats, estimated from PCR-free short reads with a BLAST-based approach. d, Correlation between genome size and each of the three major satellite repeats. Their estimated amounts jointly explain up to 92% ( P < 2.2 × 10 -16 ) of total genome size variation (for details, see Supplementary Note 3-'Estimation of satellite repeats'). The linear regression lines with shaded 95% confidence intervals exclude accession 6981 (Ws-2; indicated with a triangle) because of its very high centromeric repeat content.
+- Our assemblies are all ~120 Mb in size, whereas the full genomes are estimated to range from 135 to 155 Mb (Fig. 1b), consistent with previous results 40,41. This genome size variation appears to be almost entirely due to variation in centromeric and rDNA repeats (Fig. 1b-d), with the importance of 45S rDNA variation having been appreciated before 41. While individual TE families can vary greatly in size across accessions (Supplementary Fig. 3), we confirm that the cumulative effect of all TEs on genome size variation appears to be small in A. [...]
+
+[TEXT DETECTED IN FIGURE — structured, may be incomplete; trust what you see over this]
+panel_labels=a, b, c, d
+labels_or_axes_candidates=b c; 60° N; 50° N; 40° N; 30° N; 20° N; 10° N; Accession; Admixturegroup:; Asia Central_Europe China; Germany Italy_Balkan_Caucasus Madeira; North_Sweden Relict South_Sweden; Spain Western_Europe; Admixed Africa; Repeat length (Mb); R 2 = 0.53; Cumulative length (Mb); R2 = 0.52; Nonrepetitive genome; Other repeat; Centromere; Nuclear organellar insertion; Transposable element; 45S rDNA; R 2 = 0.088; Telomere; Estimated nonscaﬀolded genome; 5S rDNA; Genome size (Mb)
+numeric_values_sample=1741, 10002, 9728, 9888, 6909, 6966, 9764, 6024, 9537, 9905, 9981, 10015, 6069, 8236, 22004, 22007, 6124, 22003, 9543, 9075, 9638, 22001, 22002, 22006, 10024, 22005, 6244, 154.9, 1741, 10002, 9728, 9888, 6909, 6966, 9764, 6024, 9537, 9905, 9981, 10015, 6069, 8236, 22004, 22007, 6124, 22003, 9543, 9075, 9638, 22001, 22002, 22006, 10024, 22005, 6244, 6069, 6244, 60, 151.0, 6124
+
+[RAW TEXT SAMPLE — low confidence, for disambiguation only]
+a b c 1741 10002 9728 9888 6909 6966 9764 6024 9537 9905 9981 10015 6069 8236 22004 22007 6124 22003 9543 9075 9638 22001 22002 22006 10024 22005 6244 154.9 1741 10002 9728 9888 6909 6966 9764 6024 9537 9905 9981 10015 6069 8236 22004 22007 6124 22003 9543 9075 9638 22001 22002 22006 10024 22005 6244 6069 6244 60° N 151.0 6124 6024 149.3 6966 8236 50° N 9638 9728 148.7 10002 147.8 147.9 9888 9905 9981 1741 40° N 10015 9075 9537 9543 6909 147.3 22005 22006 22003 22004 9764 30° N 145.2 22001 22002 145.2 144.6 20° N 143.9 22007 143.9 10° N Accession Accession 142.6 142.6 0° 142.5 10024 142.4 100° W 50° W 0° 50 °E 100° E 140.9 141.6 Admixturegroup: Asia Central_Europe China Germany Italy_Balkan_Caucasus Madeira North_Sweden Relict South_Sweden Spain Western_Europe 140.3 Admixed Africa 139.8 138.6 136.8 136.8 d 136.3 6,981 30 136.1 Repeat length (Mb) 135.9 134.9 20 120 100 80 60 40 20 0 20 40
+
+[BACKGROUND — paper abstract, context only]
+Making sense of whole-genome polymorphism data is challenging, but it is essential for overcoming the biases in SNP data. Here we analyze 27 genomes of Arabidopsis thaliana to illustrate these issues.
+
+RULES (read carefully):
+1. Base your interpretation on what you OBSERVE in the image. Use the CAPTION and AUTHOR FRAMING only as supporting evidence.
+2. Treat CONTEXT QUALITY as binding. If caption_status is truncated/contaminated/missing, do not treat the caption as authoritative.
+3. If TEXT-IN-FIGURE contradicts what you see, trust what you SEE. The detected text may be incomplete or contain extraction errors.
+4. Do NOT invent numeric values, axis ranges, p-values, sample counts, biological mechanisms, or conclusions. Write "not legible" or "not supported by provided context" instead of guessing.
+5. Do NOT add biological claims that are not supported by the image, the reliable caption, or author framing.
+6. Describe each panel separately when the figure has labeled panels.
+7. First count the panels you can SEE in the image. The panel hint may be incomplete or wrong.
+8. In the JSON, fill evidence_used with short evidence phrases from visual/caption/author_context/OCR.
+9. If context quality is low or author framing is missing, provide a conservative visual description and explicitly mark limitations.
+
+TASK: Produce BOTH of the following, in this order:
+
+=== PART 1: DESCRIPTION (free text) ===
+First, look at the image and count how many panels it has. Then write a factual, self-contained description for a reader who cannot see it. Describe every panel you see. Ground every claim in the visible image, reliable caption, author framing, or detected text. Mark uncertainty explicitly.
+
+=== PART 2: STRUCTURED (JSON) ===
+Output a JSON object with EXACTLY this schema (no extra keys, no markdown fences):
+{
+  "figure_label": "<label>",
+  "figure_type": "<e.g. heatmap, bar chart, scatter plot, micrograph, schematic, multipanel mixed figure>",
+  "one_line_summary": "<single factual sentence about the whole figure>",
+  "n_panels_seen": "<integer>",
+  "panels": [
+    {
+      "panel": "<panel letter seen in the image, or 'whole figure'>",
+      "what_it_shows": "<factual description of visual content>",
+      "axes_or_variables": "<x/y axes, color scale, units, groups, or 'not legible'>",
+      "key_observation": "<main visible pattern, only if supported>",
+      "in_provided_text": "<true|false>",
+      "uncertain": "<uncertainty or empty>"
+    }
+  ],
+  "factual_caption_paraphrase": "<2-4 sentence factual restatement, no new claims>",
+  "evidence_used": {
+    "visual": [
+      "<evidence from image>"
+    ],
+    "caption": [
+      "<evidence from reliable caption, or empty>"
+    ],
+    "author_context": [
+      "<evidence from author framing, or empty>"
+    ],
+    "ocr": [
+      "<evidence from detected text, or empty>"
+    ]
+  },
+  "context_limitations": "<state missing/truncated/contaminated context or empty>",
+  "confidence": "<high|medium|low>"
+}

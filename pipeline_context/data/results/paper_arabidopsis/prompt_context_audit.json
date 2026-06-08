@@ -1,0 +1,160 @@
+[
+  {
+    "item_id": "paper_arabidopsis__item3.png",
+    "figure_label": "Fig. 1",
+    "page": 2,
+    "context_quality": "high",
+    "caption_status": "clean",
+    "author_framing_status": "sufficient",
+    "visible_text_status": "clean",
+    "issues": []
+  },
+  {
+    "item_id": "paper_arabidopsis__item4.png",
+    "figure_label": "Fig. 2",
+    "page": 3,
+    "context_quality": "high",
+    "caption_status": "clean",
+    "author_framing_status": "sufficient",
+    "visible_text_status": "clean",
+    "issues": []
+  },
+  {
+    "item_id": "paper_arabidopsis__item5.png",
+    "figure_label": "Fig. 3",
+    "page": 4,
+    "context_quality": "high",
+    "caption_status": "clean",
+    "author_framing_status": "sufficient",
+    "visible_text_status": "clean",
+    "issues": []
+  },
+  {
+    "item_id": "paper_arabidopsis__item6.png",
+    "figure_label": "Fig. 4",
+    "page": 5,
+    "context_quality": "high",
+    "caption_status": "clean",
+    "author_framing_status": "sufficient",
+    "visible_text_status": "clean",
+    "issues": []
+  },
+  {
+    "item_id": "paper_arabidopsis__item7.png",
+    "figure_label": "Fig. 5",
+    "page": 6,
+    "context_quality": "high",
+    "caption_status": "clean",
+    "author_framing_status": "sufficient",
+    "visible_text_status": "clean",
+    "issues": []
+  },
+  {
+    "item_id": "paper_arabidopsis__item8.png",
+    "figure_label": "Fig. 6",
+    "page": 7,
+    "context_quality": "high",
+    "caption_status": "clean",
+    "author_framing_status": "sufficient",
+    "visible_text_status": "clean",
+    "issues": []
+  },
+  {
+    "item_id": "paper_arabidopsis__item9.png",
+    "figure_label": "Fig. 7",
+    "page": 8,
+    "context_quality": "high",
+    "caption_status": "clean",
+    "author_framing_status": "sufficient",
+    "visible_text_status": "clean",
+    "issues": []
+  },
+  {
+    "item_id": "paper_arabidopsis__item10.png",
+    "figure_label": "Figure",
+    "page": 10,
+    "context_quality": "low",
+    "caption_status": "missing",
+    "author_framing_status": "partial",
+    "visible_text_status": "clean",
+    "issues": [
+      "caption_missing",
+      "author_framing_partial"
+    ]
+  },
+  {
+    "item_id": "paper_arabidopsis__item11.png",
+    "figure_label": "Extended Data Fig. 1",
+    "page": 20,
+    "context_quality": "high",
+    "caption_status": "clean",
+    "author_framing_status": "sufficient",
+    "visible_text_status": "clean",
+    "issues": []
+  },
+  {
+    "item_id": "paper_arabidopsis__item12.png",
+    "figure_label": "Extended Data Fig. 2",
+    "page": 21,
+    "context_quality": "high",
+    "caption_status": "clean",
+    "author_framing_status": "sufficient",
+    "visible_text_status": "clean",
+    "issues": []
+  },
+  {
+    "item_id": "paper_arabidopsis__item13.png",
+    "figure_label": "Figure",
+    "page": 22,
+    "context_quality": "low",
+    "caption_status": "missing",
+    "author_framing_status": "missing",
+    "visible_text_status": "clean",
+    "issues": [
+      "caption_missing",
+      "author_framing_missing"
+    ]
+  },
+  {
+    "item_id": "paper_arabidopsis__item14.png",
+    "figure_label": "Extended Data Fig. 4",
+    "page": 23,
+    "context_quality": "high",
+    "caption_status": "clean",
+    "author_framing_status": "sufficient",
+    "visible_text_status": "clean",
+    "issues": []
+  },
+  {
+    "item_id": "paper_arabidopsis__item15.png",
+    "figure_label": "Extended Data Fig. 5",
+    "page": 24,
+    "context_quality": "low",
+    "caption_status": "contaminated",
+    "author_framing_status": "sufficient",
+    "visible_text_status": "clean",
+    "issues": [
+      "caption_contaminated"
+    ]
+  },
+  {
+    "item_id": "paper_arabidopsis__item16.png",
+    "figure_label": "Extended Data Fig. 6",
+    "page": 25,
+    "context_quality": "high",
+    "caption_status": "clean",
+    "author_framing_status": "sufficient",
+    "visible_text_status": "clean",
+    "issues": []
+  },
+  {
+    "item_id": "paper_arabidopsis__item17.png",
+    "figure_label": "Extended Data Fig. 7",
+    "page": 26,
+    "context_quality": "high",
+    "caption_status": "clean",
+    "author_framing_status": "sufficient",
+    "visible_text_status": "clean",
+    "issues": []
+  }
+]

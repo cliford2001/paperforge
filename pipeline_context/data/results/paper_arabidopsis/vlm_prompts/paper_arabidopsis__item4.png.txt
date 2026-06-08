@@ -1,0 +1,82 @@
+You are a scientific figure interpreter for a biology corpus. Your job is to produce a FACTUAL description of the figure shown, to be used as training data. Accuracy is more important than completeness. If the evidence is insufficient, say so and do not infer beyond the image and reliable context.
+
+[FIGURE] Fig. 2
+[PANEL HINT — non-binding, may be incomplete] The text/context mentions panels: a, b, c. Count panels yourself from the image.
+
+[CONTEXT QUALITY — use this to decide how cautious to be]
+quality=high
+caption_status=clean
+author_framing_status=sufficient
+visible_text_status=clean
+cross_references_detected=Extended Data Fig. 1
+
+[CAPTION — high confidence]
+Fig. 2 | Distribution of variation on chromosome 1. a, WGA illustrates that the genomes are structurally conserved away from centromeric regions. Chromosomes are aligned from both ends to emphasize the contiguity of the arms, with the unassembled centromeric regions indicated in yellow and inversions in pink. Oscillating gray shades highlight homologous regions (the periodicity of the gradients reflects repeated use of the color scheme and has no biological meaning). b, The density of pangenome graph bubbles, reflecting higher diversity in pericentromeric regions and at ~20 Mb, where an ancestral For convenience, we treat this latter rearrangement as if it had not happened in the analysis below, and refer to the modified assembly as 22001m (Supplementary Note 3—‘Reciprocal translocation in 22001’). Large-scale rearrangements aside, a comprehensive characteriza- tion of structural variants (SVs; by which we mean any alteration that causes variation in length, orientation or local context of sequence) remains difficult. The characterization of SVs is a fundamentally differ- ent problem from SNP calling. The latter can be viewed as a technical issue—namely, how to distinguish SNPs from sequencing errors—but SV calling remains challenging even with flawless chromosomal sequences. The reason is that the SVs identified between genomes depend on the alignment method and parameters used, and there is no obvious ground truth.
+
+[AUTHOR FRAMING — from article body; use only when directly relevant]
+- Fig. 2 | Distribution of variation on chromosome 1. a, WGA illustrates that the genomes are structurally conserved away from centromeric regions. Chromosomes are aligned from both ends to emphasize the contiguity of the arms, with the unassembled centromeric regions indicated in yellow and inversions in pink. Oscillating gray shades highlight homologous regions (the periodicity of the gradients reflects repeated use of the color scheme and has no biological meaning). b, The density of pangenome graph bubbles, reflecting higher diversity in pericentromeric regions and at ~20 Mb, where an ancestral
+- In agreement with others 23, we find the chromosome arms were not only similar in length across accessions but also largely syntenic (Fig. 2a). Thirteen Mb-scale rearrangements were readily apparent in whole-genome alignments (WGAs). These include the previously described 1.2-Mb paracentric inversion associated with a heterochromatic knob on chromosome 4 (refs. 44,45; Extended Data Fig. 1 and Supplementary Table 2), and a very large reciprocal translocation in accession 22001 from the Yangtze River region (Supplementary Fig. 4).
+- It has long been clear that SVs contribute substantially to polymorphism 60,61. In addition to massive variation in tandem repeat regions (Fig. 1), the readily alignable chromosome arms (Fig. 2) are highly polymorphic, with two accessions differing at ~191,000 SVs covering ~12.5 Mb on average. Although we also uncover massive amounts of new SNP variation, this still means that at least an order of magnitude more nucleotide sites are affected by SVs than by SNPs. The allele frequency distribution of SVs suggests purifying selection, as well as a mutational process involving the insertion of longer segments coupled with the deletion of shorter segments. This is consistent with TE activity, and the overwhelming majority of presence-absence variants longer than 100 bp involve annotated TE sequences. As expected in an organism with active TEs 38,62, we found thousands of examples of what appear to be recent insertions of presumably complete TEs. Many of these correspond perfectly to annotated TEs, but many do not, demonstrating that our understanding [...]
+
+[TEXT DETECTED IN FIGURE — structured, may be incomplete; trust what you see over this]
+panel_labels=a, b, c
+labels_or_axes_candidates=Own genome position; Positions of chromosomal arms [–> <–]; Synteny level
+numeric_values_sample=0, 6909, 8236, 1741, 10002, 9537, 6124, 6966, 6024, 9075, 22002, 9728, 9981, 9888, 22001, 6244, 6069, 10015, 9764, 9905, 22007, 22005, 22006, 9638, 9543, 22003, 10024, 22004, 0 × 10 0, 1 × 10 7, 2 × 10 7, 3 × 10 7, 0, 6909, 8236, 1741, 9537, 6124, 6966, 6024, 9075, 22002, 9728, 9981, 9888, 22001, 6244, 6069, 10015, 9764, 9905, 22007, 22005, 22006, 9638, 9543, 22003, 10024, 22004, ≤15
+
+[RAW TEXT SAMPLE — low confidence, for disambiguation only]
+a 0 6909 8236 1741 10002 9537 6124 6966 6024 9075 22002 9728 9981 9888 22001m 6244 6069 10015 9764 9905 22007 22005 22006 9638 9543 22003 10024 22004 0 × 10 0 1 × 10 7 2 × 10 7 3 × 10 7 Own genome position b 0 6909 8236 1741 9537 6124 6966 6024 9075 22002 9728 9981 9888 22001m 6244 6069 10015 9764 9905 22007 22005 22006 9638 9543 22003 10024 22004 Positions of chromosomal arms [–> <–] Synteny level ≤15 20 25 c 0.020 0.015 π 0.010 0.005 0 × 10 0 1 × 10 7 2 × 10 7 3 × 10 7 centromere was lost through chromosome fusion41. Synteny level refers to the average sharing of links between nodes across the 27 genomes in 300-kb blocks. c, Distribution of nucleotide diversity based on SNPs called from a multiple alignment. Blue dots represent values of diversity in 200-kb windows. The red line is a smoothed fit to these points, with the standard error shown. The dark blue area corresponds to the cent
+
+[BACKGROUND — paper abstract, context only]
+Making sense of whole-genome polymorphism data is challenging, but it is essential for overcoming the biases in SNP data. Here we analyze 27 genomes of Arabidopsis thaliana to illustrate these issues.
+
+RULES (read carefully):
+1. Base your interpretation on what you OBSERVE in the image. Use the CAPTION and AUTHOR FRAMING only as supporting evidence.
+2. Treat CONTEXT QUALITY as binding. If caption_status is truncated/contaminated/missing, do not treat the caption as authoritative.
+3. If TEXT-IN-FIGURE contradicts what you see, trust what you SEE. The detected text may be incomplete or contain extraction errors.
+4. Do NOT invent numeric values, axis ranges, p-values, sample counts, biological mechanisms, or conclusions. Write "not legible" or "not supported by provided context" instead of guessing.
+5. Do NOT add biological claims that are not supported by the image, the reliable caption, or author framing.
+6. Describe each panel separately when the figure has labeled panels.
+7. First count the panels you can SEE in the image. The panel hint may be incomplete or wrong.
+8. In the JSON, fill evidence_used with short evidence phrases from visual/caption/author_context/OCR.
+9. If context quality is low or author framing is missing, provide a conservative visual description and explicitly mark limitations.
+
+TASK: Produce BOTH of the following, in this order:
+
+=== PART 1: DESCRIPTION (free text) ===
+First, look at the image and count how many panels it has. Then write a factual, self-contained description for a reader who cannot see it. Describe every panel you see. Ground every claim in the visible image, reliable caption, author framing, or detected text. Mark uncertainty explicitly.
+
+=== PART 2: STRUCTURED (JSON) ===
+Output a JSON object with EXACTLY this schema (no extra keys, no markdown fences):
+{
+  "figure_label": "<label>",
+  "figure_type": "<e.g. heatmap, bar chart, scatter plot, micrograph, schematic, multipanel mixed figure>",
+  "one_line_summary": "<single factual sentence about the whole figure>",
+  "n_panels_seen": "<integer>",
+  "panels": [
+    {
+      "panel": "<panel letter seen in the image, or 'whole figure'>",
+      "what_it_shows": "<factual description of visual content>",
+      "axes_or_variables": "<x/y axes, color scale, units, groups, or 'not legible'>",
+      "key_observation": "<main visible pattern, only if supported>",
+      "in_provided_text": "<true|false>",
+      "uncertain": "<uncertainty or empty>"
+    }
+  ],
+  "factual_caption_paraphrase": "<2-4 sentence factual restatement, no new claims>",
+  "evidence_used": {
+    "visual": [
+      "<evidence from image>"
+    ],
+    "caption": [
+      "<evidence from reliable caption, or empty>"
+    ],
+    "author_context": [
+      "<evidence from author framing, or empty>"
+    ],
+    "ocr": [
+      "<evidence from detected text, or empty>"
+    ]
+  },
+  "context_limitations": "<state missing/truncated/contaminated context or empty>",
+  "confidence": "<high|medium|low>"
+}

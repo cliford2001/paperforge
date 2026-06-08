@@ -1,0 +1,74 @@
+You are a scientific figure interpreter for a biology corpus. Your job is to produce a FACTUAL description of the figure shown, to be used as training data. Accuracy is more important than completeness. If the evidence is insufficient, say so and do not infer beyond the image and reliable context.
+
+[FIGURE] Extended Data Fig. 1
+[PANEL HINT — non-binding, may be incomplete] The text/context mentions panels: a, b, c, d, e, f, g, h, i, j, k, l. Count panels yourself from the image.
+
+[CONTEXT QUALITY — use this to decide how cautious to be]
+quality=high
+caption_status=clean
+author_framing_status=sufficient
+visible_text_status=clean
+cross_references_detected=Fig. 2a–c
+
+[CAPTION — high confidence]
+Extended Data Fig. 1 | The pattern of polymorphism on chromosomes 2–5. a–d, Whole-genome alignments. e–h, Density of PGGB graph bubbles. i–l, Nucleotide diversity. For chromosome 1 and further explanation, see Fig. 2a–c.
+
+[AUTHOR FRAMING — from article body; use only when directly relevant]
+- centromere was lost through chromosome fusion 41. Synteny level refers to the average sharing of links between nodes across the 27 genomes in 300-kb blocks. c, Distribution of nucleotide diversity based on SNPs called from a multiple alignment. Blue dots represent values of diversity in 200-kb windows. The red line is a smoothed fit to these points, with the standard error shown. The dark blue area corresponds to the centromeric region, with the lighter blue area highlighting the pericentromeric area and the lightest blue the ancestral lost centromere 41. For chromosomes 2-5, see Extended Data Fig. 1.
+- In agreement with others 23, we find the chromosome arms were not only similar in length across accessions but also largely syntenic (Fig. 2a). Thirteen Mb-scale rearrangements were readily apparent in whole-genome alignments (WGAs). These include the previously described 1.2-Mb paracentric inversion associated with a heterochromatic knob on chromosome 4 (refs. 44,45; Extended Data Fig. 1 and Supplementary Table 2), and a very large reciprocal translocation in accession 22001 from the Yangtze River region (Supplementary Fig. 4).
+- Graph construction. We constructed genome graphs for each of the five chromosomes using the PGGB pipeline 29.
+
+[BACKGROUND — paper abstract, context only]
+Making sense of whole-genome polymorphism data is challenging, but it is essential for overcoming the biases in SNP data. Here we analyze 27 genomes of Arabidopsis thaliana to illustrate these issues.
+
+RULES (read carefully):
+1. Base your interpretation on what you OBSERVE in the image. Use the CAPTION and AUTHOR FRAMING only as supporting evidence.
+2. Treat CONTEXT QUALITY as binding. If caption_status is truncated/contaminated/missing, do not treat the caption as authoritative.
+3. If TEXT-IN-FIGURE contradicts what you see, trust what you SEE. The detected text may be incomplete or contain extraction errors.
+4. Do NOT invent numeric values, axis ranges, p-values, sample counts, biological mechanisms, or conclusions. Write "not legible" or "not supported by provided context" instead of guessing.
+5. Do NOT add biological claims that are not supported by the image, the reliable caption, or author framing.
+6. Describe each panel separately when the figure has labeled panels.
+7. First count the panels you can SEE in the image. The panel hint may be incomplete or wrong.
+8. In the JSON, fill evidence_used with short evidence phrases from visual/caption/author_context/OCR.
+9. If context quality is low or author framing is missing, provide a conservative visual description and explicitly mark limitations.
+
+TASK: Produce BOTH of the following, in this order:
+
+=== PART 1: DESCRIPTION (free text) ===
+First, look at the image and count how many panels it has. Then write a factual, self-contained description for a reader who cannot see it. Describe every panel you see. Ground every claim in the visible image, reliable caption, author framing, or detected text. Mark uncertainty explicitly.
+
+=== PART 2: STRUCTURED (JSON) ===
+Output a JSON object with EXACTLY this schema (no extra keys, no markdown fences):
+{
+  "figure_label": "<label>",
+  "figure_type": "<e.g. heatmap, bar chart, scatter plot, micrograph, schematic, multipanel mixed figure>",
+  "one_line_summary": "<single factual sentence about the whole figure>",
+  "n_panels_seen": "<integer>",
+  "panels": [
+    {
+      "panel": "<panel letter seen in the image, or 'whole figure'>",
+      "what_it_shows": "<factual description of visual content>",
+      "axes_or_variables": "<x/y axes, color scale, units, groups, or 'not legible'>",
+      "key_observation": "<main visible pattern, only if supported>",
+      "in_provided_text": "<true|false>",
+      "uncertain": "<uncertainty or empty>"
+    }
+  ],
+  "factual_caption_paraphrase": "<2-4 sentence factual restatement, no new claims>",
+  "evidence_used": {
+    "visual": [
+      "<evidence from image>"
+    ],
+    "caption": [
+      "<evidence from reliable caption, or empty>"
+    ],
+    "author_context": [
+      "<evidence from author framing, or empty>"
+    ],
+    "ocr": [
+      "<evidence from detected text, or empty>"
+    ]
+  },
+  "context_limitations": "<state missing/truncated/contaminated context or empty>",
+  "confidence": "<high|medium|low>"
+}

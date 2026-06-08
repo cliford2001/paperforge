@@ -1,0 +1,80 @@
+You are a scientific figure interpreter for a biology corpus. Your job is to produce a FACTUAL description of the figure shown, to be used as training data. Accuracy is more important than completeness. If the evidence is insufficient, say so and do not infer beyond the image and reliable context.
+
+[FIGURE] Extended Data Fig. 2
+[PANEL HINT — non-binding, may be incomplete] The text/context mentions panels: a, b, c, d, e. Count panels yourself from the image.
+
+[CONTEXT QUALITY — use this to decide how cautious to be]
+quality=high
+caption_status=clean
+author_framing_status=sufficient
+visible_text_status=clean
+
+[CAPTION — high confidence]
+Extended Data Fig. 2 | SV type and gene-relative location. a, Cartoons illustrating our classification of length variants into sSVs and cSVs in the whole- genome alignment and graph representations. b, The distribution of sSVs and cSVs across chromosomes—cSVs are more common in pericentromeric regions. c, Fraction of sSVs and cSVs by length. The prevalence of short sSVs is at least partly explained by the low probability of the multiple events required for cSVs to occur in short DNA segments. d, The number of putative insertions (presence allele in 1–3 accessions) and deletions (absence allele in 1–3 accessions) of varying lengths in genes and intergenic regions. e, Same for exons and introns.
+
+[AUTHOR FRAMING — from article body; use only when directly relevant]
+- Extended Data Fig. 2 | SV type and gene-relative location. a, Cartoons illustrating our classification of length variants into sSVs and cSVs in the wholegenome alignment and graph representations. b, The distribution of sSVs and cSVs across chromosomes-cSVs are more common in pericentromeric regions. c, Fraction of sSVs and cSVs by length. The prevalence of short sSVs is at least
+- partly explained by the low probability of the multiple events required for cSVs to occur in short DNA segments. d, The number of putative insertions (presence allele in 1-3 accessions) and deletions (absence allele in 1-3 accessions) of varying lengths in genes and intergenic regions. e, Same for exons and introns.
+- We identified 532,178 sSVs, affecting over 37.5 Mb in total-with the length distribution being heavily skewed towards short variants (Fig. 3). To gain further insight into the nature of these polymorphisms, we consider sSVs between 15 and 20,000 bp length, because shorter variants are more sensitive to the choice of alignment parameters, and larger ones are too few for statistical treatment. The frequency distribution for the presence allele of sSVs was consistent with sSVs mostly being due to rare insertions or rare deletions. Specifically, long presence alleles tend to be rare, and short ones common, suggesting that sSVs are mainly caused by long insertions and short deletions. Both types are also more likely to occur in intergenic regions than in genic regions, and they are more often observed in introns than in exons, consistent with purifying selection removing many of them (Extended Data Fig. 2).
+- SVs come in many types and sizes, reflecting diverse mutational mechanisms. We will focus on length variants, which are by far the most numerous (for example, we identified fewer than a hundred inversions). We further divide them into bi-allelic presence/absence polymorphisms, consistent with simple insertion/deletion (indel) mutations (sSV), and more complex multi-allelic polymorphisms (cSV). We primarily consider the former, as they are easier to interpret and constitute the majority (over 80% overall), especially in the chromosome arms (Extended Data Fig. 2).
+
+[TEXT DETECTED IN FIGURE — structured, may be incomplete; trust what you see over this]
+numeric_values_sample=1, 3, 1, 3
+
+[RAW TEXT SAMPLE — low confidence, for disambiguation only]
+partly explained by the low probability of the multiple events required for cSVs to occur in short DNA segments. d, The number of putative insertions (presence allele in 1–3 accessions) and deletions (absence allele in 1–3 accessions) of varying lengths in genes and intergenic regions. e, Same for exons and introns.
+
+[BACKGROUND — paper abstract, context only]
+Making sense of whole-genome polymorphism data is challenging, but it is essential for overcoming the biases in SNP data. Here we analyze 27 genomes of Arabidopsis thaliana to illustrate these issues.
+
+RULES (read carefully):
+1. Base your interpretation on what you OBSERVE in the image. Use the CAPTION and AUTHOR FRAMING only as supporting evidence.
+2. Treat CONTEXT QUALITY as binding. If caption_status is truncated/contaminated/missing, do not treat the caption as authoritative.
+3. If TEXT-IN-FIGURE contradicts what you see, trust what you SEE. The detected text may be incomplete or contain extraction errors.
+4. Do NOT invent numeric values, axis ranges, p-values, sample counts, biological mechanisms, or conclusions. Write "not legible" or "not supported by provided context" instead of guessing.
+5. Do NOT add biological claims that are not supported by the image, the reliable caption, or author framing.
+6. Describe each panel separately when the figure has labeled panels.
+7. First count the panels you can SEE in the image. The panel hint may be incomplete or wrong.
+8. In the JSON, fill evidence_used with short evidence phrases from visual/caption/author_context/OCR.
+9. If context quality is low or author framing is missing, provide a conservative visual description and explicitly mark limitations.
+
+TASK: Produce BOTH of the following, in this order:
+
+=== PART 1: DESCRIPTION (free text) ===
+First, look at the image and count how many panels it has. Then write a factual, self-contained description for a reader who cannot see it. Describe every panel you see. Ground every claim in the visible image, reliable caption, author framing, or detected text. Mark uncertainty explicitly.
+
+=== PART 2: STRUCTURED (JSON) ===
+Output a JSON object with EXACTLY this schema (no extra keys, no markdown fences):
+{
+  "figure_label": "<label>",
+  "figure_type": "<e.g. heatmap, bar chart, scatter plot, micrograph, schematic, multipanel mixed figure>",
+  "one_line_summary": "<single factual sentence about the whole figure>",
+  "n_panels_seen": "<integer>",
+  "panels": [
+    {
+      "panel": "<panel letter seen in the image, or 'whole figure'>",
+      "what_it_shows": "<factual description of visual content>",
+      "axes_or_variables": "<x/y axes, color scale, units, groups, or 'not legible'>",
+      "key_observation": "<main visible pattern, only if supported>",
+      "in_provided_text": "<true|false>",
+      "uncertain": "<uncertainty or empty>"
+    }
+  ],
+  "factual_caption_paraphrase": "<2-4 sentence factual restatement, no new claims>",
+  "evidence_used": {
+    "visual": [
+      "<evidence from image>"
+    ],
+    "caption": [
+      "<evidence from reliable caption, or empty>"
+    ],
+    "author_context": [
+      "<evidence from author framing, or empty>"
+    ],
+    "ocr": [
+      "<evidence from detected text, or empty>"
+    ]
+  },
+  "context_limitations": "<state missing/truncated/contaminated context or empty>",
+  "confidence": "<high|medium|low>"
+}
