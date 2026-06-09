@@ -240,7 +240,7 @@ Respond ONLY with valid JSON — no markdown fences, no text outside the JSON ob
 {{
   "figure_type": "bar chart | scatter plot | line graph | Western blot | microscopy | heatmap | survival curve | flow cytometry | schematic | other",
   "visual_description": "panels, axes, colors, units and structures visible. 2-4 sentences, one per panel if multi-panel.",
-  "statistical_markers": "every visible statistical element: n=, error bars (SD/SEM/CI), p-values, R², fold-changes, markers. 'None visible' if absent.",
+  "statistical_markers": "exhaustive extraction of ALL quantitative statistical data visible in the image: sample sizes (n=X per group), error bar type and magnitude (SD/SEM/95%CI with values if legible), p-values and significance markers (exact values or */**, report per comparison), effect sizes (fold-change, Cohen d, OR/HR/RR), regression metrics (R², slope, r), test statistics (F, t, chi2, Z). Quote exact numbers from the image when readable. Format: 'n=12/group; error bars=SEM; p<0.001 (A vs B), p=0.03 (A vs C); 2.4-fold increase'. Write 'None visible' ONLY if the image contains zero statistical annotation.",
   "data_and_patterns": "specific values and trends visible. cite numbers from the image. identify groups compared.",
   "groups_compared": "conditions, treatments, timepoints, genotypes or cell lines contrasted.",
   "caption_accurate": true,
@@ -334,7 +334,7 @@ Respond ONLY with valid JSON — no markdown fences, no text outside the JSON ob
 {{
   "table_type": "results comparison | ablation study | patient demographics | parameter table | statistical summary | other",
   "structure": "what is compared, by what metric, against what baselines. units and scale.",
-  "statistical_markers": "significance markers, p-values, CIs, n=, SDs visible. 'None visible' if absent.",
+  "statistical_markers": "exhaustive extraction of ALL statistical data present in the table cells: sample sizes (n=), p-values (exact or bounded, per row/comparison), confidence intervals with bounds, means, medians, SDs, SEs, percentages, test statistics (F, t, chi2). Report specific cell-level values when legible. Format: 'n=45 control / 52 treatment; mean±SD: 12.3±2.1 vs 18.7±3.4; p=0.002; 95%CI [1.2-2.8]'. Write 'None visible' ONLY if the table contains zero statistical annotation.",
   "key_entries": "most relevant rows/cells given the paper's claims. cite specific values.",
   "best_result": "the row or cell with the strongest or most notable result, with its exact value.",
   "patterns_and_trends": "main trend or contrast that stands out across the table.",
