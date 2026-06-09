@@ -182,7 +182,7 @@ python v2/main.py \
   --reuse-existing-pdf \
   --run-analysis \
   --server http://127.0.0.1:8097/v1/chat/completions \
-  --context-mode bm25 \
+  --context-mode layered \
   --top-k 6 \
   --chunk-words 250 \
   --chunk-overlap 40 \
@@ -199,8 +199,9 @@ python v2/main.py \
 | `none` | image + caption + abstract when available | pure visual/caption baseline |
 | `bm25` | image + caption + top retrieved chunks | efficient grounded baseline |
 | `full` | image + caption + full/trimmed paper text | broad context baseline |
+| `layered` | image + caption + compact paper map + top retrieved local chunks + filtered OCR summary | recommended grounded mode |
 
-The planned `layered` mode will add a paper-level context map plus per-figure context packets.
+`layered` builds a deterministic paper-level context map from abstract, introduction/background, methods, results, and discussion/conclusion sections, then adds per-figure/table BM25 local evidence. It keeps broad paper meaning without injecting raw full text into every prompt.
 
 ---
 

@@ -2,7 +2,7 @@
 LLM Analyzer for Extracted Figures — v2 RAG
 =============================================
 
-Analiza figuras Y tablas científicas con dos modos de contexto:
+Analiza figuras Y tablas cientificas con tres modos de contexto:
 
   context_strategy="full"  (por defecto)
       Inyecta el texto COMPLETO del paper como contexto, truncado solo si
@@ -14,7 +14,12 @@ Analiza figuras Y tablas científicas con dos modos de contexto:
       (rank_bm25 o fallback TF-IDF). Mejor para GPUs pequeñas o papers muy
       largos.
 
-En ambos modos:
+  context_strategy="layered"
+      Combina un mapa global compacto del paper con contexto local recuperado
+      para cada figura/tabla. Es el modo recomendado para comparar modelos:
+      mantiene el argumento global del paper sin inyectar full text crudo.
+
+En todos los modos:
   - El abstract completo (o primeras ABSTRACT_MAX_WORDS palabras) se inyecta
     en los prompts de INFERENCIA pura también.
   - Las tablas y figuras comparten el mismo pipeline (kind="table" activa
@@ -45,7 +50,7 @@ import requests
 
 
 # ─── Defaults ─────────────────────────────────────────────────────────────────
-# Estos parámetros se pueden sobreescribir por CLI o por run_analysis_batch.py.
+# Estos parámetros se pueden sobreescribir por CLI o por v2/main.py.
 # Ajustar según la GPU disponible:
 #   GTX 1080 Ti (11 GB, ctx 12 288) → MAX_CONTEXT_WORDS ≈ 3000–4000
 #   RTX 3090 / A100  (ctx 32 768)   → MAX_CONTEXT_WORDS = 0 (sin límite)
@@ -54,7 +59,7 @@ DEFAULT_SERVER            = "http://127.0.0.1:8080/v1/chat/completions"
 DEFAULT_MAX_TOKENS        = 1500       # tokens de respuesta del LLM
 DEFAULT_TEMPERATURE       = 0.0        # determinista; evita alucinaciones
 DEFAULT_TIMEOUT           = 300        # segundos por llamada
-DEFAULT_CONTEXT_STRATEGY  = "bm25"     # "bm25" (default, testeo) | "full" (GPU grande)
+DEFAULT_CONTEXT_STRATEGY  = "bm25"     # "bm25" | "full" | "layered"
 DEFAULT_MAX_CONTEXT_WORDS = 0          # 0 = sin límite; >0 = truncar texto completo
 DEFAULT_ABSTRACT_WORDS    = 0          # 0 = abstract completo detectado por sección
 DEFAULT_CHUNK_WORDS       = 250        # tamaño de chunk en modo bm25
@@ -828,13 +833,13 @@ def extract_paper_text(pdf_path=None, context_file=None):
     return "\n\n".join(parts)
 
 
-# ─── RAG: chunking (solo para context_strategy="bm25") ───────────────────────
+# ─── RAG / layered context ───────────────────────────────────────────────────
 def _tokenize(text):
     return re.findall(r'\b\w+\b', text.lower())
 
 
 def chunk_text(text, chunk_words=DEFAULT_CHUNK_WORDS, overlap=DEFAULT_CHUNK_OVERLAP):
-    """Divide el texto en chunks con overlap. Usado solo en modo bm25."""
+    """Divide el texto en chunks con overlap. Usado en modos bm25 y layered."""
     paragraphs = [p.strip() for p in re.split(r'\n{2,}', text) if p.strip()]
     chunks = []
     current_words = []
@@ -930,18 +935,98 @@ def build_rag_index(text, chunk_words=DEFAULT_CHUNK_WORDS, overlap=DEFAULT_CHUNK
     return chunks, score_fn
 
 
+def _first_section_match(text: str, headings: list[str], max_words: int) -> str:
+    if not text:
+        return ""
+    pattern = r"^\s*(?:" + "|".join(headings) + r")\b[^\n]*\n"
+    start = re.search(pattern, text, re.IGNORECASE | re.MULTILINE)
+    if not start:
+        return ""
+    body = text[start.end():]
+    end = re.search(
+        r"^\s*(?:abstract|introduction|background|methods?|materials?\s+and\s+methods?|"
+        r"results?|discussion|conclusions?|references|acknowledg)\b",
+        body,
+        re.IGNORECASE | re.MULTILINE,
+    )
+    section = body[:end.start()] if end else body
+    return " ".join(section.split()[:max_words])
+
+
+def _fmt_named_block(name: str, text: str) -> str:
+    text = " ".join((text or "").split())
+    if not text:
+        return ""
+    return f"{name}: {text}"
+
+
+def build_paper_context_map(raw_text: str, abstract: str = "", max_words: int = 1100) -> str:
+    """
+    Deterministic paper map for layered mode. It gives the model the full-paper
+    argument shape without injecting the entire paper verbatim.
+    """
+    if not raw_text:
+        return ""
+
+    budget = max(max_words, 500)
+    pieces = [
+        _fmt_named_block("Abstract", abstract or _extract_abstract(raw_text)),
+        _fmt_named_block(
+            "Research problem / introduction",
+            _first_section_match(raw_text, ["introduction", "background"], 180),
+        ),
+        _fmt_named_block(
+            "Methods / experimental system",
+            _first_section_match(raw_text, ["methods?", "materials?\\s+and\\s+methods?"], 180),
+        ),
+        _fmt_named_block(
+            "Main results",
+            _first_section_match(raw_text, ["results?"], 260),
+        ),
+        _fmt_named_block(
+            "Discussion / conclusion",
+            _first_section_match(raw_text, ["discussion", "conclusions?"], 220),
+        ),
+    ]
+    text = "\n".join(p for p in pieces if p)
+    if not text:
+        text = " ".join(raw_text.split()[:budget])
+
+    words = text.split()
+    if len(words) > budget:
+        text = " ".join(words[:budget]) + " [paper map truncated]"
+    return text
+
+
+def build_layered_context(
+    caption: str,
+    paper_map: str,
+    score_fn,
+    chunks: list[str],
+    top_k: int = DEFAULT_TOP_K,
+) -> tuple[str, list[str]]:
+    retrieved = retrieve(caption, score_fn, chunks, top_k=top_k) if chunks and score_fn else []
+    blocks = []
+    if paper_map:
+        blocks.append("PAPER GLOBAL CONTEXT MAP:\n" + paper_map)
+    if retrieved:
+        local = "\n\n---\n\n".join(retrieved)
+        blocks.append(f"FIGURE/TABLE LOCAL CONTEXT (BM25 top-{top_k} chunks):\n" + local)
+    return "\n\n====\n\n".join(blocks), retrieved
+
+
 # ─── Pipeline ─────────────────────────────────────────────────────────────────
 def analyze_all(
     figures_json,
     pdf_path=None,
     context_file=None,
     server=DEFAULT_SERVER,
-    context_strategy=DEFAULT_CONTEXT_STRATEGY,    # "full" | "bm25"
+    context_strategy=DEFAULT_CONTEXT_STRATEGY,    # "full" | "bm25" | "layered"
     max_context_words=DEFAULT_MAX_CONTEXT_WORDS,  # 0 = sin límite (solo en full)
     abstract_words=DEFAULT_ABSTRACT_WORDS,        # 0 = abstract completo
-    chunk_words=DEFAULT_CHUNK_WORDS,              # solo en bm25
-    overlap=DEFAULT_CHUNK_OVERLAP,                # solo en bm25
-    top_k=DEFAULT_TOP_K,                          # solo en bm25
+    chunk_words=DEFAULT_CHUNK_WORDS,              # solo en bm25/layered
+    overlap=DEFAULT_CHUNK_OVERLAP,                # solo en bm25/layered
+    top_k=DEFAULT_TOP_K,                          # solo en bm25/layered
     max_tokens=DEFAULT_MAX_TOKENS,
     temperature=DEFAULT_TEMPERATURE,
     timeout=DEFAULT_TIMEOUT,
@@ -985,8 +1070,8 @@ def analyze_all(
     print(f"\nServer: {server}")
     print(f"Items: {len(items)} ({n_figs} figuras + {n_tbls} tablas) | ya hechos: {len(done)}")
     print(f"Estrategia: context_strategy={context_strategy} | abstract_words={abstract_words or 'completo'}")
-    if context_strategy == "bm25":
-        print(f"BM25: top_k={top_k} | chunk_words={chunk_words} | overlap={overlap}")
+    if context_strategy in {"bm25", "layered"}:
+        print(f"Retrieval: top_k={top_k} | chunk_words={chunk_words} | overlap={overlap}")
     if context_strategy == "full" and max_context_words:
         print(f"Full-text: max_context_words={max_context_words}")
     print()
@@ -1009,6 +1094,7 @@ def analyze_all(
     # ── Preparar contexto RAG (una sola vez) ───────────────────────────────
     full_context_text = ""
     full_context_note = ""
+    paper_context_map  = ""
     chunks            = None
     score_fn          = None
 
@@ -1018,11 +1104,14 @@ def analyze_all(
                 raw_text, max_words=max_context_words
             )
             print(f"  Full-text: {len(full_context_text.split())} palabras{full_context_note}")
-        else:  # bm25
+        else:  # bm25/layered
             print(f"  Construyendo índice BM25 sobre {len(raw_text):,} chars...")
             chunks = chunk_text(raw_text, chunk_words=chunk_words, overlap=overlap)
             score_fn, _ = build_index(chunks)
             print(f"  Chunks: {len(chunks)} ({chunk_words}w c/u, {overlap}w overlap)")
+            if context_strategy == "layered":
+                paper_context_map = build_paper_context_map(raw_text, abstract=abstract)
+                print(f"  Paper map: {len(paper_context_map.split())} palabras")
     print()
 
     # ── Loop principal — una llamada por ítem ──────────────────────────────
@@ -1058,6 +1147,21 @@ def analyze_all(
                 result["retrieved_chunks"] = len(retrieved)
                 result["retrieved_words"]  = sum(len(c.split()) for c in retrieved)
                 result["context_strategy"] = "bm25"
+            elif context_strategy == "layered" and (paper_context_map or chunks):
+                retrieved = []
+                context_text, retrieved = build_layered_context(
+                    caption=caption,
+                    paper_map=paper_context_map,
+                    score_fn=score_fn,
+                    chunks=chunks or [],
+                    top_k=top_k,
+                )
+                context_label = f"LAYERED CONTEXT (paper map + BM25 top-{top_k} local chunks)"
+                result["global_context_words"] = len(paper_context_map.split())
+                result["retrieved_chunks"] = len(retrieved)
+                result["retrieved_words"] = sum(len(c.split()) for c in retrieved)
+                result["context_words"] = len(context_text.split())
+                result["context_strategy"] = "layered"
 
         ocr_summary = build_context_aligned_ocr_summary(
             image_path=img_path,
@@ -1097,6 +1201,11 @@ def analyze_all(
             ctx_info = f" [{result.get('context_words', '?')}w full]"
         elif context_strategy == "bm25":
             ctx_info = f" [{result.get('retrieved_chunks', '?')} chunks]"
+        elif context_strategy == "layered":
+            ctx_info = (
+                f" [{result.get('global_context_words', '?')}w map + "
+                f"{result.get('retrieved_chunks', '?')} chunks]"
+            )
         preview  = (result.get("analysis") or "")[:80].replace("\n", " ")
         kind_tag = "TBL" if is_table else "FIG"
         print(f"[{i + 1}/{len(items)}] [{kind_tag}] {item['label']} p{item['page']} "
@@ -1108,8 +1217,9 @@ def analyze_all(
                 "context_strategy":  context_strategy,
                 "abstract_words":    abstract_words or "full",
                 "max_context_words": max_context_words or "unlimited",
-                "top_k":             top_k if context_strategy == "bm25" else None,
-                "chunk_words":       chunk_words if context_strategy == "bm25" else None,
+                "top_k":             top_k if context_strategy in {"bm25", "layered"} else None,
+                "chunk_words":       chunk_words if context_strategy in {"bm25", "layered"} else None,
+                "layered_context":   context_strategy == "layered",
                 "items":             results,
             }, indent=2, ensure_ascii=False),
             encoding="utf-8",
@@ -1141,8 +1251,9 @@ def analyze_all(
             "context_strategy":  context_strategy,
             "abstract_words":    abstract_words or "full",
             "max_context_words": max_context_words or "unlimited",
-            "top_k":             top_k if context_strategy == "bm25" else None,
-            "chunk_words":       chunk_words if context_strategy == "bm25" else None,
+            "top_k":             top_k if context_strategy in {"bm25", "layered"} else None,
+            "chunk_words":       chunk_words if context_strategy in {"bm25", "layered"} else None,
+            "layered_context":   context_strategy == "layered",
             "paper_summary":     paper_summary,
             "items":             results,
         }, indent=2, ensure_ascii=False),
@@ -1164,9 +1275,9 @@ def main(argv=None):
     p.add_argument("--out",              help="ruta de salida JSON")
 
     # Estrategia de contexto
-    p.add_argument("--context-strategy", choices=["bm25", "full"],
+    p.add_argument("--context-strategy", choices=["bm25", "full", "layered"],
                    default=DEFAULT_CONTEXT_STRATEGY,
-                   help="'bm25' (default) = top-k chunks | 'full' = texto completo")
+                   help="'bm25' = top-k chunks | 'full' = texto completo | 'layered' = paper map + top-k local chunks")
     p.add_argument("--max-context-words", type=int, default=DEFAULT_MAX_CONTEXT_WORDS,
                    help="Palabras máx en modo full (0=sin límite)")
     p.add_argument("--abstract-words",   type=int, default=DEFAULT_ABSTRACT_WORDS,

@@ -11,7 +11,7 @@ if str(LEGACY_DIR) not in sys.path:
 import analyze_figures_v2_rag as legacy_analyzer
 
 
-CONTEXT_MODES = {"none", "bm25", "full"}
+CONTEXT_MODES = {"none", "bm25", "full", "layered"}
 
 
 def analyze_paper_outputs(
@@ -27,7 +27,7 @@ def analyze_paper_outputs(
     timeout: int = 600,
 ) -> Path:
     if context_mode not in CONTEXT_MODES:
-        raise ValueError(f"context_mode invǭlido: {context_mode}")
+        raise ValueError(f"context_mode invalido: {context_mode}")
 
     paper_dir = Path(paper_dir)
     figures_json = paper_dir / "figures.json"
