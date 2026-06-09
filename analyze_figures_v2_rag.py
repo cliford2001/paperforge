@@ -154,15 +154,21 @@ def _parse_json(text: str) -> dict | None:
 
 # ─── Prompts ──────────────────────────────────────────────────────────────────
 # Un solo prompt por tipo (figura / tabla).
-# El abstract siempre se inyecta como contexto dinámico.
-# El bloque de contexto RAG (BM25 o full-text) se añade cuando está disponible.
+# Orden anti "lost in the middle" (Liu et al. 2023, arXiv:2307.03172):
+#
+#   A. caption          → inicio  (el modelo atiende el comienzo del contexto)
+#   B. chunk más relevante (BM25 rank-1) → justo después del caption
+#   C. chunks de apoyo  → medio  (orden documental, para coherencia)
+#   D. chunk rank-2     → último del bloque RAG  (el modelo atiende el final)
+#   E. abstract         → cierre del contexto, antes de las instrucciones
+#
 # La salida siempre es JSON estructurado.
 
 PROMPT_FIG_TEMPLATE = """\
+Figure caption: {caption}
+{context_block}\
 PAPER ABSTRACT:
 {abstract}
-{context_block}\
-Figure caption: {caption}
 
 You are generating high-quality training data for a vision-language model. \
 Using the abstract as context for what this paper investigates{context_hint}, \
@@ -237,10 +243,10 @@ Never refuse — all figures must be analyzed."""
 
 
 PROMPT_TBL_TEMPLATE = """\
+Table caption: {caption}
+{context_block}\
 PAPER ABSTRACT:
 {abstract}
-{context_block}\
-Table caption: {caption}
 
 You are generating high-quality training data for a vision-language model. \
 Using the abstract as context for what this paper investigates{context_hint}, \
@@ -538,13 +544,33 @@ def build_index(chunks):
 
 
 def retrieve(query, score_fn, chunks, top_k=DEFAULT_TOP_K):
+    """
+    Recupera top_k chunks y los reordena aplicando la estrategia anti
+    'lost in the middle' (Liu et al. 2023, arXiv:2307.03172):
+
+      posición 0          → chunk con mayor score BM25  (modelo atiende inicio)
+      posiciones 1..k-2   → chunks restantes en orden documental (coherencia)
+      posición k-1        → chunk con segundo mayor score  (modelo atiende final)
+
+    Así los dos fragmentos más relevantes quedan en los extremos del bloque
+    de contexto, donde el modelo presta más atención.
+    """
     query_tokens = _tokenize(query)
     if not query_tokens:
         return chunks[:top_k]
-    scores     = score_fn(query_tokens)
-    ranked     = sorted(enumerate(scores), key=lambda x: x[1], reverse=True)
-    top_idx    = sorted([i for i, _ in ranked[:top_k]])
-    return [chunks[i] for i in top_idx]
+
+    scores = score_fn(query_tokens)
+    ranked = sorted(enumerate(scores), key=lambda x: x[1], reverse=True)
+    top    = ranked[:top_k]
+
+    if len(top) <= 2:
+        return [chunks[i] for i, _ in top]
+
+    best_idx   = top[0][0]
+    second_idx = top[1][0]
+    middle_idx = sorted(i for i, _ in top[2:])   # orden documental → coherencia
+
+    return [chunks[i] for i in [best_idx] + middle_idx + [second_idx]]
 
 
 def build_rag_index(text, chunk_words=DEFAULT_CHUNK_WORDS, overlap=DEFAULT_CHUNK_OVERLAP):
