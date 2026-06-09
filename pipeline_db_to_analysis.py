@@ -68,48 +68,218 @@ DEFAULT_QUALITY  = 0       # quality_score mínimo (0 = todos)
 # ─── Descarga PDF via Unpaywall (DOI → PDF URL) ──────────────────────────────
 UNPAYWALL_EMAIL = "fernver62@gmail.com"
 
-def _get_pdf_url_unpaywall(doi: str, timeout: int = 15) -> str | None:
-    """Consulta Unpaywall para obtener la URL del PDF open access."""
+def _get_pdf_url_unpaywall(doi: str, timeout: int = 15) -> list[str]:
+    """Return list of PDF URLs from Unpaywall (all OA locations)."""
     doi_clean = doi.replace("https://doi.org/", "").replace("http://doi.org/", "").strip()
     url = f"https://api.unpaywall.org/v2/{doi_clean}?email={UNPAYWALL_EMAIL}"
     try:
-        r = requests.get(url, timeout=timeout)
+        r = requests.get(url, timeout=timeout,
+                         headers={"User-Agent": "scientific-figure-pipeline/1.0"})
         if r.status_code != 200:
-            return None
+            return []
         data = r.json()
-        loc  = data.get("best_oa_location") or {}
-        return loc.get("url_for_pdf") or loc.get("url")
+        urls = []
+        for loc in data.get("oa_locations", []):
+            u = loc.get("url_for_pdf") or loc.get("url", "")
+            if u:
+                urls.append(u)
+        return urls
+    except Exception:
+        return []
+
+
+def _get_pdf_urls_crossref(doi: str, timeout: int = 15) -> list[str]:
+    """Return PDF link URLs from CrossRef."""
+    doi_clean = doi.replace("https://doi.org/", "").replace("http://doi.org/", "").strip()
+    try:
+        r = requests.get(
+            f"https://api.crossref.org/works/{doi_clean}",
+            timeout=timeout,
+            headers={"User-Agent": "scientific-figure-pipeline/1.0 (mailto:fernver62@gmail.com)"},
+        )
+        if r.status_code != 200:
+            return []
+        links = r.json().get("message", {}).get("link", [])
+        return [l["URL"] for l in links if "pdf" in l.get("content-type", "").lower()
+                or "pdf" in l.get("URL", "").lower()]
+    except Exception:
+        return []
+
+
+def _mdpi_cdn_url(redirect_url: str) -> str | None:
+    """
+    If redirect_url looks like pmc.ncbi.nlm.nih.gov/.../pdf/journal-vol-num.pdf
+    construct the res.mdpi.com CDN equivalent which is not IP-blocked.
+    """
+    try:
+        filename = redirect_url.rstrip("/").split("/")[-1]
+        if not filename.endswith(".pdf"):
+            return None
+        slug = filename[:-4]                    # e.g. plants-12-01206
+        parts = slug.rsplit("-", 2)             # ['plants', '12', '01206']
+        if len(parts) != 3:
+            return None
+        journal = parts[0]
+        return (f"https://res.mdpi.com/{journal}/{slug}"
+                f"/article_deploy/{slug}.pdf")
+    except Exception:
+        return None
+
+
+def _fetch_pdf(url: str, timeout: int = 60,
+               referer: str = "", delay: float = 1.5) -> bytes | None:
+    """Download URL; return raw bytes if valid PDF, else None."""
+    import time, random
+    time.sleep(delay + random.uniform(0, 0.8))
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/120.0.0.0 Safari/537.36"
+        ),
+        "Accept": "application/pdf,*/*",
+        "Accept-Language": "en-US,en;q=0.9",
+    }
+    if referer:
+        headers["Referer"] = referer
+    try:
+        r = requests.get(url, headers=headers, allow_redirects=True, timeout=timeout)
+        if r.status_code == 200 and r.content[:4] == b"%PDF":
+            return r.content
+        return None
     except Exception:
         return None
 
 
 def download_pdf(pmcid: str, doi: str, out_path: Path, timeout: int = 60) -> bool:
-    headers = {"User-Agent": "scientific-figure-pipeline/1.0 (research use)"}
+    """
+    Try multiple sources in order; save to out_path and return True on success.
 
-    # 1) Unpaywall via DOI
+    Chain:
+      1. Unpaywall  — all OA locations in order
+         1a. If MDPI URL fails → try res.mdpi.com CDN
+      2. PMC direct (ncbi.nlm.nih.gov/pmc/{pmcid}/pdf/)
+         2a. If redirect lands on pmc.ncbi.nlm.nih.gov with a .pdf filename
+             and returns HTML → try res.mdpi.com CDN from that filename
+      3. Europe PMC backend renderer
+      4. CrossRef PDF links
+      5. DOI resolver with Accept: application/pdf
+      6. PMC OA API + tar.gz extraction (FTP via ftplib)
+    """
+    import io, ftplib
+
+    def _save(data: bytes, label: str) -> bool:
+        out_path.write_bytes(data)
+        print(f"    OK [{label}]  {len(data)//1024} KB")
+        return True
+
+    # ── 1. Unpaywall ─────────────────────────────────────────────────────────
     if doi:
-        pdf_url = _get_pdf_url_unpaywall(doi)
-        if pdf_url:
-            try:
-                r = requests.get(pdf_url, headers=headers, allow_redirects=True,
-                                 timeout=timeout)
-                if r.status_code == 200 and r.content[:4] == b"%PDF":
-                    out_path.write_bytes(r.content)
-                    return True
-                print(f"    Unpaywall URL no devolvió PDF ({r.status_code}): {pdf_url[:70]}")
-            except Exception as e:
-                print(f"    Unpaywall descarga fallida: {e}")
+        all_unpaywall_urls = _get_pdf_url_unpaywall(doi, timeout=15)
 
-    # 2) Fallback: PMC directo via pmcid
+        # Collect MDPI CDN candidates from any pmc.ncbi.nlm.nih.gov URL
+        # that ends with a filename (e.g. .../pdf/plants-12-01206.pdf)
+        mdpi_cdn_candidates = []
+        for u in all_unpaywall_urls:
+            if "pmc.ncbi.nlm.nih.gov" in u and u.endswith(".pdf"):
+                cdn = _mdpi_cdn_url(u)
+                if cdn:
+                    mdpi_cdn_candidates.append(cdn)
+
+        # Try every Unpaywall URL directly
+        for pdf_url in all_unpaywall_urls:
+            data = _fetch_pdf(pdf_url, timeout=timeout)
+            if data:
+                return _save(data, f"unpaywall")
+            print(f"    unpaywall failed: {pdf_url[:70]}")
+
+        # 1a. If direct URLs failed and we have MDPI CDN candidates, try them
+        for cdn in mdpi_cdn_candidates:
+            data = _fetch_pdf(cdn, timeout=timeout, delay=0.5)
+            if data:
+                return _save(data, f"mdpi-cdn {cdn[:70]}")
+            print(f"    mdpi-cdn failed: {cdn[:70]}")
+
+    # ── 2. PMC direct ─────────────────────────────────────────────────────────
     pmcid_url = f"https://www.ncbi.nlm.nih.gov/pmc/articles/{pmcid}/pdf/"
     try:
-        r = requests.get(pmcid_url, headers=headers, allow_redirects=True, timeout=timeout)
+        r = requests.get(pmcid_url,
+                         headers={"User-Agent": "scientific-figure-pipeline/1.0"},
+                         allow_redirects=True, timeout=timeout)
         if r.status_code == 200 and r.content[:4] == b"%PDF":
-            out_path.write_bytes(r.content)
-            return True
+            return _save(r.content, "pmc-direct")
+        # 2a. Got HTML from pmc.ncbi.nlm.nih.gov → try MDPI CDN from redirect URL
+        if "pmc.ncbi.nlm.nih.gov" in r.url:
+            cdn = _mdpi_cdn_url(r.url)
+            if cdn:
+                data = _fetch_pdf(cdn, timeout=timeout, delay=0.5)
+                if data:
+                    return _save(data, f"mdpi-cdn(pmc-redirect) {cdn[:60]}")
+        print(f"    pmc-direct ({r.status_code}) final_url={r.url[:70]}")
     except Exception as e:
-        print(f"    PMC fallback fallido: {e}")
+        print(f"    pmc-direct failed: {e}")
 
+    # ── 3. Europe PMC backend ─────────────────────────────────────────────────
+    epmc_url = f"https://europepmc.org/backend/ptpmcrender.fcgi?accid={pmcid}&blobtype=pdf"
+    data = _fetch_pdf(epmc_url, timeout=timeout, delay=1.0)
+    if data:
+        return _save(data, "europepmc")
+    print(f"    europepmc failed")
+
+    # ── 4. CrossRef PDF links ─────────────────────────────────────────────────
+    if doi:
+        for url in _get_pdf_urls_crossref(doi, timeout=15):
+            data = _fetch_pdf(url, timeout=timeout)
+            if data:
+                return _save(data, f"crossref {url[:50]}")
+        if _get_pdf_urls_crossref(doi):
+            print(f"    crossref: links found but all failed")
+
+    # ── 5. DOI resolver with Accept: application/pdf ──────────────────────────
+    if doi:
+        doi_clean = doi.replace("https://doi.org/", "").replace("http://doi.org/", "").strip()
+        try:
+            import time
+            time.sleep(1.5)
+            r = requests.get(
+                f"https://doi.org/{doi_clean}",
+                headers={"User-Agent": "scientific-figure-pipeline/1.0",
+                         "Accept": "application/pdf"},
+                allow_redirects=True, timeout=timeout)
+            if r.status_code == 200 and r.content[:4] == b"%PDF":
+                return _save(r.content, "doi-resolver")
+        except Exception as e:
+            print(f"    doi-resolver failed: {e}")
+
+    # ── 6. PMC OA API + FTP tar.gz ────────────────────────────────────────────
+    try:
+        import tarfile, xml.etree.ElementTree as ET
+        r = requests.get(
+            f"https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id={pmcid}",
+            headers={"User-Agent": "scientific-figure-pipeline/1.0"}, timeout=15)
+        if r.status_code == 200:
+            root = ET.fromstring(r.text)
+            link = root.find(".//link[@format='tgz']")
+            if link is not None:
+                ftp_href = link.attrib["href"]   # ftp://ftp.ncbi.nlm.nih.gov/...
+                ftp_path = ftp_href.replace("ftp://ftp.ncbi.nlm.nih.gov", "")
+                print(f"    PMC OA FTP: {ftp_path}")
+                buf = io.BytesIO()
+                ftp = ftplib.FTP("ftp.ncbi.nlm.nih.gov", timeout=120)
+                ftp.login()
+                ftp.retrbinary(f"RETR {ftp_path}", buf.write)
+                ftp.quit()
+                buf.seek(0)
+                with tarfile.open(fileobj=buf, mode="r:gz") as tar:
+                    pdfs = [m for m in tar.getmembers() if m.name.endswith(".pdf")]
+                    if pdfs:
+                        pdf_bytes = tar.extractfile(pdfs[0]).read()
+                        if pdf_bytes[:4] == b"%PDF":
+                            return _save(pdf_bytes, f"pmc-oa-ftp {pdfs[0].name}")
+    except Exception as e:
+        print(f"    pmc-oa-ftp failed: {e}")
+
+    print(f"    ALL methods failed for {pmcid}")
     return False
 
 
