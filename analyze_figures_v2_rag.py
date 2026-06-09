@@ -222,6 +222,19 @@ Write as a unified inference paragraph — not a bullet list, not a summary of \
 the sections. The reader should be able to understand the figure's contribution \
 to the paper from this paragraph alone.
 
+## Extended Analysis
+Go beyond what the paper explicitly states. \
+Ground all claims in what is visually present in the image.
+
+- Beyond the paper: what does this data suggest or imply that the authors \
+did not explicitly claim? Identify patterns, magnitudes, or relationships \
+visible in the figure that could support a broader or different conclusion.
+- Open questions: what scientific questions does this figure raise that \
+the paper does not address or resolve?
+- Alternative interpretation: propose one alternative valid reading of \
+this data — a different mechanism, confound, or explanation consistent \
+with the visual evidence. Write "None" if the data is unambiguous.
+
 Respond ONLY with valid JSON — no markdown fences, no text outside the JSON object:
 
 {{
@@ -234,6 +247,11 @@ Respond ONLY with valid JSON — no markdown fences, no text outside the JSON ob
   "caption_discrepancy": "discrepancy between image and caption. 'None' if accurate.",
   "scientific_interpretation": "what question this figure answers given the paper's topic. mechanism or phenomenon demonstrated.",{anchored_json}
   "scientific_conclusion": "unified synthesis paragraph (4-6 sentences) integrating visual evidence, statistics, interpretation{anchored_hint}. What this figure definitively demonstrates, what it rules out, and its role in the paper's argument. Written as flowing prose, not a list.",
+  "extended_analysis": {{
+    "beyond_the_paper": "what this data suggests or implies beyond the paper's explicit claims. grounded strictly in what is visible in the image.",
+    "open_questions": "scientific questions this figure raises that the paper does not address or resolve.",
+    "alternative_interpretation": "one alternative valid reading of this data — different mechanism, confound, or explanation. 'None' if unambiguous."
+  }},
   "context_used": "{context_used}",
   "confidence": "high | medium | low"
 }}
@@ -298,6 +316,19 @@ Write as a unified inference paragraph — not a bullet list, not a section reca
 The reader should be able to understand the table's contribution to the paper \
 from this paragraph alone.
 
+## Extended Analysis
+Go beyond what the paper explicitly states. \
+Ground all claims in the values and structure visible in the table.
+
+- Beyond the paper: what do these numbers suggest or imply that the authors \
+did not explicitly claim? Identify trends, outliers, or comparisons in the \
+table that could support a broader or different conclusion.
+- Open questions: what scientific questions does this table raise that \
+the paper does not address or resolve?
+- Alternative interpretation: propose one alternative valid reading of \
+these results — a different explanation, confound, or mechanism consistent \
+with the tabulated data. Write "None" if the data is unambiguous.
+
 Respond ONLY with valid JSON — no markdown fences, no text outside the JSON object:
 
 {{
@@ -311,6 +342,11 @@ Respond ONLY with valid JSON — no markdown fences, no text outside the JSON ob
   "caption_discrepancy": "discrepancy between table content and caption. 'None' if accurate.",
   "scientific_interpretation": "what question this table answers. what the numbers prove. cite specific values.",{anchored_json}
   "scientific_conclusion": "unified synthesis paragraph (4-6 sentences) integrating table data, statistics, interpretation{anchored_hint}. What this table definitively demonstrates, what it rules out, and its role in the paper's argument. Written as flowing prose, not a list.",
+  "extended_analysis": {{
+    "beyond_the_paper": "what these numbers suggest or imply beyond the paper's explicit claims. grounded strictly in values visible in the table.",
+    "open_questions": "scientific questions this table raises that the paper does not address or resolve.",
+    "alternative_interpretation": "one alternative valid reading of these results — different explanation, confound, or mechanism. 'None' if unambiguous."
+  }},
   "context_used": "{context_used}",
   "confidence": "high | medium | low"
 }}
