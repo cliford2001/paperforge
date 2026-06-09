@@ -184,6 +184,12 @@ Type of visualization (bar chart, scatter plot, line graph, Western blot, \
 heatmap, microscopy image, survival curve, flow cytometry, schematic, etc.) \
 and what experimental data it represents.
 
+## Experimental Design
+Identify the experimental system, groups compared, treatments or perturbations, \
+controls, measured variables, assay or method, and the hypothesis or question \
+tested by this figure. If any element is not visible or not stated in the \
+caption/context, write "Not determinable".
+
 ## Statistical Markers
 Every statistical element visible in the image: sample sizes (n=), \
 error bars (SD, SEM, 95% CI), p-values, R², fold-changes, significance \
@@ -199,6 +205,11 @@ Identify the groups, conditions, timepoints or genotypes being compared.
 Does the caption accurately describe what is shown? \
 Note discrepancies: visual elements absent from the caption, \
 or caption claims not supported by what is visible.
+
+## Evidence Separation
+Separate direct visual evidence, caption-supported evidence, paper-context \
+supported interpretation, and unsupported or not-determinable claims. \
+Do not mix paper-grounded conclusions with model speculation.
 
 ## Scientific Interpretation
 What biological or scientific question does this figure address, \
@@ -222,33 +233,68 @@ Write as a unified inference paragraph — not a bullet list, not a summary of \
 the sections. The reader should be able to understand the figure's contribution \
 to the paper from this paragraph alone.
 
-## Extended Analysis
-Go beyond what the paper explicitly states. \
-Ground all claims in what is visually present in the image.
+## Model Extra Inference
+This is optional analysis outside the paper's explicit claims. \
+It must be clearly separated from the supported scientific conclusion.
 
-- Beyond the paper: what does this data suggest or imply that the authors \
-did not explicitly claim? Identify patterns, magnitudes, or relationships \
-visible in the figure that could support a broader or different conclusion.
+- Extra inference: what might this data suggest beyond the paper's explicit \
+claims? Ground it in visible/caption/context evidence when possible.
 - Open questions: what scientific questions does this figure raise that \
 the paper does not address or resolve?
 - Alternative interpretation: propose one alternative valid reading of \
 this data — a different mechanism, confound, or explanation consistent \
 with the visual evidence. Write "None" if the data is unambiguous.
+- Support status: mark whether this inference is image_supported, \
+caption_supported, context_supported, or speculative.
 
 Respond ONLY with valid JSON — no markdown fences, no text outside the JSON object:
 
 {{
   "figure_type": "bar chart | scatter plot | line graph | Western blot | microscopy | heatmap | survival curve | flow cytometry | schematic | other",
+  "visual_form": {{
+    "graph_or_visual_type": "bar_plot | line_plot | scatter_plot | heatmap | microscopy | pathway_diagram | schematic | table | gel_blot | map | multi_panel_composite | other | unclear",
+    "panel_count": "number or 'unclear'",
+    "panel_labels": ["A", "B"],
+    "axes_or_dimensions": ["axis labels, dimensions or columns visible"],
+    "legend_elements": ["legend items visible"],
+    "visible_entities": ["species, genes, proteins, metabolites, treatments, tissues, timepoints, doses, conditions visible"]
+  }},
   "visual_description": "panels, axes, colors, units and structures visible. 2-4 sentences, one per panel if multi-panel.",
+  "experimental_design": {{
+    "hypothesis_or_question_tested": "what this figure appears to test. 'Not determinable' if unavailable.",
+    "experimental_groups": ["groups, genotypes, treatments, cohorts or conditions compared"],
+    "controls": ["positive, negative, vehicle, untreated, baseline or reference controls visible/stated"],
+    "perturbations_or_treatments": ["drug, knockout, dose, timepoint, environmental condition, etc."],
+    "measured_variables": ["dependent variables or readouts"],
+    "assay_or_method": "assay, imaging method, sequencing, qPCR, western blot, etc. 'Not determinable' if unavailable.",
+    "biological_or_experimental_system": "cell type, organism, tissue, patient cohort, model system, etc."
+  }},
   "statistical_markers": "exhaustive extraction of ALL quantitative statistical data visible in the image: sample sizes (n=X per group), error bar type and magnitude (SD/SEM/95%CI with values if legible), p-values and significance markers (exact values or */**, report per comparison), effect sizes (fold-change, Cohen d, OR/HR/RR), regression metrics (R², slope, r), test statistics (F, t, chi2, Z). Quote exact numbers from the image when readable. Format: 'n=12/group; error bars=SEM; p<0.001 (A vs B), p=0.03 (A vs C); 2.4-fold increase'. Write 'None visible' ONLY if the image contains zero statistical annotation.",
+  "markers_and_statistics": {{
+    "statistical_markers": ["p-values, confidence intervals, error bars, significance letters, asterisks, regression/correlation, fold-change, sample size"],
+    "sample_sizes": ["n values if visible/stated"],
+    "units": ["units visible/stated"],
+    "effect_directions": ["increase, decrease, no change, association direction"],
+    "quantitative_values": ["only exact values explicitly visible or stated in caption/context"]
+  }},
   "data_and_patterns": "specific values and trends visible. cite numbers from the image. identify groups compared.",
   "groups_compared": "conditions, treatments, timepoints, genotypes or cell lines contrasted.",
   "caption_accurate": true,
   "caption_discrepancy": "discrepancy between image and caption. 'None' if accurate.",
+  "evidence_separation": {{
+    "direct_visual_evidence": ["claims supported by visible image only"],
+    "caption_supported_evidence": ["claims supported by caption"],
+    "local_context_supported_evidence": ["claims supported by retrieved/full paper context"],
+    "global_paper_supported_interpretation": ["claims supported by abstract/paper-level context"],
+    "unsupported_or_not_determinable": ["claims that cannot be determined"]
+  }},
   "scientific_interpretation": "what question this figure answers given the paper's topic. mechanism or phenomenon demonstrated.",{anchored_json}
   "scientific_conclusion": "unified synthesis paragraph (4-6 sentences) integrating visual evidence, statistics, interpretation{anchored_hint}. What this figure definitively demonstrates, what it rules out, and its role in the paper's argument. Written as flowing prose, not a list.",
-  "extended_analysis": {{
-    "beyond_the_paper": "what this data suggests or implies beyond the paper's explicit claims. grounded strictly in what is visible in the image.",
+  "model_extra_inference": {{
+    "extra_inference": "optional interpretation beyond the paper's explicit claims. Keep separate from scientific_conclusion.",
+    "support_status": "image_supported | caption_supported | context_supported | speculative | none",
+    "supporting_evidence": "what visible/caption/context evidence supports the inference. 'None' if speculative.",
+    "risk": "low | medium | high",
     "open_questions": "scientific questions this figure raises that the paper does not address or resolve.",
     "alternative_interpretation": "one alternative valid reading of this data — different mechanism, confound, or explanation. 'None' if unambiguous."
   }},
@@ -279,6 +325,12 @@ Type of table (results comparison, ablation study, patient demographics, \
 parameter table, statistical summary, etc.) \
 and what experimental data it represents.
 
+## Experimental Design
+Identify the experimental system, groups compared, treatments or perturbations, \
+controls, measured variables, assay or method, and the hypothesis or question \
+tested by this table. If any element is not visible or not stated in the \
+caption/context, write "Not determinable".
+
 ## Statistical Markers
 Every statistical annotation visible: significance markers (*, **, ***), \
 p-values, confidence intervals, sample sizes (n=), standard deviations. \
@@ -295,6 +347,11 @@ What does the distribution of values reveal?
 ## Caption Alignment
 Does the caption accurately describe what the table contains? \
 Note discrepancies between actual content and what the caption states or implies.
+
+## Evidence Separation
+Separate direct table evidence, caption-supported evidence, paper-context \
+supported interpretation, and unsupported or not-determinable claims. \
+Do not mix paper-grounded conclusions with model speculation.
 
 ## Scientific Interpretation
 What question does this table address, given what the abstract says this paper investigates? \
@@ -316,34 +373,69 @@ Write as a unified inference paragraph — not a bullet list, not a section reca
 The reader should be able to understand the table's contribution to the paper \
 from this paragraph alone.
 
-## Extended Analysis
-Go beyond what the paper explicitly states. \
-Ground all claims in the values and structure visible in the table.
+## Model Extra Inference
+This is optional analysis outside the paper's explicit claims. \
+It must be clearly separated from the supported scientific conclusion.
 
-- Beyond the paper: what do these numbers suggest or imply that the authors \
-did not explicitly claim? Identify trends, outliers, or comparisons in the \
-table that could support a broader or different conclusion.
+- Extra inference: what might these values suggest beyond the paper's explicit \
+claims? Ground it in visible table/caption/context evidence when possible.
 - Open questions: what scientific questions does this table raise that \
 the paper does not address or resolve?
 - Alternative interpretation: propose one alternative valid reading of \
 these results — a different explanation, confound, or mechanism consistent \
 with the tabulated data. Write "None" if the data is unambiguous.
+- Support status: mark whether this inference is table_supported, \
+caption_supported, context_supported, or speculative.
 
 Respond ONLY with valid JSON — no markdown fences, no text outside the JSON object:
 
 {{
   "table_type": "results comparison | ablation study | patient demographics | parameter table | statistical summary | other",
+  "visual_form": {{
+    "graph_or_visual_type": "table",
+    "panel_count": "number or 'unclear'",
+    "panel_labels": ["A", "B"],
+    "axes_or_dimensions": ["columns, rows, group dimensions or table sections visible"],
+    "legend_elements": ["footnotes, legends or table annotations visible"],
+    "visible_entities": ["species, genes, proteins, metabolites, treatments, tissues, timepoints, doses, conditions visible"]
+  }},
   "structure": "what is compared, by what metric, against what baselines. units and scale.",
+  "experimental_design": {{
+    "hypothesis_or_question_tested": "what this table appears to test. 'Not determinable' if unavailable.",
+    "experimental_groups": ["groups, genotypes, treatments, cohorts or conditions compared"],
+    "controls": ["positive, negative, vehicle, untreated, baseline or reference controls visible/stated"],
+    "perturbations_or_treatments": ["drug, knockout, dose, timepoint, environmental condition, etc."],
+    "measured_variables": ["dependent variables or readouts"],
+    "assay_or_method": "assay, statistical method, cohort comparison, model evaluation, etc. 'Not determinable' if unavailable.",
+    "biological_or_experimental_system": "cell type, organism, tissue, patient cohort, model system, etc."
+  }},
   "statistical_markers": "exhaustive extraction of ALL statistical data present in the table cells: sample sizes (n=), p-values (exact or bounded, per row/comparison), confidence intervals with bounds, means, medians, SDs, SEs, percentages, test statistics (F, t, chi2). Report specific cell-level values when legible. Format: 'n=45 control / 52 treatment; mean±SD: 12.3±2.1 vs 18.7±3.4; p=0.002; 95%CI [1.2-2.8]'. Write 'None visible' ONLY if the table contains zero statistical annotation.",
+  "markers_and_statistics": {{
+    "statistical_markers": ["p-values, confidence intervals, SD/SE, percentages, means/medians, test statistics, sample size"],
+    "sample_sizes": ["n values if visible/stated"],
+    "units": ["units visible/stated"],
+    "effect_directions": ["increase, decrease, no change, association direction"],
+    "quantitative_values": ["only exact values explicitly visible or stated in caption/context"]
+  }},
   "key_entries": "most relevant rows/cells given the paper's claims. cite specific values.",
   "best_result": "the row or cell with the strongest or most notable result, with its exact value.",
   "patterns_and_trends": "main trend or contrast that stands out across the table.",
   "caption_accurate": true,
   "caption_discrepancy": "discrepancy between table content and caption. 'None' if accurate.",
+  "evidence_separation": {{
+    "direct_visual_evidence": ["claims supported by table values only"],
+    "caption_supported_evidence": ["claims supported by caption"],
+    "local_context_supported_evidence": ["claims supported by retrieved/full paper context"],
+    "global_paper_supported_interpretation": ["claims supported by abstract/paper-level context"],
+    "unsupported_or_not_determinable": ["claims that cannot be determined"]
+  }},
   "scientific_interpretation": "what question this table answers. what the numbers prove. cite specific values.",{anchored_json}
   "scientific_conclusion": "unified synthesis paragraph (4-6 sentences) integrating table data, statistics, interpretation{anchored_hint}. What this table definitively demonstrates, what it rules out, and its role in the paper's argument. Written as flowing prose, not a list.",
-  "extended_analysis": {{
-    "beyond_the_paper": "what these numbers suggest or imply beyond the paper's explicit claims. grounded strictly in values visible in the table.",
+  "model_extra_inference": {{
+    "extra_inference": "optional interpretation beyond the paper's explicit claims. Keep separate from scientific_conclusion.",
+    "support_status": "table_supported | caption_supported | context_supported | speculative | none",
+    "supporting_evidence": "what table/caption/context evidence supports the inference. 'None' if speculative.",
+    "risk": "low | medium | high",
     "open_questions": "scientific questions this table raises that the paper does not address or resolve.",
     "alternative_interpretation": "one alternative valid reading of these results — different explanation, confound, or mechanism. 'None' if unambiguous."
   }},
