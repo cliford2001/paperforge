@@ -42,7 +42,7 @@ The goal is not only to describe an image. The goal is to explain what each figu
            │                               │
            ▼                               │
 ┌──────────────────────┐                   │
-│ Filtered OCR summary  │                   │
+│ Context-aligned OCR   │                   │
 │ never raw OCR         │                   │
 └──────────┬───────────┘                   │
            │                               │
@@ -64,9 +64,11 @@ The goal is not only to describe an image. The goal is to explain what each figu
         │     Official caption, exact Fig/Table mentions, nearby paragraphs,   │
         │     same-section text, BM25 windows, cross-figure references.        │
         │                                                                      │
-        │  ④ FILTERED OCR SUMMARY                                [optional]    │
-        │     Only labels, axes, units, conditions, genes/proteins, p-values,  │
-        │     sample sizes. Broken OCR and isolated numbers are ignored.       │
+        │  ④ CONTEXT-ALIGNED OCR SUMMARY                       [optional]    │
+        │     Raw OCR candidates are ranked against caption, local context,   │
+        │     paper terms, token role, confidence, and noise penalties.       │
+        │     No rigid whitelist: unusual relevant tokens can survive as      │
+        │     unknown_but_context_aligned. Raw OCR is never inserted.         │
         │                                                                      │
         │  ───────────────── STRUCTURED ANALYSIS SECTIONS ─────────────────   │
         │                                                                      │
@@ -215,8 +217,43 @@ The planned `layered` mode will add a paper-level context map plus per-figure co
 
 ---
 
+## Context-Aligned OCR Summarization
+
+Raw OCR from a crop is never inserted into the prompt. OCR text is used only as internal candidate evidence.
+
+Each OCR fragment is dynamically scored using:
+
+- alignment with the official caption;
+- alignment with retrieved local context;
+- alignment with paper-level terms;
+- broad scientific role classification;
+- OCR confidence;
+- penalties for isolated numbers, repeated artifacts, and low-confidence noise.
+
+The VLM receives only an audited summary:
+
+```json
+{
+  "quality": "high | medium | low | unavailable",
+  "use_policy": "use | use_cautiously | ignore",
+  "kept_fragments": [
+    {
+      "text": "NRT1.1",
+      "role": "unknown_but_context_aligned",
+      "confidence": 0.91,
+      "reason": "context_aligned:NRT1.1; role=biological_entity_or_label"
+    }
+  ],
+  "discarded_summary": "isolated numeric fragments and noisy OCR ignored"
+}
+```
+
+This is not a rigid whitelist. General patterns and context alignment decide whether a fragment is useful.
+
+---
+
 ## Current Extraction Behavior
 
 Docling is the primary extractor. Small uncaptained Docling picture artifacts, such as publisher logos/icons, are filtered before writing figure outputs. Skipped artifacts are audited in `skipped_figures.json`.
 
-OCR from crops is treated as auxiliary structured evidence only. Raw OCR text should not be inserted directly into the prompt.
+OCR from crops is treated as auxiliary structured evidence only. Raw OCR text is not inserted directly into the prompt.
