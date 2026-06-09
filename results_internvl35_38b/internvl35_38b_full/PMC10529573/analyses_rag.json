@@ -1,0 +1,1347 @@
+{
+  "total": 10,
+  "context_strategy": "full",
+  "abstract_words": "full",
+  "max_context_words": 3000,
+  "top_k": null,
+  "chunk_words": null,
+  "paper_summary": {
+    "main_contribution": "The paper concludes that crossbreeding Boer with Central Highland goats does not significantly improve reproductive traits, and genetic improvement through selection is limited due to low heritability and repeatability estimates.",
+    "narrative": "The paper begins by presenting genetic coefficients for crossbreeding (Table 1), which are essential for estimating genetic effects. The least-squares means (Table 2) show the performance of different genetic groups, while Table 3 highlights the non-significant breed additive and heterosis effects, except for a slight positive heterosis in kids weaned per doe. Table 4 shows that purebred Central Highland goats outperform crossbreds in most traits, supporting the conclusion that crossbreeding does not enhance reproductive performance. Finally, Table 5 provides low heritability and repeatability estimates, indicating limited potential for genetic improvement through selection.",
+    "key_evidence": [
+      "Table 1",
+      "Table 3",
+      "Table 5"
+    ],
+    "contradictions_or_gaps": "None detected",
+    "limitations_noted": "The study's findings are based on a specific population and management conditions, which may not be generalizable. Additionally, the low heritability and repeatability estimates suggest that the sample size might be insufficient to detect small genetic effects.",
+    "overall_confidence": "high"
+  },
+  "items": [
+    {
+      "label": "Table 1",
+      "kind": "table",
+      "page": 4,
+      "bbox": [
+        183.2,
+        71.4,
+        592.2,
+        178.5
+      ],
+      "caption": "Table 1. Genetic coefficient used for crossbreeding parameter estimation for doe productive traits.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_full/PMC10529573/p004_Table_1.png",
+      "image_size": [
+        409,
+        107
+      ],
+      "context_words": 3000,
+      "context_strategy": "full",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"parameter table\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [\"Genetic group\", \"Generation and blood level\", \"g\", \"h\", \"r\"],\n    \"legend_elements\": [\"B, Boer goat; CH, Central Highland goat; the sire’s breed is mentioned first\"],\n    \"visible_entities\": [\"genetic groups\", \"breed additive\", \"heterosis\", \"recombination\"]\n  },\n  \"structure\": \"The table compares genetic coefficients (g, h, r) for different genetic groups of goats, showing breed additive, heterosis, and recombination effects for crossbreeding parameter estimation.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Estimation of crossbreeding parameters for reproductive traits of Boer x Central Highland goats.\",\n    \"experimental_groups\": [\"CH x CH\", \"B x CH\", \"B x BCH\", \"BCH x CH\", \"BCH x BCH\"],\n    \"controls\": [\"Not determinable\"],\n    \"perturbations_or_treatments\": [\"Not determinable\"],\n    \"measured_variables\": [\"g (breed additive)\", \"h (heterosis)\", \"r (recombination)\"],\n    \"assay_or_method\": \"Genetic coefficient calculation for crossbreeding parameter estimation\",\n    \"biological_or_experimental_system\": \"Goats (Boer x Central Highland)\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": [\"0\", \"0.50\", \"0.75\", \"0.25\", \"1.00\", \"0.50\"]\n  },\n  \"key_entries\": \"The table provides coefficients for genetic groups such as B x CH (F1, 50%) with g=0.50, h=1.00, r=0; and BCH x BCH (F2, 50%) with g=0.50, h=0.50, r=0.50.\",\n  \"best_result\": \"B x CH (F1, 50%) has the highest heterosis effect (h=1.00).\",\n  \"patterns_and_trends\": \"The table shows varying levels of breed additive (g), heterosis (h), and recombination (r) effects across different genetic groups, with F1 crosses showing maximum heterosis.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Genetic coefficients for different groups are clearly shown.\"],\n    \"caption_supported_evidence\": [\"Table provides genetic coefficients for crossbreeding parameter estimation.\"],\n    \"local_context_supported_evidence\": [\"Table used for estimating crossbreeding parameters in the study.\"],\n    \"global_paper_supported_interpretation\": [\"Table supports the estimation of genetic and crossbreeding parameters for reproductive traits.\"],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The table provides the necessary genetic coefficients to estimate crossbreeding parameters, showing how different genetic groups contribute to additive, heterosis, and recombination effects in goat breeding.\",\n  \"hypothesis_tested\": \"Estimation of crossbreeding and genetic parameters for reproductive traits of Boer x Central Highland goats.\",\n  \"paper_quote\": \"Estimation of crossbreeding and genetic parameters for reproductive traits of Boer x Central Highland goats.\",\n  \"controls_assessment\": \"No specific controls are mentioned, but the table provides baseline genetic coefficients for comparison.\",\n  \"scientific_conclusion\": \"The table presents genetic coefficients essential for estimating crossbreeding parameters in Boer x Central Highland goats, highlighting the potential for heterosis in F1 crosses. The coefficients indicate varying levels of breed additive, heterosis, and recombination effects, which are crucial for understanding genetic contributions in crossbreeding programs. This information supports the study's aim to evaluate the genetic potential of different goat crosses for reproductive traits.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The coefficients suggest that F1 crosses may have the most significant heterosis effect, which could be beneficial for certain breeding objectives.\",\n    \"support_status\": \"context_supported\",\n    \"supporting_evidence\": \"The table shows maximum heterosis in F1 crosses, which aligns with typical crossbreeding expectations.\",\n    \"risk\": \"low\",\n    \"open_questions\": \"How do these coefficients translate into actual performance improvements in field conditions?\",\n    \"alternative_interpretation\": \"None\"\n  },\n  \"context_used\": \"full paper text [truncated at 3000 words, original: 4713]\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "table_type": "parameter table",
+        "visual_form": {
+          "graph_or_visual_type": "table",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [
+            "Genetic group",
+            "Generation and blood level",
+            "g",
+            "h",
+            "r"
+          ],
+          "legend_elements": [
+            "B, Boer goat; CH, Central Highland goat; the sire’s breed is mentioned first"
+          ],
+          "visible_entities": [
+            "genetic groups",
+            "breed additive",
+            "heterosis",
+            "recombination"
+          ]
+        },
+        "structure": "The table compares genetic coefficients (g, h, r) for different genetic groups of goats, showing breed additive, heterosis, and recombination effects for crossbreeding parameter estimation.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Estimation of crossbreeding parameters for reproductive traits of Boer x Central Highland goats.",
+          "experimental_groups": [
+            "CH x CH",
+            "B x CH",
+            "B x BCH",
+            "BCH x CH",
+            "BCH x BCH"
+          ],
+          "controls": [
+            "Not determinable"
+          ],
+          "perturbations_or_treatments": [
+            "Not determinable"
+          ],
+          "measured_variables": [
+            "g (breed additive)",
+            "h (heterosis)",
+            "r (recombination)"
+          ],
+          "assay_or_method": "Genetic coefficient calculation for crossbreeding parameter estimation",
+          "biological_or_experimental_system": "Goats (Boer x Central Highland)"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": [
+            "0",
+            "0.50",
+            "0.75",
+            "0.25",
+            "1.00",
+            "0.50"
+          ]
+        },
+        "key_entries": "The table provides coefficients for genetic groups such as B x CH (F1, 50%) with g=0.50, h=1.00, r=0; and BCH x BCH (F2, 50%) with g=0.50, h=0.50, r=0.50.",
+        "best_result": "B x CH (F1, 50%) has the highest heterosis effect (h=1.00).",
+        "patterns_and_trends": "The table shows varying levels of breed additive (g), heterosis (h), and recombination (r) effects across different genetic groups, with F1 crosses showing maximum heterosis.",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Genetic coefficients for different groups are clearly shown."
+          ],
+          "caption_supported_evidence": [
+            "Table provides genetic coefficients for crossbreeding parameter estimation."
+          ],
+          "local_context_supported_evidence": [
+            "Table used for estimating crossbreeding parameters in the study."
+          ],
+          "global_paper_supported_interpretation": [
+            "Table supports the estimation of genetic and crossbreeding parameters for reproductive traits."
+          ],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The table provides the necessary genetic coefficients to estimate crossbreeding parameters, showing how different genetic groups contribute to additive, heterosis, and recombination effects in goat breeding.",
+        "hypothesis_tested": "Estimation of crossbreeding and genetic parameters for reproductive traits of Boer x Central Highland goats.",
+        "paper_quote": "Estimation of crossbreeding and genetic parameters for reproductive traits of Boer x Central Highland goats.",
+        "controls_assessment": "No specific controls are mentioned, but the table provides baseline genetic coefficients for comparison.",
+        "scientific_conclusion": "The table presents genetic coefficients essential for estimating crossbreeding parameters in Boer x Central Highland goats, highlighting the potential for heterosis in F1 crosses. The coefficients indicate varying levels of breed additive, heterosis, and recombination effects, which are crucial for understanding genetic contributions in crossbreeding programs. This information supports the study's aim to evaluate the genetic potential of different goat crosses for reproductive traits.",
+        "model_extra_inference": {
+          "extra_inference": "The coefficients suggest that F1 crosses may have the most significant heterosis effect, which could be beneficial for certain breeding objectives.",
+          "support_status": "context_supported",
+          "supporting_evidence": "The table shows maximum heterosis in F1 crosses, which aligns with typical crossbreeding expectations.",
+          "risk": "low",
+          "open_questions": "How do these coefficients translate into actual performance improvements in field conditions?",
+          "alternative_interpretation": "None"
+        },
+        "context_used": "full paper text [truncated at 3000 words, original: 4713]",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 15.6
+    },
+    {
+      "label": "Table 2",
+      "kind": "table",
+      "page": 5,
+      "bbox": [
+        18.7,
+        532.5,
+        592.7,
+        665.3
+      ],
+      "caption": "Table 2. Least-squares mean values and their standard errors for doe productive traits.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_full/PMC10529573/p005_Table_2.png",
+      "image_size": [
+        574,
+        133
+      ],
+      "context_words": 3000,
+      "context_strategy": "full",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"statistical summary\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [\"Genetic group\", \"LSB (kid)\", \"LBW (kg)\", \"LWW (kg)\", \"LSW (kid)\", \"GL (day)\"],\n    \"legend_elements\": [\"N, number of observation; ns, non-significant; LBW, litter birth weight; LSB, litter size at birth; LWW, litter weaning weight; LSW, litter size at weaning; GL, gestation length\"],\n    \"visible_entities\": [\"Genetic group\", \"LSB\", \"LBW\", \"LWW\", \"LSW\", \"GL\"]\n  },\n  \"structure\": \"The table compares least-squares mean values and their standard errors for reproductive traits across different genetic groups of goats. Metrics include litter size at birth (LSB), litter birth weight (LBW), litter weaning weight (LWW), litter size at weaning (LSW), and gestation length (GL). Units are kids for LSB and LSW, kg for LBW and LWW, and days for GL.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"The effect of genetic group on reproductive traits of Boer x Central Highland goats.\",\n    \"experimental_groups\": [\"CH x CH\", \"B x CH\", \"B x BCH\", \"BCH x CH\", \"BCH x BCH\"],\n    \"controls\": [\"Not determinable\"],\n    \"perturbations_or_treatments\": [\"Genetic group\"],\n    \"measured_variables\": [\"LSB\", \"LBW\", \"LWW\", \"LSW\", \"GL\"],\n    \"assay_or_method\": \"Least-squares means using a general linear model procedure in SAS\",\n    \"biological_or_experimental_system\": \"Goats (Boer x Central Highland)\"\n  },\n  \"statistical_markers\": \"n=567 for LSB, n=478 for LBW, n=303 for LWW, n=303 for LSW, n=303 for GL; means±SE; significance marked as ns or *\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [\"ns\", \"*\"],\n    \"sample_sizes\": [\"567\", \"478\", \"303\"],\n    \"units\": [\"kid\", \"kg\", \"day\"],\n    \"effect_directions\": [\"no significant difference\", \"significant difference\"],\n    \"quantitative_values\": [\"1.54±0.02\", \"3.90±0.05\", \"14.0±0.35\", \"1.37±0.02\", \"148.1±0.31\"]\n  },\n  \"key_entries\": \"CH x CH group shows the highest gestation length (149.2±0.39 days). The additive effect for LSW is significant (-0.54±0.22 kids).\",\n  \"best_result\": \"CH x CH group with gestation length of 149.2±0.39 days marked with 'a'.\",\n  \"patterns_and_trends\": \"Genotype does not significantly influence most reproductive traits except for gestation length. CH x CH and BCH x CH show better performance in some traits but differences are not significant.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Genotype effect on GL is significant.\"],\n    \"caption_supported_evidence\": [\"Table shows least-squares means and standard errors for reproductive traits.\"],\n    \"local_context_supported_evidence\": [\"The study evaluates crossbreeding effects on reproductive traits.\"],\n    \"global_paper_supported_interpretation\": [\"Crossing Boer with Central Highland goats does not significantly improve reproductive traits.\"],\n    \"unsupported_or_not_determinable\": [\"Specific reasons for non-significant results.\"]\n  },\n  \"scientific_interpretation\": \"The table examines the effect of genetic group on reproductive traits, showing that genotype significantly affects gestation length but not other traits. The CH x CH group has the longest gestation length, indicating potential differences in reproductive physiology.\",\n  \"hypothesis_tested\": \"The effect of genetic group on reproductive traits of Boer x Central Highland goats.\",\n  \"paper_quote\": \"The result indicates that improvement in reproductive traits would not be expected by crossing Boer with Central Highland goats.\",\n  \"controls_assessment\": \"No specific controls mentioned; genetic groups serve as comparisons.\",\n  \"scientific_conclusion\": \"The table demonstrates that genetic group significantly affects gestation length but not other reproductive traits in Boer x Central Highland goats. The CH x CH group shows the longest gestation length, but overall, crossing Boer with Central Highland does not significantly improve reproductive performance. This supports the paper's conclusion that such crossbreeding may not enhance reproductive traits under current management conditions.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The lack of significant differences in reproductive traits suggests that environmental factors or management practices may play a larger role than genetics in this context.\",\n    \"support_status\": \"context_supported\",\n    \"supporting_evidence\": \"The paper mentions the impact of management level on gene expression.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What management practices could potentially enhance the reproductive performance of crossbred goats?\",\n    \"alternative_interpretation\": \"The non-significant results could also indicate a need for larger sample sizes to detect genetic effects.\"\n  },\n  \"context_used\":",
+      "elapsed_sec": 17.7
+    },
+    {
+      "label": "Table 3",
+      "kind": "table",
+      "page": 6,
+      "bbox": [
+        183.1,
+        548.3,
+        592.5,
+        655.3
+      ],
+      "caption": "Table 3. Estimate of breed additive, individual heterosis, and recombination effect for doe productive traits.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_full/PMC10529573/p006_Table_3.png",
+      "image_size": [
+        409,
+        107
+      ],
+      "context_words": 3000,
+      "context_strategy": "full",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"parameter table\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [\"Trait\", \"CH\", \"gB\", \"hBCH\", \"rBCH\"],\n    \"legend_elements\": [\"Ns, non-significant; *, P<0.05\"],\n    \"visible_entities\": [\"LSB (kid)\", \"LBW (kg)\", \"LWW (kid)\", \"LSW (kg)\", \"GL (days)\"]\n  },\n  \"structure\": \"The table compares breed additive (gB), heterosis (hBCH), and recombination (rBCH) effects for reproductive traits of goats, measured in kids and kilograms, against Central Highland (CH) as a baseline.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Estimation of crossbreeding and genetic parameters for reproductive traits of Boer x Central Highland goats.\",\n    \"experimental_groups\": [\"Central Highland (CH)\", \"Boer (B) crossbreds\"],\n    \"controls\": [\"Central Highland (CH)\"],\n    \"perturbations_or_treatments\": [\"Crossbreeding with Boer goats\"],\n    \"measured_variables\": [\"LSB\", \"LBW\", \"LWW\", \"LSW\", \"GL\"],\n    \"assay_or_method\": \"Least-squares means and crossbreeding parameter estimation using SAS and WOMBAT software\",\n    \"biological_or_experimental_system\": \"Goats (Boer x Central Highland)\"\n  },\n  \"statistical_markers\": \"Ns, non-significant; *, P<0.05\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [\"P-values\"],\n    \"sample_sizes\": [],\n    \"units\": [\"kid\", \"kg\", \"days\"],\n    \"effect_directions\": [\"increase, decrease\"],\n    \"quantitative_values\": [\"1.57±0.03\", \"4.00±0.08\", \"14.3±0.57\", \"1.40±0.03\", \"149.2±0.39\"]\n  },\n  \"key_entries\": \"The most significant entry is the negative additive effect for LSW (-0.54±0.22*) indicating a reduction in kids weaned per doe due to crossing.\",\n  \"best_result\": \"The significant heterosis effect for LSW (0.27±0.12*) shows a slight advantage in kids weaned per doe for crossbreds.\",\n  \"patterns_and_trends\": \"Most effects are non-significant, indicating limited improvement from crossbreeding. Negative heterosis for LSB, LWW, and GL suggests no advantage over purebred Central Highland goats.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Non-significant results for most traits\", \"Significant negative additive effect for LSW\"],\n    \"caption_supported_evidence\": [\"Estimation of breed additive, heterosis, and recombination effects\"],\n    \"local_context_supported_evidence\": [\"Crossbreeding did not significantly improve reproductive traits\"],\n    \"global_paper_supported_interpretation\": [\"Improvement in reproductive traits not expected from crossbreeding\"],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The table addresses the effects of crossbreeding on reproductive traits, showing that crossing Boer with Central Highland goats does not significantly improve most traits, with only a slight positive heterosis effect on kids weaned per doe.\",\n  \"hypothesis_tested\": \"The result indicates that improvement in reproductive traits would not be expected by crossing Boer with Central Highland goats.\",\n  \"paper_quote\": \"The result indicates that improvement in reproductive traits would not be expected by crossing Boer with Central Highland goats.\",\n  \"controls_assessment\": \"Central Highland (CH) serves as the control group; no other controls are mentioned.\",\n  \"scientific_conclusion\": \"The table demonstrates that crossbreeding Boer with Central Highland goats does not significantly enhance reproductive performance, as most genetic effects are non-significant. The slight positive heterosis for kids weaned per doe is the only notable result, but overall, the data suggests limited benefit from crossbreeding. This supports the paper's conclusion that reproductive trait improvement through crossbreeding is not expected.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The non-significant results suggest that environmental factors or management practices may play a larger role in reproductive performance than genetic crossbreeding effects.\",\n    \"support_status\": \"context_supported\",\n    \"supporting_evidence\": \"The paper mentions the impact of management level on gene expression.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"How do different management practices affect the expression of genetic potential in crossbred goats?\",\n    \"alternative_interpretation\": \"The lack of significant effects could also indicate a need for a larger sample size or different crossbreeding strategies to observe genetic advantages.\"\n  },\n  \"context_used\": \"full paper text [truncated at 3000 words, original: 4713]\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "table_type": "parameter table",
+        "visual_form": {
+          "graph_or_visual_type": "table",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [
+            "Trait",
+            "CH",
+            "gB",
+            "hBCH",
+            "rBCH"
+          ],
+          "legend_elements": [
+            "Ns, non-significant; *, P<0.05"
+          ],
+          "visible_entities": [
+            "LSB (kid)",
+            "LBW (kg)",
+            "LWW (kid)",
+            "LSW (kg)",
+            "GL (days)"
+          ]
+        },
+        "structure": "The table compares breed additive (gB), heterosis (hBCH), and recombination (rBCH) effects for reproductive traits of goats, measured in kids and kilograms, against Central Highland (CH) as a baseline.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Estimation of crossbreeding and genetic parameters for reproductive traits of Boer x Central Highland goats.",
+          "experimental_groups": [
+            "Central Highland (CH)",
+            "Boer (B) crossbreds"
+          ],
+          "controls": [
+            "Central Highland (CH)"
+          ],
+          "perturbations_or_treatments": [
+            "Crossbreeding with Boer goats"
+          ],
+          "measured_variables": [
+            "LSB",
+            "LBW",
+            "LWW",
+            "LSW",
+            "GL"
+          ],
+          "assay_or_method": "Least-squares means and crossbreeding parameter estimation using SAS and WOMBAT software",
+          "biological_or_experimental_system": "Goats (Boer x Central Highland)"
+        },
+        "statistical_markers": "Ns, non-significant; *, P<0.05",
+        "markers_and_statistics": {
+          "statistical_markers": [
+            "P-values"
+          ],
+          "sample_sizes": [],
+          "units": [
+            "kid",
+            "kg",
+            "days"
+          ],
+          "effect_directions": [
+            "increase, decrease"
+          ],
+          "quantitative_values": [
+            "1.57±0.03",
+            "4.00±0.08",
+            "14.3±0.57",
+            "1.40±0.03",
+            "149.2±0.39"
+          ]
+        },
+        "key_entries": "The most significant entry is the negative additive effect for LSW (-0.54±0.22*) indicating a reduction in kids weaned per doe due to crossing.",
+        "best_result": "The significant heterosis effect for LSW (0.27±0.12*) shows a slight advantage in kids weaned per doe for crossbreds.",
+        "patterns_and_trends": "Most effects are non-significant, indicating limited improvement from crossbreeding. Negative heterosis for LSB, LWW, and GL suggests no advantage over purebred Central Highland goats.",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Non-significant results for most traits",
+            "Significant negative additive effect for LSW"
+          ],
+          "caption_supported_evidence": [
+            "Estimation of breed additive, heterosis, and recombination effects"
+          ],
+          "local_context_supported_evidence": [
+            "Crossbreeding did not significantly improve reproductive traits"
+          ],
+          "global_paper_supported_interpretation": [
+            "Improvement in reproductive traits not expected from crossbreeding"
+          ],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The table addresses the effects of crossbreeding on reproductive traits, showing that crossing Boer with Central Highland goats does not significantly improve most traits, with only a slight positive heterosis effect on kids weaned per doe.",
+        "hypothesis_tested": "The result indicates that improvement in reproductive traits would not be expected by crossing Boer with Central Highland goats.",
+        "paper_quote": "The result indicates that improvement in reproductive traits would not be expected by crossing Boer with Central Highland goats.",
+        "controls_assessment": "Central Highland (CH) serves as the control group; no other controls are mentioned.",
+        "scientific_conclusion": "The table demonstrates that crossbreeding Boer with Central Highland goats does not significantly enhance reproductive performance, as most genetic effects are non-significant. The slight positive heterosis for kids weaned per doe is the only notable result, but overall, the data suggests limited benefit from crossbreeding. This supports the paper's conclusion that reproductive trait improvement through crossbreeding is not expected.",
+        "model_extra_inference": {
+          "extra_inference": "The non-significant results suggest that environmental factors or management practices may play a larger role in reproductive performance than genetic crossbreeding effects.",
+          "support_status": "context_supported",
+          "supporting_evidence": "The paper mentions the impact of management level on gene expression.",
+          "risk": "medium",
+          "open_questions": "How do different management practices affect the expression of genetic potential in crossbred goats?",
+          "alternative_interpretation": "The lack of significant effects could also indicate a need for a larger sample size or different crossbreeding strategies to observe genetic advantages."
+        },
+        "context_used": "full paper text [truncated at 3000 words, original: 4713]",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 16.5
+    },
+    {
+      "label": "Table 4",
+      "kind": "table",
+      "page": 7,
+      "bbox": [
+        18.8,
+        571.9,
+        592.5,
+        679.7
+      ],
+      "caption": "Table 4. Predicted performance of doe productive traits.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_full/PMC10529573/p007_Table_4.png",
+      "image_size": [
+        574,
+        108
+      ],
+      "context_words": 3000,
+      "context_strategy": "full",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"results comparison\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [\"Genetic group\", \"Generation and blood level\", \"LSB (kid)\", \"LBW (kg)\", \"LWW (kg)\", \"LSW (kid)\", \"GL (day)\"],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"Genetic group\", \"Generation and blood level\", \"LSB\", \"LBW\", \"LWW\", \"LSW\", \"GL\"]\n  },\n  \"structure\": \"The table compares the predicted performance of doe productive traits across different genetic groups and generations. Metrics include litter size at birth (LSB), litter birth weight (LBW), litter weaning weight (LWW), litter size at weaning (LSW), and gestation length (GL). Units are kids for LSB and LSW, kilograms for LBW and LWW, and days for GL.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"What is the predicted performance of doe productive traits across different genetic groups and generations?\",\n    \"experimental_groups\": [\"CH x CH\", \"B x CH\", \"B x BCH\", \"BCH x CH\", \"BCH x BCH\"],\n    \"controls\": [\"Not determinable\"],\n    \"perturbations_or_treatments\": [\"Not determinable\"],\n    \"measured_variables\": [\"LSB\", \"LBW\", \"LWW\", \"LSW\", \"GL\"],\n    \"assay_or_method\": \"Least-squares means using a general linear model procedure in SAS\",\n    \"biological_or_experimental_system\": \"Boer x Central Highland goats\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [\"kid\", \"kg\", \"day\"],\n    \"effect_directions\": [],\n    \"quantitative_values\": [\"1.57\", \"4.00\", \"14.30\", \"1.40\", \"149.20\"]\n  },\n  \"key_entries\": \"The CH x CH group has the highest LSB (1.57) and LWW (14.30 kg), while BCH x BCH has the lowest LWW (9.59 kg).\",\n  \"best_result\": \"CH x CH group with the highest LWW of 14.30 kg.\",\n  \"patterns_and_trends\": \"The CH x CH group generally shows higher performance in most traits compared to other genetic groups, indicating better reproductive performance.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Comparison of LSB, LBW, LWW, LSW, and GL across genetic groups\"],\n    \"caption_supported_evidence\": [\"Predicted performance of doe productive traits\"],\n    \"local_context_supported_evidence\": [\"The table shows the least-squares means for different genetic groups\"],\n    \"global_paper_supported_interpretation\": [\"The study aims to estimate crossbreeding and genetic parameters for reproductive traits\"],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The table shows the predicted performance of reproductive traits for different genetic groups of goats. The CH x CH group has the highest values for most traits, suggesting that purebred Central Highland goats have better reproductive performance compared to crossbreds.\",\n  \"hypothesis_tested\": \"The result indicates that improvement in reproductive traits would not be expected by crossing Boer with Central Highland goats.\",\n  \"paper_quote\": \"The result indicates that improvement in reproductive traits would not be expected by crossing Boer with Central Highland goats.\",\n  \"controls_assessment\": \"No specific controls are mentioned, but the comparison across genetic groups serves as a form of control.\",\n  \"scientific_conclusion\": \"The table demonstrates that purebred Central Highland goats (CH x CH) exhibit superior reproductive performance compared to crossbred groups in terms of litter size at birth, litter birth weight, and litter weaning weight. This suggests that crossing Boer with Central Highland goats does not significantly improve reproductive traits, aligning with the paper's conclusion that such crossbreeding may not be beneficial for enhancing productivity. The data supports the hypothesis that genetic improvement through crossbreeding in this context is limited.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The data suggests that maintaining purebred Central Highland goats may be more effective for reproductive performance than crossbreeding with Boer goats.\",\n    \"support_status\": \"context_supported\",\n    \"supporting_evidence\": \"The higher values for CH x CH in most traits indicate better performance.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What management practices could potentially enhance the reproductive performance of crossbred goats?\",\n    \"alternative_interpretation\": \"The lack of significant improvement in crossbreds might be due to environmental factors or management practices rather than genetic potential.\"\n  },\n  \"context_used\": \"full paper text [truncated at 3000 words, original: 4713]\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "table_type": "results comparison",
+        "visual_form": {
+          "graph_or_visual_type": "table",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [
+            "Genetic group",
+            "Generation and blood level",
+            "LSB (kid)",
+            "LBW (kg)",
+            "LWW (kg)",
+            "LSW (kid)",
+            "GL (day)"
+          ],
+          "legend_elements": [],
+          "visible_entities": [
+            "Genetic group",
+            "Generation and blood level",
+            "LSB",
+            "LBW",
+            "LWW",
+            "LSW",
+            "GL"
+          ]
+        },
+        "structure": "The table compares the predicted performance of doe productive traits across different genetic groups and generations. Metrics include litter size at birth (LSB), litter birth weight (LBW), litter weaning weight (LWW), litter size at weaning (LSW), and gestation length (GL). Units are kids for LSB and LSW, kilograms for LBW and LWW, and days for GL.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "What is the predicted performance of doe productive traits across different genetic groups and generations?",
+          "experimental_groups": [
+            "CH x CH",
+            "B x CH",
+            "B x BCH",
+            "BCH x CH",
+            "BCH x BCH"
+          ],
+          "controls": [
+            "Not determinable"
+          ],
+          "perturbations_or_treatments": [
+            "Not determinable"
+          ],
+          "measured_variables": [
+            "LSB",
+            "LBW",
+            "LWW",
+            "LSW",
+            "GL"
+          ],
+          "assay_or_method": "Least-squares means using a general linear model procedure in SAS",
+          "biological_or_experimental_system": "Boer x Central Highland goats"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [
+            "kid",
+            "kg",
+            "day"
+          ],
+          "effect_directions": [],
+          "quantitative_values": [
+            "1.57",
+            "4.00",
+            "14.30",
+            "1.40",
+            "149.20"
+          ]
+        },
+        "key_entries": "The CH x CH group has the highest LSB (1.57) and LWW (14.30 kg), while BCH x BCH has the lowest LWW (9.59 kg).",
+        "best_result": "CH x CH group with the highest LWW of 14.30 kg.",
+        "patterns_and_trends": "The CH x CH group generally shows higher performance in most traits compared to other genetic groups, indicating better reproductive performance.",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Comparison of LSB, LBW, LWW, LSW, and GL across genetic groups"
+          ],
+          "caption_supported_evidence": [
+            "Predicted performance of doe productive traits"
+          ],
+          "local_context_supported_evidence": [
+            "The table shows the least-squares means for different genetic groups"
+          ],
+          "global_paper_supported_interpretation": [
+            "The study aims to estimate crossbreeding and genetic parameters for reproductive traits"
+          ],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The table shows the predicted performance of reproductive traits for different genetic groups of goats. The CH x CH group has the highest values for most traits, suggesting that purebred Central Highland goats have better reproductive performance compared to crossbreds.",
+        "hypothesis_tested": "The result indicates that improvement in reproductive traits would not be expected by crossing Boer with Central Highland goats.",
+        "paper_quote": "The result indicates that improvement in reproductive traits would not be expected by crossing Boer with Central Highland goats.",
+        "controls_assessment": "No specific controls are mentioned, but the comparison across genetic groups serves as a form of control.",
+        "scientific_conclusion": "The table demonstrates that purebred Central Highland goats (CH x CH) exhibit superior reproductive performance compared to crossbred groups in terms of litter size at birth, litter birth weight, and litter weaning weight. This suggests that crossing Boer with Central Highland goats does not significantly improve reproductive traits, aligning with the paper's conclusion that such crossbreeding may not be beneficial for enhancing productivity. The data supports the hypothesis that genetic improvement through crossbreeding in this context is limited.",
+        "model_extra_inference": {
+          "extra_inference": "The data suggests that maintaining purebred Central Highland goats may be more effective for reproductive performance than crossbreeding with Boer goats.",
+          "support_status": "context_supported",
+          "supporting_evidence": "The higher values for CH x CH in most traits indicate better performance.",
+          "risk": "medium",
+          "open_questions": "What management practices could potentially enhance the reproductive performance of crossbred goats?",
+          "alternative_interpretation": "The lack of significant improvement in crossbreds might be due to environmental factors or management practices rather than genetic potential."
+        },
+        "context_used": "full paper text [truncated at 3000 words, original: 4713]",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 16.5
+    },
+    {
+      "label": "Table 5",
+      "kind": "table",
+      "page": 8,
+      "bbox": [
+        18.9,
+        550.6,
+        592.5,
+        658.5
+      ],
+      "caption": "Table 5. Heritability and repeatability estimates for reproductive traits of Boer x Central Highland goats.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_full/PMC10529573/p008_Table_5.png",
+      "image_size": [
+        574,
+        108
+      ],
+      "context_words": 3000,
+      "context_strategy": "full",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"parameter table\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [\"Estimate\", \"σ²a\", \"σ²c\", \"σ²e\", \"σ²p\", \"h²\", \"c²\", \"e²\", \"r\"],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"LSB\", \"LWB\", \"LWW\", \"LSW\", \"GL\"]\n  },\n  \"structure\": \"The table compares heritability and repeatability estimates for reproductive traits of Boer x Central Highland goats. Metrics include additive genetic variance (σ²a), permanent environmental variance (σ²c), error variance (σ²e), phenotypic variance (σ²p), heritability (h²), direct repeatability (c²), error repeatability (e²), and overall repeatability (r). Units are in kids, kg, and days.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Estimation of heritability and repeatability for reproductive traits in Boer x Central Highland goats.\",\n    \"experimental_groups\": [\"Boer x Central Highland goats\"],\n    \"controls\": [\"Not determinable\"],\n    \"perturbations_or_treatments\": [\"Not determinable\"],\n    \"measured_variables\": [\"LSB\", \"LWB\", \"LWW\", \"LSW\", \"GL\"],\n    \"assay_or_method\": \"AI-REML algorithm using WOMBAT software\",\n    \"biological_or_experimental_system\": \"Boer x Central Highland goats\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [\"None visible\"],\n    \"sample_sizes\": [\"Not determinable\"],\n    \"units\": [\"kids\", \"kg\", \"days\"],\n    \"effect_directions\": [\"increase, decrease, no change\"],\n    \"quantitative_values\": [\"0.050±0.04\", \"0.098±0.07\", \"0.086±0.08\", \"0.018±0.03\", \"0.000±0.06\"]\n  },\n  \"key_entries\": \"The heritability estimates for LSB, LWB, LWW, LSW, and GL are 0.050, 0.098, 0.086, 0.018, and 0.000, respectively. The repeatability estimates are 0.149, 0.116, 0.099, 0.086, and 0.061.\",\n  \"best_result\": \"The highest heritability is for LWB at 0.098±0.07.\",\n  \"patterns_and_trends\": \"Heritability and repeatability estimates are generally low, indicating limited potential for genetic improvement through selection.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Heritability and repeatability values for reproductive traits are shown.\"],\n    \"caption_supported_evidence\": [\"Table provides heritability and repeatability estimates.\"],\n    \"local_context_supported_evidence\": [\"Estimates indicate limited genetic improvement potential.\"],\n    \"global_paper_supported_interpretation\": [\"Crossing Boer with Central Highland goats does not improve reproductive traits significantly.\"],\n    \"unsupported_or_not_determinable\": [\"Specific reasons for low heritability not determinable from table.\"]\n  },\n  \"scientific_interpretation\": \"The table provides heritability and repeatability estimates for reproductive traits, showing low values that suggest limited potential for genetic improvement through selection. This supports the paper's claim that crossing Boer with Central Highland goats does not significantly improve reproductive traits.\",\n  \"hypothesis_tested\": \"The result indicates that improvement in reproductive traits would not be expected by crossing Boer with Central Highland goats.\",\n  \"paper_quote\": \"The result indicates that improvement in reproductive traits would not be expected by crossing Boer with Central Highland goats.\",\n  \"controls_assessment\": \"No specific controls are visible; the table focuses on parameter estimates.\",\n  \"scientific_conclusion\": \"The table presents heritability and repeatability estimates for reproductive traits in Boer x Central Highland goats, showing low values (e.g., h² = 0.050 for LSB, r = 0.149 for LSB). These low estimates suggest limited potential for genetic improvement through selection and indicate that crossing Boer with Central Highland goats does not significantly enhance reproductive performance. The data supports the paper's conclusion that such crossbreeding is unlikely to yield significant improvements in reproductive traits.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The low heritability and repeatability suggest that environmental factors may play a larger role in these traits, indicating potential areas for management improvement.\",\n    \"support_status\": \"context_supported\",\n    \"supporting_evidence\": [\"Low heritability values indicate limited genetic influence.\"],\n    \"risk\": \"medium\",\n    \"open_questions\": \"What management practices could potentially enhance reproductive performance despite low heritability?\",\n    \"alternative_interpretation\": \"The low estimates might also reflect the specific environmental conditions of the study, which may not apply to other settings.\"\n  },\n  \"context_used\": \"full paper text [truncated at 3000 words, original: 4713]\",\n  \"confidence",
+      "elapsed_sec": 17.8
+    },
+    {
+      "label": "Table_1",
+      "kind": "table",
+      "page": 4,
+      "pages": [
+        4
+      ],
+      "bbox": [
+        183.19166564941406,
+        71.35070037841797,
+        592.1864013671875,
+        178.46665954589844
+      ],
+      "caption": "Table 1. Genetic coefficient used for crossbreeding parameter estimation for doe productive traits.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_full/PMC10529573/p004_Table_1.png",
+      "image_size": [
+        1137,
+        298
+      ],
+      "rotated": false,
+      "row_count": 6,
+      "col_count": 5,
+      "rows": [
+        [
+          "Genetic group",
+          "Generation and blood level",
+          "g",
+          "h",
+          "r"
+        ],
+        [
+          "CHxCH",
+          "Local",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "BxCH",
+          "F1 (50%)",
+          "0.50",
+          "1.00",
+          "0"
+        ],
+        [
+          "B x BCH",
+          "BC1 (75%)",
+          "0.75",
+          "0.50",
+          "0.25"
+        ],
+        [
+          "BCHxCH",
+          "BC1 (25%)",
+          "0.25",
+          "0.50",
+          "0.25"
+        ],
+        [
+          "BCHx BCH",
+          "F2 (50%)",
+          "0.50",
+          "0.50",
+          "0.50"
+        ]
+      ],
+      "markdown": "Table 1. Genetic coefficient used for crossbreeding parameter estimation for doe productive traits.\n\n| Genetic group   | Generation and blood level   |    g |    h |    r |\n|-----------------|------------------------------|------|------|------|\n| CHxCH           | Local                        |    0 |    0 |    0 |\n| BxCH            | F1 (50%)                     | 0.50 | 1.00 |    0 |\n| B x BCH         | BC1 (75%)                    | 0.75 | 0.50 | 0.25 |\n| BCHxCH          | BC1 (25%)                    | 0.25 | 0.50 | 0.25 |\n| BCHx BCH        | F2 (50%)                     | 0.50 | 0.50 | 0.50 |",
+      "context_words": 3000,
+      "context_strategy": "full",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"parameter table\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [\"Genetic group\", \"Generation and blood level\", \"g\", \"h\", \"r\"],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"Genetic group\", \"Generation and blood level\", \"g\", \"h\", \"r\"]\n  },\n  \"structure\": \"The table compares genetic coefficients (g, h, r) for different genetic groups and their generation and blood level. The metrics are breed additive (g), heterosis (h), and recombination (r) effects. The units are proportions.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Estimation of crossbreeding parameters for reproductive traits of Boer x Central Highland goats.\",\n    \"experimental_groups\": [\"CH x CH\", \"B x CH\", \"B x BCH\", \"BCH x CH\", \"BCH x BCH\"],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [\"g\", \"h\", \"r\"],\n    \"assay_or_method\": \"Genetic coefficient calculation for crossbreeding parameter estimation.\",\n    \"biological_or_experimental_system\": \"Goats (Boer x Central Highland)\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [\"proportions\"],\n    \"effect_directions\": [],\n    \"quantitative_values\": [\"0\", \"0.50\", \"0.75\", \"0.25\", \"1.00\", \"0.50\"]\n  },\n  \"key_entries\": \"The table provides genetic coefficients for different genetic groups. For example, B x CH has g=0.50, h=1.00, r=0.\",\n  \"best_result\": \"B x CH has the highest heterosis effect (h=1.00).\",\n  \"patterns_and_trends\": \"The table shows varying levels of breed additive, heterosis, and recombination effects across different genetic groups.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Genetic coefficients for different groups are shown.\"],\n    \"caption_supported_evidence\": [\"Table provides genetic coefficients used for crossbreeding parameter estimation.\"],\n    \"local_context_supported_evidence\": [\"The table is used to estimate crossbreeding parameters for reproductive traits.\"],\n    \"global_paper_supported_interpretation\": [\"The table supports the estimation of genetic parameters for crossbreeding in goats.\"],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The table provides the necessary genetic coefficients to estimate crossbreeding parameters for reproductive traits in Boer x Central Highland goats. The values indicate the expected breed additive, heterosis, and recombination effects for different genetic groups.\",\n  \"hypothesis_tested\": \"Estimation of crossbreeding and genetic parameters for reproductive traits of Boer x Central Highland goats.\",\n  \"paper_quote\": \"Estimation of crossbreeding and genetic parameters for reproductive traits of Boer x Central Highland goats in Ethiopia\",\n  \"controls_assessment\": \"No controls are present as this is a parameter table.\",\n  \"scientific_conclusion\": \"The table provides genetic coefficients for estimating crossbreeding parameters in Boer x Central Highland goats, showing varying effects across genetic groups. The coefficients indicate the potential for heterosis and recombination, which are crucial for understanding the genetic performance of crossbred goats. This information supports the paper's aim to estimate genetic parameters for reproductive traits, highlighting the importance of these coefficients in crossbreeding programs.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The coefficients suggest that certain crossbreeding combinations may offer higher heterosis effects, which could be beneficial for improving reproductive traits.\",\n    \"support_status\": \"context_supported\",\n    \"supporting_evidence\": \"The table shows higher heterosis values for some genetic groups, which may indicate better performance in crossbred goats.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"How do these genetic coefficients translate into actual performance improvements in different environmental conditions?\",\n    \"alternative_interpretation\": \"The coefficients may vary under different management practices, affecting the expected genetic performance.\"\n  },\n  \"context_used\": \"full paper text [truncated at 3000 words, original: 4713]\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "table_type": "parameter table",
+        "visual_form": {
+          "graph_or_visual_type": "table",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [
+            "Genetic group",
+            "Generation and blood level",
+            "g",
+            "h",
+            "r"
+          ],
+          "legend_elements": [],
+          "visible_entities": [
+            "Genetic group",
+            "Generation and blood level",
+            "g",
+            "h",
+            "r"
+          ]
+        },
+        "structure": "The table compares genetic coefficients (g, h, r) for different genetic groups and their generation and blood level. The metrics are breed additive (g), heterosis (h), and recombination (r) effects. The units are proportions.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Estimation of crossbreeding parameters for reproductive traits of Boer x Central Highland goats.",
+          "experimental_groups": [
+            "CH x CH",
+            "B x CH",
+            "B x BCH",
+            "BCH x CH",
+            "BCH x BCH"
+          ],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [
+            "g",
+            "h",
+            "r"
+          ],
+          "assay_or_method": "Genetic coefficient calculation for crossbreeding parameter estimation.",
+          "biological_or_experimental_system": "Goats (Boer x Central Highland)"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [
+            "proportions"
+          ],
+          "effect_directions": [],
+          "quantitative_values": [
+            "0",
+            "0.50",
+            "0.75",
+            "0.25",
+            "1.00",
+            "0.50"
+          ]
+        },
+        "key_entries": "The table provides genetic coefficients for different genetic groups. For example, B x CH has g=0.50, h=1.00, r=0.",
+        "best_result": "B x CH has the highest heterosis effect (h=1.00).",
+        "patterns_and_trends": "The table shows varying levels of breed additive, heterosis, and recombination effects across different genetic groups.",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Genetic coefficients for different groups are shown."
+          ],
+          "caption_supported_evidence": [
+            "Table provides genetic coefficients used for crossbreeding parameter estimation."
+          ],
+          "local_context_supported_evidence": [
+            "The table is used to estimate crossbreeding parameters for reproductive traits."
+          ],
+          "global_paper_supported_interpretation": [
+            "The table supports the estimation of genetic parameters for crossbreeding in goats."
+          ],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The table provides the necessary genetic coefficients to estimate crossbreeding parameters for reproductive traits in Boer x Central Highland goats. The values indicate the expected breed additive, heterosis, and recombination effects for different genetic groups.",
+        "hypothesis_tested": "Estimation of crossbreeding and genetic parameters for reproductive traits of Boer x Central Highland goats.",
+        "paper_quote": "Estimation of crossbreeding and genetic parameters for reproductive traits of Boer x Central Highland goats in Ethiopia",
+        "controls_assessment": "No controls are present as this is a parameter table.",
+        "scientific_conclusion": "The table provides genetic coefficients for estimating crossbreeding parameters in Boer x Central Highland goats, showing varying effects across genetic groups. The coefficients indicate the potential for heterosis and recombination, which are crucial for understanding the genetic performance of crossbred goats. This information supports the paper's aim to estimate genetic parameters for reproductive traits, highlighting the importance of these coefficients in crossbreeding programs.",
+        "model_extra_inference": {
+          "extra_inference": "The coefficients suggest that certain crossbreeding combinations may offer higher heterosis effects, which could be beneficial for improving reproductive traits.",
+          "support_status": "context_supported",
+          "supporting_evidence": "The table shows higher heterosis values for some genetic groups, which may indicate better performance in crossbred goats.",
+          "risk": "medium",
+          "open_questions": "How do these genetic coefficients translate into actual performance improvements in different environmental conditions?",
+          "alternative_interpretation": "The coefficients may vary under different management practices, affecting the expected genetic performance."
+        },
+        "context_used": "full paper text [truncated at 3000 words, original: 4713]",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 14.0
+    },
+    {
+      "label": "Table_2",
+      "kind": "table",
+      "page": 5,
+      "pages": [
+        5
+      ],
+      "bbox": [
+        18.730472564697266,
+        532.4714965820312,
+        592.6668090820312,
+        665.2991333007812
+      ],
+      "caption": "Table 2. Least-squares mean values and their standard errors for doe productive traits.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_full/PMC10529573/p005_Table_2.png",
+      "image_size": [
+        1595,
+        370
+      ],
+      "rotated": false,
+      "row_count": 8,
+      "col_count": 9,
+      "rows": [
+        [
+          "Genetic group",
+          "N",
+          "LSB (kid)",
+          "LBW(kg)",
+          "N",
+          "LWW(kg)",
+          "LSW(kid)",
+          "N",
+          "GL (day)"
+        ],
+        [
+          "Overall mean",
+          "567",
+          "1.54 ± 0.02",
+          "3.90 ± 0.05",
+          "478",
+          "14.0 ± 0.35",
+          "1.37 ± 0.02",
+          "303",
+          "148.1 ± 0.31"
+        ],
+        [
+          "Significance",
+          "",
+          "ns",
+          "ns",
+          "",
+          "ns",
+          "ns",
+          "",
+          "*"
+        ],
+        [
+          "CHxCH",
+          "275",
+          "1.57 ± 0.03",
+          "4.00 ± 0.08",
+          "243",
+          "14.3 ± 0.57",
+          "1.40 ± 0.03",
+          "99",
+          "149.2 ± 0.39 a"
+        ],
+        [
+          "BxCH",
+          "214",
+          "1.49 ± 0.03",
+          "3.83 ± 0.07",
+          "174",
+          "13.6 ± 0.44",
+          "1.35 ± 0.03",
+          "147",
+          "148.1 ± 0.55 ab"
+        ],
+        [
+          "B x BCH",
+          "27",
+          "1.52 ± 0.11",
+          "3.55 ± 0.25",
+          "20",
+          "12.8 ± 1.22",
+          "1.20 ± 0.09",
+          "19",
+          "147.1 ± 1.09 ab"
+        ],
+        [
+          "BCHxCH",
+          "19",
+          "1.73 ± 0.10",
+          "4.08 ± 0.31",
+          "17",
+          "15.4 ± 2.58",
+          "1.47 ± 0.12",
+          "12",
+          "145.2 ± 0.53 b"
+        ],
+        [
+          "BCH x BCH",
+          "32",
+          "1.59 ± 0.09",
+          "3.70 ± 0.24",
+          "24",
+          "13.1 ± 1.57",
+          "1.33 ± 0.09",
+          "26",
+          "146.4 ± 0.74 ab"
+        ]
+      ],
+      "markdown": "Table 2. Least-squares mean values and their standard errors for doe productive traits.\n\n| Genetic group   |   N | LSB (kid)   | LBW(kg)     |   N | LWW(kg)     | LSW(kid)    |   N | GL (day)        |\n|-----------------|-----|-------------|-------------|-----|-------------|-------------|-----|-----------------|\n| Overall mean    | 567 | 1.54 ± 0.02 | 3.90 ± 0.05 | 478 | 14.0 ± 0.35 | 1.37 ± 0.02 | 303 | 148.1 ± 0.31    |\n| Significance    |     | ns          | ns          |     | ns          | ns          |     | *               |\n| CHxCH           | 275 | 1.57 ± 0.03 | 4.00 ± 0.08 | 243 | 14.3 ± 0.57 | 1.40 ± 0.03 |  99 | 149.2 ± 0.39 a  |\n| BxCH            | 214 | 1.49 ± 0.03 | 3.83 ± 0.07 | 174 | 13.6 ± 0.44 | 1.35 ± 0.03 | 147 | 148.1 ± 0.55 ab |\n| B x BCH         |  27 | 1.52 ± 0.11 | 3.55 ± 0.25 |  20 | 12.8 ± 1.22 | 1.20 ± 0.09 |  19 | 147.1 ± 1.09 ab |\n| BCHxCH          |  19 | 1.73 ± 0.10 | 4.08 ± 0.31 |  17 | 15.4 ± 2.58 | 1.47 ± 0.12 |  12 | 145.2 ± 0.53 b  |\n| BCH x BCH       |  32 | 1.59 ± 0.09 | 3.70 ± 0.24 |  24 | 13.1 ± 1.57 | 1.33 ± 0.09 |  26 | 146.4 ± 0.74 ab |",
+      "context_words": 3000,
+      "context_strategy": "full",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"statistical summary\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [\"Genetic group\", \"LSB (kid)\", \"LBW (kg)\", \"LWW (kg)\", \"LSW (kid)\", \"GL (day)\"],\n    \"legend_elements\": [\"N, number of observation; ns, non-significant; LBW, litter birth weight; LSB, litter size at birth; LWW, litter weaning weight; LSW, litter size at weaning; GL, gestation length\"],\n    \"visible_entities\": [\"Genetic group\", \"LSB\", \"LBW\", \"LWW\", \"LSW\", \"GL\"]\n  },\n  \"structure\": \"The table compares least-squares mean values and their standard errors for reproductive traits across different genetic groups of goats. Metrics include litter size at birth (LSB), litter birth weight (LBW), litter weaning weight (LWW), litter size at weaning (LSW), and gestation length (GL). Units are kids for LSB and LSW, kilograms for LBW and LWW, and days for GL.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"The effect of genetic group on reproductive traits of Boer x Central Highland goats.\",\n    \"experimental_groups\": [\"CH x CH\", \"B x CH\", \"B x BCH\", \"BCH x CH\", \"BCH x BCH\"],\n    \"controls\": [\"Not determinable\"],\n    \"perturbations_or_treatments\": [\"Genetic group\"],\n    \"measured_variables\": [\"LSB\", \"LBW\", \"LWW\", \"LSW\", \"GL\"],\n    \"assay_or_method\": \"Least-squares means using a general linear model procedure in SAS\",\n    \"biological_or_experimental_system\": \"Goats (Boer x Central Highland)\"\n  },\n  \"statistical_markers\": \"n=567 for LSB, n=478 for LBW, n=303 for LWW, n=303 for LSW, n=303 for GL; means±SE; significance marked as ns or *\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [\"ns\", \"*\"],\n    \"sample_sizes\": [\"567\", \"478\", \"303\"],\n    \"units\": [\"kids\", \"kg\", \"days\"],\n    \"effect_directions\": [\"no significant difference\", \"significant difference\"],\n    \"quantitative_values\": [\"1.54±0.02\", \"3.90±0.05\", \"14.0±0.35\", \"1.37±0.02\", \"148.1±0.31\"]\n  },\n  \"key_entries\": \"CH x CH group shows the highest gestation length (149.2±0.39 days). The additive effect for LSW is significant (-0.54±0.22 kids).\",\n  \"best_result\": \"CH x CH group with gestation length of 149.2±0.39 days marked with 'a'.\",\n  \"patterns_and_trends\": \"Genotype does not significantly influence most reproductive traits except for gestation length. CH x CH and BCH x CH show better performance in some traits but differences are not significant.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Genotype effect on GL is significant.\"],\n    \"caption_supported_evidence\": [\"Table shows least-squares means and standard errors for reproductive traits.\"],\n    \"local_context_supported_evidence\": [\"The study evaluates the effect of crossbreeding on reproductive traits.\"],\n    \"global_paper_supported_interpretation\": [\"Crossing Boer with Central Highland goats does not significantly improve reproductive traits.\"],\n    \"unsupported_or_not_determinable\": [\"Specific reasons for non-significant results.\"]\n  },\n  \"scientific_interpretation\": \"The table examines the effect of genetic group on reproductive traits, showing that genotype significantly affects gestation length but not other traits. The CH x CH group has the longest gestation length, indicating potential differences in reproductive physiology.\",\n  \"hypothesis_tested\": \"The effect of genetic group on reproductive traits of Boer x Central Highland goats.\",\n  \"paper_quote\": \"The result indicates that improvement in reproductive traits would not be expected by crossing Boer with Central Highland goats.\",\n  \"controls_assessment\": \"No specific controls mentioned; genetic groups serve as comparisons.\",\n  \"scientific_conclusion\": \"The table demonstrates that genetic group significantly affects gestation length but not other reproductive traits in Boer x Central Highland goats. The CH x CH group shows the longest gestation length, but overall, crossing Boer with Central Highland does not significantly improve reproductive performance. This supports the paper's conclusion that such crossbreeding may not enhance reproductive traits under current management conditions.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The lack of significant differences in reproductive traits suggests that environmental factors or management practices may play a larger role than genetics in this context.\",\n    \"support_status\": \"context_supported\",\n    \"supporting_evidence\": \"The paper mentions the impact of management level on gene expression.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What management practices could potentially enhance the reproductive performance of crossbred goats?\",\n    \"alternative_interpretation\": \"The non-significant results could also indicate a need for larger sample sizes to detect genetic effects.\"\n  },\n  \"context",
+      "elapsed_sec": 17.0
+    },
+    {
+      "label": "Table_3",
+      "kind": "table",
+      "page": 6,
+      "pages": [
+        6
+      ],
+      "bbox": [
+        183.08033752441406,
+        548.34716796875,
+        592.4578247070312,
+        655.34716796875
+      ],
+      "caption": "Table 3. Estimate of breed additive, individual heterosis, and recombination effect for doe productive traits.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_full/PMC10529573/p006_Table_3.png",
+      "image_size": [
+        1138,
+        298
+      ],
+      "rotated": false,
+      "row_count": 6,
+      "col_count": 5,
+      "rows": [
+        [
+          "Trait",
+          "CH",
+          "gB",
+          "hBCH",
+          "rBCH"
+        ],
+        [
+          "LSB (kid)",
+          "1.57 ± 0.03",
+          "-0.004 ± 0.07 ns",
+          "-0.03 ± 0.04 ns",
+          "-0.02 ± 0.08 ns"
+        ],
+        [
+          "LBW(kg)",
+          "4.00 ± 0.08",
+          "0.08 ± 0.42 ns",
+          "0.14 ± 0.23 ns",
+          "0.05 ± 0.45 ns"
+        ],
+        [
+          "LWW(kid)",
+          "14.3 ± 0.57",
+          "-3.18 ± 4.45 ns",
+          "-0.04 ± 2.45 ns",
+          "-6.20 ± 4.72 ns"
+        ],
+        [
+          "LSW(kg)",
+          "1.40 ± 0.03",
+          "-0.54 ± 0.22 *",
+          "0.27 ± 0.12 *",
+          "0.17 ± 0.24 ns"
+        ],
+        [
+          "GL (days)",
+          "149.2 ± 0.39",
+          "3.69 ± 3.34 ns",
+          "-2.62 ± 1.82 ns",
+          "-4.31 ± 3.63 ns"
+        ]
+      ],
+      "markdown": "Table 3. Estimate of breed additive, individual heterosis, and recombination effect for doe productive traits.\n\n| Trait     | CH           | gB               | hBCH            | rBCH            |\n|-----------|--------------|------------------|-----------------|-----------------|\n| LSB (kid) | 1.57 ± 0.03  | -0.004 ± 0.07 ns | -0.03 ± 0.04 ns | -0.02 ± 0.08 ns |\n| LBW(kg)   | 4.00 ± 0.08  | 0.08 ± 0.42 ns   | 0.14 ± 0.23 ns  | 0.05 ± 0.45 ns  |\n| LWW(kid)  | 14.3 ± 0.57  | -3.18 ± 4.45 ns  | -0.04 ± 2.45 ns | -6.20 ± 4.72 ns |\n| LSW(kg)   | 1.40 ± 0.03  | -0.54 ± 0.22 *   | 0.27 ± 0.12 *   | 0.17 ± 0.24 ns  |\n| GL (days) | 149.2 ± 0.39 | 3.69 ± 3.34 ns   | -2.62 ± 1.82 ns | -4.31 ± 3.63 ns |",
+      "context_words": 3000,
+      "context_strategy": "full",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"parameter table\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [\"traits\", \"genetic effects\"],\n    \"legend_elements\": [\"Ns, non-significant; *, P<0.05\"],\n    \"visible_entities\": [\"LSB, LBW, LWW, LSW, GL\"]\n  },\n  \"structure\": \"The table compares breed additive (gB), heterosis (hBCH), and recombination (rBCH) effects for reproductive traits of goats, including litter size at birth (LSB), total litter birth weight (LBW), total litter weaning weight (LWW), litter size at weaning (LSW), and gestation length (GL). Units are kids, kg, and days.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Estimation of crossbreeding and genetic parameters for reproductive traits of Boer x Central Highland goats.\",\n    \"experimental_groups\": [\"CH\", \"gB\", \"hBCH\", \"rBCH\"],\n    \"controls\": [\"Not determinable\"],\n    \"perturbations_or_treatments\": [\"crossbreeding with Boer goats\"],\n    \"measured_variables\": [\"LSB, LBW, LWW, LSW, GL\"],\n    \"assay_or_method\": \"Least-squares means and crossbreeding parameter estimation using SAS and WOMBAT software\",\n    \"biological_or_experimental_system\": \"Boer x Central Highland goats\"\n  },\n  \"statistical_markers\": \"Ns, non-significant; *, P<0.05\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [\"p-values\"],\n    \"sample_sizes\": [\"Not visible\"],\n    \"units\": [\"kids\", \"kg\", \"days\"],\n    \"effect_directions\": [\"increase, decrease\"],\n    \"quantitative_values\": [\"1.57±0.03\", \"4.00±0.08\", \"14.3±0.57\", \"1.40±0.03\", \"149.2±0.39\"]\n  },\n  \"key_entries\": \"The additive effect for LSW was significant (-0.54±0.22*) indicating a reduction in kids weaned per doe due to crossing. Heterosis for LSW was positive (0.27±0.12*).\",\n  \"best_result\": \"The significant heterosis effect for LSW (0.27±0.12*) suggests a slight advantage in crossbred does.\",\n  \"patterns_and_trends\": \"Most genetic effects were not significant, indicating limited improvement in reproductive traits through crossbreeding.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"genetic effects for reproductive traits\"],\n    \"caption_supported_evidence\": [\"estimates of breed additive, heterosis, and recombination effects\"],\n    \"local_context_supported_evidence\": [\"crossbreeding parameter estimation method\"],\n    \"global_paper_supported_interpretation\": [\"improvement in reproductive traits not expected from crossbreeding\"],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The table shows that crossbreeding Boer with Central Highland goats does not significantly improve reproductive traits, as most effects are non-significant. The significant negative additive effect for LSW suggests a reduction in kids weaned per doe.\",\n  \"hypothesis_tested\": \"The study aimed to estimate the crossbreeding and genetic parameters for the reproductive traits of Boer x Central Highland goats.\",\n  \"paper_quote\": \"The result indicates that improvement in reproductive traits would not be expected by crossing Boer with Central Highland goats.\",\n  \"controls_assessment\": \"No specific controls are mentioned, but the study uses Central Highland as a baseline for comparison.\",\n  \"scientific_conclusion\": \"The table demonstrates that crossbreeding Boer with Central Highland goats does not significantly enhance reproductive performance, as indicated by the non-significant genetic effects for most traits. The only significant finding is a reduction in kids weaned per doe due to additive effects. This supports the conclusion that such crossbreeding is unlikely to improve reproductive traits under the current management conditions.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The non-significant heterosis effects suggest limited genetic differentiation between Boer and Central Highland goats for these traits.\",\n    \"support_status\": \"context_supported\",\n    \"supporting_evidence\": \"The paper notes the lack of significant heterosis effects and suggests this may be due to low genetic differentiation.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"How might different management practices influence the expression of genetic potential in crossbred goats?\",\n    \"alternative_interpretation\": \"The negative heterosis for some traits might indicate inbreeding depression rather than lack of heterosis.\"\n  },\n  \"context_used\": \"full paper text [truncated at 3000 words, original: 4713]\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "table_type": "parameter table",
+        "visual_form": {
+          "graph_or_visual_type": "table",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [
+            "traits",
+            "genetic effects"
+          ],
+          "legend_elements": [
+            "Ns, non-significant; *, P<0.05"
+          ],
+          "visible_entities": [
+            "LSB, LBW, LWW, LSW, GL"
+          ]
+        },
+        "structure": "The table compares breed additive (gB), heterosis (hBCH), and recombination (rBCH) effects for reproductive traits of goats, including litter size at birth (LSB), total litter birth weight (LBW), total litter weaning weight (LWW), litter size at weaning (LSW), and gestation length (GL). Units are kids, kg, and days.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Estimation of crossbreeding and genetic parameters for reproductive traits of Boer x Central Highland goats.",
+          "experimental_groups": [
+            "CH",
+            "gB",
+            "hBCH",
+            "rBCH"
+          ],
+          "controls": [
+            "Not determinable"
+          ],
+          "perturbations_or_treatments": [
+            "crossbreeding with Boer goats"
+          ],
+          "measured_variables": [
+            "LSB, LBW, LWW, LSW, GL"
+          ],
+          "assay_or_method": "Least-squares means and crossbreeding parameter estimation using SAS and WOMBAT software",
+          "biological_or_experimental_system": "Boer x Central Highland goats"
+        },
+        "statistical_markers": "Ns, non-significant; *, P<0.05",
+        "markers_and_statistics": {
+          "statistical_markers": [
+            "p-values"
+          ],
+          "sample_sizes": [
+            "Not visible"
+          ],
+          "units": [
+            "kids",
+            "kg",
+            "days"
+          ],
+          "effect_directions": [
+            "increase, decrease"
+          ],
+          "quantitative_values": [
+            "1.57±0.03",
+            "4.00±0.08",
+            "14.3±0.57",
+            "1.40±0.03",
+            "149.2±0.39"
+          ]
+        },
+        "key_entries": "The additive effect for LSW was significant (-0.54±0.22*) indicating a reduction in kids weaned per doe due to crossing. Heterosis for LSW was positive (0.27±0.12*).",
+        "best_result": "The significant heterosis effect for LSW (0.27±0.12*) suggests a slight advantage in crossbred does.",
+        "patterns_and_trends": "Most genetic effects were not significant, indicating limited improvement in reproductive traits through crossbreeding.",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "genetic effects for reproductive traits"
+          ],
+          "caption_supported_evidence": [
+            "estimates of breed additive, heterosis, and recombination effects"
+          ],
+          "local_context_supported_evidence": [
+            "crossbreeding parameter estimation method"
+          ],
+          "global_paper_supported_interpretation": [
+            "improvement in reproductive traits not expected from crossbreeding"
+          ],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The table shows that crossbreeding Boer with Central Highland goats does not significantly improve reproductive traits, as most effects are non-significant. The significant negative additive effect for LSW suggests a reduction in kids weaned per doe.",
+        "hypothesis_tested": "The study aimed to estimate the crossbreeding and genetic parameters for the reproductive traits of Boer x Central Highland goats.",
+        "paper_quote": "The result indicates that improvement in reproductive traits would not be expected by crossing Boer with Central Highland goats.",
+        "controls_assessment": "No specific controls are mentioned, but the study uses Central Highland as a baseline for comparison.",
+        "scientific_conclusion": "The table demonstrates that crossbreeding Boer with Central Highland goats does not significantly enhance reproductive performance, as indicated by the non-significant genetic effects for most traits. The only significant finding is a reduction in kids weaned per doe due to additive effects. This supports the conclusion that such crossbreeding is unlikely to improve reproductive traits under the current management conditions.",
+        "model_extra_inference": {
+          "extra_inference": "The non-significant heterosis effects suggest limited genetic differentiation between Boer and Central Highland goats for these traits.",
+          "support_status": "context_supported",
+          "supporting_evidence": "The paper notes the lack of significant heterosis effects and suggests this may be due to low genetic differentiation.",
+          "risk": "medium",
+          "open_questions": "How might different management practices influence the expression of genetic potential in crossbred goats?",
+          "alternative_interpretation": "The negative heterosis for some traits might indicate inbreeding depression rather than lack of heterosis."
+        },
+        "context_used": "full paper text [truncated at 3000 words, original: 4713]",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 15.6
+    },
+    {
+      "label": "Table_4",
+      "kind": "table",
+      "page": 7,
+      "pages": [
+        7
+      ],
+      "bbox": [
+        18.84027099609375,
+        571.8649291992188,
+        592.4801025390625,
+        679.6558837890625
+      ],
+      "caption": "Table 4. Predicted performance of doe productive traits.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_full/PMC10529573/p007_Table_4.png",
+      "image_size": [
+        1594,
+        300
+      ],
+      "rotated": false,
+      "row_count": 6,
+      "col_count": 7,
+      "rows": [
+        [
+          "Genetic group",
+          "Generation and blood level",
+          "LSB (kid)",
+          "LBW(kg)",
+          "LWW(kg)",
+          "LSW(kid)",
+          "GL (day)"
+        ],
+        [
+          "CHxCH",
+          "Local",
+          "1.57",
+          "4.00",
+          "14.30",
+          "1.40",
+          "149.20"
+        ],
+        [
+          "BxCH",
+          "F1 (50%)",
+          "1.54",
+          "4.18",
+          "12.67",
+          "1.40",
+          "148.43"
+        ],
+        [
+          "B x BCH",
+          "BC1 (75%)",
+          "1.55",
+          "4.14",
+          "10.35",
+          "1.17",
+          "149.58"
+        ],
+        [
+          "BCHxCH",
+          "BC1 (25%)",
+          "1.55",
+          "4.10",
+          "11.94",
+          "1.44",
+          "147.74"
+        ],
+        [
+          "BCH x BCH",
+          "F2 (50%)",
+          "1.54",
+          "4.14",
+          "9.59",
+          "1.35",
+          "147.58"
+        ]
+      ],
+      "markdown": "Table 4. Predicted performance of doe productive traits.\n\n| Genetic group   | Generation and blood level   |   LSB (kid) |   LBW(kg) |   LWW(kg) |   LSW(kid) |   GL (day) |\n|-----------------|------------------------------|-------------|-----------|-----------|------------|------------|\n| CHxCH           | Local                        |        1.57 |      4.00 |     14.30 |       1.40 |     149.20 |\n| BxCH            | F1 (50%)                     |        1.54 |      4.18 |     12.67 |       1.40 |     148.43 |\n| B x BCH         | BC1 (75%)                    |        1.55 |      4.14 |     10.35 |       1.17 |     149.58 |\n| BCHxCH          | BC1 (25%)                    |        1.55 |      4.10 |     11.94 |       1.44 |     147.74 |\n| BCH x BCH       | F2 (50%)                     |        1.54 |      4.14 |      9.59 |       1.35 |     147.58 |",
+      "context_words": 3000,
+      "context_strategy": "full",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"results comparison\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [\"Genetic group\", \"Generation and blood level\", \"LSB (kid)\", \"LBW (kg)\", \"LWW (kg)\", \"LSW (kid)\", \"GL (day)\"],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"Genetic group\", \"Generation and blood level\", \"LSB\", \"LBW\", \"LWW\", \"LSW\", \"GL\"]\n  },\n  \"structure\": \"The table compares the predicted performance of doe productive traits across different genetic groups and generations. Metrics include litter size at birth (LSB), litter birth weight (LBW), litter weaning weight (LWW), litter size at weaning (LSW), and gestation length (GL). Units are kids for LSB and LSW, kilograms for LBW and LWW, and days for GL.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"The effect of different genetic groups and generations on doe productive traits.\",\n    \"experimental_groups\": [\"CH x CH\", \"B x CH\", \"B x BCH\", \"BCH x CH\", \"BCH x BCH\"],\n    \"controls\": [\"Not determinable\"],\n    \"perturbations_or_treatments\": [\"Different genetic crosses\"],\n    \"measured_variables\": [\"LSB\", \"LBW\", \"LWW\", \"LSW\", \"GL\"],\n    \"assay_or_method\": \"Least-squares means using a general linear model\",\n    \"biological_or_experimental_system\": \"Goats (Boer x Central Highland)\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [\"kid\", \"kg\", \"day\"],\n    \"effect_directions\": [],\n    \"quantitative_values\": [\"1.57\", \"4.00\", \"14.30\", \"1.40\", \"149.20\"]\n  },\n  \"key_entries\": \"The CH x CH group has the highest LSB (1.57) and LWW (14.30 kg), while BCH x BCH has the lowest LWW (9.59 kg).\",\n  \"best_result\": \"CH x CH group with the highest LWW of 14.30 kg.\",\n  \"patterns_and_trends\": \"The CH x CH group generally shows higher performance in most traits compared to crossbred groups, indicating limited improvement from crossbreeding.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Comparison of productive traits across genetic groups\"],\n    \"caption_supported_evidence\": [\"Predicted performance of doe productive traits\"],\n    \"local_context_supported_evidence\": [\"The table shows the effect of genetic group on reproductive traits\"],\n    \"global_paper_supported_interpretation\": [\"Crossbreeding did not significantly improve reproductive traits\"],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The table shows that the CH x CH group has the highest performance in most reproductive traits, suggesting that crossbreeding with Boer goats does not significantly improve these traits.\",\n  \"hypothesis_tested\": \"The result indicates that improvement in reproductive traits would not be expected by crossing Boer with Central Highland goats.\",\n  \"paper_quote\": \"The result indicates that improvement in reproductive traits would not be expected by crossing Boer with Central Highland goats.\",\n  \"controls_assessment\": \"No specific controls are mentioned, but the CH x CH group serves as a baseline for comparison.\",\n  \"scientific_conclusion\": \"The table demonstrates that the CH x CH group outperforms crossbred groups in most reproductive traits, indicating that crossbreeding with Boer goats does not enhance these traits. The data supports the conclusion that improvement in reproductive traits through crossbreeding is not significant, aligning with the paper's finding that such crossbreeding is not beneficial for enhancing productivity in this context.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The data suggests that maintaining pure Central Highland genetics may be more effective for reproductive performance than crossbreeding with Boer goats.\",\n    \"support_status\": \"context_supported\",\n    \"supporting_evidence\": \"The higher performance of CH x CH in reproductive traits compared to crossbreds.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What management practices could potentially enhance the reproductive performance of crossbred goats?\",\n    \"alternative_interpretation\": \"The lack of improvement in crossbred goats might be due to environmental factors rather than genetic incompatibility.\"\n  },\n  \"context_used\": \"full paper text [truncated at 3000 words, original: 4713]\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "table_type": "results comparison",
+        "visual_form": {
+          "graph_or_visual_type": "table",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [
+            "Genetic group",
+            "Generation and blood level",
+            "LSB (kid)",
+            "LBW (kg)",
+            "LWW (kg)",
+            "LSW (kid)",
+            "GL (day)"
+          ],
+          "legend_elements": [],
+          "visible_entities": [
+            "Genetic group",
+            "Generation and blood level",
+            "LSB",
+            "LBW",
+            "LWW",
+            "LSW",
+            "GL"
+          ]
+        },
+        "structure": "The table compares the predicted performance of doe productive traits across different genetic groups and generations. Metrics include litter size at birth (LSB), litter birth weight (LBW), litter weaning weight (LWW), litter size at weaning (LSW), and gestation length (GL). Units are kids for LSB and LSW, kilograms for LBW and LWW, and days for GL.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "The effect of different genetic groups and generations on doe productive traits.",
+          "experimental_groups": [
+            "CH x CH",
+            "B x CH",
+            "B x BCH",
+            "BCH x CH",
+            "BCH x BCH"
+          ],
+          "controls": [
+            "Not determinable"
+          ],
+          "perturbations_or_treatments": [
+            "Different genetic crosses"
+          ],
+          "measured_variables": [
+            "LSB",
+            "LBW",
+            "LWW",
+            "LSW",
+            "GL"
+          ],
+          "assay_or_method": "Least-squares means using a general linear model",
+          "biological_or_experimental_system": "Goats (Boer x Central Highland)"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [
+            "kid",
+            "kg",
+            "day"
+          ],
+          "effect_directions": [],
+          "quantitative_values": [
+            "1.57",
+            "4.00",
+            "14.30",
+            "1.40",
+            "149.20"
+          ]
+        },
+        "key_entries": "The CH x CH group has the highest LSB (1.57) and LWW (14.30 kg), while BCH x BCH has the lowest LWW (9.59 kg).",
+        "best_result": "CH x CH group with the highest LWW of 14.30 kg.",
+        "patterns_and_trends": "The CH x CH group generally shows higher performance in most traits compared to crossbred groups, indicating limited improvement from crossbreeding.",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Comparison of productive traits across genetic groups"
+          ],
+          "caption_supported_evidence": [
+            "Predicted performance of doe productive traits"
+          ],
+          "local_context_supported_evidence": [
+            "The table shows the effect of genetic group on reproductive traits"
+          ],
+          "global_paper_supported_interpretation": [
+            "Crossbreeding did not significantly improve reproductive traits"
+          ],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The table shows that the CH x CH group has the highest performance in most reproductive traits, suggesting that crossbreeding with Boer goats does not significantly improve these traits.",
+        "hypothesis_tested": "The result indicates that improvement in reproductive traits would not be expected by crossing Boer with Central Highland goats.",
+        "paper_quote": "The result indicates that improvement in reproductive traits would not be expected by crossing Boer with Central Highland goats.",
+        "controls_assessment": "No specific controls are mentioned, but the CH x CH group serves as a baseline for comparison.",
+        "scientific_conclusion": "The table demonstrates that the CH x CH group outperforms crossbred groups in most reproductive traits, indicating that crossbreeding with Boer goats does not enhance these traits. The data supports the conclusion that improvement in reproductive traits through crossbreeding is not significant, aligning with the paper's finding that such crossbreeding is not beneficial for enhancing productivity in this context.",
+        "model_extra_inference": {
+          "extra_inference": "The data suggests that maintaining pure Central Highland genetics may be more effective for reproductive performance than crossbreeding with Boer goats.",
+          "support_status": "context_supported",
+          "supporting_evidence": "The higher performance of CH x CH in reproductive traits compared to crossbreds.",
+          "risk": "medium",
+          "open_questions": "What management practices could potentially enhance the reproductive performance of crossbred goats?",
+          "alternative_interpretation": "The lack of improvement in crossbred goats might be due to environmental factors rather than genetic incompatibility."
+        },
+        "context_used": "full paper text [truncated at 3000 words, original: 4713]",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 15.0
+    },
+    {
+      "label": "Table_5",
+      "kind": "table",
+      "page": 8,
+      "pages": [
+        8
+      ],
+      "bbox": [
+        18.892742156982422,
+        550.6213989257812,
+        592.4913330078125,
+        658.4593505859375
+      ],
+      "caption": "Table 5. Heritability and repeatability estimates for reproductive traits of Boer x Central Highland goats.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_full/PMC10529573/p008_Table_5.png",
+      "image_size": [
+        1594,
+        301
+      ],
+      "rotated": false,
+      "row_count": 6,
+      "col_count": 9,
+      "rows": [
+        [
+          "Estimate",
+          "σ 2 α",
+          "σ 2 c",
+          "σ 2 e",
+          "σ 2 p",
+          "h 2",
+          "c 2",
+          "e 2",
+          "r"
+        ],
+        [
+          "LSB",
+          "0.001",
+          "0.002",
+          "0.017",
+          "0.0197",
+          "0.050 ± 0.04",
+          "0.099 ± 0.15",
+          "0.851 ± 0.10",
+          "0.149 ± 0.09"
+        ],
+        [
+          "LWB",
+          "0.058",
+          "0.010",
+          "0.522",
+          "0.590",
+          "0.098 ± 0.07",
+          "0.018 ± 0.05",
+          "0.884 ± 0.07",
+          "0.116 ± 0.07"
+        ],
+        [
+          "LWW",
+          "1.993",
+          "0.330",
+          "20.96",
+          "23.28",
+          "0.086 ± 0.08",
+          "0.014 ± 0.06",
+          "0.900 ± 0.08",
+          "0.099 ± 0.07"
+        ],
+        [
+          "LSW",
+          "0.002",
+          "0.008",
+          "0.116",
+          "0.128",
+          "0.018 ± 0.03",
+          "0.068 ± 0.08",
+          "0.914 ± 0.07",
+          "0.086 ± 0.06"
+        ],
+        [
+          "GL",
+          "0.001",
+          "1.766",
+          "27.11",
+          "28.88",
+          "0.000 ± 0.06",
+          "0.061 ± 0.07",
+          "0.939 ± 0.08",
+          "0.061 ± 0.07"
+        ]
+      ],
+      "markdown": "Table 5. Heritability and repeatability estimates for reproductive traits of Boer x Central Highland goats.\n\n| Estimate   |   σ 2 α |   σ 2 c |   σ 2 e |   σ 2 p | h 2          | c 2          | e 2          | r            |\n|------------|---------|---------|---------|---------|--------------|--------------|--------------|--------------|\n| LSB        |   0.001 |   0.002 |   0.017 |  0.0197 | 0.050 ± 0.04 | 0.099 ± 0.15 | 0.851 ± 0.10 | 0.149 ± 0.09 |\n| LWB        |   0.058 |   0.010 |   0.522 |   0.590 | 0.098 ± 0.07 | 0.018 ± 0.05 | 0.884 ± 0.07 | 0.116 ± 0.07 |\n| LWW        |   1.993 |   0.330 |   20.96 |   23.28 | 0.086 ± 0.08 | 0.014 ± 0.06 | 0.900 ± 0.08 | 0.099 ± 0.07 |\n| LSW        |   0.002 |   0.008 |   0.116 |   0.128 | 0.018 ± 0.03 | 0.068 ± 0.08 | 0.914 ± 0.07 | 0.086 ± 0.06 |\n| GL         |   0.001 |   1.766 |   27.11 |   28.88 | 0.000 ± 0.06 | 0.061 ± 0.07 | 0.939 ± 0.08 | 0.061 ± 0.07 |",
+      "context_words": 3000,
+      "context_strategy": "full",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"parameter table\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [\"Estimate\", \"σ²a\", \"σ²c\", \"σ²e\", \"σ²p\", \"h²\", \"c²\", \"e²\", \"r\"],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"LSB\", \"LWB\", \"LWW\", \"LSW\", \"GL\"]\n  },\n  \"structure\": \"The table compares heritability and repeatability estimates for reproductive traits of Boer x Central Highland goats. Metrics include additive genetic variance (σ²a), permanent environmental variance (σ²c), error variance (σ²e), phenotypic variance (σ²p), heritability (h²), direct repeatability (c²), error repeatability (e²), and overall repeatability (r). Units are in kids, kg, and days.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Estimation of heritability and repeatability for reproductive traits in Boer x Central Highland goats.\",\n    \"experimental_groups\": [\"Boer x Central Highland goats\"],\n    \"controls\": [\"Not determinable\"],\n    \"perturbations_or_treatments\": [\"Not determinable\"],\n    \"measured_variables\": [\"LSB\", \"LWB\", \"LWW\", \"LSW\", \"GL\"],\n    \"assay_or_method\": \"AI-REML algorithm using WOMBAT software\",\n    \"biological_or_experimental_system\": \"Boer x Central Highland goats\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [\"kids\", \"kg\", \"days\"],\n    \"effect_directions\": [],\n    \"quantitative_values\": [\"0.050±0.04\", \"0.098±0.07\", \"0.086±0.08\", \"0.018±0.03\", \"0.000±0.06\"]\n  },\n  \"key_entries\": \"The heritability estimates for LSB, LWB, LWW, LSW, and GL are 0.050, 0.098, 0.086, 0.018, and 0.000, respectively. The repeatability estimates are 0.149, 0.116, 0.099, 0.086, and 0.061.\",\n  \"best_result\": \"The highest heritability is for LWB at 0.098±0.07.\",\n  \"patterns_and_trends\": \"Heritability and repeatability estimates are generally low, indicating limited potential for genetic improvement through selection.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Heritability and repeatability values for reproductive traits are shown.\"],\n    \"caption_supported_evidence\": [\"Table provides heritability and repeatability estimates.\"],\n    \"local_context_supported_evidence\": [\"Estimates indicate limited genetic improvement potential.\"],\n    \"global_paper_supported_interpretation\": [\"Crossing Boer with Central Highland goats does not improve reproductive traits significantly.\"],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The table provides heritability and repeatability estimates for reproductive traits, showing low values that suggest limited potential for genetic improvement through selection. The heritability for LWB is the highest at 0.098, but all values are generally low.\",\n  \"hypothesis_tested\": \"The result indicates that improvement in reproductive traits would not be expected by crossing Boer with Central Highland goats.\",\n  \"paper_quote\": \"The result indicates that improvement in reproductive traits would not be expected by crossing Boer with Central Highland goats.\",\n  \"controls_assessment\": \"No specific controls are mentioned, but the study uses a crossbred population for estimation.\",\n  \"scientific_conclusion\": \"The table presents heritability and repeatability estimates for reproductive traits in Boer x Central Highland goats, showing low values across traits. The heritability for LWB is highest at 0.098, but overall, the estimates suggest limited potential for genetic improvement through selection. This supports the paper's conclusion that crossing Boer with Central Highland goats does not significantly improve reproductive traits.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The low heritability and repeatability suggest that multiple records are needed for selection decisions.\",\n    \"support_status\": \"context_supported\",\n    \"supporting_evidence\": \"The paper mentions that repeatability estimates indicate multiple records are needed for culling or selection decisions.\",\n    \"risk\": \"low\",\n    \"open_questions\": \"What management practices could potentially enhance the expression of genetic potential in these traits?\",\n    \"alternative_interpretation\": \"None\"\n  },\n  \"context_used\": \"full paper text [truncated at 3000 words, original: 4713]\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "table_type": "parameter table",
+        "visual_form": {
+          "graph_or_visual_type": "table",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [
+            "Estimate",
+            "σ²a",
+            "σ²c",
+            "σ²e",
+            "σ²p",
+            "h²",
+            "c²",
+            "e²",
+            "r"
+          ],
+          "legend_elements": [],
+          "visible_entities": [
+            "LSB",
+            "LWB",
+            "LWW",
+            "LSW",
+            "GL"
+          ]
+        },
+        "structure": "The table compares heritability and repeatability estimates for reproductive traits of Boer x Central Highland goats. Metrics include additive genetic variance (σ²a), permanent environmental variance (σ²c), error variance (σ²e), phenotypic variance (σ²p), heritability (h²), direct repeatability (c²), error repeatability (e²), and overall repeatability (r). Units are in kids, kg, and days.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Estimation of heritability and repeatability for reproductive traits in Boer x Central Highland goats.",
+          "experimental_groups": [
+            "Boer x Central Highland goats"
+          ],
+          "controls": [
+            "Not determinable"
+          ],
+          "perturbations_or_treatments": [
+            "Not determinable"
+          ],
+          "measured_variables": [
+            "LSB",
+            "LWB",
+            "LWW",
+            "LSW",
+            "GL"
+          ],
+          "assay_or_method": "AI-REML algorithm using WOMBAT software",
+          "biological_or_experimental_system": "Boer x Central Highland goats"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [
+            "kids",
+            "kg",
+            "days"
+          ],
+          "effect_directions": [],
+          "quantitative_values": [
+            "0.050±0.04",
+            "0.098±0.07",
+            "0.086±0.08",
+            "0.018±0.03",
+            "0.000±0.06"
+          ]
+        },
+        "key_entries": "The heritability estimates for LSB, LWB, LWW, LSW, and GL are 0.050, 0.098, 0.086, 0.018, and 0.000, respectively. The repeatability estimates are 0.149, 0.116, 0.099, 0.086, and 0.061.",
+        "best_result": "The highest heritability is for LWB at 0.098±0.07.",
+        "patterns_and_trends": "Heritability and repeatability estimates are generally low, indicating limited potential for genetic improvement through selection.",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Heritability and repeatability values for reproductive traits are shown."
+          ],
+          "caption_supported_evidence": [
+            "Table provides heritability and repeatability estimates."
+          ],
+          "local_context_supported_evidence": [
+            "Estimates indicate limited genetic improvement potential."
+          ],
+          "global_paper_supported_interpretation": [
+            "Crossing Boer with Central Highland goats does not improve reproductive traits significantly."
+          ],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The table provides heritability and repeatability estimates for reproductive traits, showing low values that suggest limited potential for genetic improvement through selection. The heritability for LWB is the highest at 0.098, but all values are generally low.",
+        "hypothesis_tested": "The result indicates that improvement in reproductive traits would not be expected by crossing Boer with Central Highland goats.",
+        "paper_quote": "The result indicates that improvement in reproductive traits would not be expected by crossing Boer with Central Highland goats.",
+        "controls_assessment": "No specific controls are mentioned, but the study uses a crossbred population for estimation.",
+        "scientific_conclusion": "The table presents heritability and repeatability estimates for reproductive traits in Boer x Central Highland goats, showing low values across traits. The heritability for LWB is highest at 0.098, but overall, the estimates suggest limited potential for genetic improvement through selection. This supports the paper's conclusion that crossing Boer with Central Highland goats does not significantly improve reproductive traits.",
+        "model_extra_inference": {
+          "extra_inference": "The low heritability and repeatability suggest that multiple records are needed for selection decisions.",
+          "support_status": "context_supported",
+          "supporting_evidence": "The paper mentions that repeatability estimates indicate multiple records are needed for culling or selection decisions.",
+          "risk": "low",
+          "open_questions": "What management practices could potentially enhance the expression of genetic potential in these traits?",
+          "alternative_interpretation": "None"
+        },
+        "context_used": "full paper text [truncated at 3000 words, original: 4713]",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 16.3
+    }
+  ]
+}

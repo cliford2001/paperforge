@@ -1,0 +1,223 @@
+[
+  {
+    "label": "Figure_uncaptioned_1",
+    "kind": "figure",
+    "page": 2,
+    "bbox": [
+      40.7,
+      72.8,
+      555.3,
+      597.0
+    ],
+    "caption": "",
+    "image_path": "p002_Figure_uncaptioned_1.png",
+    "image_size": [
+      515,
+      524
+    ]
+  },
+  {
+    "label": "Figure 1",
+    "kind": "figure",
+    "page": 6,
+    "bbox": [
+      45.9,
+      468.7,
+      549.0,
+      714.0
+    ],
+    "caption": "Fig. 1 XRD analysis ( A ) and UV-VIS spectroscopy ( B ) of SeNPs biosynthesized using Fenugreek seeds aqueous extract, 1 is the aqueous extract and 2 is the reaction color after SeNPs formation",
+    "image_path": "p006_Figure_1.png",
+    "image_size": [
+      503,
+      245
+    ]
+  },
+  {
+    "label": "Figure 2",
+    "kind": "figure",
+    "page": 7,
+    "bbox": [
+      67.9,
+      71.5,
+      525.8,
+      444.5
+    ],
+    "caption": "Fig. 2 EDX ( A ), TEM micrographs ( B ), and FTIR analysis showing different functional groups acting as bio-reductant and stabilizing agent ( C ) for SeNPs biosynthesized using Fenugreek seeds aqueous extract",
+    "image_path": "p007_Figure_2.png",
+    "image_size": [
+      458,
+      373
+    ]
+  },
+  {
+    "label": "Figure_uncaptioned_2",
+    "kind": "figure",
+    "page": 7,
+    "bbox": [
+      40.0,
+      500.1,
+      554.8,
+      723.9
+    ],
+    "caption": "Table 1 Antifungal activity of SeNPs against two Fusarium spp. expressed as mean inhibition zone diameter (ZOI) of three replicates in  mm ± SD,  MIC  and  MFC  were  calculated  as  mg/mL,  inhibition  zone  of F.  moniliforme ( A )  and F.  oxysporum ( B )  using  different concentrations of SeNPs (mg/mL)",
+    "image_path": "p007_Figure_uncaptioned_2.png",
+    "image_size": [
+      515,
+      224
+    ]
+  },
+  {
+    "label": "Figure 3",
+    "kind": "figure",
+    "page": 8,
+    "bbox": [
+      90.0,
+      384.8,
+      504.0,
+      716.8
+    ],
+    "caption": "Fig. 3 Infected tomato fruits after nano treatment, A : untreated; B : water-dipped (control); C : treated with SeNPs at MIC after 25 days of storage",
+    "image_path": "p008_Figure_3.png",
+    "image_size": [
+      414,
+      332
+    ]
+  },
+  {
+    "label": "Figure 4",
+    "kind": "figure",
+    "page": 9,
+    "bbox": [
+      45.7,
+      72.2,
+      548.7,
+      424.2
+    ],
+    "caption": "Fig. 4 Microscopic examination of Fusarium oxysporum (*400) showing its charcteristic spores ( A ), macroscopic examination on potato dextrose agar medium ( B ), untreated fungul mycelium control ( C , D ), Treated fungal mycelium with MIC of SeNPS showing lysis and complete destruction after 18h of treatment ( E -H )",
+    "image_path": "p009_Figure_4.png",
+    "image_size": [
+      503,
+      352
+    ]
+  },
+  {
+    "label": "Figure 5",
+    "kind": "figure",
+    "page": 9,
+    "bbox": [
+      89.3,
+      459.1,
+      505.0,
+      625.7
+    ],
+    "caption": "Fig. 5 Effect of SeNPs treatment after infection with Fusarium oxysporum , 2: shows the beginning of infection, 3: shows the treatment effect on disease progression as compared with 4 representing untreated infected fruits",
+    "image_path": "p009_Figure_5.png",
+    "image_size": [
+      416,
+      167
+    ]
+  },
+  {
+    "label": "Figure 6",
+    "kind": "figure",
+    "page": 11,
+    "bbox": [
+      45.8,
+      71.4,
+      549.4,
+      374.8
+    ],
+    "caption": "Fig. 6 Cytotoxic effect of SeNPs biosynthesized using Fenugreek seeds aqueous extract against normal Human Skin Fibroblast (HSF) and Oral Epithelial cells (OEC) using SRB assay, data expressed as the mean value of cell viability (% of control) ± S.D and   IC 50 was calculated",
+    "image_path": "p011_Figure_6.png",
+    "image_size": [
+      504,
+      303
+    ]
+  },
+  {
+    "label": "Figure 7",
+    "kind": "figure",
+    "page": 11,
+    "bbox": [
+      89.7,
+      416.6,
+      505.0,
+      714.2
+    ],
+    "caption": "Fig. 7 Preparation of the three groups of Cherry tomato showing different ripping stages, Group A (red colored), Group B (yellow colored), and Group C (green colored), Group A fruits during their 1: washing, 2: air-drying and 3: packaging",
+    "image_path": "p011_Figure_7.png",
+    "image_size": [
+      415,
+      298
+    ]
+  },
+  {
+    "label": "Figure 8",
+    "kind": "figure",
+    "page": 12,
+    "bbox": [
+      45.4,
+      71.6,
+      549.0,
+      353.4
+    ],
+    "caption": "Fig. 8 Effect of SeNPs-treatment of tomato fruits on some chemical and physical properties at two storage temperature (5 °C and 25 °C) for three ripening stages, Group A: Red colored ( A , B , C , D , E ), Group B: Yellow colored ( A' , B' , C' , D' , E' ), and Group C: Green colored ( A'' , B'' , C'' , D'' , E'' ). T1 : negative control sprayed with water only, T2 : non-infected treated fruits with SeNPs at MIC, 2MIC and 3MIC. MIC minimum inhibitory concentration for Fusarium oxysporum infectio",
+    "image_path": "p012_Figure_8.png",
+    "image_size": [
+      504,
+      282
+    ]
+  },
+  {
+    "label": "Figure 9",
+    "kind": "figure",
+    "page": 13,
+    "bbox": [
+      46.1,
+      414.9,
+      548.9,
+      692.2
+    ],
+    "caption": "Fig. 9 Effect of SeNPs-treatment of tomato fruits on some chemical ( A -D ) and physical ( E , F ) properties for three ripening stages at storage temperature (5 °C), Group A: Red colored, Group B: Yellow colored, and Group C: Green colored. T1 : negative control sprayed with water only, T2 : non-infected treated fruits with SeNPs at MIC, 2MIC and 3MIC, T3 : infected treated fruits with SeNPs at MIC, 2MIC and 3MIC, T4 : infected untreated fruits. MIC minimum inhibitory concentration for Fusarium",
+    "image_path": "p013_Figure_9.png",
+    "image_size": [
+      503,
+      277
+    ]
+  },
+  {
+    "label": "Table_1",
+    "kind": "table",
+    "page": 7,
+    "bbox": [
+      39.7,
+      500.1,
+      555.0,
+      590.2
+    ],
+    "caption": "",
+    "image_path": "p007_Table_1.png",
+    "image_size": [
+      515,
+      90
+    ]
+  },
+  {
+    "label": "Table 2",
+    "kind": "table",
+    "page": 10,
+    "bbox": [
+      39.9,
+      84.9,
+      555.1,
+      257.7
+    ],
+    "caption": "Table 2 Effect of temperature change on diseases progress and shelf-life of tomato fruits",
+    "image_path": "p010_Table_2.png",
+    "image_size": [
+      515,
+      173
+    ]
+  }
+]

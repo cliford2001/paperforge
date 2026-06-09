@@ -1,0 +1,155 @@
+[
+  {
+    "label": "Figure 1",
+    "kind": "figure",
+    "page": 4,
+    "bbox": [
+      294.2,
+      40.4,
+      554.8,
+      222.0
+    ],
+    "caption": "Fig. 1 The  alpha  male  (M-59 ♂ )  copulating  with  a  high-ranking female (Ch-67 ♀ )",
+    "image_path": "p004_Figure_1.png",
+    "image_size": [
+      261,
+      182
+    ]
+  },
+  {
+    "label": "Figure 2",
+    "kind": "figure",
+    "page": 5,
+    "bbox": [
+      36.5,
+      502.6,
+      302.7,
+      688.6
+    ],
+    "caption": "Fig. 2 Alpha male, M-59 ♂ feeds in the center of the photo. The whitish female on his left is Op-60 ♀ , who had been in a PPR with him for more than 10 years",
+    "image_path": "p005_Figure_2.png",
+    "image_size": [
+      266,
+      186
+    ]
+  },
+  {
+    "label": "Figure_uncaptioned_1",
+    "kind": "figure",
+    "page": 8,
+    "bbox": [
+      36.3,
+      512.6,
+      303.0,
+      698.7
+    ],
+    "caption": "",
+    "image_path": "p008_Figure_uncaptioned_1.png",
+    "image_size": [
+      267,
+      186
+    ]
+  },
+  {
+    "label": "Figure_uncaptioned_2",
+    "kind": "figure",
+    "page": 10,
+    "bbox": [
+      36.4,
+      493.1,
+      302.7,
+      678.5
+    ],
+    "caption": "",
+    "image_path": "p010_Figure_uncaptioned_2.png",
+    "image_size": [
+      266,
+      185
+    ]
+  },
+  {
+    "label": "Figure_uncaptioned_3",
+    "kind": "figure",
+    "page": 11,
+    "bbox": [
+      291.3,
+      513.0,
+      558.1,
+      698.7
+    ],
+    "caption": "",
+    "image_path": "p011_Figure_uncaptioned_3.png",
+    "image_size": [
+      267,
+      186
+    ]
+  },
+  {
+    "label": "Figure 6",
+    "kind": "figure",
+    "page": 13,
+    "bbox": [
+      36.4,
+      522.7,
+      302.7,
+      708.5
+    ],
+    "caption": "Fig. 6 Participants at the campsite in the evening",
+    "image_path": "p013_Figure_6.png",
+    "image_size": [
+      266,
+      186
+    ]
+  },
+  {
+    "label": "Figure 7",
+    "kind": "figure",
+    "page": 14,
+    "bbox": [
+      36.1,
+      502.3,
+      303.2,
+      688.6
+    ],
+    "caption": "Fig. 7 Encounter between the C1 and C2 lemur groups on the roof of a restaurant for tourists. Females were at the forefront of these conflicts",
+    "image_path": "p014_Figure_7.png",
+    "image_size": [
+      267,
+      186
+    ]
+  },
+  {
+    "label": "Figure 8",
+    "kind": "figure",
+    "page": 14,
+    "bbox": [
+      33.7,
+      718.7,
+      108.8,
+      763.4
+    ],
+    "caption": "Fig. 8 KI, an old female ringtailed in the C1 group",
+    "image_path": "p014_Figure_8.png",
+    "image_size": [
+      75,
+      45
+    ]
+  },
+  {
+    "label": "Figure_uncaptioned_4",
+    "kind": "figure",
+    "page": 14,
+    "bbox": [
+      336.9,
+      40.3,
+      512.7,
+      291.2
+    ],
+    "caption": "",
+    "image_path": "p014_Figure_uncaptioned_4.png",
+    "image_size": [
+      176,
+      251
+    ]
+  }
+]

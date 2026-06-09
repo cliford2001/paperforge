@@ -1,0 +1,87 @@
+[
+  {
+    "label": "Table 1",
+    "kind": "table",
+    "page": 4,
+    "bbox": [
+      183.2,
+      71.4,
+      592.2,
+      178.5
+    ],
+    "caption": "Table 1. Genetic coefficient used for crossbreeding parameter estimation for doe productive traits.",
+    "image_path": "p004_Table_1.png",
+    "image_size": [
+      409,
+      107
+    ]
+  },
+  {
+    "label": "Table 2",
+    "kind": "table",
+    "page": 5,
+    "bbox": [
+      18.7,
+      532.5,
+      592.7,
+      665.3
+    ],
+    "caption": "Table 2. Least-squares mean values and their standard errors for doe productive traits.",
+    "image_path": "p005_Table_2.png",
+    "image_size": [
+      574,
+      133
+    ]
+  },
+  {
+    "label": "Table 3",
+    "kind": "table",
+    "page": 6,
+    "bbox": [
+      183.1,
+      548.3,
+      592.5,
+      655.3
+    ],
+    "caption": "Table 3. Estimate of breed additive, individual heterosis, and recombination effect for doe productive traits.",
+    "image_path": "p006_Table_3.png",
+    "image_size": [
+      409,
+      107
+    ]
+  },
+  {
+    "label": "Table 4",
+    "kind": "table",
+    "page": 7,
+    "bbox": [
+      18.8,
+      571.9,
+      592.5,
+      679.7
+    ],
+    "caption": "Table 4. Predicted performance of doe productive traits.",
+    "image_path": "p007_Table_4.png",
+    "image_size": [
+      574,
+      108
+    ]
+  },
+  {
+    "label": "Table 5",
+    "kind": "table",
+    "page": 8,
+    "bbox": [
+      18.9,
+      550.6,
+      592.5,
+      658.5
+    ],
+    "caption": "Table 5. Heritability and repeatability estimates for reproductive traits of Boer x Central Highland goats.",
+    "image_path": "p008_Table_5.png",
+    "image_size": [
+      574,
+      108
+    ]
+  }
+]

@@ -1,0 +1,428 @@
+{
+  "pdf": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10529573/paper.pdf",
+  "total": 5,
+  "items": [
+    {
+      "label": "Table_1",
+      "kind": "table",
+      "page": 4,
+      "pages": [
+        4
+      ],
+      "bbox": [
+        183.19166564941406,
+        71.35070037841797,
+        592.1864013671875,
+        178.46665954589844
+      ],
+      "caption": "Table 1. Genetic coefficient used for crossbreeding parameter estimation for doe productive traits.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10529573/p004_Table_1.png",
+      "image_size": [
+        1137,
+        298
+      ],
+      "rotated": false,
+      "row_count": 6,
+      "col_count": 5,
+      "rows": [
+        [
+          "Genetic group",
+          "Generation and blood level",
+          "g",
+          "h",
+          "r"
+        ],
+        [
+          "CHxCH",
+          "Local",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "BxCH",
+          "F1 (50%)",
+          "0.50",
+          "1.00",
+          "0"
+        ],
+        [
+          "B x BCH",
+          "BC1 (75%)",
+          "0.75",
+          "0.50",
+          "0.25"
+        ],
+        [
+          "BCHxCH",
+          "BC1 (25%)",
+          "0.25",
+          "0.50",
+          "0.25"
+        ],
+        [
+          "BCHx BCH",
+          "F2 (50%)",
+          "0.50",
+          "0.50",
+          "0.50"
+        ]
+      ],
+      "markdown": "Table 1. Genetic coefficient used for crossbreeding parameter estimation for doe productive traits.\n\n| Genetic group   | Generation and blood level   |    g |    h |    r |\n|-----------------|------------------------------|------|------|------|\n| CHxCH           | Local                        |    0 |    0 |    0 |\n| BxCH            | F1 (50%)                     | 0.50 | 1.00 |    0 |\n| B x BCH         | BC1 (75%)                    | 0.75 | 0.50 | 0.25 |\n| BCHxCH          | BC1 (25%)                    | 0.25 | 0.50 | 0.25 |\n| BCHx BCH        | F2 (50%)                     | 0.50 | 0.50 | 0.50 |"
+    },
+    {
+      "label": "Table_2",
+      "kind": "table",
+      "page": 5,
+      "pages": [
+        5
+      ],
+      "bbox": [
+        18.730472564697266,
+        532.4714965820312,
+        592.6668090820312,
+        665.2991333007812
+      ],
+      "caption": "Table 2. Least-squares mean values and their standard errors for doe productive traits.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10529573/p005_Table_2.png",
+      "image_size": [
+        1595,
+        370
+      ],
+      "rotated": false,
+      "row_count": 8,
+      "col_count": 9,
+      "rows": [
+        [
+          "Genetic group",
+          "N",
+          "LSB (kid)",
+          "LBW(kg)",
+          "N",
+          "LWW(kg)",
+          "LSW(kid)",
+          "N",
+          "GL (day)"
+        ],
+        [
+          "Overall mean",
+          "567",
+          "1.54 ± 0.02",
+          "3.90 ± 0.05",
+          "478",
+          "14.0 ± 0.35",
+          "1.37 ± 0.02",
+          "303",
+          "148.1 ± 0.31"
+        ],
+        [
+          "Significance",
+          "",
+          "ns",
+          "ns",
+          "",
+          "ns",
+          "ns",
+          "",
+          "*"
+        ],
+        [
+          "CHxCH",
+          "275",
+          "1.57 ± 0.03",
+          "4.00 ± 0.08",
+          "243",
+          "14.3 ± 0.57",
+          "1.40 ± 0.03",
+          "99",
+          "149.2 ± 0.39 a"
+        ],
+        [
+          "BxCH",
+          "214",
+          "1.49 ± 0.03",
+          "3.83 ± 0.07",
+          "174",
+          "13.6 ± 0.44",
+          "1.35 ± 0.03",
+          "147",
+          "148.1 ± 0.55 ab"
+        ],
+        [
+          "B x BCH",
+          "27",
+          "1.52 ± 0.11",
+          "3.55 ± 0.25",
+          "20",
+          "12.8 ± 1.22",
+          "1.20 ± 0.09",
+          "19",
+          "147.1 ± 1.09 ab"
+        ],
+        [
+          "BCHxCH",
+          "19",
+          "1.73 ± 0.10",
+          "4.08 ± 0.31",
+          "17",
+          "15.4 ± 2.58",
+          "1.47 ± 0.12",
+          "12",
+          "145.2 ± 0.53 b"
+        ],
+        [
+          "BCH x BCH",
+          "32",
+          "1.59 ± 0.09",
+          "3.70 ± 0.24",
+          "24",
+          "13.1 ± 1.57",
+          "1.33 ± 0.09",
+          "26",
+          "146.4 ± 0.74 ab"
+        ]
+      ],
+      "markdown": "Table 2. Least-squares mean values and their standard errors for doe productive traits.\n\n| Genetic group   |   N | LSB (kid)   | LBW(kg)     |   N | LWW(kg)     | LSW(kid)    |   N | GL (day)        |\n|-----------------|-----|-------------|-------------|-----|-------------|-------------|-----|-----------------|\n| Overall mean    | 567 | 1.54 ± 0.02 | 3.90 ± 0.05 | 478 | 14.0 ± 0.35 | 1.37 ± 0.02 | 303 | 148.1 ± 0.31    |\n| Significance    |     | ns          | ns          |     | ns          | ns          |     | *               |\n| CHxCH           | 275 | 1.57 ± 0.03 | 4.00 ± 0.08 | 243 | 14.3 ± 0.57 | 1.40 ± 0.03 |  99 | 149.2 ± 0.39 a  |\n| BxCH            | 214 | 1.49 ± 0.03 | 3.83 ± 0.07 | 174 | 13.6 ± 0.44 | 1.35 ± 0.03 | 147 | 148.1 ± 0.55 ab |\n| B x BCH         |  27 | 1.52 ± 0.11 | 3.55 ± 0.25 |  20 | 12.8 ± 1.22 | 1.20 ± 0.09 |  19 | 147.1 ± 1.09 ab |\n| BCHxCH          |  19 | 1.73 ± 0.10 | 4.08 ± 0.31 |  17 | 15.4 ± 2.58 | 1.47 ± 0.12 |  12 | 145.2 ± 0.53 b  |\n| BCH x BCH       |  32 | 1.59 ± 0.09 | 3.70 ± 0.24 |  24 | 13.1 ± 1.57 | 1.33 ± 0.09 |  26 | 146.4 ± 0.74 ab |"
+    },
+    {
+      "label": "Table_3",
+      "kind": "table",
+      "page": 6,
+      "pages": [
+        6
+      ],
+      "bbox": [
+        183.08033752441406,
+        548.34716796875,
+        592.4578247070312,
+        655.34716796875
+      ],
+      "caption": "Table 3. Estimate of breed additive, individual heterosis, and recombination effect for doe productive traits.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10529573/p006_Table_3.png",
+      "image_size": [
+        1138,
+        298
+      ],
+      "rotated": false,
+      "row_count": 6,
+      "col_count": 5,
+      "rows": [
+        [
+          "Trait",
+          "CH",
+          "gB",
+          "hBCH",
+          "rBCH"
+        ],
+        [
+          "LSB (kid)",
+          "1.57 ± 0.03",
+          "-0.004 ± 0.07 ns",
+          "-0.03 ± 0.04 ns",
+          "-0.02 ± 0.08 ns"
+        ],
+        [
+          "LBW(kg)",
+          "4.00 ± 0.08",
+          "0.08 ± 0.42 ns",
+          "0.14 ± 0.23 ns",
+          "0.05 ± 0.45 ns"
+        ],
+        [
+          "LWW(kid)",
+          "14.3 ± 0.57",
+          "-3.18 ± 4.45 ns",
+          "-0.04 ± 2.45 ns",
+          "-6.20 ± 4.72 ns"
+        ],
+        [
+          "LSW(kg)",
+          "1.40 ± 0.03",
+          "-0.54 ± 0.22 *",
+          "0.27 ± 0.12 *",
+          "0.17 ± 0.24 ns"
+        ],
+        [
+          "GL (days)",
+          "149.2 ± 0.39",
+          "3.69 ± 3.34 ns",
+          "-2.62 ± 1.82 ns",
+          "-4.31 ± 3.63 ns"
+        ]
+      ],
+      "markdown": "Table 3. Estimate of breed additive, individual heterosis, and recombination effect for doe productive traits.\n\n| Trait     | CH           | gB               | hBCH            | rBCH            |\n|-----------|--------------|------------------|-----------------|-----------------|\n| LSB (kid) | 1.57 ± 0.03  | -0.004 ± 0.07 ns | -0.03 ± 0.04 ns | -0.02 ± 0.08 ns |\n| LBW(kg)   | 4.00 ± 0.08  | 0.08 ± 0.42 ns   | 0.14 ± 0.23 ns  | 0.05 ± 0.45 ns  |\n| LWW(kid)  | 14.3 ± 0.57  | -3.18 ± 4.45 ns  | -0.04 ± 2.45 ns | -6.20 ± 4.72 ns |\n| LSW(kg)   | 1.40 ± 0.03  | -0.54 ± 0.22 *   | 0.27 ± 0.12 *   | 0.17 ± 0.24 ns  |\n| GL (days) | 149.2 ± 0.39 | 3.69 ± 3.34 ns   | -2.62 ± 1.82 ns | -4.31 ± 3.63 ns |"
+    },
+    {
+      "label": "Table_4",
+      "kind": "table",
+      "page": 7,
+      "pages": [
+        7
+      ],
+      "bbox": [
+        18.84027099609375,
+        571.8649291992188,
+        592.4801025390625,
+        679.6558837890625
+      ],
+      "caption": "Table 4. Predicted performance of doe productive traits.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10529573/p007_Table_4.png",
+      "image_size": [
+        1594,
+        300
+      ],
+      "rotated": false,
+      "row_count": 6,
+      "col_count": 7,
+      "rows": [
+        [
+          "Genetic group",
+          "Generation and blood level",
+          "LSB (kid)",
+          "LBW(kg)",
+          "LWW(kg)",
+          "LSW(kid)",
+          "GL (day)"
+        ],
+        [
+          "CHxCH",
+          "Local",
+          "1.57",
+          "4.00",
+          "14.30",
+          "1.40",
+          "149.20"
+        ],
+        [
+          "BxCH",
+          "F1 (50%)",
+          "1.54",
+          "4.18",
+          "12.67",
+          "1.40",
+          "148.43"
+        ],
+        [
+          "B x BCH",
+          "BC1 (75%)",
+          "1.55",
+          "4.14",
+          "10.35",
+          "1.17",
+          "149.58"
+        ],
+        [
+          "BCHxCH",
+          "BC1 (25%)",
+          "1.55",
+          "4.10",
+          "11.94",
+          "1.44",
+          "147.74"
+        ],
+        [
+          "BCH x BCH",
+          "F2 (50%)",
+          "1.54",
+          "4.14",
+          "9.59",
+          "1.35",
+          "147.58"
+        ]
+      ],
+      "markdown": "Table 4. Predicted performance of doe productive traits.\n\n| Genetic group   | Generation and blood level   |   LSB (kid) |   LBW(kg) |   LWW(kg) |   LSW(kid) |   GL (day) |\n|-----------------|------------------------------|-------------|-----------|-----------|------------|------------|\n| CHxCH           | Local                        |        1.57 |      4.00 |     14.30 |       1.40 |     149.20 |\n| BxCH            | F1 (50%)                     |        1.54 |      4.18 |     12.67 |       1.40 |     148.43 |\n| B x BCH         | BC1 (75%)                    |        1.55 |      4.14 |     10.35 |       1.17 |     149.58 |\n| BCHxCH          | BC1 (25%)                    |        1.55 |      4.10 |     11.94 |       1.44 |     147.74 |\n| BCH x BCH       | F2 (50%)                     |        1.54 |      4.14 |      9.59 |       1.35 |     147.58 |"
+    },
+    {
+      "label": "Table_5",
+      "kind": "table",
+      "page": 8,
+      "pages": [
+        8
+      ],
+      "bbox": [
+        18.892742156982422,
+        550.6213989257812,
+        592.4913330078125,
+        658.4593505859375
+      ],
+      "caption": "Table 5. Heritability and repeatability estimates for reproductive traits of Boer x Central Highland goats.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10529573/p008_Table_5.png",
+      "image_size": [
+        1594,
+        301
+      ],
+      "rotated": false,
+      "row_count": 6,
+      "col_count": 9,
+      "rows": [
+        [
+          "Estimate",
+          "σ 2 α",
+          "σ 2 c",
+          "σ 2 e",
+          "σ 2 p",
+          "h 2",
+          "c 2",
+          "e 2",
+          "r"
+        ],
+        [
+          "LSB",
+          "0.001",
+          "0.002",
+          "0.017",
+          "0.0197",
+          "0.050 ± 0.04",
+          "0.099 ± 0.15",
+          "0.851 ± 0.10",
+          "0.149 ± 0.09"
+        ],
+        [
+          "LWB",
+          "0.058",
+          "0.010",
+          "0.522",
+          "0.590",
+          "0.098 ± 0.07",
+          "0.018 ± 0.05",
+          "0.884 ± 0.07",
+          "0.116 ± 0.07"
+        ],
+        [
+          "LWW",
+          "1.993",
+          "0.330",
+          "20.96",
+          "23.28",
+          "0.086 ± 0.08",
+          "0.014 ± 0.06",
+          "0.900 ± 0.08",
+          "0.099 ± 0.07"
+        ],
+        [
+          "LSW",
+          "0.002",
+          "0.008",
+          "0.116",
+          "0.128",
+          "0.018 ± 0.03",
+          "0.068 ± 0.08",
+          "0.914 ± 0.07",
+          "0.086 ± 0.06"
+        ],
+        [
+          "GL",
+          "0.001",
+          "1.766",
+          "27.11",
+          "28.88",
+          "0.000 ± 0.06",
+          "0.061 ± 0.07",
+          "0.939 ± 0.08",
+          "0.061 ± 0.07"
+        ]
+      ],
+      "markdown": "Table 5. Heritability and repeatability estimates for reproductive traits of Boer x Central Highland goats.\n\n| Estimate   |   σ 2 α |   σ 2 c |   σ 2 e |   σ 2 p | h 2          | c 2          | e 2          | r            |\n|------------|---------|---------|---------|---------|--------------|--------------|--------------|--------------|\n| LSB        |   0.001 |   0.002 |   0.017 |  0.0197 | 0.050 ± 0.04 | 0.099 ± 0.15 | 0.851 ± 0.10 | 0.149 ± 0.09 |\n| LWB        |   0.058 |   0.010 |   0.522 |   0.590 | 0.098 ± 0.07 | 0.018 ± 0.05 | 0.884 ± 0.07 | 0.116 ± 0.07 |\n| LWW        |   1.993 |   0.330 |   20.96 |   23.28 | 0.086 ± 0.08 | 0.014 ± 0.06 | 0.900 ± 0.08 | 0.099 ± 0.07 |\n| LSW        |   0.002 |   0.008 |   0.116 |   0.128 | 0.018 ± 0.03 | 0.068 ± 0.08 | 0.914 ± 0.07 | 0.086 ± 0.06 |\n| GL         |   0.001 |   1.766 |   27.11 |   28.88 | 0.000 ± 0.06 | 0.061 ± 0.07 | 0.939 ± 0.08 | 0.061 ± 0.07 |"
+    }
+  ]
+}

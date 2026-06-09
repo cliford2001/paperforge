@@ -1,0 +1,1837 @@
+{
+  "total": 15,
+  "context_strategy": "bm25",
+  "abstract_words": "full",
+  "max_context_words": "unlimited",
+  "top_k": 10,
+  "chunk_words": 250,
+  "paper_summary": {
+    "main_contribution": "The paper demonstrates the successful biosynthesis of selenium nanoparticles (SeNPs) using fenugreek seeds extract, highlighting their antifungal properties, low cytotoxicity, and potential to enhance the shelf-life and physico-chemical properties of tomato fruits.",
+    "narrative": "The paper begins by confirming the successful biosynthesis of SeNPs through XRD and UV-VIS spectroscopy (Fig. 1), showing characteristic peaks and absorbance. The elemental composition and size distribution of SeNPs are further confirmed by EDX, TEM, and FTIR analysis (Fig. 2). The antifungal activity of SeNPs against Fusarium spp. is demonstrated through inhibition zone diameters and MIC/MFC values (Table 1). The effectiveness of SeNPs in preserving tomato fruits is shown by comparing decay and mold growth in treated versus untreated fruits (Fig. 3). Microscopic examination reveals structural damage to fungal mycelium after SeNPs treatment (Fig. 4), and the treatment's effect on reducing fungal infection in tomatoes is illustrated (Fig. 5). Cytotoxicity tests indicate low toxicity on normal cells (Fig. 6), and the preparation and treatment of tomatoes at different ripening stages are shown (Fig. 7). The impact of SeNPs on chemical and physical properties of tomatoes is analyzed (Fig. 8 and Fig. 9), and the table highlights the extended shelf-life of SeNPs-treated tomatoes (Table 2).",
+    "key_evidence": [
+      "Fig. 1",
+      "Table 1",
+      "Fig. 3"
+    ],
+    "contradictions_or_gaps": "None detected",
+    "limitations_noted": "The paper does not provide detailed statistical analysis for some of the visual and experimental results, and the long-term effects of SeNPs on human health and the environment are not discussed.",
+    "overall_confidence": "high"
+  },
+  "items": [
+    {
+      "label": "Figure_uncaptioned_1",
+      "kind": "figure",
+      "page": 2,
+      "bbox": [
+        40.7,
+        72.8,
+        555.3,
+        597.0
+      ],
+      "caption": "",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10593681/p002_Figure_uncaptioned_1.png",
+      "image_size": [
+        515,
+        524
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"schematic\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"schematic\",\n    \"panel_count\": \"unclear\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"fernhemp seeds\", \"SeNPs\", \"Fusarium oxysporum\", \"tomato fruits\", \"graphs\"]\n  },\n  \"visual_description\": \"The figure is a schematic illustrating the biosynthesis and application of selenium nanoparticles (SeNPs) using fenugreek seeds extract. It includes images of seeds, liquids, fungal treatment, and graphs showing IC50 values and cytotoxicity on cell lines. The process is divided into five steps: biosynthesis, characterization, in vitro treatment, in vivo treatment, and cytotoxicity testing.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"The efficacy and safety of SeNPs in treating fungal infections and their impact on tomato fruits.\",\n    \"experimental_groups\": [\"treated with SeNPs\", \"untreated\"],\n    \"controls\": [\"untreated samples\"],\n    \"perturbations_or_treatments\": [\"SeNPs treatment\"],\n    \"measured_variables\": [\"deformation and lysis of pathogens\", \"shelf-life\", \"physico-chemical properties\", \"cytotoxicity\"],\n    \"assay_or_method\": \"Characterization and treatment assays\",\n    \"biological_or_experimental_system\": \"Fusarium oxysporum, tomato fruits, cell lines\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": [\"IC50 > 300 mg/mL\"]\n  },\n  \"data_and_patterns\": \"The figure shows IC50 values greater than 300 mg/mL for SeNPs, indicating low cytotoxicity on normal cell lines. Treated tomato fruits show improved shelf-life and physico-chemical properties compared to untreated ones.\",\n  \"groups_compared\": [\"treated vs. untreated tomato fruits\", \"treated vs. control cell lines\"],\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"IC50 values shown\", \"images of treated and untreated samples\"],\n    \"caption_supported_evidence\": [\"steps of SeNPs application and characterization\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [\"SeNPs as a safe fungicide\"],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The figure demonstrates the process and effectiveness of using SeNPs derived from fenugreek seeds to combat fungal infections in tomatoes, showing improved fruit properties and safety in normal cells.\",\n  \"scientific_conclusion\": \"This schematic illustrates the biosynthesis and application of SeNPs using fenugreek seeds extract, highlighting their ability to deform and lyse pathogens, enhance tomato fruit properties, and exhibit low cytotoxicity on normal cells. The IC50 value of >300 mg/mL suggests SeNPs are safe for use. The figure supports the potential of SeNPs as an effective and safe fungicide, demonstrating their role in improving agricultural practices.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"SeNPs could potentially be applied to other crops and pathogens, suggesting broader agricultural applications.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"The demonstrated effectiveness against Fusarium oxysporum and safety in normal cells.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What are the long-term effects of SeNPs on soil health and other non-target organisms?\",\n    \"alternative_interpretation\": \"None\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "schematic",
+        "visual_form": {
+          "graph_or_visual_type": "schematic",
+          "panel_count": "unclear",
+          "panel_labels": [],
+          "axes_or_dimensions": [],
+          "legend_elements": [],
+          "visible_entities": [
+            "fernhemp seeds",
+            "SeNPs",
+            "Fusarium oxysporum",
+            "tomato fruits",
+            "graphs"
+          ]
+        },
+        "visual_description": "The figure is a schematic illustrating the biosynthesis and application of selenium nanoparticles (SeNPs) using fenugreek seeds extract. It includes images of seeds, liquids, fungal treatment, and graphs showing IC50 values and cytotoxicity on cell lines. The process is divided into five steps: biosynthesis, characterization, in vitro treatment, in vivo treatment, and cytotoxicity testing.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "The efficacy and safety of SeNPs in treating fungal infections and their impact on tomato fruits.",
+          "experimental_groups": [
+            "treated with SeNPs",
+            "untreated"
+          ],
+          "controls": [
+            "untreated samples"
+          ],
+          "perturbations_or_treatments": [
+            "SeNPs treatment"
+          ],
+          "measured_variables": [
+            "deformation and lysis of pathogens",
+            "shelf-life",
+            "physico-chemical properties",
+            "cytotoxicity"
+          ],
+          "assay_or_method": "Characterization and treatment assays",
+          "biological_or_experimental_system": "Fusarium oxysporum, tomato fruits, cell lines"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": [
+            "IC50 > 300 mg/mL"
+          ]
+        },
+        "data_and_patterns": "The figure shows IC50 values greater than 300 mg/mL for SeNPs, indicating low cytotoxicity on normal cell lines. Treated tomato fruits show improved shelf-life and physico-chemical properties compared to untreated ones.",
+        "groups_compared": [
+          "treated vs. untreated tomato fruits",
+          "treated vs. control cell lines"
+        ],
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "IC50 values shown",
+            "images of treated and untreated samples"
+          ],
+          "caption_supported_evidence": [
+            "steps of SeNPs application and characterization"
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [
+            "SeNPs as a safe fungicide"
+          ],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The figure demonstrates the process and effectiveness of using SeNPs derived from fenugreek seeds to combat fungal infections in tomatoes, showing improved fruit properties and safety in normal cells.",
+        "scientific_conclusion": "This schematic illustrates the biosynthesis and application of SeNPs using fenugreek seeds extract, highlighting their ability to deform and lyse pathogens, enhance tomato fruit properties, and exhibit low cytotoxicity on normal cells. The IC50 value of >300 mg/mL suggests SeNPs are safe for use. The figure supports the potential of SeNPs as an effective and safe fungicide, demonstrating their role in improving agricultural practices.",
+        "model_extra_inference": {
+          "extra_inference": "SeNPs could potentially be applied to other crops and pathogens, suggesting broader agricultural applications.",
+          "support_status": "speculative",
+          "supporting_evidence": "The demonstrated effectiveness against Fusarium oxysporum and safety in normal cells.",
+          "risk": "medium",
+          "open_questions": "What are the long-term effects of SeNPs on soil health and other non-target organisms?",
+          "alternative_interpretation": "None"
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 12.4
+    },
+    {
+      "label": "Figure 1",
+      "kind": "figure",
+      "page": 6,
+      "bbox": [
+        45.9,
+        468.7,
+        549.0,
+        714.0
+      ],
+      "caption": "Fig. 1 XRD analysis ( A ) and UV-VIS spectroscopy ( B ) of SeNPs biosynthesized using Fenugreek seeds aqueous extract, 1 is the aqueous extract and 2 is the reaction color after SeNPs formation",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10593681/p006_Figure_1.png",
+      "image_size": [
+        503,
+        245
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"other\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"multi_panel_composite\",\n    \"panel_count\": \"2\",\n    \"panel_labels\": [\"A\", \"B\"],\n    \"axes_or_dimensions\": [\"2Theta (degrees) and Counts for panel A; Wavelength (nm) and Absorbance for panel B\"],\n    \"legend_elements\": [\"Se\", \"PDF 00-055-1038 Dy8 Y2 O15 Dysprosium Yttrium Oxide\", \"PDF 01-084-2427 Y2 Ba4 Cu6.83 O14.6 Yttrium Barium Copper Oxide\", \"PDF 00-001-0848 Se Selenium\"],\n    \"visible_entities\": [\"XRD peaks\", \"UV-VIS absorbance spectrum\", \"aqueous extract\", \"SeNPs reaction color\"]\n  },\n  \"visual_description\": \"Panel A shows an XRD analysis with peaks labeled at various 2Theta values, indicating crystalline phases. Panel B displays a UV-VIS spectroscopy graph with absorbance peaks, alongside images of the aqueous extract and reaction color after SeNPs formation.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Characterization of SeNPs biosynthesized using Fenugreek seeds aqueous extract.\",\n    \"experimental_groups\": [\"aqueous extract\", \"SeNPs reaction\"],\n    \"controls\": [\"aqueous extract\"],\n    \"perturbations_or_treatments\": [\"SeNPs biosynthesis using Fenugreek seeds extract\"],\n    \"measured_variables\": [\"crystalline structure\", \"optical properties\"],\n    \"assay_or_method\": [\"XRD analysis\", \"UV-VIS spectroscopy\"],\n    \"biological_or_experimental_system\": \"Fenugreek seeds aqueous extract\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [\"counts\", \"absorbance\", \"nm\"],\n    \"effect_directions\": [],\n    \"quantitative_values\": [\"29.098\", \"23.5\", \"41.43.8\", \"51.9\", \"58.0\", \"61.1\", \"65.0\", \"360 nm\"]\n  },\n  \"data_and_patterns\": \"Panel A shows distinct peaks at 2Theta values of 23.5, 29.098, 41.43.8, 51.9, 58.0, 61.1, and 65.0, indicating the presence of selenium and other compounds. Panel B shows a peak absorbance at 360 nm, suggesting the formation of SeNPs.\",\n  \"groups_compared\": [\"aqueous extract before and after SeNPs formation\"],\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"XRD peaks indicate crystalline structures\", \"UV-VIS peak at 360 nm indicates nanoparticle formation\"],\n    \"caption_supported_evidence\": [\"Use of Fenugreek seeds extract for SeNPs biosynthesis\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [\"Characterization of biosynthesized SeNPs\"],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The figure demonstrates the successful biosynthesis and characterization of selenium nanoparticles (SeNPs) using Fenugreek seeds extract, evidenced by XRD and UV-VIS spectroscopy.\",\n  \"scientific_conclusion\": \"The XRD analysis in Panel A confirms the crystalline structure of the synthesized SeNPs, with distinct peaks corresponding to selenium and other compounds. The UV-VIS spectroscopy in Panel B shows a characteristic absorbance peak at 360 nm, indicating the formation of SeNPs. These results confirm the successful biosynthesis of SeNPs using Fenugreek seeds extract, demonstrating the method's efficacy in producing nanoparticles with specific optical properties. The data supports the paper's focus on green synthesis methods for nanoparticle production.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The presence of multiple peaks in the XRD pattern suggests potential impurities or secondary phases, which may require further purification.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"Multiple peaks in XRD pattern\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What is the impact of secondary phases on the functionality of SeNPs?\",\n    \"alternative_interpretation\": \"The absorbance peak at 360 nm could also be due to other compounds; further analysis is needed to confirm SeNPs specifically.\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "other",
+        "visual_form": {
+          "graph_or_visual_type": "multi_panel_composite",
+          "panel_count": "2",
+          "panel_labels": [
+            "A",
+            "B"
+          ],
+          "axes_or_dimensions": [
+            "2Theta (degrees) and Counts for panel A; Wavelength (nm) and Absorbance for panel B"
+          ],
+          "legend_elements": [
+            "Se",
+            "PDF 00-055-1038 Dy8 Y2 O15 Dysprosium Yttrium Oxide",
+            "PDF 01-084-2427 Y2 Ba4 Cu6.83 O14.6 Yttrium Barium Copper Oxide",
+            "PDF 00-001-0848 Se Selenium"
+          ],
+          "visible_entities": [
+            "XRD peaks",
+            "UV-VIS absorbance spectrum",
+            "aqueous extract",
+            "SeNPs reaction color"
+          ]
+        },
+        "visual_description": "Panel A shows an XRD analysis with peaks labeled at various 2Theta values, indicating crystalline phases. Panel B displays a UV-VIS spectroscopy graph with absorbance peaks, alongside images of the aqueous extract and reaction color after SeNPs formation.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Characterization of SeNPs biosynthesized using Fenugreek seeds aqueous extract.",
+          "experimental_groups": [
+            "aqueous extract",
+            "SeNPs reaction"
+          ],
+          "controls": [
+            "aqueous extract"
+          ],
+          "perturbations_or_treatments": [
+            "SeNPs biosynthesis using Fenugreek seeds extract"
+          ],
+          "measured_variables": [
+            "crystalline structure",
+            "optical properties"
+          ],
+          "assay_or_method": [
+            "XRD analysis",
+            "UV-VIS spectroscopy"
+          ],
+          "biological_or_experimental_system": "Fenugreek seeds aqueous extract"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [
+            "counts",
+            "absorbance",
+            "nm"
+          ],
+          "effect_directions": [],
+          "quantitative_values": [
+            "29.098",
+            "23.5",
+            "41.43.8",
+            "51.9",
+            "58.0",
+            "61.1",
+            "65.0",
+            "360 nm"
+          ]
+        },
+        "data_and_patterns": "Panel A shows distinct peaks at 2Theta values of 23.5, 29.098, 41.43.8, 51.9, 58.0, 61.1, and 65.0, indicating the presence of selenium and other compounds. Panel B shows a peak absorbance at 360 nm, suggesting the formation of SeNPs.",
+        "groups_compared": [
+          "aqueous extract before and after SeNPs formation"
+        ],
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "XRD peaks indicate crystalline structures",
+            "UV-VIS peak at 360 nm indicates nanoparticle formation"
+          ],
+          "caption_supported_evidence": [
+            "Use of Fenugreek seeds extract for SeNPs biosynthesis"
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [
+            "Characterization of biosynthesized SeNPs"
+          ],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The figure demonstrates the successful biosynthesis and characterization of selenium nanoparticles (SeNPs) using Fenugreek seeds extract, evidenced by XRD and UV-VIS spectroscopy.",
+        "scientific_conclusion": "The XRD analysis in Panel A confirms the crystalline structure of the synthesized SeNPs, with distinct peaks corresponding to selenium and other compounds. The UV-VIS spectroscopy in Panel B shows a characteristic absorbance peak at 360 nm, indicating the formation of SeNPs. These results confirm the successful biosynthesis of SeNPs using Fenugreek seeds extract, demonstrating the method's efficacy in producing nanoparticles with specific optical properties. The data supports the paper's focus on green synthesis methods for nanoparticle production.",
+        "model_extra_inference": {
+          "extra_inference": "The presence of multiple peaks in the XRD pattern suggests potential impurities or secondary phases, which may require further purification.",
+          "support_status": "speculative",
+          "supporting_evidence": "Multiple peaks in XRD pattern",
+          "risk": "medium",
+          "open_questions": "What is the impact of secondary phases on the functionality of SeNPs?",
+          "alternative_interpretation": "The absorbance peak at 360 nm could also be due to other compounds; further analysis is needed to confirm SeNPs specifically."
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 15.3
+    },
+    {
+      "label": "Figure 2",
+      "kind": "figure",
+      "page": 7,
+      "bbox": [
+        67.9,
+        71.5,
+        525.8,
+        444.5
+      ],
+      "caption": "Fig. 2 EDX ( A ), TEM micrographs ( B ), and FTIR analysis showing different functional groups acting as bio-reductant and stabilizing agent ( C ) for SeNPs biosynthesized using Fenugreek seeds aqueous extract",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10593681/p007_Figure_2.png",
+      "image_size": [
+        458,
+        373
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"multi-panel composite\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"multi_panel_composite\",\n    \"panel_count\": \"3\",\n    \"panel_labels\": [\"A\", \"B\", \"C\"],\n    \"axes_or_dimensions\": [\"Energy (keV) and Intensity (Counts) in A; Wavenumber (cm^-1) and Transmittance (%) in C\"],\n    \"legend_elements\": [\"Elemental composition in A; functional groups in C\"],\n    \"visible_entities\": [\"SeNPs, elemental composition, functional groups\"]\n  },\n  \"visual_description\": \"Panel A shows an EDX spectrum with peaks labeled for elements like C, N, O, Si, P, S, Ca, and Se. Panel B displays TEM micrographs of SeNPs with size measurements. Panel C presents an FTIR spectrum showing various functional groups.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Characterization of SeNPs synthesized using Fenugreek seeds aqueous extract.\",\n    \"experimental_groups\": [\"SeNPs synthesized using Fenugreek seeds\"],\n    \"controls\": [\"Not determinable\"],\n    \"perturbations_or_treatments\": [\"Fenugreek seeds aqueous extract\"],\n    \"measured_variables\": [\"Elemental composition, particle size, functional groups\"],\n    \"assay_or_method\": [\"EDX, TEM, FTIR\"],\n    \"biological_or_experimental_system\": [\"Fenugreek seeds extract\"]\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [\"keV, Counts, nm, cm^-1, %\"],\n    \"effect_directions\": [],\n    \"quantitative_values\": [\"Particle sizes: 34.02 nm, 71.11 nm, 63.61 nm, 63.16 nm\"]\n  },\n  \"data_and_patterns\": \"Panel A shows elemental composition with Se as a major component. Panel B shows SeNPs with sizes ranging from 34.02 nm to 71.11 nm. Panel C shows peaks corresponding to functional groups like O-H, C-H, and C=O.\",\n  \"groups_compared\": \"Not applicable\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Elemental peaks in EDX, particle sizes in TEM, functional groups in FTIR\"],\n    \"caption_supported_evidence\": [\"Use of Fenugreek seeds extract for SeNPs synthesis\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [\"Characterization of biosynthesized SeNPs\"],\n    \"unsupported_or_not_determinable\": [\"Specific role of functional groups in stabilization\"]\n  },\n  \"scientific_interpretation\": \"The figure characterizes SeNPs synthesized using Fenugreek seeds, showing their elemental composition, size distribution, and functional groups, indicating successful biosynthesis and potential stabilizing agents.\",\n  \"scientific_conclusion\": \"The figure demonstrates the successful biosynthesis of SeNPs using Fenugreek seeds, as evidenced by the elemental composition, size distribution, and presence of functional groups. The EDX spectrum confirms the presence of selenium, while the TEM images show nanoparticle sizes. The FTIR analysis indicates functional groups that may act as bio-reductants and stabilizers. This characterization supports the use of Fenugreek seeds as an effective medium for SeNP synthesis.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The presence of specific functional groups suggests potential applications in targeted delivery or biocompatibility.\",\n    \"support_status\": \"context_supported\",\n    \"supporting_evidence\": [\"FTIR showing functional groups\"],\n    \"risk\": \"medium\",\n    \"open_questions\": [\"How do these functional groups affect the bioactivity of SeNPs?\"],\n    \"alternative_interpretation\": \"None\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "multi-panel composite",
+        "visual_form": {
+          "graph_or_visual_type": "multi_panel_composite",
+          "panel_count": "3",
+          "panel_labels": [
+            "A",
+            "B",
+            "C"
+          ],
+          "axes_or_dimensions": [
+            "Energy (keV) and Intensity (Counts) in A; Wavenumber (cm^-1) and Transmittance (%) in C"
+          ],
+          "legend_elements": [
+            "Elemental composition in A; functional groups in C"
+          ],
+          "visible_entities": [
+            "SeNPs, elemental composition, functional groups"
+          ]
+        },
+        "visual_description": "Panel A shows an EDX spectrum with peaks labeled for elements like C, N, O, Si, P, S, Ca, and Se. Panel B displays TEM micrographs of SeNPs with size measurements. Panel C presents an FTIR spectrum showing various functional groups.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Characterization of SeNPs synthesized using Fenugreek seeds aqueous extract.",
+          "experimental_groups": [
+            "SeNPs synthesized using Fenugreek seeds"
+          ],
+          "controls": [
+            "Not determinable"
+          ],
+          "perturbations_or_treatments": [
+            "Fenugreek seeds aqueous extract"
+          ],
+          "measured_variables": [
+            "Elemental composition, particle size, functional groups"
+          ],
+          "assay_or_method": [
+            "EDX, TEM, FTIR"
+          ],
+          "biological_or_experimental_system": [
+            "Fenugreek seeds extract"
+          ]
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [
+            "keV, Counts, nm, cm^-1, %"
+          ],
+          "effect_directions": [],
+          "quantitative_values": [
+            "Particle sizes: 34.02 nm, 71.11 nm, 63.61 nm, 63.16 nm"
+          ]
+        },
+        "data_and_patterns": "Panel A shows elemental composition with Se as a major component. Panel B shows SeNPs with sizes ranging from 34.02 nm to 71.11 nm. Panel C shows peaks corresponding to functional groups like O-H, C-H, and C=O.",
+        "groups_compared": "Not applicable",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Elemental peaks in EDX, particle sizes in TEM, functional groups in FTIR"
+          ],
+          "caption_supported_evidence": [
+            "Use of Fenugreek seeds extract for SeNPs synthesis"
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [
+            "Characterization of biosynthesized SeNPs"
+          ],
+          "unsupported_or_not_determinable": [
+            "Specific role of functional groups in stabilization"
+          ]
+        },
+        "scientific_interpretation": "The figure characterizes SeNPs synthesized using Fenugreek seeds, showing their elemental composition, size distribution, and functional groups, indicating successful biosynthesis and potential stabilizing agents.",
+        "scientific_conclusion": "The figure demonstrates the successful biosynthesis of SeNPs using Fenugreek seeds, as evidenced by the elemental composition, size distribution, and presence of functional groups. The EDX spectrum confirms the presence of selenium, while the TEM images show nanoparticle sizes. The FTIR analysis indicates functional groups that may act as bio-reductants and stabilizers. This characterization supports the use of Fenugreek seeds as an effective medium for SeNP synthesis.",
+        "model_extra_inference": {
+          "extra_inference": "The presence of specific functional groups suggests potential applications in targeted delivery or biocompatibility.",
+          "support_status": "context_supported",
+          "supporting_evidence": [
+            "FTIR showing functional groups"
+          ],
+          "risk": "medium",
+          "open_questions": [
+            "How do these functional groups affect the bioactivity of SeNPs?"
+          ],
+          "alternative_interpretation": "None"
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 12.9
+    },
+    {
+      "label": "Figure_uncaptioned_2",
+      "kind": "figure",
+      "page": 7,
+      "bbox": [
+        40.0,
+        500.1,
+        554.8,
+        723.9
+      ],
+      "caption": "Table 1 Antifungal activity of SeNPs against two Fusarium spp. expressed as mean inhibition zone diameter (ZOI) of three replicates in  mm ± SD,  MIC  and  MFC  were  calculated  as  mg/mL,  inhibition  zone  of F.  moniliforme ( A )  and F.  oxysporum ( B )  using  different concentrations of SeNPs (mg/mL)",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10593681/p007_Figure_uncaptioned_2.png",
+      "image_size": [
+        515,
+        224
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"table\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"2\",\n    \"panel_labels\": [\"A\", \"B\"],\n    \"axes_or_dimensions\": [\"Sample\", \"Fusarium oxysporum\", \"Fusarium moniliforme\"],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"ZOI (mm)\", \"MIC (mg/mL)\", \"MFC (mg/mL)\", \"Fenugreek aqueous extract\", \"Bio-mediated SeNPs\"]\n  },\n  \"visual_description\": \"The image contains a table and two panels labeled A and B. Panel A shows inhibition zones for Fusarium oxysporum, and Panel B shows inhibition zones for Fusarium moniliforme. The table lists ZOI (mm), MIC (mg/mL), and MFC (mg/mL) for both fungi, comparing fenugreek aqueous extract and bio-mediated SeNPs.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"The antifungal activity of SeNPs against Fusarium spp.\",\n    \"experimental_groups\": [\"Fenugreek aqueous extract\", \"Bio-mediated SeNPs\"],\n    \"controls\": [\"Fenugreek aqueous extract\"],\n    \"perturbations_or_treatments\": [\"Different concentrations of SeNPs\"],\n    \"measured_variables\": [\"ZOI (mm)\", \"MIC (mg/mL)\", \"MFC (mg/mL)\"],\n    \"assay_or_method\": \"Antifungal activity assay\",\n    \"biological_or_experimental_system\": \"Fusarium oxysporum and Fusarium moniliforme\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [\"mm\", \"mg/mL\"],\n    \"effect_directions\": [\"increase in ZOI with SeNPs\"],\n    \"quantitative_values\": [\"31 ± 0.14 mm\", \"0.25 mg/mL\", \"0.27 mg/mL\", \"27 ± 0 mm\", \"1.7 mg/mL\", \"2.9 mg/mL\"]\n  },\n  \"data_and_patterns\": \"Bio-mediated SeNPs show a ZOI of 31 ± 0.14 mm against Fusarium oxysporum and 27 ± 0 mm against Fusarium moniliforme. MIC and MFC values indicate SeNPs are effective at low concentrations, with MIC values of 0.25 mg/mL and 1.7 mg/mL, and MFC values of 0.27 mg/mL and 2.9 mg/mL, respectively.\",\n  \"groups_compared\": [\"Fenugreek aqueous extract vs. Bio-mediated SeNPs\"],\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"ZOI, MIC, and MFC values for SeNPs\"],\n    \"caption_supported_evidence\": [\"Description of panels A and B\"],\n    \"local_context_supported_evidence\": [\"Antifungal activity being tested\"],\n    \"global_paper_supported_interpretation\": [\"Efficacy of SeNPs against Fusarium spp.\"],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The figure demonstrates the antifungal efficacy of bio-mediated SeNPs against Fusarium spp., showing significant inhibition compared to fenugreek extract.\",\n  \"scientific_conclusion\": \"The data shows that bio-mediated SeNPs have substantial antifungal activity against Fusarium oxysporum and Fusarium moniliforme, with measurable ZOI and low MIC/MFC values, indicating their potential as antifungal agents. The visual evidence supports the hypothesis that SeNPs are effective in inhibiting fungal growth, outperforming the fenugreek aqueous extract. This suggests SeNPs could be a promising alternative for controlling these fungal pathogens.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The SeNPs may have broad-spectrum antifungal properties, potentially applicable to other pathogens.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"The effectiveness against two different Fusarium species suggests potential broader application.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What is the mechanism of action of SeNPs against these fungi? Are there any adverse effects of SeNPs on non-target organisms?\",\n    \"alternative_interpretation\": \"None\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "table",
+        "visual_form": {
+          "graph_or_visual_type": "table",
+          "panel_count": "2",
+          "panel_labels": [
+            "A",
+            "B"
+          ],
+          "axes_or_dimensions": [
+            "Sample",
+            "Fusarium oxysporum",
+            "Fusarium moniliforme"
+          ],
+          "legend_elements": [],
+          "visible_entities": [
+            "ZOI (mm)",
+            "MIC (mg/mL)",
+            "MFC (mg/mL)",
+            "Fenugreek aqueous extract",
+            "Bio-mediated SeNPs"
+          ]
+        },
+        "visual_description": "The image contains a table and two panels labeled A and B. Panel A shows inhibition zones for Fusarium oxysporum, and Panel B shows inhibition zones for Fusarium moniliforme. The table lists ZOI (mm), MIC (mg/mL), and MFC (mg/mL) for both fungi, comparing fenugreek aqueous extract and bio-mediated SeNPs.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "The antifungal activity of SeNPs against Fusarium spp.",
+          "experimental_groups": [
+            "Fenugreek aqueous extract",
+            "Bio-mediated SeNPs"
+          ],
+          "controls": [
+            "Fenugreek aqueous extract"
+          ],
+          "perturbations_or_treatments": [
+            "Different concentrations of SeNPs"
+          ],
+          "measured_variables": [
+            "ZOI (mm)",
+            "MIC (mg/mL)",
+            "MFC (mg/mL)"
+          ],
+          "assay_or_method": "Antifungal activity assay",
+          "biological_or_experimental_system": "Fusarium oxysporum and Fusarium moniliforme"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [
+            "mm",
+            "mg/mL"
+          ],
+          "effect_directions": [
+            "increase in ZOI with SeNPs"
+          ],
+          "quantitative_values": [
+            "31 ± 0.14 mm",
+            "0.25 mg/mL",
+            "0.27 mg/mL",
+            "27 ± 0 mm",
+            "1.7 mg/mL",
+            "2.9 mg/mL"
+          ]
+        },
+        "data_and_patterns": "Bio-mediated SeNPs show a ZOI of 31 ± 0.14 mm against Fusarium oxysporum and 27 ± 0 mm against Fusarium moniliforme. MIC and MFC values indicate SeNPs are effective at low concentrations, with MIC values of 0.25 mg/mL and 1.7 mg/mL, and MFC values of 0.27 mg/mL and 2.9 mg/mL, respectively.",
+        "groups_compared": [
+          "Fenugreek aqueous extract vs. Bio-mediated SeNPs"
+        ],
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "ZOI, MIC, and MFC values for SeNPs"
+          ],
+          "caption_supported_evidence": [
+            "Description of panels A and B"
+          ],
+          "local_context_supported_evidence": [
+            "Antifungal activity being tested"
+          ],
+          "global_paper_supported_interpretation": [
+            "Efficacy of SeNPs against Fusarium spp."
+          ],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The figure demonstrates the antifungal efficacy of bio-mediated SeNPs against Fusarium spp., showing significant inhibition compared to fenugreek extract.",
+        "scientific_conclusion": "The data shows that bio-mediated SeNPs have substantial antifungal activity against Fusarium oxysporum and Fusarium moniliforme, with measurable ZOI and low MIC/MFC values, indicating their potential as antifungal agents. The visual evidence supports the hypothesis that SeNPs are effective in inhibiting fungal growth, outperforming the fenugreek aqueous extract. This suggests SeNPs could be a promising alternative for controlling these fungal pathogens.",
+        "model_extra_inference": {
+          "extra_inference": "The SeNPs may have broad-spectrum antifungal properties, potentially applicable to other pathogens.",
+          "support_status": "speculative",
+          "supporting_evidence": "The effectiveness against two different Fusarium species suggests potential broader application.",
+          "risk": "medium",
+          "open_questions": "What is the mechanism of action of SeNPs against these fungi? Are there any adverse effects of SeNPs on non-target organisms?",
+          "alternative_interpretation": "None"
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 14.4
+    },
+    {
+      "label": "Figure 3",
+      "kind": "figure",
+      "page": 8,
+      "bbox": [
+        90.0,
+        384.8,
+        504.0,
+        716.8
+      ],
+      "caption": "Fig. 3 Infected tomato fruits after nano treatment, A : untreated; B : water-dipped (control); C : treated with SeNPs at MIC after 25 days of storage",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10593681/p008_Figure_3.png",
+      "image_size": [
+        414,
+        332
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"microscopy\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"multi_panel_composite\",\n    \"panel_count\": \"3\",\n    \"panel_labels\": [\"A\", \"B\", \"C\"],\n    \"axes_or_dimensions\": [\"Day 0\", \"Day 12\", \"Day 16\", \"Day 25\"],\n    \"legend_elements\": [\"A. Untreated\", \"B. Control\", \"C. SeNPs-Treated\"],\n    \"visible_entities\": [\"tomato fruits\", \"days of storage\"]\n  },\n  \"visual_description\": \"The figure shows three rows of tomato fruits over time (Day 0, Day 12, Day 16, Day 25). Row A shows untreated tomatoes, Row B shows water-dipped control tomatoes, and Row C shows tomatoes treated with SeNPs. The progression of decay is visible, with untreated tomatoes showing significant mold growth by Day 25, while treated tomatoes remain largely intact.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"The effect of SeNPs treatment on the preservation of infected tomato fruits.\",\n    \"experimental_groups\": [\"untreated\", \"water-dipped control\", \"SeNPs treated\"],\n    \"controls\": [\"water-dipped control\"],\n    \"perturbations_or_treatments\": [\"SeNPs treatment\"],\n    \"measured_variables\": [\"fruit decay and mold growth\"],\n    \"assay_or_method\": \"visual inspection over time\",\n    \"biological_or_experimental_system\": \"infected tomato fruits\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": []\n  },\n  \"data_and_patterns\": \"Untreated tomatoes show increasing decay and mold growth over time, with significant mold by Day 25. Control tomatoes show slight decay but no mold. SeNPs-treated tomatoes show minimal decay throughout the period.\",\n  \"groups_compared\": [\"untreated vs. control vs. SeNPs treated\"],\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"untreated tomatoes decay and develop mold\", \"treated tomatoes remain intact\"],\n    \"caption_supported_evidence\": [\"description of treatment groups and timepoints\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [\"SeNPs may preserve tomato fruits by preventing decay\"],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The figure demonstrates the effectiveness of SeNPs in preserving tomato fruits by preventing decay and mold growth over a 25-day period.\",\n  \"scientific_conclusion\": \"The figure shows that SeNPs treatment effectively preserves tomato fruits, as untreated fruits develop significant mold by Day 25, while treated fruits remain largely unaffected. This suggests that SeNPs have preservative properties that inhibit decay, highlighting their potential use in extending the shelf life of perishable produce. The visual evidence supports the hypothesis that SeNPs can be an effective treatment for preserving fruits, contrasting with the rapid decay seen in untreated and control groups.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"SeNPs could potentially be applied to other perishable foods to extend shelf life.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"The visual evidence shows preservation in tomatoes, suggesting possible broader applications.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What is the mechanism by which SeNPs prevent decay? How effective are SeNPs on other types of produce?\",\n    \"alternative_interpretation\": \"None\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "microscopy",
+        "visual_form": {
+          "graph_or_visual_type": "multi_panel_composite",
+          "panel_count": "3",
+          "panel_labels": [
+            "A",
+            "B",
+            "C"
+          ],
+          "axes_or_dimensions": [
+            "Day 0",
+            "Day 12",
+            "Day 16",
+            "Day 25"
+          ],
+          "legend_elements": [
+            "A. Untreated",
+            "B. Control",
+            "C. SeNPs-Treated"
+          ],
+          "visible_entities": [
+            "tomato fruits",
+            "days of storage"
+          ]
+        },
+        "visual_description": "The figure shows three rows of tomato fruits over time (Day 0, Day 12, Day 16, Day 25). Row A shows untreated tomatoes, Row B shows water-dipped control tomatoes, and Row C shows tomatoes treated with SeNPs. The progression of decay is visible, with untreated tomatoes showing significant mold growth by Day 25, while treated tomatoes remain largely intact.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "The effect of SeNPs treatment on the preservation of infected tomato fruits.",
+          "experimental_groups": [
+            "untreated",
+            "water-dipped control",
+            "SeNPs treated"
+          ],
+          "controls": [
+            "water-dipped control"
+          ],
+          "perturbations_or_treatments": [
+            "SeNPs treatment"
+          ],
+          "measured_variables": [
+            "fruit decay and mold growth"
+          ],
+          "assay_or_method": "visual inspection over time",
+          "biological_or_experimental_system": "infected tomato fruits"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": []
+        },
+        "data_and_patterns": "Untreated tomatoes show increasing decay and mold growth over time, with significant mold by Day 25. Control tomatoes show slight decay but no mold. SeNPs-treated tomatoes show minimal decay throughout the period.",
+        "groups_compared": [
+          "untreated vs. control vs. SeNPs treated"
+        ],
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "untreated tomatoes decay and develop mold",
+            "treated tomatoes remain intact"
+          ],
+          "caption_supported_evidence": [
+            "description of treatment groups and timepoints"
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [
+            "SeNPs may preserve tomato fruits by preventing decay"
+          ],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The figure demonstrates the effectiveness of SeNPs in preserving tomato fruits by preventing decay and mold growth over a 25-day period.",
+        "scientific_conclusion": "The figure shows that SeNPs treatment effectively preserves tomato fruits, as untreated fruits develop significant mold by Day 25, while treated fruits remain largely unaffected. This suggests that SeNPs have preservative properties that inhibit decay, highlighting their potential use in extending the shelf life of perishable produce. The visual evidence supports the hypothesis that SeNPs can be an effective treatment for preserving fruits, contrasting with the rapid decay seen in untreated and control groups.",
+        "model_extra_inference": {
+          "extra_inference": "SeNPs could potentially be applied to other perishable foods to extend shelf life.",
+          "support_status": "speculative",
+          "supporting_evidence": "The visual evidence shows preservation in tomatoes, suggesting possible broader applications.",
+          "risk": "medium",
+          "open_questions": "What is the mechanism by which SeNPs prevent decay? How effective are SeNPs on other types of produce?",
+          "alternative_interpretation": "None"
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 12.3
+    },
+    {
+      "label": "Figure 4",
+      "kind": "figure",
+      "page": 9,
+      "bbox": [
+        45.7,
+        72.2,
+        548.7,
+        424.2
+      ],
+      "caption": "Fig. 4 Microscopic examination of Fusarium oxysporum (*400) showing its charcteristic spores ( A ), macroscopic examination on potato dextrose agar medium ( B ), untreated fungul mycelium control ( C , D ), Treated fungal mycelium with MIC of SeNPS showing lysis and complete destruction after 18h of treatment ( E -H )",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10593681/p009_Figure_4.png",
+      "image_size": [
+        503,
+        352
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"microscopy\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"multi_panel_composite\",\n    \"panel_count\": \"8\",\n    \"panel_labels\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\", \"G\", \"H\"],\n    \"axes_or_dimensions\": [],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"Fusarium oxysporum spores\", \"fungal mycelium\", \"SeNPS treatment effects\"]\n  },\n  \"visual_description\": \"Panel A shows microscopic spores of Fusarium oxysporum at 400x magnification. Panel B displays macroscopic growth on potato dextrose agar. Panels C and D show untreated fungal mycelium. Panels E, F, G, and H illustrate treated mycelium with SeNPS, highlighting lysis and destruction.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"The effect of SeNPS on Fusarium oxysporum mycelium.\",\n    \"experimental_groups\": [\"untreated mycelium\", \"SeNPS treated mycelium\"],\n    \"controls\": [\"untreated mycelium\"],\n    \"perturbations_or_treatments\": [\"SeNPS at MIC\"],\n    \"measured_variables\": [\"morphological changes in mycelium\"],\n    \"assay_or_method\": \"Microscopic examination\",\n    \"biological_or_experimental_system\": \"Fusarium oxysporum\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": []\n  },\n  \"data_and_patterns\": \"Panels E, F, G, and H show significant structural damage to mycelium after SeNPS treatment compared to the intact structure in panels C and D.\",\n  \"groups_compared\": [\"untreated vs. SeNPS treated mycelium\"],\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Visible damage to mycelium in treated samples\"],\n    \"caption_supported_evidence\": [\"Lysis and destruction after 18h of SeNPS treatment\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [\"Effectiveness of SeNPS against fungal pathogens\"],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The figure demonstrates the antifungal effects of SeNPS on Fusarium oxysporum, showing structural damage and lysis in treated samples.\",\n  \"scientific_conclusion\": \"The figure illustrates that SeNPS treatment leads to significant morphological damage and destruction of Fusarium oxysporum mycelium, indicating its potential as an antifungal agent. The untreated mycelium appears intact, while treated samples show clear signs of lysis, supporting the hypothesis that SeNPS effectively disrupts fungal structure. This visual evidence highlights the potential application of SeNPS in controlling fungal infections.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"SeNPS could be explored for agricultural use to control Fusarium infections.\",\n    \"support_status\": \"context_supported\",\n    \"supporting_evidence\": \"The visible damage to fungal mycelium suggests effective antifungal properties.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What is the mechanism of SeNPS-induced fungal lysis? How does SeNPS compare to other antifungal treatments?\",\n    \"alternative_interpretation\": \"None\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "microscopy",
+        "visual_form": {
+          "graph_or_visual_type": "multi_panel_composite",
+          "panel_count": "8",
+          "panel_labels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H"
+          ],
+          "axes_or_dimensions": [],
+          "legend_elements": [],
+          "visible_entities": [
+            "Fusarium oxysporum spores",
+            "fungal mycelium",
+            "SeNPS treatment effects"
+          ]
+        },
+        "visual_description": "Panel A shows microscopic spores of Fusarium oxysporum at 400x magnification. Panel B displays macroscopic growth on potato dextrose agar. Panels C and D show untreated fungal mycelium. Panels E, F, G, and H illustrate treated mycelium with SeNPS, highlighting lysis and destruction.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "The effect of SeNPS on Fusarium oxysporum mycelium.",
+          "experimental_groups": [
+            "untreated mycelium",
+            "SeNPS treated mycelium"
+          ],
+          "controls": [
+            "untreated mycelium"
+          ],
+          "perturbations_or_treatments": [
+            "SeNPS at MIC"
+          ],
+          "measured_variables": [
+            "morphological changes in mycelium"
+          ],
+          "assay_or_method": "Microscopic examination",
+          "biological_or_experimental_system": "Fusarium oxysporum"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": []
+        },
+        "data_and_patterns": "Panels E, F, G, and H show significant structural damage to mycelium after SeNPS treatment compared to the intact structure in panels C and D.",
+        "groups_compared": [
+          "untreated vs. SeNPS treated mycelium"
+        ],
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Visible damage to mycelium in treated samples"
+          ],
+          "caption_supported_evidence": [
+            "Lysis and destruction after 18h of SeNPS treatment"
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [
+            "Effectiveness of SeNPS against fungal pathogens"
+          ],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The figure demonstrates the antifungal effects of SeNPS on Fusarium oxysporum, showing structural damage and lysis in treated samples.",
+        "scientific_conclusion": "The figure illustrates that SeNPS treatment leads to significant morphological damage and destruction of Fusarium oxysporum mycelium, indicating its potential as an antifungal agent. The untreated mycelium appears intact, while treated samples show clear signs of lysis, supporting the hypothesis that SeNPS effectively disrupts fungal structure. This visual evidence highlights the potential application of SeNPS in controlling fungal infections.",
+        "model_extra_inference": {
+          "extra_inference": "SeNPS could be explored for agricultural use to control Fusarium infections.",
+          "support_status": "context_supported",
+          "supporting_evidence": "The visible damage to fungal mycelium suggests effective antifungal properties.",
+          "risk": "medium",
+          "open_questions": "What is the mechanism of SeNPS-induced fungal lysis? How does SeNPS compare to other antifungal treatments?",
+          "alternative_interpretation": "None"
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 11.7
+    },
+    {
+      "label": "Figure 5",
+      "kind": "figure",
+      "page": 9,
+      "bbox": [
+        89.3,
+        459.1,
+        505.0,
+        625.7
+      ],
+      "caption": "Fig. 5 Effect of SeNPs treatment after infection with Fusarium oxysporum , 2: shows the beginning of infection, 3: shows the treatment effect on disease progression as compared with 4 representing untreated infected fruits",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10593681/p009_Figure_5.png",
+      "image_size": [
+        416,
+        167
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"microscopy\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"microscopy\",\n    \"panel_count\": \"4\",\n    \"panel_labels\": [\"1\", \"2\", \"3\", \"4\"],\n    \"axes_or_dimensions\": [],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"tomatoes, SeNPs treatment, Fusarium oxysporum infection\"]\n  },\n  \"visual_description\": \"The image shows four panels labeled 1 to 4, each depicting tomatoes at different stages of treatment and infection. Panel 1 shows a control tomato. Panel 2 shows a tomato with the beginning of infection, marked by a yellow dashed circle. Panel 3 shows a tomato after SeNPs treatment, with reduced infection signs. Panel 4 shows an untreated infected tomato with visible fungal growth.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"The effect of SeNPs treatment on Fusarium oxysporum infection in tomatoes.\",\n    \"experimental_groups\": [\"Control\", \"Before SeNPs\", \"After SeNPs\", \"Untreated\"],\n    \"controls\": [\"Control\"],\n    \"perturbations_or_treatments\": [\"SeNPs treatment\"],\n    \"measured_variables\": [\"Infection progression\"],\n    \"assay_or_method\": \"Visual inspection of tomato infection\",\n    \"biological_or_experimental_system\": \"Tomatoes infected with Fusarium oxysporum\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": []\n  },\n  \"data_and_patterns\": \"Panel 1 shows a healthy tomato. Panel 2 shows initial infection signs. Panel 3 shows reduced infection after SeNPs treatment. Panel 4 shows significant fungal growth on an untreated tomato.\",\n  \"groups_compared\": [\"Control vs. Infected\", \"Before SeNPs vs. After SeNPs\", \"Treated vs. Untreated\"],\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Visual differences in infection levels between treated and untreated tomatoes\"],\n    \"caption_supported_evidence\": [\"The sequence of infection and treatment stages\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [\"The effect of SeNPs on fungal infection\"],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The figure demonstrates the potential of SeNPs in mitigating Fusarium oxysporum infection in tomatoes, showing reduced infection in treated samples compared to untreated ones.\",\n  \"scientific_conclusion\": \"The image shows that SeNPs treatment reduces the progression of Fusarium oxysporum infection in tomatoes. Panel 3, after SeNPs treatment, shows minimal infection compared to the untreated infected tomato in Panel 4. This suggests that SeNPs could be effective in controlling fungal infections, highlighting their potential as a treatment option. The visual evidence supports the hypothesis that SeNPs have an antifungal effect, which is a significant finding for managing plant diseases.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"SeNPs may have broad-spectrum antifungal properties that could be applicable to other plant pathogens.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"The visible reduction in infection in treated tomatoes suggests potential antifungal activity.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What is the mechanism by which SeNPs inhibit fungal growth? Are there long-term effects of SeNPs treatment on tomato health?\",\n    \"alternative_interpretation\": \"None\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "microscopy",
+        "visual_form": {
+          "graph_or_visual_type": "microscopy",
+          "panel_count": "4",
+          "panel_labels": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "axes_or_dimensions": [],
+          "legend_elements": [],
+          "visible_entities": [
+            "tomatoes, SeNPs treatment, Fusarium oxysporum infection"
+          ]
+        },
+        "visual_description": "The image shows four panels labeled 1 to 4, each depicting tomatoes at different stages of treatment and infection. Panel 1 shows a control tomato. Panel 2 shows a tomato with the beginning of infection, marked by a yellow dashed circle. Panel 3 shows a tomato after SeNPs treatment, with reduced infection signs. Panel 4 shows an untreated infected tomato with visible fungal growth.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "The effect of SeNPs treatment on Fusarium oxysporum infection in tomatoes.",
+          "experimental_groups": [
+            "Control",
+            "Before SeNPs",
+            "After SeNPs",
+            "Untreated"
+          ],
+          "controls": [
+            "Control"
+          ],
+          "perturbations_or_treatments": [
+            "SeNPs treatment"
+          ],
+          "measured_variables": [
+            "Infection progression"
+          ],
+          "assay_or_method": "Visual inspection of tomato infection",
+          "biological_or_experimental_system": "Tomatoes infected with Fusarium oxysporum"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": []
+        },
+        "data_and_patterns": "Panel 1 shows a healthy tomato. Panel 2 shows initial infection signs. Panel 3 shows reduced infection after SeNPs treatment. Panel 4 shows significant fungal growth on an untreated tomato.",
+        "groups_compared": [
+          "Control vs. Infected",
+          "Before SeNPs vs. After SeNPs",
+          "Treated vs. Untreated"
+        ],
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Visual differences in infection levels between treated and untreated tomatoes"
+          ],
+          "caption_supported_evidence": [
+            "The sequence of infection and treatment stages"
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [
+            "The effect of SeNPs on fungal infection"
+          ],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The figure demonstrates the potential of SeNPs in mitigating Fusarium oxysporum infection in tomatoes, showing reduced infection in treated samples compared to untreated ones.",
+        "scientific_conclusion": "The image shows that SeNPs treatment reduces the progression of Fusarium oxysporum infection in tomatoes. Panel 3, after SeNPs treatment, shows minimal infection compared to the untreated infected tomato in Panel 4. This suggests that SeNPs could be effective in controlling fungal infections, highlighting their potential as a treatment option. The visual evidence supports the hypothesis that SeNPs have an antifungal effect, which is a significant finding for managing plant diseases.",
+        "model_extra_inference": {
+          "extra_inference": "SeNPs may have broad-spectrum antifungal properties that could be applicable to other plant pathogens.",
+          "support_status": "speculative",
+          "supporting_evidence": "The visible reduction in infection in treated tomatoes suggests potential antifungal activity.",
+          "risk": "medium",
+          "open_questions": "What is the mechanism by which SeNPs inhibit fungal growth? Are there long-term effects of SeNPs treatment on tomato health?",
+          "alternative_interpretation": "None"
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 12.1
+    },
+    {
+      "label": "Figure 6",
+      "kind": "figure",
+      "page": 11,
+      "bbox": [
+        45.8,
+        71.4,
+        549.4,
+        374.8
+      ],
+      "caption": "Fig. 6 Cytotoxic effect of SeNPs biosynthesized using Fenugreek seeds aqueous extract against normal Human Skin Fibroblast (HSF) and Oral Epithelial cells (OEC) using SRB assay, data expressed as the mean value of cell viability (% of control) ± S.D and   IC 50 was calculated",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10593681/p011_Figure_6.png",
+      "image_size": [
+        504,
+        303
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"line graph and microscopy image\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"multi_panel_composite\",\n    \"panel_count\": \"2\",\n    \"panel_labels\": [\"A\", \"B\"],\n    \"axes_or_dimensions\": [\"Concentration (µg/ml)\", \"% Viability\"],\n    \"legend_elements\": [\"SeNano\"],\n    \"visible_entities\": [\"Human Skin Fibroblast (HSF)\", \"Oral Epithelial cells (OEC)\"]\n  },\n  \"visual_description\": \"Panel A shows a line graph of cell viability against SeNano concentration for HSF, with viability consistently above 100%. Panel B shows a similar graph for OEC, also with viability above 100%. Below each graph are microscopy images comparing treated and control samples for HSF and OEC, stained pink.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"The cytotoxic effect of SeNPs on normal cells.\",\n    \"experimental_groups\": [\"Treated HSF\", \"Control HSF\", \"Treated OEC\", \"Control OEC\"],\n    \"controls\": [\"Control HSF\", \"Control OEC\"],\n    \"perturbations_or_treatments\": [\"SeNPs biosynthesized using Fenugreek seeds aqueous extract\"],\n    \"measured_variables\": [\"Cell viability\"],\n    \"assay_or_method\": \"SRB assay\",\n    \"biological_or_experimental_system\": \"Normal Human Skin Fibroblast (HSF) and Oral Epithelial cells (OEC)\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [\"µg/ml\", \"% Viability\"],\n    \"effect_directions\": [\"no change\"],\n    \"quantitative_values\": [\"IC50: >300\"]\n  },\n  \"data_and_patterns\": \"Both graphs show cell viability above 100% across all concentrations, indicating no cytotoxic effect. The IC50 value is greater than 300 µg/ml for both cell types.\",\n  \"groups_compared\": [\"Treated vs. Control for HSF and OEC\"],\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Viability remains above 100% for both cell types across concentrations\"],\n    \"caption_supported_evidence\": [\"Use of SRB assay\", \"Comparison of treated and control cells\"],\n    \"local_context_supported_evidence\": [\"IC50 value interpretation\"],\n    \"global_paper_supported_interpretation\": [\"Cytotoxic effect assessment of SeNPs on normal cells\"],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The figure assesses the safety of SeNPs on normal cells, showing no cytotoxic effects at tested concentrations.\",\n  \"scientific_conclusion\": \"The data demonstrates that SeNPs biosynthesized using Fenugreek seeds aqueous extract do not exhibit cytotoxic effects on normal Human Skin Fibroblast and Oral Epithelial cells, as cell viability remains above 100% across all concentrations tested, with an IC50 value greater than 300 µg/ml. This suggests the potential safety of SeNPs for use in normal cells. The absence of statistical markers indicates no significant differences between treated and control groups, reinforcing the non-toxic nature of the treatment.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The results suggest SeNPs may be suitable for therapeutic applications without harming normal cells.\",\n    \"support_status\": \"context_supported\",\n    \"supporting_evidence\": [\"No cytotoxic effect observed in normal cells\"],\n    \"risk\": \"low\",\n    \"open_questions\": [\"What are the long-term effects of SeNPs on normal cells?\", \"How do these findings translate to in vivo models?\"],\n    \"alternative_interpretation\": \"None\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "line graph and microscopy image",
+        "visual_form": {
+          "graph_or_visual_type": "multi_panel_composite",
+          "panel_count": "2",
+          "panel_labels": [
+            "A",
+            "B"
+          ],
+          "axes_or_dimensions": [
+            "Concentration (µg/ml)",
+            "% Viability"
+          ],
+          "legend_elements": [
+            "SeNano"
+          ],
+          "visible_entities": [
+            "Human Skin Fibroblast (HSF)",
+            "Oral Epithelial cells (OEC)"
+          ]
+        },
+        "visual_description": "Panel A shows a line graph of cell viability against SeNano concentration for HSF, with viability consistently above 100%. Panel B shows a similar graph for OEC, also with viability above 100%. Below each graph are microscopy images comparing treated and control samples for HSF and OEC, stained pink.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "The cytotoxic effect of SeNPs on normal cells.",
+          "experimental_groups": [
+            "Treated HSF",
+            "Control HSF",
+            "Treated OEC",
+            "Control OEC"
+          ],
+          "controls": [
+            "Control HSF",
+            "Control OEC"
+          ],
+          "perturbations_or_treatments": [
+            "SeNPs biosynthesized using Fenugreek seeds aqueous extract"
+          ],
+          "measured_variables": [
+            "Cell viability"
+          ],
+          "assay_or_method": "SRB assay",
+          "biological_or_experimental_system": "Normal Human Skin Fibroblast (HSF) and Oral Epithelial cells (OEC)"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [
+            "µg/ml",
+            "% Viability"
+          ],
+          "effect_directions": [
+            "no change"
+          ],
+          "quantitative_values": [
+            "IC50: >300"
+          ]
+        },
+        "data_and_patterns": "Both graphs show cell viability above 100% across all concentrations, indicating no cytotoxic effect. The IC50 value is greater than 300 µg/ml for both cell types.",
+        "groups_compared": [
+          "Treated vs. Control for HSF and OEC"
+        ],
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Viability remains above 100% for both cell types across concentrations"
+          ],
+          "caption_supported_evidence": [
+            "Use of SRB assay",
+            "Comparison of treated and control cells"
+          ],
+          "local_context_supported_evidence": [
+            "IC50 value interpretation"
+          ],
+          "global_paper_supported_interpretation": [
+            "Cytotoxic effect assessment of SeNPs on normal cells"
+          ],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The figure assesses the safety of SeNPs on normal cells, showing no cytotoxic effects at tested concentrations.",
+        "scientific_conclusion": "The data demonstrates that SeNPs biosynthesized using Fenugreek seeds aqueous extract do not exhibit cytotoxic effects on normal Human Skin Fibroblast and Oral Epithelial cells, as cell viability remains above 100% across all concentrations tested, with an IC50 value greater than 300 µg/ml. This suggests the potential safety of SeNPs for use in normal cells. The absence of statistical markers indicates no significant differences between treated and control groups, reinforcing the non-toxic nature of the treatment.",
+        "model_extra_inference": {
+          "extra_inference": "The results suggest SeNPs may be suitable for therapeutic applications without harming normal cells.",
+          "support_status": "context_supported",
+          "supporting_evidence": [
+            "No cytotoxic effect observed in normal cells"
+          ],
+          "risk": "low",
+          "open_questions": [
+            "What are the long-term effects of SeNPs on normal cells?",
+            "How do these findings translate to in vivo models?"
+          ],
+          "alternative_interpretation": "None"
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 12.6
+    },
+    {
+      "label": "Figure 7",
+      "kind": "figure",
+      "page": 11,
+      "bbox": [
+        89.7,
+        416.6,
+        505.0,
+        714.2
+      ],
+      "caption": "Fig. 7 Preparation of the three groups of Cherry tomato showing different ripping stages, Group A (red colored), Group B (yellow colored), and Group C (green colored), Group A fruits during their 1: washing, 2: air-drying and 3: packaging",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10593681/p011_Figure_7.png",
+      "image_size": [
+        415,
+        298
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"other\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"multi_panel_composite\",\n    \"panel_count\": \"6\",\n    \"panel_labels\": [\"A\", \"B\", \"C\", \"1\", \"2\", \"3\"],\n    \"axes_or_dimensions\": [],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"cherry tomatoes\", \"ripening stages\", \"packaging\"]\n  },\n  \"visual_description\": \"The image shows three groups of cherry tomatoes at different ripening stages. Panel A displays red tomatoes, Panel B shows yellow tomatoes, and Panel C shows green tomatoes. Panels 1, 2, and 3 depict the washing, air-drying, and packaging processes of the red tomatoes, respectively.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [\"Group A (red colored)\", \"Group B (yellow colored)\", \"Group C (green colored)\"],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [\"ripening stages\", \"washing\", \"air-drying\", \"packaging\"],\n    \"measured_variables\": [\"ripening stages\", \"processing steps\"],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"cherry tomatoes\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": []\n  },\n  \"data_and_patterns\": \"The image shows distinct color differences among the groups, indicating different ripening stages. The red tomatoes are processed through washing, air-drying, and packaging.\",\n  \"groups_compared\": [\"Group A (red)\", \"Group B (yellow)\", \"Group C (green)\"],\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"three groups of tomatoes at different ripening stages\", \"processing steps for red tomatoes\"],\n    \"caption_supported_evidence\": [\"Group A is red, Group B is yellow, Group C is green\", \"steps include washing, air-drying, and packaging\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": [\"specific hypothesis or experimental outcomes\"]\n  },\n  \"scientific_interpretation\": \"The figure demonstrates the visual differences in cherry tomatoes at various ripening stages and the preparation process for the red tomatoes, likely for further analysis or consumption.\",\n  \"scientific_conclusion\": \"The figure illustrates the preparation of cherry tomatoes categorized by ripening stages, showing red, yellow, and green tomatoes in separate containers. The red tomatoes undergo washing, air-drying, and packaging, as indicated by the numbered panels. This visual setup suggests a study on the effects of ripening stages on tomato characteristics or processing. The figure does not provide statistical data, focusing instead on the visual and procedural aspects of the experiment. It highlights the importance of categorizing tomatoes by ripeness for specific applications, though it does not reveal the outcomes or hypotheses tested.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The image suggests a potential study on how different ripening stages affect the quality or processing of cherry tomatoes, possibly for nutritional or commercial purposes.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"The categorization by color indicates a focus on ripening stages, and the processing steps suggest preparation for analysis or sale.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What specific characteristics or outcomes are being measured in relation to the ripening stages? How do these stages affect the nutritional value or consumer preference?\",\n    \"alternative_interpretation\": \"The image could also be illustrating optimal handling practices for tomatoes at different ripening stages to maintain quality.\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"medium\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "other",
+        "visual_form": {
+          "graph_or_visual_type": "multi_panel_composite",
+          "panel_count": "6",
+          "panel_labels": [
+            "A",
+            "B",
+            "C",
+            "1",
+            "2",
+            "3"
+          ],
+          "axes_or_dimensions": [],
+          "legend_elements": [],
+          "visible_entities": [
+            "cherry tomatoes",
+            "ripening stages",
+            "packaging"
+          ]
+        },
+        "visual_description": "The image shows three groups of cherry tomatoes at different ripening stages. Panel A displays red tomatoes, Panel B shows yellow tomatoes, and Panel C shows green tomatoes. Panels 1, 2, and 3 depict the washing, air-drying, and packaging processes of the red tomatoes, respectively.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [
+            "Group A (red colored)",
+            "Group B (yellow colored)",
+            "Group C (green colored)"
+          ],
+          "controls": [],
+          "perturbations_or_treatments": [
+            "ripening stages",
+            "washing",
+            "air-drying",
+            "packaging"
+          ],
+          "measured_variables": [
+            "ripening stages",
+            "processing steps"
+          ],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "cherry tomatoes"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": []
+        },
+        "data_and_patterns": "The image shows distinct color differences among the groups, indicating different ripening stages. The red tomatoes are processed through washing, air-drying, and packaging.",
+        "groups_compared": [
+          "Group A (red)",
+          "Group B (yellow)",
+          "Group C (green)"
+        ],
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "three groups of tomatoes at different ripening stages",
+            "processing steps for red tomatoes"
+          ],
+          "caption_supported_evidence": [
+            "Group A is red, Group B is yellow, Group C is green",
+            "steps include washing, air-drying, and packaging"
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": [
+            "specific hypothesis or experimental outcomes"
+          ]
+        },
+        "scientific_interpretation": "The figure demonstrates the visual differences in cherry tomatoes at various ripening stages and the preparation process for the red tomatoes, likely for further analysis or consumption.",
+        "scientific_conclusion": "The figure illustrates the preparation of cherry tomatoes categorized by ripening stages, showing red, yellow, and green tomatoes in separate containers. The red tomatoes undergo washing, air-drying, and packaging, as indicated by the numbered panels. This visual setup suggests a study on the effects of ripening stages on tomato characteristics or processing. The figure does not provide statistical data, focusing instead on the visual and procedural aspects of the experiment. It highlights the importance of categorizing tomatoes by ripeness for specific applications, though it does not reveal the outcomes or hypotheses tested.",
+        "model_extra_inference": {
+          "extra_inference": "The image suggests a potential study on how different ripening stages affect the quality or processing of cherry tomatoes, possibly for nutritional or commercial purposes.",
+          "support_status": "speculative",
+          "supporting_evidence": "The categorization by color indicates a focus on ripening stages, and the processing steps suggest preparation for analysis or sale.",
+          "risk": "medium",
+          "open_questions": "What specific characteristics or outcomes are being measured in relation to the ripening stages? How do these stages affect the nutritional value or consumer preference?",
+          "alternative_interpretation": "The image could also be illustrating optimal handling practices for tomatoes at different ripening stages to maintain quality."
+        },
+        "context_used": "abstract only",
+        "confidence": "medium"
+      },
+      "confidence": "medium",
+      "elapsed_sec": 12.8
+    },
+    {
+      "label": "Figure 8",
+      "kind": "figure",
+      "page": 12,
+      "bbox": [
+        45.4,
+        71.6,
+        549.0,
+        353.4
+      ],
+      "caption": "Fig. 8 Effect of SeNPs-treatment of tomato fruits on some chemical and physical properties at two storage temperature (5 °C and 25 °C) for three ripening stages, Group A: Red colored ( A , B , C , D , E ), Group B: Yellow colored ( A' , B' , C' , D' , E' ), and Group C: Green colored ( A'' , B'' , C'' , D'' , E'' ). T1 : negative control sprayed with water only, T2 : non-infected treated fruits with SeNPs at MIC, 2MIC and 3MIC. MIC minimum inhibitory concentration for Fusarium oxysporum infectio",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10593681/p012_Figure_8.png",
+      "image_size": [
+        504,
+        282
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"bar chart\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"multi_panel_composite\",\n    \"panel_count\": \"15\",\n    \"panel_labels\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"A'\", \"B'\", \"C'\", \"D'\", \"E'\", \"A''\", \"B''\", \"C''\", \"D''\", \"E''\"],\n    \"axes_or_dimensions\": [\"Treatment\", \"TA (%)\", \"Carotenoids (mg/g)\", \"Lycopene (mg/g)\", \"pH\", \"Weight Loss (%)\"],\n    \"legend_elements\": [\"25°C\", \"5°C\"],\n    \"visible_entities\": [\"Group A, B, C\", \"T1, T2.MIC, T2.2MIC, T2.3MIC\"]\n  },\n  \"visual_description\": \"The figure contains 15 panels organized into three groups (A, B, C) representing different colored tomato fruits. Each group has five sub-panels (A, B, C, D, E) showing the effects of SeNPs treatment on TA (%), carotenoids (mg/g), lycopene (mg/g), pH, and weight loss (%) at two storage temperatures (25°C and 5°C). The x-axis represents different treatments (T1, T2.MIC, T2.2MIC, T2.3MIC), and the y-axis varies by panel to show the respective measured variable.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"The effect of SeNPs treatment on the chemical and physical properties of tomato fruits at different storage temperatures and ripening stages.\",\n    \"experimental_groups\": [\"Group A: Red colored\", \"Group B: Yellow colored\", \"Group C: Green colored\"],\n    \"controls\": [\"T1: negative control sprayed with water only\"],\n    \"perturbations_or_treatments\": [\"T2: non-infected treated fruits with SeNPs at MIC, 2MIC, and 3MIC\"],\n    \"measured_variables\": [\"TA (%)\", \"Carotenoids (mg/g)\", \"Lycopene (mg/g)\", \"pH\", \"Weight Loss (%)\"],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"Tomato fruits\"\n  },\n  \"statistical_markers\": \"n=Not visible; error bars=SD; significance markers=A, A', A'' for respective groups\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [\"error bars\", \"significance letters (A, A', A'')\"],\n    \"sample_sizes\": [\"Not visible\"],\n    \"units\": [\"%\", \"mg/g\", \"pH\", \"%\"],\n    \"effect_directions\": [\"increase, decrease\"],\n    \"quantitative_values\": [\"Specific values vary by panel, e.g., TA % ranges from 0.01 to 0.15\"]\n  },\n  \"data_and_patterns\": \"Panels show varying levels of TA, carotenoids, lycopene, pH, and weight loss across different treatments and temperatures. For example, TA % increases with SeNPs treatment in Group A at 5°C. Carotenoids and lycopene levels also show treatment-dependent changes. Weight loss is generally lower at 5°C compared to 25°C across all groups.\",\n  \"groups_compared\": \"Different SeNPs treatments (T1, T2.MIC, T2.2MIC, T2.3MIC) at two temperatures (25°C and 5°C) for three ripening stages (Group A, B, C).\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"TA %, carotenoids, lycopene, pH, and weight loss are measured across treatments and temperatures.\"],\n    \"caption_supported_evidence\": [\"The figure shows the effect of SeNPs treatment on tomato fruits at different storage temperatures and ripening stages.\"],\n    \"local_context_supported_evidence\": [\"The treatments include different concentrations of SeNPs and a control.\"],\n    \"global_paper_supported_interpretation\": [\"The study investigates the effect of SeNPs on tomato fruit properties during storage.\"],\n    \"unsupported_or_not_determinable\": [\"The specific mechanism by which SeNPs affect these properties is not shown.\"]\n  },\n  \"scientific_interpretation\": \"This figure examines how SeNPs treatment affects the chemical and physical properties of tomato fruits during storage at different temperatures and ripening stages. The data suggest that SeNPs can influence the preservation quality of tomatoes by affecting their acidity, nutrient content, and weight loss.\",\n  \"scientific_conclusion\": \"The figure demonstrates that SeNPs treatment can enhance the storage quality of tomato fruits by reducing weight loss and altering chemical properties such as TA, carotenoids, and lycopene levels, with noticeable differences between 25°C and 5°C storage. The results indicate that SeNPs may help preserve tomatoes by mitigating the effects of ripening and storage temperature. The data show significant variations across treatments and temperatures, suggesting that SeNPs could be a valuable tool in extending the shelf life of tomatoes. This supports the paper's investigation into the potential of SeNPs for improving post-harvest quality.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"SeNPs treatment might have broader applications in the preservation of other fruits and vegetables by similar mechanisms.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"The visible improvements in storage quality parameters suggest potential general applicability.\",\n    \"",
+      "elapsed_sec": 17.2
+    },
+    {
+      "label": "Figure 9",
+      "kind": "figure",
+      "page": 13,
+      "bbox": [
+        46.1,
+        414.9,
+        548.9,
+        692.2
+      ],
+      "caption": "Fig. 9 Effect of SeNPs-treatment of tomato fruits on some chemical ( A -D ) and physical ( E , F ) properties for three ripening stages at storage temperature (5 °C), Group A: Red colored, Group B: Yellow colored, and Group C: Green colored. T1 : negative control sprayed with water only, T2 : non-infected treated fruits with SeNPs at MIC, 2MIC and 3MIC, T3 : infected treated fruits with SeNPs at MIC, 2MIC and 3MIC, T4 : infected untreated fruits. MIC minimum inhibitory concentration for Fusarium",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10593681/p013_Figure_9.png",
+      "image_size": [
+        503,
+        277
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"bar chart\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"multi_panel_composite\",\n    \"panel_count\": \"6\",\n    \"panel_labels\": [\"A\", \"B\", \"C\", \"D\", \"E\", \"F\"],\n    \"axes_or_dimensions\": [\"Treatment\", \"TA (%)\", \"pH\", \"Carotenoids (mg/g)\", \"Lycopene (mg/g)\", \"Loss weight (%)\"],\n    \"legend_elements\": [\"Group A\", \"Group B\", \"Group C\"],\n    \"visible_entities\": [\"T1, T2, T3, T4 treatments\", \"MIC, 2MIC, 3MIC concentrations\"]\n  },\n  \"visual_description\": \"The figure contains six panels (A-F) showing bar charts of chemical and physical properties of tomato fruits at different ripening stages. Panels A and B display total ascorbic acid (TA) and pH levels, respectively. Panels C and D show carotenoids and lycopene content. Panels E and F depict weight loss in non-injured and injured fruits. Each panel compares three groups (A, B, C) across various treatments (T1 to T4) with different concentrations (MIC, 2MIC, 3MIC).\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"The effect of SeNPs treatment on the chemical and physical properties of tomato fruits during storage.\",\n    \"experimental_groups\": [\"Group A\", \"Group B\", \"Group C\"],\n    \"controls\": [\"T1 (negative control)\"],\n    \"perturbations_or_treatments\": [\"T2, T3, T4 with SeNPs at MIC, 2MIC, 3MIC\"],\n    \"measured_variables\": [\"TA\", \"pH\", \"Carotenoids\", \"Lycopene\", \"Weight loss\"],\n    \"assay_or_method\": \"Chemical and physical analysis\",\n    \"biological_or_experimental_system\": \"Tomato fruits\"\n  },\n  \"statistical_markers\": \"Error bars visible, representing standard deviation (SD). No p-values or significance markers shown.\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [\"error bars\"],\n    \"sample_sizes\": [\"Not visible\"],\n    \"units\": [\"%\", \"mg/g\"],\n    \"effect_directions\": [\"increase, decrease\"],\n    \"quantitative_values\": [\"Specific values not legible\"]\n  },\n  \"data_and_patterns\": \"Panels A and B show variations in TA and pH across treatments, with noticeable differences in Group A. Panels C and D indicate higher carotenoid and lycopene levels in Group A at certain treatments. Panels E and F reveal differences in weight loss between non-injured and injured fruits, with Group A showing distinct patterns.\",\n  \"groups_compared\": [\"Group A vs Group B vs Group C across T1 to T4 treatments\"],\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Differences in TA, pH, carotenoids, lycopene, and weight loss across groups and treatments.\"],\n    \"caption_supported_evidence\": [\"Description of treatments and groups\"],\n    \"local_context_supported_evidence\": [\"Effect of SeNPs on tomato properties\"],\n    \"global_paper_supported_interpretation\": [\"Investigation of SeNPs impact on storage quality\"],\n    \"unsupported_or_not_determinable\": [\"Specific statistical significance\"]\n  },\n  \"scientific_interpretation\": \"The figure examines how SeNPs treatment affects the chemical composition and physical properties of tomatoes during storage, focusing on antioxidant levels and weight loss.\",\n  \"scientific_conclusion\": \"The bar charts demonstrate that SeNPs treatment influences the chemical and physical properties of tomato fruits, with Group A showing notable changes in TA, pH, carotenoids, and lycopene levels. Weight loss patterns differ between non-injured and injured fruits, indicating the potential of SeNPs in preserving fruit quality during storage. The data suggests that SeNPs may enhance the stability of certain compounds, though specific statistical significance is not detailed.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"SeNPs might offer a method to extend the shelf life of tomatoes by maintaining chemical stability.\",\n    \"support_status\": \"context_supported\",\n    \"supporting_evidence\": [\"Visible trends in chemical properties and weight loss\"],\n    \"risk\": \"medium\",\n    \"open_questions\": [\"What are the long-term effects of SeNPs on tomato quality? How do these changes affect nutritional value?\"],\n    \"alternative_interpretation\": \"The observed changes could also be due to variations in fruit maturity or environmental conditions during storage.\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"medium\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "bar chart",
+        "visual_form": {
+          "graph_or_visual_type": "multi_panel_composite",
+          "panel_count": "6",
+          "panel_labels": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+          ],
+          "axes_or_dimensions": [
+            "Treatment",
+            "TA (%)",
+            "pH",
+            "Carotenoids (mg/g)",
+            "Lycopene (mg/g)",
+            "Loss weight (%)"
+          ],
+          "legend_elements": [
+            "Group A",
+            "Group B",
+            "Group C"
+          ],
+          "visible_entities": [
+            "T1, T2, T3, T4 treatments",
+            "MIC, 2MIC, 3MIC concentrations"
+          ]
+        },
+        "visual_description": "The figure contains six panels (A-F) showing bar charts of chemical and physical properties of tomato fruits at different ripening stages. Panels A and B display total ascorbic acid (TA) and pH levels, respectively. Panels C and D show carotenoids and lycopene content. Panels E and F depict weight loss in non-injured and injured fruits. Each panel compares three groups (A, B, C) across various treatments (T1 to T4) with different concentrations (MIC, 2MIC, 3MIC).",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "The effect of SeNPs treatment on the chemical and physical properties of tomato fruits during storage.",
+          "experimental_groups": [
+            "Group A",
+            "Group B",
+            "Group C"
+          ],
+          "controls": [
+            "T1 (negative control)"
+          ],
+          "perturbations_or_treatments": [
+            "T2, T3, T4 with SeNPs at MIC, 2MIC, 3MIC"
+          ],
+          "measured_variables": [
+            "TA",
+            "pH",
+            "Carotenoids",
+            "Lycopene",
+            "Weight loss"
+          ],
+          "assay_or_method": "Chemical and physical analysis",
+          "biological_or_experimental_system": "Tomato fruits"
+        },
+        "statistical_markers": "Error bars visible, representing standard deviation (SD). No p-values or significance markers shown.",
+        "markers_and_statistics": {
+          "statistical_markers": [
+            "error bars"
+          ],
+          "sample_sizes": [
+            "Not visible"
+          ],
+          "units": [
+            "%",
+            "mg/g"
+          ],
+          "effect_directions": [
+            "increase, decrease"
+          ],
+          "quantitative_values": [
+            "Specific values not legible"
+          ]
+        },
+        "data_and_patterns": "Panels A and B show variations in TA and pH across treatments, with noticeable differences in Group A. Panels C and D indicate higher carotenoid and lycopene levels in Group A at certain treatments. Panels E and F reveal differences in weight loss between non-injured and injured fruits, with Group A showing distinct patterns.",
+        "groups_compared": [
+          "Group A vs Group B vs Group C across T1 to T4 treatments"
+        ],
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Differences in TA, pH, carotenoids, lycopene, and weight loss across groups and treatments."
+          ],
+          "caption_supported_evidence": [
+            "Description of treatments and groups"
+          ],
+          "local_context_supported_evidence": [
+            "Effect of SeNPs on tomato properties"
+          ],
+          "global_paper_supported_interpretation": [
+            "Investigation of SeNPs impact on storage quality"
+          ],
+          "unsupported_or_not_determinable": [
+            "Specific statistical significance"
+          ]
+        },
+        "scientific_interpretation": "The figure examines how SeNPs treatment affects the chemical composition and physical properties of tomatoes during storage, focusing on antioxidant levels and weight loss.",
+        "scientific_conclusion": "The bar charts demonstrate that SeNPs treatment influences the chemical and physical properties of tomato fruits, with Group A showing notable changes in TA, pH, carotenoids, and lycopene levels. Weight loss patterns differ between non-injured and injured fruits, indicating the potential of SeNPs in preserving fruit quality during storage. The data suggests that SeNPs may enhance the stability of certain compounds, though specific statistical significance is not detailed.",
+        "model_extra_inference": {
+          "extra_inference": "SeNPs might offer a method to extend the shelf life of tomatoes by maintaining chemical stability.",
+          "support_status": "context_supported",
+          "supporting_evidence": [
+            "Visible trends in chemical properties and weight loss"
+          ],
+          "risk": "medium",
+          "open_questions": [
+            "What are the long-term effects of SeNPs on tomato quality? How do these changes affect nutritional value?"
+          ],
+          "alternative_interpretation": "The observed changes could also be due to variations in fruit maturity or environmental conditions during storage."
+        },
+        "context_used": "abstract only",
+        "confidence": "medium"
+      },
+      "confidence": "medium",
+      "elapsed_sec": 14.6
+    },
+    {
+      "label": "Table_1",
+      "kind": "table",
+      "page": 7,
+      "bbox": [
+        39.7,
+        500.1,
+        555.0,
+        590.2
+      ],
+      "caption": "",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10593681/p007_Table_1.png",
+      "image_size": [
+        515,
+        90
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"results comparison\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"unclear\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [\"Sample\", \"Fusarium oxysporum\", \"Fusarium moniliforme\"],\n    \"legend_elements\": [\"ZOI (mm)\", \"MIC (mg/mL)\", \"MFC (mg/mL)\"],\n    \"visible_entities\": [\"Fenugreek aqueous extract\", \"Bio-mediated SeNPs\"]\n  },\n  \"structure\": \"Comparison of antifungal activity of Fenugreek aqueous extract and Bio-mediated SeNPs against Fusarium oxysporum and Fusarium moniliforme, measured by ZOI (mm), MIC (mg/mL), and MFC (mg/mL).\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"The antifungal efficacy of Bio-mediated SeNPs compared to Fenugreek aqueous extract against Fusarium species.\",\n    \"experimental_groups\": [\"Fenugreek aqueous extract\", \"Bio-mediated SeNPs\"],\n    \"controls\": [\"Fenugreek aqueous extract as a control\"],\n    \"perturbations_or_treatments\": [\"Application of SeNPs and extract\"],\n    \"measured_variables\": [\"ZOI, MIC, MFC\"],\n    \"assay_or_method\": \"Antifungal activity assay\",\n    \"biological_or_experimental_system\": \"Fusarium oxysporum and Fusarium moniliforme\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [\"mm\", \"mg/mL\"],\n    \"effect_directions\": [],\n    \"quantitative_values\": [\"31±0.14\", \"0.25\", \"0.27\", \"27±0\", \"1.7\", \"2.9\"]\n  },\n  \"key_entries\": \"Bio-mediated SeNPs show a ZOI of 31±0.14 mm against Fusarium oxysporum and 27±0 mm against Fusarium moniliforme. MIC values are 0.25 mg/mL and 1.7 mg/mL, respectively.\",\n  \"best_result\": \"The most notable result is the ZOI of 31±0.14 mm for Bio-mediated SeNPs against Fusarium oxysporum.\",\n  \"patterns_and_trends\": \"Bio-mediated SeNPs exhibit significant antifungal activity against both Fusarium species, whereas the Fenugreek extract shows no activity.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Bio-mediated SeNPs have measurable ZOI, MIC, and MFC values, unlike the extract.\"],\n    \"caption_supported_evidence\": [\"Comparison of SeNPs and extract against Fusarium species.\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The table demonstrates that Bio-mediated SeNPs have potent antifungal properties against Fusarium species, as indicated by the ZOI and low MIC/MFC values, compared to the Fenugreek extract which shows no activity.\",\n  \"scientific_conclusion\": \"This table shows that Bio-mediated SeNPs are effective against Fusarium oxysporum and Fusarium moniliforme, with a ZOI of 31±0.14 mm and 27±0 mm, and MIC values of 0.25 mg/mL and 1.7 mg/mL, respectively. The Fenugreek extract shows no antifungal activity. These results highlight the potential of SeNPs as antifungal agents, demonstrating their superiority over the extract in inhibiting fungal growth.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The SeNPs may have a broad-spectrum antifungal application, suggesting potential use in agricultural or medical settings.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"The significant ZOI and low MIC/MFC values suggest strong antifungal activity.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What is the mechanism of action of SeNPs against these fungi? Are there any adverse effects of SeNPs on non-target organisms?\",\n    \"alternative_interpretation\": \"The antifungal activity might be due to the nanoparticle size or surface properties rather than the selenium content.\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "table_type": "results comparison",
+        "visual_form": {
+          "graph_or_visual_type": "table",
+          "panel_count": "unclear",
+          "panel_labels": [],
+          "axes_or_dimensions": [
+            "Sample",
+            "Fusarium oxysporum",
+            "Fusarium moniliforme"
+          ],
+          "legend_elements": [
+            "ZOI (mm)",
+            "MIC (mg/mL)",
+            "MFC (mg/mL)"
+          ],
+          "visible_entities": [
+            "Fenugreek aqueous extract",
+            "Bio-mediated SeNPs"
+          ]
+        },
+        "structure": "Comparison of antifungal activity of Fenugreek aqueous extract and Bio-mediated SeNPs against Fusarium oxysporum and Fusarium moniliforme, measured by ZOI (mm), MIC (mg/mL), and MFC (mg/mL).",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "The antifungal efficacy of Bio-mediated SeNPs compared to Fenugreek aqueous extract against Fusarium species.",
+          "experimental_groups": [
+            "Fenugreek aqueous extract",
+            "Bio-mediated SeNPs"
+          ],
+          "controls": [
+            "Fenugreek aqueous extract as a control"
+          ],
+          "perturbations_or_treatments": [
+            "Application of SeNPs and extract"
+          ],
+          "measured_variables": [
+            "ZOI, MIC, MFC"
+          ],
+          "assay_or_method": "Antifungal activity assay",
+          "biological_or_experimental_system": "Fusarium oxysporum and Fusarium moniliforme"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [
+            "mm",
+            "mg/mL"
+          ],
+          "effect_directions": [],
+          "quantitative_values": [
+            "31±0.14",
+            "0.25",
+            "0.27",
+            "27±0",
+            "1.7",
+            "2.9"
+          ]
+        },
+        "key_entries": "Bio-mediated SeNPs show a ZOI of 31±0.14 mm against Fusarium oxysporum and 27±0 mm against Fusarium moniliforme. MIC values are 0.25 mg/mL and 1.7 mg/mL, respectively.",
+        "best_result": "The most notable result is the ZOI of 31±0.14 mm for Bio-mediated SeNPs against Fusarium oxysporum.",
+        "patterns_and_trends": "Bio-mediated SeNPs exhibit significant antifungal activity against both Fusarium species, whereas the Fenugreek extract shows no activity.",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Bio-mediated SeNPs have measurable ZOI, MIC, and MFC values, unlike the extract."
+          ],
+          "caption_supported_evidence": [
+            "Comparison of SeNPs and extract against Fusarium species."
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The table demonstrates that Bio-mediated SeNPs have potent antifungal properties against Fusarium species, as indicated by the ZOI and low MIC/MFC values, compared to the Fenugreek extract which shows no activity.",
+        "scientific_conclusion": "This table shows that Bio-mediated SeNPs are effective against Fusarium oxysporum and Fusarium moniliforme, with a ZOI of 31±0.14 mm and 27±0 mm, and MIC values of 0.25 mg/mL and 1.7 mg/mL, respectively. The Fenugreek extract shows no antifungal activity. These results highlight the potential of SeNPs as antifungal agents, demonstrating their superiority over the extract in inhibiting fungal growth.",
+        "model_extra_inference": {
+          "extra_inference": "The SeNPs may have a broad-spectrum antifungal application, suggesting potential use in agricultural or medical settings.",
+          "support_status": "speculative",
+          "supporting_evidence": "The significant ZOI and low MIC/MFC values suggest strong antifungal activity.",
+          "risk": "medium",
+          "open_questions": "What is the mechanism of action of SeNPs against these fungi? Are there any adverse effects of SeNPs on non-target organisms?",
+          "alternative_interpretation": "The antifungal activity might be due to the nanoparticle size or surface properties rather than the selenium content."
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 14.4
+    },
+    {
+      "label": "Table 2",
+      "kind": "table",
+      "page": 10,
+      "bbox": [
+        39.9,
+        84.9,
+        555.1,
+        257.7
+      ],
+      "caption": "Table 2 Effect of temperature change on diseases progress and shelf-life of tomato fruits",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10593681/p010_Table_2.png",
+      "image_size": [
+        515,
+        173
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"results comparison\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"2\",\n    \"panel_labels\": [\"Red colored group (A)\", \"Yellow colored group (B)\"],\n    \"axes_or_dimensions\": [\"Temperature (25°C)\", \"Treatment\"],\n    \"legend_elements\": [\"Fresh\", \"Shrinkage\", \"PFD\", \"No Infection\", \"ND\"],\n    \"visible_entities\": [\"Tomato fruits\", \"Water only\", \"SeNPs only\", \"Infected treated\", \"Infected untreated\"]\n  },\n  \"structure\": \"The table compares the effect of different treatments on the disease progress and shelf-life of tomato fruits over time, measured by freshness, shrinkage, and percentage of fruit decay (PFD).\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"The effect of temperature change on disease progress and shelf-life of tomato fruits.\",\n    \"experimental_groups\": [\"Red colored group (A)\", \"Yellow colored group (B)\"],\n    \"controls\": [\"Water only (T1)\"],\n    \"perturbations_or_treatments\": [\"SeNPs only (T2)\", \"Infected treated (T3)\", \"Infected untreated (T4)\"],\n    \"measured_variables\": [\"Freshness\", \"Shrinkage\", \"Percentage of fruit decay (PFD)\"],\n    \"assay_or_method\": \"Observation of tomato fruit condition over time.\",\n    \"biological_or_experimental_system\": \"Tomato fruits\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [\"Data are average of three replicates for each treatment, each replicate contains 10 fruits.\"],\n    \"units\": [\"Percentage of fruit decay (PFD)\"],\n    \"effect_directions\": [\"Decrease in freshness\", \"Increase in PFD\"],\n    \"quantitative_values\": [\"50% PFD\", \"100% PFD\", \"66% PFD\", \"70% PFD\"]\n  },\n  \"key_entries\": \"Infected untreated (T4) in the red colored group shows 100% PFD by 10 days. SeNPs only (T2) maintains freshness up to 12 days in the red colored group.\",\n  \"best_result\": \"Infected treated (T3) shows no infection in both colored groups up to 15 days.\",\n  \"patterns_and_trends\": \"SeNPs treatment (T2) and infected treated (T3) maintain fruit freshness longer compared to untreated infected (T4), which shows rapid decay.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Infected untreated (T4) shows high PFD\", \"SeNPs treatment maintains freshness\"],\n    \"caption_supported_evidence\": [\"The table shows the effect of temperature on disease progress and shelf-life\"],\n    \"local_context_supported_evidence\": [\"Tomato fruits were treated with SeNPs\", \"PFD was determined by counting infected fruits\"],\n    \"global_paper_supported_interpretation\": [\"The study investigates the effect of SeNPs on tomato fruit preservation\"],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The table shows that SeNPs treatment and infected treated conditions significantly delay the decay of tomato fruits compared to untreated infected conditions, indicating the potential of SeNPs in extending shelf-life.\",\n  \"scientific_conclusion\": \"The table demonstrates that SeNPs treatment (T2) and infected treated (T3) conditions effectively preserve tomato fruit quality, showing no infection and maintaining freshness longer than untreated infected (T4) conditions, which exhibit rapid decay. This suggests that SeNPs could be a viable option for extending the shelf-life of tomatoes under the tested conditions. The results highlight the potential of SeNPs in reducing fruit decay and maintaining freshness, supporting the paper's investigation into preservation techniques.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"SeNPs may have antimicrobial properties that prevent infection, which could be explored further in different temperature conditions.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"The table shows no infection in SeNPs treated and infected treated groups.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What are the specific mechanisms by which SeNPs prevent infection? How do different concentrations of SeNPs affect the results?\",\n    \"alternative_interpretation\": \"The preservation effect might be due to the physical properties of SeNPs forming a protective layer rather than antimicrobial action.\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "table_type": "results comparison",
+        "visual_form": {
+          "graph_or_visual_type": "table",
+          "panel_count": "2",
+          "panel_labels": [
+            "Red colored group (A)",
+            "Yellow colored group (B)"
+          ],
+          "axes_or_dimensions": [
+            "Temperature (25°C)",
+            "Treatment"
+          ],
+          "legend_elements": [
+            "Fresh",
+            "Shrinkage",
+            "PFD",
+            "No Infection",
+            "ND"
+          ],
+          "visible_entities": [
+            "Tomato fruits",
+            "Water only",
+            "SeNPs only",
+            "Infected treated",
+            "Infected untreated"
+          ]
+        },
+        "structure": "The table compares the effect of different treatments on the disease progress and shelf-life of tomato fruits over time, measured by freshness, shrinkage, and percentage of fruit decay (PFD).",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "The effect of temperature change on disease progress and shelf-life of tomato fruits.",
+          "experimental_groups": [
+            "Red colored group (A)",
+            "Yellow colored group (B)"
+          ],
+          "controls": [
+            "Water only (T1)"
+          ],
+          "perturbations_or_treatments": [
+            "SeNPs only (T2)",
+            "Infected treated (T3)",
+            "Infected untreated (T4)"
+          ],
+          "measured_variables": [
+            "Freshness",
+            "Shrinkage",
+            "Percentage of fruit decay (PFD)"
+          ],
+          "assay_or_method": "Observation of tomato fruit condition over time.",
+          "biological_or_experimental_system": "Tomato fruits"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [
+            "Data are average of three replicates for each treatment, each replicate contains 10 fruits."
+          ],
+          "units": [
+            "Percentage of fruit decay (PFD)"
+          ],
+          "effect_directions": [
+            "Decrease in freshness",
+            "Increase in PFD"
+          ],
+          "quantitative_values": [
+            "50% PFD",
+            "100% PFD",
+            "66% PFD",
+            "70% PFD"
+          ]
+        },
+        "key_entries": "Infected untreated (T4) in the red colored group shows 100% PFD by 10 days. SeNPs only (T2) maintains freshness up to 12 days in the red colored group.",
+        "best_result": "Infected treated (T3) shows no infection in both colored groups up to 15 days.",
+        "patterns_and_trends": "SeNPs treatment (T2) and infected treated (T3) maintain fruit freshness longer compared to untreated infected (T4), which shows rapid decay.",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Infected untreated (T4) shows high PFD",
+            "SeNPs treatment maintains freshness"
+          ],
+          "caption_supported_evidence": [
+            "The table shows the effect of temperature on disease progress and shelf-life"
+          ],
+          "local_context_supported_evidence": [
+            "Tomato fruits were treated with SeNPs",
+            "PFD was determined by counting infected fruits"
+          ],
+          "global_paper_supported_interpretation": [
+            "The study investigates the effect of SeNPs on tomato fruit preservation"
+          ],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The table shows that SeNPs treatment and infected treated conditions significantly delay the decay of tomato fruits compared to untreated infected conditions, indicating the potential of SeNPs in extending shelf-life.",
+        "scientific_conclusion": "The table demonstrates that SeNPs treatment (T2) and infected treated (T3) conditions effectively preserve tomato fruit quality, showing no infection and maintaining freshness longer than untreated infected (T4) conditions, which exhibit rapid decay. This suggests that SeNPs could be a viable option for extending the shelf-life of tomatoes under the tested conditions. The results highlight the potential of SeNPs in reducing fruit decay and maintaining freshness, supporting the paper's investigation into preservation techniques.",
+        "model_extra_inference": {
+          "extra_inference": "SeNPs may have antimicrobial properties that prevent infection, which could be explored further in different temperature conditions.",
+          "support_status": "speculative",
+          "supporting_evidence": "The table shows no infection in SeNPs treated and infected treated groups.",
+          "risk": "medium",
+          "open_questions": "What are the specific mechanisms by which SeNPs prevent infection? How do different concentrations of SeNPs affect the results?",
+          "alternative_interpretation": "The preservation effect might be due to the physical properties of SeNPs forming a protective layer rather than antimicrobial action."
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 14.5
+    },
+    {
+      "label": "Table_1",
+      "kind": "table",
+      "page": 7,
+      "pages": [
+        7
+      ],
+      "bbox": [
+        39.69070816040039,
+        500.1390380859375,
+        555.03271484375,
+        590.1869506835938
+      ],
+      "caption": "Fig. 2  EDX (A), TEM micrographs (B), and FTIR analysis showing different functional groups acting as bio-reductant and stabilizing agent (C) for SeNPs biosynthesized using Fenugreek seeds aqueous extract Table 1  Antifungal activity of SeNPs against two Fusarium spp. expressed as mean inhibition zone diameter (ZOI) of three replicates in mm ± SD, MIC and MFC were calculated as mg/mL, inhibition zone of F. moniliforme (A) and F. oxysporum (B) using different",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10593681/p007_Table_1.png",
+      "image_size": [
+        1432,
+        251
+      ],
+      "rotated": false,
+      "row_count": 4,
+      "col_count": 7,
+      "rows": [
+        [
+          "Sample",
+          "Fusarium oxysporum",
+          "Fusarium oxysporum",
+          "Fusarium oxysporum",
+          "Fusarium moniliforme",
+          "Fusarium moniliforme",
+          "Fusarium moniliforme"
+        ],
+        [
+          "",
+          "ZOI (mm)",
+          "MIC (mg/mL)",
+          "MFC(mg/mL)",
+          "ZOI (mm)",
+          "MIC (mg/mL)",
+          "MFC(mg/mL)"
+        ],
+        [
+          "Fenugreek aqueous extract",
+          "0",
+          "ND",
+          "ND",
+          "0",
+          "ND",
+          "ND"
+        ],
+        [
+          "Bio-mediated SeNPs",
+          "31±0.14",
+          "0.25",
+          "0.27",
+          "27±0",
+          "1.7",
+          "2.9"
+        ]
+      ],
+      "markdown": "| Sample                    | Fusarium oxysporum   | Fusarium oxysporum   | Fusarium oxysporum   | Fusarium moniliforme   | Fusarium moniliforme   | Fusarium moniliforme   |\n|---------------------------|----------------------|----------------------|----------------------|------------------------|------------------------|------------------------|\n|                           | ZOI (mm)             | MIC (mg/mL)          | MFC(mg/mL)           | ZOI (mm)               | MIC (mg/mL)            | MFC(mg/mL)             |\n| Fenugreek aqueous extract | 0                    | ND                   | ND                   | 0                      | ND                     | ND                     |\n| Bio-mediated SeNPs        | 31±0.14              | 0.25                 | 0.27                 | 27±0                   | 1.7                    | 2.9                    |",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"results comparison\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"unclear\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [\"Sample\", \"Fusarium oxysporum\", \"Fusarium moniliforme\"],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"Fenugreek aqueous extract\", \"Bio-mediated SeNPs\", \"ZOI (mm)\", \"MIC (mg/mL)\", \"MFC (mg/mL)\"]\n  },\n  \"structure\": \"Comparison of antifungal activity of Fenugreek aqueous extract and bio-mediated SeNPs against Fusarium oxysporum and Fusarium moniliforme, measured by ZOI (mm), MIC (mg/mL), and MFC (mg/mL).\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"The antifungal efficacy of bio-mediated SeNPs compared to Fenugreek aqueous extract against two Fusarium species.\",\n    \"experimental_groups\": [\"Fenugreek aqueous extract\", \"Bio-mediated SeNPs\"],\n    \"controls\": [\"Fenugreek aqueous extract\"],\n    \"perturbations_or_treatments\": [\"Bio-mediated SeNPs\"],\n    \"measured_variables\": [\"ZOI (mm)\", \"MIC (mg/mL)\", \"MFC (mg/mL)\"],\n    \"assay_or_method\": \"Antifungal activity assay\",\n    \"biological_or_experimental_system\": \"Fusarium oxysporum and Fusarium moniliforme\"\n  },\n  \"statistical_markers\": \"ZOI values are reported as mean ± SD.\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [\"mean ± SD\"],\n    \"sample_sizes\": [],\n    \"units\": [\"mm\", \"mg/mL\"],\n    \"effect_directions\": [\"increase in ZOI with SeNPs\"],\n    \"quantitative_values\": [\"31 ± 0.14 mm\", \"0.25 mg/mL\", \"0.27 mg/mL\", \"27 ± 0 mm\", \"1.7 mg/mL\", \"2.9 mg/mL\"]\n  },\n  \"key_entries\": \"Bio-mediated SeNPs show a ZOI of 31 ± 0.14 mm against Fusarium oxysporum and 27 ± 0 mm against Fusarium moniliforme, with MIC and MFC values of 0.25 and 0.27 mg/mL for F. oxysporum, and 1.7 and 2.9 mg/mL for F. moniliforme.\",\n  \"best_result\": \"The most notable result is the ZOI of 31 ± 0.14 mm for SeNPs against F. oxysporum.\",\n  \"patterns_and_trends\": \"Bio-mediated SeNPs exhibit significant antifungal activity against both Fusarium species, with higher efficacy against F. oxysporum compared to F. moniliforme.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Antifungal activity values for SeNPs and extract\"],\n    \"caption_supported_evidence\": [\"Comparison of SeNPs and extract against Fusarium species\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The table demonstrates that bio-mediated SeNPs have significant antifungal activity against Fusarium species, with the highest efficacy shown by the ZOI against F. oxysporum.\",\n  \"scientific_conclusion\": \"The table shows that bio-mediated SeNPs are effective against Fusarium oxysporum and moniliforme, with a notable ZOI of 31 ± 0.14 mm against F. oxysporum. The MIC and MFC values indicate the concentration required for inhibition and fungal growth cessation. This suggests SeNPs could be a promising antifungal agent, particularly against F. oxysporum. The results highlight the potential of SeNPs over the aqueous extract, which showed no activity.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The data suggest SeNPs could be developed into antifungal treatments, but further studies are needed to explore mechanisms and in vivo efficacy.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"The visible antifungal activity in vitro.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What are the mechanisms of action of SeNPs against Fusarium? How do they compare in vivo?\",\n    \"alternative_interpretation\": \"None\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "table_type": "results comparison",
+        "visual_form": {
+          "graph_or_visual_type": "table",
+          "panel_count": "unclear",
+          "panel_labels": [],
+          "axes_or_dimensions": [
+            "Sample",
+            "Fusarium oxysporum",
+            "Fusarium moniliforme"
+          ],
+          "legend_elements": [],
+          "visible_entities": [
+            "Fenugreek aqueous extract",
+            "Bio-mediated SeNPs",
+            "ZOI (mm)",
+            "MIC (mg/mL)",
+            "MFC (mg/mL)"
+          ]
+        },
+        "structure": "Comparison of antifungal activity of Fenugreek aqueous extract and bio-mediated SeNPs against Fusarium oxysporum and Fusarium moniliforme, measured by ZOI (mm), MIC (mg/mL), and MFC (mg/mL).",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "The antifungal efficacy of bio-mediated SeNPs compared to Fenugreek aqueous extract against two Fusarium species.",
+          "experimental_groups": [
+            "Fenugreek aqueous extract",
+            "Bio-mediated SeNPs"
+          ],
+          "controls": [
+            "Fenugreek aqueous extract"
+          ],
+          "perturbations_or_treatments": [
+            "Bio-mediated SeNPs"
+          ],
+          "measured_variables": [
+            "ZOI (mm)",
+            "MIC (mg/mL)",
+            "MFC (mg/mL)"
+          ],
+          "assay_or_method": "Antifungal activity assay",
+          "biological_or_experimental_system": "Fusarium oxysporum and Fusarium moniliforme"
+        },
+        "statistical_markers": "ZOI values are reported as mean ± SD.",
+        "markers_and_statistics": {
+          "statistical_markers": [
+            "mean ± SD"
+          ],
+          "sample_sizes": [],
+          "units": [
+            "mm",
+            "mg/mL"
+          ],
+          "effect_directions": [
+            "increase in ZOI with SeNPs"
+          ],
+          "quantitative_values": [
+            "31 ± 0.14 mm",
+            "0.25 mg/mL",
+            "0.27 mg/mL",
+            "27 ± 0 mm",
+            "1.7 mg/mL",
+            "2.9 mg/mL"
+          ]
+        },
+        "key_entries": "Bio-mediated SeNPs show a ZOI of 31 ± 0.14 mm against Fusarium oxysporum and 27 ± 0 mm against Fusarium moniliforme, with MIC and MFC values of 0.25 and 0.27 mg/mL for F. oxysporum, and 1.7 and 2.9 mg/mL for F. moniliforme.",
+        "best_result": "The most notable result is the ZOI of 31 ± 0.14 mm for SeNPs against F. oxysporum.",
+        "patterns_and_trends": "Bio-mediated SeNPs exhibit significant antifungal activity against both Fusarium species, with higher efficacy against F. oxysporum compared to F. moniliforme.",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Antifungal activity values for SeNPs and extract"
+          ],
+          "caption_supported_evidence": [
+            "Comparison of SeNPs and extract against Fusarium species"
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The table demonstrates that bio-mediated SeNPs have significant antifungal activity against Fusarium species, with the highest efficacy shown by the ZOI against F. oxysporum.",
+        "scientific_conclusion": "The table shows that bio-mediated SeNPs are effective against Fusarium oxysporum and moniliforme, with a notable ZOI of 31 ± 0.14 mm against F. oxysporum. The MIC and MFC values indicate the concentration required for inhibition and fungal growth cessation. This suggests SeNPs could be a promising antifungal agent, particularly against F. oxysporum. The results highlight the potential of SeNPs over the aqueous extract, which showed no activity.",
+        "model_extra_inference": {
+          "extra_inference": "The data suggest SeNPs could be developed into antifungal treatments, but further studies are needed to explore mechanisms and in vivo efficacy.",
+          "support_status": "speculative",
+          "supporting_evidence": "The visible antifungal activity in vitro.",
+          "risk": "medium",
+          "open_questions": "What are the mechanisms of action of SeNPs against Fusarium? How do they compare in vivo?",
+          "alternative_interpretation": "None"
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 14.5
+    },
+    {
+      "label": "Table_2",
+      "kind": "table",
+      "page": 10,
+      "pages": [
+        10
+      ],
+      "bbox": [
+        39.85893630981445,
+        84.92330169677734,
+        555.0838012695312,
+        257.7020568847656
+      ],
+      "caption": "Table 2 Effect of temperature change on diseases progress and shelf-life of tomato fruits",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10593681/p010_Table_2.png",
+      "image_size": [
+        1432,
+        481
+      ],
+      "rotated": false,
+      "row_count": 6,
+      "col_count": 9,
+      "rows": [
+        [
+          "Temperature (25 °C)",
+          "Red colored group (A)",
+          "Red colored group (A)",
+          "Red colored group (A)",
+          "Red colored group (A)",
+          "Yellow colored group (B)",
+          "Yellow colored group (B)",
+          "Yellow colored group (B)",
+          "Yellow colored group (B)"
+        ],
+        [
+          "Temperature (25 °C)",
+          "Water only (T1)",
+          "SeNPs only (T2)",
+          "Infected treated (T3)",
+          "Infected untreated (T4)",
+          "Water only (T1)",
+          "SeNPs only (T2)",
+          "Infected treated (T3)",
+          "Infected untreated (T4)"
+        ],
+        [
+          "6 days",
+          "Fresh +",
+          "Fresh + +",
+          "No Infection",
+          "50% PFD",
+          "Fresh + +",
+          "Fresh + + +",
+          "No Infection",
+          "ND"
+        ],
+        [
+          "10 days",
+          "Shrinkage +",
+          "Fresh +",
+          "20% PFD",
+          "100% PFD",
+          "Fresh +",
+          "Fresh + +",
+          "No Infection",
+          "ND"
+        ],
+        [
+          "12 days",
+          "Shrinkage + +",
+          "Fresh +",
+          "20% PFD",
+          "-",
+          "Shrinkage +",
+          "Fresh +",
+          "No Infection",
+          "66% PFD"
+        ],
+        [
+          "15 days",
+          "Shrinkage + + +",
+          "Shrinkage +",
+          "20% PFD",
+          "-",
+          "Shrinkage + +",
+          "Fresh +",
+          "No Infection",
+          "70% PFD"
+        ]
+      ],
+      "markdown": "Table 2 Effect of temperature change on diseases progress and shelf-life of tomato fruits\n\n| Temperature (25 °C)   | Red colored group (A)   | Red colored group (A)   | Red colored group (A)   | Red colored group (A)   | Yellow colored group (B)   | Yellow colored group (B)   | Yellow colored group (B)   | Yellow colored group (B)   |\n|-----------------------|-------------------------|-------------------------|-------------------------|-------------------------|----------------------------|----------------------------|----------------------------|----------------------------|\n| Temperature (25 °C)   | Water only (T1)         | SeNPs only (T2)         | Infected treated (T3)   | Infected untreated (T4) | Water only (T1)            | SeNPs only (T2)            | Infected treated (T3)      | Infected untreated (T4)    |\n| 6 days                | Fresh +                 | Fresh + +               | No Infection            | 50% PFD                 | Fresh + +                  | Fresh + + +                | No Infection               | ND                         |\n| 10 days               | Shrinkage +             | Fresh +                 | 20% PFD                 | 100% PFD                | Fresh +                    | Fresh + +                  | No Infection               | ND                         |\n| 12 days               | Shrinkage + +           | Fresh +                 | 20% PFD                 | -                       | Shrinkage +                | Fresh +                    | No Infection               | 66% PFD                    |\n| 15 days               | Shrinkage + + +         | Shrinkage +             | 20% PFD                 | -                       | Shrinkage + +              | Fresh +                    | No Infection               | 70% PFD                    |",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"results comparison\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"2\",\n    \"panel_labels\": [\"Red colored group (A)\", \"Yellow colored group (B)\"],\n    \"axes_or_dimensions\": [\"Temperature (25°C)\", \"Treatment types (T1, T2, T3, T4)\"],\n    \"legend_elements\": [\"Fresh, Shrinkage, Infection, PFD\"],\n    \"visible_entities\": [\"Tomato fruits\", \"Water only\", \"SeNPs only\", \"Infected treated\", \"Infected untreated\"]\n  },\n  \"structure\": \"The table compares the effect of different treatments on the disease progress and shelf-life of tomato fruits over time, measured by freshness, shrinkage, and percentage of fruit decay (PFD).\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"The effect of temperature change on disease progress and shelf-life of tomato fruits.\",\n    \"experimental_groups\": [\"Red colored group (A)\", \"Yellow colored group (B)\"],\n    \"controls\": [\"Water only (T1)\"],\n    \"perturbations_or_treatments\": [\"SeNPs only (T2)\", \"Infected treated (T3)\", \"Infected untreated (T4)\"],\n    \"measured_variables\": [\"Freshness\", \"Shrinkage\", \"PFD\"],\n    \"assay_or_method\": \"Observation of tomato fruit condition over time.\",\n    \"biological_or_experimental_system\": \"Tomato fruits\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [\"Data are average of three replicates for each treatment, each replicate contains 10 fruits.\"],\n    \"units\": [\"Percentage of fruit decay (PFD)\"],\n    \"effect_directions\": [\"Decrease in freshness, increase in PFD\"],\n    \"quantitative_values\": [\"50% PFD\", \"100% PFD\", \"66% PFD\", \"70% PFD\"]\n  },\n  \"key_entries\": \"Infected untreated (T4) in the red colored group shows 100% PFD by 10 days, while SeNPs only (T2) maintains freshness up to 12 days.\",\n  \"best_result\": \"Infected treated (T3) shows no infection in both groups across all time points.\",\n  \"patterns_and_trends\": \"SeNPs treatment (T2) significantly delays the onset of shrinkage and PFD compared to water only (T1) and untreated infected (T4).\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"The table shows the progression of fruit condition over time under different treatments.\"],\n    \"caption_supported_evidence\": [\"The table compares disease progress and shelf-life under different treatments.\"],\n    \"local_context_supported_evidence\": [\"The table provides data on the effect of SeNPs on tomato fruits.\"],\n    \"global_paper_supported_interpretation\": [\"The study investigates the effect of temperature on tomato fruit preservation.\"],\n    \"unsupported_or_not_determinable\": [\"The specific mechanism of SeNPs action is not determinable from the table.\"]\n  },\n  \"scientific_interpretation\": \"The table demonstrates that SeNPs treatment effectively delays disease progression and maintains the freshness of tomato fruits longer than water treatment and untreated infected conditions, indicating the potential of SeNPs in extending shelf-life.\",\n  \"scientific_conclusion\": \"The table shows that SeNPs treatment (T2) significantly extends the shelf-life of both red and yellow tomato fruits by preventing infection and reducing fruit decay compared to water only (T1) and infected untreated (T4) conditions. The red colored group (A) shows 100% PFD in the infected untreated condition by 10 days, while SeNPs treatment maintains freshness up to 12 days. This indicates the effectiveness of SeNPs in preserving tomato fruits under the tested conditions, supporting the paper's investigation into the impact of temperature and treatment on fruit shelf-life.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The results suggest that SeNPs could be a viable option for reducing post-harvest losses in tomatoes, potentially applicable to other fruits as well.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"The table shows significant preservation effects of SeNPs on tomato fruits.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What is the mechanism by which SeNPs prevent infection and decay? How do these results translate to other types of fruits or vegetables?\",\n    \"alternative_interpretation\": \"None\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "table_type": "results comparison",
+        "visual_form": {
+          "graph_or_visual_type": "table",
+          "panel_count": "2",
+          "panel_labels": [
+            "Red colored group (A)",
+            "Yellow colored group (B)"
+          ],
+          "axes_or_dimensions": [
+            "Temperature (25°C)",
+            "Treatment types (T1, T2, T3, T4)"
+          ],
+          "legend_elements": [
+            "Fresh, Shrinkage, Infection, PFD"
+          ],
+          "visible_entities": [
+            "Tomato fruits",
+            "Water only",
+            "SeNPs only",
+            "Infected treated",
+            "Infected untreated"
+          ]
+        },
+        "structure": "The table compares the effect of different treatments on the disease progress and shelf-life of tomato fruits over time, measured by freshness, shrinkage, and percentage of fruit decay (PFD).",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "The effect of temperature change on disease progress and shelf-life of tomato fruits.",
+          "experimental_groups": [
+            "Red colored group (A)",
+            "Yellow colored group (B)"
+          ],
+          "controls": [
+            "Water only (T1)"
+          ],
+          "perturbations_or_treatments": [
+            "SeNPs only (T2)",
+            "Infected treated (T3)",
+            "Infected untreated (T4)"
+          ],
+          "measured_variables": [
+            "Freshness",
+            "Shrinkage",
+            "PFD"
+          ],
+          "assay_or_method": "Observation of tomato fruit condition over time.",
+          "biological_or_experimental_system": "Tomato fruits"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [
+            "Data are average of three replicates for each treatment, each replicate contains 10 fruits."
+          ],
+          "units": [
+            "Percentage of fruit decay (PFD)"
+          ],
+          "effect_directions": [
+            "Decrease in freshness, increase in PFD"
+          ],
+          "quantitative_values": [
+            "50% PFD",
+            "100% PFD",
+            "66% PFD",
+            "70% PFD"
+          ]
+        },
+        "key_entries": "Infected untreated (T4) in the red colored group shows 100% PFD by 10 days, while SeNPs only (T2) maintains freshness up to 12 days.",
+        "best_result": "Infected treated (T3) shows no infection in both groups across all time points.",
+        "patterns_and_trends": "SeNPs treatment (T2) significantly delays the onset of shrinkage and PFD compared to water only (T1) and untreated infected (T4).",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "The table shows the progression of fruit condition over time under different treatments."
+          ],
+          "caption_supported_evidence": [
+            "The table compares disease progress and shelf-life under different treatments."
+          ],
+          "local_context_supported_evidence": [
+            "The table provides data on the effect of SeNPs on tomato fruits."
+          ],
+          "global_paper_supported_interpretation": [
+            "The study investigates the effect of temperature on tomato fruit preservation."
+          ],
+          "unsupported_or_not_determinable": [
+            "The specific mechanism of SeNPs action is not determinable from the table."
+          ]
+        },
+        "scientific_interpretation": "The table demonstrates that SeNPs treatment effectively delays disease progression and maintains the freshness of tomato fruits longer than water treatment and untreated infected conditions, indicating the potential of SeNPs in extending shelf-life.",
+        "scientific_conclusion": "The table shows that SeNPs treatment (T2) significantly extends the shelf-life of both red and yellow tomato fruits by preventing infection and reducing fruit decay compared to water only (T1) and infected untreated (T4) conditions. The red colored group (A) shows 100% PFD in the infected untreated condition by 10 days, while SeNPs treatment maintains freshness up to 12 days. This indicates the effectiveness of SeNPs in preserving tomato fruits under the tested conditions, supporting the paper's investigation into the impact of temperature and treatment on fruit shelf-life.",
+        "model_extra_inference": {
+          "extra_inference": "The results suggest that SeNPs could be a viable option for reducing post-harvest losses in tomatoes, potentially applicable to other fruits as well.",
+          "support_status": "speculative",
+          "supporting_evidence": "The table shows significant preservation effects of SeNPs on tomato fruits.",
+          "risk": "medium",
+          "open_questions": "What is the mechanism by which SeNPs prevent infection and decay? How do these results translate to other types of fruits or vegetables?",
+          "alternative_interpretation": "None"
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 14.4
+    }
+  ]
+}

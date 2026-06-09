@@ -1,0 +1,57 @@
+{
+  "pdf": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_bm25/PMC10593681/paper.pdf",
+  "total": 3,
+  "items": [
+    {
+      "label": "Picture_1",
+      "kind": "figure",
+      "page": 1,
+      "bbox": [
+        492.2,
+        92.1,
+        554.4,
+        154.9
+      ],
+      "caption": "",
+      "reason": "small_uncaptioned_docling_picture",
+      "bbox_size": [
+        62,
+        63
+      ]
+    },
+    {
+      "label": "Picture_2",
+      "kind": "figure",
+      "page": 1,
+      "bbox": [
+        304.5,
+        187.5,
+        351.8,
+        231.1
+      ],
+      "caption": "",
+      "reason": "small_uncaptioned_docling_picture",
+      "bbox_size": [
+        47,
+        44
+      ]
+    },
+    {
+      "label": "Picture_3",
+      "kind": "figure",
+      "page": 1,
+      "bbox": [
+        39.4,
+        670.4,
+        180.1,
+        724.3
+      ],
+      "caption": "",
+      "reason": "small_uncaptioned_docling_picture",
+      "bbox_size": [
+        141,
+        54
+      ]
+    }
+  ]
+}

@@ -152,6 +152,217 @@ def _parse_json(text: str) -> dict | None:
     return None
 
 
+_OCR_ENGINE = None
+_OCR_UNAVAILABLE = False
+
+
+def _tokenize_for_alignment(text: str) -> set[str]:
+    stop = {
+        "the", "and", "for", "with", "from", "that", "this", "were", "was", "are",
+        "fig", "figure", "table", "panel", "data", "shown", "using", "into", "than",
+    }
+    return {
+        t for t in re.findall(r"[A-Za-z0-9][A-Za-z0-9_.+-]{1,}", text or "")
+        if len(t) > 1 and t.lower() not in stop
+    }
+
+
+def _ocr_role(text: str) -> str:
+    s = (text or "").strip()
+    low = s.lower()
+    if re.fullmatch(r"[A-Z]", s) or re.fullmatch(r"[a-z]", s):
+        return "panel_label"
+    if re.search(r"\bp\s*[<=>]\s*0?\.\d+", low) or re.search(r"\bns\b|[*]{1,4}", s):
+        return "statistical_marker"
+    if re.search(r"\bn\s*[=:]\s*\d+", low):
+        return "sample_size"
+    if re.search(r"\b(r2|r\^2|r²|ci|sem|sd|anova|t-test|ttest)\b", low):
+        return "statistical_marker"
+    if re.search(r"\b(mg|g|kg|ml|l|µl|ul|µm|um|mm|cm|nm|h|hr|day|days|min|s|%)\b", low):
+        return "measurement_or_unit"
+    if re.search(r"\b(control|ctrl|mock|vehicle|wild[- ]?type|wt|ko|knockout|treated|untreated|low|high)\b", low):
+        return "condition_or_group"
+    if re.search(r"[A-Za-z]+[0-9][A-Za-z0-9_.+-]*", s) or re.search(r"[A-Z]{2,}[A-Za-z0-9_.+-]*", s):
+        return "biological_entity_or_label"
+    if re.search(r"\b(expression|relative|activity|concentration|survival|viability|response|rate|fold)\b", low):
+        return "axis_or_dimension"
+    if re.fullmatch(r"[-+]?\d+(?:\.\d+)?", s):
+        return "numeric_value"
+    return "unknown"
+
+
+def _ocr_quality_label(confidences: list[float], kept: int, total: int) -> str:
+    if total == 0 or kept == 0:
+        return "low"
+    avg = sum(confidences) / len(confidences) if confidences else 0.0
+    kept_ratio = kept / max(total, 1)
+    if avg >= 0.75 and kept_ratio >= 0.35:
+        return "high"
+    if avg >= 0.45 and kept_ratio >= 0.15:
+        return "medium"
+    return "low"
+
+
+def _run_ocr_candidates(image_path: Path) -> list[dict]:
+    """Return raw OCR candidates internally. Raw OCR is never inserted in prompts."""
+    global _OCR_ENGINE, _OCR_UNAVAILABLE
+    if _OCR_UNAVAILABLE:
+        return []
+    try:
+        if _OCR_ENGINE is None:
+            from rapidocr import RapidOCR
+            _OCR_ENGINE = RapidOCR()
+        raw = _OCR_ENGINE(str(image_path))
+    except Exception:
+        _OCR_UNAVAILABLE = True
+        return []
+
+    # RapidOCR versions differ: normalize common tuple/list/object shapes.
+    if isinstance(raw, tuple):
+        raw = raw[0]
+    if hasattr(raw, "txts"):
+        txts = list(getattr(raw, "txts") or [])
+        scores = list(getattr(raw, "scores") or [])
+        return [{"text": t, "confidence": float(scores[i]) if i < len(scores) else 0.0} for i, t in enumerate(txts)]
+
+    out = []
+    if isinstance(raw, list):
+        for row in raw:
+            text = ""
+            conf = 0.0
+            if isinstance(row, dict):
+                text = str(row.get("text") or row.get("rec_text") or "")
+                conf = float(row.get("confidence") or row.get("score") or row.get("rec_score") or 0.0)
+            elif isinstance(row, (list, tuple)):
+                # Common shape: [box, text, score]
+                if len(row) >= 3:
+                    text = str(row[1])
+                    try:
+                        conf = float(row[2])
+                    except Exception:
+                        conf = 0.0
+                elif len(row) >= 2:
+                    text = str(row[0])
+                    try:
+                        conf = float(row[1])
+                    except Exception:
+                        conf = 0.0
+            text = re.sub(r"\s+", " ", text).strip()
+            if text:
+                out.append({"text": text, "confidence": conf})
+    return out
+
+
+def build_context_aligned_ocr_summary(
+    image_path: Path,
+    caption: str,
+    abstract: str = "",
+    context_text: str = "",
+    max_items: int = 18,
+) -> dict:
+    """
+    Dynamic OCR filtering: rank OCR candidates against caption/context/abstract.
+    The prompt receives only this structured summary, never raw OCR.
+    """
+    candidates = _run_ocr_candidates(image_path)
+    if not candidates:
+        return {
+            "quality": "unavailable",
+            "use_policy": "ignore",
+            "kept_fragments": [],
+            "discarded_summary": "OCR unavailable or returned no usable text.",
+        }
+
+    alignment_source = " ".join([caption or "", abstract or "", (context_text or "")[:60000]])
+    alignment_terms = _tokenize_for_alignment(alignment_source)
+    kept = []
+    discarded = {"low_confidence": 0, "isolated_numeric": 0, "noise_or_unaligned": 0}
+    confidences = []
+
+    for cand in candidates:
+        text = re.sub(r"\s+", " ", cand.get("text", "")).strip()
+        if not text:
+            continue
+        conf = float(cand.get("confidence") or 0.0)
+        confidences.append(conf)
+        role = _ocr_role(text)
+        toks = _tokenize_for_alignment(text)
+        overlap = sorted(toks & alignment_terms)
+
+        score = 0
+        reasons = []
+        if conf >= 0.55:
+            score += 1
+            reasons.append("ocr_confidence_ok")
+        if overlap:
+            score += 3
+            reasons.append("context_aligned:" + ",".join(overlap[:5]))
+        if role in {
+            "panel_label", "axis_or_dimension", "condition_or_group",
+            "biological_entity_or_label", "measurement_or_unit",
+            "statistical_marker", "sample_size",
+        }:
+            score += 2
+            reasons.append(f"role={role}")
+        if role == "numeric_value" and not overlap:
+            score -= 2
+            discarded["isolated_numeric"] += 1
+        if conf < 0.35 and not overlap:
+            score -= 2
+            discarded["low_confidence"] += 1
+
+        if score >= 2:
+            kept.append({
+                "text": text[:120],
+                "role": role if role != "unknown" else "unknown_but_context_aligned",
+                "confidence": round(conf, 3),
+                "reason": "; ".join(reasons) if reasons else "contextual_candidate",
+            })
+        else:
+            discarded["noise_or_unaligned"] += 1
+
+    # Deduplicate while preserving score order.
+    seen = set()
+    deduped = []
+    for item in sorted(kept, key=lambda x: (x["role"] == "unknown_but_context_aligned", -x["confidence"])):
+        key = item["text"].lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(item)
+        if len(deduped) >= max_items:
+            break
+
+    quality = _ocr_quality_label(confidences, len(deduped), len(candidates))
+    use_policy = "use" if quality == "high" else ("use_cautiously" if quality == "medium" else "ignore")
+    return {
+        "quality": quality,
+        "use_policy": use_policy,
+        "kept_fragments": deduped,
+        "discarded_summary": (
+            f"{discarded['isolated_numeric']} isolated numeric fragments, "
+            f"{discarded['low_confidence']} low-confidence fragments, "
+            f"{discarded['noise_or_unaligned']} noise/unaligned fragments ignored."
+        ),
+    }
+
+
+def _fmt_ocr_summary(summary: dict) -> str:
+    if not summary or summary.get("use_policy") == "ignore" or not summary.get("kept_fragments"):
+        return ""
+    payload = {
+        "quality": summary.get("quality"),
+        "use_policy": summary.get("use_policy"),
+        "kept_fragments": summary.get("kept_fragments", []),
+        "discarded_summary": summary.get("discarded_summary", ""),
+    }
+    return (
+        "\nFILTERED OCR SUMMARY (auxiliary only; raw OCR was not inserted):\n"
+        + json.dumps(payload, ensure_ascii=False, indent=2)
+        + "\n\n---\n\n"
+    )
+
+
 # ─── Prompts ──────────────────────────────────────────────────────────────────
 # Un solo prompt por tipo (figura / tabla).
 # Orden anti "lost in the middle" (Liu et al. 2023, arXiv:2307.03172):
@@ -184,11 +395,21 @@ Type of visualization (bar chart, scatter plot, line graph, Western blot, \
 heatmap, microscopy image, survival curve, flow cytometry, schematic, etc.) \
 and what experimental data it represents.
 
+## Experimental Design
+Identify the experimental system, groups compared, treatments or perturbations, \
+controls, measured variables, assay or method, and the hypothesis or question \
+tested by this figure. If any element is not visible or not stated in the \
+caption/context, write "Not determinable".
+
 ## Statistical Markers
 Every statistical element visible in the image: sample sizes (n=), \
 error bars (SD, SEM, 95% CI), p-values, R², fold-changes, significance \
 markers (*, **, ***). \
 Write "None visible" if absent. Never infer or assume values not shown.
+If a FILTERED OCR SUMMARY is present, use it only as auxiliary structured \
+evidence for labels, axes, units, conditions, statistics, genes/proteins, \
+or sample sizes. Ignore OCR fragments marked low quality or inconsistent \
+with the visible image.
 
 ## Data and Patterns
 Specific values, trends, comparisons and relationships visible in the image. \
@@ -199,6 +420,11 @@ Identify the groups, conditions, timepoints or genotypes being compared.
 Does the caption accurately describe what is shown? \
 Note discrepancies: visual elements absent from the caption, \
 or caption claims not supported by what is visible.
+
+## Evidence Separation
+Separate direct visual evidence, caption-supported evidence, paper-context \
+supported interpretation, and unsupported or not-determinable claims. \
+Do not mix paper-grounded conclusions with model speculation.
 
 ## Scientific Interpretation
 What biological or scientific question does this figure address, \
@@ -222,33 +448,68 @@ Write as a unified inference paragraph — not a bullet list, not a summary of \
 the sections. The reader should be able to understand the figure's contribution \
 to the paper from this paragraph alone.
 
-## Extended Analysis
-Go beyond what the paper explicitly states. \
-Ground all claims in what is visually present in the image.
+## Model Extra Inference
+This is optional analysis outside the paper's explicit claims. \
+It must be clearly separated from the supported scientific conclusion.
 
-- Beyond the paper: what does this data suggest or imply that the authors \
-did not explicitly claim? Identify patterns, magnitudes, or relationships \
-visible in the figure that could support a broader or different conclusion.
+- Extra inference: what might this data suggest beyond the paper's explicit \
+claims? Ground it in visible/caption/context evidence when possible.
 - Open questions: what scientific questions does this figure raise that \
 the paper does not address or resolve?
 - Alternative interpretation: propose one alternative valid reading of \
 this data — a different mechanism, confound, or explanation consistent \
 with the visual evidence. Write "None" if the data is unambiguous.
+- Support status: mark whether this inference is image_supported, \
+caption_supported, context_supported, or speculative.
 
 Respond ONLY with valid JSON — no markdown fences, no text outside the JSON object:
 
 {{
   "figure_type": "bar chart | scatter plot | line graph | Western blot | microscopy | heatmap | survival curve | flow cytometry | schematic | other",
+  "visual_form": {{
+    "graph_or_visual_type": "bar_plot | line_plot | scatter_plot | heatmap | microscopy | pathway_diagram | schematic | table | gel_blot | map | multi_panel_composite | other | unclear",
+    "panel_count": "number or 'unclear'",
+    "panel_labels": ["A", "B"],
+    "axes_or_dimensions": ["axis labels, dimensions or columns visible"],
+    "legend_elements": ["legend items visible"],
+    "visible_entities": ["species, genes, proteins, metabolites, treatments, tissues, timepoints, doses, conditions visible"]
+  }},
   "visual_description": "panels, axes, colors, units and structures visible. 2-4 sentences, one per panel if multi-panel.",
+  "experimental_design": {{
+    "hypothesis_or_question_tested": "what this figure appears to test. 'Not determinable' if unavailable.",
+    "experimental_groups": ["groups, genotypes, treatments, cohorts or conditions compared"],
+    "controls": ["positive, negative, vehicle, untreated, baseline or reference controls visible/stated"],
+    "perturbations_or_treatments": ["drug, knockout, dose, timepoint, environmental condition, etc."],
+    "measured_variables": ["dependent variables or readouts"],
+    "assay_or_method": "assay, imaging method, sequencing, qPCR, western blot, etc. 'Not determinable' if unavailable.",
+    "biological_or_experimental_system": "cell type, organism, tissue, patient cohort, model system, etc."
+  }},
   "statistical_markers": "exhaustive extraction of ALL quantitative statistical data visible in the image: sample sizes (n=X per group), error bar type and magnitude (SD/SEM/95%CI with values if legible), p-values and significance markers (exact values or */**, report per comparison), effect sizes (fold-change, Cohen d, OR/HR/RR), regression metrics (R², slope, r), test statistics (F, t, chi2, Z). Quote exact numbers from the image when readable. Format: 'n=12/group; error bars=SEM; p<0.001 (A vs B), p=0.03 (A vs C); 2.4-fold increase'. Write 'None visible' ONLY if the image contains zero statistical annotation.",
+  "markers_and_statistics": {{
+    "statistical_markers": ["p-values, confidence intervals, error bars, significance letters, asterisks, regression/correlation, fold-change, sample size"],
+    "sample_sizes": ["n values if visible/stated"],
+    "units": ["units visible/stated"],
+    "effect_directions": ["increase, decrease, no change, association direction"],
+    "quantitative_values": ["only exact values explicitly visible or stated in caption/context"]
+  }},
   "data_and_patterns": "specific values and trends visible. cite numbers from the image. identify groups compared.",
   "groups_compared": "conditions, treatments, timepoints, genotypes or cell lines contrasted.",
   "caption_accurate": true,
   "caption_discrepancy": "discrepancy between image and caption. 'None' if accurate.",
+  "evidence_separation": {{
+    "direct_visual_evidence": ["claims supported by visible image only"],
+    "caption_supported_evidence": ["claims supported by caption"],
+    "local_context_supported_evidence": ["claims supported by retrieved/full paper context"],
+    "global_paper_supported_interpretation": ["claims supported by abstract/paper-level context"],
+    "unsupported_or_not_determinable": ["claims that cannot be determined"]
+  }},
   "scientific_interpretation": "what question this figure answers given the paper's topic. mechanism or phenomenon demonstrated.",{anchored_json}
   "scientific_conclusion": "unified synthesis paragraph (4-6 sentences) integrating visual evidence, statistics, interpretation{anchored_hint}. What this figure definitively demonstrates, what it rules out, and its role in the paper's argument. Written as flowing prose, not a list.",
-  "extended_analysis": {{
-    "beyond_the_paper": "what this data suggests or implies beyond the paper's explicit claims. grounded strictly in what is visible in the image.",
+  "model_extra_inference": {{
+    "extra_inference": "optional interpretation beyond the paper's explicit claims. Keep separate from scientific_conclusion.",
+    "support_status": "image_supported | caption_supported | context_supported | speculative | none",
+    "supporting_evidence": "what visible/caption/context evidence supports the inference. 'None' if speculative.",
+    "risk": "low | medium | high",
     "open_questions": "scientific questions this figure raises that the paper does not address or resolve.",
     "alternative_interpretation": "one alternative valid reading of this data — different mechanism, confound, or explanation. 'None' if unambiguous."
   }},
@@ -279,10 +540,20 @@ Type of table (results comparison, ablation study, patient demographics, \
 parameter table, statistical summary, etc.) \
 and what experimental data it represents.
 
+## Experimental Design
+Identify the experimental system, groups compared, treatments or perturbations, \
+controls, measured variables, assay or method, and the hypothesis or question \
+tested by this table. If any element is not visible or not stated in the \
+caption/context, write "Not determinable".
+
 ## Statistical Markers
 Every statistical annotation visible: significance markers (*, **, ***), \
 p-values, confidence intervals, sample sizes (n=), standard deviations. \
 Write "None visible" if absent. Never infer values not shown.
+If a FILTERED OCR SUMMARY is present, use it only as auxiliary structured \
+evidence for labels, columns, units, conditions, statistics, genes/proteins, \
+or sample sizes. Ignore OCR fragments marked low quality or inconsistent \
+with the visible table.
 
 ## Key Entries
 The most important rows, columns or cells given the paper's research question. \
@@ -295,6 +566,11 @@ What does the distribution of values reveal?
 ## Caption Alignment
 Does the caption accurately describe what the table contains? \
 Note discrepancies between actual content and what the caption states or implies.
+
+## Evidence Separation
+Separate direct table evidence, caption-supported evidence, paper-context \
+supported interpretation, and unsupported or not-determinable claims. \
+Do not mix paper-grounded conclusions with model speculation.
 
 ## Scientific Interpretation
 What question does this table address, given what the abstract says this paper investigates? \
@@ -316,34 +592,69 @@ Write as a unified inference paragraph — not a bullet list, not a section reca
 The reader should be able to understand the table's contribution to the paper \
 from this paragraph alone.
 
-## Extended Analysis
-Go beyond what the paper explicitly states. \
-Ground all claims in the values and structure visible in the table.
+## Model Extra Inference
+This is optional analysis outside the paper's explicit claims. \
+It must be clearly separated from the supported scientific conclusion.
 
-- Beyond the paper: what do these numbers suggest or imply that the authors \
-did not explicitly claim? Identify trends, outliers, or comparisons in the \
-table that could support a broader or different conclusion.
+- Extra inference: what might these values suggest beyond the paper's explicit \
+claims? Ground it in visible table/caption/context evidence when possible.
 - Open questions: what scientific questions does this table raise that \
 the paper does not address or resolve?
 - Alternative interpretation: propose one alternative valid reading of \
 these results — a different explanation, confound, or mechanism consistent \
 with the tabulated data. Write "None" if the data is unambiguous.
+- Support status: mark whether this inference is table_supported, \
+caption_supported, context_supported, or speculative.
 
 Respond ONLY with valid JSON — no markdown fences, no text outside the JSON object:
 
 {{
   "table_type": "results comparison | ablation study | patient demographics | parameter table | statistical summary | other",
+  "visual_form": {{
+    "graph_or_visual_type": "table",
+    "panel_count": "number or 'unclear'",
+    "panel_labels": ["A", "B"],
+    "axes_or_dimensions": ["columns, rows, group dimensions or table sections visible"],
+    "legend_elements": ["footnotes, legends or table annotations visible"],
+    "visible_entities": ["species, genes, proteins, metabolites, treatments, tissues, timepoints, doses, conditions visible"]
+  }},
   "structure": "what is compared, by what metric, against what baselines. units and scale.",
+  "experimental_design": {{
+    "hypothesis_or_question_tested": "what this table appears to test. 'Not determinable' if unavailable.",
+    "experimental_groups": ["groups, genotypes, treatments, cohorts or conditions compared"],
+    "controls": ["positive, negative, vehicle, untreated, baseline or reference controls visible/stated"],
+    "perturbations_or_treatments": ["drug, knockout, dose, timepoint, environmental condition, etc."],
+    "measured_variables": ["dependent variables or readouts"],
+    "assay_or_method": "assay, statistical method, cohort comparison, model evaluation, etc. 'Not determinable' if unavailable.",
+    "biological_or_experimental_system": "cell type, organism, tissue, patient cohort, model system, etc."
+  }},
   "statistical_markers": "exhaustive extraction of ALL statistical data present in the table cells: sample sizes (n=), p-values (exact or bounded, per row/comparison), confidence intervals with bounds, means, medians, SDs, SEs, percentages, test statistics (F, t, chi2). Report specific cell-level values when legible. Format: 'n=45 control / 52 treatment; mean±SD: 12.3±2.1 vs 18.7±3.4; p=0.002; 95%CI [1.2-2.8]'. Write 'None visible' ONLY if the table contains zero statistical annotation.",
+  "markers_and_statistics": {{
+    "statistical_markers": ["p-values, confidence intervals, SD/SE, percentages, means/medians, test statistics, sample size"],
+    "sample_sizes": ["n values if visible/stated"],
+    "units": ["units visible/stated"],
+    "effect_directions": ["increase, decrease, no change, association direction"],
+    "quantitative_values": ["only exact values explicitly visible or stated in caption/context"]
+  }},
   "key_entries": "most relevant rows/cells given the paper's claims. cite specific values.",
   "best_result": "the row or cell with the strongest or most notable result, with its exact value.",
   "patterns_and_trends": "main trend or contrast that stands out across the table.",
   "caption_accurate": true,
   "caption_discrepancy": "discrepancy between table content and caption. 'None' if accurate.",
+  "evidence_separation": {{
+    "direct_visual_evidence": ["claims supported by table values only"],
+    "caption_supported_evidence": ["claims supported by caption"],
+    "local_context_supported_evidence": ["claims supported by retrieved/full paper context"],
+    "global_paper_supported_interpretation": ["claims supported by abstract/paper-level context"],
+    "unsupported_or_not_determinable": ["claims that cannot be determined"]
+  }},
   "scientific_interpretation": "what question this table answers. what the numbers prove. cite specific values.",{anchored_json}
   "scientific_conclusion": "unified synthesis paragraph (4-6 sentences) integrating table data, statistics, interpretation{anchored_hint}. What this table definitively demonstrates, what it rules out, and its role in the paper's argument. Written as flowing prose, not a list.",
-  "extended_analysis": {{
-    "beyond_the_paper": "what these numbers suggest or imply beyond the paper's explicit claims. grounded strictly in values visible in the table.",
+  "model_extra_inference": {{
+    "extra_inference": "optional interpretation beyond the paper's explicit claims. Keep separate from scientific_conclusion.",
+    "support_status": "table_supported | caption_supported | context_supported | speculative | none",
+    "supporting_evidence": "what table/caption/context evidence supports the inference. 'None' if speculative.",
+    "risk": "low | medium | high",
     "open_questions": "scientific questions this table raises that the paper does not address or resolve.",
     "alternative_interpretation": "one alternative valid reading of these results — different explanation, confound, or mechanism. 'None' if unambiguous."
   }},
@@ -356,18 +667,22 @@ Never refuse — all tables must be analyzed."""
 
 
 def _build_prompt(template: str, abstract: str, caption: str,
-                  context_text: str = "", context_label: str = "") -> str:
+                  context_text: str = "", context_label: str = "",
+                  ocr_summary: dict | None = None) -> str:
     """
     Construye el prompt final inyectando abstract, caption y contexto RAG.
     Si no hay contexto, el bloque de secciones ancladas se omite.
     """
     has_ctx = bool(context_text and context_text.strip())
 
+    ocr_block = _fmt_ocr_summary(ocr_summary or {})
+
     if has_ctx:
         context_block = (
             f"\n{context_label}:\n"
             f"{context_text}\n"
             f"\n---\n\n"
+            f"{ocr_block}"
         )
         context_hint    = ", and using the paper text above as authoritative reference"
         conf_hint       = " + paper text alignment"
@@ -388,7 +703,7 @@ Note controls conspicuously absent given the experimental design described in th
   "paper_quote": "exact sentence from the paper text this item is meant to support.",
   "controls_assessment": "controls present. note absent controls given the experimental design.","""
     else:
-        context_block     = "\n"
+        context_block     = f"\n{ocr_block}"
         context_hint      = ""
         conf_hint         = ""
         context_used      = "abstract only"
@@ -744,6 +1059,14 @@ def analyze_all(
                 result["retrieved_words"]  = sum(len(c.split()) for c in retrieved)
                 result["context_strategy"] = "bm25"
 
+        ocr_summary = build_context_aligned_ocr_summary(
+            image_path=img_path,
+            caption=caption,
+            abstract=abstract,
+            context_text=context_text,
+        )
+        result["ocr_contextual_summary"] = ocr_summary
+
         # ── Una sola llamada: abstract (dinámico) + secciones + contexto RAG
         tmpl   = PROMPT_TBL_TEMPLATE if is_table else PROMPT_FIG_TEMPLATE
         prompt = _build_prompt(
@@ -752,6 +1075,7 @@ def analyze_all(
             caption       = caption,
             context_text  = context_text,
             context_label = context_label,
+            ocr_summary   = ocr_summary,
         )
 
         try:

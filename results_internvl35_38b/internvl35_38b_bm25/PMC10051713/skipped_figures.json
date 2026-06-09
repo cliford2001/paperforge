@@ -1,0 +1,142 @@
+{
+  "pdf": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_bm25/PMC10051713/paper.pdf",
+  "total": 8,
+  "items": [
+    {
+      "label": "Picture_1",
+      "kind": "figure",
+      "page": 1,
+      "bbox": [
+        19.1,
+        33.5,
+        157.6,
+        100.0
+      ],
+      "caption": "",
+      "reason": "small_uncaptioned_docling_picture",
+      "bbox_size": [
+        139,
+        66
+      ]
+    },
+    {
+      "label": "Picture_2",
+      "kind": "figure",
+      "page": 1,
+      "bbox": [
+        212.8,
+        188.9,
+        266.0,
+        231.9
+      ],
+      "caption": "",
+      "reason": "small_uncaptioned_docling_picture",
+      "bbox_size": [
+        53,
+        43
+      ]
+    },
+    {
+      "label": "Picture_3",
+      "kind": "figure",
+      "page": 1,
+      "bbox": [
+        525.6,
+        188.8,
+        572.9,
+        232.5
+      ],
+      "caption": "",
+      "reason": "small_uncaptioned_docling_picture",
+      "bbox_size": [
+        47,
+        44
+      ]
+    },
+    {
+      "label": "Picture_4",
+      "kind": "figure",
+      "page": 1,
+      "bbox": [
+        145.7,
+        201.6,
+        192.8,
+        245.1
+      ],
+      "caption": "",
+      "reason": "small_uncaptioned_docling_picture",
+      "bbox_size": [
+        47,
+        43
+      ]
+    },
+    {
+      "label": "Picture_5",
+      "kind": "figure",
+      "page": 1,
+      "bbox": [
+        251.1,
+        202.0,
+        296.2,
+        243.9
+      ],
+      "caption": "",
+      "reason": "small_uncaptioned_docling_picture",
+      "bbox_size": [
+        45,
+        42
+      ]
+    },
+    {
+      "label": "Picture_6",
+      "kind": "figure",
+      "page": 1,
+      "bbox": [
+        18.5,
+        393.7,
+        103.0,
+        444.6
+      ],
+      "caption": "",
+      "reason": "small_uncaptioned_docling_picture",
+      "bbox_size": [
+        85,
+        51
+      ]
+    },
+    {
+      "label": "Picture_7",
+      "kind": "figure",
+      "page": 1,
+      "bbox": [
+        18.3,
+        639.8,
+        109.1,
+        693.4
+      ],
+      "caption": "",
+      "reason": "small_uncaptioned_docling_picture",
+      "bbox_size": [
+        91,
+        54
+      ]
+    },
+    {
+      "label": "Picture_8",
+      "kind": "figure",
+      "page": 1,
+      "bbox": [
+        499.6,
+        38.8,
+        574.7,
+        99.7
+      ],
+      "caption": "",
+      "reason": "small_uncaptioned_docling_picture",
+      "bbox_size": [
+        75,
+        61
+      ]
+    }
+  ]
+}

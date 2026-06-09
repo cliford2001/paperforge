@@ -1,0 +1,57 @@
+[
+  {
+    "pmcid": "PMC10826033",
+    "doi": "https://doi.org/10.1186/s13007-024-01147-w",
+    "title": "",
+    "status": "ok",
+    "error": null,
+    "figures": 16,
+    "tables": 5,
+    "analysis": "analyses_rag.json",
+    "elapsed_sec": 273.01
+  },
+  {
+    "pmcid": "PMC10529573",
+    "doi": "https://doi.org/10.1371/journal.pone.0291996",
+    "title": "Estimation of crossbreeding and genetic parameters for reproductive traits of Boer x Central Highland goats in Ethiopia",
+    "status": "ok",
+    "error": null,
+    "figures": 5,
+    "tables": 5,
+    "analysis": "analyses_rag.json",
+    "elapsed_sec": 151.06
+  },
+  {
+    "pmcid": "PMC10185620",
+    "doi": "https://doi.org/10.1007/s10329-023-01063-y",
+    "title": "My studies of primates: Sex, affinity, and competition",
+    "status": "ok",
+    "error": null,
+    "figures": 9,
+    "tables": 0,
+    "analysis": "analyses_rag.json",
+    "elapsed_sec": 106.55
+  },
+  {
+    "pmcid": "PMC10593681",
+    "doi": "https://doi.org/10.1186/s13568-023-01622-y",
+    "title": "Post-harvest biocontrol of Fusarium infection in tomato fruits using bio-mediated selenium nanoparticles",
+    "status": "ok",
+    "error": null,
+    "figures": 13,
+    "tables": 2,
+    "analysis": "analyses_rag.json",
+    "elapsed_sec": 233.05
+  },
+  {
+    "pmcid": "PMC10051713",
+    "doi": "https://doi.org/10.3390/plants12061206",
+    "title": "Secondary Metabolite Profiling, Antioxidant, Antidiabetic and Neuroprotective Activity of Cestrum nocturnum (Night Scented-Jasmine): Use of In Vitro and In Silico Approach in Determining the Potential Bioactive Compound",
+    "status": "ok",
+    "error": null,
+    "figures": 20,
+    "tables": 11,
+    "analysis": "analyses_rag.json",
+    "elapsed_sec": 459.11
+  }
+]

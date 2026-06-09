@@ -1,0 +1,1474 @@
+[
+  {
+    "label": "Table_1",
+    "kind": "table",
+    "page": 3,
+    "pages": [
+      3
+    ],
+    "bbox": [
+      149.4795379638672,
+      172.9386444091797,
+      575.2101440429688,
+      301.3411865234375
+    ],
+    "render_bbox": [],
+    "caption": "Table 1. %Yield of phytochemicals in different extracts of the leaves of C. nocturnum .",
+    "image_path": "p003_Table_1.png",
+    "image_size": [
+      1183,
+      358
+    ],
+    "row_count": 6,
+    "col_count": 2,
+    "rows": [
+      [
+        "Extract",
+        "%Yield Leaf Extract"
+      ],
+      [
+        "n -Hexane",
+        "1.44"
+      ],
+      [
+        "Dichloromethane",
+        "1.9"
+      ],
+      [
+        "Ethyl acetate",
+        "0.71"
+      ],
+      [
+        "Methanol",
+        "7.63"
+      ],
+      [
+        "Aqueous",
+        "6.38"
+      ]
+    ],
+    "markdown": "Table 1. %Yield of phytochemicals in different extracts of the leaves of C. nocturnum .\n\n| Extract         |   %Yield Leaf Extract |\n|-----------------|-----------------------|\n| n -Hexane       |                  1.44 |\n| Dichloromethane |                   1.9 |\n| Ethyl acetate   |                  0.71 |\n| Methanol        |                  7.63 |\n| Aqueous         |                  6.38 |"
+  },
+  {
+    "label": "Table_2",
+    "kind": "table",
+    "page": 3,
+    "pages": [
+      3
+    ],
+    "bbox": [
+      149.4652862548828,
+      300.8883972167969,
+      575.309814453125,
+      523.4922790527344
+    ],
+    "render_bbox": [],
+    "caption": "Table 2. Phytochemical profiling of different C. nocturnum leaf extracts.",
+    "image_path": "p003_Table_2.png",
+    "image_size": [
+      1184,
+      620
+    ],
+    "row_count": 12,
+    "col_count": 6,
+    "rows": [
+      [
+        "Phytochemicals",
+        "n -Hexane",
+        "EtOAc",
+        "DCM",
+        "MeOH",
+        "Aqueous"
+      ],
+      [
+        "Cardiac glycosides",
+        "-",
+        "+++",
+        "-",
+        "+",
+        "-"
+      ],
+      [
+        "Steroids",
+        "-",
+        "-",
+        "++",
+        "-",
+        "-"
+      ],
+      [
+        "Phenols",
+        "++",
+        "+++",
+        "+",
+        "++",
+        "-"
+      ],
+      [
+        "Flavonoids",
+        "+",
+        "-",
+        "+",
+        "+++",
+        "+"
+      ],
+      [
+        "Tannins",
+        "-",
+        "+++",
+        "-",
+        "++",
+        "-"
+      ],
+      [
+        "Saponins",
+        "-",
+        "-",
+        "-",
+        "+++",
+        "++"
+      ],
+      [
+        "Terpenoids",
+        "-",
+        "-",
+        "+",
+        "-",
+        "-"
+      ],
+      [
+        "Quinone",
+        "++",
+        "+++",
+        "-",
+        "+++",
+        "-"
+      ],
+      [
+        "Coumarins",
+        "+++",
+        "-",
+        "+",
+        "+",
+        "+"
+      ],
+      [
+        "Phlobatannins",
+        "-",
+        "-",
+        "-",
+        "-",
+        "-"
+      ],
+      [
+        "Anthocyanin",
+        "-",
+        "-",
+        "-",
+        "+",
+        "-"
+      ]
+    ],
+    "markdown": "Table 2. Phytochemical profiling of different C. nocturnum leaf extracts.\n\n| Phytochemicals     | n -Hexane   | EtOAc   | DCM   | MeOH   | Aqueous   |\n|--------------------|-------------|---------|-------|--------|-----------|\n| Cardiac glycosides | -           | +++     | -     | +      | -         |\n| Steroids           | -           | -       | ++    | -      | -         |\n| Phenols            | ++          | +++     | +     | ++     | -         |\n| Flavonoids         | +           | -       | +     | +++    | +         |\n| Tannins            | -           | +++     | -     | ++     | -         |\n| Saponins           | -           | -       | -     | +++    | ++        |\n| Terpenoids         | -           | -       | +     | -      | -         |\n| Quinone            | ++          | +++     | -     | +++    | -         |\n| Coumarins          | +++         | -       | +     | +      | +         |\n| Phlobatannins      | -           | -       | -     | -      | -         |\n| Anthocyanin        | -           | -       | -     | +      | -         |"
+  },
+  {
+    "label": "Table_3",
+    "kind": "table",
+    "page": 3,
+    "pages": [
+      3
+    ],
+    "bbox": [
+      149.51687622070312,
+      639.2560424804688,
+      575.3385009765625,
+      783.5151977539062
+    ],
+    "render_bbox": [],
+    "caption": "Table 3. IC50 values of the extracts of C. nocturnum leaf against DPPH, ABTS, α -amylase, and AChE inhibition.",
+    "image_path": "p003_Table_3.png",
+    "image_size": [
+      1184,
+      402
+    ],
+    "row_count": 7,
+    "col_count": 3,
+    "rows": [
+      [
+        "Activity",
+        "Plant Extract/Standard",
+        "IC 50 ( µ g/mL)"
+      ],
+      [
+        "DPPH",
+        "n -Hexane",
+        "185.67 ± 0.81"
+      ],
+      [
+        "DPPH",
+        "DCM",
+        "NS"
+      ],
+      [
+        "DPPH",
+        "EtOAc",
+        "NS"
+      ],
+      [
+        "DPPH",
+        "MeOH",
+        "39.12 ± 0.53"
+      ],
+      [
+        "DPPH",
+        "Aq.",
+        "NS"
+      ],
+      [
+        "DPPH",
+        "Ascorbic acid",
+        "15.12 ± 0.65"
+      ]
+    ],
+    "markdown": "Table 3. IC50 values of the extracts of C. nocturnum leaf against DPPH, ABTS, α -amylase, and AChE inhibition.\n\n| Activity   | Plant Extract/Standard   | IC 50 ( µ g/mL)   |\n|------------|--------------------------|-------------------|\n| DPPH       | n -Hexane                | 185.67 ± 0.81     |\n| DPPH       | DCM                      | NS                |\n| DPPH       | EtOAc                    | NS                |\n| DPPH       | MeOH                     | 39.12 ± 0.53      |\n| DPPH       | Aq.                      | NS                |\n| DPPH       | Ascorbic acid            | 15.12 ± 0.65      |"
+  },
+  {
+    "label": "Table_4",
+    "kind": "table",
+    "page": 4,
+    "pages": [
+      4
+    ],
+    "bbox": [
+      149.71971130371094,
+      97.135009765625,
+      575.342041015625,
+      430.35107421875
+    ],
+    "render_bbox": [],
+    "caption": "",
+    "image_path": "p004_Table_4.png",
+    "image_size": [
+      1184,
+      927
+    ],
+    "row_count": 19,
+    "col_count": 3,
+    "rows": [
+      [
+        "Activity",
+        "Plant Extract/Standard",
+        "IC 50 ( µ g/mL)"
+      ],
+      [
+        "",
+        "n -Hexane",
+        "79.13 ± 0.51"
+      ],
+      [
+        "",
+        "DCM",
+        "NS"
+      ],
+      [
+        "ABTS",
+        "EtOAc",
+        "50.41 ± 0.76"
+      ],
+      [
+        "",
+        "MeOH",
+        "20.94 ± 0.82"
+      ],
+      [
+        "",
+        "Aq.",
+        "56.73 ± 0.56"
+      ],
+      [
+        "",
+        "Ascorbic acid",
+        "22.76 ± 0.43"
+      ],
+      [
+        "α -amylase inhibition",
+        "n -Hexane",
+        "NS"
+      ],
+      [
+        "α -amylase inhibition",
+        "DCM",
+        "NS"
+      ],
+      [
+        "α -amylase inhibition",
+        "EtOAc",
+        "NS"
+      ],
+      [
+        "α -amylase inhibition",
+        "MeOH",
+        "188.77 ± 1.67"
+      ],
+      [
+        "α -amylase inhibition",
+        "Aq.",
+        "NS"
+      ],
+      [
+        "α -amylase inhibition",
+        "Acarbose",
+        "41.54 ± 0.54"
+      ],
+      [
+        "Acetylcholinesterase inhibition",
+        "n -Hexane",
+        "NS"
+      ],
+      [
+        "Acetylcholinesterase inhibition",
+        "DCM",
+        "NS"
+      ],
+      [
+        "Acetylcholinesterase inhibition",
+        "EtOAc",
+        "NS"
+      ],
+      [
+        "Acetylcholinesterase inhibition",
+        "MeOH",
+        "239.44 ± 0.93"
+      ],
+      [
+        "Acetylcholinesterase inhibition",
+        "Aq.",
+        "NS"
+      ],
+      [
+        "Acetylcholinesterase inhibition",
+        "Tacrine",
+        "4.03 ± 0.47"
+      ]
+    ],
+    "markdown": "| Activity                        | Plant Extract/Standard   | IC 50 ( µ g/mL)   |\n|---------------------------------|--------------------------|-------------------|\n|                                 | n -Hexane                | 79.13 ± 0.51      |\n|                                 | DCM                      | NS                |\n| ABTS                            | EtOAc                    | 50.41 ± 0.76      |\n|                                 | MeOH                     | 20.94 ± 0.82      |\n|                                 | Aq.                      | 56.73 ± 0.56      |\n|                                 | Ascorbic acid            | 22.76 ± 0.43      |\n| α -amylase inhibition           | n -Hexane                | NS                |\n| α -amylase inhibition           | DCM                      | NS                |\n| α -amylase inhibition           | EtOAc                    | NS                |\n| α -amylase inhibition           | MeOH                     | 188.77 ± 1.67     |\n| α -amylase inhibition           | Aq.                      | NS                |\n| α -amylase inhibition           | Acarbose                 | 41.54 ± 0.54      |\n| Acetylcholinesterase inhibition | n -Hexane                | NS                |\n| Acetylcholinesterase inhibition | DCM                      | NS                |\n| Acetylcholinesterase inhibition | EtOAc                    | NS                |\n| Acetylcholinesterase inhibition | MeOH                     | 239.44 ± 0.93     |\n| Acetylcholinesterase inhibition | Aq.                      | NS                |\n| Acetylcholinesterase inhibition | Tacrine                  | 4.03 ± 0.47       |"
+  },
+  {
+    "label": "Table_5",
+    "kind": "table",
+    "page": 7,
+    "pages": [
+      7
+    ],
+    "bbox": [
+      19.06704330444336,
+      620.925537109375,
+      574.9259033203125,
+      776.3786010742188
+    ],
+    "render_bbox": [],
+    "caption": "Table 4. GC-MS predicted compounds with their molecular weight, formula, peak area (%), and respective PubChem IDs.",
+    "image_path": "p007_Table_5.png",
+    "image_size": [
+      1546,
+      433
+    ],
+    "row_count": 7,
+    "col_count": 7,
+    "rows": [
+      [
+        "S. No",
+        "R.T 1",
+        "Compound",
+        "PubChem ID",
+        "Molecular Formula",
+        "Molecular Weight",
+        "Area%"
+      ],
+      [
+        "1",
+        "20.058",
+        "1-Hexadecanol",
+        "2682",
+        "C 16 H 34 O",
+        "242",
+        "2.31"
+      ],
+      [
+        "2",
+        "20.238",
+        "p-Chloromethoxybenzene",
+        "12,167",
+        "C 7 H 7 ClO",
+        "142",
+        "1.53"
+      ],
+      [
+        "3",
+        "21.753",
+        "Hexaglycerine",
+        "6510",
+        "C 6 H 14 O 3",
+        "134",
+        "14.46"
+      ],
+      [
+        "4",
+        "23.234",
+        "2,4-Di-tert-butylphenol",
+        "7311",
+        "C 14 H 22 O",
+        "206",
+        "20.05"
+      ],
+      [
+        "5",
+        "23.817",
+        "8-Methylpeptadiecance",
+        "292,723",
+        "C 18 H 38",
+        "254",
+        "0.50"
+      ],
+      [
+        "6",
+        "25.408",
+        "Precocene I",
+        "28,619",
+        "C 12 H 14O2",
+        "190",
+        "18.74"
+      ]
+    ],
+    "markdown": "Table 4. GC-MS predicted compounds with their molecular weight, formula, peak area (%), and respective PubChem IDs.\n\n|   S. No |   R.T 1 | Compound                |   PubChem ID | Molecular Formula   |   Molecular Weight |   Area% |\n|---------|---------|-------------------------|--------------|---------------------|--------------------|---------|\n|       1 |  20.058 | 1-Hexadecanol           |         2682 | C 16 H 34 O         |                242 |    2.31 |\n|       2 |  20.238 | p-Chloromethoxybenzene  |       12,167 | C 7 H 7 ClO         |                142 |    1.53 |\n|       3 |  21.753 | Hexaglycerine           |         6510 | C 6 H 14 O 3        |                134 |   14.46 |\n|       4 |  23.234 | 2,4-Di-tert-butylphenol |         7311 | C 14 H 22 O         |                206 |   20.05 |\n|       5 |  23.817 | 8-Methylpeptadiecance   |      292,723 | C 18 H 38           |                254 |    0.50 |\n|       6 |  25.408 | Precocene I             |       28,619 | C 12 H 14O2         |                190 |   18.74 |"
+  },
+  {
+    "label": "Table_6",
+    "kind": "table",
+    "page": 8,
+    "pages": [
+      8
+    ],
+    "bbox": [
+      19.50967788696289,
+      99.38243865966797,
+      574.547607421875,
+      471.30499267578125
+    ],
+    "render_bbox": [],
+    "caption": "Table 4. Cont.",
+    "image_path": "p008_Table_6.png",
+    "image_size": [
+      1542,
+      1034
+    ],
+    "row_count": 18,
+    "col_count": 7,
+    "rows": [
+      [
+        "S. No",
+        "R.T 1",
+        "Compound",
+        "PubChem ID",
+        "Molecular Formula",
+        "Molecular Weight",
+        "Area%"
+      ],
+      [
+        "7",
+        "29.310",
+        "DL-Arabinose",
+        "854",
+        "C 5 H 10 O 5",
+        "150",
+        "4.11"
+      ],
+      [
+        "8",
+        "30.011",
+        "Behenic alcohol",
+        "12,620",
+        "C 22 H 46 O",
+        "326",
+        "1.87"
+      ],
+      [
+        "9",
+        "31.471",
+        "Phthalic acid, diisobutyl ester",
+        "6782",
+        "C 16 H 22 O 4",
+        "278",
+        "1.85"
+      ],
+      [
+        "10",
+        "32.457",
+        "7,9-Di-tert-butyl-1-oxaspiro (4,5) deca-6,9-diene-2,8-dione",
+        "545,303",
+        "C 17 H 24 O 3",
+        "276",
+        "1.56"
+      ],
+      [
+        "11",
+        "32.835",
+        "Hexadecanoic acid, methyl ester",
+        "8181",
+        "C 17 H 34 O 2",
+        "270",
+        "1.63"
+      ],
+      [
+        "12",
+        "32.940",
+        "Methyl 3-(3,5-ditert-butyl-4-hydroxyphenyl) propanoate",
+        "62,603",
+        "C 18 H 28 O 3",
+        "292",
+        "6.73"
+      ],
+      [
+        "13",
+        "33.482",
+        "Dibutyl phthalate",
+        "3026",
+        "C 16 H 22 O 4",
+        "278",
+        "2.44"
+      ],
+      [
+        "14",
+        "44.487",
+        "2-Palmitoylglycerol",
+        "123,409",
+        "C 19 H 38 O 4",
+        "330",
+        "1.18"
+      ],
+      [
+        "15",
+        "47.464",
+        "Docosanoic anhydride",
+        "566,696",
+        "C 44 H 86 O 3",
+        "662",
+        "2.34"
+      ],
+      [
+        "16",
+        "50.251",
+        "Dimethyl Eicosanedioate",
+        "566,668",
+        "C 22 H 42 O 4",
+        "370",
+        "3.70"
+      ],
+      [
+        "17",
+        "52.870",
+        "Tetracontanedioic acid, dimethyl ester",
+        "566,763",
+        "C 42 H 82 O 4",
+        "650",
+        "2.77"
+      ],
+      [
+        "18",
+        "55.677",
+        "Docosanoic acid",
+        "8215",
+        "C 22 H 44 O 2",
+        "340",
+        "1.49"
+      ],
+      [
+        "19",
+        "55.790",
+        "2,4,6-Trichlorobenzoic acid",
+        "5764",
+        "C 7 H 3 Cl 3 O 2",
+        "224",
+        "0.18"
+      ],
+      [
+        "20",
+        "56.753",
+        "Sebacic acid, di(4-bromo-2,6-difluorobenzyl) ester",
+        "91,729,085",
+        "C 24 H 24 Br 2 F 4 O 4",
+        "610",
+        "0.57"
+      ],
+      [
+        "21",
+        "59.743",
+        "Beta-Sitosterol trimethylsilyl ether",
+        "14,429,144",
+        "C 32 H 58 OSi",
+        "486",
+        "0.10"
+      ],
+      [
+        "22",
+        "60.173",
+        "Tris(2,4-di-tert-butylphenyl) phosphate",
+        "14,572,930",
+        "C 42 H 63 O 4 P",
+        "662",
+        "0.45"
+      ],
+      [
+        "23",
+        "61.523",
+        "Methyl 22-hydroxydocosanoate",
+        "13,406,065",
+        "C 23 H 46 O 3",
+        "370",
+        "0.32"
+      ]
+    ],
+    "markdown": "Table 4. Cont.\n\n|   S. No |   R.T 1 | Compound                                                    |   PubChem ID | Molecular Formula      |   Molecular Weight |   Area% |\n|---------|---------|-------------------------------------------------------------|--------------|------------------------|--------------------|---------|\n|       7 |  29.310 | DL-Arabinose                                                |          854 | C 5 H 10 O 5           |                150 |    4.11 |\n|       8 |  30.011 | Behenic alcohol                                             |       12,620 | C 22 H 46 O            |                326 |    1.87 |\n|       9 |  31.471 | Phthalic acid, diisobutyl ester                             |         6782 | C 16 H 22 O 4          |                278 |    1.85 |\n|      10 |  32.457 | 7,9-Di-tert-butyl-1-oxaspiro (4,5) deca-6,9-diene-2,8-dione |      545,303 | C 17 H 24 O 3          |                276 |    1.56 |\n|      11 |  32.835 | Hexadecanoic acid, methyl ester                             |         8181 | C 17 H 34 O 2          |                270 |    1.63 |\n|      12 |  32.940 | Methyl 3-(3,5-ditert-butyl-4-hydroxyphenyl) propanoate      |       62,603 | C 18 H 28 O 3          |                292 |    6.73 |\n|      13 |  33.482 | Dibutyl phthalate                                           |         3026 | C 16 H 22 O 4          |                278 |    2.44 |\n|      14 |  44.487 | 2-Palmitoylglycerol                                         |      123,409 | C 19 H 38 O 4          |                330 |    1.18 |\n|      15 |  47.464 | Docosanoic anhydride                                        |      566,696 | C 44 H 86 O 3          |                662 |    2.34 |\n|      16 |  50.251 | Dimethyl Eicosanedioate                                     |      566,668 | C 22 H 42 O 4          |                370 |    3.70 |\n|      17 |  52.870 | Tetracontanedioic acid, dimethyl ester                      |      566,763 | C 42 H 82 O 4          |                650 |    2.77 |\n|      18 |  55.677 | Docosanoic acid                                             |         8215 | C 22 H 44 O 2          |                340 |    1.49 |\n|      19 |  55.790 | 2,4,6-Trichlorobenzoic acid                                 |         5764 | C 7 H 3 Cl 3 O 2       |                224 |    0.18 |\n|      20 |  56.753 | Sebacic acid, di(4-bromo-2,6-difluorobenzyl) ester          |   91,729,085 | C 24 H 24 Br 2 F 4 O 4 |                610 |    0.57 |\n|      21 |  59.743 | Beta-Sitosterol trimethylsilyl ether                        |   14,429,144 | C 32 H 58 OSi          |                486 |    0.10 |\n|      22 |  60.173 | Tris(2,4-di-tert-butylphenyl) phosphate                     |   14,572,930 | C 42 H 63 O 4 P        |                662 |    0.45 |\n|      23 |  61.523 | Methyl 22-hydroxydocosanoate                                |   13,406,065 | C 23 H 46 O 3          |                370 |    0.32 |"
+  },
+  {
+    "label": "Table_7",
+    "kind": "table",
+    "page": 8,
+    "pages": [
+      8
+    ],
+    "bbox": [
+      19.45162582397461,
+      480.4609375,
+      574.7489013671875,
+      771.3925170898438
+    ],
+    "render_bbox": [],
+    "caption": "di(4 bromo 2,6 diﬂuorobenzyl) ester 21 59.743 Beta-Sitosterol trimethylsilyl ether 14,429,144 C32H58OSi 486 0.10 22 60.173 Tris(2,4-di-tert-butylphenyl) phosphate 14,572,930 C42H63O4P 662 0.45 23 61.523 Methyl 22-hydroxydocosanoate 13,406,065 C23H46O3 370 0.32 1 Retention time. Table 5 Chemical properties of GC MS predicted compounds of C nocturnum",
+    "image_path": "p008_Table_7.png",
+    "image_size": [
+      1543,
+      809
+    ],
+    "row_count": 19,
+    "col_count": 11,
+    "rows": [
+      [
+        "S. No.",
+        "Compound Name",
+        "PubChem ID (CID)",
+        "Log P 1",
+        "TPSA 2 (Å 2 )",
+        "BBB 3",
+        "HIA 4",
+        "HBA 5",
+        "HBD 6",
+        "Rotatable Bonds",
+        "Violation"
+      ],
+      [
+        "1",
+        "1-Hexadecanol",
+        "2682",
+        "4.41",
+        "20.23",
+        "Yes",
+        "High",
+        "1",
+        "1",
+        "14",
+        "1"
+      ],
+      [
+        "2",
+        "p-Chloromethoxybenzene",
+        "12,167",
+        "2.18",
+        "9.23",
+        "No",
+        "High",
+        "1",
+        "0",
+        "1",
+        "1"
+      ],
+      [
+        "3",
+        "Hexaglycerine",
+        "6510",
+        "1.26",
+        "60.69",
+        "No",
+        "High",
+        "3",
+        "3",
+        "4",
+        "0"
+      ],
+      [
+        "4",
+        "2,4-Di-tert-butylphenol",
+        "7311",
+        "3.08",
+        "20.23",
+        "Yes",
+        "High",
+        "1",
+        "1",
+        "2",
+        "0"
+      ],
+      [
+        "5",
+        "8-Methylpeptadicance",
+        "292,723",
+        "5.13",
+        "0",
+        "Yes",
+        "Low",
+        "0",
+        "0",
+        "14",
+        "0"
+      ],
+      [
+        "6",
+        "Precocene I",
+        "28,619",
+        "2.74",
+        "18.46",
+        "Yes",
+        "High",
+        "2",
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "7",
+        "DL-Arabinose",
+        "854",
+        "0.1",
+        "97.99",
+        "No",
+        "Low",
+        "5",
+        "4",
+        "4",
+        "0"
+      ],
+      [
+        "8",
+        "Behenic alcohol",
+        "12,620",
+        "5.73",
+        "20.23",
+        "No",
+        "Low",
+        "1",
+        "1",
+        "20",
+        "1"
+      ],
+      [
+        "9",
+        "Phthalic acid, diisobutyl ester",
+        "6782",
+        "3.31",
+        "52.6",
+        "Yes",
+        "High",
+        "4",
+        "0",
+        "8",
+        "0"
+      ],
+      [
+        "10",
+        "7,9-Di-tert-butyl-1-oxaspiro (4,5) deca-6,9-diene-2,8-dione",
+        "545,303",
+        "2.91",
+        "43.37",
+        "Yes",
+        "High",
+        "3",
+        "0",
+        "2",
+        "0"
+      ],
+      [
+        "11",
+        "Hexadecanoic acid, methyl ester",
+        "8181",
+        "4.41",
+        "26.3",
+        "Yes",
+        "High",
+        "2",
+        "0",
+        "15",
+        "1"
+      ],
+      [
+        "12",
+        "Methyl 3-(3,5-ditert-butyl-4-hydroxyphenyl) propanoate",
+        "62,603",
+        "3.75",
+        "46.53",
+        "Yes",
+        "High",
+        "3",
+        "1",
+        "6",
+        "0"
+      ],
+      [
+        "13",
+        "Dibutyl phthalate",
+        "3026",
+        "2.97",
+        "52.6",
+        "Yes",
+        "High",
+        "4",
+        "0",
+        "10",
+        "0"
+      ],
+      [
+        "14",
+        "2-Palmitoylglycerol",
+        "123,409",
+        "4.5",
+        "66.76",
+        "Yes",
+        "High",
+        "4",
+        "2",
+        "18",
+        "0"
+      ],
+      [
+        "15",
+        "Docosanoic anhydride",
+        "566,696",
+        "10.4",
+        "43.37",
+        "No",
+        "Low",
+        "3",
+        "0",
+        "42",
+        "2"
+      ],
+      [
+        "16",
+        "Dimethyl Eicosanedioate",
+        "566,668",
+        "5.27",
+        "52.6",
+        "No",
+        "High",
+        "4",
+        "0",
+        "21",
+        "1"
+      ],
+      [
+        "17",
+        "Tetracontanedioic acid, dimethyl ester",
+        "566,763",
+        "10.06",
+        "52.6",
+        "No",
+        "Low",
+        "4",
+        "0",
+        "41",
+        "2"
+      ],
+      [
+        "18",
+        "Docosanoic acid",
+        "8215",
+        "5.26",
+        "37.3",
+        "No",
+        "Low",
+        "2",
+        "1",
+        "20",
+        "1"
+      ]
+    ],
+    "markdown": "|   S. No. | Compound Name                                               |   PubChem ID (CID) |   Log P 1 |   TPSA 2 (Å 2 ) | BBB 3   | HIA 4   |   HBA 5 |   HBD 6 |   Rotatable Bonds |   Violation |\n|----------|-------------------------------------------------------------|--------------------|-----------|-----------------|---------|---------|---------|---------|-------------------|-------------|\n|        1 | 1-Hexadecanol                                               |               2682 |      4.41 |           20.23 | Yes     | High    |       1 |       1 |                14 |           1 |\n|        2 | p-Chloromethoxybenzene                                      |             12,167 |      2.18 |            9.23 | No      | High    |       1 |       0 |                 1 |           1 |\n|        3 | Hexaglycerine                                               |               6510 |      1.26 |           60.69 | No      | High    |       3 |       3 |                 4 |           0 |\n|        4 | 2,4-Di-tert-butylphenol                                     |               7311 |      3.08 |           20.23 | Yes     | High    |       1 |       1 |                 2 |           0 |\n|        5 | 8-Methylpeptadicance                                        |            292,723 |      5.13 |               0 | Yes     | Low     |       0 |       0 |                14 |           0 |\n|        6 | Precocene I                                                 |             28,619 |      2.74 |           18.46 | Yes     | High    |       2 |       0 |                 1 |           0 |\n|        7 | DL-Arabinose                                                |                854 |       0.1 |           97.99 | No      | Low     |       5 |       4 |                 4 |           0 |\n|        8 | Behenic alcohol                                             |             12,620 |      5.73 |           20.23 | No      | Low     |       1 |       1 |                20 |           1 |\n|        9 | Phthalic acid, diisobutyl ester                             |               6782 |      3.31 |            52.6 | Yes     | High    |       4 |       0 |                 8 |           0 |\n|       10 | 7,9-Di-tert-butyl-1-oxaspiro (4,5) deca-6,9-diene-2,8-dione |            545,303 |      2.91 |           43.37 | Yes     | High    |       3 |       0 |                 2 |           0 |\n|       11 | Hexadecanoic acid, methyl ester                             |               8181 |      4.41 |            26.3 | Yes     | High    |       2 |       0 |                15 |           1 |\n|       12 | Methyl 3-(3,5-ditert-butyl-4-hydroxyphenyl) propanoate      |             62,603 |      3.75 |           46.53 | Yes     | High    |       3 |       1 |                 6 |           0 |\n|       13 | Dibutyl phthalate                                           |               3026 |      2.97 |            52.6 | Yes     | High    |       4 |       0 |                10 |           0 |\n|       14 | 2-Palmitoylglycerol                                         |            123,409 |       4.5 |           66.76 | Yes     | High    |       4 |       2 |                18 |           0 |\n|       15 | Docosanoic anhydride                                        |            566,696 |      10.4 |           43.37 | No      | Low     |       3 |       0 |                42 |           2 |\n|       16 | Dimethyl Eicosanedioate                                     |            566,668 |      5.27 |            52.6 | No      | High    |       4 |       0 |                21 |           1 |\n|       17 | Tetracontanedioic acid, dimethyl ester                      |            566,763 |     10.06 |            52.6 | No      | Low     |       4 |       0 |                41 |           2 |\n|       18 | Docosanoic acid                                             |               8215 |      5.26 |            37.3 | No      | Low     |       2 |       1 |                20 |           1 |"
+  },
+  {
+    "label": "Table_8",
+    "kind": "table",
+    "page": 9,
+    "pages": [
+      9
+    ],
+    "bbox": [
+      18.955738067626953,
+      99.3097152709961,
+      575.2539672851562,
+      242.9870147705078
+    ],
+    "render_bbox": [],
+    "caption": "Table 5. Cont.",
+    "image_path": "p009_Table_8.png",
+    "image_size": [
+      1546,
+      400
+    ],
+    "row_count": 8,
+    "col_count": 11,
+    "rows": [
+      [
+        "S. No.",
+        "Compound Name",
+        "PubChem ID (CID)",
+        "Log P 1",
+        "TPSA 2 (Å 2 )",
+        "BBB 3",
+        "HIA 4",
+        "HBA 5",
+        "HBD 6",
+        "Rotatable Bonds",
+        "Violation"
+      ],
+      [
+        "19",
+        "2,4,6-Trichlorobenzoic acid",
+        "5764",
+        "1.62",
+        "37.3",
+        "Yes",
+        "High",
+        "2",
+        "1",
+        "1",
+        "0"
+      ],
+      [
+        "20",
+        "Sebacic acid, di(4-bromo-2,6-difluorobenzyl) ester",
+        "91,729,085",
+        "5.42",
+        "52.6",
+        "No",
+        "Low",
+        "8",
+        "0",
+        "15",
+        "2"
+      ],
+      [
+        "21",
+        "Beta-Sitosterol trimethylsilyl ether",
+        "14,429,144",
+        "6.36",
+        "9.23",
+        "No",
+        "Low",
+        "1",
+        "0",
+        "8",
+        "1"
+      ],
+      [
+        "22",
+        "Tris(2,4-di-tert-butylphenyl) phosphate",
+        "14,572,930",
+        "6.93",
+        "54.57",
+        "No",
+        "Low",
+        "4",
+        "0",
+        "12",
+        "2"
+      ],
+      [
+        "23",
+        "Methyl 22-hydroxydocosanoate",
+        "13,406,065",
+        "5.8",
+        "46.53",
+        "No",
+        "Low",
+        "3",
+        "1",
+        "22",
+        "1"
+      ],
+      [
+        "24",
+        "Tacrine",
+        "1935",
+        "2.09",
+        "38.91",
+        "Yes",
+        "High",
+        "1",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "25",
+        "Acarbose",
+        "41,774",
+        "1.43",
+        "321.17",
+        "No",
+        "Low",
+        "19",
+        "14",
+        "9",
+        "3"
+      ]
+    ],
+    "markdown": "Table 5. Cont.\n\n|   S. No. | Compound Name                                      |   PubChem ID (CID) |   Log P 1 |   TPSA 2 (Å 2 ) | BBB 3   | HIA 4   |   HBA 5 |   HBD 6 |   Rotatable Bonds |   Violation |\n|----------|----------------------------------------------------|--------------------|-----------|-----------------|---------|---------|---------|---------|-------------------|-------------|\n|       19 | 2,4,6-Trichlorobenzoic acid                        |               5764 |      1.62 |            37.3 | Yes     | High    |       2 |       1 |                 1 |           0 |\n|       20 | Sebacic acid, di(4-bromo-2,6-difluorobenzyl) ester |         91,729,085 |      5.42 |            52.6 | No      | Low     |       8 |       0 |                15 |           2 |\n|       21 | Beta-Sitosterol trimethylsilyl ether               |         14,429,144 |      6.36 |            9.23 | No      | Low     |       1 |       0 |                 8 |           1 |\n|       22 | Tris(2,4-di-tert-butylphenyl) phosphate            |         14,572,930 |      6.93 |           54.57 | No      | Low     |       4 |       0 |                12 |           2 |\n|       23 | Methyl 22-hydroxydocosanoate                       |         13,406,065 |       5.8 |           46.53 | No      | Low     |       3 |       1 |                22 |           1 |\n|       24 | Tacrine                                            |               1935 |      2.09 |           38.91 | Yes     | High    |       1 |       1 |                 0 |           0 |\n|       25 | Acarbose                                           |             41,774 |      1.43 |          321.17 | No      | Low     |      19 |      14 |                 9 |           3 |"
+  },
+  {
+    "label": "Table_9",
+    "kind": "table",
+    "page": 10,
+    "pages": [
+      10
+    ],
+    "bbox": [
+      18.773094177246094,
+      107.2698974609375,
+      822.4166870117188,
+      433.0045471191406
+    ],
+    "render_bbox": [],
+    "caption": "",
+    "image_path": "p010_Table_9.png",
+    "image_size": [
+      2233,
+      906
+    ],
+    "row_count": 14,
+    "col_count": 10,
+    "rows": [
+      [
+        "S. No.",
+        "Compound Name",
+        "PubChem ID (CID)",
+        "LD 50 (mg/kg)",
+        "Toxicity Class",
+        "Hepatotoxicity",
+        "Carcinogenicity",
+        "Immunogenicity",
+        "Mutagenicity",
+        "Cytotoxicity"
+      ],
+      [
+        "1",
+        "1-Hexadecanol",
+        "2682",
+        "1000",
+        "4",
+        "Inactive",
+        "Inactive",
+        "Inactive",
+        "Inactive",
+        "Inactive"
+      ],
+      [
+        "2",
+        "2,4-Di-tert-butylphenol",
+        "7311",
+        "700",
+        "4",
+        "Inactive",
+        "Inactive",
+        "Inactive",
+        "Inactive",
+        "Inactive"
+      ],
+      [
+        "3",
+        "2,4,6-Trichlorobenzoic acid",
+        "5764",
+        "830",
+        "4",
+        "Inactive",
+        "Inactive",
+        "Inactive",
+        "Inactive",
+        "Inactive"
+      ],
+      [
+        "4",
+        "2-Palmitoylglycerol",
+        "123,409",
+        "5000",
+        "5",
+        "Inactive",
+        "Inactive",
+        "Inactive",
+        "Inactive",
+        "Inactive"
+      ],
+      [
+        "5",
+        "7,9-Di-tert-butyl-1-oxaspiro (4,5) deca-6,9-diene-2,8-dione",
+        "545,303",
+        "900",
+        "4",
+        "Inactive",
+        "Inactive",
+        "Inactive",
+        "Inactive",
+        "Inactive"
+      ],
+      [
+        "6",
+        "Hexadecanoic acid, methyl ester",
+        "8181",
+        "5000",
+        "5",
+        "Inactive",
+        "Inactive",
+        "Inactive",
+        "Inactive",
+        "Inactive"
+      ],
+      [
+        "7",
+        "Dimethyl Eicosanedioate",
+        "566,668",
+        "5000",
+        "5",
+        "Inactive",
+        "Inactive",
+        "Inactive",
+        "Inactive",
+        "Inactive"
+      ],
+      [
+        "8",
+        "Hexaglycerine",
+        "6510",
+        "12,980",
+        "6",
+        "Inactive",
+        "Inactive",
+        "Inactive",
+        "Inactive",
+        "Inactive"
+      ],
+      [
+        "9",
+        "Methyl 22-hydroxydocosanoate",
+        "13,406,065",
+        "5000",
+        "5",
+        "Inactive",
+        "Inactive",
+        "Inactive",
+        "Inactive",
+        "Inactive"
+      ],
+      [
+        "10",
+        "Dibutyl phthalate",
+        "3026",
+        "3474",
+        "5",
+        "Inactive",
+        "Active",
+        "Inactive",
+        "Inactive",
+        "Inactive"
+      ],
+      [
+        "12",
+        "Phthalic acid, diisobutyl ester",
+        "6782",
+        "10,000",
+        "6",
+        "Inactive",
+        "Active",
+        "Inactive",
+        "Inactive",
+        "Inactive"
+      ],
+      [
+        "13",
+        "p-Chloromethoxybenzene",
+        "12,167",
+        "318",
+        "4",
+        "Inactive",
+        "Active",
+        "Inactive",
+        "Inactive",
+        "Inactive"
+      ],
+      [
+        "14",
+        "Precocene I",
+        "28,619",
+        "500",
+        "4",
+        "Inactive",
+        "Active",
+        "Active",
+        "Inactive",
+        "Inactive"
+      ]
+    ],
+    "markdown": "|   S. No. | Compound Name                                               |   PubChem ID (CID) |   LD 50 (mg/kg) |   Toxicity Class | Hepatotoxicity   | Carcinogenicity   | Immunogenicity   | Mutagenicity   | Cytotoxicity   |\n|----------|-------------------------------------------------------------|--------------------|-----------------|------------------|------------------|-------------------|------------------|----------------|----------------|\n|        1 | 1-Hexadecanol                                               |               2682 |            1000 |                4 | Inactive         | Inactive          | Inactive         | Inactive       | Inactive       |\n|        2 | 2,4-Di-tert-butylphenol                                     |               7311 |             700 |                4 | Inactive         | Inactive          | Inactive         | Inactive       | Inactive       |\n|        3 | 2,4,6-Trichlorobenzoic acid                                 |               5764 |             830 |                4 | Inactive         | Inactive          | Inactive         | Inactive       | Inactive       |\n|        4 | 2-Palmitoylglycerol                                         |            123,409 |            5000 |                5 | Inactive         | Inactive          | Inactive         | Inactive       | Inactive       |\n|        5 | 7,9-Di-tert-butyl-1-oxaspiro (4,5) deca-6,9-diene-2,8-dione |            545,303 |             900 |                4 | Inactive         | Inactive          | Inactive         | Inactive       | Inactive       |\n|        6 | Hexadecanoic acid, methyl ester                             |               8181 |            5000 |                5 | Inactive         | Inactive          | Inactive         | Inactive       | Inactive       |\n|        7 | Dimethyl Eicosanedioate                                     |            566,668 |            5000 |                5 | Inactive         | Inactive          | Inactive         | Inactive       | Inactive       |\n|        8 | Hexaglycerine                                               |               6510 |          12,980 |                6 | Inactive         | Inactive          | Inactive         | Inactive       | Inactive       |\n|        9 | Methyl 22-hydroxydocosanoate                                |         13,406,065 |            5000 |                5 | Inactive         | Inactive          | Inactive         | Inactive       | Inactive       |\n|       10 | Dibutyl phthalate                                           |               3026 |            3474 |                5 | Inactive         | Active            | Inactive         | Inactive       | Inactive       |\n|       12 | Phthalic acid, diisobutyl ester                             |               6782 |          10,000 |                6 | Inactive         | Active            | Inactive         | Inactive       | Inactive       |\n|       13 | p-Chloromethoxybenzene                                      |             12,167 |             318 |                4 | Inactive         | Active            | Inactive         | Inactive       | Inactive       |\n|       14 | Precocene I                                                 |             28,619 |             500 |                4 | Inactive         | Active            | Active           | Inactive       | Inactive       |"
+  },
+  {
+    "label": "Table_10",
+    "kind": "table",
+    "page": 11,
+    "pages": [
+      11
+    ],
+    "bbox": [
+      19.47152328491211,
+      95.0899887084961,
+      822.6077270507812,
+      449.3891296386719
+    ],
+    "render_bbox": [],
+    "caption": "Table 7. Amino acid residues within the active pocket of α -amylase predicted to interact with the selected compounds.",
+    "image_path": "p011_Table_10.png",
+    "image_size": [
+      2232,
+      985
+    ],
+    "row_count": 12,
+    "col_count": 6,
+    "rows": [
+      [
+        "S. No.",
+        "Compound Name",
+        "CID",
+        "Binding Energy",
+        "Inhibition Constant",
+        "Interacting Amino Acid"
+      ],
+      [
+        "1",
+        "1- Hexadecanol",
+        "2682",
+        "- 4.47",
+        "529.44 µ M",
+        "Gln63, Gly104, Thr163, Trp59, Lue165, His101, Glu233, Ser199, Val234, Lys200, Ile235, His201, Leu162, Asp197, Ala198, Tyr62."
+      ],
+      [
+        "2",
+        "2,4,6-Trichlorobenzoic acid",
+        "5764",
+        "- 4.77",
+        "319.09 µ M",
+        "Asp197, His201, Tyr151, Lys200, Leu162, Val234, Ala198, Glu233, Ile235,"
+      ],
+      [
+        "3",
+        "Hexaglycerine",
+        "6510",
+        "- 3.18",
+        "4.68mM",
+        "Lys178, Ala128, Tyr67, Ser66, Val129, Lys68, Tyr182, Glu181,"
+      ],
+      [
+        "4",
+        "2,4 di-tert-butylphenol",
+        "7311",
+        "- 5.54",
+        "86.69 µ M",
+        "Tyr62, His299, Trp59, Leu165, Gln63, His101, Leu162, Ala198, Glu233, Asp197, Arg195, Asp300, Trp58,"
+      ],
+      [
+        "5",
+        "Palmitic acid Methyl ester",
+        "8181",
+        "- 3.60",
+        "2.28mM",
+        "Gln63, Trp59, Trp58, Asp356, Arg303, His305, Trp357, Leu165, Asp300, Leu162, His299, Arg195, Asp197, Tyr62"
+      ],
+      [
+        "6",
+        "2-palmitoylglycerol",
+        "123,409",
+        "- 4.01",
+        "1.15mM",
+        "His101, His299, Tyr62, Leu162, Leu165, Gln63, Asp300, Trp59, Trp357, Asp356, Arg303, Trp58, His305, Glu233, Arg195, Ala198, Asp197"
+      ],
+      [
+        "7",
+        "7,9-Di-tert-butyl-1-oxaspiro [4.5] deca-6,9-diene-2,8-dione",
+        "545303",
+        "- 6.23",
+        "27.20 µ M",
+        "Leu165, Gln63, Thr163, Trp58, Trp59, Asp300, His299, Arg195, Tyr62"
+      ],
+      [
+        "8",
+        "Dimethyl Eicosanedioate",
+        "566,668",
+        "- 4.13",
+        "940.74 µ M",
+        "Gly104, Thr163, Leu165, Tyr62, Gln63, Trp59, Ala50, Val107, Tyr52, Ala106, Ile51, Asn53, Val59, Ser108"
+      ],
+      [
+        "9",
+        "Methyl 22-hydroxydocosanoate",
+        "13,406,065",
+        "- 3.10",
+        "5.13mM",
+        "Ile51, Asn53, Tyr52, Val107, Glu233, Asp197, Arg195, Ala198, Leu162, His101, Leu165, Tyr62, Trp59, Thr163, Gln63, Gly104"
+      ],
+      [
+        "10",
+        "Acarbose *",
+        "41,774",
+        "- 2.71",
+        "10.28mM",
+        "Asp300, Trp58, Leu165, Gly164, Asn105, Gly104, Ala106, Val107, Ile51, Trp59, Gln63, Thr163, Leu162, Asp197, Ala198, His201. Ile235, Glu233, Asn298, Arg195"
+      ],
+      [
+        "11",
+        "Starch #",
+        "51,003,661",
+        "- 2.79",
+        "9.06mM",
+        "Asn53, Ser108, Tyr52, Val107, Ala50, Ser112, Ala106, Val49, Ile51,Gly104, Gln63, Trp59, Pro54"
+      ]
+    ],
+    "markdown": "Table 7. Amino acid residues within the active pocket of α -amylase predicted to interact with the selected compounds.\n\n|   S. No. | Compound Name                                               |        CID | Binding Energy   | Inhibition Constant   | Interacting Amino Acid                                                                                                                                     |\n|----------|-------------------------------------------------------------|------------|------------------|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|\n|        1 | 1- Hexadecanol                                              |       2682 | - 4.47           | 529.44 µ M            | Gln63, Gly104, Thr163, Trp59, Lue165, His101, Glu233, Ser199, Val234, Lys200, Ile235, His201, Leu162, Asp197, Ala198, Tyr62.                               |\n|        2 | 2,4,6-Trichlorobenzoic acid                                 |       5764 | - 4.77           | 319.09 µ M            | Asp197, His201, Tyr151, Lys200, Leu162, Val234, Ala198, Glu233, Ile235,                                                                                    |\n|        3 | Hexaglycerine                                               |       6510 | - 3.18           | 4.68mM                | Lys178, Ala128, Tyr67, Ser66, Val129, Lys68, Tyr182, Glu181,                                                                                               |\n|        4 | 2,4 di-tert-butylphenol                                     |       7311 | - 5.54           | 86.69 µ M             | Tyr62, His299, Trp59, Leu165, Gln63, His101, Leu162, Ala198, Glu233, Asp197, Arg195, Asp300, Trp58,                                                        |\n|        5 | Palmitic acid Methyl ester                                  |       8181 | - 3.60           | 2.28mM                | Gln63, Trp59, Trp58, Asp356, Arg303, His305, Trp357, Leu165, Asp300, Leu162, His299, Arg195, Asp197, Tyr62                                                 |\n|        6 | 2-palmitoylglycerol                                         |    123,409 | - 4.01           | 1.15mM                | His101, His299, Tyr62, Leu162, Leu165, Gln63, Asp300, Trp59, Trp357, Asp356, Arg303, Trp58, His305, Glu233, Arg195, Ala198, Asp197                         |\n|        7 | 7,9-Di-tert-butyl-1-oxaspiro [4.5] deca-6,9-diene-2,8-dione |     545303 | - 6.23           | 27.20 µ M             | Leu165, Gln63, Thr163, Trp58, Trp59, Asp300, His299, Arg195, Tyr62                                                                                         |\n|        8 | Dimethyl Eicosanedioate                                     |    566,668 | - 4.13           | 940.74 µ M            | Gly104, Thr163, Leu165, Tyr62, Gln63, Trp59, Ala50, Val107, Tyr52, Ala106, Ile51, Asn53, Val59, Ser108                                                     |\n|        9 | Methyl 22-hydroxydocosanoate                                | 13,406,065 | - 3.10           | 5.13mM                | Ile51, Asn53, Tyr52, Val107, Glu233, Asp197, Arg195, Ala198, Leu162, His101, Leu165, Tyr62, Trp59, Thr163, Gln63, Gly104                                   |\n|       10 | Acarbose *                                                  |     41,774 | - 2.71           | 10.28mM               | Asp300, Trp58, Leu165, Gly164, Asn105, Gly104, Ala106, Val107, Ile51, Trp59, Gln63, Thr163, Leu162, Asp197, Ala198, His201. Ile235, Glu233, Asn298, Arg195 |\n|       11 | Starch #                                                    | 51,003,661 | - 2.79           | 9.06mM                | Asn53, Ser108, Tyr52, Val107, Ala50, Ser112, Ala106, Val49, Ile51,Gly104, Gln63, Trp59, Pro54                                                              |"
+  },
+  {
+    "label": "Table_11",
+    "kind": "table",
+    "page": 12,
+    "pages": [
+      12
+    ],
+    "bbox": [
+      19.285003662109375,
+      95.05964660644531,
+      822.7393798828125,
+      471.3895568847656
+    ],
+    "render_bbox": [],
+    "caption": "Table 8. Amino acid residues within the active pocket of acetylcholinesterase (AChE) predicted to interact with the selected compounds.",
+    "image_path": "p012_Table_11.png",
+    "image_size": [
+      2233,
+      1046
+    ],
+    "row_count": 12,
+    "col_count": 6,
+    "rows": [
+      [
+        "S. No.",
+        "Compound Name",
+        "CID",
+        "Binding Energy",
+        "Inhibition Constant",
+        "Interacting Amino Acid"
+      ],
+      [
+        "1",
+        "1-Hexadecanol",
+        "2682",
+        "- 5.88",
+        "49.30 µ M",
+        "Ser200, Glu199, His440, Tyr442, Phe330, Ile439, Tyr334, Ser81, Gly80, Trp432, Ile444, Trp84, Gly441, Ser122, Tyr121, Gly118, Tyr130, Gly117"
+      ],
+      [
+        "2",
+        "2,4,6-Trichlorobenzoic acid",
+        "5764",
+        "- 5.21",
+        "152.67 µ M",
+        "Gly441, Trp432, Ile439, Ser81, Gly80, Tyr442, Tyr334, Asp72, Trp84, His440, Phe330,"
+      ],
+      [
+        "3",
+        "Hexaglycerine",
+        "6510",
+        "- 3.32",
+        "3.66mM",
+        "Ile287, Phe290, Ser286, Arg289, Phe288, Leu282, Trp279, Tyr334, Phe331"
+      ],
+      [
+        "4",
+        "2,4 di-tert-butylphenol",
+        "7311",
+        "- 7.20",
+        "5.24 µ M",
+        "Gly441, Phe330, His440, Ile439, Met436, Tyr442, Tyr334, Trp432, Ser81, Gly80, Trp84, Gly118"
+      ],
+      [
+        "5",
+        "Palmitic acid Methyl ester",
+        "8181",
+        "- 6.14",
+        "31.79 µ M",
+        "Gly118, Asn85, Asp72, Tyr70, Tyr181, Ser122, Tyr334, Trp432, Trp84, Glu199, His440, Tyr442, Ser81, Gly80, Ile439, Gly441, Phe330"
+      ],
+      [
+        "6",
+        "2-palmitoylglycerol",
+        "123,409",
+        "- 5.10",
+        "182.70 µ M",
+        "Tyr121, Asp72, Tyr334, Tyr70, Phe290, Ser286, Ile287, Phe288, Arg289, Phe330, Phe331, Gly123, Trp279, Leu127, Ser124, Gly177, Ser122, Gly118, Trp84,"
+      ],
+      [
+        "7",
+        "7,9-Di-tert-butyl-1-oxaspiro [4.5] deca-6,9-diene-2,8-dione",
+        "545,303",
+        "- 8.76",
+        "376.56nM",
+        "Ser122, Asp72, Asn85, Trp84, Ser81, Gly80, Phe330, Tyr334, Tyr442, Trp432, Ile439, Ser200, His440, Glu199, Ile444, Gly441, Tyr121,"
+      ],
+      [
+        "8",
+        "Dimethyl Eicosanedioate",
+        "566,668",
+        "- 6.62",
+        "14.01 µ M",
+        "Glu199, Ile444, Gly117, Tyr130, Gly118, Ser200, His440, Trp84, Gly119, Phe330, Tyr334, Tyr121, Asp72, Trp279, Phe290, Ser291, Leu282, Arg289, Phe288, Ile287, Phe331, Tyr70"
+      ],
+      [
+        "9",
+        "Methyl 22-hydroxydocosanoate",
+        "13,406,065",
+        "- 6.16",
+        "30.33 µ M",
+        "Arg289, Gly335, Ile287, Asp72, Glu199, Ser200, His440, Gly441, Ile439, Trp84, Gly80, Ser81, Tyr442, Phe330, Trp432, Tyr334, Tyr70, Trp279, Tyr121, Phe331, Leu282, Ser286"
+      ],
+      [
+        "10",
+        "Tacrine *",
+        "1935 *",
+        "- 8.26",
+        "887.31nM",
+        "Tyr442, Gly441, Ser200, Glu199, Gly118, Trp84, Asp72, Ser81, Gly80, Tyr334, Trp432, Phe330, Ile439, His440"
+      ],
+      [
+        "11",
+        "Acetylcholine Iodide #",
+        "187",
+        "- 4.78",
+        "314.07 µ M",
+        "Phe330, Trp432, Met436, Ile439, Tyr442, His440, Trp84, Asp72, Ser81, Asn85, Tyr334"
+      ]
+    ],
+    "markdown": "Table 8. Amino acid residues within the active pocket of acetylcholinesterase (AChE) predicted to interact with the selected compounds.\n\n|   S. No. | Compound Name                                               | CID        | Binding Energy   | Inhibition Constant   | Interacting Amino Acid                                                                                                                                                      |\n|----------|-------------------------------------------------------------|------------|------------------|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|\n|        1 | 1-Hexadecanol                                               | 2682       | - 5.88           | 49.30 µ M             | Ser200, Glu199, His440, Tyr442, Phe330, Ile439, Tyr334, Ser81, Gly80, Trp432, Ile444, Trp84, Gly441, Ser122, Tyr121, Gly118, Tyr130, Gly117                                 |\n|        2 | 2,4,6-Trichlorobenzoic acid                                 | 5764       | - 5.21           | 152.67 µ M            | Gly441, Trp432, Ile439, Ser81, Gly80, Tyr442, Tyr334, Asp72, Trp84, His440, Phe330,                                                                                         |\n|        3 | Hexaglycerine                                               | 6510       | - 3.32           | 3.66mM                | Ile287, Phe290, Ser286, Arg289, Phe288, Leu282, Trp279, Tyr334, Phe331                                                                                                      |\n|        4 | 2,4 di-tert-butylphenol                                     | 7311       | - 7.20           | 5.24 µ M              | Gly441, Phe330, His440, Ile439, Met436, Tyr442, Tyr334, Trp432, Ser81, Gly80, Trp84, Gly118                                                                                 |\n|        5 | Palmitic acid Methyl ester                                  | 8181       | - 6.14           | 31.79 µ M             | Gly118, Asn85, Asp72, Tyr70, Tyr181, Ser122, Tyr334, Trp432, Trp84, Glu199, His440, Tyr442, Ser81, Gly80, Ile439, Gly441, Phe330                                            |\n|        6 | 2-palmitoylglycerol                                         | 123,409    | - 5.10           | 182.70 µ M            | Tyr121, Asp72, Tyr334, Tyr70, Phe290, Ser286, Ile287, Phe288, Arg289, Phe330, Phe331, Gly123, Trp279, Leu127, Ser124, Gly177, Ser122, Gly118, Trp84,                        |\n|        7 | 7,9-Di-tert-butyl-1-oxaspiro [4.5] deca-6,9-diene-2,8-dione | 545,303    | - 8.76           | 376.56nM              | Ser122, Asp72, Asn85, Trp84, Ser81, Gly80, Phe330, Tyr334, Tyr442, Trp432, Ile439, Ser200, His440, Glu199, Ile444, Gly441, Tyr121,                                          |\n|        8 | Dimethyl Eicosanedioate                                     | 566,668    | - 6.62           | 14.01 µ M             | Glu199, Ile444, Gly117, Tyr130, Gly118, Ser200, His440, Trp84, Gly119, Phe330, Tyr334, Tyr121, Asp72, Trp279, Phe290, Ser291, Leu282, Arg289, Phe288, Ile287, Phe331, Tyr70 |\n|        9 | Methyl 22-hydroxydocosanoate                                | 13,406,065 | - 6.16           | 30.33 µ M             | Arg289, Gly335, Ile287, Asp72, Glu199, Ser200, His440, Gly441, Ile439, Trp84, Gly80, Ser81, Tyr442, Phe330, Trp432, Tyr334, Tyr70, Trp279, Tyr121, Phe331, Leu282, Ser286   |\n|       10 | Tacrine *                                                   | 1935 *     | - 8.26           | 887.31nM              | Tyr442, Gly441, Ser200, Glu199, Gly118, Trp84, Asp72, Ser81, Gly80, Tyr334, Trp432, Phe330, Ile439, His440                                                                  |\n|       11 | Acetylcholine Iodide #                                      | 187        | - 4.78           | 314.07 µ M            | Phe330, Trp432, Met436, Ile439, Tyr442, His440, Trp84, Asp72, Ser81, Asn85, Tyr334                                                                                          |"
+  }
+]

@@ -2,25 +2,17 @@
 extract_tables.py — Extractor de tablas científicas desde PDFs
 ===============================================================
 
-Estrategia principal: PyMuPDF find_tables() (lines_strict → default fallback)
-  - Filtro de área mínima (5000 pt²) para eliminar falsos positivos
-  - Merge automático de tablas multi-página ("Continued")
-  - Corrección de rotación vía PIL
-
-Estrategia fallback: Camelot lattice (si PyMuPDF no detecta ninguna tabla)
-  - Requiere: pip install camelot-py[base] + ghostscript
+Primary:   Docling (layout + TableFormer structure recognition)
+Fallback1: PyMuPDF find_tables() (lines_strict → default)
+Fallback2: Camelot lattice (si PyMuPDF tampoco detecta nada)
 
 Por cada tabla produce:
-  - PNG renderizado (corregido si está rotado)
+  - PNG renderizado
   - Contenido estructurado (filas/columnas) en tables.json
 
 Uso:
     python extract_tables.py paper.pdf --out extracted/
     python extract_tables.py paper.pdf --out extracted/ --dpi 250
-
-Integración con pipeline:
-    from extract_tables import extract_tables_all
-    extract_tables_all("paper.pdf", out_dir="extracted/")
 """
 from __future__ import annotations
 
@@ -34,10 +26,11 @@ import fitz  # PyMuPDF >= 1.23
 
 # ─── Defaults ──────────────────────────────────────────────────────────────────
 DEFAULT_DPI       = 200
+DEFAULT_PADDING   = 16
 DEFAULT_MIN_ROWS  = 2
 DEFAULT_MIN_COLS  = 2
 DEFAULT_MIN_CELLS = 6
-MIN_AREA_PT2      = 5000   # filtro clave: elimina refs/autores mal detectados
+MIN_AREA_PT2      = 5000
 CAPTION_SEARCH_PT = 80
 ROTATION_RATIO    = 2.5
 
@@ -104,7 +97,6 @@ def rows_to_markdown(rows: list[list[str | None]]) -> str:
 
 # ─── Helpers ───────────────────────────────────────────────────────────────────
 def _is_continued(rows) -> bool:
-    """True si la primera fila indica que es continuación de la tabla anterior."""
     if not rows or not rows[0]:
         return False
     first = " ".join(str(c) for c in rows[0] if c).lower()
@@ -122,14 +114,127 @@ def _passes_filters(bbox, rows, min_rows, min_cols, min_cells) -> bool:
             and cells >= min_cells and area >= MIN_AREA_PT2)
 
 
-# ─── Método principal: PyMuPDF find_tables() ──────────────────────────────────
+# ─── Docling primary extractor ─────────────────────────────────────────────────
+def _extract_docling_tables(pdf_path: str, doc, out_dir: Path, dpi: int,
+                             min_rows: int, min_cols: int, min_cells: int,
+                             quiet: bool) -> list[dict]:
+    """Primary table extractor using Docling layout + TableFormer."""
+    try:
+        from docling.document_converter import DocumentConverter
+    except ImportError:
+        if not quiet:
+            print("  [Docling] not installed, skipping")
+        return []
+
+    try:
+        if not quiet:
+            print(f"  [Docling] converting {Path(pdf_path).name} for tables...")
+        converter = DocumentConverter()
+        result = converter.convert(str(pdf_path))
+        dloc_doc = result.document
+    except Exception as e:
+        if not quiet:
+            print(f"  [Docling] conversion failed: {e}")
+        return []
+
+    results = []
+
+    for tbl in dloc_doc.tables:
+        if not getattr(tbl, 'prov', None):
+            continue
+        prov = tbl.prov[0]
+        page_no = prov.page_no
+        fitz_page = doc[page_no - 1]
+        ph = fitz_page.rect.height
+        pw = fitz_page.rect.width
+
+        # Convert Docling bbox to PyMuPDF coords
+        try:
+            tl = prov.bbox.to_top_left_origin(ph)
+            x0, y0, x1, y1 = tl.l, tl.t, tl.r, tl.b
+        except Exception:
+            x0, x1 = prov.bbox.l, prov.bbox.r
+            y0 = ph - prov.bbox.t
+            y1 = ph - prov.bbox.b
+
+        bbox = (
+            max(0, x0 - DEFAULT_PADDING), max(0, y0 - DEFAULT_PADDING),
+            min(pw, x1 + DEFAULT_PADDING), min(ph, y1 + DEFAULT_PADDING),
+        )
+
+        # Extract structured rows from Docling TableData
+        rows = []
+        try:
+            for row in tbl.data.grid:
+                rows.append([getattr(cell, 'text', '') or '' for cell in row])
+        except Exception:
+            rows = []
+
+        if not rows:
+            continue
+
+        if not _passes_filters(bbox, rows, min_rows, min_cols, min_cells):
+            continue
+
+        # Markdown
+        try:
+            markdown = tbl.export_to_markdown(doc=dloc_doc)
+        except Exception:
+            try:
+                markdown = tbl.export_to_markdown()
+            except Exception:
+                markdown = rows_to_markdown(rows)
+
+        # Caption from Docling or nearby text
+        caption = ''
+        try:
+            cap_texts = []
+            for ref in getattr(tbl, 'captions', []):
+                resolved = ref.resolve(dloc_doc) if hasattr(ref, 'resolve') else ref
+                t = getattr(resolved, 'text', '') or ''
+                if t:
+                    cap_texts.append(t)
+            caption = ' '.join(cap_texts)[:500]
+        except Exception:
+            pass
+        if not caption:
+            caption = find_nearby_caption(fitz_page, bbox)
+
+        label = f"Table_{len(results) + 1}"
+        filename = f"p{page_no:03d}_{label}.png"
+        out_path = out_dir / filename
+
+        rotated = is_rotated(bbox)
+        img_size = render_table(fitz_page, bbox, out_path, dpi, rotated)
+
+        clean_rows = [[str(c).strip() for c in row] for row in rows]
+        n_rows = len(clean_rows)
+        n_cols = max(len(r) for r in clean_rows) if clean_rows else 0
+
+        entry = {
+            "label": label, "kind": "table",
+            "page": page_no, "pages": [page_no],
+            "bbox": list(bbox), "caption": caption,
+            "image_path": str(out_path),
+            "image_size": list(img_size),
+            "rotated": rotated,
+            "row_count": n_rows, "col_count": n_cols,
+            "rows": clean_rows,
+            "markdown": markdown,
+        }
+        results.append(entry)
+
+        if not quiet:
+            rot_tag = " [rotada]" if rotated else ""
+            cap_tag = f" | {caption[:50]}" if caption else ""
+            print(f"  [Docling] p{page_no} {label}{rot_tag}: {n_rows}x{n_cols}{cap_tag}")
+
+    return results
+
+
+# ─── PyMuPDF fallback ──────────────────────────────────────────────────────────
 def _extract_pymupdf(doc, min_rows, min_cols, min_cells) -> list[dict]:
-    """
-    Detecta tablas con lines_strict → fallback default.
-    Aplica filtro de área y merge de páginas con 'Continued'.
-    Devuelve lista de dicts con keys: pi, page_obj, bbox, rows_data, pages.
-    """
-    raw = []  # (pi, bbox, rows)
+    raw = []
     for pi, page in enumerate(doc):
         try:
             found = page.find_tables(
@@ -155,12 +260,11 @@ def _extract_pymupdf(doc, min_rows, min_cols, min_cells) -> list[dict]:
                 continue
             raw.append((pi, bbox, rows))
 
-    # Merge: si primera fila dice "Continued" → unir con la tabla previa
     merged = []
     for pi, bbox, rows in raw:
         if _is_continued(rows) and merged:
             prev = merged[-1]
-            prev["rows_data"].extend(rows[1:])  # saltar el header "Continued"
+            prev["rows_data"].extend(rows[1:])
             prev["pages"].append(pi + 1)
         else:
             merged.append({
@@ -174,9 +278,8 @@ def _extract_pymupdf(doc, min_rows, min_cols, min_cells) -> list[dict]:
     return merged
 
 
-# ─── Método fallback: Camelot lattice ─────────────────────────────────────────
+# ─── Camelot fallback ──────────────────────────────────────────────────────────
 def _extract_camelot(pdf_path: str, doc, min_rows, min_cols, min_cells) -> list[dict]:
-    """Fallback cuando PyMuPDF no detecta ninguna tabla con bordes."""
     try:
         import camelot
     except ImportError:
@@ -221,20 +324,43 @@ def extract_tables_all(pdf_path: str, out_dir: str = "extracted",
                        min_cells: int = DEFAULT_MIN_CELLS,
                        quiet: bool = False) -> list[dict]:
 
-    pdf_path = Path(pdf_path)
-    out_dir  = Path(out_dir)
-    out_dir.mkdir(parents=True, exist_ok=True)
+    pdf_path_obj = Path(pdf_path)
+    out_dir_obj  = Path(out_dir)
+    out_dir_obj.mkdir(parents=True, exist_ok=True)
 
-    doc = fitz.open(str(pdf_path))
+    doc = fitz.open(str(pdf_path_obj))
 
-    # 1) Intento principal: PyMuPDF fix
+    # 1) Primary: Docling
+    candidates_structured = _extract_docling_tables(
+        str(pdf_path_obj), doc, out_dir_obj, dpi,
+        min_rows, min_cols, min_cells, quiet,
+    )
+    if candidates_structured:
+        doc.close()
+        out_json = out_dir_obj / "tables.json"
+        out_json.write_text(
+            json.dumps({
+                "pdf": str(pdf_path_obj),
+                "total": len(candidates_structured),
+                "items": candidates_structured,
+            }, indent=2, ensure_ascii=False),
+            encoding="utf-8",
+        )
+        if not quiet:
+            print(f"\n{len(candidates_structured)} tabla(s) via Docling -> {out_json}")
+        return candidates_structured
+
+    if not quiet:
+        print("  [Docling] 0 tables found, trying PyMuPDF...")
+
+    # 2) Fallback: PyMuPDF
     candidates = _extract_pymupdf(doc, min_rows, min_cols, min_cells)
 
-    # 2) Fallback: Camelot lattice si PyMuPDF no encontró nada
+    # 3) Tertiary fallback: Camelot
     if not candidates:
         if not quiet:
             print("  (PyMuPDF: 0 tablas → probando Camelot lattice...)")
-        candidates = _extract_camelot(str(pdf_path), doc, min_rows, min_cols, min_cells)
+        candidates = _extract_camelot(str(pdf_path_obj), doc, min_rows, min_cols, min_cells)
 
     tables = []
     for m in candidates:
@@ -247,11 +373,10 @@ def extract_tables_all(pdf_path: str, out_dir: str = "extracted",
         rotated  = is_rotated(bbox)
         label    = f"Table_{len(tables) + 1}"
         filename = f"p{pi + 1:03d}_{label}.png"
-        out_path = out_dir / filename
+        out_path = out_dir_obj / filename
 
         img_size = render_table(page, bbox, out_path, dpi, rotated)
-
-        caption = find_nearby_caption(page, bbox)
+        caption  = find_nearby_caption(page, bbox)
 
         clean_rows = [
             [str(c).strip() if c is not None else "" for c in row]
@@ -290,10 +415,10 @@ def extract_tables_all(pdf_path: str, out_dir: str = "extracted",
 
     doc.close()
 
-    out_json = out_dir / "tables.json"
+    out_json = out_dir_obj / "tables.json"
     out_json.write_text(
         json.dumps({
-            "pdf":   str(pdf_path),
+            "pdf":   str(pdf_path_obj),
             "total": len(tables),
             "items": tables,
         }, indent=2, ensure_ascii=False),
@@ -309,7 +434,7 @@ def extract_tables_all(pdf_path: str, out_dir: str = "extracted",
 # ─── CLI ───────────────────────────────────────────────────────────────────────
 def main(argv=None):
     p = argparse.ArgumentParser(
-        description="Extrae tablas de PDFs científicos (PyMuPDF fix + Camelot fallback)")
+        description="Extrae tablas de PDFs científicos (Docling → PyMuPDF → Camelot)")
     p.add_argument("pdf",        help="PDF de entrada")
     p.add_argument("--out",      default="extracted")
     p.add_argument("--dpi",      type=int, default=DEFAULT_DPI)

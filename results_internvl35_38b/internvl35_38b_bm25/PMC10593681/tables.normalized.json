@@ -1,0 +1,156 @@
+[
+  {
+    "label": "Table_1",
+    "kind": "table",
+    "page": 7,
+    "pages": [
+      7
+    ],
+    "bbox": [
+      39.69070816040039,
+      500.1390380859375,
+      555.03271484375,
+      590.1869506835938
+    ],
+    "render_bbox": [],
+    "caption": "Fig. 2  EDX (A), TEM micrographs (B), and FTIR analysis showing different functional groups acting as bio-reductant and stabilizing agent (C) for SeNPs biosynthesized using Fenugreek seeds aqueous extract Table 1  Antifungal activity of SeNPs against two Fusarium spp. expressed as mean inhibition zone diameter (ZOI) of three replicates in mm ± SD, MIC and MFC were calculated as mg/mL, inhibition zone of F. moniliforme (A) and F. oxysporum (B) using different",
+    "image_path": "p007_Table_1.png",
+    "image_size": [
+      1432,
+      251
+    ],
+    "row_count": 4,
+    "col_count": 7,
+    "rows": [
+      [
+        "Sample",
+        "Fusarium oxysporum",
+        "Fusarium oxysporum",
+        "Fusarium oxysporum",
+        "Fusarium moniliforme",
+        "Fusarium moniliforme",
+        "Fusarium moniliforme"
+      ],
+      [
+        "",
+        "ZOI (mm)",
+        "MIC (mg/mL)",
+        "MFC(mg/mL)",
+        "ZOI (mm)",
+        "MIC (mg/mL)",
+        "MFC(mg/mL)"
+      ],
+      [
+        "Fenugreek aqueous extract",
+        "0",
+        "ND",
+        "ND",
+        "0",
+        "ND",
+        "ND"
+      ],
+      [
+        "Bio-mediated SeNPs",
+        "31±0.14",
+        "0.25",
+        "0.27",
+        "27±0",
+        "1.7",
+        "2.9"
+      ]
+    ],
+    "markdown": "| Sample                    | Fusarium oxysporum   | Fusarium oxysporum   | Fusarium oxysporum   | Fusarium moniliforme   | Fusarium moniliforme   | Fusarium moniliforme   |\n|---------------------------|----------------------|----------------------|----------------------|------------------------|------------------------|------------------------|\n|                           | ZOI (mm)             | MIC (mg/mL)          | MFC(mg/mL)           | ZOI (mm)               | MIC (mg/mL)            | MFC(mg/mL)             |\n| Fenugreek aqueous extract | 0                    | ND                   | ND                   | 0                      | ND                     | ND                     |\n| Bio-mediated SeNPs        | 31±0.14              | 0.25                 | 0.27                 | 27±0                   | 1.7                    | 2.9                    |"
+  },
+  {
+    "label": "Table_2",
+    "kind": "table",
+    "page": 10,
+    "pages": [
+      10
+    ],
+    "bbox": [
+      39.85893630981445,
+      84.92330169677734,
+      555.0838012695312,
+      257.7020568847656
+    ],
+    "render_bbox": [],
+    "caption": "Table 2 Effect of temperature change on diseases progress and shelf-life of tomato fruits",
+    "image_path": "p010_Table_2.png",
+    "image_size": [
+      1432,
+      481
+    ],
+    "row_count": 6,
+    "col_count": 9,
+    "rows": [
+      [
+        "Temperature (25 °C)",
+        "Red colored group (A)",
+        "Red colored group (A)",
+        "Red colored group (A)",
+        "Red colored group (A)",
+        "Yellow colored group (B)",
+        "Yellow colored group (B)",
+        "Yellow colored group (B)",
+        "Yellow colored group (B)"
+      ],
+      [
+        "Temperature (25 °C)",
+        "Water only (T1)",
+        "SeNPs only (T2)",
+        "Infected treated (T3)",
+        "Infected untreated (T4)",
+        "Water only (T1)",
+        "SeNPs only (T2)",
+        "Infected treated (T3)",
+        "Infected untreated (T4)"
+      ],
+      [
+        "6 days",
+        "Fresh +",
+        "Fresh + +",
+        "No Infection",
+        "50% PFD",
+        "Fresh + +",
+        "Fresh + + +",
+        "No Infection",
+        "ND"
+      ],
+      [
+        "10 days",
+        "Shrinkage +",
+        "Fresh +",
+        "20% PFD",
+        "100% PFD",
+        "Fresh +",
+        "Fresh + +",
+        "No Infection",
+        "ND"
+      ],
+      [
+        "12 days",
+        "Shrinkage + +",
+        "Fresh +",
+        "20% PFD",
+        "-",
+        "Shrinkage +",
+        "Fresh +",
+        "No Infection",
+        "66% PFD"
+      ],
+      [
+        "15 days",
+        "Shrinkage + + +",
+        "Shrinkage +",
+        "20% PFD",
+        "-",
+        "Shrinkage + +",
+        "Fresh +",
+        "No Infection",
+        "70% PFD"
+      ]
+    ],
+    "markdown": "Table 2 Effect of temperature change on diseases progress and shelf-life of tomato fruits\n\n| Temperature (25 °C)   | Red colored group (A)   | Red colored group (A)   | Red colored group (A)   | Red colored group (A)   | Yellow colored group (B)   | Yellow colored group (B)   | Yellow colored group (B)   | Yellow colored group (B)   |\n|-----------------------|-------------------------|-------------------------|-------------------------|-------------------------|----------------------------|----------------------------|----------------------------|----------------------------|\n| Temperature (25 °C)   | Water only (T1)         | SeNPs only (T2)         | Infected treated (T3)   | Infected untreated (T4) | Water only (T1)            | SeNPs only (T2)            | Infected treated (T3)      | Infected untreated (T4)    |\n| 6 days                | Fresh +                 | Fresh + +               | No Infection            | 50% PFD                 | Fresh + +                  | Fresh + + +                | No Infection               | ND                         |\n| 10 days               | Shrinkage +             | Fresh +                 | 20% PFD                 | 100% PFD                | Fresh +                    | Fresh + +                  | No Infection               | ND                         |\n| 12 days               | Shrinkage + +           | Fresh +                 | 20% PFD                 | -                       | Shrinkage +                | Fresh +                    | No Infection               | 66% PFD                    |\n| 15 days               | Shrinkage + + +         | Shrinkage +             | 20% PFD                 | -                       | Shrinkage + +              | Fresh +                    | No Infection               | 70% PFD                    |"
+  }
+]

@@ -1,0 +1,362 @@
+{
+  "pdf": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_bm25/PMC10826033/paper.pdf",
+  "total": 5,
+  "items": [
+    {
+      "label": "Table_1",
+      "kind": "table",
+      "page": 4,
+      "pages": [
+        4
+      ],
+      "bbox": [
+        39.588623046875,
+        435.8541564941406,
+        306.487548828125,
+        555.7002563476562
+      ],
+      "caption": "Table 1 Datasets of different annotation modes",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_bm25/PMC10826033/p004_Table_1.png",
+      "image_size": [
+        743,
+        334
+      ],
+      "rotated": false,
+      "row_count": 5,
+      "col_count": 4,
+      "rows": [
+        [
+          "Annotation",
+          "pixels",
+          "Number of images",
+          "Number of annotation boxes"
+        ],
+        [
+          "Small",
+          "0-1000",
+          "5886",
+          "74970"
+        ],
+        [
+          "Medium",
+          "1000-1500",
+          "3762",
+          "23058"
+        ],
+        [
+          "Large",
+          "1500-3000",
+          "2226",
+          "9432"
+        ],
+        [
+          "Muti-size",
+          "0-3000",
+          "6000",
+          "107460"
+        ]
+      ],
+      "markdown": "Table 1 Datasets of different annotation modes\n\n| Annotation   | pixels    |   Number of images |   Number of annotation boxes |\n|--------------|-----------|--------------------|------------------------------|\n| Small        | 0-1000    |               5886 |                        74970 |\n| Medium       | 1000-1500 |               3762 |                        23058 |\n| Large        | 1500-3000 |               2226 |                         9432 |\n| Muti-size    | 0-3000    |               6000 |                       107460 |"
+    },
+    {
+      "label": "Table_2",
+      "kind": "table",
+      "page": 6,
+      "pages": [
+        6
+      ],
+      "bbox": [
+        39.39603042602539,
+        612.7710571289062,
+        554.8550415039062,
+        740.1105346679688
+      ],
+      "caption": "Table 2 Hyperparameters settings",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_bm25/PMC10826033/p006_Table_2.png",
+      "image_size": [
+        1433,
+        354
+      ],
+      "rotated": false,
+      "row_count": 7,
+      "col_count": 6,
+      "rows": [
+        [
+          "Model",
+          "Batch size",
+          "Epoch",
+          "Learning rate",
+          "Weight decay",
+          "Momentum"
+        ],
+        [
+          "YOLOv5",
+          "8",
+          "300",
+          "0.010",
+          "0.0005",
+          "0.9"
+        ],
+        [
+          "YOLOv7",
+          "8",
+          "300",
+          "0.010",
+          "0.0005",
+          "0.9"
+        ],
+        [
+          "YOLOv3",
+          "8",
+          "300",
+          "0.010",
+          "0.0005",
+          "0.9"
+        ],
+        [
+          "SSD",
+          "8",
+          "300",
+          "0.008",
+          "0.0005",
+          "0.9"
+        ],
+        [
+          "RetinaNet",
+          "8",
+          "300",
+          "0.012",
+          "0.0005",
+          "0.9"
+        ],
+        [
+          "Faster-RCNN",
+          "8",
+          "300",
+          "0.009",
+          "0.0005",
+          "0.9"
+        ]
+      ],
+      "markdown": "Table 2 Hyperparameters settings\n\n| Model       |   Batch size |   Epoch |   Learning rate |   Weight decay |   Momentum |\n|-------------|--------------|---------|-----------------|----------------|------------|\n| YOLOv5      |            8 |     300 |           0.010 |         0.0005 |        0.9 |\n| YOLOv7      |            8 |     300 |           0.010 |         0.0005 |        0.9 |\n| YOLOv3      |            8 |     300 |           0.010 |         0.0005 |        0.9 |\n| SSD         |            8 |     300 |           0.008 |         0.0005 |        0.9 |\n| RetinaNet   |            8 |     300 |           0.012 |         0.0005 |        0.9 |\n| Faster-RCNN |            8 |     300 |           0.009 |         0.0005 |        0.9 |"
+    },
+    {
+      "label": "Table_3",
+      "kind": "table",
+      "page": 7,
+      "pages": [
+        7
+      ],
+      "bbox": [
+        39.53129577636719,
+        308.3445739746094,
+        306.8134460449219,
+        477.4544982910156
+      ],
+      "caption": "Table 3 Comparison of the detection accuracy between the  original  YOLOv5  and  the  proposed  method  on  the  wheat seedling dataset with different annotations",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_bm25/PMC10826033/p007_Table_3.png",
+      "image_size": [
+        744,
+        471
+      ],
+      "rotated": false,
+      "row_count": 6,
+      "col_count": 5,
+      "rows": [
+        [
+          "Annotation",
+          "Training Datasets",
+          "Testing Datasets",
+          "Method",
+          "AP"
+        ],
+        [
+          "Local annotation",
+          "Small size",
+          "All-size",
+          "YOLOv5 Proposed",
+          "74.5% 90.1%"
+        ],
+        [
+          "",
+          "Medium size",
+          "All-size",
+          "YOLOv5 Proposed",
+          "63.7% 86.3%"
+        ],
+        [
+          "",
+          "Large size",
+          "All-size",
+          "YOLOv5 Proposed",
+          "30.2% 76.5%"
+        ],
+        [
+          "",
+          "Muti-size",
+          "All-size",
+          "YOLOv5 Proposed",
+          "66.5% 84.6%"
+        ],
+        [
+          "Global annota- tion",
+          "All-size",
+          "All-size",
+          "YOLOv5",
+          "60.2%"
+        ]
+      ],
+      "markdown": "Table 3 Comparison of the detection accuracy between the  original  YOLOv5  and  the  proposed  method  on  the  wheat seedling dataset with different annotations\n\n| Annotation          | Training Datasets   | Testing Datasets   | Method          | AP          |\n|---------------------|---------------------|--------------------|-----------------|-------------|\n| Local annotation    | Small size          | All-size           | YOLOv5 Proposed | 74.5% 90.1% |\n|                     | Medium size         | All-size           | YOLOv5 Proposed | 63.7% 86.3% |\n|                     | Large size          | All-size           | YOLOv5 Proposed | 30.2% 76.5% |\n|                     | Muti-size           | All-size           | YOLOv5 Proposed | 66.5% 84.6% |\n| Global annota- tion | All-size            | All-size           | YOLOv5          | 60.2%       |"
+    },
+    {
+      "label": "Table_4",
+      "kind": "table",
+      "page": 8,
+      "pages": [
+        8
+      ],
+      "bbox": [
+        39.571624755859375,
+        333.27020263671875,
+        306.6651611328125,
+        473.3543395996094
+      ],
+      "caption": "Table 4 Comparison between the proposed method and other state-of-the-art object detection networks",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_bm25/PMC10826033/p008_Table_4.png",
+      "image_size": [
+        743,
+        390
+      ],
+      "rotated": false,
+      "row_count": 8,
+      "col_count": 5,
+      "rows": [
+        [
+          "Method",
+          "Image size",
+          "AP",
+          "FPS",
+          "Params (M)"
+        ],
+        [
+          "Proposed",
+          "400×400",
+          "90.1%",
+          "35",
+          "2.6"
+        ],
+        [
+          "YOLOv5",
+          "400×400",
+          "66.5%",
+          "30",
+          "1.9"
+        ],
+        [
+          "YOLOv7",
+          "400×400",
+          "61.3%",
+          "28",
+          "6.2"
+        ],
+        [
+          "YOLOv3",
+          "400×400",
+          "63.0%",
+          "25",
+          "61.5"
+        ],
+        [
+          "SSD",
+          "400×400",
+          "68.3%",
+          "19",
+          "24.4"
+        ],
+        [
+          "RetinaNet",
+          "400×400",
+          "65.4%",
+          "15",
+          "93.8"
+        ],
+        [
+          "Faster-RCNN",
+          "400×400",
+          "60.2%",
+          "17",
+          "98.8"
+        ]
+      ],
+      "markdown": "Table 4 Comparison between the proposed method and other state-of-the-art object detection networks\n\n| Method      | Image size   | AP    |   FPS |   Params (M) |\n|-------------|--------------|-------|-------|--------------|\n| Proposed    | 400×400      | 90.1% |    35 |          2.6 |\n| YOLOv5      | 400×400      | 66.5% |    30 |          1.9 |\n| YOLOv7      | 400×400      | 61.3% |    28 |          6.2 |\n| YOLOv3      | 400×400      | 63.0% |    25 |         61.5 |\n| SSD         | 400×400      | 68.3% |    19 |         24.4 |\n| RetinaNet   | 400×400      | 65.4% |    15 |         93.8 |\n| Faster-RCNN | 400×400      | 60.2% |    17 |         98.8 |"
+    },
+    {
+      "label": "Table_5",
+      "kind": "table",
+      "page": 8,
+      "pages": [
+        8
+      ],
+      "bbox": [
+        287.73211669921875,
+        322.2162170410156,
+        554.8746948242188,
+        482.88134765625
+      ],
+      "caption": "Table 5 Ablation experiment results",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_bm25/PMC10826033/p008_Table_5.png",
+      "image_size": [
+        743,
+        447
+      ],
+      "rotated": false,
+      "row_count": 7,
+      "col_count": 4,
+      "rows": [
+        [
+          "Small size datasets",
+          "Micro-scale detection layer",
+          "Space-to-depth Conv",
+          "AP (%)"
+        ],
+        [
+          "√ √ √",
+          "√",
+          "",
+          "66.5 74.5 70.1"
+        ],
+        [
+          "√ √ √",
+          "",
+          "√",
+          "72.3"
+        ],
+        [
+          "√ √ √",
+          "√",
+          "",
+          "85.5"
+        ],
+        [
+          "√ √ √",
+          "√",
+          "√",
+          "86.6"
+        ],
+        [
+          "√ √ √",
+          "",
+          "√",
+          "73.7"
+        ],
+        [
+          "√",
+          "√",
+          "√",
+          "90.1"
+        ]
+      ],
+      "markdown": "Table 5 Ablation experiment results\n\n| Small size datasets   | Micro-scale detection layer   | Space-to-depth Conv   | AP (%)         |\n|-----------------------|-------------------------------|-----------------------|----------------|\n| √ √ √                 | √                             |                       | 66.5 74.5 70.1 |\n| √ √ √                 |                               | √                     | 72.3           |\n| √ √ √                 | √                             |                       | 85.5           |\n| √ √ √                 | √                             | √                     | 86.6           |\n| √ √ √                 |                               | √                     | 73.7           |\n| √                     | √                             | √                     | 90.1           |"
+    }
+  ]
+}

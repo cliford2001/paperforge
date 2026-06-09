@@ -1,0 +1,865 @@
+{
+  "total": 9,
+  "context_strategy": "full",
+  "abstract_words": "full",
+  "max_context_words": 3000,
+  "top_k": null,
+  "chunk_words": null,
+  "paper_summary": {
+    "main_contribution": "The paper summarizes the author's research career in primate behavior, focusing on the unexpected mating dynamics and social structures observed in Japanese macaques, chimpanzees, and ringtailed lemurs, with a goal of understanding human societal evolution.",
+    "narrative": "The paper begins with observations of Japanese macaques, where unexpected mating behaviors were noted, such as high-ranking males not obtaining high mating success (Fig. 1). The author then shifts focus to other primate species, including chimpanzees and ringtailed lemurs, to explore broader evolutionary questions (Fig. 2, Fig. 7). The visual documentation of these behaviors in natural settings supports the study of social interactions and mating dynamics (Fig. 2, Fig. 7). The research aims to understand complex social structures and their evolutionary implications.",
+    "key_evidence": [
+      "Fig. 1",
+      "Fig. 2",
+      "Fig. 7"
+    ],
+    "contradictions_or_gaps": "None detected",
+    "limitations_noted": "The images provide qualitative observations but lack quantitative data or experimental controls, which limits the ability to draw definitive conclusions about the observed behaviors.",
+    "overall_confidence": "medium"
+  },
+  "items": [
+    {
+      "label": "Figure 1",
+      "kind": "figure",
+      "page": 4,
+      "bbox": [
+        294.2,
+        40.4,
+        554.8,
+        222.0
+      ],
+      "caption": "Fig. 1 The  alpha  male  (M-59 ♂ )  copulating  with  a  high-ranking female (Ch-67 ♀ )",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_full/PMC10185620/p004_Figure_1.png",
+      "image_size": [
+        261,
+        182
+      ],
+      "context_words": 3000,
+      "context_strategy": "full",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"microscopy\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"microscopy\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"Japanese macaques\", \"natural habitat\"]\n  },\n  \"visual_description\": \"The image shows two Japanese macaques in a natural setting with a hilly landscape in the background. The larger macaque is standing behind the smaller one, and they appear to be on a grassy area with some trees and shrubs.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"Japanese macaques in a natural habitat\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": []\n  },\n  \"data_and_patterns\": \"The image depicts a social interaction between two Japanese macaques, with one appearing to be copulating with the other. The setting is natural, suggesting observations of behavior in the wild.\",\n  \"groups_compared\": \"Not applicable\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Two macaques are shown in a natural setting\", \"One macaque is positioned behind the other, suggesting mating behavior\"],\n    \"caption_supported_evidence\": [\"The alpha male (M-59♂) is copulating with a high-ranking female (Ch-67♀)\"],\n    \"local_context_supported_evidence\": [\"The image is related to the study of sexual behavior in Japanese macaques\"],\n    \"global_paper_supported_interpretation\": [\"The image supports observations of mating behavior and social dynamics in macaques\"],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The image provides visual evidence of mating behavior in Japanese macaques, which is relevant to the study of their social and sexual dynamics. It illustrates the interaction between a high-ranking male and female, which may be part of the research on mating success and social hierarchy.\",\n  \"hypothesis_tested\": \"Not determinable\",\n  \"paper_quote\": \"Not determinable\",\n  \"controls_assessment\": \"Not applicable\",\n  \"scientific_conclusion\": \"The image shows a natural mating behavior between two Japanese macaques, highlighting the social and sexual interactions studied in the research. The visual evidence supports the observation of copulation in a natural setting, contributing to the understanding of mating dynamics and social structure in macaque groups. The image does not include statistical data or experimental controls, focusing instead on behavioral observation. This visual documentation is crucial for studying the reproductive strategies and social hierarchies in primate societies.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The image may suggest insights into the mating preferences and social bonds within macaque groups, potentially indicating the role of dominance in mating success.\",\n    \"support_status\": \"context_supported\",\n    \"supporting_evidence\": \"The paper discusses the unexpected observation that high-ranking males do not always have high mating success, which could be related to the visual depiction of mating behavior.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What factors influence the choice of mating partners in macaques? How do social bonds affect reproductive success?\",\n    \"alternative_interpretation\": \"The image could also be interpreted as a moment of social bonding rather than mating, as grooming and social interactions are common in primate behavior.\"\n  },\n  \"context_used\": \"full paper text [truncated at 3000 words, original: 11495]\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "microscopy",
+        "visual_form": {
+          "graph_or_visual_type": "microscopy",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [],
+          "legend_elements": [],
+          "visible_entities": [
+            "Japanese macaques",
+            "natural habitat"
+          ]
+        },
+        "visual_description": "The image shows two Japanese macaques in a natural setting with a hilly landscape in the background. The larger macaque is standing behind the smaller one, and they appear to be on a grassy area with some trees and shrubs.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "Japanese macaques in a natural habitat"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": []
+        },
+        "data_and_patterns": "The image depicts a social interaction between two Japanese macaques, with one appearing to be copulating with the other. The setting is natural, suggesting observations of behavior in the wild.",
+        "groups_compared": "Not applicable",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Two macaques are shown in a natural setting",
+            "One macaque is positioned behind the other, suggesting mating behavior"
+          ],
+          "caption_supported_evidence": [
+            "The alpha male (M-59♂) is copulating with a high-ranking female (Ch-67♀)"
+          ],
+          "local_context_supported_evidence": [
+            "The image is related to the study of sexual behavior in Japanese macaques"
+          ],
+          "global_paper_supported_interpretation": [
+            "The image supports observations of mating behavior and social dynamics in macaques"
+          ],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The image provides visual evidence of mating behavior in Japanese macaques, which is relevant to the study of their social and sexual dynamics. It illustrates the interaction between a high-ranking male and female, which may be part of the research on mating success and social hierarchy.",
+        "hypothesis_tested": "Not determinable",
+        "paper_quote": "Not determinable",
+        "controls_assessment": "Not applicable",
+        "scientific_conclusion": "The image shows a natural mating behavior between two Japanese macaques, highlighting the social and sexual interactions studied in the research. The visual evidence supports the observation of copulation in a natural setting, contributing to the understanding of mating dynamics and social structure in macaque groups. The image does not include statistical data or experimental controls, focusing instead on behavioral observation. This visual documentation is crucial for studying the reproductive strategies and social hierarchies in primate societies.",
+        "model_extra_inference": {
+          "extra_inference": "The image may suggest insights into the mating preferences and social bonds within macaque groups, potentially indicating the role of dominance in mating success.",
+          "support_status": "context_supported",
+          "supporting_evidence": "The paper discusses the unexpected observation that high-ranking males do not always have high mating success, which could be related to the visual depiction of mating behavior.",
+          "risk": "medium",
+          "open_questions": "What factors influence the choice of mating partners in macaques? How do social bonds affect reproductive success?",
+          "alternative_interpretation": "The image could also be interpreted as a moment of social bonding rather than mating, as grooming and social interactions are common in primate behavior."
+        },
+        "context_used": "full paper text [truncated at 3000 words, original: 11495]",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 13.1
+    },
+    {
+      "label": "Figure 2",
+      "kind": "figure",
+      "page": 5,
+      "bbox": [
+        36.5,
+        502.6,
+        302.7,
+        688.6
+      ],
+      "caption": "Fig. 2 Alpha male, M-59 ♂ feeds in the center of the photo. The whitish female on his left is Op-60 ♀ , who had been in a PPR with him for more than 10 years",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_full/PMC10185620/p005_Figure_2.png",
+      "image_size": [
+        266,
+        186
+      ],
+      "context_words": 3000,
+      "context_strategy": "full",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"other\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"other\",\n    \"panel_count\": \"unclear\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"Japanese macaques\", \"benches\", \"tables\", \"landscape\"]\n  },\n  \"visual_description\": \"The image shows a group of Japanese macaques in an outdoor setting with wooden benches and tables. The monkeys are scattered across a dirt area, with some interacting and others resting. The background includes a railing and a distant landscape.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"Japanese macaques in a provisioned environment\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": []\n  },\n  \"data_and_patterns\": \"The image shows multiple macaques in various postures, with some grooming and others sitting or moving around. The alpha male, M-59 ♂, is centrally located, with a whitish female, Op-60 ♀, nearby.\",\n  \"groups_compared\": \"Not applicable\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Presence of multiple macaques\", \"Alpha male centrally located\"],\n    \"caption_supported_evidence\": [\"Alpha male identified as M-59 ♂\", \"Whitish female identified as Op-60 ♀\"],\n    \"local_context_supported_evidence\": [\"Observations related to social structure and interactions\"],\n    \"global_paper_supported_interpretation\": [\"Insights into primate social behavior and mating strategies\"],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The image provides visual context for studying the social dynamics and mating behaviors of Japanese macaques, highlighting the interactions between high-ranking individuals and their social environment.\",\n  \"hypothesis_tested\": \"Not determinable\",\n  \"paper_quote\": \"Not determinable\",\n  \"controls_assessment\": \"Not applicable\",\n  \"scientific_conclusion\": \"The image depicts a social group of Japanese macaques in a provisioned setting, illustrating the spatial arrangement and interactions among individuals, particularly focusing on the alpha male and a long-term associated female. This visual evidence supports the study of primate social structures and mating behaviors, emphasizing the complexity of relationships within the group. The absence of statistical markers indicates the image serves more as an observational snapshot rather than a quantitative analysis.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The image suggests a stable social structure with defined hierarchies, which may influence mating success and social bonds. The presence of multiple individuals in close proximity could indicate social tolerance or affiliative behaviors.\",\n    \"support_status\": \"context_supported\",\n    \"supporting_evidence\": \"The paper discusses long-lasting male-female affinities and mating patterns.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"How do these social structures affect the evolutionary success of individuals within the group?\",\n    \"alternative_interpretation\": \"The arrangement of monkeys might also reflect resource distribution or environmental factors influencing their behavior.\"\n  },\n  \"context_used\": \"full paper text [truncated at 3000 words, original: 11495]\",\n  \"confidence\": \"medium\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "other",
+        "visual_form": {
+          "graph_or_visual_type": "other",
+          "panel_count": "unclear",
+          "panel_labels": [],
+          "axes_or_dimensions": [],
+          "legend_elements": [],
+          "visible_entities": [
+            "Japanese macaques",
+            "benches",
+            "tables",
+            "landscape"
+          ]
+        },
+        "visual_description": "The image shows a group of Japanese macaques in an outdoor setting with wooden benches and tables. The monkeys are scattered across a dirt area, with some interacting and others resting. The background includes a railing and a distant landscape.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "Japanese macaques in a provisioned environment"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": []
+        },
+        "data_and_patterns": "The image shows multiple macaques in various postures, with some grooming and others sitting or moving around. The alpha male, M-59 ♂, is centrally located, with a whitish female, Op-60 ♀, nearby.",
+        "groups_compared": "Not applicable",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Presence of multiple macaques",
+            "Alpha male centrally located"
+          ],
+          "caption_supported_evidence": [
+            "Alpha male identified as M-59 ♂",
+            "Whitish female identified as Op-60 ♀"
+          ],
+          "local_context_supported_evidence": [
+            "Observations related to social structure and interactions"
+          ],
+          "global_paper_supported_interpretation": [
+            "Insights into primate social behavior and mating strategies"
+          ],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The image provides visual context for studying the social dynamics and mating behaviors of Japanese macaques, highlighting the interactions between high-ranking individuals and their social environment.",
+        "hypothesis_tested": "Not determinable",
+        "paper_quote": "Not determinable",
+        "controls_assessment": "Not applicable",
+        "scientific_conclusion": "The image depicts a social group of Japanese macaques in a provisioned setting, illustrating the spatial arrangement and interactions among individuals, particularly focusing on the alpha male and a long-term associated female. This visual evidence supports the study of primate social structures and mating behaviors, emphasizing the complexity of relationships within the group. The absence of statistical markers indicates the image serves more as an observational snapshot rather than a quantitative analysis.",
+        "model_extra_inference": {
+          "extra_inference": "The image suggests a stable social structure with defined hierarchies, which may influence mating success and social bonds. The presence of multiple individuals in close proximity could indicate social tolerance or affiliative behaviors.",
+          "support_status": "context_supported",
+          "supporting_evidence": "The paper discusses long-lasting male-female affinities and mating patterns.",
+          "risk": "medium",
+          "open_questions": "How do these social structures affect the evolutionary success of individuals within the group?",
+          "alternative_interpretation": "The arrangement of monkeys might also reflect resource distribution or environmental factors influencing their behavior."
+        },
+        "context_used": "full paper text [truncated at 3000 words, original: 11495]",
+        "confidence": "medium"
+      },
+      "confidence": "medium",
+      "elapsed_sec": 12.3
+    },
+    {
+      "label": "Figure_uncaptioned_1",
+      "kind": "figure",
+      "page": 8,
+      "bbox": [
+        36.3,
+        512.6,
+        303.0,
+        698.7
+      ],
+      "caption": "",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_full/PMC10185620/p008_Figure_uncaptioned_1.png",
+      "image_size": [
+        267,
+        186
+      ],
+      "context_words": 3000,
+      "context_strategy": "full",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"other\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"other\",\n    \"panel_count\": \"unclear\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"humans, construction site, bricks, trees\"]\n  },\n  \"visual_description\": \"The image shows a construction site with several individuals working on bricklaying. There are partially built brick walls, scattered bricks, and tools visible. The background features tall palm trees, indicating a tropical or subtropical environment.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"Not determinable\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": []\n  },\n  \"data_and_patterns\": \"No specific data or patterns are visible in the image.\",\n  \"groups_compared\": \"Not applicable\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Construction site with bricklaying activity\", \"Presence of palm trees\"],\n    \"caption_supported_evidence\": [],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": [\"No direct link to the research topics discussed in the paper\"]\n  },\n  \"scientific_interpretation\": \"The image does not directly relate to the scientific research described in the paper, which focuses on primate behavior and evolution. It appears to be an unrelated photograph possibly used for contextual or illustrative purposes.\",\n  \"hypothesis_tested\": \"Not determinable\",\n  \"paper_quote\": \"Not applicable\",\n  \"controls_assessment\": \"Not applicable\",\n  \"scientific_conclusion\": \"The image depicts a construction site with individuals engaged in bricklaying, set against a backdrop of palm trees. There are no visible data, statistical markers, or experimental elements related to the research on primate behavior discussed in the paper. The image does not contribute to the scientific argument or findings presented in the paper.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The image might be used to illustrate a fieldwork environment or community involvement in a project, but this is speculative.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"None\",\n    \"risk\": \"high\",\n    \"open_questions\": \"The relevance of the image to the research is unclear and not addressed in the paper.\",\n    \"alternative_interpretation\": \"None\"\n  },\n  \"context_used\": \"full paper text [truncated at 3000 words, original: 11495]\",\n  \"confidence\": \"low\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "other",
+        "visual_form": {
+          "graph_or_visual_type": "other",
+          "panel_count": "unclear",
+          "panel_labels": [],
+          "axes_or_dimensions": [],
+          "legend_elements": [],
+          "visible_entities": [
+            "humans, construction site, bricks, trees"
+          ]
+        },
+        "visual_description": "The image shows a construction site with several individuals working on bricklaying. There are partially built brick walls, scattered bricks, and tools visible. The background features tall palm trees, indicating a tropical or subtropical environment.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "Not determinable"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": []
+        },
+        "data_and_patterns": "No specific data or patterns are visible in the image.",
+        "groups_compared": "Not applicable",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Construction site with bricklaying activity",
+            "Presence of palm trees"
+          ],
+          "caption_supported_evidence": [],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": [
+            "No direct link to the research topics discussed in the paper"
+          ]
+        },
+        "scientific_interpretation": "The image does not directly relate to the scientific research described in the paper, which focuses on primate behavior and evolution. It appears to be an unrelated photograph possibly used for contextual or illustrative purposes.",
+        "hypothesis_tested": "Not determinable",
+        "paper_quote": "Not applicable",
+        "controls_assessment": "Not applicable",
+        "scientific_conclusion": "The image depicts a construction site with individuals engaged in bricklaying, set against a backdrop of palm trees. There are no visible data, statistical markers, or experimental elements related to the research on primate behavior discussed in the paper. The image does not contribute to the scientific argument or findings presented in the paper.",
+        "model_extra_inference": {
+          "extra_inference": "The image might be used to illustrate a fieldwork environment or community involvement in a project, but this is speculative.",
+          "support_status": "speculative",
+          "supporting_evidence": "None",
+          "risk": "high",
+          "open_questions": "The relevance of the image to the research is unclear and not addressed in the paper.",
+          "alternative_interpretation": "None"
+        },
+        "context_used": "full paper text [truncated at 3000 words, original: 11495]",
+        "confidence": "low"
+      },
+      "confidence": "low",
+      "elapsed_sec": 10.3
+    },
+    {
+      "label": "Figure_uncaptioned_2",
+      "kind": "figure",
+      "page": 10,
+      "bbox": [
+        36.4,
+        493.1,
+        302.7,
+        678.5
+      ],
+      "caption": "",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_full/PMC10185620/p010_Figure_uncaptioned_2.png",
+      "image_size": [
+        266,
+        185
+      ],
+      "context_words": 3000,
+      "context_strategy": "full",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"microscopy\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"microscopy\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"chimpanzees\", \"natural habitat\"]\n  },\n  \"visual_description\": \"The image shows three chimpanzees in a natural, grassy habitat with trees and vegetation in the background. The chimpanzees are engaged in various activities, with one in the foreground holding an object, possibly food.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"chimpanzees in natural habitat\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": []\n  },\n  \"data_and_patterns\": \"The image depicts natural behavior of chimpanzees, showing social interaction and foraging.\",\n  \"groups_compared\": \"Not applicable\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"three chimpanzees in a natural setting\", \"one chimpanzee holding an object\"],\n    \"caption_supported_evidence\": [\"chimpanzees in a natural habitat\"],\n    \"local_context_supported_evidence\": [\"chimpanzees exhibiting social behavior\"],\n    \"global_paper_supported_interpretation\": [\"observations of primate behavior in natural settings\"],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The image provides visual context for the study of primate behavior, illustrating the natural environment and social dynamics of chimpanzees, which may relate to the research on sexual behavior and social structures discussed in the paper.\",\n  \"hypothesis_tested\": \"Not determinable\",\n  \"paper_quote\": \"Not determinable\",\n  \"controls_assessment\": \"Not applicable\",\n  \"scientific_conclusion\": \"The image shows chimpanzees in their natural habitat, highlighting their social interactions and behaviors. This visual supports the study of primate social structures and behaviors, which is central to understanding the evolution of human society. The image does not provide quantitative data but offers qualitative insights into the natural behavior of chimpanzees, relevant to the broader research context of the paper.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The image may suggest the importance of observing primates in their natural environment to understand their social dynamics, which could inform theories of human evolution.\",\n    \"support_status\": \"context_supported\",\n    \"supporting_evidence\": \"The paper discusses the study of primate social structures and behaviors in natural settings.\",\n    \"risk\": \"low\",\n    \"open_questions\": \"How do these observed behaviors in chimpanzees compare to those in other primate species, and what implications do they have for understanding human social evolution?\",\n    \"alternative_interpretation\": \"None\"\n  },\n  \"context_used\": \"full paper text [truncated at 3000 words, original: 11495]\",\n  \"confidence\": \"medium\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "microscopy",
+        "visual_form": {
+          "graph_or_visual_type": "microscopy",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [],
+          "legend_elements": [],
+          "visible_entities": [
+            "chimpanzees",
+            "natural habitat"
+          ]
+        },
+        "visual_description": "The image shows three chimpanzees in a natural, grassy habitat with trees and vegetation in the background. The chimpanzees are engaged in various activities, with one in the foreground holding an object, possibly food.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "chimpanzees in natural habitat"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": []
+        },
+        "data_and_patterns": "The image depicts natural behavior of chimpanzees, showing social interaction and foraging.",
+        "groups_compared": "Not applicable",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "three chimpanzees in a natural setting",
+            "one chimpanzee holding an object"
+          ],
+          "caption_supported_evidence": [
+            "chimpanzees in a natural habitat"
+          ],
+          "local_context_supported_evidence": [
+            "chimpanzees exhibiting social behavior"
+          ],
+          "global_paper_supported_interpretation": [
+            "observations of primate behavior in natural settings"
+          ],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The image provides visual context for the study of primate behavior, illustrating the natural environment and social dynamics of chimpanzees, which may relate to the research on sexual behavior and social structures discussed in the paper.",
+        "hypothesis_tested": "Not determinable",
+        "paper_quote": "Not determinable",
+        "controls_assessment": "Not applicable",
+        "scientific_conclusion": "The image shows chimpanzees in their natural habitat, highlighting their social interactions and behaviors. This visual supports the study of primate social structures and behaviors, which is central to understanding the evolution of human society. The image does not provide quantitative data but offers qualitative insights into the natural behavior of chimpanzees, relevant to the broader research context of the paper.",
+        "model_extra_inference": {
+          "extra_inference": "The image may suggest the importance of observing primates in their natural environment to understand their social dynamics, which could inform theories of human evolution.",
+          "support_status": "context_supported",
+          "supporting_evidence": "The paper discusses the study of primate social structures and behaviors in natural settings.",
+          "risk": "low",
+          "open_questions": "How do these observed behaviors in chimpanzees compare to those in other primate species, and what implications do they have for understanding human social evolution?",
+          "alternative_interpretation": "None"
+        },
+        "context_used": "full paper text [truncated at 3000 words, original: 11495]",
+        "confidence": "medium"
+      },
+      "confidence": "medium",
+      "elapsed_sec": 11.3
+    },
+    {
+      "label": "Figure_uncaptioned_3",
+      "kind": "figure",
+      "page": 11,
+      "bbox": [
+        291.3,
+        513.0,
+        558.1,
+        698.7
+      ],
+      "caption": "",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_full/PMC10185620/p011_Figure_uncaptioned_3.png",
+      "image_size": [
+        267,
+        186
+      ],
+      "context_words": 3000,
+      "context_strategy": "full",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"microscopy\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"microscopy\",\n    \"panel_count\": \"unclear\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"Japanese macaques\", \"ferns\"]\n  },\n  \"visual_description\": \"The image shows two Japanese macaques sitting among green ferns. The macaques have thick fur, and one appears to be grooming or resting close to the other. The background is filled with lush greenery.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"Japanese macaques in a natural setting\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": []\n  },\n  \"data_and_patterns\": \"The image depicts natural behavior of Japanese macaques in a forested environment, showing social interaction.\",\n  \"groups_compared\": \"Not applicable\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Two macaques are visible, surrounded by ferns.\"],\n    \"caption_supported_evidence\": [\"The image shows Japanese macaques.\"],\n    \"local_context_supported_evidence\": [\"The macaques are likely part of a study on social behavior.\"],\n    \"global_paper_supported_interpretation\": [\"The image relates to research on primate social structures and behaviors.\"],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The image provides a visual context for the study of Japanese macaques' social behaviors, highlighting their natural habitat and interactions.\",\n  \"hypothesis_tested\": \"Not determinable\",\n  \"paper_quote\": \"Not determinable\",\n  \"controls_assessment\": \"Not applicable\",\n  \"scientific_conclusion\": \"The image shows Japanese macaques in a natural setting, illustrating the environment in which their social behaviors are studied. It highlights the importance of observing these primates in their habitat to understand their interactions and social structures. The visual provides context for research on their mating and social dynamics, though no specific experimental data is presented. The image supports the broader study of primate behavior and evolution discussed in the paper.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The image may suggest the significance of environmental factors in primate behavior studies.\",\n    \"support_status\": \"context_supported\",\n    \"supporting_evidence\": \"The macaques are shown in a natural habitat, which is relevant to understanding their behavior.\",\n    \"risk\": \"low\",\n    \"open_questions\": \"How do environmental factors influence the social dynamics observed in the macaques?\",\n    \"alternative_interpretation\": \"None\"\n  },\n  \"context_used\": \"full paper text [truncated at 3000 words, original: 11495]\",\n  \"confidence\": \"medium\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "microscopy",
+        "visual_form": {
+          "graph_or_visual_type": "microscopy",
+          "panel_count": "unclear",
+          "panel_labels": [],
+          "axes_or_dimensions": [],
+          "legend_elements": [],
+          "visible_entities": [
+            "Japanese macaques",
+            "ferns"
+          ]
+        },
+        "visual_description": "The image shows two Japanese macaques sitting among green ferns. The macaques have thick fur, and one appears to be grooming or resting close to the other. The background is filled with lush greenery.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "Japanese macaques in a natural setting"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": []
+        },
+        "data_and_patterns": "The image depicts natural behavior of Japanese macaques in a forested environment, showing social interaction.",
+        "groups_compared": "Not applicable",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Two macaques are visible, surrounded by ferns."
+          ],
+          "caption_supported_evidence": [
+            "The image shows Japanese macaques."
+          ],
+          "local_context_supported_evidence": [
+            "The macaques are likely part of a study on social behavior."
+          ],
+          "global_paper_supported_interpretation": [
+            "The image relates to research on primate social structures and behaviors."
+          ],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The image provides a visual context for the study of Japanese macaques' social behaviors, highlighting their natural habitat and interactions.",
+        "hypothesis_tested": "Not determinable",
+        "paper_quote": "Not determinable",
+        "controls_assessment": "Not applicable",
+        "scientific_conclusion": "The image shows Japanese macaques in a natural setting, illustrating the environment in which their social behaviors are studied. It highlights the importance of observing these primates in their habitat to understand their interactions and social structures. The visual provides context for research on their mating and social dynamics, though no specific experimental data is presented. The image supports the broader study of primate behavior and evolution discussed in the paper.",
+        "model_extra_inference": {
+          "extra_inference": "The image may suggest the significance of environmental factors in primate behavior studies.",
+          "support_status": "context_supported",
+          "supporting_evidence": "The macaques are shown in a natural habitat, which is relevant to understanding their behavior.",
+          "risk": "low",
+          "open_questions": "How do environmental factors influence the social dynamics observed in the macaques?",
+          "alternative_interpretation": "None"
+        },
+        "context_used": "full paper text [truncated at 3000 words, original: 11495]",
+        "confidence": "medium"
+      },
+      "confidence": "medium",
+      "elapsed_sec": 11.0
+    },
+    {
+      "label": "Figure 6",
+      "kind": "figure",
+      "page": 13,
+      "bbox": [
+        36.4,
+        522.7,
+        302.7,
+        708.5
+      ],
+      "caption": "Fig. 6 Participants at the campsite in the evening",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_full/PMC10185620/p013_Figure_6.png",
+      "image_size": [
+        266,
+        186
+      ],
+      "context_words": 3000,
+      "context_strategy": "full",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"other\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"other\",\n    \"panel_count\": \"unclear\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"people, tents, vehicles\"]\n  },\n  \"visual_description\": \"The image shows a group of people gathered at a campsite in a forested area. There are several tents set up, including blue and orange ones, and a vehicle is parked nearby. People are sitting on a blue tarp, engaging in various activities, possibly preparing or eating food.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"Not determinable\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": []\n  },\n  \"data_and_patterns\": \"No specific data or patterns are visible in the image.\",\n  \"groups_compared\": \"Not applicable\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"The image shows a campsite with people and tents, indicating an outdoor setting.\"],\n    \"caption_supported_evidence\": [\"The caption describes participants at the campsite in the evening.\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [\"The image may relate to fieldwork or research activities described in the paper, such as observations of primate behavior in natural settings.\"],\n    \"unsupported_or_not_determinable\": [\"The specific connection to the research described in the paper is not directly evident from the image alone.\"]\n  },\n  \"scientific_interpretation\": \"The image likely depicts a field camp where researchers or participants are gathered, possibly related to the study of primate behavior in natural environments. It provides context for the fieldwork aspect of the research.\",\n  \"hypothesis_tested\": \"Not determinable\",\n  \"paper_quote\": \"Not determinable\",\n  \"controls_assessment\": \"Not applicable\",\n  \"scientific_conclusion\": \"The image shows a campsite with people and tents, suggesting an outdoor research or fieldwork setting. While no specific data or comparisons are visible, it provides context for the fieldwork component of the study, which may involve observing primate behavior in natural environments. The image supports the paper's focus on field research but does not provide direct experimental data or results.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The campsite may be part of the field research described in the paper, providing a base for observing and studying primate behavior in their natural habitat.\",\n    \"support_status\": \"context_supported\",\n    \"supporting_evidence\": \"The paper discusses field observations of Japanese macaques and other primates, suggesting that such campsites are used for research.\",\n    \"risk\": \"low\",\n    \"open_questions\": \"The specific role of this campsite in the research, and how it contributes to the study's findings, is not clear from the image alone.\",\n    \"alternative_interpretation\": \"None\"\n  },\n  \"context_used\": \"full paper text [truncated at 3000 words, original: 11495]\",\n  \"confidence\": \"medium\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "other",
+        "visual_form": {
+          "graph_or_visual_type": "other",
+          "panel_count": "unclear",
+          "panel_labels": [],
+          "axes_or_dimensions": [],
+          "legend_elements": [],
+          "visible_entities": [
+            "people, tents, vehicles"
+          ]
+        },
+        "visual_description": "The image shows a group of people gathered at a campsite in a forested area. There are several tents set up, including blue and orange ones, and a vehicle is parked nearby. People are sitting on a blue tarp, engaging in various activities, possibly preparing or eating food.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "Not determinable"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": []
+        },
+        "data_and_patterns": "No specific data or patterns are visible in the image.",
+        "groups_compared": "Not applicable",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "The image shows a campsite with people and tents, indicating an outdoor setting."
+          ],
+          "caption_supported_evidence": [
+            "The caption describes participants at the campsite in the evening."
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [
+            "The image may relate to fieldwork or research activities described in the paper, such as observations of primate behavior in natural settings."
+          ],
+          "unsupported_or_not_determinable": [
+            "The specific connection to the research described in the paper is not directly evident from the image alone."
+          ]
+        },
+        "scientific_interpretation": "The image likely depicts a field camp where researchers or participants are gathered, possibly related to the study of primate behavior in natural environments. It provides context for the fieldwork aspect of the research.",
+        "hypothesis_tested": "Not determinable",
+        "paper_quote": "Not determinable",
+        "controls_assessment": "Not applicable",
+        "scientific_conclusion": "The image shows a campsite with people and tents, suggesting an outdoor research or fieldwork setting. While no specific data or comparisons are visible, it provides context for the fieldwork component of the study, which may involve observing primate behavior in natural environments. The image supports the paper's focus on field research but does not provide direct experimental data or results.",
+        "model_extra_inference": {
+          "extra_inference": "The campsite may be part of the field research described in the paper, providing a base for observing and studying primate behavior in their natural habitat.",
+          "support_status": "context_supported",
+          "supporting_evidence": "The paper discusses field observations of Japanese macaques and other primates, suggesting that such campsites are used for research.",
+          "risk": "low",
+          "open_questions": "The specific role of this campsite in the research, and how it contributes to the study's findings, is not clear from the image alone.",
+          "alternative_interpretation": "None"
+        },
+        "context_used": "full paper text [truncated at 3000 words, original: 11495]",
+        "confidence": "medium"
+      },
+      "confidence": "medium",
+      "elapsed_sec": 11.8
+    },
+    {
+      "label": "Figure 7",
+      "kind": "figure",
+      "page": 14,
+      "bbox": [
+        36.1,
+        502.3,
+        303.2,
+        688.6
+      ],
+      "caption": "Fig. 7 Encounter between the C1 and C2 lemur groups on the roof of a restaurant for tourists. Females were at the forefront of these conflicts",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_full/PMC10185620/p014_Figure_7.png",
+      "image_size": [
+        267,
+        186
+      ],
+      "context_words": 3000,
+      "context_strategy": "full",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"microscopy\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"microscopy\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"ringtailed lemurs\", \"flowers\"]\n  },\n  \"visual_description\": \"The image shows a group of ringtailed lemurs on a thatched roof surrounded by green foliage and red flowers. The lemurs are positioned in various postures, some standing and others sitting, with their distinctive striped tails visible.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"ringtailed lemurs\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": []\n  },\n  \"data_and_patterns\": \"The lemurs are seen interacting on a roof, with some facing each other, suggesting social behavior. The presence of flowers indicates a natural or semi-natural environment.\",\n  \"groups_compared\": \"Not applicable\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"group of lemurs on a roof\", \"presence of flowers\"],\n    \"caption_supported_evidence\": [\"lemurs interacting on a roof\"],\n    \"local_context_supported_evidence\": [\"lemurs exhibiting social behavior\"],\n    \"global_paper_supported_interpretation\": [\"study of primate social interactions\"],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The image likely illustrates the social dynamics of ringtailed lemurs, possibly during an encounter between different groups as mentioned in the caption. This relates to the paper's exploration of primate social structures and interactions.\",\n  \"hypothesis_tested\": \"Not determinable\",\n  \"paper_quote\": \"Not determinable\",\n  \"controls_assessment\": \"Not applicable\",\n  \"scientific_conclusion\": \"The image depicts a social gathering of ringtailed lemurs on a roof, highlighting their group dynamics and interactions. The presence of multiple lemurs in close proximity suggests affiliative or competitive behaviors, relevant to studies of primate social structures. The natural setting with flowers indicates an environment that may influence their behavior. This visual supports the paper's focus on understanding primate social interactions and competition.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The lemurs' positioning may indicate a dominance display or social bonding, common in primate groups. The environment suggests human influence, which could impact their natural behaviors.\",\n    \"support_status\": \"context_supported\",\n    \"supporting_evidence\": [\"lemurs in a semi-natural environment\", \"group interactions visible\"],\n    \"risk\": \"medium\",\n    \"open_questions\": \"How does the human-modified environment affect the natural social behaviors of the lemurs? What specific social dynamics are depicted in this encounter?\",\n    \"alternative_interpretation\": \"The lemurs could be engaging in a neutral social interaction without competitive implications, possibly a routine group gathering.\"\n  },\n  \"context_used\": \"full paper text [truncated at 3000 words, original: 11495]\",\n  \"confidence\": \"medium\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "microscopy",
+        "visual_form": {
+          "graph_or_visual_type": "microscopy",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [],
+          "legend_elements": [],
+          "visible_entities": [
+            "ringtailed lemurs",
+            "flowers"
+          ]
+        },
+        "visual_description": "The image shows a group of ringtailed lemurs on a thatched roof surrounded by green foliage and red flowers. The lemurs are positioned in various postures, some standing and others sitting, with their distinctive striped tails visible.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "ringtailed lemurs"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": []
+        },
+        "data_and_patterns": "The lemurs are seen interacting on a roof, with some facing each other, suggesting social behavior. The presence of flowers indicates a natural or semi-natural environment.",
+        "groups_compared": "Not applicable",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "group of lemurs on a roof",
+            "presence of flowers"
+          ],
+          "caption_supported_evidence": [
+            "lemurs interacting on a roof"
+          ],
+          "local_context_supported_evidence": [
+            "lemurs exhibiting social behavior"
+          ],
+          "global_paper_supported_interpretation": [
+            "study of primate social interactions"
+          ],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The image likely illustrates the social dynamics of ringtailed lemurs, possibly during an encounter between different groups as mentioned in the caption. This relates to the paper's exploration of primate social structures and interactions.",
+        "hypothesis_tested": "Not determinable",
+        "paper_quote": "Not determinable",
+        "controls_assessment": "Not applicable",
+        "scientific_conclusion": "The image depicts a social gathering of ringtailed lemurs on a roof, highlighting their group dynamics and interactions. The presence of multiple lemurs in close proximity suggests affiliative or competitive behaviors, relevant to studies of primate social structures. The natural setting with flowers indicates an environment that may influence their behavior. This visual supports the paper's focus on understanding primate social interactions and competition.",
+        "model_extra_inference": {
+          "extra_inference": "The lemurs' positioning may indicate a dominance display or social bonding, common in primate groups. The environment suggests human influence, which could impact their natural behaviors.",
+          "support_status": "context_supported",
+          "supporting_evidence": [
+            "lemurs in a semi-natural environment",
+            "group interactions visible"
+          ],
+          "risk": "medium",
+          "open_questions": "How does the human-modified environment affect the natural social behaviors of the lemurs? What specific social dynamics are depicted in this encounter?",
+          "alternative_interpretation": "The lemurs could be engaging in a neutral social interaction without competitive implications, possibly a routine group gathering."
+        },
+        "context_used": "full paper text [truncated at 3000 words, original: 11495]",
+        "confidence": "medium"
+      },
+      "confidence": "medium",
+      "elapsed_sec": 11.7
+    },
+    {
+      "label": "Figure 8",
+      "kind": "figure",
+      "page": 14,
+      "bbox": [
+        33.7,
+        718.7,
+        108.8,
+        763.4
+      ],
+      "caption": "Fig. 8 KI, an old female ringtailed in the C1 group",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_full/PMC10185620/p014_Figure_8.png",
+      "image_size": [
+        75,
+        45
+      ],
+      "context_words": 3000,
+      "context_strategy": "full",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"schematic\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"schematic\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"Springer logo\"]\n  },\n  \"visual_description\": \"The image shows the Springer logo, which consists of a stylized horse head above the word 'Springer'. There are no axes, panels, or additional elements visible.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"Not determinable\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": []\n  },\n  \"data_and_patterns\": \"No specific data or patterns are visible in this image.\",\n  \"groups_compared\": \"Not applicable\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"The image shows the Springer logo.\"],\n    \"caption_supported_evidence\": [],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"This image does not provide any scientific data or interpretation related to the paper's topic.\",\n  \"hypothesis_tested\": \"Not determinable\",\n  \"paper_quote\": \"Not applicable\",\n  \"controls_assessment\": \"Not applicable\",\n  \"scientific_conclusion\": \"The image displays the Springer logo, which is unrelated to the scientific content of the paper. It does not provide any data, patterns, or statistical information relevant to the research discussed in the paper. The logo serves as a publisher's mark and does not contribute to the scientific argument or findings presented.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"None\",\n    \"support_status\": \"none\",\n    \"supporting_evidence\": \"None\",\n    \"risk\": \"low\",\n    \"open_questions\": \"None\",\n    \"alternative_interpretation\": \"None\"\n  },\n  \"context_used\": \"full paper text [truncated at 3000 words, original: 11495]\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "schematic",
+        "visual_form": {
+          "graph_or_visual_type": "schematic",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [],
+          "legend_elements": [],
+          "visible_entities": [
+            "Springer logo"
+          ]
+        },
+        "visual_description": "The image shows the Springer logo, which consists of a stylized horse head above the word 'Springer'. There are no axes, panels, or additional elements visible.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "Not determinable"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": []
+        },
+        "data_and_patterns": "No specific data or patterns are visible in this image.",
+        "groups_compared": "Not applicable",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "The image shows the Springer logo."
+          ],
+          "caption_supported_evidence": [],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "This image does not provide any scientific data or interpretation related to the paper's topic.",
+        "hypothesis_tested": "Not determinable",
+        "paper_quote": "Not applicable",
+        "controls_assessment": "Not applicable",
+        "scientific_conclusion": "The image displays the Springer logo, which is unrelated to the scientific content of the paper. It does not provide any data, patterns, or statistical information relevant to the research discussed in the paper. The logo serves as a publisher's mark and does not contribute to the scientific argument or findings presented.",
+        "model_extra_inference": {
+          "extra_inference": "None",
+          "support_status": "none",
+          "supporting_evidence": "None",
+          "risk": "low",
+          "open_questions": "None",
+          "alternative_interpretation": "None"
+        },
+        "context_used": "full paper text [truncated at 3000 words, original: 11495]",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 8.9
+    },
+    {
+      "label": "Figure_uncaptioned_4",
+      "kind": "figure",
+      "page": 14,
+      "bbox": [
+        336.9,
+        40.3,
+        512.7,
+        291.2
+      ],
+      "caption": "",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_full/PMC10185620/p014_Figure_uncaptioned_4.png",
+      "image_size": [
+        176,
+        251
+      ],
+      "context_words": 3000,
+      "context_strategy": "full",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"microscopy\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"microscopy\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"ringtailed lemur\"]\n  },\n  \"visual_description\": \"The image shows a ringtailed lemur sitting on a sandy surface. The lemur has distinctive black and white striped tail and facial markings.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"ringtailed lemur\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": []\n  },\n  \"data_and_patterns\": \"No specific data or patterns are visible in the image.\",\n  \"groups_compared\": \"None\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"The image shows a ringtailed lemur with distinctive black and white tail and facial markings.\"],\n    \"caption_supported_evidence\": [\"The caption identifies the animal as a ringtailed lemur.\"],\n    \"local_context_supported_evidence\": [\"The paper discusses research on various primates, including ringtailed lemurs.\"],\n    \"global_paper_supported_interpretation\": [\"The image relates to the author's research on primates, including ringtailed lemurs.\"],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The image provides a visual representation of a ringtailed lemur, which is one of the study subjects mentioned in the paper. It highlights the physical characteristics of the species, which may be relevant to the author's research on primate behavior and evolution.\",\n  \"hypothesis_tested\": \"Not determinable\",\n  \"paper_quote\": \"After that, I changed my study subjects several times from chimpanzees, Yakushima macaques (a subspecies of Japanese macaque), and ringtailed lemurs.\",\n  \"controls_assessment\": \"Not applicable\",\n  \"scientific_conclusion\": \"The image shows a ringtailed lemur, which is one of the primate species studied by the author. The visual highlights the distinctive physical features of the lemur, which may be relevant to understanding its behavior and social structure. The image supports the paper's context of studying various primates to explore evolutionary and social questions. However, no specific experimental data or comparisons are presented in the image.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The image may suggest the importance of visual identification in primate research, which is crucial for studying social interactions and behaviors.\",\n    \"support_status\": \"context_supported\",\n    \"supporting_evidence\": \"The paper discusses the author's research on different primate species, emphasizing the need for detailed observation and identification.\",\n    \"risk\": \"low\",\n    \"open_questions\": \"The image does not provide information on the specific behaviors or social dynamics of the lemur, which are central to the author's research.\",\n    \"alternative_interpretation\": \"None\"\n  },\n  \"context_used\": \"full paper text [truncated at 3000 words, original: 11495]\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "microscopy",
+        "visual_form": {
+          "graph_or_visual_type": "microscopy",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [],
+          "legend_elements": [],
+          "visible_entities": [
+            "ringtailed lemur"
+          ]
+        },
+        "visual_description": "The image shows a ringtailed lemur sitting on a sandy surface. The lemur has distinctive black and white striped tail and facial markings.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "ringtailed lemur"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": []
+        },
+        "data_and_patterns": "No specific data or patterns are visible in the image.",
+        "groups_compared": "None",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "The image shows a ringtailed lemur with distinctive black and white tail and facial markings."
+          ],
+          "caption_supported_evidence": [
+            "The caption identifies the animal as a ringtailed lemur."
+          ],
+          "local_context_supported_evidence": [
+            "The paper discusses research on various primates, including ringtailed lemurs."
+          ],
+          "global_paper_supported_interpretation": [
+            "The image relates to the author's research on primates, including ringtailed lemurs."
+          ],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The image provides a visual representation of a ringtailed lemur, which is one of the study subjects mentioned in the paper. It highlights the physical characteristics of the species, which may be relevant to the author's research on primate behavior and evolution.",
+        "hypothesis_tested": "Not determinable",
+        "paper_quote": "After that, I changed my study subjects several times from chimpanzees, Yakushima macaques (a subspecies of Japanese macaque), and ringtailed lemurs.",
+        "controls_assessment": "Not applicable",
+        "scientific_conclusion": "The image shows a ringtailed lemur, which is one of the primate species studied by the author. The visual highlights the distinctive physical features of the lemur, which may be relevant to understanding its behavior and social structure. The image supports the paper's context of studying various primates to explore evolutionary and social questions. However, no specific experimental data or comparisons are presented in the image.",
+        "model_extra_inference": {
+          "extra_inference": "The image may suggest the importance of visual identification in primate research, which is crucial for studying social interactions and behaviors.",
+          "support_status": "context_supported",
+          "supporting_evidence": "The paper discusses the author's research on different primate species, emphasizing the need for detailed observation and identification.",
+          "risk": "low",
+          "open_questions": "The image does not provide information on the specific behaviors or social dynamics of the lemur, which are central to the author's research.",
+          "alternative_interpretation": "None"
+        },
+        "context_used": "full paper text [truncated at 3000 words, original: 11495]",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 12.0
+    }
+  ]
+}

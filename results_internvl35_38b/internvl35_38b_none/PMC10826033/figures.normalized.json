@@ -1,0 +1,274 @@
+[
+  {
+    "label": "Figure 1",
+    "kind": "figure",
+    "page": 3,
+    "bbox": [
+      44.9,
+      71.3,
+      549.1,
+      343.0
+    ],
+    "caption": "Fig. 1 Technical framework. The red solid box represents different annotation modes. The purple solid box represents the newly added micro-scale detection layer. The blue solid box represents the SPD-Conv",
+    "image_path": "p003_Figure_1.png",
+    "image_size": [
+      504,
+      272
+    ]
+  },
+  {
+    "label": "Figure 2",
+    "kind": "figure",
+    "page": 3,
+    "bbox": [
+      66.1,
+      358.4,
+      527.4,
+      600.6
+    ],
+    "caption": "Fig. 2 Data augmentation a the original image, b the original image rotated by 90°, c the original image rotated by 180°, c the original image rotated by 270°, f horizontal rotation f vertical rotation, g and h brightness balance",
+    "image_path": "p003_Figure_2.png",
+    "image_size": [
+      461,
+      242
+    ]
+  },
+  {
+    "label": "Figure 3",
+    "kind": "figure",
+    "page": 4,
+    "bbox": [
+      68.4,
+      71.6,
+      528.8,
+      408.9
+    ],
+    "caption": "Fig. 3 Wheat seedling images with different annotation modes: a local annotation, b global annotation, c small-size annotation, d medium-size annotation, e large-size annotation. Yellow boxes represent annotation",
+    "image_path": "p004_Figure_3.png",
+    "image_size": [
+      460,
+      337
+    ]
+  },
+  {
+    "label": "Figure 4",
+    "kind": "figure",
+    "page": 5,
+    "bbox": [
+      67.5,
+      70.6,
+      526.4,
+      477.4
+    ],
+    "caption": "Fig. 4 Improved YOLOv5 network architecture diagram. The red dashed box is the newly added micro-scale detection layer. The red solid line box is the SPD-Conv",
+    "image_path": "p005_Figure_4.png",
+    "image_size": [
+      459,
+      407
+    ]
+  },
+  {
+    "label": "Figure 5",
+    "kind": "figure",
+    "page": 6,
+    "bbox": [
+      89.5,
+      71.8,
+      504.5,
+      321.1
+    ],
+    "caption": "Fig. 5 The feature processing with SPD-Conv",
+    "image_path": "p006_Figure_5.png",
+    "image_size": [
+      415,
+      249
+    ]
+  },
+  {
+    "label": "Figure 6",
+    "kind": "figure",
+    "page": 7,
+    "bbox": [
+      44.8,
+      466.2,
+      549.4,
+      716.8
+    ],
+    "caption": "Fig. 6 The proposed method and other state-of-the-art object detection results: a proposed, b YOLOv5, c YOLOv7, d YOLOv3, e SSD, f RetinaNet, g Faster-RCNN. Yellow boxes represent annotation, green boxes represent detection, and red boxes represent false detection",
+    "image_path": "p007_Figure_6.png",
+    "image_size": [
+      505,
+      251
+    ]
+  },
+  {
+    "label": "Figure 7",
+    "kind": "figure",
+    "page": 8,
+    "bbox": [
+      53.0,
+      71.5,
+      542.0,
+      282.9
+    ],
+    "caption": "Fig. 7 Precision and recall curves of wheat seedling detection: a the precision and recall curves of the proposed method and the standard YOLOv5 with different annotation modes, b the precision and recall curves of the proposed method and other object detection networks",
+    "image_path": "p008_Figure_7.png",
+    "image_size": [
+      489,
+      211
+    ]
+  },
+  {
+    "label": "Figure 8",
+    "kind": "figure",
+    "page": 9,
+    "bbox": [
+      53.4,
+      73.7,
+      540.6,
+      465.6
+    ],
+    "caption": "Fig. 8 The distribution of local annotation of wheat seedlings in UAV images: a size distribution of wheat seedling length and width, b the number distribution of different sizes of wheat seedlings, c the ratio between the pixels of seedlings and soil background in local annotation mode and global annotation mode",
+    "image_path": "p009_Figure_8.png",
+    "image_size": [
+      487,
+      392
+    ]
+  },
+  {
+    "label": "Figure 9",
+    "kind": "figure",
+    "page": 10,
+    "bbox": [
+      95.6,
+      71.2,
+      498.7,
+      265.6
+    ],
+    "caption": "Fig. 9 Detection results of the model without the SPD-Conv module ( a ) and with the SPD-Conv module ( b ). Yellow boxes represent annotation, and green boxes represent detection",
+    "image_path": "p010_Figure_9.png",
+    "image_size": [
+      403,
+      194
+    ]
+  },
+  {
+    "label": "Figure 10",
+    "kind": "figure",
+    "page": 10,
+    "bbox": [
+      95.0,
+      297.4,
+      499.3,
+      704.2
+    ],
+    "caption": "Fig. 10 a small-size annotation boxes and detection boxes, b medium-size annotation boxes and detection boxes, c large-size annotation boxes and detection boxes, d multi-size annotation boxes and detection boxes. Yellow boxes represent annotation, and green boxes represent detection",
+    "image_path": "p010_Figure_10.png",
+    "image_size": [
+      404,
+      407
+    ]
+  },
+  {
+    "label": "Figure 11",
+    "kind": "figure",
+    "page": 11,
+    "bbox": [
+      51.8,
+      71.1,
+      293.6,
+      277.1
+    ],
+    "caption": "Fig. 11 The detection rate and missed detection rate during the neural network training process based on the small, medium, and large size annotated boxes of local annotation mode of wheat seedling",
+    "image_path": "p011_Figure_11.png",
+    "image_size": [
+      242,
+      206
+    ]
+  },
+  {
+    "label": "Table 1",
+    "kind": "table",
+    "page": 4,
+    "bbox": [
+      39.6,
+      435.9,
+      306.5,
+      555.7
+    ],
+    "caption": "Table 1 Datasets of different annotation modes",
+    "image_path": "p004_Table_1.png",
+    "image_size": [
+      267,
+      120
+    ]
+  },
+  {
+    "label": "Table 2",
+    "kind": "table",
+    "page": 6,
+    "bbox": [
+      39.4,
+      612.8,
+      554.9,
+      740.1
+    ],
+    "caption": "Table 2 Hyperparameters settings",
+    "image_path": "p006_Table_2.png",
+    "image_size": [
+      515,
+      127
+    ]
+  },
+  {
+    "label": "Table 3",
+    "kind": "table",
+    "page": 7,
+    "bbox": [
+      39.5,
+      308.3,
+      306.8,
+      477.5
+    ],
+    "caption": "Table 3 Comparison of the detection accuracy between the  original  YOLOv5  and  the  proposed  method  on  the  wheat seedling dataset with different annotations",
+    "image_path": "p007_Table_3.png",
+    "image_size": [
+      267,
+      169
+    ]
+  },
+  {
+    "label": "Table 4",
+    "kind": "table",
+    "page": 8,
+    "bbox": [
+      39.6,
+      333.3,
+      306.7,
+      473.4
+    ],
+    "caption": "Table 4 Comparison between the proposed method and other state-of-the-art object detection networks",
+    "image_path": "p008_Table_4.png",
+    "image_size": [
+      267,
+      140
+    ]
+  },
+  {
+    "label": "Table 5",
+    "kind": "table",
+    "page": 8,
+    "bbox": [
+      287.7,
+      322.2,
+      554.9,
+      482.9
+    ],
+    "caption": "Table 5 Ablation experiment results",
+    "image_path": "p008_Table_5.png",
+    "image_size": [
+      267,
+      161
+    ]
+  }
+]

@@ -1,0 +1,342 @@
+[
+  {
+    "label": "Figure_uncaptioned_1",
+    "kind": "figure",
+    "page": 4,
+    "bbox": [
+      41.0,
+      418.1,
+      301.0,
+      642.3
+    ],
+    "caption": "",
+    "image_path": "p004_Figure_uncaptioned_1.png",
+    "image_size": [
+      260,
+      224
+    ]
+  },
+  {
+    "label": "Figure_uncaptioned_2",
+    "kind": "figure",
+    "page": 4,
+    "bbox": [
+      297.6,
+      420.2,
+      553.7,
+      652.6
+    ],
+    "caption": "",
+    "image_path": "p004_Figure_uncaptioned_2.png",
+    "image_size": [
+      256,
+      232
+    ]
+  },
+  {
+    "label": "Figure 2",
+    "kind": "figure",
+    "page": 5,
+    "bbox": [
+      46.5,
+      185.9,
+      546.0,
+      404.5
+    ],
+    "caption": "Figure 2. Ferric reducing antioxidant power (FRAP) and total phenolic content (TPC) of C. nocturnum leaf extracts. The values are represented as mean ± SD of data from three parallel assays. Figure 2. Ferric reducing antioxidant power (FRAP) and total phenolic content (TPC) of C. nocturnum leaf extracts. The values are represented as mean ± SD of data from three parallel assays.",
+    "image_path": "p005_Figure_2.png",
+    "image_size": [
+      499,
+      219
+    ]
+  },
+  {
+    "label": "Figure 3",
+    "kind": "figure",
+    "page": 6,
+    "bbox": [
+      33.0,
+      86.2,
+      302.1,
+      293.4
+    ],
+    "caption": "Figure 3. In -vitro inhibition of α -amylase and acetylcholine esterase (AChE) activities by C. noctur num leaf extracts. The MeOH extract was the most potent in inhibiting α -amylase. Bar graph repre sents the % inhibition of α -amylase and AChE. The values are represented as mean ± SD of dat from triplicate assay. Figure 3. In vitro inhibition of α -amylase and acetylcholine esterase (AChE) activities by C. nocturnum leaf extracts. The MeOH extract was the most potent in inhibiting α -amylase.",
+    "image_path": "p006_Figure_3.png",
+    "image_size": [
+      269,
+      207
+    ]
+  },
+  {
+    "label": "Figure_uncaptioned_3",
+    "kind": "figure",
+    "page": 6,
+    "bbox": [
+      33.2,
+      273.2,
+      304.4,
+      460.7
+    ],
+    "caption": "",
+    "image_path": "p006_Figure_uncaptioned_3.png",
+    "image_size": [
+      271,
+      188
+    ]
+  },
+  {
+    "label": "Figure_uncaptioned_4",
+    "kind": "figure",
+    "page": 6,
+    "bbox": [
+      284.6,
+      84.6,
+      560.4,
+      292.2
+    ],
+    "caption": "",
+    "image_path": "p006_Figure_uncaptioned_4.png",
+    "image_size": [
+      276,
+      208
+    ]
+  },
+  {
+    "label": "Figure_uncaptioned_5",
+    "kind": "figure",
+    "page": 7,
+    "bbox": [
+      35.7,
+      206.5,
+      563.6,
+      521.9
+    ],
+    "caption": "",
+    "image_path": "p007_Figure_uncaptioned_5.png",
+    "image_size": [
+      528,
+      315
+    ]
+  },
+  {
+    "label": "Figure_uncaptioned_6",
+    "kind": "figure",
+    "page": 13,
+    "bbox": [
+      36.2,
+      90.4,
+      560.1,
+      390.5
+    ],
+    "caption": "",
+    "image_path": "p013_Figure_uncaptioned_6.png",
+    "image_size": [
+      524,
+      300
+    ]
+  },
+  {
+    "label": "Figure 6",
+    "kind": "figure",
+    "page": 13,
+    "bbox": [
+      36.6,
+      435.3,
+      556.9,
+      719.6
+    ],
+    "caption": "Figure 6. Molecular binding patterns within the active pocket of AChE crystal structure. Panel ( A ): 2-D ball and stick model representation. Panel ( B ): The binding pattern representation on protein surface. Panel ( C ): Interaction of inhibitor with AChE surrounded by α -helix and β -sheet conformations. Figure 6. Molecular binding patterns within the active pocket of AChE crystal structure. Panel ( A ): 2-D ball and stick model representation. Panel ( B ): The binding pattern representation",
+    "image_path": "p013_Figure_6.png",
+    "image_size": [
+      520,
+      284
+    ]
+  },
+  {
+    "label": "Table 1",
+    "kind": "table",
+    "page": 3,
+    "bbox": [
+      149.5,
+      172.9,
+      575.2,
+      301.3
+    ],
+    "caption": "Table 1. %Yield of phytochemicals in different extracts of the leaves of C. nocturnum .",
+    "image_path": "p003_Table_1.png",
+    "image_size": [
+      426,
+      128
+    ]
+  },
+  {
+    "label": "Table 2",
+    "kind": "table",
+    "page": 3,
+    "bbox": [
+      149.5,
+      300.9,
+      575.3,
+      523.5
+    ],
+    "caption": "Table 2. Phytochemical profiling of different C. nocturnum leaf extracts.",
+    "image_path": "p003_Table_2.png",
+    "image_size": [
+      426,
+      223
+    ]
+  },
+  {
+    "label": "Table 3",
+    "kind": "table",
+    "page": 3,
+    "bbox": [
+      149.5,
+      639.3,
+      575.3,
+      783.5
+    ],
+    "caption": "Table 3. IC50 values of the extracts of C. nocturnum leaf against DPPH, ABTS, α -amylase, and AChE inhibition.",
+    "image_path": "p003_Table_3.png",
+    "image_size": [
+      426,
+      144
+    ]
+  },
+  {
+    "label": "Table_4",
+    "kind": "table",
+    "page": 4,
+    "bbox": [
+      149.7,
+      97.1,
+      575.3,
+      430.4
+    ],
+    "caption": "",
+    "image_path": "p004_Table_4.png",
+    "image_size": [
+      426,
+      333
+    ]
+  },
+  {
+    "label": "Table 4",
+    "kind": "table",
+    "page": 7,
+    "bbox": [
+      19.1,
+      620.9,
+      574.9,
+      776.4
+    ],
+    "caption": "Table 4. GC-MS predicted compounds with their molecular weight, formula, peak area (%), and respective PubChem IDs.",
+    "image_path": "p007_Table_4.png",
+    "image_size": [
+      556,
+      155
+    ]
+  },
+  {
+    "label": "Table 4",
+    "kind": "table",
+    "page": 8,
+    "bbox": [
+      19.5,
+      99.4,
+      574.5,
+      471.3
+    ],
+    "caption": "Table 4. Cont.",
+    "image_path": "p008_Table_4.png",
+    "image_size": [
+      555,
+      372
+    ]
+  },
+  {
+    "label": "Table_7",
+    "kind": "table",
+    "page": 8,
+    "bbox": [
+      19.5,
+      480.5,
+      574.7,
+      771.4
+    ],
+    "caption": "",
+    "image_path": "p008_Table_7.png",
+    "image_size": [
+      555,
+      291
+    ]
+  },
+  {
+    "label": "Table 5",
+    "kind": "table",
+    "page": 9,
+    "bbox": [
+      19.0,
+      99.3,
+      575.3,
+      243.0
+    ],
+    "caption": "Table 5. Cont.",
+    "image_path": "p009_Table_5.png",
+    "image_size": [
+      556,
+      144
+    ]
+  },
+  {
+    "label": "Table_9",
+    "kind": "table",
+    "page": 10,
+    "bbox": [
+      18.8,
+      107.3,
+      822.4,
+      433.0
+    ],
+    "caption": "",
+    "image_path": "p010_Table_9.png",
+    "image_size": [
+      804,
+      326
+    ]
+  },
+  {
+    "label": "Table 7",
+    "kind": "table",
+    "page": 11,
+    "bbox": [
+      19.5,
+      95.1,
+      822.6,
+      449.4
+    ],
+    "caption": "Table 7. Amino acid residues within the active pocket of α -amylase predicted to interact with the selected compounds.",
+    "image_path": "p011_Table_7.png",
+    "image_size": [
+      803,
+      354
+    ]
+  },
+  {
+    "label": "Table 8",
+    "kind": "table",
+    "page": 12,
+    "bbox": [
+      19.3,
+      95.1,
+      822.7,
+      471.4
+    ],
+    "caption": "Table 8. Amino acid residues within the active pocket of acetylcholinesterase (AChE) predicted to interact with the selected compounds.",
+    "image_path": "p012_Table_8.png",
+    "image_size": [
+      803,
+      376
+    ]
+  }
+]

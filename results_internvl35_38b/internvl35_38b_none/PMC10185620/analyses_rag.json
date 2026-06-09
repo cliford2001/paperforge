@@ -1,0 +1,797 @@
+{
+  "total": 9,
+  "context_strategy": "bm25",
+  "abstract_words": "full",
+  "max_context_words": "unlimited",
+  "top_k": 10,
+  "chunk_words": 250,
+  "paper_summary": {
+    "main_contribution": "The paper appears to focus on the social behavior and interactions of primates, particularly macaques and lemurs, in natural settings.",
+    "narrative": "The paper uses various images to illustrate the social dynamics and interactions among primates. Figure 1 shows a mating behavior between an alpha male and a high-ranking female macaque, suggesting a study of reproductive behavior. Figure 2 highlights the presence of an alpha male and a mated pair, providing context for social structures. Figure 7 captures an encounter between two lemur groups, indicating social dynamics and potential conflict. These images collectively support the study of primate social structures and interactions.",
+    "key_evidence": [
+      "Fig. 1",
+      "Fig. 2",
+      "Fig. 7"
+    ],
+    "contradictions_or_gaps": "None detected",
+    "limitations_noted": "The images provide visual context but lack specific experimental data or statistical analysis to support definitive conclusions.",
+    "overall_confidence": "medium"
+  },
+  "items": [
+    {
+      "label": "Figure 1",
+      "kind": "figure",
+      "page": 4,
+      "bbox": [
+        294.2,
+        40.4,
+        554.8,
+        222.0
+      ],
+      "caption": "Fig. 1 The  alpha  male  (M-59 ♂ )  copulating  with  a  high-ranking female (Ch-67 ♀ )",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10185620/p004_Figure_1.png",
+      "image_size": [
+        261,
+        182
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"other\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"other\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"macaque monkeys\", \"natural habitat\"]\n  },\n  \"visual_description\": \"The image shows two macaque monkeys in a natural setting, with one adult male standing behind a younger female. The background features a hilly landscape with sparse vegetation and a distant view of a city or valley.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"macaque monkeys in natural habitat\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": []\n  },\n  \"data_and_patterns\": \"No specific data or patterns are visible.\",\n  \"groups_compared\": \"Not applicable\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Two macaque monkeys are present, one adult male and one younger female.\"],\n    \"caption_supported_evidence\": [\"The adult male is identified as M-59 ♂ and the female as Ch-67 ♀.\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": [\"The context or purpose of the image is not determinable from the visual alone.\"]\n  },\n  \"scientific_interpretation\": \"The image likely illustrates a behavioral observation of macaque monkeys, possibly related to mating or social hierarchy, given the caption's reference to copulation.\",\n  \"scientific_conclusion\": \"The image depicts a moment of interaction between an adult male and a high-ranking female macaque, suggesting a study of social or reproductive behavior in macaques. The visual provides context for understanding the natural behavior of these animals, though no specific experimental data or statistical analysis is presented. The image supports observations of mating behavior within a natural setting, contributing to the broader study of primate social structures.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The image may be used to study the dynamics of social hierarchy and mating behavior in macaques, potentially exploring how rank influences reproductive opportunities.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"The caption indicates a copulation event between a high-ranking female and an alpha male, suggesting a focus on reproductive behavior.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What specific behaviors or interactions are being studied? How does rank influence mating success in this species?\",\n    \"alternative_interpretation\": \"The image could also be illustrating general social interactions rather than specifically mating behavior, though the caption suggests a reproductive context.\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"medium\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "other",
+        "visual_form": {
+          "graph_or_visual_type": "other",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [],
+          "legend_elements": [],
+          "visible_entities": [
+            "macaque monkeys",
+            "natural habitat"
+          ]
+        },
+        "visual_description": "The image shows two macaque monkeys in a natural setting, with one adult male standing behind a younger female. The background features a hilly landscape with sparse vegetation and a distant view of a city or valley.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "macaque monkeys in natural habitat"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": []
+        },
+        "data_and_patterns": "No specific data or patterns are visible.",
+        "groups_compared": "Not applicable",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Two macaque monkeys are present, one adult male and one younger female."
+          ],
+          "caption_supported_evidence": [
+            "The adult male is identified as M-59 ♂ and the female as Ch-67 ♀."
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": [
+            "The context or purpose of the image is not determinable from the visual alone."
+          ]
+        },
+        "scientific_interpretation": "The image likely illustrates a behavioral observation of macaque monkeys, possibly related to mating or social hierarchy, given the caption's reference to copulation.",
+        "scientific_conclusion": "The image depicts a moment of interaction between an adult male and a high-ranking female macaque, suggesting a study of social or reproductive behavior in macaques. The visual provides context for understanding the natural behavior of these animals, though no specific experimental data or statistical analysis is presented. The image supports observations of mating behavior within a natural setting, contributing to the broader study of primate social structures.",
+        "model_extra_inference": {
+          "extra_inference": "The image may be used to study the dynamics of social hierarchy and mating behavior in macaques, potentially exploring how rank influences reproductive opportunities.",
+          "support_status": "speculative",
+          "supporting_evidence": "The caption indicates a copulation event between a high-ranking female and an alpha male, suggesting a focus on reproductive behavior.",
+          "risk": "medium",
+          "open_questions": "What specific behaviors or interactions are being studied? How does rank influence mating success in this species?",
+          "alternative_interpretation": "The image could also be illustrating general social interactions rather than specifically mating behavior, though the caption suggests a reproductive context."
+        },
+        "context_used": "abstract only",
+        "confidence": "medium"
+      },
+      "confidence": "medium",
+      "elapsed_sec": 10.2
+    },
+    {
+      "label": "Figure 2",
+      "kind": "figure",
+      "page": 5,
+      "bbox": [
+        36.5,
+        502.6,
+        302.7,
+        688.6
+      ],
+      "caption": "Fig. 2 Alpha male, M-59 ♂ feeds in the center of the photo. The whitish female on his left is Op-60 ♀ , who had been in a PPR with him for more than 10 years",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10185620/p005_Figure_2.png",
+      "image_size": [
+        266,
+        186
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"other\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"other\",\n    \"panel_count\": \"unclear\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"monkeys\", \"benches\", \"tables\", \"landscape\"]\n  },\n  \"visual_description\": \"The image shows a group of monkeys in an outdoor setting with wooden benches and tables. The ground is reddish, and there are trees and a distant landscape visible. The monkeys are scattered around, with some sitting and others moving.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"monkeys in a natural or semi-natural environment\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": []\n  },\n  \"data_and_patterns\": \"No specific values or trends are visible.\",\n  \"groups_compared\": \"None\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"presence of monkeys and benches\", \"outdoor setting\"],\n    \"caption_supported_evidence\": [\"identification of alpha male and female monkeys\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": [\"specific behaviors or interactions between monkeys\"]\n  },\n  \"scientific_interpretation\": \"The image likely relates to social behavior or interactions among monkeys, possibly focusing on dominance or mating patterns, as suggested by the mention of an alpha male and a long-term pair bond in the caption.\",\n  \"scientific_conclusion\": \"The image depicts a group of monkeys in a social setting, highlighting the presence of an alpha male and a mated pair. This visual provides context for studying social structures and interactions within a monkey group. The setting suggests observations of natural behavior, though no specific experimental data or statistical analysis is presented. The image supports the study of primate social dynamics but does not provide quantitative evidence or test a specific hypothesis.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The image may suggest research into primate social hierarchies and pair bonding, potentially exploring how these dynamics affect group behavior or reproduction.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"The presence of an identified alpha male and a long-term pair bond hints at social structure studies.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What specific behaviors are being studied? How do these social structures impact the group's survival or reproduction?\",\n    \"alternative_interpretation\": \"The image could also be used to study habitat use or environmental interactions rather than social dynamics.\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"medium\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "other",
+        "visual_form": {
+          "graph_or_visual_type": "other",
+          "panel_count": "unclear",
+          "panel_labels": [],
+          "axes_or_dimensions": [],
+          "legend_elements": [],
+          "visible_entities": [
+            "monkeys",
+            "benches",
+            "tables",
+            "landscape"
+          ]
+        },
+        "visual_description": "The image shows a group of monkeys in an outdoor setting with wooden benches and tables. The ground is reddish, and there are trees and a distant landscape visible. The monkeys are scattered around, with some sitting and others moving.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "monkeys in a natural or semi-natural environment"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": []
+        },
+        "data_and_patterns": "No specific values or trends are visible.",
+        "groups_compared": "None",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "presence of monkeys and benches",
+            "outdoor setting"
+          ],
+          "caption_supported_evidence": [
+            "identification of alpha male and female monkeys"
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": [
+            "specific behaviors or interactions between monkeys"
+          ]
+        },
+        "scientific_interpretation": "The image likely relates to social behavior or interactions among monkeys, possibly focusing on dominance or mating patterns, as suggested by the mention of an alpha male and a long-term pair bond in the caption.",
+        "scientific_conclusion": "The image depicts a group of monkeys in a social setting, highlighting the presence of an alpha male and a mated pair. This visual provides context for studying social structures and interactions within a monkey group. The setting suggests observations of natural behavior, though no specific experimental data or statistical analysis is presented. The image supports the study of primate social dynamics but does not provide quantitative evidence or test a specific hypothesis.",
+        "model_extra_inference": {
+          "extra_inference": "The image may suggest research into primate social hierarchies and pair bonding, potentially exploring how these dynamics affect group behavior or reproduction.",
+          "support_status": "speculative",
+          "supporting_evidence": "The presence of an identified alpha male and a long-term pair bond hints at social structure studies.",
+          "risk": "medium",
+          "open_questions": "What specific behaviors are being studied? How do these social structures impact the group's survival or reproduction?",
+          "alternative_interpretation": "The image could also be used to study habitat use or environmental interactions rather than social dynamics."
+        },
+        "context_used": "abstract only",
+        "confidence": "medium"
+      },
+      "confidence": "medium",
+      "elapsed_sec": 9.9
+    },
+    {
+      "label": "Figure_uncaptioned_1",
+      "kind": "figure",
+      "page": 8,
+      "bbox": [
+        36.3,
+        512.6,
+        303.0,
+        698.7
+      ],
+      "caption": "",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10185620/p008_Figure_uncaptioned_1.png",
+      "image_size": [
+        267,
+        186
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"other\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"other\",\n    \"panel_count\": \"unclear\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"people, construction site, bricks, trees\"]\n  },\n  \"visual_description\": \"The image shows a construction site with several individuals working on building brick walls. The area is surrounded by tall palm trees, indicating a tropical environment. There are stacks of bricks and construction materials scattered around the site.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"Not determinable\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": []\n  },\n  \"data_and_patterns\": \"No specific data or patterns are visible.\",\n  \"groups_compared\": \"Not applicable\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Construction site with brick walls being built\", \"Presence of workers\", \"Tropical environment with palm trees\"],\n    \"caption_supported_evidence\": [],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": [\"Purpose or context of the construction\"]\n  },\n  \"scientific_interpretation\": \"The image does not provide specific scientific data or context related to the paper's investigation.\",\n  \"scientific_conclusion\": \"The image depicts a construction site in a tropical environment with workers building brick walls. No specific scientific data or experimental results are presented. The visual evidence does not support any particular scientific hypothesis or conclusion. The role of this image in the paper's argument is unclear without additional context.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The image may suggest a study related to construction practices or environmental impact in tropical regions, but this is speculative.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"None\",\n    \"risk\": \"high\",\n    \"open_questions\": \"What is the purpose of the construction? How does it relate to the study's focus?\",\n    \"alternative_interpretation\": \"None\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"low\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "other",
+        "visual_form": {
+          "graph_or_visual_type": "other",
+          "panel_count": "unclear",
+          "panel_labels": [],
+          "axes_or_dimensions": [],
+          "legend_elements": [],
+          "visible_entities": [
+            "people, construction site, bricks, trees"
+          ]
+        },
+        "visual_description": "The image shows a construction site with several individuals working on building brick walls. The area is surrounded by tall palm trees, indicating a tropical environment. There are stacks of bricks and construction materials scattered around the site.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "Not determinable"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": []
+        },
+        "data_and_patterns": "No specific data or patterns are visible.",
+        "groups_compared": "Not applicable",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Construction site with brick walls being built",
+            "Presence of workers",
+            "Tropical environment with palm trees"
+          ],
+          "caption_supported_evidence": [],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": [
+            "Purpose or context of the construction"
+          ]
+        },
+        "scientific_interpretation": "The image does not provide specific scientific data or context related to the paper's investigation.",
+        "scientific_conclusion": "The image depicts a construction site in a tropical environment with workers building brick walls. No specific scientific data or experimental results are presented. The visual evidence does not support any particular scientific hypothesis or conclusion. The role of this image in the paper's argument is unclear without additional context.",
+        "model_extra_inference": {
+          "extra_inference": "The image may suggest a study related to construction practices or environmental impact in tropical regions, but this is speculative.",
+          "support_status": "speculative",
+          "supporting_evidence": "None",
+          "risk": "high",
+          "open_questions": "What is the purpose of the construction? How does it relate to the study's focus?",
+          "alternative_interpretation": "None"
+        },
+        "context_used": "abstract only",
+        "confidence": "low"
+      },
+      "confidence": "low",
+      "elapsed_sec": 8.6
+    },
+    {
+      "label": "Figure_uncaptioned_2",
+      "kind": "figure",
+      "page": 10,
+      "bbox": [
+        36.4,
+        493.1,
+        302.7,
+        678.5
+      ],
+      "caption": "",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10185620/p010_Figure_uncaptioned_2.png",
+      "image_size": [
+        266,
+        185
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"other\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"other\",\n    \"panel_count\": \"unclear\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"gorillas\", \"forest environment\"]\n  },\n  \"visual_description\": \"The image shows three gorillas in a natural forest setting. The foreground gorilla is sitting and appears to be eating, while the other two are in the background. The environment is lush with green vegetation and trees.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"gorillas in natural habitat\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": []\n  },\n  \"data_and_patterns\": \"No specific data or patterns are visible.\",\n  \"groups_compared\": \"No groups compared.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Three gorillas are present in a forest environment.\"],\n    \"caption_supported_evidence\": [],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": [\"The purpose or context of the image is not determinable from the visual alone.\"]\n  },\n  \"scientific_interpretation\": \"The image likely serves as a visual representation of gorillas in their natural habitat, possibly to illustrate a study on their behavior or ecology.\",\n  \"scientific_conclusion\": \"The image depicts gorillas in a forest setting, highlighting their natural environment. No specific data or comparisons are presented, so it serves more as an illustrative figure. The absence of statistical markers or experimental context suggests it is used to provide visual context rather than to present quantitative findings. This image likely supports a broader discussion on gorilla behavior or conservation in the paper.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The image may suggest a focus on the natural behavior and habitat of gorillas, potentially in a study about their ecology or conservation status.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"The natural setting and presence of multiple gorillas suggest a focus on their behavior in the wild.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What specific behaviors or ecological aspects are being studied? How does this image relate to the broader research question?\",\n    \"alternative_interpretation\": \"The image could also be used to discuss habitat preservation or the impact of environmental changes on gorilla populations.\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"low\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "other",
+        "visual_form": {
+          "graph_or_visual_type": "other",
+          "panel_count": "unclear",
+          "panel_labels": [],
+          "axes_or_dimensions": [],
+          "legend_elements": [],
+          "visible_entities": [
+            "gorillas",
+            "forest environment"
+          ]
+        },
+        "visual_description": "The image shows three gorillas in a natural forest setting. The foreground gorilla is sitting and appears to be eating, while the other two are in the background. The environment is lush with green vegetation and trees.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "gorillas in natural habitat"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": []
+        },
+        "data_and_patterns": "No specific data or patterns are visible.",
+        "groups_compared": "No groups compared.",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Three gorillas are present in a forest environment."
+          ],
+          "caption_supported_evidence": [],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": [
+            "The purpose or context of the image is not determinable from the visual alone."
+          ]
+        },
+        "scientific_interpretation": "The image likely serves as a visual representation of gorillas in their natural habitat, possibly to illustrate a study on their behavior or ecology.",
+        "scientific_conclusion": "The image depicts gorillas in a forest setting, highlighting their natural environment. No specific data or comparisons are presented, so it serves more as an illustrative figure. The absence of statistical markers or experimental context suggests it is used to provide visual context rather than to present quantitative findings. This image likely supports a broader discussion on gorilla behavior or conservation in the paper.",
+        "model_extra_inference": {
+          "extra_inference": "The image may suggest a focus on the natural behavior and habitat of gorillas, potentially in a study about their ecology or conservation status.",
+          "support_status": "speculative",
+          "supporting_evidence": "The natural setting and presence of multiple gorillas suggest a focus on their behavior in the wild.",
+          "risk": "medium",
+          "open_questions": "What specific behaviors or ecological aspects are being studied? How does this image relate to the broader research question?",
+          "alternative_interpretation": "The image could also be used to discuss habitat preservation or the impact of environmental changes on gorilla populations."
+        },
+        "context_used": "abstract only",
+        "confidence": "low"
+      },
+      "confidence": "low",
+      "elapsed_sec": 9.6
+    },
+    {
+      "label": "Figure_uncaptioned_3",
+      "kind": "figure",
+      "page": 11,
+      "bbox": [
+        291.3,
+        513.0,
+        558.1,
+        698.7
+      ],
+      "caption": "",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10185620/p011_Figure_uncaptioned_3.png",
+      "image_size": [
+        267,
+        186
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"other\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"other\",\n    \"panel_count\": \"unclear\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"monkeys\", \"ferns\"]\n  },\n  \"visual_description\": \"The image shows two monkeys sitting among green ferns. The monkeys have thick, grayish fur and appear to be in a natural forest setting. The foliage is dense, with various shades of green.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"Not determinable\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": []\n  },\n  \"data_and_patterns\": \"No specific data or patterns are visible.\",\n  \"groups_compared\": \"None\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Two monkeys are visible in a natural setting with ferns.\"],\n    \"caption_supported_evidence\": [],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": [\"The purpose or context of the image is not determinable from the visual alone.\"]\n  },\n  \"scientific_interpretation\": \"The image likely serves as a visual representation of the natural habitat of the monkeys studied in the paper, possibly illustrating their environment or behavior.\",\n  \"scientific_conclusion\": \"The image depicts two monkeys in a natural forest setting, surrounded by ferns. No specific experimental data or comparisons are presented. The visual provides context for the natural environment of the monkeys, which may be relevant to the study's focus on their behavior or ecology. However, without additional context or data, the image alone does not provide definitive conclusions about the research findings.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The image may suggest a focus on the ecological or behavioral study of these monkeys in their natural habitat.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"The natural setting implies a study related to the monkeys' environment or behavior.\",\n    \"risk\": \"low\",\n    \"open_questions\": \"What specific behaviors or ecological interactions are being studied in this habitat?\",\n    \"alternative_interpretation\": \"None\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"low\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "other",
+        "visual_form": {
+          "graph_or_visual_type": "other",
+          "panel_count": "unclear",
+          "panel_labels": [],
+          "axes_or_dimensions": [],
+          "legend_elements": [],
+          "visible_entities": [
+            "monkeys",
+            "ferns"
+          ]
+        },
+        "visual_description": "The image shows two monkeys sitting among green ferns. The monkeys have thick, grayish fur and appear to be in a natural forest setting. The foliage is dense, with various shades of green.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "Not determinable"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": []
+        },
+        "data_and_patterns": "No specific data or patterns are visible.",
+        "groups_compared": "None",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Two monkeys are visible in a natural setting with ferns."
+          ],
+          "caption_supported_evidence": [],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": [
+            "The purpose or context of the image is not determinable from the visual alone."
+          ]
+        },
+        "scientific_interpretation": "The image likely serves as a visual representation of the natural habitat of the monkeys studied in the paper, possibly illustrating their environment or behavior.",
+        "scientific_conclusion": "The image depicts two monkeys in a natural forest setting, surrounded by ferns. No specific experimental data or comparisons are presented. The visual provides context for the natural environment of the monkeys, which may be relevant to the study's focus on their behavior or ecology. However, without additional context or data, the image alone does not provide definitive conclusions about the research findings.",
+        "model_extra_inference": {
+          "extra_inference": "The image may suggest a focus on the ecological or behavioral study of these monkeys in their natural habitat.",
+          "support_status": "speculative",
+          "supporting_evidence": "The natural setting implies a study related to the monkeys' environment or behavior.",
+          "risk": "low",
+          "open_questions": "What specific behaviors or ecological interactions are being studied in this habitat?",
+          "alternative_interpretation": "None"
+        },
+        "context_used": "abstract only",
+        "confidence": "low"
+      },
+      "confidence": "low",
+      "elapsed_sec": 9.0
+    },
+    {
+      "label": "Figure 6",
+      "kind": "figure",
+      "page": 13,
+      "bbox": [
+        36.4,
+        522.7,
+        302.7,
+        708.5
+      ],
+      "caption": "Fig. 6 Participants at the campsite in the evening",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10185620/p013_Figure_6.png",
+      "image_size": [
+        266,
+        186
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"other\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"other\",\n    \"panel_count\": \"unclear\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [],\n    \"legend_elements\": [],\n    \"visible_entities\": []\n  },\n  \"visual_description\": \"The image shows a group of people gathered at a campsite in the evening. There are several tents set up, including blue and orange ones. People are sitting on a blue tarp, eating and socializing. A vehicle is parked nearby, and the setting appears to be in a forested area.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"Not determinable\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": []\n  },\n  \"data_and_patterns\": \"No specific data or patterns are visible.\",\n  \"groups_compared\": \"Not applicable\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"A group of people at a campsite with tents and a vehicle.\"],\n    \"caption_supported_evidence\": [\"Participants are gathered in the evening at a campsite.\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": [\"The purpose or context of the gathering is not determinable.\"]\n  },\n  \"scientific_interpretation\": \"The image depicts a social or recreational activity, possibly related to a field study or outdoor event, but no specific scientific question is addressed.\",\n  \"scientific_conclusion\": \"The image shows a group of people at a campsite, engaging in social activities. There are no visible data or statistical markers to draw scientific conclusions. The setting suggests an outdoor gathering, possibly for a field study or recreational event, but the image does not provide specific experimental data or insights related to a scientific hypothesis.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The image may suggest a field study or team-building activity, but this is speculative without additional context.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"The presence of tents and a group setting suggests an organized outdoor activity.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"The purpose of the gathering and its relation to any scientific study is unclear.\",\n    \"alternative_interpretation\": \"The image could simply depict a casual camping trip without any scientific context.\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"low\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "other",
+        "visual_form": {
+          "graph_or_visual_type": "other",
+          "panel_count": "unclear",
+          "panel_labels": [],
+          "axes_or_dimensions": [],
+          "legend_elements": [],
+          "visible_entities": []
+        },
+        "visual_description": "The image shows a group of people gathered at a campsite in the evening. There are several tents set up, including blue and orange ones. People are sitting on a blue tarp, eating and socializing. A vehicle is parked nearby, and the setting appears to be in a forested area.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "Not determinable"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": []
+        },
+        "data_and_patterns": "No specific data or patterns are visible.",
+        "groups_compared": "Not applicable",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "A group of people at a campsite with tents and a vehicle."
+          ],
+          "caption_supported_evidence": [
+            "Participants are gathered in the evening at a campsite."
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": [
+            "The purpose or context of the gathering is not determinable."
+          ]
+        },
+        "scientific_interpretation": "The image depicts a social or recreational activity, possibly related to a field study or outdoor event, but no specific scientific question is addressed.",
+        "scientific_conclusion": "The image shows a group of people at a campsite, engaging in social activities. There are no visible data or statistical markers to draw scientific conclusions. The setting suggests an outdoor gathering, possibly for a field study or recreational event, but the image does not provide specific experimental data or insights related to a scientific hypothesis.",
+        "model_extra_inference": {
+          "extra_inference": "The image may suggest a field study or team-building activity, but this is speculative without additional context.",
+          "support_status": "speculative",
+          "supporting_evidence": "The presence of tents and a group setting suggests an organized outdoor activity.",
+          "risk": "medium",
+          "open_questions": "The purpose of the gathering and its relation to any scientific study is unclear.",
+          "alternative_interpretation": "The image could simply depict a casual camping trip without any scientific context."
+        },
+        "context_used": "abstract only",
+        "confidence": "low"
+      },
+      "confidence": "low",
+      "elapsed_sec": 9.4
+    },
+    {
+      "label": "Figure 7",
+      "kind": "figure",
+      "page": 14,
+      "bbox": [
+        36.1,
+        502.3,
+        303.2,
+        688.6
+      ],
+      "caption": "Fig. 7 Encounter between the C1 and C2 lemur groups on the roof of a restaurant for tourists. Females were at the forefront of these conflicts",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10185620/p014_Figure_7.png",
+      "image_size": [
+        267,
+        186
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"other\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"other\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"lemurs\", \"roof\", \"flowers\"]\n  },\n  \"visual_description\": \"The image shows a group of lemurs on the roof of a structure, surrounded by some flowering plants. The lemurs are positioned in various stances, with some standing and others sitting. The background is a plain sky, and the foreground includes some greenery and red flowers.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"lemurs\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": []\n  },\n  \"data_and_patterns\": \"No specific values or trends are visible.\",\n  \"groups_compared\": \"Not applicable\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"lemurs are on a roof\", \"presence of flowers\"],\n    \"caption_supported_evidence\": [\"lemurs are from groups C1 and C2\", \"females are at the forefront of conflicts\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": [\"specific interactions or behaviors\"]\n  },\n  \"scientific_interpretation\": \"The image likely illustrates social behavior or interaction between different lemur groups, possibly indicating territorial or social dynamics.\",\n  \"scientific_conclusion\": \"The image captures a moment of interaction between two lemur groups, C1 and C2, on a roof, with females leading the encounter. This visual suggests social dynamics and potential conflict between the groups. The presence of multiple lemurs and their varied postures may indicate a social hierarchy or territorial behavior. However, without additional data or context, specific conclusions about the nature of the interaction cannot be drawn. The image serves to visually represent the social structure and interactions of lemurs in a natural or semi-natural setting.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The image might suggest that female lemurs play a significant role in intergroup interactions, possibly due to their positioning at the front of the group.\",\n    \"support_status\": \"caption_supported\",\n    \"supporting_evidence\": \"The caption mentions that females are at the forefront of these conflicts.\",\n    \"risk\": \"low\",\n    \"open_questions\": \"What are the long-term outcomes of these encounters? How do these interactions affect group dynamics and social structure?\",\n    \"alternative_interpretation\": \"The lemurs could be engaging in a non-aggressive social interaction, such as grooming or play, rather than a conflict.\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"medium\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "other",
+        "visual_form": {
+          "graph_or_visual_type": "other",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [],
+          "legend_elements": [],
+          "visible_entities": [
+            "lemurs",
+            "roof",
+            "flowers"
+          ]
+        },
+        "visual_description": "The image shows a group of lemurs on the roof of a structure, surrounded by some flowering plants. The lemurs are positioned in various stances, with some standing and others sitting. The background is a plain sky, and the foreground includes some greenery and red flowers.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "lemurs"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": []
+        },
+        "data_and_patterns": "No specific values or trends are visible.",
+        "groups_compared": "Not applicable",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "lemurs are on a roof",
+            "presence of flowers"
+          ],
+          "caption_supported_evidence": [
+            "lemurs are from groups C1 and C2",
+            "females are at the forefront of conflicts"
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": [
+            "specific interactions or behaviors"
+          ]
+        },
+        "scientific_interpretation": "The image likely illustrates social behavior or interaction between different lemur groups, possibly indicating territorial or social dynamics.",
+        "scientific_conclusion": "The image captures a moment of interaction between two lemur groups, C1 and C2, on a roof, with females leading the encounter. This visual suggests social dynamics and potential conflict between the groups. The presence of multiple lemurs and their varied postures may indicate a social hierarchy or territorial behavior. However, without additional data or context, specific conclusions about the nature of the interaction cannot be drawn. The image serves to visually represent the social structure and interactions of lemurs in a natural or semi-natural setting.",
+        "model_extra_inference": {
+          "extra_inference": "The image might suggest that female lemurs play a significant role in intergroup interactions, possibly due to their positioning at the front of the group.",
+          "support_status": "caption_supported",
+          "supporting_evidence": "The caption mentions that females are at the forefront of these conflicts.",
+          "risk": "low",
+          "open_questions": "What are the long-term outcomes of these encounters? How do these interactions affect group dynamics and social structure?",
+          "alternative_interpretation": "The lemurs could be engaging in a non-aggressive social interaction, such as grooming or play, rather than a conflict."
+        },
+        "context_used": "abstract only",
+        "confidence": "medium"
+      },
+      "confidence": "medium",
+      "elapsed_sec": 10.2
+    },
+    {
+      "label": "Figure 8",
+      "kind": "figure",
+      "page": 14,
+      "bbox": [
+        33.7,
+        718.7,
+        108.8,
+        763.4
+      ],
+      "caption": "Fig. 8 KI, an old female ringtailed in the C1 group",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10185620/p014_Figure_8.png",
+      "image_size": [
+        75,
+        45
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"other\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"other\",\n    \"panel_count\": \"unclear\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [],\n    \"legend_elements\": [],\n    \"visible_entities\": []\n  },\n  \"visual_description\": \"The image shows the Springer logo, which is a stylized horse head above the word 'Springer'. There are no panels, axes, or data visualizations present.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"Not determinable\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": []\n  },\n  \"data_and_patterns\": \"No data or patterns are visible in this image.\",\n  \"groups_compared\": \"None\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"The image shows the Springer logo.\"],\n    \"caption_supported_evidence\": [\"The caption mentions 'Fig. 8 KI, an old female ringtailed in the C1 group', but this is not reflected in the image.\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": [\"The image does not contain any scientific data or visual elements related to the caption.\"]\n  },\n  \"scientific_interpretation\": \"This image does not provide any scientific interpretation as it is a logo and not a data figure.\",\n  \"scientific_conclusion\": \"The image displays the Springer logo and does not contain any scientific data or visual elements to analyze. It does not contribute to the paper's scientific argument or findings.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"None\",\n    \"support_status\": \"none\",\n    \"supporting_evidence\": \"None\",\n    \"risk\": \"low\",\n    \"open_questions\": \"None\",\n    \"alternative_interpretation\": \"None\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "other",
+        "visual_form": {
+          "graph_or_visual_type": "other",
+          "panel_count": "unclear",
+          "panel_labels": [],
+          "axes_or_dimensions": [],
+          "legend_elements": [],
+          "visible_entities": []
+        },
+        "visual_description": "The image shows the Springer logo, which is a stylized horse head above the word 'Springer'. There are no panels, axes, or data visualizations present.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "Not determinable"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": []
+        },
+        "data_and_patterns": "No data or patterns are visible in this image.",
+        "groups_compared": "None",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "The image shows the Springer logo."
+          ],
+          "caption_supported_evidence": [
+            "The caption mentions 'Fig. 8 KI, an old female ringtailed in the C1 group', but this is not reflected in the image."
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": [
+            "The image does not contain any scientific data or visual elements related to the caption."
+          ]
+        },
+        "scientific_interpretation": "This image does not provide any scientific interpretation as it is a logo and not a data figure.",
+        "scientific_conclusion": "The image displays the Springer logo and does not contain any scientific data or visual elements to analyze. It does not contribute to the paper's scientific argument or findings.",
+        "model_extra_inference": {
+          "extra_inference": "None",
+          "support_status": "none",
+          "supporting_evidence": "None",
+          "risk": "low",
+          "open_questions": "None",
+          "alternative_interpretation": "None"
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 7.9
+    },
+    {
+      "label": "Figure_uncaptioned_4",
+      "kind": "figure",
+      "page": 14,
+      "bbox": [
+        336.9,
+        40.3,
+        512.7,
+        291.2
+      ],
+      "caption": "",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10185620/p014_Figure_uncaptioned_4.png",
+      "image_size": [
+        176,
+        251
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"figure_type\": \"other\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"other\",\n    \"panel_count\": \"unclear\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"lemur\"]\n  },\n  \"visual_description\": \"The image shows a lemur sitting on a sandy surface. The lemur has distinctive black and white facial markings and a ringed tail. The background is a plain, sandy terrain.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"lemur\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": []\n  },\n  \"data_and_patterns\": \"No specific data or patterns are visible.\",\n  \"groups_compared\": \"None\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"The image shows a lemur with distinctive facial markings and a ringed tail.\"],\n    \"caption_supported_evidence\": [],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": [\"The purpose or context of the image is not determinable from the visual alone.\"]\n  },\n  \"scientific_interpretation\": \"The image provides a visual representation of a lemur, which may be used to discuss aspects of its behavior, habitat, or physical characteristics in the context of the study.\",\n  \"scientific_conclusion\": \"The image depicts a lemur in a sandy environment, highlighting its physical characteristics such as facial markings and tail. No specific data or experimental comparisons are presented. The image serves as a visual aid to illustrate the subject of the study, potentially related to the lemur's natural habitat or behavior. The role of this figure in the paper is likely to provide context or visual reference for discussions on lemurs.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The image might be used to discuss the lemur's adaptation to its environment or its ecological role.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"The lemur's physical features suggest adaptations to its habitat.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What specific aspect of the lemur is being studied? How does this image relate to the broader research question?\",\n    \"alternative_interpretation\": \"None\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"low\"\n}\n```",
+      "analysis_parsed": {
+        "figure_type": "other",
+        "visual_form": {
+          "graph_or_visual_type": "other",
+          "panel_count": "unclear",
+          "panel_labels": [],
+          "axes_or_dimensions": [],
+          "legend_elements": [],
+          "visible_entities": [
+            "lemur"
+          ]
+        },
+        "visual_description": "The image shows a lemur sitting on a sandy surface. The lemur has distinctive black and white facial markings and a ringed tail. The background is a plain, sandy terrain.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "lemur"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": []
+        },
+        "data_and_patterns": "No specific data or patterns are visible.",
+        "groups_compared": "None",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "The image shows a lemur with distinctive facial markings and a ringed tail."
+          ],
+          "caption_supported_evidence": [],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": [
+            "The purpose or context of the image is not determinable from the visual alone."
+          ]
+        },
+        "scientific_interpretation": "The image provides a visual representation of a lemur, which may be used to discuss aspects of its behavior, habitat, or physical characteristics in the context of the study.",
+        "scientific_conclusion": "The image depicts a lemur in a sandy environment, highlighting its physical characteristics such as facial markings and tail. No specific data or experimental comparisons are presented. The image serves as a visual aid to illustrate the subject of the study, potentially related to the lemur's natural habitat or behavior. The role of this figure in the paper is likely to provide context or visual reference for discussions on lemurs.",
+        "model_extra_inference": {
+          "extra_inference": "The image might be used to discuss the lemur's adaptation to its environment or its ecological role.",
+          "support_status": "speculative",
+          "supporting_evidence": "The lemur's physical features suggest adaptations to its habitat.",
+          "risk": "medium",
+          "open_questions": "What specific aspect of the lemur is being studied? How does this image relate to the broader research question?",
+          "alternative_interpretation": "None"
+        },
+        "context_used": "abstract only",
+        "confidence": "low"
+      },
+      "confidence": "low",
+      "elapsed_sec": 9.2
+    }
+  ]
+}

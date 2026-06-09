@@ -1,0 +1,1582 @@
+{
+  "total": 10,
+  "context_strategy": "bm25",
+  "abstract_words": "full",
+  "max_context_words": "unlimited",
+  "top_k": 10,
+  "chunk_words": 250,
+  "paper_summary": {
+    "main_contribution": "The paper investigates the genetic impact of crossbreeding on productive traits in goats, highlighting the benefits of heterosis and genetic selection for improving reproductive performance.",
+    "narrative": "The paper begins by presenting genetic coefficients for various goat crosses in Table 1, showing maximum heterosis in the F1 generation (B x CH). Table 2 demonstrates that genetic group significantly affects gestation length, with CH x CH having the longest gestation. Table 3 highlights significant heterosis effects on litter weaning weight (LSW), indicating effective crossbreeding benefits. Table 4 shows that CH x CH has superior performance in litter weaning weight and gestation length, supporting selective breeding strategies. Table 5 provides heritability estimates, with LWW having the highest heritability, suggesting a strong genetic component.",
+    "key_evidence": [
+      "Table 1",
+      "Table 3",
+      "Table 4"
+    ],
+    "contradictions_or_gaps": "None detected",
+    "limitations_noted": "The paper lacks statistical significance markers in some tables, limiting the quantification of differences. Additionally, experimental design details are not provided, which could affect the interpretation of genetic contributions.",
+    "overall_confidence": "high"
+  },
+  "items": [
+    {
+      "label": "Table 1",
+      "kind": "table",
+      "page": 4,
+      "bbox": [
+        183.2,
+        71.4,
+        592.2,
+        178.5
+      ],
+      "caption": "Table 1. Genetic coefficient used for crossbreeding parameter estimation for doe productive traits.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10529573/p004_Table_1.png",
+      "image_size": [
+        409,
+        107
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"parameter table\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [\"Genetic group\", \"Generation and blood level\", \"g\", \"h\", \"r\"],\n    \"legend_elements\": [\"B, Boer goat; CH, Central Highland goat; the sire's breed is mentioned first\"],\n    \"visible_entities\": [\"genetic groups\", \"coefficients g, h, r\"]\n  },\n  \"structure\": \"The table compares genetic coefficients (g, h, r) across different genetic groups and their generation and blood levels. The coefficients are unitless values ranging from 0 to 1.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [\"CH x CH\", \"B x CH\", \"B x BCH\", \"BCH x CH\", \"BCH x BCH\"],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [\"g, h, r coefficients\"],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"Not determinable\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": [\"0\", \"0.50\", \"1.00\", \"0.75\", \"0.25\"]\n  },\n  \"key_entries\": \"The highest h value is 1.00 for the B x CH group (F1, 50%). The g and r values vary across genetic groups, with the highest g value being 0.75 for the B x BCH group (BC1, 75%).\",\n  \"best_result\": \"The highest h value is 1.00 for the B x CH group (F1, 50%).\",\n  \"patterns_and_trends\": \"The h value is highest in the F1 cross (B x CH) and decreases in subsequent crosses. The g value increases with more Boer goat influence, while the r value shows intermediate heterosis in crosses.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"genetic coefficients for different crosses\"],\n    \"caption_supported_evidence\": [\"genetic groups and coefficients described\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": [\"hypothesis or specific experimental design\"]\n  },\n  \"scientific_interpretation\": \"The table provides coefficients for estimating crossbreeding parameters in goats, showing how genetic contributions (g, h, r) vary with different genetic group combinations. The F1 cross (B x CH) has the highest h value, indicating significant heterosis.\",\n  \"scientific_conclusion\": \"The table presents genetic coefficients for various goat crosses, highlighting the impact of genetic combinations on productive traits. The F1 cross (B x CH) shows maximum heterosis with an h value of 1.00, while other crosses exhibit varying levels of genetic influence. The coefficients g and r indicate the degree of genetic contribution and heterosis, respectively, across different generations. This table demonstrates the potential for optimizing goat breeding strategies through crossbreeding, with the F1 cross being particularly advantageous for heterosis. It does not provide statistical significance or experimental outcomes but offers a framework for parameter estimation in crossbreeding programs.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The coefficients suggest that initial crossbreeding (F1) may yield the most significant heterosis, which could inform breeding strategies to maximize productivity.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"The h value is highest in the F1 cross.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What are the practical implications of these coefficients in real-world breeding programs? How do these coefficients translate to actual productivity improvements?\",\n    \"alternative_interpretation\": \"The coefficients may also reflect the genetic compatibility between breeds, suggesting that certain combinations might be more sustainable or adaptable to specific environments.\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "table_type": "parameter table",
+        "visual_form": {
+          "graph_or_visual_type": "table",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [
+            "Genetic group",
+            "Generation and blood level",
+            "g",
+            "h",
+            "r"
+          ],
+          "legend_elements": [
+            "B, Boer goat; CH, Central Highland goat; the sire's breed is mentioned first"
+          ],
+          "visible_entities": [
+            "genetic groups",
+            "coefficients g, h, r"
+          ]
+        },
+        "structure": "The table compares genetic coefficients (g, h, r) across different genetic groups and their generation and blood levels. The coefficients are unitless values ranging from 0 to 1.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [
+            "CH x CH",
+            "B x CH",
+            "B x BCH",
+            "BCH x CH",
+            "BCH x BCH"
+          ],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [
+            "g, h, r coefficients"
+          ],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "Not determinable"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": [
+            "0",
+            "0.50",
+            "1.00",
+            "0.75",
+            "0.25"
+          ]
+        },
+        "key_entries": "The highest h value is 1.00 for the B x CH group (F1, 50%). The g and r values vary across genetic groups, with the highest g value being 0.75 for the B x BCH group (BC1, 75%).",
+        "best_result": "The highest h value is 1.00 for the B x CH group (F1, 50%).",
+        "patterns_and_trends": "The h value is highest in the F1 cross (B x CH) and decreases in subsequent crosses. The g value increases with more Boer goat influence, while the r value shows intermediate heterosis in crosses.",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "genetic coefficients for different crosses"
+          ],
+          "caption_supported_evidence": [
+            "genetic groups and coefficients described"
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": [
+            "hypothesis or specific experimental design"
+          ]
+        },
+        "scientific_interpretation": "The table provides coefficients for estimating crossbreeding parameters in goats, showing how genetic contributions (g, h, r) vary with different genetic group combinations. The F1 cross (B x CH) has the highest h value, indicating significant heterosis.",
+        "scientific_conclusion": "The table presents genetic coefficients for various goat crosses, highlighting the impact of genetic combinations on productive traits. The F1 cross (B x CH) shows maximum heterosis with an h value of 1.00, while other crosses exhibit varying levels of genetic influence. The coefficients g and r indicate the degree of genetic contribution and heterosis, respectively, across different generations. This table demonstrates the potential for optimizing goat breeding strategies through crossbreeding, with the F1 cross being particularly advantageous for heterosis. It does not provide statistical significance or experimental outcomes but offers a framework for parameter estimation in crossbreeding programs.",
+        "model_extra_inference": {
+          "extra_inference": "The coefficients suggest that initial crossbreeding (F1) may yield the most significant heterosis, which could inform breeding strategies to maximize productivity.",
+          "support_status": "speculative",
+          "supporting_evidence": "The h value is highest in the F1 cross.",
+          "risk": "medium",
+          "open_questions": "What are the practical implications of these coefficients in real-world breeding programs? How do these coefficients translate to actual productivity improvements?",
+          "alternative_interpretation": "The coefficients may also reflect the genetic compatibility between breeds, suggesting that certain combinations might be more sustainable or adaptable to specific environments."
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 13.4
+    },
+    {
+      "label": "Table 2",
+      "kind": "table",
+      "page": 5,
+      "bbox": [
+        18.7,
+        532.5,
+        592.7,
+        665.3
+      ],
+      "caption": "Table 2. Least-squares mean values and their standard errors for doe productive traits.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10529573/p005_Table_2.png",
+      "image_size": [
+        574,
+        133
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"statistical summary\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [\"Genetic group\", \"LSB (kid)\", \"LBW (kg)\", \"LWW (kg)\", \"LSW (kid)\", \"GL (day)\"],\n    \"legend_elements\": [\"N\", \"ns\", \"a\", \"b\"],\n    \"visible_entities\": [\"Genetic group\", \"LSB\", \"LBW\", \"LWW\", \"LSW\", \"GL\"]\n  },\n  \"structure\": \"The table compares least-squares mean values for doe productive traits across different genetic groups. Metrics include litter size at birth (LSB), litter birth weight (LBW), litter weaning weight (LWW), litter size at weaning (LSW), and gestation length (GL). Units are kids for LSB and LSW, kilograms for LBW and LWW, and days for GL.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"The effect of genetic group on doe productive traits.\",\n    \"experimental_groups\": [\"CH x CH\", \"B x CH\", \"B x BCH\", \"BCH x CH\", \"BCH x BCH\"],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [\"LSB\", \"LBW\", \"LWW\", \"LSW\", \"GL\"],\n    \"assay_or_method\": \"Least-squares mean analysis\",\n    \"biological_or_experimental_system\": \"Doe productive traits in different genetic groups\"\n  },\n  \"statistical_markers\": \"n=567 for overall mean; ns for non-significant differences; * for significant differences in GL; superscripts a and b for significant differences between groups.\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [\"ns\", \"*\", \"a\", \"b\"],\n    \"sample_sizes\": [\"567\", \"275\", \"214\", \"27\", \"19\", \"32\"],\n    \"units\": [\"kid\", \"kg\", \"day\"],\n    \"effect_directions\": [\"no change\", \"increase\", \"decrease\"],\n    \"quantitative_values\": [\"1.54±0.02\", \"3.90±0.05\", \"14.0±0.35\", \"1.37±0.02\", \"148.1±0.31\"]\n  },\n  \"key_entries\": \"The CH x CH group has the highest gestation length (149.2±0.39 days), while BCH x CH has the shortest (145.2±0.53 days).\",\n  \"best_result\": \"CH x CH group with the longest gestation length of 149.2±0.39 days.\",\n  \"patterns_and_trends\": \"Gestation length varies significantly among genetic groups, with CH x CH having the longest and BCH x CH the shortest. Other traits show no significant differences.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Doe productive traits vary by genetic group\", \"Significant differences in GL\"],\n    \"caption_supported_evidence\": [\"Table presents least-squares means and standard errors\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The table examines how genetic group influences reproductive performance in does. It shows significant differences in gestation length among groups, indicating genetic factors impact this trait. Other traits like litter size and weight do not show significant differences.\",\n  \"scientific_conclusion\": \"This table demonstrates that genetic group significantly affects gestation length in does, with the CH x CH group having the longest gestation. Other reproductive traits do not show significant variation across groups. This suggests that while genetic makeup influences gestation length, it may have less impact on litter size and weight. The findings highlight the role of genetics in specific aspects of reproductive performance.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The lack of significant differences in litter size and weight might suggest environmental factors play a larger role in these traits compared to genetics.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"The non-significant results for LSB, LBW, LWW, and LSW.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What environmental factors could influence litter size and weight if genetic differences do not? How do these findings apply to other breeds or conditions?\",\n    \"alternative_interpretation\": \"The non-significant differences in traits other than GL could be due to a lack of statistical power rather than true biological equivalence.\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "table_type": "statistical summary",
+        "visual_form": {
+          "graph_or_visual_type": "table",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [
+            "Genetic group",
+            "LSB (kid)",
+            "LBW (kg)",
+            "LWW (kg)",
+            "LSW (kid)",
+            "GL (day)"
+          ],
+          "legend_elements": [
+            "N",
+            "ns",
+            "a",
+            "b"
+          ],
+          "visible_entities": [
+            "Genetic group",
+            "LSB",
+            "LBW",
+            "LWW",
+            "LSW",
+            "GL"
+          ]
+        },
+        "structure": "The table compares least-squares mean values for doe productive traits across different genetic groups. Metrics include litter size at birth (LSB), litter birth weight (LBW), litter weaning weight (LWW), litter size at weaning (LSW), and gestation length (GL). Units are kids for LSB and LSW, kilograms for LBW and LWW, and days for GL.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "The effect of genetic group on doe productive traits.",
+          "experimental_groups": [
+            "CH x CH",
+            "B x CH",
+            "B x BCH",
+            "BCH x CH",
+            "BCH x BCH"
+          ],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [
+            "LSB",
+            "LBW",
+            "LWW",
+            "LSW",
+            "GL"
+          ],
+          "assay_or_method": "Least-squares mean analysis",
+          "biological_or_experimental_system": "Doe productive traits in different genetic groups"
+        },
+        "statistical_markers": "n=567 for overall mean; ns for non-significant differences; * for significant differences in GL; superscripts a and b for significant differences between groups.",
+        "markers_and_statistics": {
+          "statistical_markers": [
+            "ns",
+            "*",
+            "a",
+            "b"
+          ],
+          "sample_sizes": [
+            "567",
+            "275",
+            "214",
+            "27",
+            "19",
+            "32"
+          ],
+          "units": [
+            "kid",
+            "kg",
+            "day"
+          ],
+          "effect_directions": [
+            "no change",
+            "increase",
+            "decrease"
+          ],
+          "quantitative_values": [
+            "1.54±0.02",
+            "3.90±0.05",
+            "14.0±0.35",
+            "1.37±0.02",
+            "148.1±0.31"
+          ]
+        },
+        "key_entries": "The CH x CH group has the highest gestation length (149.2±0.39 days), while BCH x CH has the shortest (145.2±0.53 days).",
+        "best_result": "CH x CH group with the longest gestation length of 149.2±0.39 days.",
+        "patterns_and_trends": "Gestation length varies significantly among genetic groups, with CH x CH having the longest and BCH x CH the shortest. Other traits show no significant differences.",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Doe productive traits vary by genetic group",
+            "Significant differences in GL"
+          ],
+          "caption_supported_evidence": [
+            "Table presents least-squares means and standard errors"
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The table examines how genetic group influences reproductive performance in does. It shows significant differences in gestation length among groups, indicating genetic factors impact this trait. Other traits like litter size and weight do not show significant differences.",
+        "scientific_conclusion": "This table demonstrates that genetic group significantly affects gestation length in does, with the CH x CH group having the longest gestation. Other reproductive traits do not show significant variation across groups. This suggests that while genetic makeup influences gestation length, it may have less impact on litter size and weight. The findings highlight the role of genetics in specific aspects of reproductive performance.",
+        "model_extra_inference": {
+          "extra_inference": "The lack of significant differences in litter size and weight might suggest environmental factors play a larger role in these traits compared to genetics.",
+          "support_status": "speculative",
+          "supporting_evidence": "The non-significant results for LSB, LBW, LWW, and LSW.",
+          "risk": "medium",
+          "open_questions": "What environmental factors could influence litter size and weight if genetic differences do not? How do these findings apply to other breeds or conditions?",
+          "alternative_interpretation": "The non-significant differences in traits other than GL could be due to a lack of statistical power rather than true biological equivalence."
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 15.1
+    },
+    {
+      "label": "Table 3",
+      "kind": "table",
+      "page": 6,
+      "bbox": [
+        183.1,
+        548.3,
+        592.5,
+        655.3
+      ],
+      "caption": "Table 3. Estimate of breed additive, individual heterosis, and recombination effect for doe productive traits.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10529573/p006_Table_3.png",
+      "image_size": [
+        409,
+        107
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"statistical summary\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [\"Trait\", \"CH\", \"gB\", \"hBCH\", \"rBCH\"],\n    \"legend_elements\": [\"Ns, non-significant; *, P<0.05\"],\n    \"visible_entities\": [\"LSB (kid)\", \"LBW (kg)\", \"LWW (kid)\", \"LSW (kg)\", \"GL (days)\"]\n  },\n  \"structure\": \"The table compares breed additive (CH), individual heterosis (gB), and recombination effects (hBCH, rBCH) for various productive traits in does. Units include kilograms (kg) and days.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"The effects of breed additive, heterosis, and recombination on doe productive traits.\",\n    \"experimental_groups\": [\"CH\", \"gB\", \"hBCH\", \"rBCH\"],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [\"LSB (kid)\", \"LBW (kg)\", \"LWW (kid)\", \"LSW (kg)\", \"GL (days)\"],\n    \"assay_or_method\": \"Statistical estimation of genetic effects\",\n    \"biological_or_experimental_system\": \"Doe productive traits\"\n  },\n  \"statistical_markers\": \"Ns, non-significant; *, P<0.05\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [\"P<0.05\", \"non-significant\"],\n    \"sample_sizes\": [],\n    \"units\": [\"kg\", \"days\"],\n    \"effect_directions\": [\"increase\", \"decrease\", \"no change\"],\n    \"quantitative_values\": [\"1.57±0.03\", \"-0.004±0.07\", \"0.27±0.12\"]\n  },\n  \"key_entries\": \"LSW (kg) shows significant heterosis (0.27±0.12*) and recombination effects (0.17±0.24*).\",\n  \"best_result\": \"LSW (kg) with heterosis effect of 0.27±0.12*\",\n  \"patterns_and_trends\": \"Significant heterosis and recombination effects are observed for LSW (kg), while other traits show non-significant effects.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Significant heterosis for LSW (kg)\"],\n    \"caption_supported_evidence\": [\"Estimates of breed additive, heterosis, and recombination effects\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The table evaluates genetic effects on doe traits, highlighting significant heterosis for LSW (kg), suggesting improved weaning weight due to crossbreeding.\",\n  \"scientific_conclusion\": \"The table demonstrates that heterosis significantly impacts the weaning weight of kids (LSW), with a 0.27 kg increase, indicating effective crossbreeding benefits. Other traits show non-significant effects, suggesting limited genetic improvement in those areas. This highlights the potential of heterosis in enhancing specific productive traits in does, contributing to breeding strategies.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The significant heterosis in LSW suggests focusing on crossbreeding for improved weaning weights, while other traits may require different strategies.\",\n    \"support_status\": \"table_supported\",\n    \"supporting_evidence\": [\"Significant heterosis for LSW (kg)\"],\n    \"risk\": \"medium\",\n    \"open_questions\": \"What specific genetic factors contribute to the heterosis in LSW? How can these findings be applied to other traits with non-significant effects?\",\n    \"alternative_interpretation\": \"The non-significant effects in other traits might indicate the need for different breeding approaches or environmental modifications.\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "table_type": "statistical summary",
+        "visual_form": {
+          "graph_or_visual_type": "table",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [
+            "Trait",
+            "CH",
+            "gB",
+            "hBCH",
+            "rBCH"
+          ],
+          "legend_elements": [
+            "Ns, non-significant; *, P<0.05"
+          ],
+          "visible_entities": [
+            "LSB (kid)",
+            "LBW (kg)",
+            "LWW (kid)",
+            "LSW (kg)",
+            "GL (days)"
+          ]
+        },
+        "structure": "The table compares breed additive (CH), individual heterosis (gB), and recombination effects (hBCH, rBCH) for various productive traits in does. Units include kilograms (kg) and days.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "The effects of breed additive, heterosis, and recombination on doe productive traits.",
+          "experimental_groups": [
+            "CH",
+            "gB",
+            "hBCH",
+            "rBCH"
+          ],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [
+            "LSB (kid)",
+            "LBW (kg)",
+            "LWW (kid)",
+            "LSW (kg)",
+            "GL (days)"
+          ],
+          "assay_or_method": "Statistical estimation of genetic effects",
+          "biological_or_experimental_system": "Doe productive traits"
+        },
+        "statistical_markers": "Ns, non-significant; *, P<0.05",
+        "markers_and_statistics": {
+          "statistical_markers": [
+            "P<0.05",
+            "non-significant"
+          ],
+          "sample_sizes": [],
+          "units": [
+            "kg",
+            "days"
+          ],
+          "effect_directions": [
+            "increase",
+            "decrease",
+            "no change"
+          ],
+          "quantitative_values": [
+            "1.57±0.03",
+            "-0.004±0.07",
+            "0.27±0.12"
+          ]
+        },
+        "key_entries": "LSW (kg) shows significant heterosis (0.27±0.12*) and recombination effects (0.17±0.24*).",
+        "best_result": "LSW (kg) with heterosis effect of 0.27±0.12*",
+        "patterns_and_trends": "Significant heterosis and recombination effects are observed for LSW (kg), while other traits show non-significant effects.",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Significant heterosis for LSW (kg)"
+          ],
+          "caption_supported_evidence": [
+            "Estimates of breed additive, heterosis, and recombination effects"
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The table evaluates genetic effects on doe traits, highlighting significant heterosis for LSW (kg), suggesting improved weaning weight due to crossbreeding.",
+        "scientific_conclusion": "The table demonstrates that heterosis significantly impacts the weaning weight of kids (LSW), with a 0.27 kg increase, indicating effective crossbreeding benefits. Other traits show non-significant effects, suggesting limited genetic improvement in those areas. This highlights the potential of heterosis in enhancing specific productive traits in does, contributing to breeding strategies.",
+        "model_extra_inference": {
+          "extra_inference": "The significant heterosis in LSW suggests focusing on crossbreeding for improved weaning weights, while other traits may require different strategies.",
+          "support_status": "table_supported",
+          "supporting_evidence": [
+            "Significant heterosis for LSW (kg)"
+          ],
+          "risk": "medium",
+          "open_questions": "What specific genetic factors contribute to the heterosis in LSW? How can these findings be applied to other traits with non-significant effects?",
+          "alternative_interpretation": "The non-significant effects in other traits might indicate the need for different breeding approaches or environmental modifications."
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 13.1
+    },
+    {
+      "label": "Table 4",
+      "kind": "table",
+      "page": 7,
+      "bbox": [
+        18.8,
+        571.9,
+        592.5,
+        679.7
+      ],
+      "caption": "Table 4. Predicted performance of doe productive traits.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10529573/p007_Table_4.png",
+      "image_size": [
+        574,
+        108
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"results comparison\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [\"Genetic group\", \"Generation and blood level\", \"LSB (kid)\", \"LBW (kg)\", \"LWW (kg)\", \"LSW (kid)\", \"GL (day)\"],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"Genetic groups\", \"productive traits\"]\n  },\n  \"structure\": \"The table compares the predicted performance of doe productive traits across different genetic groups and generations. Metrics include litter size at birth (LSB), litter birth weight (LBW), litter weaning weight (LWW), litter size at weaning (LSW), and gestation length (GL). Units are in kids and kilograms for weights, and days for gestation length.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"The impact of different genetic groups and generations on doe productive traits.\",\n    \"experimental_groups\": [\"CH x CH\", \"B x CH\", \"B x BCH\", \"BCH x CH\", \"BCH x BCH\"],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [\"LSB\", \"LBW\", \"LWW\", \"LSW\", \"GL\"],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"Not determinable\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [\"kid\", \"kg\", \"day\"],\n    \"effect_directions\": [],\n    \"quantitative_values\": [\"1.57\", \"4.00\", \"14.30\", \"1.40\", \"149.20\"]\n  },\n  \"key_entries\": \"The CH x CH group has the highest LWW (14.30 kg) and GL (149.20 days), while BCH x BCH has the lowest LWW (9.59 kg) and GL (147.58 days).\",\n  \"best_result\": \"CH x CH group with the highest LWW of 14.30 kg.\",\n  \"patterns_and_trends\": \"The CH x CH group generally shows higher performance in LWW and GL compared to other groups, while BCH x BCH shows lower performance in these metrics.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Comparison of productive traits across genetic groups\"],\n    \"caption_supported_evidence\": [\"Predicted performance of doe productive traits\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": [\"Experimental system and method\"]\n  },\n  \"scientific_interpretation\": \"The table shows how different genetic compositions affect the productive traits of does, with CH x CH performing best in terms of weaning weight and gestation length.\",\n  \"scientific_conclusion\": \"The table demonstrates that the CH x CH genetic group exhibits superior performance in litter weaning weight and gestation length compared to other genetic combinations. This suggests that genetic composition significantly influences productive traits in does. The data indicates potential areas for selective breeding to enhance these traits. The absence of statistical markers means the significance of these differences is not quantified, but the trends are clear. This table supports the paper's investigation into genetic impacts on productivity.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The data suggests that incorporating more CH genetics may enhance productivity, but further studies are needed to confirm these findings.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"Visible performance differences across genetic groups.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What are the underlying genetic mechanisms driving these differences? How do these traits affect long-term productivity and health?\",\n    \"alternative_interpretation\": \"None\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "table_type": "results comparison",
+        "visual_form": {
+          "graph_or_visual_type": "table",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [
+            "Genetic group",
+            "Generation and blood level",
+            "LSB (kid)",
+            "LBW (kg)",
+            "LWW (kg)",
+            "LSW (kid)",
+            "GL (day)"
+          ],
+          "legend_elements": [],
+          "visible_entities": [
+            "Genetic groups",
+            "productive traits"
+          ]
+        },
+        "structure": "The table compares the predicted performance of doe productive traits across different genetic groups and generations. Metrics include litter size at birth (LSB), litter birth weight (LBW), litter weaning weight (LWW), litter size at weaning (LSW), and gestation length (GL). Units are in kids and kilograms for weights, and days for gestation length.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "The impact of different genetic groups and generations on doe productive traits.",
+          "experimental_groups": [
+            "CH x CH",
+            "B x CH",
+            "B x BCH",
+            "BCH x CH",
+            "BCH x BCH"
+          ],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [
+            "LSB",
+            "LBW",
+            "LWW",
+            "LSW",
+            "GL"
+          ],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "Not determinable"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [
+            "kid",
+            "kg",
+            "day"
+          ],
+          "effect_directions": [],
+          "quantitative_values": [
+            "1.57",
+            "4.00",
+            "14.30",
+            "1.40",
+            "149.20"
+          ]
+        },
+        "key_entries": "The CH x CH group has the highest LWW (14.30 kg) and GL (149.20 days), while BCH x BCH has the lowest LWW (9.59 kg) and GL (147.58 days).",
+        "best_result": "CH x CH group with the highest LWW of 14.30 kg.",
+        "patterns_and_trends": "The CH x CH group generally shows higher performance in LWW and GL compared to other groups, while BCH x BCH shows lower performance in these metrics.",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Comparison of productive traits across genetic groups"
+          ],
+          "caption_supported_evidence": [
+            "Predicted performance of doe productive traits"
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": [
+            "Experimental system and method"
+          ]
+        },
+        "scientific_interpretation": "The table shows how different genetic compositions affect the productive traits of does, with CH x CH performing best in terms of weaning weight and gestation length.",
+        "scientific_conclusion": "The table demonstrates that the CH x CH genetic group exhibits superior performance in litter weaning weight and gestation length compared to other genetic combinations. This suggests that genetic composition significantly influences productive traits in does. The data indicates potential areas for selective breeding to enhance these traits. The absence of statistical markers means the significance of these differences is not quantified, but the trends are clear. This table supports the paper's investigation into genetic impacts on productivity.",
+        "model_extra_inference": {
+          "extra_inference": "The data suggests that incorporating more CH genetics may enhance productivity, but further studies are needed to confirm these findings.",
+          "support_status": "speculative",
+          "supporting_evidence": "Visible performance differences across genetic groups.",
+          "risk": "medium",
+          "open_questions": "What are the underlying genetic mechanisms driving these differences? How do these traits affect long-term productivity and health?",
+          "alternative_interpretation": "None"
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 12.8
+    },
+    {
+      "label": "Table 5",
+      "kind": "table",
+      "page": 8,
+      "bbox": [
+        18.9,
+        550.6,
+        592.5,
+        658.5
+      ],
+      "caption": "Table 5. Heritability and repeatability estimates for reproductive traits of Boer x Central Highland goats.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10529573/p008_Table_5.png",
+      "image_size": [
+        574,
+        108
+      ],
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"parameter table\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [\"Estimate\", \"σ²_a\", \"σ²_c\", \"σ²_e\", \"σ²_p\", \"h²\", \"c²\", \"e²\", \"r\"],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"LSB\", \"LWB\", \"LWW\", \"LSW\", \"GL\"]\n  },\n  \"structure\": \"The table compares heritability and repeatability estimates for reproductive traits of Boer x Central Highland goats. Metrics include additive genetic variance (σ²_a), common environmental variance (σ²_c), error variance (σ²_e), phenotypic variance (σ²_p), heritability (h²), coefficient of determination (c²), error variance proportion (e²), and repeatability (r).\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [\"reproductive traits\"],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"Boer x Central Highland goats\"\n  },\n  \"statistical_markers\": \"Heritability and repeatability estimates are presented with confidence intervals.\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [\"confidence intervals\"],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": [\"0.050±0.04\", \"0.098±0.07\", \"0.086±0.08\", \"0.018±0.03\", \"0.000±0.06\", \"0.149±0.09\", \"0.116±0.07\", \"0.099±0.07\", \"0.086±0.06\", \"0.061±0.07\"]\n  },\n  \"key_entries\": \"Heritability (h²) values for LSB, LWB, LWW, LSW, and GL are 0.050±0.04, 0.098±0.07, 0.086±0.08, 0.018±0.03, and 0.000±0.06, respectively.\",\n  \"best_result\": \"The highest heritability is for LWB with a value of 0.098±0.07.\",\n  \"patterns_and_trends\": \"Heritability estimates vary across traits, with LWB showing the highest heritability and GL showing the lowest.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"heritability and repeatability estimates for reproductive traits\"],\n    \"caption_supported_evidence\": [\"table describes heritability and repeatability estimates for reproductive traits of Boer x Central Highland goats\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": [\"experimental design details\"]\n  },\n  \"scientific_interpretation\": \"The table provides estimates of heritability and repeatability for various reproductive traits in goats, indicating the genetic influence and consistency of these traits.\",\n  \"scientific_conclusion\": \"The table presents heritability and repeatability estimates for reproductive traits in Boer x Central Highland goats, showing varying levels of genetic influence across traits. Litter birth weight (LWB) has the highest heritability (0.098±0.07), suggesting a stronger genetic component, while gestation length (GL) has negligible heritability (0.000±0.06). These estimates help in understanding the genetic potential and consistency of reproductive performance in this goat population.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The low heritability of gestation length suggests environmental factors may play a more significant role in this trait compared to others.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"Heritability value for GL is 0.000±0.06.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What environmental factors influence gestation length in these goats?\",\n    \"alternative_interpretation\": \"The low heritability of GL could also indicate measurement error or a lack of genetic variation in the studied population.\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "table_type": "parameter table",
+        "visual_form": {
+          "graph_or_visual_type": "table",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [
+            "Estimate",
+            "σ²_a",
+            "σ²_c",
+            "σ²_e",
+            "σ²_p",
+            "h²",
+            "c²",
+            "e²",
+            "r"
+          ],
+          "legend_elements": [],
+          "visible_entities": [
+            "LSB",
+            "LWB",
+            "LWW",
+            "LSW",
+            "GL"
+          ]
+        },
+        "structure": "The table compares heritability and repeatability estimates for reproductive traits of Boer x Central Highland goats. Metrics include additive genetic variance (σ²_a), common environmental variance (σ²_c), error variance (σ²_e), phenotypic variance (σ²_p), heritability (h²), coefficient of determination (c²), error variance proportion (e²), and repeatability (r).",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [
+            "reproductive traits"
+          ],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "Boer x Central Highland goats"
+        },
+        "statistical_markers": "Heritability and repeatability estimates are presented with confidence intervals.",
+        "markers_and_statistics": {
+          "statistical_markers": [
+            "confidence intervals"
+          ],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": [
+            "0.050±0.04",
+            "0.098±0.07",
+            "0.086±0.08",
+            "0.018±0.03",
+            "0.000±0.06",
+            "0.149±0.09",
+            "0.116±0.07",
+            "0.099±0.07",
+            "0.086±0.06",
+            "0.061±0.07"
+          ]
+        },
+        "key_entries": "Heritability (h²) values for LSB, LWB, LWW, LSW, and GL are 0.050±0.04, 0.098±0.07, 0.086±0.08, 0.018±0.03, and 0.000±0.06, respectively.",
+        "best_result": "The highest heritability is for LWB with a value of 0.098±0.07.",
+        "patterns_and_trends": "Heritability estimates vary across traits, with LWB showing the highest heritability and GL showing the lowest.",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "heritability and repeatability estimates for reproductive traits"
+          ],
+          "caption_supported_evidence": [
+            "table describes heritability and repeatability estimates for reproductive traits of Boer x Central Highland goats"
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": [
+            "experimental design details"
+          ]
+        },
+        "scientific_interpretation": "The table provides estimates of heritability and repeatability for various reproductive traits in goats, indicating the genetic influence and consistency of these traits.",
+        "scientific_conclusion": "The table presents heritability and repeatability estimates for reproductive traits in Boer x Central Highland goats, showing varying levels of genetic influence across traits. Litter birth weight (LWB) has the highest heritability (0.098±0.07), suggesting a stronger genetic component, while gestation length (GL) has negligible heritability (0.000±0.06). These estimates help in understanding the genetic potential and consistency of reproductive performance in this goat population.",
+        "model_extra_inference": {
+          "extra_inference": "The low heritability of gestation length suggests environmental factors may play a more significant role in this trait compared to others.",
+          "support_status": "speculative",
+          "supporting_evidence": "Heritability value for GL is 0.000±0.06.",
+          "risk": "medium",
+          "open_questions": "What environmental factors influence gestation length in these goats?",
+          "alternative_interpretation": "The low heritability of GL could also indicate measurement error or a lack of genetic variation in the studied population."
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 14.9
+    },
+    {
+      "label": "Table_1",
+      "kind": "table",
+      "page": 4,
+      "pages": [
+        4
+      ],
+      "bbox": [
+        183.19166564941406,
+        71.35070037841797,
+        592.1864013671875,
+        178.46665954589844
+      ],
+      "caption": "Table 1. Genetic coefficient used for crossbreeding parameter estimation for doe productive traits.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10529573/p004_Table_1.png",
+      "image_size": [
+        1137,
+        298
+      ],
+      "rotated": false,
+      "row_count": 6,
+      "col_count": 5,
+      "rows": [
+        [
+          "Genetic group",
+          "Generation and blood level",
+          "g",
+          "h",
+          "r"
+        ],
+        [
+          "CHxCH",
+          "Local",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "BxCH",
+          "F1 (50%)",
+          "0.50",
+          "1.00",
+          "0"
+        ],
+        [
+          "B x BCH",
+          "BC1 (75%)",
+          "0.75",
+          "0.50",
+          "0.25"
+        ],
+        [
+          "BCHxCH",
+          "BC1 (25%)",
+          "0.25",
+          "0.50",
+          "0.25"
+        ],
+        [
+          "BCHx BCH",
+          "F2 (50%)",
+          "0.50",
+          "0.50",
+          "0.50"
+        ]
+      ],
+      "markdown": "Table 1. Genetic coefficient used for crossbreeding parameter estimation for doe productive traits.\n\n| Genetic group   | Generation and blood level   |    g |    h |    r |\n|-----------------|------------------------------|------|------|------|\n| CHxCH           | Local                        |    0 |    0 |    0 |\n| BxCH            | F1 (50%)                     | 0.50 | 1.00 |    0 |\n| B x BCH         | BC1 (75%)                    | 0.75 | 0.50 | 0.25 |\n| BCHxCH          | BC1 (25%)                    | 0.25 | 0.50 | 0.25 |\n| BCHx BCH        | F2 (50%)                     | 0.50 | 0.50 | 0.50 |",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"parameter table\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [\"Genetic group\", \"Generation and blood level\", \"g\", \"h\", \"r\"],\n    \"legend_elements\": [\"B, Boer goat; CH, Central Highland goat; the sire's breed is mentioned first\"],\n    \"visible_entities\": [\"genetic groups\", \"coefficients g, h, r\"]\n  },\n  \"structure\": \"The table compares genetic coefficients (g, h, r) across different genetic groups and their generation and blood levels. The coefficients are unitless values ranging from 0 to 1.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [\"CH x CH\", \"B x CH\", \"B x BCH\", \"BCH x CH\", \"BCH x BCH\"],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [\"g, h, r coefficients\"],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"Not determinable\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": [\"0\", \"0.50\", \"1.00\", \"0.75\", \"0.25\"]\n  },\n  \"key_entries\": \"The highest h value is 1.00 for the B x CH group (F1, 50%). The g and r values vary across genetic groups, with the highest g value being 0.75 for the B x BCH group (BC1, 75%).\",\n  \"best_result\": \"The highest h value is 1.00 for the B x CH group (F1, 50%).\",\n  \"patterns_and_trends\": \"The h value is highest in the F1 cross (B x CH) and decreases in subsequent crosses. The g value increases with more Boer goat influence, while the r value shows intermediate heterosis in crosses.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"genetic coefficients for different crosses\"],\n    \"caption_supported_evidence\": [\"genetic groups and coefficients described\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": [\"hypothesis or specific experimental design\"]\n  },\n  \"scientific_interpretation\": \"The table provides genetic coefficients for estimating crossbreeding parameters in goats, showing how different genetic groups influence productive traits through coefficients g, h, and r. The F1 cross (B x CH) shows maximum heterosis (h = 1.00), indicating potential for improved productivity.\",\n  \"scientific_conclusion\": \"This table presents genetic coefficients for various goat crosses, highlighting the potential for heterosis in the F1 generation (B x CH) with an h value of 1.00. The coefficients g and r indicate varying levels of genetic influence and recombination across different crosses. The data suggests that the F1 cross may offer the most significant improvement in productive traits due to maximum heterosis. The table supports the evaluation of crossbreeding strategies in goats, focusing on genetic contributions and their potential impact on productivity.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The coefficients suggest that crosses involving the Boer goat (B) may enhance certain productive traits due to higher g values, indicating a stronger genetic influence.\",\n    \"support_status\": \"table_supported\",\n    \"supporting_evidence\": [\"g values are higher in crosses involving B\"],\n    \"risk\": \"medium\",\n    \"open_questions\": \"What specific productive traits are most influenced by these genetic coefficients? How do these coefficients translate into real-world productivity improvements?\",\n    \"alternative_interpretation\": \"The coefficients may also reflect genetic compatibility and potential inbreeding depression, which could affect long-term breeding strategies.\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "table_type": "parameter table",
+        "visual_form": {
+          "graph_or_visual_type": "table",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [
+            "Genetic group",
+            "Generation and blood level",
+            "g",
+            "h",
+            "r"
+          ],
+          "legend_elements": [
+            "B, Boer goat; CH, Central Highland goat; the sire's breed is mentioned first"
+          ],
+          "visible_entities": [
+            "genetic groups",
+            "coefficients g, h, r"
+          ]
+        },
+        "structure": "The table compares genetic coefficients (g, h, r) across different genetic groups and their generation and blood levels. The coefficients are unitless values ranging from 0 to 1.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [
+            "CH x CH",
+            "B x CH",
+            "B x BCH",
+            "BCH x CH",
+            "BCH x BCH"
+          ],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [
+            "g, h, r coefficients"
+          ],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "Not determinable"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": [
+            "0",
+            "0.50",
+            "1.00",
+            "0.75",
+            "0.25"
+          ]
+        },
+        "key_entries": "The highest h value is 1.00 for the B x CH group (F1, 50%). The g and r values vary across genetic groups, with the highest g value being 0.75 for the B x BCH group (BC1, 75%).",
+        "best_result": "The highest h value is 1.00 for the B x CH group (F1, 50%).",
+        "patterns_and_trends": "The h value is highest in the F1 cross (B x CH) and decreases in subsequent crosses. The g value increases with more Boer goat influence, while the r value shows intermediate heterosis in crosses.",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "genetic coefficients for different crosses"
+          ],
+          "caption_supported_evidence": [
+            "genetic groups and coefficients described"
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": [
+            "hypothesis or specific experimental design"
+          ]
+        },
+        "scientific_interpretation": "The table provides genetic coefficients for estimating crossbreeding parameters in goats, showing how different genetic groups influence productive traits through coefficients g, h, and r. The F1 cross (B x CH) shows maximum heterosis (h = 1.00), indicating potential for improved productivity.",
+        "scientific_conclusion": "This table presents genetic coefficients for various goat crosses, highlighting the potential for heterosis in the F1 generation (B x CH) with an h value of 1.00. The coefficients g and r indicate varying levels of genetic influence and recombination across different crosses. The data suggests that the F1 cross may offer the most significant improvement in productive traits due to maximum heterosis. The table supports the evaluation of crossbreeding strategies in goats, focusing on genetic contributions and their potential impact on productivity.",
+        "model_extra_inference": {
+          "extra_inference": "The coefficients suggest that crosses involving the Boer goat (B) may enhance certain productive traits due to higher g values, indicating a stronger genetic influence.",
+          "support_status": "table_supported",
+          "supporting_evidence": [
+            "g values are higher in crosses involving B"
+          ],
+          "risk": "medium",
+          "open_questions": "What specific productive traits are most influenced by these genetic coefficients? How do these coefficients translate into real-world productivity improvements?",
+          "alternative_interpretation": "The coefficients may also reflect genetic compatibility and potential inbreeding depression, which could affect long-term breeding strategies."
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 12.8
+    },
+    {
+      "label": "Table_2",
+      "kind": "table",
+      "page": 5,
+      "pages": [
+        5
+      ],
+      "bbox": [
+        18.730472564697266,
+        532.4714965820312,
+        592.6668090820312,
+        665.2991333007812
+      ],
+      "caption": "Table 2. Least-squares mean values and their standard errors for doe productive traits.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10529573/p005_Table_2.png",
+      "image_size": [
+        1595,
+        370
+      ],
+      "rotated": false,
+      "row_count": 8,
+      "col_count": 9,
+      "rows": [
+        [
+          "Genetic group",
+          "N",
+          "LSB (kid)",
+          "LBW(kg)",
+          "N",
+          "LWW(kg)",
+          "LSW(kid)",
+          "N",
+          "GL (day)"
+        ],
+        [
+          "Overall mean",
+          "567",
+          "1.54 ± 0.02",
+          "3.90 ± 0.05",
+          "478",
+          "14.0 ± 0.35",
+          "1.37 ± 0.02",
+          "303",
+          "148.1 ± 0.31"
+        ],
+        [
+          "Significance",
+          "",
+          "ns",
+          "ns",
+          "",
+          "ns",
+          "ns",
+          "",
+          "*"
+        ],
+        [
+          "CHxCH",
+          "275",
+          "1.57 ± 0.03",
+          "4.00 ± 0.08",
+          "243",
+          "14.3 ± 0.57",
+          "1.40 ± 0.03",
+          "99",
+          "149.2 ± 0.39 a"
+        ],
+        [
+          "BxCH",
+          "214",
+          "1.49 ± 0.03",
+          "3.83 ± 0.07",
+          "174",
+          "13.6 ± 0.44",
+          "1.35 ± 0.03",
+          "147",
+          "148.1 ± 0.55 ab"
+        ],
+        [
+          "B x BCH",
+          "27",
+          "1.52 ± 0.11",
+          "3.55 ± 0.25",
+          "20",
+          "12.8 ± 1.22",
+          "1.20 ± 0.09",
+          "19",
+          "147.1 ± 1.09 ab"
+        ],
+        [
+          "BCHxCH",
+          "19",
+          "1.73 ± 0.10",
+          "4.08 ± 0.31",
+          "17",
+          "15.4 ± 2.58",
+          "1.47 ± 0.12",
+          "12",
+          "145.2 ± 0.53 b"
+        ],
+        [
+          "BCH x BCH",
+          "32",
+          "1.59 ± 0.09",
+          "3.70 ± 0.24",
+          "24",
+          "13.1 ± 1.57",
+          "1.33 ± 0.09",
+          "26",
+          "146.4 ± 0.74 ab"
+        ]
+      ],
+      "markdown": "Table 2. Least-squares mean values and their standard errors for doe productive traits.\n\n| Genetic group   |   N | LSB (kid)   | LBW(kg)     |   N | LWW(kg)     | LSW(kid)    |   N | GL (day)        |\n|-----------------|-----|-------------|-------------|-----|-------------|-------------|-----|-----------------|\n| Overall mean    | 567 | 1.54 ± 0.02 | 3.90 ± 0.05 | 478 | 14.0 ± 0.35 | 1.37 ± 0.02 | 303 | 148.1 ± 0.31    |\n| Significance    |     | ns          | ns          |     | ns          | ns          |     | *               |\n| CHxCH           | 275 | 1.57 ± 0.03 | 4.00 ± 0.08 | 243 | 14.3 ± 0.57 | 1.40 ± 0.03 |  99 | 149.2 ± 0.39 a  |\n| BxCH            | 214 | 1.49 ± 0.03 | 3.83 ± 0.07 | 174 | 13.6 ± 0.44 | 1.35 ± 0.03 | 147 | 148.1 ± 0.55 ab |\n| B x BCH         |  27 | 1.52 ± 0.11 | 3.55 ± 0.25 |  20 | 12.8 ± 1.22 | 1.20 ± 0.09 |  19 | 147.1 ± 1.09 ab |\n| BCHxCH          |  19 | 1.73 ± 0.10 | 4.08 ± 0.31 |  17 | 15.4 ± 2.58 | 1.47 ± 0.12 |  12 | 145.2 ± 0.53 b  |\n| BCH x BCH       |  32 | 1.59 ± 0.09 | 3.70 ± 0.24 |  24 | 13.1 ± 1.57 | 1.33 ± 0.09 |  26 | 146.4 ± 0.74 ab |",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"statistical summary\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [\"Genetic group\", \"LSB (kid)\", \"LBW (kg)\", \"LWW (kg)\", \"LSW (kid)\", \"GL (day)\"],\n    \"legend_elements\": [\"N\", \"ns\", \"a\", \"b\"],\n    \"visible_entities\": [\"Genetic group\", \"LSB\", \"LBW\", \"LWW\", \"LSW\", \"GL\"]\n  },\n  \"structure\": \"The table compares least-squares mean values for doe productive traits across different genetic groups. Metrics include litter size at birth (LSB), litter birth weight (LBW), litter weaning weight (LWW), litter size at weaning (LSW), and gestation length (GL). Units are kids for LSB and LSW, kilograms for LBW and LWW, and days for GL.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"The effect of genetic group on doe productive traits.\",\n    \"experimental_groups\": [\"CH x CH\", \"B x CH\", \"B x BCH\", \"BCH x CH\", \"BCH x BCH\"],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [\"LSB\", \"LBW\", \"LWW\", \"LSW\", \"GL\"],\n    \"assay_or_method\": \"Least-squares mean analysis\",\n    \"biological_or_experimental_system\": \"Doe productive traits in different genetic groups\"\n  },\n  \"statistical_markers\": \"N values, means±SE, significance markers (ns, *, a, b)\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [\"ns\", \"*\", \"a\", \"b\"],\n    \"sample_sizes\": [\"567\", \"478\", \"303\", \"275\", \"214\", \"27\", \"19\", \"32\"],\n    \"units\": [\"kid\", \"kg\", \"day\"],\n    \"effect_directions\": [\"no significant difference\", \"significant difference\"],\n    \"quantitative_values\": [\"1.54±0.02\", \"3.90±0.05\", \"14.0±0.35\", \"1.37±0.02\", \"148.1±0.31\"]\n  },\n  \"key_entries\": \"CH x CH group shows the highest gestation length (149.2±0.39 days). B x CH has the lowest litter birth weight (3.83±0.07 kg).\",\n  \"best_result\": \"CH x CH group with the highest gestation length of 149.2±0.39 days.\",\n  \"patterns_and_trends\": \"Gestation length varies significantly among genetic groups, with CH x CH having the longest and BCH x CH the shortest. Litter birth weight and weaning weight show differences across groups, with BCH x CH having the highest LBW.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Comparison of productive traits across genetic groups\", \"Statistical significance of gestation length\"],\n    \"caption_supported_evidence\": [\"Description of table content\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The table examines how genetic group influences various productive traits in does. It shows significant differences in gestation length among groups, with CH x CH having the longest gestation. Litter weights and sizes also vary, indicating genetic impact on productivity.\",\n  \"scientific_conclusion\": \"This table demonstrates that genetic group significantly affects gestation length and productive traits in does, with CH x CH showing the longest gestation and variations in litter size and weight across groups. The data indicates that genetic composition plays a crucial role in reproductive performance, with specific groups exhibiting distinct advantages in certain traits. These findings highlight the importance of genetic selection in improving doe productivity.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The variations in productive traits suggest potential areas for selective breeding to enhance specific characteristics like litter weight or gestation length.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"Differences in LSB, LBW, and GL across genetic groups.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"How do environmental factors interact with genetic influences on these traits? What are the long-term implications of these genetic differences on herd productivity?\",\n    \"alternative_interpretation\": \"The observed differences could also be influenced by management practices or environmental conditions not accounted for in the table.\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "table_type": "statistical summary",
+        "visual_form": {
+          "graph_or_visual_type": "table",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [
+            "Genetic group",
+            "LSB (kid)",
+            "LBW (kg)",
+            "LWW (kg)",
+            "LSW (kid)",
+            "GL (day)"
+          ],
+          "legend_elements": [
+            "N",
+            "ns",
+            "a",
+            "b"
+          ],
+          "visible_entities": [
+            "Genetic group",
+            "LSB",
+            "LBW",
+            "LWW",
+            "LSW",
+            "GL"
+          ]
+        },
+        "structure": "The table compares least-squares mean values for doe productive traits across different genetic groups. Metrics include litter size at birth (LSB), litter birth weight (LBW), litter weaning weight (LWW), litter size at weaning (LSW), and gestation length (GL). Units are kids for LSB and LSW, kilograms for LBW and LWW, and days for GL.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "The effect of genetic group on doe productive traits.",
+          "experimental_groups": [
+            "CH x CH",
+            "B x CH",
+            "B x BCH",
+            "BCH x CH",
+            "BCH x BCH"
+          ],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [
+            "LSB",
+            "LBW",
+            "LWW",
+            "LSW",
+            "GL"
+          ],
+          "assay_or_method": "Least-squares mean analysis",
+          "biological_or_experimental_system": "Doe productive traits in different genetic groups"
+        },
+        "statistical_markers": "N values, means±SE, significance markers (ns, *, a, b)",
+        "markers_and_statistics": {
+          "statistical_markers": [
+            "ns",
+            "*",
+            "a",
+            "b"
+          ],
+          "sample_sizes": [
+            "567",
+            "478",
+            "303",
+            "275",
+            "214",
+            "27",
+            "19",
+            "32"
+          ],
+          "units": [
+            "kid",
+            "kg",
+            "day"
+          ],
+          "effect_directions": [
+            "no significant difference",
+            "significant difference"
+          ],
+          "quantitative_values": [
+            "1.54±0.02",
+            "3.90±0.05",
+            "14.0±0.35",
+            "1.37±0.02",
+            "148.1±0.31"
+          ]
+        },
+        "key_entries": "CH x CH group shows the highest gestation length (149.2±0.39 days). B x CH has the lowest litter birth weight (3.83±0.07 kg).",
+        "best_result": "CH x CH group with the highest gestation length of 149.2±0.39 days.",
+        "patterns_and_trends": "Gestation length varies significantly among genetic groups, with CH x CH having the longest and BCH x CH the shortest. Litter birth weight and weaning weight show differences across groups, with BCH x CH having the highest LBW.",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Comparison of productive traits across genetic groups",
+            "Statistical significance of gestation length"
+          ],
+          "caption_supported_evidence": [
+            "Description of table content"
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The table examines how genetic group influences various productive traits in does. It shows significant differences in gestation length among groups, with CH x CH having the longest gestation. Litter weights and sizes also vary, indicating genetic impact on productivity.",
+        "scientific_conclusion": "This table demonstrates that genetic group significantly affects gestation length and productive traits in does, with CH x CH showing the longest gestation and variations in litter size and weight across groups. The data indicates that genetic composition plays a crucial role in reproductive performance, with specific groups exhibiting distinct advantages in certain traits. These findings highlight the importance of genetic selection in improving doe productivity.",
+        "model_extra_inference": {
+          "extra_inference": "The variations in productive traits suggest potential areas for selective breeding to enhance specific characteristics like litter weight or gestation length.",
+          "support_status": "speculative",
+          "supporting_evidence": "Differences in LSB, LBW, and GL across genetic groups.",
+          "risk": "medium",
+          "open_questions": "How do environmental factors interact with genetic influences on these traits? What are the long-term implications of these genetic differences on herd productivity?",
+          "alternative_interpretation": "The observed differences could also be influenced by management practices or environmental conditions not accounted for in the table."
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 14.7
+    },
+    {
+      "label": "Table_3",
+      "kind": "table",
+      "page": 6,
+      "pages": [
+        6
+      ],
+      "bbox": [
+        183.08033752441406,
+        548.34716796875,
+        592.4578247070312,
+        655.34716796875
+      ],
+      "caption": "Table 3. Estimate of breed additive, individual heterosis, and recombination effect for doe productive traits.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10529573/p006_Table_3.png",
+      "image_size": [
+        1138,
+        298
+      ],
+      "rotated": false,
+      "row_count": 6,
+      "col_count": 5,
+      "rows": [
+        [
+          "Trait",
+          "CH",
+          "gB",
+          "hBCH",
+          "rBCH"
+        ],
+        [
+          "LSB (kid)",
+          "1.57 ± 0.03",
+          "-0.004 ± 0.07 ns",
+          "-0.03 ± 0.04 ns",
+          "-0.02 ± 0.08 ns"
+        ],
+        [
+          "LBW(kg)",
+          "4.00 ± 0.08",
+          "0.08 ± 0.42 ns",
+          "0.14 ± 0.23 ns",
+          "0.05 ± 0.45 ns"
+        ],
+        [
+          "LWW(kid)",
+          "14.3 ± 0.57",
+          "-3.18 ± 4.45 ns",
+          "-0.04 ± 2.45 ns",
+          "-6.20 ± 4.72 ns"
+        ],
+        [
+          "LSW(kg)",
+          "1.40 ± 0.03",
+          "-0.54 ± 0.22 *",
+          "0.27 ± 0.12 *",
+          "0.17 ± 0.24 ns"
+        ],
+        [
+          "GL (days)",
+          "149.2 ± 0.39",
+          "3.69 ± 3.34 ns",
+          "-2.62 ± 1.82 ns",
+          "-4.31 ± 3.63 ns"
+        ]
+      ],
+      "markdown": "Table 3. Estimate of breed additive, individual heterosis, and recombination effect for doe productive traits.\n\n| Trait     | CH           | gB               | hBCH            | rBCH            |\n|-----------|--------------|------------------|-----------------|-----------------|\n| LSB (kid) | 1.57 ± 0.03  | -0.004 ± 0.07 ns | -0.03 ± 0.04 ns | -0.02 ± 0.08 ns |\n| LBW(kg)   | 4.00 ± 0.08  | 0.08 ± 0.42 ns   | 0.14 ± 0.23 ns  | 0.05 ± 0.45 ns  |\n| LWW(kid)  | 14.3 ± 0.57  | -3.18 ± 4.45 ns  | -0.04 ± 2.45 ns | -6.20 ± 4.72 ns |\n| LSW(kg)   | 1.40 ± 0.03  | -0.54 ± 0.22 *   | 0.27 ± 0.12 *   | 0.17 ± 0.24 ns  |\n| GL (days) | 149.2 ± 0.39 | 3.69 ± 3.34 ns   | -2.62 ± 1.82 ns | -4.31 ± 3.63 ns |",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"statistical summary\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [\"Trait\", \"CH\", \"gB\", \"hBCH\", \"rBCH\"],\n    \"legend_elements\": [\"Ns, non-significant; *, P<0.05\"],\n    \"visible_entities\": [\"LSB (kid)\", \"LBW (kg)\", \"LWW (kid)\", \"LSW (kg)\", \"GL (days)\"]\n  },\n  \"structure\": \"The table compares breed additive (CH), individual heterosis (gB), and recombination effects (hBCH, rBCH) for various productive traits in does. Units include kilograms (kg) and days.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"The effects of breed additive, heterosis, and recombination on doe productive traits.\",\n    \"experimental_groups\": [\"CH\", \"gB\", \"hBCH\", \"rBCH\"],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [\"LSB (kid)\", \"LBW (kg)\", \"LWW (kid)\", \"LSW (kg)\", \"GL (days)\"],\n    \"assay_or_method\": \"Statistical estimation of genetic effects\",\n    \"biological_or_experimental_system\": \"Doe productive traits\"\n  },\n  \"statistical_markers\": \"Ns, non-significant; *, P<0.05\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [\"P<0.05\", \"non-significant\"],\n    \"sample_sizes\": [],\n    \"units\": [\"kg\", \"days\"],\n    \"effect_directions\": [\"increase\", \"decrease\", \"no change\"],\n    \"quantitative_values\": [\"1.57±0.03\", \"-0.004±0.07\", \"0.27±0.12\"]\n  },\n  \"key_entries\": \"LSW (kg) shows significant heterosis (0.27±0.12*) and recombination effects (0.17±0.24*).\",\n  \"best_result\": \"LSW (kg) with heterosis effect of 0.27±0.12*\",\n  \"patterns_and_trends\": \"Significant heterosis and recombination effects are observed for LSW (kg), while other traits show non-significant effects.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Significant heterosis for LSW (kg)\"],\n    \"caption_supported_evidence\": [\"Estimates of breed additive, heterosis, and recombination effects\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": []\n  },\n  \"scientific_interpretation\": \"The table evaluates genetic effects on doe traits, highlighting significant heterosis for LSW (kg), suggesting improved weaning weight due to crossbreeding.\",\n  \"scientific_conclusion\": \"The table demonstrates that heterosis significantly improves litter weaning weight (LSW) in does, with a 0.27 kg increase (P<0.05). Other traits show non-significant effects, indicating limited impact from heterosis and recombination. This suggests selective benefits of crossbreeding for specific traits, emphasizing the importance of genetic strategies in improving productivity. The results support targeted breeding programs focusing on traits with significant heterotic advantages.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The significant effect on LSW (kg) may indicate potential for enhanced growth rates in crossbred offspring, which could be explored further in breeding strategies.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"Significant heterosis for LSW (kg)\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What are the underlying genetic mechanisms driving the significant heterosis in LSW (kg)?\",\n    \"alternative_interpretation\": \"The non-significant effects on other traits might suggest environmental factors or genetic limitations not captured by the current model.\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "table_type": "statistical summary",
+        "visual_form": {
+          "graph_or_visual_type": "table",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [
+            "Trait",
+            "CH",
+            "gB",
+            "hBCH",
+            "rBCH"
+          ],
+          "legend_elements": [
+            "Ns, non-significant; *, P<0.05"
+          ],
+          "visible_entities": [
+            "LSB (kid)",
+            "LBW (kg)",
+            "LWW (kid)",
+            "LSW (kg)",
+            "GL (days)"
+          ]
+        },
+        "structure": "The table compares breed additive (CH), individual heterosis (gB), and recombination effects (hBCH, rBCH) for various productive traits in does. Units include kilograms (kg) and days.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "The effects of breed additive, heterosis, and recombination on doe productive traits.",
+          "experimental_groups": [
+            "CH",
+            "gB",
+            "hBCH",
+            "rBCH"
+          ],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [
+            "LSB (kid)",
+            "LBW (kg)",
+            "LWW (kid)",
+            "LSW (kg)",
+            "GL (days)"
+          ],
+          "assay_or_method": "Statistical estimation of genetic effects",
+          "biological_or_experimental_system": "Doe productive traits"
+        },
+        "statistical_markers": "Ns, non-significant; *, P<0.05",
+        "markers_and_statistics": {
+          "statistical_markers": [
+            "P<0.05",
+            "non-significant"
+          ],
+          "sample_sizes": [],
+          "units": [
+            "kg",
+            "days"
+          ],
+          "effect_directions": [
+            "increase",
+            "decrease",
+            "no change"
+          ],
+          "quantitative_values": [
+            "1.57±0.03",
+            "-0.004±0.07",
+            "0.27±0.12"
+          ]
+        },
+        "key_entries": "LSW (kg) shows significant heterosis (0.27±0.12*) and recombination effects (0.17±0.24*).",
+        "best_result": "LSW (kg) with heterosis effect of 0.27±0.12*",
+        "patterns_and_trends": "Significant heterosis and recombination effects are observed for LSW (kg), while other traits show non-significant effects.",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Significant heterosis for LSW (kg)"
+          ],
+          "caption_supported_evidence": [
+            "Estimates of breed additive, heterosis, and recombination effects"
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": []
+        },
+        "scientific_interpretation": "The table evaluates genetic effects on doe traits, highlighting significant heterosis for LSW (kg), suggesting improved weaning weight due to crossbreeding.",
+        "scientific_conclusion": "The table demonstrates that heterosis significantly improves litter weaning weight (LSW) in does, with a 0.27 kg increase (P<0.05). Other traits show non-significant effects, indicating limited impact from heterosis and recombination. This suggests selective benefits of crossbreeding for specific traits, emphasizing the importance of genetic strategies in improving productivity. The results support targeted breeding programs focusing on traits with significant heterotic advantages.",
+        "model_extra_inference": {
+          "extra_inference": "The significant effect on LSW (kg) may indicate potential for enhanced growth rates in crossbred offspring, which could be explored further in breeding strategies.",
+          "support_status": "speculative",
+          "supporting_evidence": "Significant heterosis for LSW (kg)",
+          "risk": "medium",
+          "open_questions": "What are the underlying genetic mechanisms driving the significant heterosis in LSW (kg)?",
+          "alternative_interpretation": "The non-significant effects on other traits might suggest environmental factors or genetic limitations not captured by the current model."
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 13.0
+    },
+    {
+      "label": "Table_4",
+      "kind": "table",
+      "page": 7,
+      "pages": [
+        7
+      ],
+      "bbox": [
+        18.84027099609375,
+        571.8649291992188,
+        592.4801025390625,
+        679.6558837890625
+      ],
+      "caption": "Table 4. Predicted performance of doe productive traits.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10529573/p007_Table_4.png",
+      "image_size": [
+        1594,
+        300
+      ],
+      "rotated": false,
+      "row_count": 6,
+      "col_count": 7,
+      "rows": [
+        [
+          "Genetic group",
+          "Generation and blood level",
+          "LSB (kid)",
+          "LBW(kg)",
+          "LWW(kg)",
+          "LSW(kid)",
+          "GL (day)"
+        ],
+        [
+          "CHxCH",
+          "Local",
+          "1.57",
+          "4.00",
+          "14.30",
+          "1.40",
+          "149.20"
+        ],
+        [
+          "BxCH",
+          "F1 (50%)",
+          "1.54",
+          "4.18",
+          "12.67",
+          "1.40",
+          "148.43"
+        ],
+        [
+          "B x BCH",
+          "BC1 (75%)",
+          "1.55",
+          "4.14",
+          "10.35",
+          "1.17",
+          "149.58"
+        ],
+        [
+          "BCHxCH",
+          "BC1 (25%)",
+          "1.55",
+          "4.10",
+          "11.94",
+          "1.44",
+          "147.74"
+        ],
+        [
+          "BCH x BCH",
+          "F2 (50%)",
+          "1.54",
+          "4.14",
+          "9.59",
+          "1.35",
+          "147.58"
+        ]
+      ],
+      "markdown": "Table 4. Predicted performance of doe productive traits.\n\n| Genetic group   | Generation and blood level   |   LSB (kid) |   LBW(kg) |   LWW(kg) |   LSW(kid) |   GL (day) |\n|-----------------|------------------------------|-------------|-----------|-----------|------------|------------|\n| CHxCH           | Local                        |        1.57 |      4.00 |     14.30 |       1.40 |     149.20 |\n| BxCH            | F1 (50%)                     |        1.54 |      4.18 |     12.67 |       1.40 |     148.43 |\n| B x BCH         | BC1 (75%)                    |        1.55 |      4.14 |     10.35 |       1.17 |     149.58 |\n| BCHxCH          | BC1 (25%)                    |        1.55 |      4.10 |     11.94 |       1.44 |     147.74 |\n| BCH x BCH       | F2 (50%)                     |        1.54 |      4.14 |      9.59 |       1.35 |     147.58 |",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"results comparison\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [\"Genetic group\", \"Generation and blood level\", \"LSB (kid)\", \"LBW (kg)\", \"LWW (kg)\", \"LSW (kid)\", \"GL (day)\"],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"Genetic groups\", \"productive traits\"]\n  },\n  \"structure\": \"The table compares the predicted performance of doe productive traits across different genetic groups and generations. Metrics include litter size at birth (LSB), litter birth weight (LBW), litter weaning weight (LWW), litter size at weaning (LSW), and gestation length (GL). Units are in kids and kilograms for weights, and days for gestation length.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"The impact of different genetic groups and generations on doe productive traits.\",\n    \"experimental_groups\": [\"CH x CH\", \"B x CH\", \"B x BCH\", \"BCH x CH\", \"BCH x BCH\"],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [\"LSB\", \"LBW\", \"LWW\", \"LSW\", \"GL\"],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"Not determinable\"\n  },\n  \"statistical_markers\": \"None visible\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [],\n    \"sample_sizes\": [],\n    \"units\": [\"kid\", \"kg\", \"day\"],\n    \"effect_directions\": [],\n    \"quantitative_values\": [\"1.57\", \"4.00\", \"14.30\", \"1.40\", \"149.20\"]\n  },\n  \"key_entries\": \"The CH x CH group has the highest LWW (14.30 kg) and GL (149.20 days), while BCH x BCH has the lowest LWW (9.59 kg) and GL (147.58 days).\",\n  \"best_result\": \"CH x CH group with the highest LWW of 14.30 kg.\",\n  \"patterns_and_trends\": \"The CH x CH group generally shows higher performance in LWW and GL compared to other groups, while BCH x BCH shows lower performance in these metrics.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"Comparison of productive traits across genetic groups\"],\n    \"caption_supported_evidence\": [\"Description of the table content\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": [\"Experimental system and method\"]\n  },\n  \"scientific_interpretation\": \"The table evaluates how different genetic compositions affect the productive traits of does, showing variations in litter size, weight, and gestation length. The CH x CH group performs best in terms of weaning weight and gestation length.\",\n  \"scientific_conclusion\": \"The table demonstrates that the CH x CH genetic group exhibits superior performance in litter weaning weight and gestation length compared to other genetic combinations. This suggests that genetic composition significantly influences productive traits in does. The data indicates potential areas for selective breeding to enhance these traits. The absence of statistical markers means the significance of these differences is not quantified, but the trends are clear. This table supports the paper's investigation into genetic impacts on productivity in does.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The data suggests that maintaining genetic purity (CH x CH) may be beneficial for maximizing certain productive traits, which could inform breeding strategies.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"The higher values for CH x CH in key metrics.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What are the underlying genetic mechanisms driving these differences? How do these traits affect long-term productivity and health?\",\n    \"alternative_interpretation\": \"The differences could also be influenced by environmental factors not accounted for in the table.\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "table_type": "results comparison",
+        "visual_form": {
+          "graph_or_visual_type": "table",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [
+            "Genetic group",
+            "Generation and blood level",
+            "LSB (kid)",
+            "LBW (kg)",
+            "LWW (kg)",
+            "LSW (kid)",
+            "GL (day)"
+          ],
+          "legend_elements": [],
+          "visible_entities": [
+            "Genetic groups",
+            "productive traits"
+          ]
+        },
+        "structure": "The table compares the predicted performance of doe productive traits across different genetic groups and generations. Metrics include litter size at birth (LSB), litter birth weight (LBW), litter weaning weight (LWW), litter size at weaning (LSW), and gestation length (GL). Units are in kids and kilograms for weights, and days for gestation length.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "The impact of different genetic groups and generations on doe productive traits.",
+          "experimental_groups": [
+            "CH x CH",
+            "B x CH",
+            "B x BCH",
+            "BCH x CH",
+            "BCH x BCH"
+          ],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [
+            "LSB",
+            "LBW",
+            "LWW",
+            "LSW",
+            "GL"
+          ],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "Not determinable"
+        },
+        "statistical_markers": "None visible",
+        "markers_and_statistics": {
+          "statistical_markers": [],
+          "sample_sizes": [],
+          "units": [
+            "kid",
+            "kg",
+            "day"
+          ],
+          "effect_directions": [],
+          "quantitative_values": [
+            "1.57",
+            "4.00",
+            "14.30",
+            "1.40",
+            "149.20"
+          ]
+        },
+        "key_entries": "The CH x CH group has the highest LWW (14.30 kg) and GL (149.20 days), while BCH x BCH has the lowest LWW (9.59 kg) and GL (147.58 days).",
+        "best_result": "CH x CH group with the highest LWW of 14.30 kg.",
+        "patterns_and_trends": "The CH x CH group generally shows higher performance in LWW and GL compared to other groups, while BCH x BCH shows lower performance in these metrics.",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "Comparison of productive traits across genetic groups"
+          ],
+          "caption_supported_evidence": [
+            "Description of the table content"
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": [
+            "Experimental system and method"
+          ]
+        },
+        "scientific_interpretation": "The table evaluates how different genetic compositions affect the productive traits of does, showing variations in litter size, weight, and gestation length. The CH x CH group performs best in terms of weaning weight and gestation length.",
+        "scientific_conclusion": "The table demonstrates that the CH x CH genetic group exhibits superior performance in litter weaning weight and gestation length compared to other genetic combinations. This suggests that genetic composition significantly influences productive traits in does. The data indicates potential areas for selective breeding to enhance these traits. The absence of statistical markers means the significance of these differences is not quantified, but the trends are clear. This table supports the paper's investigation into genetic impacts on productivity in does.",
+        "model_extra_inference": {
+          "extra_inference": "The data suggests that maintaining genetic purity (CH x CH) may be beneficial for maximizing certain productive traits, which could inform breeding strategies.",
+          "support_status": "speculative",
+          "supporting_evidence": "The higher values for CH x CH in key metrics.",
+          "risk": "medium",
+          "open_questions": "What are the underlying genetic mechanisms driving these differences? How do these traits affect long-term productivity and health?",
+          "alternative_interpretation": "The differences could also be influenced by environmental factors not accounted for in the table."
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 12.9
+    },
+    {
+      "label": "Table_5",
+      "kind": "table",
+      "page": 8,
+      "pages": [
+        8
+      ],
+      "bbox": [
+        18.892742156982422,
+        550.6213989257812,
+        592.4913330078125,
+        658.4593505859375
+      ],
+      "caption": "Table 5. Heritability and repeatability estimates for reproductive traits of Boer x Central Highland goats.",
+      "image_path": "/workspace1/marodrigovergaraarroyo/results_internvl35_38b/internvl35_38b_none/PMC10529573/p008_Table_5.png",
+      "image_size": [
+        1594,
+        301
+      ],
+      "rotated": false,
+      "row_count": 6,
+      "col_count": 9,
+      "rows": [
+        [
+          "Estimate",
+          "σ 2 α",
+          "σ 2 c",
+          "σ 2 e",
+          "σ 2 p",
+          "h 2",
+          "c 2",
+          "e 2",
+          "r"
+        ],
+        [
+          "LSB",
+          "0.001",
+          "0.002",
+          "0.017",
+          "0.0197",
+          "0.050 ± 0.04",
+          "0.099 ± 0.15",
+          "0.851 ± 0.10",
+          "0.149 ± 0.09"
+        ],
+        [
+          "LWB",
+          "0.058",
+          "0.010",
+          "0.522",
+          "0.590",
+          "0.098 ± 0.07",
+          "0.018 ± 0.05",
+          "0.884 ± 0.07",
+          "0.116 ± 0.07"
+        ],
+        [
+          "LWW",
+          "1.993",
+          "0.330",
+          "20.96",
+          "23.28",
+          "0.086 ± 0.08",
+          "0.014 ± 0.06",
+          "0.900 ± 0.08",
+          "0.099 ± 0.07"
+        ],
+        [
+          "LSW",
+          "0.002",
+          "0.008",
+          "0.116",
+          "0.128",
+          "0.018 ± 0.03",
+          "0.068 ± 0.08",
+          "0.914 ± 0.07",
+          "0.086 ± 0.06"
+        ],
+        [
+          "GL",
+          "0.001",
+          "1.766",
+          "27.11",
+          "28.88",
+          "0.000 ± 0.06",
+          "0.061 ± 0.07",
+          "0.939 ± 0.08",
+          "0.061 ± 0.07"
+        ]
+      ],
+      "markdown": "Table 5. Heritability and repeatability estimates for reproductive traits of Boer x Central Highland goats.\n\n| Estimate   |   σ 2 α |   σ 2 c |   σ 2 e |   σ 2 p | h 2          | c 2          | e 2          | r            |\n|------------|---------|---------|---------|---------|--------------|--------------|--------------|--------------|\n| LSB        |   0.001 |   0.002 |   0.017 |  0.0197 | 0.050 ± 0.04 | 0.099 ± 0.15 | 0.851 ± 0.10 | 0.149 ± 0.09 |\n| LWB        |   0.058 |   0.010 |   0.522 |   0.590 | 0.098 ± 0.07 | 0.018 ± 0.05 | 0.884 ± 0.07 | 0.116 ± 0.07 |\n| LWW        |   1.993 |   0.330 |   20.96 |   23.28 | 0.086 ± 0.08 | 0.014 ± 0.06 | 0.900 ± 0.08 | 0.099 ± 0.07 |\n| LSW        |   0.002 |   0.008 |   0.116 |   0.128 | 0.018 ± 0.03 | 0.068 ± 0.08 | 0.914 ± 0.07 | 0.086 ± 0.06 |\n| GL         |   0.001 |   1.766 |   27.11 |   28.88 | 0.000 ± 0.06 | 0.061 ± 0.07 | 0.939 ± 0.08 | 0.061 ± 0.07 |",
+      "ocr_contextual_summary": {
+        "quality": "unavailable",
+        "use_policy": "ignore",
+        "kept_fragments": [],
+        "discarded_summary": "OCR unavailable or returned no usable text."
+      },
+      "analysis": "```json\n{\n  \"table_type\": \"parameter table\",\n  \"visual_form\": {\n    \"graph_or_visual_type\": \"table\",\n    \"panel_count\": \"1\",\n    \"panel_labels\": [],\n    \"axes_or_dimensions\": [\"Estimate\", \"σ²_a\", \"σ²_c\", \"σ²_e\", \"σ²_p\", \"h²\", \"c²\", \"e²\", \"r\"],\n    \"legend_elements\": [],\n    \"visible_entities\": [\"LSB\", \"LWB\", \"LWW\", \"LSW\", \"GL\"]\n  },\n  \"structure\": \"The table compares heritability and repeatability estimates for reproductive traits of Boer x Central Highland goats, including variance components and heritability (h²), repeatability (r), and other statistical measures.\",\n  \"experimental_design\": {\n    \"hypothesis_or_question_tested\": \"Not determinable\",\n    \"experimental_groups\": [],\n    \"controls\": [],\n    \"perturbations_or_treatments\": [],\n    \"measured_variables\": [\"LSB\", \"LWB\", \"LWW\", \"LSW\", \"GL\"],\n    \"assay_or_method\": \"Not determinable\",\n    \"biological_or_experimental_system\": \"Boer x Central Highland goats\"\n  },\n  \"statistical_markers\": \"Confidence intervals are visible for heritability (h²), repeatability (r), and other estimates.\",\n  \"markers_and_statistics\": {\n    \"statistical_markers\": [\"confidence intervals\"],\n    \"sample_sizes\": [],\n    \"units\": [],\n    \"effect_directions\": [],\n    \"quantitative_values\": [\"0.050±0.04\", \"0.098±0.07\", \"0.086±0.08\", \"0.018±0.03\", \"0.000±0.06\", \"0.149±0.09\", \"0.116±0.07\", \"0.099±0.07\", \"0.086±0.06\", \"0.061±0.07\"]\n  },\n  \"key_entries\": \"Heritability (h²) for LWW is 0.086±0.08, which is the highest among the traits. Repeatability (r) for LSB is 0.149±0.09, the highest repeatability among the traits.\",\n  \"best_result\": \"The highest heritability is for LWW with h² = 0.086±0.08.\",\n  \"patterns_and_trends\": \"Heritability and repeatability estimates vary across traits, with LWW showing the highest heritability and LSB showing the highest repeatability.\",\n  \"caption_accurate\": true,\n  \"caption_discrepancy\": \"None\",\n  \"evidence_separation\": {\n    \"direct_visual_evidence\": [\"heritability and repeatability values for each trait\"],\n    \"caption_supported_evidence\": [\"table is about heritability and repeatability estimates for reproductive traits\"],\n    \"local_context_supported_evidence\": [],\n    \"global_paper_supported_interpretation\": [],\n    \"unsupported_or_not_determinable\": [\"experimental design details\"]\n  },\n  \"scientific_interpretation\": \"The table provides estimates of genetic and environmental variance components for reproductive traits in goats, indicating varying levels of heritability and repeatability. LWW has the highest heritability, suggesting a stronger genetic influence on weaning weight.\",\n  \"scientific_conclusion\": \"The table presents heritability and repeatability estimates for various reproductive traits in Boer x Central Highland goats, showing that litter weaning weight (LWW) has the highest heritability (0.086±0.08), indicating a significant genetic component. Litter size at birth (LSB) has the highest repeatability (0.149±0.09), suggesting consistency in this trait across measurements. These findings highlight the genetic influence on different reproductive traits and can guide breeding strategies. The table supports the understanding of genetic contributions to goat reproduction but does not provide experimental design details.\",\n  \"model_extra_inference\": {\n    \"extra_inference\": \"The low heritability for most traits suggests environmental factors may play a significant role, indicating potential areas for management improvement.\",\n    \"support_status\": \"speculative\",\n    \"supporting_evidence\": \"Low h² values for most traits except LWW.\",\n    \"risk\": \"medium\",\n    \"open_questions\": \"What environmental factors influence these traits, and how can they be optimized for better reproductive outcomes?\",\n    \"alternative_interpretation\": \"The low heritability could also indicate a need for more precise measurement techniques or larger sample sizes to detect genetic effects.\"\n  },\n  \"context_used\": \"abstract only\",\n  \"confidence\": \"high\"\n}\n```",
+      "analysis_parsed": {
+        "table_type": "parameter table",
+        "visual_form": {
+          "graph_or_visual_type": "table",
+          "panel_count": "1",
+          "panel_labels": [],
+          "axes_or_dimensions": [
+            "Estimate",
+            "σ²_a",
+            "σ²_c",
+            "σ²_e",
+            "σ²_p",
+            "h²",
+            "c²",
+            "e²",
+            "r"
+          ],
+          "legend_elements": [],
+          "visible_entities": [
+            "LSB",
+            "LWB",
+            "LWW",
+            "LSW",
+            "GL"
+          ]
+        },
+        "structure": "The table compares heritability and repeatability estimates for reproductive traits of Boer x Central Highland goats, including variance components and heritability (h²), repeatability (r), and other statistical measures.",
+        "experimental_design": {
+          "hypothesis_or_question_tested": "Not determinable",
+          "experimental_groups": [],
+          "controls": [],
+          "perturbations_or_treatments": [],
+          "measured_variables": [
+            "LSB",
+            "LWB",
+            "LWW",
+            "LSW",
+            "GL"
+          ],
+          "assay_or_method": "Not determinable",
+          "biological_or_experimental_system": "Boer x Central Highland goats"
+        },
+        "statistical_markers": "Confidence intervals are visible for heritability (h²), repeatability (r), and other estimates.",
+        "markers_and_statistics": {
+          "statistical_markers": [
+            "confidence intervals"
+          ],
+          "sample_sizes": [],
+          "units": [],
+          "effect_directions": [],
+          "quantitative_values": [
+            "0.050±0.04",
+            "0.098±0.07",
+            "0.086±0.08",
+            "0.018±0.03",
+            "0.000±0.06",
+            "0.149±0.09",
+            "0.116±0.07",
+            "0.099±0.07",
+            "0.086±0.06",
+            "0.061±0.07"
+          ]
+        },
+        "key_entries": "Heritability (h²) for LWW is 0.086±0.08, which is the highest among the traits. Repeatability (r) for LSB is 0.149±0.09, the highest repeatability among the traits.",
+        "best_result": "The highest heritability is for LWW with h² = 0.086±0.08.",
+        "patterns_and_trends": "Heritability and repeatability estimates vary across traits, with LWW showing the highest heritability and LSB showing the highest repeatability.",
+        "caption_accurate": true,
+        "caption_discrepancy": "None",
+        "evidence_separation": {
+          "direct_visual_evidence": [
+            "heritability and repeatability values for each trait"
+          ],
+          "caption_supported_evidence": [
+            "table is about heritability and repeatability estimates for reproductive traits"
+          ],
+          "local_context_supported_evidence": [],
+          "global_paper_supported_interpretation": [],
+          "unsupported_or_not_determinable": [
+            "experimental design details"
+          ]
+        },
+        "scientific_interpretation": "The table provides estimates of genetic and environmental variance components for reproductive traits in goats, indicating varying levels of heritability and repeatability. LWW has the highest heritability, suggesting a stronger genetic influence on weaning weight.",
+        "scientific_conclusion": "The table presents heritability and repeatability estimates for various reproductive traits in Boer x Central Highland goats, showing that litter weaning weight (LWW) has the highest heritability (0.086±0.08), indicating a significant genetic component. Litter size at birth (LSB) has the highest repeatability (0.149±0.09), suggesting consistency in this trait across measurements. These findings highlight the genetic influence on different reproductive traits and can guide breeding strategies. The table supports the understanding of genetic contributions to goat reproduction but does not provide experimental design details.",
+        "model_extra_inference": {
+          "extra_inference": "The low heritability for most traits suggests environmental factors may play a significant role, indicating potential areas for management improvement.",
+          "support_status": "speculative",
+          "supporting_evidence": "Low h² values for most traits except LWW.",
+          "risk": "medium",
+          "open_questions": "What environmental factors influence these traits, and how can they be optimized for better reproductive outcomes?",
+          "alternative_interpretation": "The low heritability could also indicate a need for more precise measurement techniques or larger sample sizes to detect genetic effects."
+        },
+        "context_used": "abstract only",
+        "confidence": "high"
+      },
+      "confidence": "high",
+      "elapsed_sec": 14.5
+    }
+  ]
+}
