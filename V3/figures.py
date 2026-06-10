@@ -8,8 +8,8 @@ Fallback: PyMuPDF (caption-based, used when Docling returns 0 results)
 Produces per-figure/table PNG images and figures.json.
 
 Uso:
-    python extract_figures.py paper.pdf --out out/
-    python extract_figures.py paper.pdf --out out/ --dpi 300
+    python figures.py paper.pdf --out out/
+    python figures.py paper.pdf --out out/ --dpi 300
 """
 from __future__ import annotations
 
@@ -542,6 +542,47 @@ def extract_all(pdf_path, out_dir, dpi=DEFAULT_DPI, max_height=DEFAULT_MAX_HEIGH
     log(f"\nMetadata: {meta_path}")
     log(f"Total extraído: {len(results)} de {len(results)}")
     return results
+
+
+def normalize_figure_items(items: list[dict], paper_dir: str | Path) -> list[dict]:
+    paper_dir = Path(paper_dir)
+    normalized: list[dict] = []
+    for item in items:
+        image_path = item.get("image_path") or ""
+        try:
+            image_name = Path(image_path).name if image_path else ""
+        except Exception:
+            image_name = str(image_path)
+        normalized.append({
+            "label": item.get("label", ""),
+            "kind": item.get("kind", "figure"),
+            "page": item.get("page"),
+            "bbox": item.get("bbox", []),
+            "caption": item.get("caption", ""),
+            "image_path": image_name,
+            "image_size": item.get("image_size", []),
+        })
+    out_path = paper_dir / "figures.normalized.json"
+    out_path.write_text(json.dumps(normalized, indent=2, ensure_ascii=False), encoding="utf-8")
+    return normalized
+
+
+def extract_figures_for_pdf(
+    pdf_path: str | Path,
+    paper_dir: str | Path,
+    dpi: int = DEFAULT_DPI,
+    max_height: int = DEFAULT_MAX_HEIGHT,
+    quiet: bool = False,
+) -> list[dict]:
+    paper_dir = Path(paper_dir)
+    results = extract_all(
+        pdf_path=str(pdf_path),
+        out_dir=str(paper_dir),
+        dpi=dpi,
+        max_height=max_height,
+        quiet=quiet,
+    )
+    return normalize_figure_items(results, paper_dir)
 
 
 # ─── CLI ─────────────────────────────────────────────────────────────────────

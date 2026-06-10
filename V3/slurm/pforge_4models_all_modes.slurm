@@ -14,6 +14,7 @@
 set -euo pipefail
 
 WORK=/workspace1/marodrigovergaraarroyo
+REPO=$WORK/paperforge/V3
 PYTHON=$WORK/vllm-env/bin/python
 PARQUET=$WORK/sample5.parquet
 RUN_ROOT=$WORK/results_4vlm_all_modes
@@ -38,10 +39,10 @@ echo "[$(ts)] Cleaning previous run root: $RUN_ROOT"
 rm -rf "$RUN_ROOT"
 mkdir -p "$RUN_ROOT" "$LOG_DIR"
 
-cd "$WORK/paperforge"
+cd "$REPO"
 
 echo "[$(ts)] Step 1: download PDFs + Docling extraction once"
-"$PYTHON" v2/main.py \
+"$PYTHON" main.py \
     --input-parquet "$PARQUET" \
     --out-dir "$EXTRACT_BASE" \
     --keep-pdf \
@@ -131,8 +132,8 @@ run_mode() {
     mkdir -p "$out_dir"
     rsync -a "$EXTRACT_BASE/" "$out_dir/"
 
-    cd "$WORK/paperforge"
-    "$PYTHON" v2/main.py \
+    cd "$REPO"
+    "$PYTHON" main.py \
         --input-parquet "$PARQUET" \
         --out-dir "$out_dir" \
         --keep-pdf \

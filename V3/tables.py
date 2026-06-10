@@ -1,5 +1,5 @@
 """
-extract_tables.py — Extractor de tablas científicas desde PDFs
+tables.py — Extractor de tablas científicas desde PDFs
 ===============================================================
 
 Estrategia principal: PyMuPDF find_tables() (lines_strict → default fallback)
@@ -15,8 +15,8 @@ Por cada tabla produce:
   - Contenido estructurado (filas/columnas) en tables.json
 
 Uso:
-    python extract_tables.py paper.pdf --out extracted/
-    python extract_tables.py paper.pdf --out extracted/ --dpi 250
+    python tables.py paper.pdf --out extracted/
+    python tables.py paper.pdf --out extracted/ --dpi 250
 
 Integración con pipeline:
     from extract_tables import extract_tables_all
@@ -304,6 +304,57 @@ def extract_tables_all(pdf_path: str, out_dir: str = "extracted",
         print(f"\n{len(tables)} tabla(s) -> {out_json}")
 
     return tables
+
+
+def normalize_table_items(items: list[dict], paper_dir: str | Path) -> list[dict]:
+    paper_dir = Path(paper_dir)
+    normalized: list[dict] = []
+    for item in items:
+        image_path = item.get("image_path") or ""
+        try:
+            image_name = Path(image_path).name if image_path else ""
+        except Exception:
+            image_name = str(image_path)
+        normalized.append({
+            "label": item.get("label", ""),
+            "kind": item.get("kind", "table"),
+            "page": item.get("page"),
+            "pages": item.get("pages", [item.get("page")]),
+            "bbox": item.get("bbox", []),
+            "render_bbox": item.get("render_bbox", []),
+            "caption": item.get("caption", ""),
+            "image_path": image_name,
+            "image_size": item.get("image_size", []),
+            "row_count": item.get("row_count"),
+            "col_count": item.get("col_count"),
+            "rows": item.get("rows", []),
+            "markdown": item.get("markdown", ""),
+        })
+    out_path = paper_dir / "tables.normalized.json"
+    out_path.write_text(json.dumps(normalized, indent=2, ensure_ascii=False), encoding="utf-8")
+    return normalized
+
+
+def extract_tables_for_pdf(
+    pdf_path: str | Path,
+    paper_dir: str | Path,
+    dpi: int = DEFAULT_DPI,
+    min_rows: int = DEFAULT_MIN_ROWS,
+    min_cols: int = DEFAULT_MIN_COLS,
+    min_cells: int = DEFAULT_MIN_CELLS,
+    quiet: bool = False,
+) -> list[dict]:
+    paper_dir = Path(paper_dir)
+    results = extract_tables_all(
+        pdf_path=str(pdf_path),
+        out_dir=str(paper_dir),
+        dpi=dpi,
+        min_rows=min_rows,
+        min_cols=min_cols,
+        min_cells=min_cells,
+        quiet=quiet,
+    )
+    return normalize_table_items(results, paper_dir)
 
 
 # ─── CLI ───────────────────────────────────────────────────────────────────────

@@ -26,10 +26,10 @@ En todos los modos:
     los templates especializados).
 
 Uso:
-    python analyze_figures_v2_rag.py extracted/figures.json --pdf paper.pdf
-    python analyze_figures_v2_rag.py figures.json --context-file paper.txt --context-strategy full
-    python analyze_figures_v2_rag.py figures.json --pdf paper.pdf --context-strategy bm25 --top-k 8
-    python analyze_figures_v2_rag.py figures.json --pdf paper.pdf --max-context-words 6000
+    python analyze.py extracted/figures.json --pdf paper.pdf
+    python analyze.py figures.json --context-file paper.txt --context-strategy full
+    python analyze.py figures.json --pdf paper.pdf --context-strategy bm25 --top-k 8
+    python analyze.py figures.json --pdf paper.pdf --max-context-words 6000
 
 Requiere (para estrategia BM25):
     pip install rank-bm25
@@ -50,7 +50,7 @@ import requests
 
 
 # ─── Defaults ─────────────────────────────────────────────────────────────────
-# Estos parámetros se pueden sobreescribir por CLI o por v2/main.py.
+# Estos parámetros se pueden sobreescribir por CLI o por main.py.
 # Ajustar según la GPU disponible:
 #   GTX 1080 Ti (11 GB, ctx 12 288) → MAX_CONTEXT_WORDS ≈ 3000–4000
 #   RTX 3090 / A100  (ctx 32 768)   → MAX_CONTEXT_WORDS = 0 (sin límite)
@@ -1040,7 +1040,7 @@ def analyze_all(
     meta  = json.loads(fig_json.read_text(encoding="utf-8"))
     items = list(meta["items"])
 
-    # Merge tablas de extract_tables.py
+    # Merge tablas de tables.py
     if tables_json:
         tbl_path = Path(tables_json)
         if tbl_path.exists():
@@ -1264,11 +1264,65 @@ def analyze_all(
     return results
 
 
+CONTEXT_MODES = {"none", "bm25", "full", "layered"}
+
+
+def analyze_paper_outputs(
+    paper_dir: str | Path,
+    server: str,
+    context_mode: str = "bm25",
+    max_context_words: int = 0,
+    top_k: int = 6,
+    chunk_words: int = 180,
+    chunk_overlap: int = 30,
+    max_tokens: int = 800,
+    temperature: float = 0.0,
+    timeout: int = 600,
+) -> Path:
+    if context_mode not in CONTEXT_MODES:
+        raise ValueError(f"context_mode invalido: {context_mode}")
+
+    paper_dir = Path(paper_dir)
+    figures_json = paper_dir / "figures.json"
+    tables_json = paper_dir / "tables.json"
+    pdf_path = paper_dir / "paper.pdf"
+    context_file = paper_dir / "paper_context.txt"
+    out_path = paper_dir / "analyses_rag.json"
+
+    if not figures_json.exists():
+        raise FileNotFoundError(f"no existe {figures_json}")
+
+    kwargs = {
+        "figures_json": str(figures_json),
+        "tables_json": str(tables_json) if tables_json.exists() else None,
+        "server": server,
+        "max_tokens": max_tokens,
+        "temperature": temperature,
+        "timeout": timeout,
+        "out_path": str(out_path),
+    }
+
+    if context_mode == "none":
+        kwargs["pdf_path"] = None
+        kwargs["context_file"] = None
+    else:
+        kwargs["context_strategy"] = context_mode
+        kwargs["pdf_path"] = str(pdf_path) if pdf_path.exists() else None
+        kwargs["context_file"] = str(context_file) if context_file.exists() else None
+        kwargs["max_context_words"] = max_context_words
+        kwargs["top_k"] = top_k
+        kwargs["chunk_words"] = chunk_words
+        kwargs["overlap"] = chunk_overlap
+
+    analyze_all(**kwargs)
+    return out_path
+
+
 # ─── CLI ──────────────────────────────────────────────────────────────────────
 def main(argv=None):
     p = argparse.ArgumentParser(
         description="Analiza figuras Y tablas científicas — un prompt completo por ítem.")
-    p.add_argument("figures_json",       help="figures.json de extract_figures.py")
+    p.add_argument("figures_json",       help="figures.json de figures.py")
     p.add_argument("--pdf",              help="PDF original")
     p.add_argument("--context-file",     help="Texto plano pre-extraído del paper (.txt)")
     p.add_argument("--server",           default=DEFAULT_SERVER)

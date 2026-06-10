@@ -61,7 +61,7 @@ if [ "$READY" -eq 0 ]; then
     exit 1
 fi
 
-"$PYTHON" v2/main.py \
+"$PYTHON" main.py \
     --input-parquet "$PARQUET" \
     --out-dir "$OUT_DIR" \
     --keep-pdf \

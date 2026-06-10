@@ -17,16 +17,12 @@ It contains only the files needed to run the latest workflow:
 
 | Path | Purpose |
 |---|---|
-| `v2/main.py` | Main entrypoint for the full pipeline |
-| `v2/db.py` | Reads parquet input |
-| `v2/pdfs.py` | Downloads PDFs and writes `paper_context.txt` |
-| `v2/figures.py` | Figure extraction wrapper |
-| `v2/tables.py` | Table extraction wrapper |
-| `v2/analyzer.py` | VLM analysis wrapper |
-| `extract_figures.py` | Docling/PyMuPDF figure extraction and logo/icon filtering |
-| `extract_tables.py` | Table extraction |
-| `analyze_figures_v2_rag.py` | Dynamic prompt, context modes, filtered OCR, JSON schema |
-| `pipeline_db_to_analysis.py` | PDF download fallback implementation used by `v2/pdfs.py` |
+| `main.py` | Single entrypoint for the full pipeline |
+| `db.py` | Reads parquet input |
+| `download_pdf.py` | Downloads PDFs and writes `paper_context.txt` |
+| `figures.py` | Docling/PyMuPDF figure extraction and logo/icon filtering |
+| `tables.py` | Table extraction |
+| `analyze.py` | Dynamic prompt, context modes, filtered OCR, JSON schema, VLM analysis |
 | `slurm/pforge_4models_all_modes.slurm` | Slurm used for the current 4-model comparison |
 | `slurm/paperforge_layered_template.slurm` | Generic Slurm template for another cluster |
 
@@ -45,7 +41,7 @@ pip install vllm
 ## Run Extraction Only
 
 ```bash
-python v2/main.py \
+python main.py \
   --input-parquet /path/to/input.parquet \
   --out-dir /path/to/results_extract \
   --keep-pdf \
@@ -68,7 +64,7 @@ python -m vllm.entrypoints.openai.api_server \
 Then run:
 
 ```bash
-python v2/main.py \
+python main.py \
   --input-parquet /path/to/input.parquet \
   --out-dir /path/to/results_layered \
   --keep-pdf \
@@ -109,4 +105,3 @@ Each paper directory contains:
 | `analyses_rag.json` | Final VLM analysis |
 
 `analyses_rag.json` contains item metadata, filtered OCR summary, raw model response, parsed JSON, context metadata, and final paper summary.
-

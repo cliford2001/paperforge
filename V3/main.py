@@ -7,10 +7,10 @@ import time
 from dataclasses import asdict
 from pathlib import Path
 
+from analyze import analyze_paper_outputs
 from db import load_papers
+from download_pdf import download_pdf_for_paper, write_paper_context
 from figures import extract_figures_for_pdf
-from analyzer import analyze_paper_outputs
-from pdfs import download_pdf_for_paper, write_paper_context
 from tables import extract_tables_for_pdf
 
 
@@ -97,7 +97,7 @@ def process_one_paper(
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Pipeline v2: DB/parquet -> PDF -> figures -> tables -> optional analysis")
+    parser = argparse.ArgumentParser(description="PaperForge V3: parquet -> PDF -> figures/tables -> optional layered VLM analysis")
     parser.add_argument("--input-parquet", help="parquet con pmcid, doi, text_clean", default=None)
     parser.add_argument("--metadata-parquet", help="parquet metadata", default=None)
     parser.add_argument("--texts-parquet", help="parquet con text_clean", default=None)
